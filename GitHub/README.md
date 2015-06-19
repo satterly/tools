@@ -9,7 +9,7 @@ Installation
 ------------
 
 1. Copy script to ~/bin or /usr/local/bin
-2. Install `terminal-notifier` using `brew install terminal-notifier`
+2. Install [terminal-notifier](https://github.com/alloy/terminal-notifier) using `brew install terminal-notifier`
 3. Install the [GitHub app](https://mac.github.com/) to make issues appear in the GitHub app group
 4. Create a [GitHub Personal access token](https://github.com/settings/tokens)
 5. Add an entry to crontab to run the script on a schedule using `crontab -e`
