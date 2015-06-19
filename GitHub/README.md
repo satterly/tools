@@ -3,7 +3,7 @@
 
 Use [Mac OSX User Notifications](https://support.apple.com/en-gb/HT204079) to display banners for GitHub issues.
 
-![notification](/docs/images/github-notification.png?raw=true)
+![notification](/GitHub/docs/images/github-notification.png?raw=true)
 
 Installation
 ------------
@@ -11,7 +11,7 @@ Installation
 1. Copy script to ~/bin or /usr/local/bin
 2. Install `terminal-notifier` using `brew install terminal-notifier`
 3. Install the [GitHub app](https://mac.github.com/) to make issues appear in the GitHub app group
-4. Create a [GitHub Personal access token](https://github.com/settings/tokens) and put in `.bash_profile`
+4. Create a [GitHub Personal access token](https://github.com/settings/tokens)
 5. Add an entry to crontab to run the script on a schedule using `crontab -e`
 
 ```
