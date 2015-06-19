@@ -1,9 +1,11 @@
 
 # Gissues
 
-Use [Mac OSX User Notifications](https://support.apple.com/en-gb/HT204079) to display banners for GitHub issues. This was a feature of the [GitHub app](https://mac.github.com/) but it was removed due to it being "half-backed" [1].
+Use [Mac OSX User Notifications](https://support.apple.com/en-gb/HT204079) to display banners for GitHub issues.
 
 ![notification](/GitHub/docs/images/github-notification.png?raw=true)
+
+This was a feature of the [GitHub app](https://mac.github.com/) but it was removed due to it [being "kind of half-backed"][1].
 
 Installation
 ------------
