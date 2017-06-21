@@ -135,9 +135,14 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
                 break
             time.sleep(0.2)  # 200ms
 
-        sys.stdout.write('\rQuery {0}, {1}\n'.format(self.execution_id, status))
+        sys.stdout.write('\r')  # delete query status line
         sys.stdout.flush()
 
+        if status == 'SUCCEEDED':
+            print(tabulate([x for x in self._get_query_results()], headers=self.headers, tablefmt="orgtbl"))
+            print('(%s rows)' % self.row_count)
+
+        print('\nQuery {0}, {1}'.format(self.execution_id, status))
         if status == 'FAILED':
             print(stats['QueryExecution']['Status']['StateChangeReason'])
         print(self._console_link())
@@ -148,16 +153,12 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
         data_scanned = stats['QueryExecution']['Statistics']['DataScannedInBytes']
         query_cost = data_scanned / 1000000000000.0 * 5.0
 
-        print('Time: {}, CPU Time: {}ms total, Data Scanned: {}, Cost: ${:,.2f}'.format(
+        print('Time: {}, CPU Time: {}ms total, Data Scanned: {}, Cost: ${:,.2f}\n'.format(
             str(completion_date - submission_date).split('.')[0],
             execution_time,
             human_readable(data_scanned),
             query_cost)
         )
-
-        if status == 'SUCCEEDED':
-            print(tabulate([x for x in self._get_query_results()], headers=self.headers, tablefmt="orgtbl"))
-        print('(%s rows)' % self.row_count)
 
     def _start_query_execution(self, query):
         try:
@@ -198,7 +199,7 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
         self.row_count = len(results['ResultSet']['Rows'])
 
         for row in results['ResultSet']['Rows']:
-            if row['Data'][0]['VarCharValue'] == self.headers[0]:
+            if row['Data'][0]['VarCharValue'] == self.headers[0]:  # https://forums.aws.amazon.com/thread.jspa?threadID=256505
                 self.row_count -= 1
                 continue
             yield [d.get('VarCharValue', 'NULL') for d in row['Data']]
