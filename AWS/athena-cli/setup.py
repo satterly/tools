@@ -1,7 +1,7 @@
 
 from setuptools import setup, find_packages
 
-version = '0.0.1'
+version = '0.0.2'
 
 setup(
     name="athena-cli",
@@ -14,7 +14,9 @@ setup(
     packages=find_packages(),
     py_modules=['athena_cli'],
     install_requires=[
-        'cmd2'
+        'boto3',
+        'cmd2',
+        'tabulate'
     ],
     include_package_data=True,
     zip_safe=True,

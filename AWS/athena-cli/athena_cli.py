@@ -4,24 +4,22 @@ import os
 import sys
 import argparse
 import atexit
-
-import cmd2 as cmd
 import readline
 import uuid
 import time
 import json
 
 import boto3
+import cmd2 as cmd
+
 from botocore.exceptions import ClientError, ParamValidationError
-
 from tabulate import tabulate
-
 
 AWS_REGION = 'eu-west-1'  # FIXME: use region in profile
 S3_RESULTS_BUCKET = 's3://ophan-query-results'  # FIXME: use profile eg. s3://<profile>-query-results
 HISTORY_FILE_SIZE = 500
 
-__version__ = '0.1'
+__version__ = '0.0.2'
 
 del cmd.Cmd.do_show
 
