@@ -129,7 +129,7 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
         while True:
             stats = self._get_query_execution()
             status = stats['QueryExecution']['Status']['State']
-            sys.stdout.write('\rQuery {0}, {1}'.format(self.execution_id, status))
+            sys.stdout.write('\rQuery {0}, {1:9}'.format(self.execution_id, status))
             sys.stdout.flush()
             if status in ['SUCCEEDED', 'FAILED', 'CANCELLED']:
                 break
@@ -140,9 +140,9 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
 
         if status == 'SUCCEEDED':
             print(tabulate([x for x in self._get_query_results()], headers=self.headers, tablefmt="orgtbl"))
-            print('(%s rows)' % self.row_count)
+            print('(%s rows)\n' % self.row_count)
 
-        print('\nQuery {0}, {1}'.format(self.execution_id, status))
+        print('Query {0}, {1}'.format(self.execution_id, status))
         if status == 'FAILED':
             print(stats['QueryExecution']['Status']['StateChangeReason'])
         print(self._console_link())
