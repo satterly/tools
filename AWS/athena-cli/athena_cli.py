@@ -5,7 +5,7 @@ import sys
 import argparse
 import atexit
 
-import cmd
+import cmd2 as cmd
 import readline
 import uuid
 import time
@@ -17,18 +17,19 @@ from botocore.exceptions import ClientError, ParamValidationError
 from tabulate import tabulate
 
 
-AWS_REGION = 'eu-west-1'
-S3_RESULTS_BUCKET = 's3://ophan-query-results'
-
-athena_client = boto3.client('athena')
-
-HISTORY_FILE = os.path.join(os.path.expanduser("~"), ".athena_history")
+AWS_REGION = 'eu-west-1'  # FIXME: use region in profile
+S3_RESULTS_BUCKET = 's3://ophan-query-results'  # FIXME: use profile eg. s3://<profile>-query-results
 HISTORY_FILE_SIZE = 500
 
 __version__ = '0.1'
 
+del cmd.Cmd.do_show
+
 
 class AthenaShell(cmd.Cmd):
+
+    multilineCommands = ['WITH', 'SELECT', 'ALTER', 'CREATE', 'DESCRIBE', 'DROP', 'MSCK', 'SHOW', 'USE', 'VALUES']
+    allow_cli_args = False
 
     def __init__(self, region, bucket, db=None, debug=False):
         cmd.Cmd.__init__(self)
@@ -37,52 +38,75 @@ class AthenaShell(cmd.Cmd):
         self.bucket = bucket
         self.dbname = db
         self.debug = debug
-        self.execution_id = None
 
+        self.execution_id = None
+        self.row_count = 0
+
+        self.athena = boto3.client('athena')
         self.set_prompt()
-        atexit.register(self.save_history)
+
+        self.hist_file = os.path.join(os.path.expanduser("~"), ".athena_history")
+        self.init_history()
 
     def set_prompt(self):
         self.prompt = 'athena:%s> ' % self.dbname if self.dbname else 'athena> '
 
     def cmdloop_with_cancel(self, intro=None):
         try:
-            self.cmdloop()
+            self.cmdloop(intro)
         except KeyboardInterrupt:
-            self._stop_query_execution()
-            print('\n\n%s' % self._console_link())
-            print('\nQuery aborted by user')
-            self.cmdloop()
-
-    def precmd(self, line):
-        return line.lower()
+            if self.execution_id:
+                self._stop_query_execution()
+                print('\n\n%s' % self._console_link())
+                print('\nQuery aborted by user')
+            else:
+                print('\r')
+            self.cmdloop_with_cancel(intro)
 
     def preloop(self):
-        if os.path.exists(HISTORY_FILE):
-            readline.read_history_file(HISTORY_FILE)
+        if os.path.exists(self.hist_file):
+            readline.read_history_file(self.hist_file)
 
     def postloop(self):
         self.save_history()
 
+    def init_history(self):
+        try:
+            readline.read_history_file(self.hist_file)
+            readline.set_history_length(HISTORY_FILE_SIZE)
+            readline.write_history_file(self.hist_file)
+        except IOError:
+            readline.write_history_file(self.hist_file)
+
+        atexit.register(self.save_history)
+
     def save_history(self):
-        readline.set_history_length(HISTORY_FILE_SIZE)
-        readline.write_history_file(HISTORY_FILE)
+        try:
+            readline.write_history_file(self.hist_file)
+        except IOError:
+            pass
 
     def do_help(self, args):
         help = """
 Supported commands:
 QUIT
-EXPLAIN [ ( option [, ...] ) ] <query>
-    options: FORMAT { TEXT | GRAPHVIZ }
-             TYPE { LOGICAL | DISTRIBUTED }
+SELECT
+ALTER DATABASE <schema>
+ALTER TABLE <table>
+CREATE DATABASE <schema>
+CREATE TABLE <table>
 DESCRIBE <table>
+DROP DATABASE <schema>
+DROP TABLE <table>
+MSCK REPAIR TABLE <table>
 SHOW COLUMNS FROM <table>
-SHOW FUNCTIONS
-SHOW CATALOGS [LIKE <pattern>]
-SHOW SCHEMAS [FROM <catalog>] [LIKE <pattern>]
-SHOW TABLES [FROM <schema>] [LIKE <pattern>]
-SHOW PARTITIONS FROM <table> [WHERE ...] [ORDER BY ...] [LIMIT n]
+SHOW CREATE TABLE <table>
+SHOW DATABASES [LIKE <pattern>]
+SHOW PARTITIONS <table>
+SHOW TABLES [IN <schema>] [<pattern>]
+SHOW TBLPROPERTIES <table>
 USE [<catalog>.]<schema>
+VALUES row [, ...]
 
 See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
 """
@@ -90,7 +114,7 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
 
     def do_quit(self, args):
         print
-        sys.exit()
+        return -1
 
     def do_EOF(self, args):
         return self.do_quit(args)
@@ -100,7 +124,6 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
         self.set_prompt()
 
     def default(self, query):
-        start_time = time.time()
         self.execution_id = self._start_query_execution(query)
         if not self.execution_id:
             return
@@ -119,27 +142,28 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
 
         if status == 'FAILED':
             print(stats['QueryExecution']['Status']['StateChangeReason'])
+        print(self._console_link())
 
+        submission_date = stats['QueryExecution']['Status']['SubmissionDateTime']
+        completion_date = stats['QueryExecution']['Status']['CompletionDateTime']
         execution_time = stats['QueryExecution']['Statistics']['EngineExecutionTimeInMillis']
         data_scanned = stats['QueryExecution']['Statistics']['DataScannedInBytes']
         query_cost = data_scanned / 1000000000000.0 * 5.0
 
-        print(self._console_link())
-        print('Execution Time: {}ms, Data Scanned: {}, Cost: ${:,.2f}'.format(execution_time, human_readable(data_scanned), query_cost))
-        print(time.time() - start_time)
-
-        submission_date = stats['QueryExecution']['Status']['SubmissionDateTime']
-        completion_date = stats['QueryExecution']['Status']['CompletionDateTime']
-        print(submission_date)
-        print(completion_date)
-        print(completion_date - submission_date)
+        print('Time: {}, CPU Time: {}ms total, Data Scanned: {}, Cost: ${:,.2f}'.format(
+            str(completion_date - submission_date).split('.')[0],
+            execution_time,
+            human_readable(data_scanned),
+            query_cost)
+        )
 
         if status == 'SUCCEEDED':
             print tabulate([x for x in self._get_query_results()], headers=self.headers, tablefmt="orgtbl")
+        print('(%s rows)' % self.row_count)
 
     def _start_query_execution(self, query):
         try:
-            return athena_client.start_query_execution(
+            return self.athena.start_query_execution(
                 QueryString=query,
                 ClientRequestToken=str(uuid.uuid4()),
                 QueryExecutionContext={
@@ -155,7 +179,7 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
 
     def _get_query_execution(self):
         try:
-            return athena_client.get_query_execution(
+            return self.athena.get_query_execution(
                 QueryExecutionId=self.execution_id
             )
         except ClientError as e:
@@ -163,7 +187,7 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
 
     def _get_query_results(self):
         try:
-            results = athena_client.get_query_results(
+            results = self.athena.get_query_results(
                 QueryExecutionId=self.execution_id
             )
         except ClientError as e:
@@ -172,13 +196,18 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
         if self.debug:
             print(json.dumps(results, indent=2))
 
-        self.headers = [h['VarCharValue'] for h in results['ResultSet']['Rows'][0]['Data']]
-        for row in results['ResultSet']['Rows'][1:]:
+        self.headers = [h['Name'] for h in results['ResultSet']['ResultSetMetadata']['ColumnInfo']]
+        self.row_count = len(results['ResultSet']['Rows'])
+
+        for row in results['ResultSet']['Rows']:
+            if row['Data'][0]['VarCharValue'] == self.headers[0]:
+                self.row_count -= 1
+                continue
             yield [d.get('VarCharValue', 'NULL') for d in row['Data']]
 
     def _stop_query_execution(self):
         try:
-            return athena_client.stop_query_execution(
+            return self.athena.stop_query_execution(
                 QueryExecutionId=self.execution_id
             )
         except ClientError as e:
@@ -197,7 +226,7 @@ def human_readable(size, precision=2):
     return "%.*f%s"%(precision,size,suffixes[suffixIndex])
 
 
-if __name__ == '__main__':
+def main():
 
     parser = argparse.ArgumentParser(
         prog='athena',
@@ -236,9 +265,15 @@ if __name__ == '__main__':
     )
     args = parser.parse_args()
 
+    if args.debug:
+        boto3.set_stream_logger(name='botocore')
+
     if args.version:
         print('Athena CLI %s' % __version__)
         sys.exit()
 
     shell = AthenaShell(args.region, args.bucket, args.schema, args.debug)
     shell.cmdloop_with_cancel()
+
+if __name__ == '__main__':
+    main()
