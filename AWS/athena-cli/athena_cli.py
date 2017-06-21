@@ -156,7 +156,7 @@ See http://docs.aws.amazon.com/athena/latest/ug/language-reference.html
         )
 
         if status == 'SUCCEEDED':
-            print tabulate([x for x in self._get_query_results()], headers=self.headers, tablefmt="orgtbl")
+            print(tabulate([x for x in self._get_query_results()], headers=self.headers, tablefmt="orgtbl"))
         print('(%s rows)' % self.row_count)
 
     def _start_query_execution(self, query):
