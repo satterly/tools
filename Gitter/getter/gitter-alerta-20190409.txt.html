@@ -1,0 +1,893 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/04/10"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/04/08"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">9<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Apr 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5cac94863ebbdc55b38a4d14 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cac94863ebbdc55b38a4d14' title="">Apr 09 2019 12:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="groupmention" data-group-name="all" class="groupmention">@/all</span> The beta version of the web console is now at “release candidate” stage. This means only critical bugs will be fixed before it is made available for general use. Depending on feedback the production ready version should be out in a week or so.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cac94c793fb4a7dc2fd8992 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks to all who gave feedback, tested and raised issues during the beta phase. It will be much better because of this community effort. :+1: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacbe7c3ebbdc55b38b8f2e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cacbcfcd73408ce4fbd4196 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47557700?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47557700?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>diefenbachh</div>
+      <div class='chat-item__username js-chat-item-from'>@diefenbachh</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cacbe7c3ebbdc55b38b8f2e' title="">Apr 09 2019 15:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I&#39;m trying to integrate mailer from <a href="https://github.com/alerta/alerta-contrib/tree/master/integrations/mailer" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-contrib/tree/master/integrations/mailer</a>. I receive a FileNotFoundError: No such file or directory: &#39;/tmp/pip-2hzx2g1e-build/plugins/mailer/setup.py&#39;. amqp is already installed. Also I do not know in which config-file I should put the [alerta-mailer] section. Thanks!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caccf6ba84e0c501a02980e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c77f45dd73408ce4fb93862 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Grayson Head</div>
+      <div class='chat-item__username js-chat-item-from'>@graysonhead</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5caccf6ba84e0c501a02980e' title="">Apr 09 2019 16:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> Does the aforementioned Postgres bug involve filling up all of the available connections and never closing them? I upgraded to 6.8.4 and then ran the query above before starting and Its still filling up the connection limit with a large alert volume
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacd0483ebbdc55b38c1d2b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      This started happening today when I upgraded from an older version, unfortunately I neglected to pin the docker version properly in kubernetes (which is why I&#39;m in this situation to start with) so I couldn&#39;t tell you with certainty which version I came from
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacd3e520fbe911ee8971b7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cacd3e520fbe911ee8971b7' title="">Apr 09 2019 17:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="graysonhead" class="mention">@graysonhead</span> no, the postgres bug was an incorrect column type. can’t imagine what is causing the connection exhaustion. have you any more info? if you run in debug mode you should see the SQL statements in the logs.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacd463759abc043c932e99 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="diefenbachh" class="mention">@diefenbachh</span> alert-mailer is not a plugin so if you’re using the docker image and trying to install it using the INSTALL_PLUGINS env setting it won’t work.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacd4c631aec969e87af0d8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If using docker, you need to install alert-mailer by adding another layer to the default docker container. this is an example of how to do that … <a href="https://github.com/alerta/docker-alerta/blob/master/examples/ldap/Dockerfile" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/docker-alerta/blob/master/examples/ldap/Dockerfile</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacd4f3bd70a40d5f2197c2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      the alert-mailer config goes the CLI tool config file called <code>alerta.conf</code> (note: not <code>alertad.conf</code>)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cace9d5a0790b29c98c1507 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c77f45dd73408ce4fb93862 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Grayson Head</div>
+      <div class='chat-item__username js-chat-item-from'>@graysonhead</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cace9d5a0790b29c98c1507' title="">Apr 09 2019 18:52 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> There didn&#39;t seem to be anything interesting in the logs in debug mode, I wound up starting from a fresh database on 6.8.4 and didn&#39;t encounter the same regression
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacea07c55bd14d35b89e3c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I went from using 405 sessions (my postgres limit is 400) to about ~145 on average when running the full battery of testing without changing anything else
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacea92b34ccd69e78f5ef9 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And of course right when I say that, it jumped to 405 again after about 10 minutes of behaving correctly. Let me look at these logs and see what happened around the time it occured
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacee86759abc043c93f71f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c77f45dd73408ce4fb93862 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Grayson Head</div>
+      <div class='chat-item__username js-chat-item-from'>@graysonhead</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cacee86759abc043c93f71f' title="">Apr 09 2019 19:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I downgraded to 6.8.0 and blew away the database again, now instead of 145 pgsql sessions I have 7 during the same battery of tests. I&#39;m going to let it run for a bit and see if the issue re-occurs
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacf0f8016a930a458ff1b3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cacf0f8016a930a458ff1b3' title="">Apr 09 2019 19:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="graysonhead" class="mention">@graysonhead</span> weird. definitely let me know if you find anything. No one else has reported similar problems, as far as i know.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cacf685a84e0c501a03b65d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c77f45dd73408ce4fb93862 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Grayson Head</div>
+      <div class='chat-item__username js-chat-item-from'>@graysonhead</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cacf685a84e0c501a03b65d' title="">Apr 09 2019 19:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I tested 6.8.0, 6.8.1, 6.8.2, 6.8.3 and it only happens in 6.8.4
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad033e31aec969e87c43ae burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad033e31aec969e87c43ae' title="">Apr 09 2019 20:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      are you using the docker images on docker hub?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad035e016a930a45907e9a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c77f45dd73408ce4fb93862 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Grayson Head</div>
+      <div class='chat-item__username js-chat-item-from'>@graysonhead</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad035e016a930a45907e9a' title="">Apr 09 2019 20:41 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yep, that is correct. I also wiped the database between each test and started with a fresh one
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad03813ebbdc55b38d97df burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If I have time later this week, I&#39;ll try to test in a sanatized environment so I can send you the logs
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad03ad3ebbdc55b38d994a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad03ad3ebbdc55b38d994a' title="">Apr 09 2019 20:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks a lot for this. My gut feeling is it has something to do with locking down the python package versions in this PR <a href="https://github.com/alerta/alerta/pull/920/files" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/pull/920/files</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad041ea0790b29c98cc5cd burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i need to compare the package version numbers between 6.8.3 and 6.8.4 for any clues.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad061725686a7dc3036c9d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c77f45dd73408ce4fb93862 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Grayson Head</div>
+      <div class='chat-item__username js-chat-item-from'>@graysonhead</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad061725686a7dc3036c9d' title="">Apr 09 2019 20:52 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yeah, one thing to mention is that I am sending a fairly high volume of alerts. Every time one of my monitoring jobs run, it sends a status update (A &quot;normal&quot; status if nothing is wrong) that way things can auto-clear in Alerta/PagerDuty if they fix themselves as they often do. Right now I&#39;m pushing about 100,000 alerts per hour and I expect that to accelerate as we test more things with Alerta. Given that I&#39;m intentionally sending a lot of duplicate alerts with identical statuses to let Alerta handle the state changes (so my monitoring jobs can stay stupid and be easier to maintain), I was eyeing this commit with a bit of suspicion: <a href="https://github.com/alerta/alerta/commit/625fc77ac72d13a5b3b3d2c3d2c3c555ccc13837" target="_blank" data-link-type="commit" data-provider="github" data-commit-sha="625fc77ac72d13a5b3b3d2c3d2c3c555ccc13837" data-commit-repo="alerta/alerta" class="commit">alerta/alerta@625fc77</a> since it seems to change the behavior of duplicate alerts. That is just a wild guess on my part though.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad0671b34ccd69e790314d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad0671b34ccd69e790314d' title="">Apr 09 2019 20:54 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      You could be on to something there.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad06898148e555b2795cd3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I’ll take a closer look. thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad06ada0790b29c98cd83c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c77f45dd73408ce4fb93862 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/6179496?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Grayson Head</div>
+      <div class='chat-item__username js-chat-item-from'>@graysonhead</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad06ada0790b29c98cd83c' title="">Apr 09 2019 20:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Np, let me know if you need any more info for me
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad06bdc55bd14d35b965d7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad06bdc55bd14d35b965d7' title="">Apr 09 2019 20:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      will do. :+1: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad08773ebbdc55b38dbe63 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad08773ebbdc55b38dbe63' title="">Apr 09 2019 21:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="graysonhead" class="mention">@graysonhead</span> i’ve created a github issue to track this. Feel free to any info there if you think it relevant.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad2267a84e0c501a04e546 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c9982dcd73408ce4fbbce0c avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/18366912?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/18366912?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Brian Goldberg</div>
+      <div class='chat-item__username js-chat-item-from'>@brigoldberg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad2267a84e0c501a04e546' title="">Apr 09 2019 22:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="graysonhead" class="mention">@graysonhead</span>  Concerning the amount of email that can be generated - I&#39;ve had really good luck with using  Logstash to send email.  The Alerta Logstash plugin sends all the alerts to Logstash, and then you use the Logstash filter to drop all alerts that have a duplicate count != 0.  You wind up with only sending emails that are state changes and not repeats of previous state.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad22aa8148e555b27a198c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad22aa8148e555b27a198c' title="">Apr 09 2019 22:54 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks for the tip, <span data-link-type="mention" data-screen-name="brigoldberg" class="mention">@brigoldberg</span> . I think it should be directed at <span data-link-type="mention" data-screen-name="diefenbachh" class="mention">@diefenbachh</span>  though. :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cad22b8016a930a45916069 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c9982dcd73408ce4fbbce0c avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/18366912?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/18366912?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Brian Goldberg</div>
+      <div class='chat-item__username js-chat-item-from'>@brigoldberg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/09?at=5cad22b8016a930a45916069' title="">Apr 09 2019 22:54 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      oops - sorry!
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$1MiMy/0xQwUuUlwuVZ3WmlySkQBLK82QOptwr7jb4i0=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-04-09T00:00:00.000Z","nextDate":"2019-04-10T23:59:59.999Z","previousDate":"2019-04-08T00:00:00.000Z","messages":[{"id":"5cac94863ebbdc55b38a4d14","text":"@/all The beta version of the web console is now at “release candidate” stage. This means only critical bugs will be fixed before it is made available for general use. Depending on feedback the production ready version should be out in a week or so.","html":"<span data-link-type=\"groupmention\" data-group-name=\"all\" class=\"groupmention\">@/all<\/span> The beta version of the web console is now at “release candidate” stage. This means only critical bugs will be fixed before it is made available for general use. Depending on feedback the production ready version should be out in a week or so.","sent":"2019-04-09T12:48:06.229Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":32,"urls":[],"mentions":[{"screenName":"all","userIds":[],"group":true,"announcement":true}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cac94c793fb4a7dc2fd8992","text":"Thanks to all who gave feedback, tested and raised issues during the beta phase. It will be much better because of this community effort. :+1: ","html":"Thanks to all who gave feedback, tested and raised issues during the beta phase. It will be much better because of this community effort. :+1: ","sent":"2019-04-09T12:49:11.817Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cacbe7c3ebbdc55b38b8f2e","text":"@satterly I'm trying to integrate mailer from https://github.com/alerta/alerta-contrib/tree/master/integrations/mailer. I receive a FileNotFoundError: No such file or directory: '/tmp/pip-2hzx2g1e-build/plugins/mailer/setup.py'. amqp is already installed. Also I do not know in which config-file I should put the [alerta-mailer] section. Thanks!","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I&#39;m trying to integrate mailer from <a href=\"https://github.com/alerta/alerta-contrib/tree/master/integrations/mailer\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-contrib/tree/master/integrations/mailer<\/a>. I receive a FileNotFoundError: No such file or directory: &#39;/tmp/pip-2hzx2g1e-build/plugins/mailer/setup.py&#39;. amqp is already installed. Also I do not know in which config-file I should put the [alerta-mailer] section. Thanks!","sent":"2019-04-09T15:47:08.523Z","fromUser":{"id":"5cacbcfcd73408ce4fbd4196","username":"diefenbachh","displayName":"diefenbachh","url":"/diefenbachh","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/diefenbachh","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47557700?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47557700?v=4&s=128","v":1,"gv":"4"},"readBy":15,"urls":[{"url":"https://github.com/alerta/alerta-contrib/tree/master/integrations/mailer"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5caccf6ba84e0c501a02980e","text":"@satterly Does the aforementioned Postgres bug involve filling up all of the available connections and never closing them? I upgraded to 6.8.4 and then ran the query above before starting and Its still filling up the connection limit with a large alert volume","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> Does the aforementioned Postgres bug involve filling up all of the available connections and never closing them? I upgraded to 6.8.4 and then ran the query above before starting and Its still filling up the connection limit with a large alert volume","sent":"2019-04-09T16:59:23.443Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cacd0483ebbdc55b38c1d2b","text":"This started happening today when I upgraded from an older version, unfortunately I neglected to pin the docker version properly in kubernetes (which is why I'm in this situation to start with) so I couldn't tell you with certainty which version I came from","html":"This started happening today when I upgraded from an older version, unfortunately I neglected to pin the docker version properly in kubernetes (which is why I&#39;m in this situation to start with) so I couldn&#39;t tell you with certainty which version I came from","sent":"2019-04-09T17:03:04.017Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cacd3e520fbe911ee8971b7","text":"@graysonhead no, the postgres bug was an incorrect column type. can’t imagine what is causing the connection exhaustion. have you any more info? if you run in debug mode you should see the SQL statements in the logs.","html":"<span data-link-type=\"mention\" data-screen-name=\"graysonhead\" class=\"mention\">@graysonhead<\/span> no, the postgres bug was an incorrect column type. can’t imagine what is causing the connection exhaustion. have you any more info? if you run in debug mode you should see the SQL statements in the logs.","sent":"2019-04-09T17:18:29.943Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"graysonhead","userId":"5c77f45dd73408ce4fb93862","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cacd463759abc043c932e99","text":"@diefenbachh alert-mailer is not a plugin so if you’re using the docker image and trying to install it using the INSTALL_PLUGINS env setting it won’t work.","html":"<span data-link-type=\"mention\" data-screen-name=\"diefenbachh\" class=\"mention\">@diefenbachh<\/span> alert-mailer is not a plugin so if you’re using the docker image and trying to install it using the INSTALL_PLUGINS env setting it won’t work.","sent":"2019-04-09T17:20:35.149Z","editedAt":"2019-04-09T17:20:55.495Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"diefenbachh","userId":"5cacbcfcd73408ce4fbd4196","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5cacd4c631aec969e87af0d8","text":"If using docker, you need to install alert-mailer by adding another layer to the default docker container. this is an example of how to do that … https://github.com/alerta/docker-alerta/blob/master/examples/ldap/Dockerfile","html":"If using docker, you need to install alert-mailer by adding another layer to the default docker container. this is an example of how to do that … <a href=\"https://github.com/alerta/docker-alerta/blob/master/examples/ldap/Dockerfile\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/docker-alerta/blob/master/examples/ldap/Dockerfile<\/a>","sent":"2019-04-09T17:22:14.256Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[{"url":"https://github.com/alerta/docker-alerta/blob/master/examples/ldap/Dockerfile"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cacd4f3bd70a40d5f2197c2","text":"the alert-mailer config goes the CLI tool config file called `alerta.conf` (note: not `alertad.conf`)","html":"the alert-mailer config goes the CLI tool config file called <code>alerta.conf<\/code> (note: not <code>alertad.conf<\/code>)","sent":"2019-04-09T17:22:59.918Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cace9d5a0790b29c98c1507","text":"@satterly There didn't seem to be anything interesting in the logs in debug mode, I wound up starting from a fresh database on 6.8.4 and didn't encounter the same regression","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> There didn&#39;t seem to be anything interesting in the logs in debug mode, I wound up starting from a fresh database on 6.8.4 and didn&#39;t encounter the same regression","sent":"2019-04-09T18:52:05.789Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cacea07c55bd14d35b89e3c","text":"I went from using 405 sessions (my postgres limit is 400) to about ~145 on average when running the full battery of testing without changing anything else","html":"I went from using 405 sessions (my postgres limit is 400) to about ~145 on average when running the full battery of testing without changing anything else","sent":"2019-04-09T18:52:55.932Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cacea92b34ccd69e78f5ef9","text":"And of course right when I say that, it jumped to 405 again after about 10 minutes of behaving correctly. Let me look at these logs and see what happened around the time it occured","html":"And of course right when I say that, it jumped to 405 again after about 10 minutes of behaving correctly. Let me look at these logs and see what happened around the time it occured","sent":"2019-04-09T18:55:14.828Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cacee86759abc043c93f71f","text":"I downgraded to 6.8.0 and blew away the database again, now instead of 145 pgsql sessions I have 7 during the same battery of tests. I'm going to let it run for a bit and see if the issue re-occurs","html":"I downgraded to 6.8.0 and blew away the database again, now instead of 145 pgsql sessions I have 7 during the same battery of tests. I&#39;m going to let it run for a bit and see if the issue re-occurs","sent":"2019-04-09T19:12:06.289Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cacf0f8016a930a458ff1b3","text":"@graysonhead weird. definitely let me know if you find anything. No one else has reported similar problems, as far as i know.","html":"<span data-link-type=\"mention\" data-screen-name=\"graysonhead\" class=\"mention\">@graysonhead<\/span> weird. definitely let me know if you find anything. No one else has reported similar problems, as far as i know.","sent":"2019-04-09T19:22:32.839Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"graysonhead","userId":"5c77f45dd73408ce4fb93862","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cacf685a84e0c501a03b65d","text":"@satterly I tested 6.8.0, 6.8.1, 6.8.2, 6.8.3 and it only happens in 6.8.4","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I tested 6.8.0, 6.8.1, 6.8.2, 6.8.3 and it only happens in 6.8.4","sent":"2019-04-09T19:46:13.489Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad033e31aec969e87c43ae","text":"are you using the docker images on docker hub?","html":"are you using the docker images on docker hub?","sent":"2019-04-09T20:40:30.646Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad035e016a930a45907e9a","text":"Yep, that is correct. I also wiped the database between each test and started with a fresh one","html":"Yep, that is correct. I also wiped the database between each test and started with a fresh one","sent":"2019-04-09T20:41:02.118Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad03813ebbdc55b38d97df","text":"If I have time later this week, I'll try to test in a sanatized environment so I can send you the logs","html":"If I have time later this week, I&#39;ll try to test in a sanatized environment so I can send you the logs","sent":"2019-04-09T20:41:37.429Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cad03ad3ebbdc55b38d994a","text":"Thanks a lot for this. My gut feeling is it has something to do with locking down the python package versions in this PR https://github.com/alerta/alerta/pull/920/files","html":"Thanks a lot for this. My gut feeling is it has something to do with locking down the python package versions in this PR <a href=\"https://github.com/alerta/alerta/pull/920/files\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/pull/920/files<\/a>","sent":"2019-04-09T20:42:21.895Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[{"url":"https://github.com/alerta/alerta/pull/920/files"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad041ea0790b29c98cc5cd","text":"i need to compare the package version numbers between 6.8.3 and 6.8.4 for any clues.","html":"i need to compare the package version numbers between 6.8.3 and 6.8.4 for any clues.","sent":"2019-04-09T20:44:14.960Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cad061725686a7dc3036c9d","text":"Yeah, one thing to mention is that I am sending a fairly high volume of alerts. Every time one of my monitoring jobs run, it sends a status update (A \"normal\" status if nothing is wrong) that way things can auto-clear in Alerta/PagerDuty if they fix themselves as they often do. Right now I'm pushing about 100,000 alerts per hour and I expect that to accelerate as we test more things with Alerta. Given that I'm intentionally sending a lot of duplicate alerts with identical statuses to let Alerta handle the state changes (so my monitoring jobs can stay stupid and be easier to maintain), I was eyeing this commit with a bit of suspicion: https://github.com/alerta/alerta/commit/625fc77ac72d13a5b3b3d2c3d2c3c555ccc13837 since it seems to change the behavior of duplicate alerts. That is just a wild guess on my part though.","html":"Yeah, one thing to mention is that I am sending a fairly high volume of alerts. Every time one of my monitoring jobs run, it sends a status update (A &quot;normal&quot; status if nothing is wrong) that way things can auto-clear in Alerta/PagerDuty if they fix themselves as they often do. Right now I&#39;m pushing about 100,000 alerts per hour and I expect that to accelerate as we test more things with Alerta. Given that I&#39;m intentionally sending a lot of duplicate alerts with identical statuses to let Alerta handle the state changes (so my monitoring jobs can stay stupid and be easier to maintain), I was eyeing this commit with a bit of suspicion: <a href=\"https://github.com/alerta/alerta/commit/625fc77ac72d13a5b3b3d2c3d2c3c555ccc13837\" target=\"_blank\" data-link-type=\"commit\" data-provider=\"github\" data-commit-sha=\"625fc77ac72d13a5b3b3d2c3d2c3c555ccc13837\" data-commit-repo=\"alerta/alerta\" class=\"commit\">alerta/alerta@625fc77<\/a> since it seems to change the behavior of duplicate alerts. That is just a wild guess on my part though.","sent":"2019-04-09T20:52:39.027Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad0671b34ccd69e790314d","text":"You could be on to something there.","html":"You could be on to something there.","sent":"2019-04-09T20:54:09.370Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad06898148e555b2795cd3","text":"I’ll take a closer look. thanks.","html":"I’ll take a closer look. thanks.","sent":"2019-04-09T20:54:33.861Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cad06ada0790b29c98cd83c","text":"Np, let me know if you need any more info for me","html":"Np, let me know if you need any more info for me","sent":"2019-04-09T20:55:09.855Z","fromUser":{"id":"5c77f45dd73408ce4fb93862","username":"graysonhead","displayName":"Grayson Head","url":"/graysonhead","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/graysonhead","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/6179496?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad06bdc55bd14d35b965d7","text":"will do. :+1: ","html":"will do. :+1: ","sent":"2019-04-09T20:55:25.195Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad08773ebbdc55b38dbe63","text":"@graysonhead i’ve created a github issue to track this. Feel free to any info there if you think it relevant.","html":"<span data-link-type=\"mention\" data-screen-name=\"graysonhead\" class=\"mention\">@graysonhead<\/span> i’ve created a github issue to track this. Feel free to any info there if you think it relevant.","sent":"2019-04-09T21:02:47.150Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"graysonhead","userId":"5c77f45dd73408ce4fb93862","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad2267a84e0c501a04e546","text":"@graysonhead  Concerning the amount of email that can be generated - I've had really good luck with using  Logstash to send email.  The Alerta Logstash plugin sends all the alerts to Logstash, and then you use the Logstash filter to drop all alerts that have a duplicate count != 0.  You wind up with only sending emails that are state changes and not repeats of previous state.","html":"<span data-link-type=\"mention\" data-screen-name=\"graysonhead\" class=\"mention\">@graysonhead<\/span>  Concerning the amount of email that can be generated - I&#39;ve had really good luck with using  Logstash to send email.  The Alerta Logstash plugin sends all the alerts to Logstash, and then you use the Logstash filter to drop all alerts that have a duplicate count != 0.  You wind up with only sending emails that are state changes and not repeats of previous state.","sent":"2019-04-09T22:53:27.549Z","fromUser":{"id":"5c9982dcd73408ce4fbbce0c","username":"brigoldberg","displayName":"Brian Goldberg","url":"/brigoldberg","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/brigoldberg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/18366912?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/18366912?v=4&s=128","v":17,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"graysonhead","userId":"5c77f45dd73408ce4fb93862","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad22aa8148e555b27a198c","text":"Thanks for the tip, @brigoldberg . I think it should be directed at @diefenbachh  though. :)","html":"Thanks for the tip, <span data-link-type=\"mention\" data-screen-name=\"brigoldberg\" class=\"mention\">@brigoldberg<\/span> . I think it should be directed at <span data-link-type=\"mention\" data-screen-name=\"diefenbachh\" class=\"mention\">@diefenbachh<\/span>  though. :)","sent":"2019-04-09T22:54:34.823Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"brigoldberg","userId":"5c9982dcd73408ce4fbbce0c","userIds":[]},{"screenName":"diefenbachh","userId":"5cacbcfcd73408ce4fbd4196","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cad22b8016a930a45916069","text":"oops - sorry!","html":"oops - sorry!","sent":"2019-04-09T22:54:48.584Z","fromUser":{"id":"5c9982dcd73408ce4fbbce0c","username":"brigoldberg","displayName":"Brian Goldberg","url":"/brigoldberg","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/brigoldberg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/18366912?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/18366912?v=4&s=128","v":17,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

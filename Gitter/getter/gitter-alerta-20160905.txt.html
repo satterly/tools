@@ -1,0 +1,730 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2016/09/06"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2016/09/04"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">5<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Sep 2016</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-57cd920afe284f6c30286ccf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57cd919b40f3a6eec063a14e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>joao-cavichiolli</div>
+      <div class='chat-item__username js-chat-item-from'>@joao-cavichiolli</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cd920afe284f6c30286ccf' title="">Sep 05 2016 15:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/IdHJ/blob" rel="nofollow" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/IdHJ/thumb/blob.png" alt="blob" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cd922277c1b70d7fe98014 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi Nick, I,m installed alerta api and webapp but this not authenticated with basic login. I attempt create nem login but erro occurr.  I configure config.js and alertad.conf but not autenticate
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cd9258780310286bb3d25f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cd9258780310286bb3d25f' title="">Sep 05 2016 15:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      check your javascript console in the browser for any errors. probably a CORS issue.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cd92d0cdbf820f7f9c81eb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57cd919b40f3a6eec063a14e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>joao-cavichiolli</div>
+      <div class='chat-item__username js-chat-item-from'>@joao-cavichiolli</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cd92d0cdbf820f7f9c81eb' title="">Sep 05 2016 15:44 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      how do I check it?  
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cd930afe284f6c302870a8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cd930afe284f6c302870a8' title="">Sep 05 2016 15:45 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      depends on the browser … <a href="http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers" rel="nofollow" target="_blank" class="link">http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cd97d8896559723041bf32 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57cd919b40f3a6eec063a14e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>joao-cavichiolli</div>
+      <div class='chat-item__username js-chat-item-from'>@joao-cavichiolli</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cd97d8896559723041bf32' title="">Sep 05 2016 16:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok i understand Nick. I tryng in Internet explorer running perfect.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cd97f5f5a156f564842f71 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cd97f5f5a156f564842f71' title="">Sep 05 2016 16:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok. good stuff.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdb8b18965597230422ab4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57cd919b40f3a6eec063a14e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>joao-cavichiolli</div>
+      <div class='chat-item__username js-chat-item-from'>@joao-cavichiolli</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cdb8b18965597230422ab4' title="">Sep 05 2016 18:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Nick the API of alerta not logon in many browser because java script i,m using this in smart TV browser  the alerta 4.6.9 but de new version updated not login more. Haves any way to login with browsers with chrome or smartTV.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbaeef5a156f56484a20d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57cd919b40f3a6eec063a14e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>joao-cavichiolli</div>
+      <div class='chat-item__username js-chat-item-from'>@joao-cavichiolli</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cdbaeef5a156f56484a20d' title="">Sep 05 2016 18:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/EtDz/blob" rel="nofollow" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/EtDz/thumb/blob.png" alt="blob" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbaf077c1b70d7fea023e burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      in debug in the google chrome this error ocurr 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbbda8965597230423694 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cdbbda8965597230423694' title="">Sep 05 2016 18:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Are you saying it worked with version 4.6.9 but not with latest update?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbbfdf33967fc6430aa64 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57cd919b40f3a6eec063a14e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>joao-cavichiolli</div>
+      <div class='chat-item__username js-chat-item-from'>@joao-cavichiolli</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cdbbfdf33967fc6430aa64' title="">Sep 05 2016 18:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes exactly
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbd10fe284f6c3028fac6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cdbd10fe284f6c3028fac6' title="">Sep 05 2016 18:44 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      OK. I&#39;ll need to do a code compare to see what changed between then and now that might have broken it for you. I assume nothing else has changed at your end that might be responsible. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbd798965597230423fd6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57cd919b40f3a6eec063a14e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>joao-cavichiolli</div>
+      <div class='chat-item__username js-chat-item-from'>@joao-cavichiolli</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cdbd798965597230423fd6' title="">Sep 05 2016 18:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      OK. But i create new installation and same problem ocurr. With Internet Explorer running    ok. But Chrome firefox and my smarttv no login.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbd9acdbf820f7f9d0f0e burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i downloaded new api and webapp for repository.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbe11cdbf820f7f9d101a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cdbe11cdbf820f7f9d101a' title="">Sep 05 2016 18:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Oh OK. So IE works but Firefox and smartTv doesn&#39;t??
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbe3a77c1b70d7fea0b6d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57cd919b40f3a6eec063a14e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22008893?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>joao-cavichiolli</div>
+      <div class='chat-item__username js-chat-item-from'>@joao-cavichiolli</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/09/05?at=57cdbe3a77c1b70d7fea0b6d' title="">Sep 05 2016 18:49 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes exactly
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57cdbe52f5a156f56484aad1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      chrome not login too same error
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$wMiMbN7Yqn/XYwqcOK9Le8WOC1ONrdTl6tSIALcOS6A=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":377,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2016-09-05T00:00:00.000Z","nextDate":"2016-09-06T23:59:59.999Z","previousDate":"2016-09-04T00:00:00.000Z","messages":[{"id":"57cd920afe284f6c30286ccf","text":"[![blob](https://files.gitter.im/alerta/chat/IdHJ/thumb/blob.png)](https://files.gitter.im/alerta/chat/IdHJ/blob)","html":"<a href=\"https://files.gitter.im/alerta/chat/IdHJ/blob\" rel=\"nofollow\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/IdHJ/thumb/blob.png\" alt=\"blob\" rel=\"nofollow\"><\/a>","sent":"2016-09-05T15:40:58.151Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[{"url":"https://files.gitter.im/alerta/chat/IdHJ/thumb/blob.png"},{"url":"https://files.gitter.im/alerta/chat/IdHJ/blob"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cd922277c1b70d7fe98014","text":"Hi Nick, I,m installed alerta api and webapp but this not authenticated with basic login. I attempt create nem login but erro occurr.  I configure config.js and alertad.conf but not autenticate","html":"Hi Nick, I,m installed alerta api and webapp but this not authenticated with basic login. I attempt create nem login but erro occurr.  I configure config.js and alertad.conf but not autenticate","sent":"2016-09-05T15:41:22.460Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57cd9258780310286bb3d25f","text":"check your javascript console in the browser for any errors. probably a CORS issue.","html":"check your javascript console in the browser for any errors. probably a CORS issue.","sent":"2016-09-05T15:42:16.868Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cd92d0cdbf820f7f9c81eb","text":"\nhow do I check it?  ","html":"how do I check it?  ","sent":"2016-09-05T15:44:16.842Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cd930afe284f6c302870a8","text":"depends on the browser … http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers","html":"depends on the browser … <a href=\"http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers<\/a>","sent":"2016-09-05T15:45:14.975Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[{"url":"http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cd97d8896559723041bf32","text":"ok i understand Nick. I tryng in Internet explorer running perfect.","html":"ok i understand Nick. I tryng in Internet explorer running perfect.","sent":"2016-09-05T16:05:44.602Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cd97f5f5a156f564842f71","text":"ok. good stuff.","html":"ok. good stuff.","sent":"2016-09-05T16:06:13.041Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdb8b18965597230422ab4","text":"Nick the API of alerta not logon in many browser because java script i,m using this in smart TV browser  the alerta 4.6.9 but de new version updated not login more. Haves any way to login with browsers with chrome or smartTV.","html":"Nick the API of alerta not logon in many browser because java script i,m using this in smart TV browser  the alerta 4.6.9 but de new version updated not login more. Haves any way to login with browsers with chrome or smartTV.","sent":"2016-09-05T18:25:53.709Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdbaeef5a156f56484a20d","text":"[![blob](https://files.gitter.im/alerta/chat/EtDz/thumb/blob.png)](https://files.gitter.im/alerta/chat/EtDz/blob)","html":"<a href=\"https://files.gitter.im/alerta/chat/EtDz/blob\" rel=\"nofollow\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/EtDz/thumb/blob.png\" alt=\"blob\" rel=\"nofollow\"><\/a>","sent":"2016-09-05T18:35:26.732Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[{"url":"https://files.gitter.im/alerta/chat/EtDz/thumb/blob.png"},{"url":"https://files.gitter.im/alerta/chat/EtDz/blob"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdbaf077c1b70d7fea023e","text":"in debug in the google chrome this error ocurr ","html":"in debug in the google chrome this error ocurr ","sent":"2016-09-05T18:35:28.577Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57cdbbda8965597230423694","text":"Are you saying it worked with version 4.6.9 but not with latest update?","html":"Are you saying it worked with version 4.6.9 but not with latest update?","sent":"2016-09-05T18:39:22.488Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdbbfdf33967fc6430aa64","text":"yes exactly","html":"yes exactly","sent":"2016-09-05T18:39:57.340Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdbd10fe284f6c3028fac6","text":"OK. I'll need to do a code compare to see what changed between then and now that might have broken it for you. I assume nothing else has changed at your end that might be responsible. ","html":"OK. I&#39;ll need to do a code compare to see what changed between then and now that might have broken it for you. I assume nothing else has changed at your end that might be responsible. ","sent":"2016-09-05T18:44:32.371Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdbd798965597230423fd6","text":"OK. But i create new installation and same problem ocurr. With Internet Explorer running    ok. But Chrome firefox and my smarttv no login.","html":"OK. But i create new installation and same problem ocurr. With Internet Explorer running    ok. But Chrome firefox and my smarttv no login.","sent":"2016-09-05T18:46:17.586Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdbd9acdbf820f7f9d0f0e","text":"i downloaded new api and webapp for repository.","html":"i downloaded new api and webapp for repository.","sent":"2016-09-05T18:46:50.806Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57cdbe11cdbf820f7f9d101a","text":"Oh OK. So IE works but Firefox and smartTv doesn't??","html":"Oh OK. So IE works but Firefox and smartTv doesn&#39;t??","sent":"2016-09-05T18:48:49.047Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdbe3a77c1b70d7fea0b6d","text":"yes exactly","html":"yes exactly","sent":"2016-09-05T18:49:30.646Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57cdbe52f5a156f56484aad1","text":"chrome not login too same error","html":"chrome not login too same error","sent":"2016-09-05T18:49:54.318Z","fromUser":{"id":"57cd919b40f3a6eec063a14e","username":"joao-cavichiolli","displayName":"joao-cavichiolli","url":"/joao-cavichiolli","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/joao-cavichiolli","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22008893?v=4&s=128","v":2,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

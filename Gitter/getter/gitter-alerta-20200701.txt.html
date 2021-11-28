@@ -1,0 +1,618 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0158f6119/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0158f6119/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0158f6119/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0158f6119/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/07/02"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/06/30"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">1<sup>st</sup></span><br>
+      <span class="gtrArchiveMonth">Jul 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5efc1d603a0d3931fac4bbf0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efc1d603a0d3931fac4bbf0' title="">Jul 01 05:21 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Are you using docker ? When you say you upgrade is that the API, web UI or both?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efc4ad6613d3b33941c1e06 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5819cc18d73408ce4f33072f avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/1857575?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/1857575?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jan Pechek</div>
+      <div class='chat-item__username js-chat-item-from'>@Samgarr</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efc4ad6613d3b33941c1e06' title="">Jul 01 08:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hello after update from 7.5.0 to  7.5.6, housekeeping starts throwing errors:<pre><code><span class="special">#</span> alerta housekeeping
+Error: <span class="special">{</span>"code":500,"errors":<span class="special">[</span>"Traceback (most recent call last):<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/flask/app.py<span class="command">\"</span>, line 1949, in full_dispatch_request<span class="command">\n</span>    rv = self.dispatch_request()<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/flask/app.py<span class="command">\"</span>, line 1935, in dispatch_request<span class="command">\n</span>    return self.view_functions<span class="special">[</span>rule.endpoint<span class="special">]</span>(**req.view_args)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/flask_cors/decorator.py<span class="command">\"</span>, line 128, in wrapped_function<span class="command">\n</span>    resp = make_response(f(*args, **kwargs))<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/alerta/auth/decorators.py<span class="command">\"</span>, line 53, in wrapped<span class="command">\n</span>    return f(*args, **kwargs)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/alerta/management/views.py<span class="command">\"</span>, line 151, in housekeeping<span class="command">\n</span>    has_expired, has_timedout = Alert.housekeeping(expired_threshold, info_threshold)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/alerta/models/alert.py<span class="command">\"</span>, line 545, in housekeeping<span class="command">\n</span>    <span class="special">[</span>Alert.from_db(alert) for alert in db.get_expired(expired_threshold, info_threshold)<span class="special">]</span>,<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/alerta/database/backends/mongodb/base.py<span class="command">\"</span>, line 1641, in get_expired<span class="command">\n</span>    return self.get_db().alerts.aggregate(pipeline)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/pymongo/collection.py<span class="command">\"</span>, line 2380, in aggregate<span class="command">\n</span>    **kwargs)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/pymongo/collection.py<span class="command">\"</span>, line 2299, in _aggregate<span class="command">\n</span>    retryable=not cmd._performs_write)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/pymongo/mongo_client.py<span class="command">\"</span>, line 1464, in _retryable_read<span class="command">\n</span>    return func(session, server, sock_info, slave_ok)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/pymongo/aggregation.py<span class="command">\"</span>, line 148, in get_cursor<span class="command">\n</span>    user_fields=self._user_fields)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/pymongo/pool.py<span class="command">\"</span>, line 613, in command<span class="command">\n</span>    user_fields=user_fields)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/pymongo/network.py<span class="command">\"</span>, line 167, in command<span class="command">\n</span>    parse_write_concern_error=parse_write_concern_error)<span class="command">\n</span>  File <span class="command">\"</span>/usr/local/lib/python3.5/dist-packages/pymongo/helpers.py<span class="command">\"</span>, line 159, in _check_command_response<span class="command">\n</span>    raise OperationFailure(msg <span class="comment">% errmsg, code, response)\npymongo.errors.OperationFailure: Unrecognized pipeline stage name: '$addFields'\n"],"message":"Unrecognized pipeline stage name: '$addFields'","requestId":"fc1eba3a-9236-4506-bca0-de346f5361e0","status":"error"}</span></code></pre><pre><code><span class="tag">Python</span> 3<span class="class">.5</span><span class="class">.3</span>
+<span class="tag">Pymongo</span> 3<span class="class">.10</span><span class="class">.1</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efc4e9de0e5673398e655cf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5819cc18d73408ce4f33072f avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/1857575?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/1857575?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jan Pechek</div>
+      <div class='chat-item__username js-chat-item-from'>@Samgarr</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efc4e9de0e5673398e655cf' title="">Jul 01 08:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I would appreciate some hints for degugging.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efc5d32405be935cdd30e36 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efc5d32405be935cdd30e36' title="">Jul 01 09:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      $addFields is introduced in Mongo 3.4 version
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efc5e3d54d7862dc4bcf81b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Minimum supported version is 3.6 <a href="https://github.com/alerta/alerta#requirements" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/alerta#requirements</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efc5fcfa813c72dcf1edd22 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5819cc18d73408ce4f33072f avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/1857575?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/1857575?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jan Pechek</div>
+      <div class='chat-item__username js-chat-item-from'>@Samgarr</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efc5fcfa813c72dcf1edd22' title="">Jul 01 10:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Oh, i read this as requirements for release 8+. I try upgrade mongo anyway, thanks for hint.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efc883b7ba3965373dda73e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efc883b7ba3965373dda73e' title="">Jul 01 12:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what version of mongdb are you using?
+    </div>
+      <div class='chat-item__thread-message-indicator parent-message-indicator js-parent-message-indicator'>
+        <img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-down-right.svg" /> 2 replies
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efc94b3e0e5673398e70d63 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5da7a6bfd73408ce4fce19dc avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/54080089?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/54080089?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Howie</div>
+      <div class='chat-item__username js-chat-item-from'>@wo250012</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efc94b3e0e5673398e70d63' title="">Jul 01 13:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>, not using docker. I was only updating the API. I thought I looked at the time and did not see there was a webui 8.0 release so I did not update that. I see that there is an 8.0 release there now...so can try upgrading both.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efc98db613d3b33941ce108 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5da7a6bfd73408ce4fce19dc avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/54080089?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/54080089?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Howie</div>
+      <div class='chat-item__username js-chat-item-from'>@wo250012</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efc98db613d3b33941ce108' title="">Jul 01 14:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>, updated both ui and api and things seem to be good now. sorry for the bother.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efcd63e6c06cd1bf467a4fb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/07/01?at=5efcd63e6c06cd1bf467a4fb' title="">Jul 01 18:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      :+1:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efcfd006c06cd1bf46817d4 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Prehistoric one, 3.2 :) After upgrading mongodb is my problem fixed, thank you for your time.
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/07/01?at=5efcfd006c06cd1bf46817d4"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5efcfed2a813c72dcf20cea5 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      good news.
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/07/01?at=5efcfed2a813c72dcf20cea5"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0158f6","assetTag":"0158f6119","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$BWmYoEJGUd7JF2hsjx+hKF54N934PxYaPqYNaYlu/+w=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":391,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-07-01T00:00:00.000Z","nextDate":"2020-07-02T23:59:59.999Z","previousDate":"2020-06-30T00:00:00.000Z","messages":[{"id":"5efc1d603a0d3931fac4bbf0","text":"Are you using docker ? When you say you upgrade is that the API, web UI or both?","html":"Are you using docker ? When you say you upgrade is that the API, web UI or both?","sent":"2020-07-01T05:21:36.591Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5efc4ad6613d3b33941c1e06","text":"Hello after update from 7.5.0 to  7.5.6, housekeeping starts throwing errors:\n```\n# alerta housekeeping\nError: {\"code\":500,\"errors\":[\"Traceback (most recent call last):\\n  File \\\"/usr/local/lib/python3.5/dist-packages/flask/app.py\\\", line 1949, in full_dispatch_request\\n    rv = self.dispatch_request()\\n  File \\\"/usr/local/lib/python3.5/dist-packages/flask/app.py\\\", line 1935, in dispatch_request\\n    return self.view_functions[rule.endpoint](**req.view_args)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/flask_cors/decorator.py\\\", line 128, in wrapped_function\\n    resp = make_response(f(*args, **kwargs))\\n  File \\\"/usr/local/lib/python3.5/dist-packages/alerta/auth/decorators.py\\\", line 53, in wrapped\\n    return f(*args, **kwargs)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/alerta/management/views.py\\\", line 151, in housekeeping\\n    has_expired, has_timedout = Alert.housekeeping(expired_threshold, info_threshold)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/alerta/models/alert.py\\\", line 545, in housekeeping\\n    [Alert.from_db(alert) for alert in db.get_expired(expired_threshold, info_threshold)],\\n  File \\\"/usr/local/lib/python3.5/dist-packages/alerta/database/backends/mongodb/base.py\\\", line 1641, in get_expired\\n    return self.get_db().alerts.aggregate(pipeline)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/pymongo/collection.py\\\", line 2380, in aggregate\\n    **kwargs)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/pymongo/collection.py\\\", line 2299, in _aggregate\\n    retryable=not cmd._performs_write)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/pymongo/mongo_client.py\\\", line 1464, in _retryable_read\\n    return func(session, server, sock_info, slave_ok)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/pymongo/aggregation.py\\\", line 148, in get_cursor\\n    user_fields=self._user_fields)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/pymongo/pool.py\\\", line 613, in command\\n    user_fields=user_fields)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/pymongo/network.py\\\", line 167, in command\\n    parse_write_concern_error=parse_write_concern_error)\\n  File \\\"/usr/local/lib/python3.5/dist-packages/pymongo/helpers.py\\\", line 159, in _check_command_response\\n    raise OperationFailure(msg % errmsg, code, response)\\npymongo.errors.OperationFailure: Unrecognized pipeline stage name: '$addFields'\\n\"],\"message\":\"Unrecognized pipeline stage name: '$addFields'\",\"requestId\":\"fc1eba3a-9236-4506-bca0-de346f5361e0\",\"status\":\"error\"}\n\n```\n```\nPython 3.5.3\nPymongo 3.10.1\n```\n","html":"Hello after update from 7.5.0 to  7.5.6, housekeeping starts throwing errors:<pre><code><span class=\"special\">#<\/span> alerta housekeeping\nError: <span class=\"special\">{<\/span>\"code\":500,\"errors\":<span class=\"special\">[<\/span>\"Traceback (most recent call last):<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/flask/app.py<span class=\"command\">\\\"<\/span>, line 1949, in full_dispatch_request<span class=\"command\">\\n<\/span>    rv = self.dispatch_request()<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/flask/app.py<span class=\"command\">\\\"<\/span>, line 1935, in dispatch_request<span class=\"command\">\\n<\/span>    return self.view_functions<span class=\"special\">[<\/span>rule.endpoint<span class=\"special\">]<\/span>(**req.view_args)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/flask_cors/decorator.py<span class=\"command\">\\\"<\/span>, line 128, in wrapped_function<span class=\"command\">\\n<\/span>    resp = make_response(f(*args, **kwargs))<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/alerta/auth/decorators.py<span class=\"command\">\\\"<\/span>, line 53, in wrapped<span class=\"command\">\\n<\/span>    return f(*args, **kwargs)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/alerta/management/views.py<span class=\"command\">\\\"<\/span>, line 151, in housekeeping<span class=\"command\">\\n<\/span>    has_expired, has_timedout = Alert.housekeeping(expired_threshold, info_threshold)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/alerta/models/alert.py<span class=\"command\">\\\"<\/span>, line 545, in housekeeping<span class=\"command\">\\n<\/span>    <span class=\"special\">[<\/span>Alert.from_db(alert) for alert in db.get_expired(expired_threshold, info_threshold)<span class=\"special\">]<\/span>,<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/alerta/database/backends/mongodb/base.py<span class=\"command\">\\\"<\/span>, line 1641, in get_expired<span class=\"command\">\\n<\/span>    return self.get_db().alerts.aggregate(pipeline)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/pymongo/collection.py<span class=\"command\">\\\"<\/span>, line 2380, in aggregate<span class=\"command\">\\n<\/span>    **kwargs)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/pymongo/collection.py<span class=\"command\">\\\"<\/span>, line 2299, in _aggregate<span class=\"command\">\\n<\/span>    retryable=not cmd._performs_write)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/pymongo/mongo_client.py<span class=\"command\">\\\"<\/span>, line 1464, in _retryable_read<span class=\"command\">\\n<\/span>    return func(session, server, sock_info, slave_ok)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/pymongo/aggregation.py<span class=\"command\">\\\"<\/span>, line 148, in get_cursor<span class=\"command\">\\n<\/span>    user_fields=self._user_fields)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/pymongo/pool.py<span class=\"command\">\\\"<\/span>, line 613, in command<span class=\"command\">\\n<\/span>    user_fields=user_fields)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/pymongo/network.py<span class=\"command\">\\\"<\/span>, line 167, in command<span class=\"command\">\\n<\/span>    parse_write_concern_error=parse_write_concern_error)<span class=\"command\">\\n<\/span>  File <span class=\"command\">\\\"<\/span>/usr/local/lib/python3.5/dist-packages/pymongo/helpers.py<span class=\"command\">\\\"<\/span>, line 159, in _check_command_response<span class=\"command\">\\n<\/span>    raise OperationFailure(msg <span class=\"comment\">% errmsg, code, response)\\npymongo.errors.OperationFailure: Unrecognized pipeline stage name: '$addFields'\\n\"],\"message\":\"Unrecognized pipeline stage name: '$addFields'\",\"requestId\":\"fc1eba3a-9236-4506-bca0-de346f5361e0\",\"status\":\"error\"}<\/span><\/code><\/pre><pre><code><span class=\"tag\">Python<\/span> 3<span class=\"class\">.5<\/span><span class=\"class\">.3<\/span>\n<span class=\"tag\">Pymongo<\/span> 3<span class=\"class\">.10<\/span><span class=\"class\">.1<\/span><\/code><\/pre>","sent":"2020-07-01T08:35:34.137Z","fromUser":{"id":"5819cc18d73408ce4f33072f","username":"Samgarr","displayName":"Jan Pechek","url":"/Samgarr","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/Samgarr","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/1857575?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/1857575?v=4&s=128","v":13,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5efc4e9de0e5673398e655cf","text":"I would appreciate some hints for degugging.","html":"I would appreciate some hints for degugging.","sent":"2020-07-01T08:51:41.403Z","fromUser":{"id":"5819cc18d73408ce4f33072f","username":"Samgarr","displayName":"Jan Pechek","url":"/Samgarr","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/Samgarr","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/1857575?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/1857575?v=4&s=128","v":13,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5efc5d32405be935cdd30e36","text":"\n$addFields is introduced in Mongo 3.4 version","html":"$addFields is introduced in Mongo 3.4 version","sent":"2020-07-01T09:53:54.973Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5efc5e3d54d7862dc4bcf81b","text":"Minimum supported version is 3.6 https://github.com/alerta/alerta#requirements","html":"Minimum supported version is 3.6 <a href=\"https://github.com/alerta/alerta#requirements\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/alerta#requirements<\/a>","sent":"2020-07-01T09:58:21.975Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":5,"urls":[{"url":"https://github.com/alerta/alerta#requirements"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5efc5fcfa813c72dcf1edd22","text":"Oh, i read this as requirements for release 8+. I try upgrade mongo anyway, thanks for hint.","html":"Oh, i read this as requirements for release 8+. I try upgrade mongo anyway, thanks for hint.","sent":"2020-07-01T10:05:03.374Z","fromUser":{"id":"5819cc18d73408ce4f33072f","username":"Samgarr","displayName":"Jan Pechek","url":"/Samgarr","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/Samgarr","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/1857575?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/1857575?v=4&s=128","v":13,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5efc883b7ba3965373dda73e","text":"what version of mongdb are you using?","html":"what version of mongdb are you using?","sent":"2020-07-01T12:57:31.764Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"threadMessageCount":2,"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":3,"burstStart":true},{"id":"5efc94b3e0e5673398e70d63","text":"Hi @satterly, not using docker. I was only updating the API. I thought I looked at the time and did not see there was a webui 8.0 release so I did not update that. I see that there is an 8.0 release there now...so can try upgrading both.","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>, not using docker. I was only updating the API. I thought I looked at the time and did not see there was a webui 8.0 release so I did not update that. I see that there is an 8.0 release there now...so can try upgrading both.","sent":"2020-07-01T13:50:43.135Z","editedAt":"2020-07-01T13:51:05.612Z","fromUser":{"id":"5da7a6bfd73408ce4fce19dc","username":"wo250012","displayName":"Howie","url":"/wo250012","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/wo250012","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/54080089?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/54080089?v=4&s=128","v":9,"gv":"4"},"readBy":5,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5efc98db613d3b33941ce108","text":"@satterly, updated both ui and api and things seem to be good now. sorry for the bother.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>, updated both ui and api and things seem to be good now. sorry for the bother.","sent":"2020-07-01T14:08:27.109Z","fromUser":{"id":"5da7a6bfd73408ce4fce19dc","username":"wo250012","displayName":"Howie","url":"/wo250012","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/wo250012","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/54080089?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/54080089?v=4&s=128","v":9,"gv":"4"},"readBy":5,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5efcd63e6c06cd1bf467a4fb","text":":+1:","html":":+1:","sent":"2020-07-01T18:30:22.779Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5efcfd006c06cd1bf46817d4","text":"Prehistoric one, 3.2 :) After upgrading mongodb is my problem fixed, thank you for your time.","html":"Prehistoric one, 3.2 :) After upgrading mongodb is my problem fixed, thank you for your time.","sent":"2020-07-01T21:15:44.417Z","fromUser":{"id":"5819cc18d73408ce4f33072f","username":"Samgarr","displayName":"Jan Pechek","url":"/Samgarr","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/Samgarr","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/1857575?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/1857575?v=4&s=128","v":13,"gv":"4"},"parentId":"5efc883b7ba3965373dda73e","readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5efcfed2a813c72dcf20cea5","text":"good news.","html":"good news.","sent":"2020-07-01T21:23:30.051Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5efc883b7ba3965373dda73e","readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0158f6119/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0158f6119/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0158f6119/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0158f6119/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0158f6119/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

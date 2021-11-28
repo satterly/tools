@@ -1,0 +1,966 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/04/26"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/04/24"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">25<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Apr 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5cc18049e416b84519d95638 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc18049e416b84519d95638' title="">Apr 25 2019 09:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> are you planning to update the docker container for the web ui only? As far as I can see the container alerta/alerta-web contains both, the server and the UI, but my server is running OK, I&#39;d just like to update the ui if possible.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc184eb8446a6023e730e99 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc184eb8446a6023e730e99' title="">Apr 25 2019 09:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Or, when using the alerta/alerta-web image, how can I do that based on my existing mongo db which is not in a docker container but on the host?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc19fc9b489bb6ed7c1693f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc19fc9b489bb6ed7c1693f' title="">Apr 25 2019 11:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="jurgenhaas" class="mention">@jurgenhaas</span> you can use alerta-beta container. that is tip of master branch though so is “bleeding edge”.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1a041a4ef097471f87265 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i’ve just noticed that container stopped auto-updating two weeks ago. I guess this is what you mean. that should always be up-to-date so something is wrong there.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1a0668790b0307efc3640 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1a0668790b0307efc3640' title="">Apr 25 2019 11:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      That&#39;s exactly what I meant. So, if you get the auto-update working again, I&#39;d be happy to give that another try.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1a077990feb4518fdabc6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1a077990feb4518fdabc6' title="">Apr 25 2019 11:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      :+1: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1a3f11cd0b8307d6e246b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1a3f11cd0b8307d6e246b' title="">Apr 25 2019 12:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i think the auto-build stopped triggering when i renamed the repo. i’ve fixed the repo link and triggered a new build manually. hopefully it should start auto-building again from now on.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1a5bf97dcb371d80f50b0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1a5bf97dcb371d80f50b0' title="">Apr 25 2019 12:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ll keep an exe on the docker hub and will test it as soon as the new build becomes available
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1ac4a990feb4518fdfa6d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1ac4a990feb4518fdfa6d' title="">Apr 25 2019 12:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      So, I&#39;ve now updated the docker image alerta/alerta-beta and started all that again but it doesn&#39;t make any difference, unfortunately. As I can see from the commit message on github, you&#39;ve added that nginx configuration change to the latest build which means that should now be inside the container, right?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1ac84e416b84519da7087 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If true, then from outside I would have thought that nginx only has to operate as the forwarding proxy, which does work, but not for deep links, just the front page does.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1adaf990feb4518fe04b3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1adaf990feb4518fe04b3' title="">Apr 25 2019 12:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ah. No, the beta docker container does not configure nginx that way.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1adfd4b4cb471d9559ae3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://github.com/alerta/alerta-webui/blob/master/Dockerfile" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-webui/blob/master/Dockerfile</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1ae3a6a84d76ed8f15da0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it’s about as minimal as you can get.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1af844b4cb471d955a65f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1af844b4cb471d955a65f' title="">Apr 25 2019 13:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      What I&#39;m confused about: with alerta/alerta-beta behind nginx does work for the main URL <a href="https://alerta.example.com" rel="nofollow noopener noreferrer" target="_blank" class="link">https://alerta.example.com</a> but not for any other URL. So how does that site communicate with the server which obviously works but not when I&#39;m requesting any of those URLs directly?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1afd94b4cb471d955a948 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1afd94b4cb471d955a948' title="">Apr 25 2019 13:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      it’s this line here … <code>try_files $uri $uri/ /index.html;</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1b0088790b0307efca540 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it redirects to /index.html and then the vuejs router takes over.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1b02c375bac74700281df burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      can you test this… <a target="_blank" data-link-type="pr" data-issue="153" href="https://github.com/alerta/alerta-webui/pull/153" data-provider="github" data-issue-repo="alerta/alerta-webui" class="pr">alerta/alerta-webui#153</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1b04eb489bb6ed7c1eb75 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      or can you wait until i get back from the school run?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1b0682e2caa1aa6b86c56 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1b0682e2caa1aa6b86c56' title="">Apr 25 2019 13:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I can certainly wait as a customer is about to visit me now anyways
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1c6f16a84d76ed8f22011 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1c6f16a84d76ed8f22011' title="">Apr 25 2019 14:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1c70bb4700e023dcede59 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      sometimes I am getting this exception
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1c78ee416b84519db321e burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>ERROR:flask<span class="class">.app</span>:<span class="string">'NoneType'</span> <span class="tag">object</span> has no attribute <span class="string">'text'</span>
+Traceback (most recent call last):
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py"</span>, line <span class="number">1813</span>, <span class="keyword">in</span> full_dispatch_request
+    rv = self.<span class="function"><span class="title">dispatch_request</span><span class="params">()</span></span>
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py"</span>, line <span class="number">1799</span>, <span class="keyword">in</span> dispatch_request
+    return self<span class="class">.view_functions</span>[rule.endpoint](**req.view_args)
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py"</span>, line <span class="number">128</span>, <span class="keyword">in</span> wrapped_function
+    resp = <span class="function"><span class="title">make_response</span><span class="params">(f(*args, **kwargs)</span></span>)
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py"</span>, line <span class="number">50</span>, <span class="keyword">in</span> wrapped
+    return <span class="function"><span class="title">f</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py"</span>, line <span class="number">259</span>, <span class="keyword">in</span> wrapped
+    response = <span class="function"><span class="title">f</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py"</span>, line <span class="number">19</span>, <span class="keyword">in</span> decorated
+    return <span class="function"><span class="title">func</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py"</span>, line <span class="number">68</span>, <span class="keyword">in</span> receive
+    write_audit_trail.<span class="function"><span class="title">send</span><span class="params">(current_app._get_current_object()</span></span>, event=<span class="string">'alert-received'</span>, message=alert<span class="class">.text</span>, user=g<span class="class">.login</span>,
+AttributeError: <span class="string">'NoneType'</span> <span class="tag">object</span> has no attribute <span class="string">'text'</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1c7af5b3f941aa58da87b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>ERROR:flask.app:'NoneType' object has no attribute 'severity'
+Traceback (most recent <span class="operator"><span class="keyword">call</span> <span class="keyword">last</span>):
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/api.py"</span>, line <span class="number">61</span>, <span class="keyword">in</span> process_alert
+    alert = alert.<span class="keyword">update</span>(is_correlated)
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/alert.py"</span>, line <span class="number">325</span>, <span class="keyword">in</span> <span class="keyword">update</span>
+    <span class="keyword">self</span>.previous_severity = db.get_severity(<span class="keyword">self</span>)
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/database/backends/postgres/base.py"</span>, line <span class="number">154</span>, <span class="keyword">in</span> get_severity
+    <span class="keyword">return</span> <span class="keyword">self</span>._fetchone(<span class="keyword">select</span>, vars(alert)).severity
+AttributeError: <span class="string">'NoneType'</span> <span class="keyword">object</span> has <span class="keyword">no</span> <span class="keyword">attribute</span> <span class="string">'severity'</span>
+
+During handling <span class="keyword">of</span> the above <span class="keyword">exception</span>, another <span class="keyword">exception</span> occurred:
+
+Traceback (most recent <span class="keyword">call</span> <span class="keyword">last</span>):
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py"</span>, line <span class="number">52</span>, <span class="keyword">in</span> receive
+    alert = process_alert(alert)
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/api.py"</span>, line <span class="number">65</span>, <span class="keyword">in</span> process_alert
+    <span class="keyword">raise</span> ApiError(<span class="keyword">str</span>(<span class="keyword">e</span>))
+alerta.<span class="keyword">exceptions</span>.ApiError: <span class="string">'NoneType'</span> <span class="keyword">object</span> has <span class="keyword">no</span> <span class="keyword">attribute</span> <span class="string">'severity'</span>
+
+During handling <span class="keyword">of</span> the above <span class="keyword">exception</span>, another <span class="keyword">exception</span> occurred:
+
+Traceback (most recent <span class="keyword">call</span> <span class="keyword">last</span>):
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py"</span>, line <span class="number">1813</span>, <span class="keyword">in</span> full_dispatch_request
+    rv = <span class="keyword">self</span>.dispatch_request()
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py"</span>, line <span class="number">1799</span>, <span class="keyword">in</span> dispatch_request
+    <span class="keyword">return</span> <span class="keyword">self</span>.view_functions[rule.endpoint](**req.view_args)
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py"</span>, line <span class="number">128</span>, <span class="keyword">in</span> wrapped_function
+    resp = make_response(<span class="keyword">f</span>(*args, **kwargs))
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py"</span>, line <span class="number">50</span>, <span class="keyword">in</span> <span class="keyword">wrapped</span>
+    <span class="keyword">return</span> <span class="keyword">f</span>(*args, **kwargs)
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py"</span>, line <span class="number">259</span>, <span class="keyword">in</span> <span class="keyword">wrapped</span>
+    response = <span class="keyword">f</span>(*args, **kwargs)
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py"</span>, line <span class="number">19</span>, <span class="keyword">in</span> decorated
+    <span class="keyword">return</span> func(*args, **kwargs)
+  <span class="keyword">File</span> <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py"</span>, line <span class="number">66</span>, <span class="keyword">in</span> receive
+    <span class="keyword">raise</span> ApiError(<span class="keyword">str</span>(<span class="keyword">e</span>), <span class="number">500</span>)
+alerta.<span class="keyword">exceptions</span>.ApiError: <span class="string">'NoneType'</span> <span class="keyword">object</span> has <span class="keyword">no</span> <span class="keyword">attribute</span> <span class="string">'severity'</span></span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1c9208790b0307efd5af7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1c9208790b0307efd5af7' title="">Apr 25 2019 14:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      it happens several times <img src="https://i.imgur.com/4puoPYN.png" alt="alt" rel="nofollow">
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1ca281cd0b8307d6f3bea burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>ERROR:flask<span class="class">.app</span>:<span class="string">'NoneType'</span> <span class="tag">object</span> has no attribute <span class="string">'text'</span>
+Traceback (most recent call last):
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py"</span>, line <span class="number">1813</span>, <span class="keyword">in</span> full_dispatch_request
+    rv = self.<span class="function"><span class="title">dispatch_request</span><span class="params">()</span></span>
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py"</span>, line <span class="number">1799</span>, <span class="keyword">in</span> dispatch_request
+    return self<span class="class">.view_functions</span>[rule.endpoint](**req.view_args)
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py"</span>, line <span class="number">128</span>, <span class="keyword">in</span> wrapped_function
+    resp = <span class="function"><span class="title">make_response</span><span class="params">(f(*args, **kwargs)</span></span>)
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py"</span>, line <span class="number">50</span>, <span class="keyword">in</span> wrapped
+    return <span class="function"><span class="title">f</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py"</span>, line <span class="number">259</span>, <span class="keyword">in</span> wrapped
+    response = <span class="function"><span class="title">f</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py"</span>, line <span class="number">19</span>, <span class="keyword">in</span> decorated
+    return <span class="function"><span class="title">func</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py"</span>, line <span class="number">68</span>, <span class="keyword">in</span> receive
+    write_audit_trail.<span class="function"><span class="title">send</span><span class="params">(current_app._get_current_object()</span></span>, event=<span class="string">'alert-received'</span>, message=alert<span class="class">.text</span>, user=g<span class="class">.login</span>,
+AttributeError: <span class="string">'NoneType'</span> <span class="tag">object</span> has no attribute <span class="string">'text'</span>
+INFO:werkzeug:<span class="number">127.0</span>.<span class="number">0.1</span> - - [<span class="number">25</span>/Apr/<span class="number">2019</span> <span class="number">14</span>:<span class="number">51</span>:<span class="number">49</span>] <span class="string">"POST /alert HTTP/1.0"</span> <span class="number">500</span> -</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1d89e1cd0b8307d6fadaf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1d89e1cd0b8307d6fadaf' title="">Apr 25 2019 15:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;m going to need more info than that. Can you create a GitHub issue and fill in as much detail as you can? Thanks
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1d97d3b6cb0686a503b60 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1d97d3b6cb0686a503b60' title="">Apr 25 2019 15:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what more info do you need?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cc1dc678446a6023e758fae burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/25?at=5cc1dc678446a6023e758fae' title="">Apr 25 2019 16:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>**Issue Summary**
+A clear <span class="keyword">and</span> concise description <span class="keyword">of</span> what <span class="keyword">the</span> bug <span class="keyword">is</span>.
+
+**Environment**
+- OS: [eg. Linux, Mac, Windows]
+- API <span class="property">version</span>: [eg. <span class="number">6.8</span><span class="number">.1</span>]
+- Deployment: [eg. Docker, Heroku, AWS, GCloud, self-hosted]
+- For self-hosted, WSGI environment: [eg. nginx/uwsgi, apache/mod_wsgi]
+
+- Database: [eg. MongoDB, Postgres]
+
+- Server config:
+  Auth enabled? Yes/No
+  Auth provider? Google, GitHub, OpenID, Basic, LDAP, etc
+  Customer views? Yes/No
+  (<span class="keyword">or</span> provide <span class="keyword">the</span> `/config` endpoint output)
+
+- web UI <span class="property">version</span>: [eg. <span class="number">6.8</span><span class="number">.1</span>]
+- CLI <span class="property">version</span>: [eg. <span class="number">6.8</span><span class="number">.1</span>]
+
+**To Reproduce**
+Steps <span class="keyword">to</span> reproduce <span class="keyword">the</span> behavior:
+<span class="number">1.</span> Go <span class="keyword">to</span> '...'
+<span class="number">2.</span> Click <span class="function_start"><span class="keyword">on</span></span> '....' <span class="keyword">or</span> Run '...'
+<span class="number">3.</span> Scroll down <span class="keyword">to</span> '....'
+<span class="number">4.</span> See <span class="keyword">error</span> (include command output)
+
+For web app issues, include any web browser JavaScript console errors.
+
+**Expected behavior**
+A clear <span class="keyword">and</span> concise description <span class="keyword">of</span> what you expected <span class="keyword">to</span> happen.
+
+**Screenshots**
+If applicable, add screenshots <span class="keyword">to</span> help explain your problem.
+
+**Additional context**
+Add any other context <span class="keyword">about</span> <span class="keyword">the</span> problem here.
+
+
+NOTE: Please provide <span class="keyword">as</span> much information <span class="keyword">about</span> your issue <span class="keyword">as</span> possible.
+Failure <span class="keyword">to</span> provide basic details <span class="keyword">about</span> your specific environment make
+<span class="keyword">it</span> impossible <span class="keyword">to</span> know <span class="keyword">if</span> an issue has already been fixed, can <span class="command">delay</span> a
+response <span class="keyword">and</span> may <span class="constant">result</span> <span class="keyword">in</span> your issue being closed <span class="keyword">without</span> a resolution.</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$+nkgD2mFpZrjYlQMbrvM0jRhhW3Xh4WYeSI6GvnMGDg=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-04-25T00:00:00.000Z","nextDate":"2019-04-26T23:59:59.999Z","previousDate":"2019-04-24T00:00:00.000Z","messages":[{"id":"5cc18049e416b84519d95638","text":"@satterly are you planning to update the docker container for the web ui only? As far as I can see the container alerta/alerta-web contains both, the server and the UI, but my server is running OK, I'd just like to update the ui if possible.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> are you planning to update the docker container for the web ui only? As far as I can see the container alerta/alerta-web contains both, the server and the UI, but my server is running OK, I&#39;d just like to update the ui if possible.","sent":"2019-04-25T09:39:21.801Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc184eb8446a6023e730e99","text":"Or, when using the alerta/alerta-web image, how can I do that based on my existing mongo db which is not in a docker container but on the host?","html":"Or, when using the alerta/alerta-web image, how can I do that based on my existing mongo db which is not in a docker container but on the host?","sent":"2019-04-25T09:59:07.355Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc19fc9b489bb6ed7c1693f","text":"@jurgenhaas you can use alerta-beta container. that is tip of master branch though so is “bleeding edge”.","html":"<span data-link-type=\"mention\" data-screen-name=\"jurgenhaas\" class=\"mention\">@jurgenhaas<\/span> you can use alerta-beta container. that is tip of master branch though so is “bleeding edge”.","sent":"2019-04-25T11:53:45.041Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"jurgenhaas","userId":"550c28af15522ed4b3dd8da8","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1a041a4ef097471f87265","text":"i’ve just noticed that container stopped auto-updating two weeks ago. I guess this is what you mean. that should always be up-to-date so something is wrong there.","html":"i’ve just noticed that container stopped auto-updating two weeks ago. I guess this is what you mean. that should always be up-to-date so something is wrong there.","sent":"2019-04-25T11:55:45.072Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1a0668790b0307efc3640","text":"That's exactly what I meant. So, if you get the auto-update working again, I'd be happy to give that another try.","html":"That&#39;s exactly what I meant. So, if you get the auto-update working again, I&#39;d be happy to give that another try.","sent":"2019-04-25T11:56:22.902Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1a077990feb4518fdabc6","text":":+1: ","html":":+1: ","sent":"2019-04-25T11:56:39.027Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1a3f11cd0b8307d6e246b","text":"i think the auto-build stopped triggering when i renamed the repo. i’ve fixed the repo link and triggered a new build manually. hopefully it should start auto-building again from now on.","html":"i think the auto-build stopped triggering when i renamed the repo. i’ve fixed the repo link and triggered a new build manually. hopefully it should start auto-building again from now on.","sent":"2019-04-25T12:11:29.357Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1a5bf97dcb371d80f50b0","text":"I'll keep an exe on the docker hub and will test it as soon as the new build becomes available","html":"I&#39;ll keep an exe on the docker hub and will test it as soon as the new build becomes available","sent":"2019-04-25T12:19:11.793Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1ac4a990feb4518fdfa6d","text":"So, I've now updated the docker image alerta/alerta-beta and started all that again but it doesn't make any difference, unfortunately. As I can see from the commit message on github, you've added that nginx configuration change to the latest build which means that should now be inside the container, right?","html":"So, I&#39;ve now updated the docker image alerta/alerta-beta and started all that again but it doesn&#39;t make any difference, unfortunately. As I can see from the commit message on github, you&#39;ve added that nginx configuration change to the latest build which means that should now be inside the container, right?","sent":"2019-04-25T12:47:06.308Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1ac84e416b84519da7087","text":"If true, then from outside I would have thought that nginx only has to operate as the forwarding proxy, which does work, but not for deep links, just the front page does.","html":"If true, then from outside I would have thought that nginx only has to operate as the forwarding proxy, which does work, but not for deep links, just the front page does.","sent":"2019-04-25T12:48:04.643Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1adaf990feb4518fe04b3","text":"ah. No, the beta docker container does not configure nginx that way.","html":"ah. No, the beta docker container does not configure nginx that way.","sent":"2019-04-25T12:53:03.038Z","editedAt":"2019-04-25T12:53:58.899Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5cc1adfd4b4cb471d9559ae3","text":"https://github.com/alerta/alerta-webui/blob/master/Dockerfile","html":"<a href=\"https://github.com/alerta/alerta-webui/blob/master/Dockerfile\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-webui/blob/master/Dockerfile<\/a>","sent":"2019-04-25T12:54:21.021Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[{"url":"https://github.com/alerta/alerta-webui/blob/master/Dockerfile"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1ae3a6a84d76ed8f15da0","text":"it’s about as minimal as you can get.","html":"it’s about as minimal as you can get.","sent":"2019-04-25T12:55:22.055Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1af844b4cb471d955a65f","text":"What I'm confused about: with alerta/alerta-beta behind nginx does work for the main URL https://alerta.example.com but not for any other URL. So how does that site communicate with the server which obviously works but not when I'm requesting any of those URLs directly?","html":"What I&#39;m confused about: with alerta/alerta-beta behind nginx does work for the main URL <a href=\"https://alerta.example.com\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://alerta.example.com<\/a> but not for any other URL. So how does that site communicate with the server which obviously works but not when I&#39;m requesting any of those URLs directly?","sent":"2019-04-25T13:00:52.929Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":10,"urls":[{"url":"https://alerta.example.com"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1afd94b4cb471d955a948","text":"it’s this line here … `try_files $uri $uri/ /index.html;`","html":"it’s this line here … <code>try_files $uri $uri/ /index.html;<\/code>","sent":"2019-04-25T13:02:17.182Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1b0088790b0307efca540","text":"it redirects to /index.html and then the vuejs router takes over.","html":"it redirects to /index.html and then the vuejs router takes over.","sent":"2019-04-25T13:03:04.884Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1b02c375bac74700281df","text":"can you test this… https://github.com/alerta/alerta-webui/pull/153","html":"can you test this… <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"153\" href=\"https://github.com/alerta/alerta-webui/pull/153\" data-provider=\"github\" data-issue-repo=\"alerta/alerta-webui\" class=\"pr\">alerta/alerta-webui#153<\/a>","sent":"2019-04-25T13:03:40.902Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta-webui","number":"153"}],"meta":[],"v":1,"burstStart":false},{"id":"5cc1b04eb489bb6ed7c1eb75","text":"or can you wait until i get back from the school run?","html":"or can you wait until i get back from the school run?","sent":"2019-04-25T13:04:14.229Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1b0682e2caa1aa6b86c56","text":"I can certainly wait as a customer is about to visit me now anyways","html":"I can certainly wait as a customer is about to visit me now anyways","sent":"2019-04-25T13:04:40.288Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1c6f16a84d76ed8f22011","text":"hi @satterly ","html":"hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> ","sent":"2019-04-25T14:40:49.196Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1c70bb4700e023dcede59","text":"sometimes I am getting this exception","html":"sometimes I am getting this exception","sent":"2019-04-25T14:41:15.326Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1c78ee416b84519db321e","text":"```\nERROR:flask.app:'NoneType' object has no attribute 'text'\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\", line 1813, in full_dispatch_request\n    rv = self.dispatch_request()\n  File \"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\", line 1799, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File \"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py\", line 128, in wrapped_function\n    resp = make_response(f(*args, **kwargs))\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py\", line 50, in wrapped\n    return f(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py\", line 259, in wrapped\n    response = f(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py\", line 19, in decorated\n    return func(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py\", line 68, in receive\n    write_audit_trail.send(current_app._get_current_object(), event='alert-received', message=alert.text, user=g.login,\nAttributeError: 'NoneType' object has no attribute 'text'\n```\n","html":"<pre><code>ERROR:flask<span class=\"class\">.app<\/span>:<span class=\"string\">'NoneType'<\/span> <span class=\"tag\">object<\/span> has no attribute <span class=\"string\">'text'<\/span>\nTraceback (most recent call last):\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\"<\/span>, line <span class=\"number\">1813<\/span>, <span class=\"keyword\">in<\/span> full_dispatch_request\n    rv = self.<span class=\"function\"><span class=\"title\">dispatch_request<\/span><span class=\"params\">()<\/span><\/span>\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\"<\/span>, line <span class=\"number\">1799<\/span>, <span class=\"keyword\">in<\/span> dispatch_request\n    return self<span class=\"class\">.view_functions<\/span>[rule.endpoint](**req.view_args)\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py\"<\/span>, line <span class=\"number\">128<\/span>, <span class=\"keyword\">in<\/span> wrapped_function\n    resp = <span class=\"function\"><span class=\"title\">make_response<\/span><span class=\"params\">(f(*args, **kwargs)<\/span><\/span>)\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py\"<\/span>, line <span class=\"number\">50<\/span>, <span class=\"keyword\">in<\/span> wrapped\n    return <span class=\"function\"><span class=\"title\">f<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py\"<\/span>, line <span class=\"number\">259<\/span>, <span class=\"keyword\">in<\/span> wrapped\n    response = <span class=\"function\"><span class=\"title\">f<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py\"<\/span>, line <span class=\"number\">19<\/span>, <span class=\"keyword\">in<\/span> decorated\n    return <span class=\"function\"><span class=\"title\">func<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py\"<\/span>, line <span class=\"number\">68<\/span>, <span class=\"keyword\">in<\/span> receive\n    write_audit_trail.<span class=\"function\"><span class=\"title\">send<\/span><span class=\"params\">(current_app._get_current_object()<\/span><\/span>, event=<span class=\"string\">'alert-received'<\/span>, message=alert<span class=\"class\">.text<\/span>, user=g<span class=\"class\">.login<\/span>,\nAttributeError: <span class=\"string\">'NoneType'<\/span> <span class=\"tag\">object<\/span> has no attribute <span class=\"string\">'text'<\/span><\/code><\/pre>","sent":"2019-04-25T14:43:26.796Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1c7af5b3f941aa58da87b","text":"```\nERROR:flask.app:'NoneType' object has no attribute 'severity'\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/api.py\", line 61, in process_alert\n    alert = alert.update(is_correlated)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/alert.py\", line 325, in update\n    self.previous_severity = db.get_severity(self)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/database/backends/postgres/base.py\", line 154, in get_severity\n    return self._fetchone(select, vars(alert)).severity\nAttributeError: 'NoneType' object has no attribute 'severity'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py\", line 52, in receive\n    alert = process_alert(alert)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/api.py\", line 65, in process_alert\n    raise ApiError(str(e))\nalerta.exceptions.ApiError: 'NoneType' object has no attribute 'severity'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\", line 1813, in full_dispatch_request\n    rv = self.dispatch_request()\n  File \"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\", line 1799, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File \"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py\", line 128, in wrapped_function\n    resp = make_response(f(*args, **kwargs))\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py\", line 50, in wrapped\n    return f(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py\", line 259, in wrapped\n    response = f(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py\", line 19, in decorated\n    return func(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py\", line 66, in receive\n    raise ApiError(str(e), 500)\nalerta.exceptions.ApiError: 'NoneType' object has no attribute 'severity'\n```\n","html":"<pre><code>ERROR:flask.app:'NoneType' object has no attribute 'severity'\nTraceback (most recent <span class=\"operator\"><span class=\"keyword\">call<\/span> <span class=\"keyword\">last<\/span>):\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/api.py\"<\/span>, line <span class=\"number\">61<\/span>, <span class=\"keyword\">in<\/span> process_alert\n    alert = alert.<span class=\"keyword\">update<\/span>(is_correlated)\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/alert.py\"<\/span>, line <span class=\"number\">325<\/span>, <span class=\"keyword\">in<\/span> <span class=\"keyword\">update<\/span>\n    <span class=\"keyword\">self<\/span>.previous_severity = db.get_severity(<span class=\"keyword\">self<\/span>)\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/database/backends/postgres/base.py\"<\/span>, line <span class=\"number\">154<\/span>, <span class=\"keyword\">in<\/span> get_severity\n    <span class=\"keyword\">return<\/span> <span class=\"keyword\">self<\/span>._fetchone(<span class=\"keyword\">select<\/span>, vars(alert)).severity\nAttributeError: <span class=\"string\">'NoneType'<\/span> <span class=\"keyword\">object<\/span> has <span class=\"keyword\">no<\/span> <span class=\"keyword\">attribute<\/span> <span class=\"string\">'severity'<\/span>\n\nDuring handling <span class=\"keyword\">of<\/span> the above <span class=\"keyword\">exception<\/span>, another <span class=\"keyword\">exception<\/span> occurred:\n\nTraceback (most recent <span class=\"keyword\">call<\/span> <span class=\"keyword\">last<\/span>):\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py\"<\/span>, line <span class=\"number\">52<\/span>, <span class=\"keyword\">in<\/span> receive\n    alert = process_alert(alert)\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/api.py\"<\/span>, line <span class=\"number\">65<\/span>, <span class=\"keyword\">in<\/span> process_alert\n    <span class=\"keyword\">raise<\/span> ApiError(<span class=\"keyword\">str<\/span>(<span class=\"keyword\">e<\/span>))\nalerta.<span class=\"keyword\">exceptions<\/span>.ApiError: <span class=\"string\">'NoneType'<\/span> <span class=\"keyword\">object<\/span> has <span class=\"keyword\">no<\/span> <span class=\"keyword\">attribute<\/span> <span class=\"string\">'severity'<\/span>\n\nDuring handling <span class=\"keyword\">of<\/span> the above <span class=\"keyword\">exception<\/span>, another <span class=\"keyword\">exception<\/span> occurred:\n\nTraceback (most recent <span class=\"keyword\">call<\/span> <span class=\"keyword\">last<\/span>):\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\"<\/span>, line <span class=\"number\">1813<\/span>, <span class=\"keyword\">in<\/span> full_dispatch_request\n    rv = <span class=\"keyword\">self<\/span>.dispatch_request()\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\"<\/span>, line <span class=\"number\">1799<\/span>, <span class=\"keyword\">in<\/span> dispatch_request\n    <span class=\"keyword\">return<\/span> <span class=\"keyword\">self<\/span>.view_functions[rule.endpoint](**req.view_args)\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py\"<\/span>, line <span class=\"number\">128<\/span>, <span class=\"keyword\">in<\/span> wrapped_function\n    resp = make_response(<span class=\"keyword\">f<\/span>(*args, **kwargs))\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py\"<\/span>, line <span class=\"number\">50<\/span>, <span class=\"keyword\">in<\/span> <span class=\"keyword\">wrapped<\/span>\n    <span class=\"keyword\">return<\/span> <span class=\"keyword\">f<\/span>(*args, **kwargs)\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py\"<\/span>, line <span class=\"number\">259<\/span>, <span class=\"keyword\">in<\/span> <span class=\"keyword\">wrapped<\/span>\n    response = <span class=\"keyword\">f<\/span>(*args, **kwargs)\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py\"<\/span>, line <span class=\"number\">19<\/span>, <span class=\"keyword\">in<\/span> decorated\n    <span class=\"keyword\">return<\/span> func(*args, **kwargs)\n  <span class=\"keyword\">File<\/span> <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py\"<\/span>, line <span class=\"number\">66<\/span>, <span class=\"keyword\">in<\/span> receive\n    <span class=\"keyword\">raise<\/span> ApiError(<span class=\"keyword\">str<\/span>(<span class=\"keyword\">e<\/span>), <span class=\"number\">500<\/span>)\nalerta.<span class=\"keyword\">exceptions<\/span>.ApiError: <span class=\"string\">'NoneType'<\/span> <span class=\"keyword\">object<\/span> has <span class=\"keyword\">no<\/span> <span class=\"keyword\">attribute<\/span> <span class=\"string\">'severity'<\/span><\/span><\/code><\/pre>","sent":"2019-04-25T14:43:59.328Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1c9208790b0307efd5af7","text":"it happens several times ![alt](https://i.imgur.com/4puoPYN.png)","html":"it happens several times <img src=\"https://i.imgur.com/4puoPYN.png\" alt=\"alt\" rel=\"nofollow\">","sent":"2019-04-25T14:50:08.010Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":10,"urls":[{"url":"https://i.imgur.com/4puoPYN.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1ca281cd0b8307d6f3bea","text":"```\nERROR:flask.app:'NoneType' object has no attribute 'text'\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\", line 1813, in full_dispatch_request\n    rv = self.dispatch_request()\n  File \"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\", line 1799, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File \"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py\", line 128, in wrapped_function\n    resp = make_response(f(*args, **kwargs))\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py\", line 50, in wrapped\n    return f(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py\", line 259, in wrapped\n    response = f(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py\", line 19, in decorated\n    return func(*args, **kwargs)\n  File \"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py\", line 68, in receive\n    write_audit_trail.send(current_app._get_current_object(), event='alert-received', message=alert.text, user=g.login,\nAttributeError: 'NoneType' object has no attribute 'text'\nINFO:werkzeug:127.0.0.1 - - [25/Apr/2019 14:51:49] \"POST /alert HTTP/1.0\" 500 -\n```","html":"<pre><code>ERROR:flask<span class=\"class\">.app<\/span>:<span class=\"string\">'NoneType'<\/span> <span class=\"tag\">object<\/span> has no attribute <span class=\"string\">'text'<\/span>\nTraceback (most recent call last):\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\"<\/span>, line <span class=\"number\">1813<\/span>, <span class=\"keyword\">in<\/span> full_dispatch_request\n    rv = self.<span class=\"function\"><span class=\"title\">dispatch_request<\/span><span class=\"params\">()<\/span><\/span>\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask-1.0.2-py3.7.egg/flask/app.py\"<\/span>, line <span class=\"number\">1799<\/span>, <span class=\"keyword\">in<\/span> dispatch_request\n    return self<span class=\"class\">.view_functions<\/span>[rule.endpoint](**req.view_args)\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/Flask_Cors-3.0.7-py3.7.egg/flask_cors/decorator.py\"<\/span>, line <span class=\"number\">128<\/span>, <span class=\"keyword\">in<\/span> wrapped_function\n    resp = <span class=\"function\"><span class=\"title\">make_response<\/span><span class=\"params\">(f(*args, **kwargs)<\/span><\/span>)\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/auth/decorators.py\"<\/span>, line <span class=\"number\">50<\/span>, <span class=\"keyword\">in<\/span> wrapped\n    return <span class=\"function\"><span class=\"title\">f<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/models/metrics.py\"<\/span>, line <span class=\"number\">259<\/span>, <span class=\"keyword\">in<\/span> wrapped\n    response = <span class=\"function\"><span class=\"title\">f<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/utils/response.py\"<\/span>, line <span class=\"number\">19<\/span>, <span class=\"keyword\">in<\/span> decorated\n    return <span class=\"function\"><span class=\"title\">func<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/local/lib/python3.7/site-packages/alerta_server-7.1.0-py3.7.egg/alerta/views/alerts.py\"<\/span>, line <span class=\"number\">68<\/span>, <span class=\"keyword\">in<\/span> receive\n    write_audit_trail.<span class=\"function\"><span class=\"title\">send<\/span><span class=\"params\">(current_app._get_current_object()<\/span><\/span>, event=<span class=\"string\">'alert-received'<\/span>, message=alert<span class=\"class\">.text<\/span>, user=g<span class=\"class\">.login<\/span>,\nAttributeError: <span class=\"string\">'NoneType'<\/span> <span class=\"tag\">object<\/span> has no attribute <span class=\"string\">'text'<\/span>\nINFO:werkzeug:<span class=\"number\">127.0<\/span>.<span class=\"number\">0.1<\/span> - - [<span class=\"number\">25<\/span>/Apr/<span class=\"number\">2019<\/span> <span class=\"number\">14<\/span>:<span class=\"number\">51<\/span>:<span class=\"number\">49<\/span>] <span class=\"string\">\"POST /alert HTTP/1.0\"<\/span> <span class=\"number\">500<\/span> -<\/code><\/pre>","sent":"2019-04-25T14:54:32.716Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cc1d89e1cd0b8307d6fadaf","text":"I'm going to need more info than that. Can you create a GitHub issue and fill in as much detail as you can? Thanks","html":"I&#39;m going to need more info than that. Can you create a GitHub issue and fill in as much detail as you can? Thanks","sent":"2019-04-25T15:56:14.990Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1d97d3b6cb0686a503b60","text":"what more info do you need?","html":"what more info do you need?","sent":"2019-04-25T15:59:57.775Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cc1dc678446a6023e758fae","text":"```\n**Issue Summary**\nA clear and concise description of what the bug is.\n\n**Environment**\n- OS: [eg. Linux, Mac, Windows]\n- API version: [eg. 6.8.1]\n- Deployment: [eg. Docker, Heroku, AWS, GCloud, self-hosted]\n- For self-hosted, WSGI environment: [eg. nginx/uwsgi, apache/mod_wsgi]\n\n- Database: [eg. MongoDB, Postgres]\n\n- Server config:\n  Auth enabled? Yes/No\n  Auth provider? Google, GitHub, OpenID, Basic, LDAP, etc\n  Customer views? Yes/No\n  (or provide the `/config` endpoint output)\n\n- web UI version: [eg. 6.8.1]\n- CLI version: [eg. 6.8.1]\n\n**To Reproduce**\nSteps to reproduce the behavior:\n1. Go to '...'\n2. Click on '....' or Run '...'\n3. Scroll down to '....'\n4. See error (include command output)\n\nFor web app issues, include any web browser JavaScript console errors.\n\n**Expected behavior**\nA clear and concise description of what you expected to happen.\n\n**Screenshots**\nIf applicable, add screenshots to help explain your problem.\n\n**Additional context**\nAdd any other context about the problem here.\n\n\nNOTE: Please provide as much information about your issue as possible.\nFailure to provide basic details about your specific environment make\nit impossible to know if an issue has already been fixed, can delay a\nresponse and may result in your issue being closed without a resolution.\n\n\n```\n","html":"<pre><code>**Issue Summary**\nA clear <span class=\"keyword\">and<\/span> concise description <span class=\"keyword\">of<\/span> what <span class=\"keyword\">the<\/span> bug <span class=\"keyword\">is<\/span>.\n\n**Environment**\n- OS: [eg. Linux, Mac, Windows]\n- API <span class=\"property\">version<\/span>: [eg. <span class=\"number\">6.8<\/span><span class=\"number\">.1<\/span>]\n- Deployment: [eg. Docker, Heroku, AWS, GCloud, self-hosted]\n- For self-hosted, WSGI environment: [eg. nginx/uwsgi, apache/mod_wsgi]\n\n- Database: [eg. MongoDB, Postgres]\n\n- Server config:\n  Auth enabled? Yes/No\n  Auth provider? Google, GitHub, OpenID, Basic, LDAP, etc\n  Customer views? Yes/No\n  (<span class=\"keyword\">or<\/span> provide <span class=\"keyword\">the<\/span> `/config` endpoint output)\n\n- web UI <span class=\"property\">version<\/span>: [eg. <span class=\"number\">6.8<\/span><span class=\"number\">.1<\/span>]\n- CLI <span class=\"property\">version<\/span>: [eg. <span class=\"number\">6.8<\/span><span class=\"number\">.1<\/span>]\n\n**To Reproduce**\nSteps <span class=\"keyword\">to<\/span> reproduce <span class=\"keyword\">the<\/span> behavior:\n<span class=\"number\">1.<\/span> Go <span class=\"keyword\">to<\/span> '...'\n<span class=\"number\">2.<\/span> Click <span class=\"function_start\"><span class=\"keyword\">on<\/span><\/span> '....' <span class=\"keyword\">or<\/span> Run '...'\n<span class=\"number\">3.<\/span> Scroll down <span class=\"keyword\">to<\/span> '....'\n<span class=\"number\">4.<\/span> See <span class=\"keyword\">error<\/span> (include command output)\n\nFor web app issues, include any web browser JavaScript console errors.\n\n**Expected behavior**\nA clear <span class=\"keyword\">and<\/span> concise description <span class=\"keyword\">of<\/span> what you expected <span class=\"keyword\">to<\/span> happen.\n\n**Screenshots**\nIf applicable, add screenshots <span class=\"keyword\">to<\/span> help explain your problem.\n\n**Additional context**\nAdd any other context <span class=\"keyword\">about<\/span> <span class=\"keyword\">the<\/span> problem here.\n\n\nNOTE: Please provide <span class=\"keyword\">as<\/span> much information <span class=\"keyword\">about<\/span> your issue <span class=\"keyword\">as<\/span> possible.\nFailure <span class=\"keyword\">to<\/span> provide basic details <span class=\"keyword\">about<\/span> your specific environment make\n<span class=\"keyword\">it<\/span> impossible <span class=\"keyword\">to<\/span> know <span class=\"keyword\">if<\/span> an issue has already been fixed, can <span class=\"command\">delay<\/span> a\nresponse <span class=\"keyword\">and<\/span> may <span class=\"constant\">result<\/span> <span class=\"keyword\">in<\/span> your issue being closed <span class=\"keyword\">without<\/span> a resolution.<\/code><\/pre>","sent":"2019-04-25T16:12:23.424Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

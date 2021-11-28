@@ -1,3 +1,4 @@
+#!python
 import os
 import sys
 import requests
@@ -41,60 +42,65 @@ owner = 'alerta'
 # }
 
 labels = [
+    # {
+    #     'name': 'blocked',
+    #     'color': '120b7a',
+    #     'description': "This issue can't be resolved unless something else is done"
+    # },
+    # {
+    #     'name': 'bug',
+    #     'color': 'd73a4a',
+    #     'description': "Something isn't working"
+    # },
+    # {
+    #     'name': 'docs',
+    #     'color': '3b6eef',
+    #     'description': "This needs to be documented"
+    # },
+    # {
+    #     'name': 'duplicate',
+    #     'color': 'cccccc',
+    #     'description': "This issue or pull request already exists"
+    # },
+    # {
+    #     'name': 'enhancement',
+    #     'color': '84b6eb',
+    #     'description': "New feature or request"
+    # },
+    # {
+    #     'name': 'good first issue',
+    #     'color': '8269CF',
+    #     'description': "Issues that new contributors can easily work on"
+    # },
+    # {
+    #     'name': 'help wanted',
+    #     'color': '159818',
+    #     'description': "Extra attention is needed"
+    # },
+    # {
+    #     'name': 'invalid',
+    #     'color': 'e6e6e6',
+    #     'description': "This doesn't seem right"
+    # },
+    # {
+    #     'name': 'question',
+    #     'color': 'cc317c',
+    #     'description': "Further information is requested"
+    # },
+    # {
+    #     'name': 'wontfix',
+    #     'color': 'ffffff',
+    #     'description': "This will not be worked on"
+    # },
+    # {
+    #     'name': 'worksforme',
+    #     'color': 'fbca04',
+    #     'description': "This bug can't be reproduced"
+    # },
     {
-        'name': 'blocked',
-        'color': '120b7a',
-        'description': "This issue can't be resolved unless something else is done"
-    },
-    {
-        'name': 'bug',
-        'color': 'd73a4a',
-        'description': "Something isn't working"
-    },
-    {
-        'name': 'docs',
-        'color': '3b6eef',
-        'description': "This needs to be documented"
-    },
-    {
-        'name': 'duplicate',
-        'color': 'cccccc',
-        'description': "This issue or pull request already exists"
-    },
-    {
-        'name': 'enhancement',
-        'color': '84b6eb',
-        'description': "New feature or request"
-    },
-    {
-        'name': 'good first issue',
-        'color': '8269CF',
-        'description': "Issues that new contributors can easily work on"
-    },
-    {
-        'name': 'help wanted',
-        'color': '159818',
-        'description': "Extra attention is needed"
-    },
-    {
-        'name': 'invalid',
-        'color': 'e6e6e6',
-        'description': "This doesn't seem right"
-    },
-    {
-        'name': 'question',
-        'color': 'cc317c',
-        'description': "Further information is requested"
-    },
-    {
-        'name': 'wontfix',
-        'color': 'ffffff',
-        'description': "This will not be worked on"
-    },
-    {
-        'name': 'worksforme',
-        'color': 'fbca04',
-        'description': "This bug can't be reproduced"
+        'name': 'security',
+        'color': '000000',
+        'description': "This important issue will not be marked as stale by @probot"
     }
 ]
 
@@ -116,20 +122,20 @@ for repo in repos:
     #     r = requests.patch(GITHUB_API_URL + '/repos/{owner}/{repo}/labels/{current_name}'.format(owner=owner, repo=repo, current_name=label), json=payload, headers=headers)
     #     print(r.json())
     #
-    #     payload = {
-    #         'name': 'docs',
-    #         'color': labels['docs'],
-    #         'description': 'This needs to be documented'
-    #     }
-    #     print(payload)
-    #     r = requests.post(GITHUB_API_URL + '/repos/{owner}/{repo}/labels'.format(owner=owner, repo=repo), json=payload, headers=headers)
-    #     print(r.json())
+        payload = {
+            'name': 'security',
+            'color':  '000000',
+            'description': 'Security related bugfix or vulnerability'
+        }
+        print(payload)
+        r = requests.post(GITHUB_API_URL + '/repos/{owner}/{repo}/labels'.format(owner=owner, repo=repo), json=payload, headers=headers)
+        print(r.json())
 
 
-    for payload in labels:
-        # print(payload)
-        # r = requests.post(GITHUB_API_URL + '/repos/{owner}/{repo}/labels'.format(owner=owner, repo=repo), json=payload, headers=headers)
-        # print(json.dumps(r.json(), indent=2))
-        # print(r.status_code)
-        # if r.status_code == '422':
-        r = requests.patch(GITHUB_API_URL + '/repos/{owner}/{repo}/labels/{label}'.format(owner=owner, repo=repo, label=payload['name']), json=payload, headers=headers)
+    # for payload in labels:
+    #     # print(payload)
+    #     # r = requests.post(GITHUB_API_URL + '/repos/{owner}/{repo}/labels'.format(owner=owner, repo=repo), json=payload, headers=headers)
+    #     # print(json.dumps(r.json(), indent=2))
+    #     # print(r.status_code)
+    #     # if r.status_code == '422':
+    #     r = requests.patch(GITHUB_API_URL + '/repos/{owner}/{repo}/labels/{label}'.format(owner=owner, repo=repo, label=payload['name']), json=payload, headers=headers)

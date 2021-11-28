@@ -1,0 +1,870 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2016/08/06"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2016/08/04"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">5<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2016</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-57a43a289e85d3e82688b487 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a43a289e85d3e82688b487' title="">Aug 05 2016 07:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> something is wrong with syslog plugin, but as this logging stuff and loggers hierarchy in python is too complicated for me, I have no idea what
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a43a6e1c2bf6621bbde93e burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but the point is that enabling syslog makes all incoming alerts appear in log twice
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a43afa9e85d3e82688b5f8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      also it makes INFO messages appear in there. ie &quot;INFO - Server plug-in &#39;syslog&#39; enabled.&quot; etc ... my logic says that these shouldn&#39;t be in syslog at all
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a44672c915a0e426be6886 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a44672c915a0e426be6886' title="">Aug 05 2016 07:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      and one more thing ... if I add just for testing this line into status_change() method, it doesn&#39;t work:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a446759e85d3e82688d0be burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      self.logger.log(level=logging.INFO, msg=&#39;Alert status change&#39;)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a446c39e85d3e82688d152 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      ie no these messages in syslog, although json dumps from incoming alerts will appear there, although twice
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a446dd00663f5b1b4cedde burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but this line works:<br>app.logger.log(level=logging.INFO, msg=&#39;Alert status change&#39;)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a44763c915a0e426be6abb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a44763c915a0e426be6abb' title="">Aug 05 2016 07:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Self is the plugin logger. App is the application logger
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a447e000663f5b1b4cf02e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a447e000663f5b1b4cf02e' title="">Aug 05 2016 08:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes, this part I understand. what I don&#39;t understand is<br>1) why messages from application logger end up in the plugin logger output ... twice ...<br>2) why plugin logger doesn&#39;t work when used from status_change()
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a4485f0bd017c16e3dd914 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      btw, I&#39;m using python 3.4.4 if it should matter
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a451241c2bf6621bbe1f22 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a451241c2bf6621bbe1f22' title="">Aug 05 2016 08:41 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      1) how are you running alerta server? as a wsgi app using apache / nginx? or via the command line? do you have DEBUG turned on?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a4518700663f5b1b4d04e9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a4518700663f5b1b4d04e9' title="">Aug 05 2016 08:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      command line
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a4519547659bfb1090a575 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a4519547659bfb1090a575' title="">Aug 05 2016 08:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      2) the status_change() hook only runs if a status change is submitted via the API. ie. if a user ACKs an alert. If an alert is received that changes the status of an alert to Normal and CLOSES the alert then this is an internal automatic  status change that will not trigger the status_change() hook to be triggered.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a451a30bd017c16e3dee33 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      is DEBUG turned on?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a451ac836d2d0211660449 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a451ac836d2d0211660449' title="">Aug 05 2016 08:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      nope
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a451f39e85d3e82688ed6d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a451f39e85d3e82688ed6d' title="">Aug 05 2016 08:44 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      when running alertad from the command line you see all requests and responses. i think this is what is being logged via syslog in addition to what is being logged by the syslog plugin 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a45233836d2d02116605ad burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      not sure why the alertad command line output is going to syslog though. I thought having a separate logger for the syslog plugin would have prevented this.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a4525b1c2bf6621bbe21e5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a4525b1c2bf6621bbe21e5' title="">Aug 05 2016 08:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      no, requests (GET/POST) are not logged into syslog plugin, they are logged only into app.logger output
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a452671c2bf6621bbe21fe burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a452671c2bf6621bbe21fe' title="">Aug 05 2016 08:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i’ll see if i can reproduce. is there anything special about your syslog setup? are you on linux or mac?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a452701c2bf6621bbe2211 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a452701c2bf6621bbe2211' title="">Aug 05 2016 08:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      linux
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a4527e836d2d0211660654 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      debian 8
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a45280e2ff9ec76e58a412 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a45280e2ff9ec76e58a412' title="">Aug 05 2016 08:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      can you put some sample output into pastebin?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a452a8c915a0e426be8394 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a452a8c915a0e426be8394' title="">Aug 05 2016 08:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      sure, will look at it later
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a452e2836d2d0211660724 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but does your comment mean that I don&#39;t have a way to catch and log all status changes anyway?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a455d800663f5b1b4d0e3a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a455d800663f5b1b4d0e3a' title="">Aug 05 2016 09:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      there is no way to do what you are trying to do at present.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a457051c2bf6621bbe2d37 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a457051c2bf6621bbe2d37' title="">Aug 05 2016 09:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      mkay, be prepared for a github issue then ;)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a457291c2bf6621bbe2d90 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a457291c2bf6621bbe2d90' title="">Aug 05 2016 09:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok. sure. i’ll have a think about how it might be done. please provide as much information about your specific use case as you can. thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57a477f6d097eb6b2cc76795 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/08/05?at=57a477f6d097eb6b2cc76795' title="">Aug 05 2016 11:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> : <a href="https://pastebin.mozilla.org/8889769" rel="nofollow" target="_blank" class="link">https://pastebin.mozilla.org/8889769</a>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$1g3t0muKb6anMEKYDBeXxMKhbApSGEg/icg02vBMveM=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":377,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2016-08-05T00:00:00.000Z","nextDate":"2016-08-06T23:59:59.999Z","previousDate":"2016-08-04T00:00:00.000Z","messages":[{"id":"57a43a289e85d3e82688b487","text":"@satterly something is wrong with syslog plugin, but as this logging stuff and loggers hierarchy in python is too complicated for me, I have no idea what","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> something is wrong with syslog plugin, but as this logging stuff and loggers hierarchy in python is too complicated for me, I have no idea what","sent":"2016-08-05T07:03:04.724Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a43a6e1c2bf6621bbde93e","text":"but the point is that enabling syslog makes all incoming alerts appear in log twice","html":"but the point is that enabling syslog makes all incoming alerts appear in log twice","sent":"2016-08-05T07:04:14.139Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a43afa9e85d3e82688b5f8","text":"also it makes INFO messages appear in there. ie \"INFO - Server plug-in 'syslog' enabled.\" etc ... my logic says that these shouldn't be in syslog at all","html":"also it makes INFO messages appear in there. ie &quot;INFO - Server plug-in &#39;syslog&#39; enabled.&quot; etc ... my logic says that these shouldn&#39;t be in syslog at all","sent":"2016-08-05T07:06:34.617Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a44672c915a0e426be6886","text":"and one more thing ... if I add just for testing this line into status_change() method, it doesn't work:","html":"and one more thing ... if I add just for testing this line into status_change() method, it doesn&#39;t work:","sent":"2016-08-05T07:55:30.912Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a446759e85d3e82688d0be","text":"self.logger.log(level=logging.INFO, msg='Alert status change')","html":"self.logger.log(level=logging.INFO, msg=&#39;Alert status change&#39;)","sent":"2016-08-05T07:55:33.384Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a446c39e85d3e82688d152","text":"ie no these messages in syslog, although json dumps from incoming alerts will appear there, although twice","html":"ie no these messages in syslog, although json dumps from incoming alerts will appear there, although twice","sent":"2016-08-05T07:56:51.183Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a446dd00663f5b1b4cedde","text":"but this line works:\napp.logger.log(level=logging.INFO, msg='Alert status change')","html":"but this line works:<br>app.logger.log(level=logging.INFO, msg=&#39;Alert status change&#39;)","sent":"2016-08-05T07:57:17.819Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a44763c915a0e426be6abb","text":"Self is the plugin logger. App is the application logger","html":"Self is the plugin logger. App is the application logger","sent":"2016-08-05T07:59:31.494Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a447e000663f5b1b4cf02e","text":"yes, this part I understand. what I don't understand is\n1) why messages from application logger end up in the plugin logger output ... twice ...\n2) why plugin logger doesn't work when used from status_change()","html":"yes, this part I understand. what I don&#39;t understand is<br>1) why messages from application logger end up in the plugin logger output ... twice ...<br>2) why plugin logger doesn&#39;t work when used from status_change()","sent":"2016-08-05T08:01:36.590Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a4485f0bd017c16e3dd914","text":"btw, I'm using python 3.4.4 if it should matter","html":"btw, I&#39;m using python 3.4.4 if it should matter","sent":"2016-08-05T08:03:43.220Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a451241c2bf6621bbe1f22","text":"1) how are you running alerta server? as a wsgi app using apache / nginx? or via the command line? do you have DEBUG turned on?","html":"1) how are you running alerta server? as a wsgi app using apache / nginx? or via the command line? do you have DEBUG turned on?","sent":"2016-08-05T08:41:08.616Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a4518700663f5b1b4d04e9","text":"command line","html":"command line","sent":"2016-08-05T08:42:47.092Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a4519547659bfb1090a575","text":"2) the status_change() hook only runs if a status change is submitted via the API. ie. if a user ACKs an alert. If an alert is received that changes the status of an alert to Normal and CLOSES the alert then this is an internal automatic  status change that will not trigger the status_change() hook to be triggered.","html":"2) the status_change() hook only runs if a status change is submitted via the API. ie. if a user ACKs an alert. If an alert is received that changes the status of an alert to Normal and CLOSES the alert then this is an internal automatic  status change that will not trigger the status_change() hook to be triggered.","sent":"2016-08-05T08:43:01.536Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a451a30bd017c16e3dee33","text":"is DEBUG turned on?","html":"is DEBUG turned on?","sent":"2016-08-05T08:43:15.989Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a451ac836d2d0211660449","text":"nope","html":"nope","sent":"2016-08-05T08:43:24.975Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a451f39e85d3e82688ed6d","text":"when running alertad from the command line you see all requests and responses. i think this is what is being logged via syslog in addition to what is being logged by the syslog plugin ","html":"when running alertad from the command line you see all requests and responses. i think this is what is being logged via syslog in addition to what is being logged by the syslog plugin ","sent":"2016-08-05T08:44:35.958Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a45233836d2d02116605ad","text":"not sure why the alertad command line output is going to syslog though. I thought having a separate logger for the syslog plugin would have prevented this.","html":"not sure why the alertad command line output is going to syslog though. I thought having a separate logger for the syslog plugin would have prevented this.","sent":"2016-08-05T08:45:39.726Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a4525b1c2bf6621bbe21e5","text":"no, requests (GET/POST) are not logged into syslog plugin, they are logged only into app.logger output","html":"no, requests (GET/POST) are not logged into syslog plugin, they are logged only into app.logger output","sent":"2016-08-05T08:46:19.595Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a452671c2bf6621bbe21fe","text":"i’ll see if i can reproduce. is there anything special about your syslog setup? are you on linux or mac?","html":"i’ll see if i can reproduce. is there anything special about your syslog setup? are you on linux or mac?","sent":"2016-08-05T08:46:31.606Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a452701c2bf6621bbe2211","text":"linux","html":"linux","sent":"2016-08-05T08:46:40.012Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a4527e836d2d0211660654","text":"debian 8","html":"debian 8","sent":"2016-08-05T08:46:54.364Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a45280e2ff9ec76e58a412","text":"can you put some sample output into pastebin?","html":"can you put some sample output into pastebin?","sent":"2016-08-05T08:46:56.285Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a452a8c915a0e426be8394","text":"sure, will look at it later","html":"sure, will look at it later","sent":"2016-08-05T08:47:36.024Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a452e2836d2d0211660724","text":"but does your comment mean that I don't have a way to catch and log all status changes anyway?","html":"but does your comment mean that I don&#39;t have a way to catch and log all status changes anyway?","sent":"2016-08-05T08:48:34.426Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57a455d800663f5b1b4d0e3a","text":"there is no way to do what you are trying to do at present.","html":"there is no way to do what you are trying to do at present.","sent":"2016-08-05T09:01:12.924Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a457051c2bf6621bbe2d37","text":"mkay, be prepared for a github issue then ;)","html":"mkay, be prepared for a github issue then ;)","sent":"2016-08-05T09:06:13.338Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a457291c2bf6621bbe2d90","text":"ok. sure. i’ll have a think about how it might be done. please provide as much information about your specific use case as you can. thanks.","html":"ok. sure. i’ll have a think about how it might be done. please provide as much information about your specific use case as you can. thanks.","sent":"2016-08-05T09:06:49.229Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57a477f6d097eb6b2cc76795","text":"@satterly : https://pastebin.mozilla.org/8889769","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> : <a href=\"https://pastebin.mozilla.org/8889769\" rel=\"nofollow\" target=\"_blank\" class=\"link\">https://pastebin.mozilla.org/8889769<\/a>","sent":"2016-08-05T11:26:46.608Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":5,"urls":[{"url":"https://pastebin.mozilla.org/8889769"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

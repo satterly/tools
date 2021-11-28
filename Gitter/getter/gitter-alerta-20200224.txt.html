@@ -1,0 +1,2256 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/02/25"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/02/23"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">24<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Feb 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5e536c55d97c107ed271428b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e536c23d73408ce4fda8877 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47589946?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47589946?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>jeetudheeman</div>
+      <div class='chat-item__username js-chat-item-from'>@jeetudheeman</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e536c55d97c107ed271428b' title="">Feb 24 06:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi<br>pls help me out to integrate pagerduty with alerta.<br>I tried to integrate but calls are not coming via pagerduty
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e537df96053e67dc4e1227e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e537df96053e67dc4e1227e' title="">Feb 24 07:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> i add column &quot;acked-by&quot; but when i ack an alert, nothing gets filled in the column.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e537e214880f07ed1f5e1e8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      How should I do ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e538932a0aa6629f5eba539 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e538932a0aa6629f5eba539' title="">Feb 24 08:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      are you logged in?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53899c8e726c7dc5c48248 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      did you add the “acked_by” plugin to the list of <code>PLUGINS</code> in alertad.conf ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53962714b4d670a3452f05 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53962714b4d670a3452f05' title="">Feb 24 09:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes i am logged in, i don&#39;t add &quot;acked_by&quot; in list of PLUGINS, i will try, thx.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53a0e740ac4a7fb90560cf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53a0e740ac4a7fb90560cf' title="">Feb 24 10:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      When i added &quot;acked_by&quot; in list of PLUGINS, it doesn&#39;t work but if i put this line in <strong>init</strong>.py, it work.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53a0ea40ac4a7fb90560d1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      if action == &#39;ack&#39;:<br>            watch = &#39;watch:&#39; + g.login<br>            alert.tags.append(watch)<br>            alert.attributes[&#39;acked-by&#39;] = g.login
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53ae2a101adb4160c2667a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53ae2a101adb4160c2667a' title="">Feb 24 11:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      In <code>__init__.py</code> of what directory?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53aec1901209179b37655b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="jeetudheeman" class="mention">@jeetudheeman</span> Can you explain exactly what you want (eg. Alerta -&gt; Pagerduty only or bi-directional) and what you have tried to do (commands run, config files used, etc) ? Can&#39;t help you without more info.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53b8851c4f1707f8c8aeef burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53b8851c4f1707f8c8aeef' title="">Feb 24 11:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      in directory plugins
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53ba05d7bb4e179c9ac478 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53ba05d7bb4e179c9ac478' title="">Feb 24 11:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I don&#39;t know why the acked_by plugin doesn&#39;t work for you or why your hack does. Sorry.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53bf3f901209179b3799be burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53bf3f901209179b3799be' title="">Feb 24 12:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No problem, i don&#39;t know too. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53d562fa9f20553b4a4330 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53d562fa9f20553b4a4330' title="">Feb 24 13:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I see you&#39;ve been working with the branch alert-forwarder-plugin.  Please let me know if I can help with any testing 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53d5bce40da4526f10392a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53d5bce40da4526f10392a' title="">Feb 24 13:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      sure. i’ll have something to test later tonight. Thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53d664d7bb4e179c9b1da6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53d664d7bb4e179c9b1da6' title="">Feb 24 13:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Cool, yeah the forwarding is more complicated then I thought it would be.  Our use case is to have a single pane of glass instance that only receives forwards from multiple other alerta stances and acts as a command and control center.  Not other monitoring engines or tools will be sending events to the main instance hopefully making it a little easier 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53d795ef8d646099cb74ed burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e4af2d1d73408ce4fd9e3e4 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/52837583?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/52837583?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>xwing22</div>
+      <div class='chat-item__username js-chat-item-from'>@xwing22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53d795ef8d646099cb74ed' title="">Feb 24 14:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Is there a way to browse duplicate entries for an alert?  I put a stacktrace in one of the field so each alert is &quot;unique&quot;  and when I go to the data view of a single alert, it would have been nice to browse each alert but  I&#39;m not sure they are logged in the DB, maybe it just increment the duplicationc ounter?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e5429b88f8af6553a000c9b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e5429b88f8af6553a000c9b' title="">Feb 24 19:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hey <span data-link-type="mention" data-screen-name="smbambling" class="mention">@smbambling</span> if you have some time could you test this branch ? <a href="https://github.com/alerta/alerta/compare/alert-forwarder-plugin" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/alerta/compare/alert-forwarder-plugin</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a41fa9f20553b4b7132 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I have two servers configured. An MLM (a mid-level manger) that receives the Alerts from source and an MoM (manager-of-managers) that only receives alerts from MLMs. You can action alerts on either the MLM or MoM and the action should propogate to the other. However, alerts should only go MLM to MoM in this configuration.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a55ed27b13c42f9cc0f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542a55ed27b13c42f9cc0f' title="">Feb 24 19:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yep I can take a look at that for you. It will not require the other delete action plugin branch to be merged into it correct ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a6c476ff13c43b09ff7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542a6c476ff13c43b09ff7' title="">Feb 24 19:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      It will. i’m working on that next/ now.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a80fa9f20553b4b7364 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      everything works except for Delete so far.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a91ed27b13c42f9ccde burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542a91ed27b13c42f9ccde' title="">Feb 24 19:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok cool if you have time can you see if my PR into the python client two needs any updates too 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542ad08f8af6553a00103f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542ad08f8af6553a00103f' title="">Feb 24 19:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      It will actually quite a bit because i need to support custom headers.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542aef1c4f1707f8ca4330 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      My test config for the two servers is …<pre><code>(<span class="atom">venv</span>) <span class="atom">nsatterl</span>@<span class="atom">macbook</span> <span class="atom">alerta</span> <span class="comment">% cat ~/.alertad-mlm.conf</span>
+<span class="name">DEBUG</span>=<span class="name">False</span>
+
+<span class="name">HMAC_AUTH_CREDENTIALS</span> = [
+    {
+        <span class="string">'id'</span>: <span class="string">'AKID002'</span>,
+        <span class="string">'key'</span>: <span class="string">'supersecret2'</span>,
+        <span class="string">'algorithm'</span>: <span class="string">'sha256'</span>
+    }
+]
+
+<span class="name">DATABASE_URL</span>=<span class="string">'postgres:///mlm'</span>
+
+# <span class="name">Plugins</span>
+<span class="name">PLUGINS</span> = [<span class="string">'forwarder'</span>]
+
+# <span class="atom">northbound</span> <span class="atom">interface</span>
+<span class="name">X_FORWARDED</span> = <span class="string">'mid-level-manager'</span>
+<span class="name">FWD_DESTINATIONS</span> = [
+    (<span class="string">'http://mom.local.alerta.io:8080'</span>, <span class="string">'AKID001'</span>, <span class="string">'supersecret'</span>, [<span class="string">'*'</span>])  # <span class="atom">forward</span> <span class="atom">everything</span> <span class="atom">ie</span>. <span class="atom">alerts</span> <span class="atom">and</span> <span class="atom">actions</span>
+]</code></pre><pre><code>(<span class="atom">venv</span>) <span class="atom">nsatterl</span>@<span class="atom">macbook</span> <span class="atom">alerta</span> <span class="comment">% cat ~/.alertad-mom.conf</span>
+<span class="name">DEBUG</span>=<span class="name">False</span>
+
+<span class="name">HMAC_AUTH_CREDENTIALS</span> = [
+    {
+        <span class="string">'id'</span>: <span class="string">'AKID001'</span>,
+        <span class="string">'key'</span>: <span class="string">'supersecret'</span>,
+        <span class="string">'algorithm'</span>: <span class="string">'sha256'</span>
+    }
+]
+
+<span class="name">DATABASE_URL</span>=<span class="string">'postgres:///mom'</span>
+
+<span class="name">PLUGINS</span>=[<span class="string">'forwarder'</span>]
+
+# <span class="atom">southbound</span> <span class="atom">interface</span>
+<span class="name">X_FORWARDED</span> = <span class="string">'manager-of-managers'</span>
+<span class="name">FWD_DESTINATIONS</span> = [
+    # (<span class="string">'http://localhost:9080'</span>, <span class="string">'AKID002'</span>, <span class="string">'supersecret2'</span>, [<span class="string">'actions'</span>])  # <span class="atom">only</span> <span class="atom">forward</span> <span class="atom">all</span> <span class="atom">actions</span> <span class="atom">ie</span>. <span class="atom">not</span> <span class="atom">alerts</span>
+    (<span class="string">'http://mlm.local.alerta.io:9080'</span>, <span class="string">'AKID002'</span>, <span class="string">'supersecret2'</span>, [<span class="string">'*'</span>])  # <span class="atom">only</span> <span class="atom">forward</span> <span class="atom">all</span> <span class="atom">actions</span> <span class="atom">ie</span>. <span class="atom">not</span> <span class="atom">alerts</span>
+]</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542b249aeef65232173b5a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      those hostnames will work for you. they are just DNS pointers to localhost
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542b5f9c3b2f07f714fce0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      if using postgres (like me above) you can create to test databases by simply running …<pre><code><span class="variable">$ </span>createdb mom
+<span class="variable">$ </span>createdb mlm</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542bc0476ff13c43b0a477 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      let me know if you need help testing. it was a bit fiddly. ideally this would be a docker setp which you could just launch using docker-compose. Working on that...
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542bef901209179b390cf6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542bef901209179b390cf6' title="">Feb 24 20:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yeah I have two vms running container I built with a modified Dockerfile from you docker-Alerta repo 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542c063e6ef6416171af59 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ll tests those tonight soon as I get home for you 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542c28d7bb4e179c9c5e48 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I just need to tweak my Alertad confs
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542c3a1c4f1707f8ca4888 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And build new images 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542c403e6ef6416171b0b3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542c403e6ef6416171b0b3' title="">Feb 24 20:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Cool. thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542ce2476ff13c43b0a7f6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      oh and you’ll need to use this branch for the python client… <a href="https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542d21ed27b13c42f9d46d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542d21ed27b13c42f9d46d' title="">Feb 24 20:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Was just about to ask.  Thanks 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e54368a1ec15e02119b6273 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e54368a1ec15e02119b6273' title="">Feb 24 20:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  I have given my views on <a target="_blank" data-link-type="issue" data-issue="1132" href="https://github.com/alerta/alerta/issues/1132" data-provider="github" data-issue-repo="alerta/alerta" class="issue">alerta/alerta#1132</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e5436b9d7bb4e179c9c7e07 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I wanted to know what would be way to blackout an alert which is already firing? Does it involve creating blackout rule with older start time in the past?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e5439a8ef8d646099ccdc76 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e5439a8ef8d646099ccdc76' title="">Feb 24 21:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="sushovan23" class="mention">@sushovan23</span> thanks for your input. i’ll need to think about this issue a bit more. the last thing i want to do is make a change that makes things worse.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e5439db5cd3836098c8211c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Having to create a blackout rule in the past to suppress an alert happening now is crazy. there must be a better way.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e543b9d1c4f1707f8ca72fd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e543b9d1c4f1707f8ca72fd' title="">Feb 24 21:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I agree but this is a big issue for big ops teams. in older 5.x versions new blackout rules would work on  old/repeated/refired alerts also.<br>I want to provide a procedure where teams can blackout alerts which are already firing. If you can provide any steps which would help in achieving that it would be welcomed
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e543bec901209179b3939fa burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Since we are using alert manager and repeat interval is every hour so expectation is that within the one hour if issue is not fixed they can atleast create the blackout rule to stop further alerts
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e543d87fa9f20553b4baf29 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e543d87fa9f20553b4baf29' title="">Feb 24 21:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I even attempted to delete alerts from alerta and let alertmanager fire alerts again in next interval so alerta treats it as new alert. Still that didn&#39;t get suppressed even though blackout rule was in effect. I&#39;m beginning to think blackout feature is broken completely
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$ztlMbZU11tRf3uyLWAIyoQF76PmqhN15i6/ul9+Wu0o=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-02-24T00:00:00.000Z","nextDate":"2020-02-25T23:59:59.999Z","previousDate":"2020-02-23T00:00:00.000Z","messages":[{"id":"5e536c55d97c107ed271428b","text":"hi\npls help me out to integrate pagerduty with alerta.\nI tried to integrate but calls are not coming via pagerduty","html":"hi<br>pls help me out to integrate pagerduty with alerta.<br>I tried to integrate but calls are not coming via pagerduty","sent":"2020-02-24T06:25:25.971Z","editedAt":"2020-02-24T06:26:08.382Z","fromUser":{"id":"5e536c23d73408ce4fda8877","username":"jeetudheeman","displayName":"jeetudheeman","url":"/jeetudheeman","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/jeetudheeman","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47589946?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47589946?v=4&s=128","v":1,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5e537df96053e67dc4e1227e","text":"Hi @satterly i add column \"acked-by\" but when i ack an alert, nothing gets filled in the column.","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> i add column &quot;acked-by&quot; but when i ack an alert, nothing gets filled in the column.","sent":"2020-02-24T07:40:41.268Z","editedAt":"2020-02-24T07:40:50.526Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5e537e214880f07ed1f5e1e8","text":"How should I do ?","html":"How should I do ?","sent":"2020-02-24T07:41:21.638Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e538932a0aa6629f5eba539","text":"are you logged in?","html":"are you logged in?","sent":"2020-02-24T08:28:34.635Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53899c8e726c7dc5c48248","text":"did you add the “acked_by” plugin to the list of `PLUGINS` in alertad.conf ?","html":"did you add the “acked_by” plugin to the list of <code>PLUGINS<\/code> in alertad.conf ?","sent":"2020-02-24T08:30:20.341Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e53962714b4d670a3452f05","text":"Yes i am logged in, i don't add \"acked_by\" in list of PLUGINS, i will try, thx.","html":"Yes i am logged in, i don&#39;t add &quot;acked_by&quot; in list of PLUGINS, i will try, thx.","sent":"2020-02-24T09:23:51.464Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53a0e740ac4a7fb90560cf","text":"When i added \"acked_by\" in list of PLUGINS, it doesn't work but if i put this line in __init__.py, it work.","html":"When i added &quot;acked_by&quot; in list of PLUGINS, it doesn&#39;t work but if i put this line in <strong>init<\/strong>.py, it work.","sent":"2020-02-24T10:09:43.467Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53a0ea40ac4a7fb90560d1","text":"if action == 'ack':\n            watch = 'watch:' + g.login\n            alert.tags.append(watch)\n            alert.attributes['acked-by'] = g.login","html":"if action == &#39;ack&#39;:<br>            watch = &#39;watch:&#39; + g.login<br>            alert.tags.append(watch)<br>            alert.attributes[&#39;acked-by&#39;] = g.login","sent":"2020-02-24T10:09:46.471Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e53ae2a101adb4160c2667a","text":"In `__init__.py` of what directory?","html":"In <code>__init__.py<\/code> of what directory?","sent":"2020-02-24T11:06:18.853Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53aec1901209179b37655b","text":"@jeetudheeman Can you explain exactly what you want (eg. Alerta -> Pagerduty only or bi-directional) and what you have tried to do (commands run, config files used, etc) ? Can't help you without more info.","html":"<span data-link-type=\"mention\" data-screen-name=\"jeetudheeman\" class=\"mention\">@jeetudheeman<\/span> Can you explain exactly what you want (eg. Alerta -&gt; Pagerduty only or bi-directional) and what you have tried to do (commands run, config files used, etc) ? Can&#39;t help you without more info.","sent":"2020-02-24T11:08:49.211Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"jeetudheeman","userId":"5e536c23d73408ce4fda8877","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e53b8851c4f1707f8c8aeef","text":"in directory plugins","html":"in directory plugins","sent":"2020-02-24T11:50:29.686Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53ba05d7bb4e179c9ac478","text":"I don't know why the acked_by plugin doesn't work for you or why your hack does. Sorry.","html":"I don&#39;t know why the acked_by plugin doesn&#39;t work for you or why your hack does. Sorry.","sent":"2020-02-24T11:56:53.928Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53bf3f901209179b3799be","text":"No problem, i don't know too. ","html":"No problem, i don&#39;t know too. ","sent":"2020-02-24T12:19:11.319Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53d562fa9f20553b4a4330","text":"@satterly I see you've been working with the branch alert-forwarder-plugin.  Please let me know if I can help with any testing ","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I see you&#39;ve been working with the branch alert-forwarder-plugin.  Please let me know if I can help with any testing ","sent":"2020-02-24T13:53:38.420Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53d5bce40da4526f10392a","text":"sure. i’ll have something to test later tonight. Thanks.","html":"sure. i’ll have something to test later tonight. Thanks.","sent":"2020-02-24T13:55:08.083Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53d664d7bb4e179c9b1da6","text":"Cool, yeah the forwarding is more complicated then I thought it would be.  Our use case is to have a single pane of glass instance that only receives forwards from multiple other alerta stances and acts as a command and control center.  Not other monitoring engines or tools will be sending events to the main instance hopefully making it a little easier ","html":"Cool, yeah the forwarding is more complicated then I thought it would be.  Our use case is to have a single pane of glass instance that only receives forwards from multiple other alerta stances and acts as a command and control center.  Not other monitoring engines or tools will be sending events to the main instance hopefully making it a little easier ","sent":"2020-02-24T13:57:56.626Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53d795ef8d646099cb74ed","text":"Is there a way to browse duplicate entries for an alert?  I put a stacktrace in one of the field so each alert is \"unique\"  and when I go to the data view of a single alert, it would have been nice to browse each alert but  I'm not sure they are logged in the DB, maybe it just increment the duplicationc ounter?","html":"Is there a way to browse duplicate entries for an alert?  I put a stacktrace in one of the field so each alert is &quot;unique&quot;  and when I go to the data view of a single alert, it would have been nice to browse each alert but  I&#39;m not sure they are logged in the DB, maybe it just increment the duplicationc ounter?","sent":"2020-02-24T14:03:01.953Z","fromUser":{"id":"5e4af2d1d73408ce4fd9e3e4","username":"xwing22","displayName":"xwing22","url":"/xwing22","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/xwing22","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/52837583?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/52837583?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e5429b88f8af6553a000c9b","text":"hey @smbambling if you have some time could you test this branch ? https://github.com/alerta/alerta/compare/alert-forwarder-plugin","html":"hey <span data-link-type=\"mention\" data-screen-name=\"smbambling\" class=\"mention\">@smbambling<\/span> if you have some time could you test this branch ? <a href=\"https://github.com/alerta/alerta/compare/alert-forwarder-plugin\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/alerta/compare/alert-forwarder-plugin<\/a>","sent":"2020-02-24T19:53:28.563Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[{"url":"https://github.com/alerta/alerta/compare/alert-forwarder-plugin"}],"mentions":[{"screenName":"smbambling","userId":"55918e5415522ed4b3e30a4e","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542a41fa9f20553b4b7132","text":"I have two servers configured. An MLM (a mid-level manger) that receives the Alerts from source and an MoM (manager-of-managers) that only receives alerts from MLMs. You can action alerts on either the MLM or MoM and the action should propogate to the other. However, alerts should only go MLM to MoM in this configuration.","html":"I have two servers configured. An MLM (a mid-level manger) that receives the Alerts from source and an MoM (manager-of-managers) that only receives alerts from MLMs. You can action alerts on either the MLM or MoM and the action should propogate to the other. However, alerts should only go MLM to MoM in this configuration.","sent":"2020-02-24T19:55:45.012Z","editedAt":"2020-02-24T19:56:08.046Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5e542a55ed27b13c42f9cc0f","text":"Yep I can take a look at that for you. It will not require the other delete action plugin branch to be merged into it correct ?","html":"Yep I can take a look at that for you. It will not require the other delete action plugin branch to be merged into it correct ?","sent":"2020-02-24T19:56:05.531Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542a6c476ff13c43b09ff7","text":"It will. i’m working on that next/ now.","html":"It will. i’m working on that next/ now.","sent":"2020-02-24T19:56:28.009Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542a80fa9f20553b4b7364","text":"everything works except for Delete so far.","html":"everything works except for Delete so far.","sent":"2020-02-24T19:56:48.597Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542a91ed27b13c42f9ccde","text":"Ok cool if you have time can you see if my PR into the python client two needs any updates too ","html":"Ok cool if you have time can you see if my PR into the python client two needs any updates too ","sent":"2020-02-24T19:57:05.009Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542ad08f8af6553a00103f","text":"It will actually quite a bit because i need to support custom headers.","html":"It will actually quite a bit because i need to support custom headers.","sent":"2020-02-24T19:58:08.418Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542aef1c4f1707f8ca4330","text":"My test config for the two servers is …\n```\n(venv) nsatterl@macbook alerta % cat ~/.alertad-mlm.conf\nDEBUG=False\n\nHMAC_AUTH_CREDENTIALS = [\n    {\n        'id': 'AKID002',\n        'key': 'supersecret2',\n        'algorithm': 'sha256'\n    }\n]\n\nDATABASE_URL='postgres:///mlm'\n\n# Plugins\nPLUGINS = ['forwarder']\n\n# northbound interface\nX_FORWARDED = 'mid-level-manager'\nFWD_DESTINATIONS = [\n    ('http://mom.local.alerta.io:8080', 'AKID001', 'supersecret', ['*'])  # forward everything ie. alerts and actions\n]\n```\n```\n(venv) nsatterl@macbook alerta % cat ~/.alertad-mom.conf\nDEBUG=False\n\nHMAC_AUTH_CREDENTIALS = [\n    {\n        'id': 'AKID001',\n        'key': 'supersecret',\n        'algorithm': 'sha256'\n    }\n]\n\nDATABASE_URL='postgres:///mom'\n\nPLUGINS=['forwarder']\n\n# southbound interface\nX_FORWARDED = 'manager-of-managers'\nFWD_DESTINATIONS = [\n    # ('http://localhost:9080', 'AKID002', 'supersecret2', ['actions'])  # only forward all actions ie. not alerts\n    ('http://mlm.local.alerta.io:9080', 'AKID002', 'supersecret2', ['*'])  # only forward all actions ie. not alerts\n]\n```","html":"My test config for the two servers is …<pre><code>(<span class=\"atom\">venv<\/span>) <span class=\"atom\">nsatterl<\/span>@<span class=\"atom\">macbook<\/span> <span class=\"atom\">alerta<\/span> <span class=\"comment\">% cat ~/.alertad-mlm.conf<\/span>\n<span class=\"name\">DEBUG<\/span>=<span class=\"name\">False<\/span>\n\n<span class=\"name\">HMAC_AUTH_CREDENTIALS<\/span> = [\n    {\n        <span class=\"string\">'id'<\/span>: <span class=\"string\">'AKID002'<\/span>,\n        <span class=\"string\">'key'<\/span>: <span class=\"string\">'supersecret2'<\/span>,\n        <span class=\"string\">'algorithm'<\/span>: <span class=\"string\">'sha256'<\/span>\n    }\n]\n\n<span class=\"name\">DATABASE_URL<\/span>=<span class=\"string\">'postgres:///mlm'<\/span>\n\n# <span class=\"name\">Plugins<\/span>\n<span class=\"name\">PLUGINS<\/span> = [<span class=\"string\">'forwarder'<\/span>]\n\n# <span class=\"atom\">northbound<\/span> <span class=\"atom\">interface<\/span>\n<span class=\"name\">X_FORWARDED<\/span> = <span class=\"string\">'mid-level-manager'<\/span>\n<span class=\"name\">FWD_DESTINATIONS<\/span> = [\n    (<span class=\"string\">'http://mom.local.alerta.io:8080'<\/span>, <span class=\"string\">'AKID001'<\/span>, <span class=\"string\">'supersecret'<\/span>, [<span class=\"string\">'*'<\/span>])  # <span class=\"atom\">forward<\/span> <span class=\"atom\">everything<\/span> <span class=\"atom\">ie<\/span>. <span class=\"atom\">alerts<\/span> <span class=\"atom\">and<\/span> <span class=\"atom\">actions<\/span>\n]<\/code><\/pre><pre><code>(<span class=\"atom\">venv<\/span>) <span class=\"atom\">nsatterl<\/span>@<span class=\"atom\">macbook<\/span> <span class=\"atom\">alerta<\/span> <span class=\"comment\">% cat ~/.alertad-mom.conf<\/span>\n<span class=\"name\">DEBUG<\/span>=<span class=\"name\">False<\/span>\n\n<span class=\"name\">HMAC_AUTH_CREDENTIALS<\/span> = [\n    {\n        <span class=\"string\">'id'<\/span>: <span class=\"string\">'AKID001'<\/span>,\n        <span class=\"string\">'key'<\/span>: <span class=\"string\">'supersecret'<\/span>,\n        <span class=\"string\">'algorithm'<\/span>: <span class=\"string\">'sha256'<\/span>\n    }\n]\n\n<span class=\"name\">DATABASE_URL<\/span>=<span class=\"string\">'postgres:///mom'<\/span>\n\n<span class=\"name\">PLUGINS<\/span>=[<span class=\"string\">'forwarder'<\/span>]\n\n# <span class=\"atom\">southbound<\/span> <span class=\"atom\">interface<\/span>\n<span class=\"name\">X_FORWARDED<\/span> = <span class=\"string\">'manager-of-managers'<\/span>\n<span class=\"name\">FWD_DESTINATIONS<\/span> = [\n    # (<span class=\"string\">'http://localhost:9080'<\/span>, <span class=\"string\">'AKID002'<\/span>, <span class=\"string\">'supersecret2'<\/span>, [<span class=\"string\">'actions'<\/span>])  # <span class=\"atom\">only<\/span> <span class=\"atom\">forward<\/span> <span class=\"atom\">all<\/span> <span class=\"atom\">actions<\/span> <span class=\"atom\">ie<\/span>. <span class=\"atom\">not<\/span> <span class=\"atom\">alerts<\/span>\n    (<span class=\"string\">'http://mlm.local.alerta.io:9080'<\/span>, <span class=\"string\">'AKID002'<\/span>, <span class=\"string\">'supersecret2'<\/span>, [<span class=\"string\">'*'<\/span>])  # <span class=\"atom\">only<\/span> <span class=\"atom\">forward<\/span> <span class=\"atom\">all<\/span> <span class=\"atom\">actions<\/span> <span class=\"atom\">ie<\/span>. <span class=\"atom\">not<\/span> <span class=\"atom\">alerts<\/span>\n]<\/code><\/pre>","sent":"2020-02-24T19:58:39.557Z","editedAt":"2020-02-24T19:58:53.812Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5e542b249aeef65232173b5a","text":"those hostnames will work for you. they are just DNS pointers to localhost","html":"those hostnames will work for you. they are just DNS pointers to localhost","sent":"2020-02-24T19:59:32.263Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542b5f9c3b2f07f714fce0","text":"if using postgres (like me above) you can create to test databases by simply running …\n```\n$ createdb mom\n$ createdb mlm\n```","html":"if using postgres (like me above) you can create to test databases by simply running …<pre><code><span class=\"variable\">$ <\/span>createdb mom\n<span class=\"variable\">$ <\/span>createdb mlm<\/code><\/pre>","sent":"2020-02-24T20:00:31.834Z","editedAt":"2020-02-24T20:00:41.371Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5e542bc0476ff13c43b0a477","text":"let me know if you need help testing. it was a bit fiddly. ideally this would be a docker setp which you could just launch using docker-compose. Working on that...","html":"let me know if you need help testing. it was a bit fiddly. ideally this would be a docker setp which you could just launch using docker-compose. Working on that...","sent":"2020-02-24T20:02:08.923Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542bef901209179b390cf6","text":"Yeah I have two vms running container I built with a modified Dockerfile from you docker-Alerta repo ","html":"Yeah I have two vms running container I built with a modified Dockerfile from you docker-Alerta repo ","sent":"2020-02-24T20:02:55.170Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542c063e6ef6416171af59","text":"I'll tests those tonight soon as I get home for you ","html":"I&#39;ll tests those tonight soon as I get home for you ","sent":"2020-02-24T20:03:18.253Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542c28d7bb4e179c9c5e48","text":"I just need to tweak my Alertad confs","html":"I just need to tweak my Alertad confs","sent":"2020-02-24T20:03:52.172Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542c3a1c4f1707f8ca4888","text":"And build new images ","html":"And build new images ","sent":"2020-02-24T20:04:10.388Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542c403e6ef6416171b0b3","text":"Cool. thanks.","html":"Cool. thanks.","sent":"2020-02-24T20:04:16.012Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542ce2476ff13c43b0a7f6","text":"oh and you’ll need to use this branch for the python client… https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1","html":"oh and you’ll need to use this branch for the python client… <a href=\"https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1<\/a>","sent":"2020-02-24T20:06:58.503Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[{"url":"https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542d21ed27b13c42f9d46d","text":"Was just about to ask.  Thanks ","html":"Was just about to ask.  Thanks ","sent":"2020-02-24T20:08:01.921Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e54368a1ec15e02119b6273","text":"Hi @satterly  I have given my views on https://github.com/alerta/alerta/issues/1132\n","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  I have given my views on <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"1132\" href=\"https://github.com/alerta/alerta/issues/1132\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"issue\">alerta/alerta#1132<\/a>","sent":"2020-02-24T20:48:10.035Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"repo":"alerta/alerta","number":"1132"}],"meta":[],"v":1,"burstStart":true},{"id":"5e5436b9d7bb4e179c9c7e07","text":"I wanted to know what would be way to blackout an alert which is already firing? Does it involve creating blackout rule with older start time in the past?","html":"I wanted to know what would be way to blackout an alert which is already firing? Does it involve creating blackout rule with older start time in the past?","sent":"2020-02-24T20:48:57.044Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e5439a8ef8d646099ccdc76","text":"@sushovan23 thanks for your input. i’ll need to think about this issue a bit more. the last thing i want to do is make a change that makes things worse.","html":"<span data-link-type=\"mention\" data-screen-name=\"sushovan23\" class=\"mention\">@sushovan23<\/span> thanks for your input. i’ll need to think about this issue a bit more. the last thing i want to do is make a change that makes things worse.","sent":"2020-02-24T21:01:28.720Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"sushovan23","userId":"5a948131d73408ce4f8ef365","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e5439db5cd3836098c8211c","text":"Having to create a blackout rule in the past to suppress an alert happening now is crazy. there must be a better way.","html":"Having to create a blackout rule in the past to suppress an alert happening now is crazy. there must be a better way.","sent":"2020-02-24T21:02:19.768Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e543b9d1c4f1707f8ca72fd","text":"I agree but this is a big issue for big ops teams. in older 5.x versions new blackout rules would work on  old/repeated/refired alerts also. \nI want to provide a procedure where teams can blackout alerts which are already firing. If you can provide any steps which would help in achieving that it would be welcomed","html":"I agree but this is a big issue for big ops teams. in older 5.x versions new blackout rules would work on  old/repeated/refired alerts also.<br>I want to provide a procedure where teams can blackout alerts which are already firing. If you can provide any steps which would help in achieving that it would be welcomed","sent":"2020-02-24T21:09:49.351Z","editedAt":"2020-02-24T21:10:09.110Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5e543bec901209179b3939fa","text":"Since we are using alert manager and repeat interval is every hour so expectation is that within the one hour if issue is not fixed they can atleast create the blackout rule to stop further alerts","html":"Since we are using alert manager and repeat interval is every hour so expectation is that within the one hour if issue is not fixed they can atleast create the blackout rule to stop further alerts","sent":"2020-02-24T21:11:08.682Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e543d87fa9f20553b4baf29","text":"I even attempted to delete alerts from alerta and let alertmanager fire alerts again in next interval so alerta treats it as new alert. Still that didn't get suppressed even though blackout rule was in effect. I'm beginning to think blackout feature is broken completely","html":"I even attempted to delete alerts from alerta and let alertmanager fire alerts again in next interval so alerta treats it as new alert. Still that didn&#39;t get suppressed even though blackout rule was in effect. I&#39;m beginning to think blackout feature is broken completely","sent":"2020-02-24T21:17:59.123Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/02/25"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/02/23"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">24<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Feb 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5e536c55d97c107ed271428b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e536c23d73408ce4fda8877 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47589946?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47589946?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>jeetudheeman</div>
+      <div class='chat-item__username js-chat-item-from'>@jeetudheeman</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e536c55d97c107ed271428b' title="">Feb 24 06:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi<br>pls help me out to integrate pagerduty with alerta.<br>I tried to integrate but calls are not coming via pagerduty
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e537df96053e67dc4e1227e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e537df96053e67dc4e1227e' title="">Feb 24 07:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> i add column &quot;acked-by&quot; but when i ack an alert, nothing gets filled in the column.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e537e214880f07ed1f5e1e8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      How should I do ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e538932a0aa6629f5eba539 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e538932a0aa6629f5eba539' title="">Feb 24 08:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      are you logged in?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53899c8e726c7dc5c48248 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      did you add the “acked_by” plugin to the list of <code>PLUGINS</code> in alertad.conf ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53962714b4d670a3452f05 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53962714b4d670a3452f05' title="">Feb 24 09:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes i am logged in, i don&#39;t add &quot;acked_by&quot; in list of PLUGINS, i will try, thx.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53a0e740ac4a7fb90560cf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53a0e740ac4a7fb90560cf' title="">Feb 24 10:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      When i added &quot;acked_by&quot; in list of PLUGINS, it doesn&#39;t work but if i put this line in <strong>init</strong>.py, it work.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53a0ea40ac4a7fb90560d1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      if action == &#39;ack&#39;:<br>            watch = &#39;watch:&#39; + g.login<br>            alert.tags.append(watch)<br>            alert.attributes[&#39;acked-by&#39;] = g.login
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53ae2a101adb4160c2667a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53ae2a101adb4160c2667a' title="">Feb 24 11:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      In <code>__init__.py</code> of what directory?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53aec1901209179b37655b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="jeetudheeman" class="mention">@jeetudheeman</span> Can you explain exactly what you want (eg. Alerta -&gt; Pagerduty only or bi-directional) and what you have tried to do (commands run, config files used, etc) ? Can&#39;t help you without more info.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53b8851c4f1707f8c8aeef burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53b8851c4f1707f8c8aeef' title="">Feb 24 11:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      in directory plugins
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53ba05d7bb4e179c9ac478 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53ba05d7bb4e179c9ac478' title="">Feb 24 11:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I don&#39;t know why the acked_by plugin doesn&#39;t work for you or why your hack does. Sorry.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53bf3f901209179b3799be burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53bf3f901209179b3799be' title="">Feb 24 12:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No problem, i don&#39;t know too. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53d562fa9f20553b4a4330 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53d562fa9f20553b4a4330' title="">Feb 24 13:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I see you&#39;ve been working with the branch alert-forwarder-plugin.  Please let me know if I can help with any testing 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53d5bce40da4526f10392a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53d5bce40da4526f10392a' title="">Feb 24 13:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      sure. i’ll have something to test later tonight. Thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53d664d7bb4e179c9b1da6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53d664d7bb4e179c9b1da6' title="">Feb 24 13:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Cool, yeah the forwarding is more complicated then I thought it would be.  Our use case is to have a single pane of glass instance that only receives forwards from multiple other alerta stances and acts as a command and control center.  Not other monitoring engines or tools will be sending events to the main instance hopefully making it a little easier 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e53d795ef8d646099cb74ed burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e4af2d1d73408ce4fd9e3e4 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/52837583?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/52837583?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>xwing22</div>
+      <div class='chat-item__username js-chat-item-from'>@xwing22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e53d795ef8d646099cb74ed' title="">Feb 24 14:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Is there a way to browse duplicate entries for an alert?  I put a stacktrace in one of the field so each alert is &quot;unique&quot;  and when I go to the data view of a single alert, it would have been nice to browse each alert but  I&#39;m not sure they are logged in the DB, maybe it just increment the duplicationc ounter?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e5429b88f8af6553a000c9b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e5429b88f8af6553a000c9b' title="">Feb 24 19:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hey <span data-link-type="mention" data-screen-name="smbambling" class="mention">@smbambling</span> if you have some time could you test this branch ? <a href="https://github.com/alerta/alerta/compare/alert-forwarder-plugin" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/alerta/compare/alert-forwarder-plugin</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a41fa9f20553b4b7132 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I have two servers configured. An MLM (a mid-level manger) that receives the Alerts from source and an MoM (manager-of-managers) that only receives alerts from MLMs. You can action alerts on either the MLM or MoM and the action should propogate to the other. However, alerts should only go MLM to MoM in this configuration.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a55ed27b13c42f9cc0f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542a55ed27b13c42f9cc0f' title="">Feb 24 19:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yep I can take a look at that for you. It will not require the other delete action plugin branch to be merged into it correct ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a6c476ff13c43b09ff7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542a6c476ff13c43b09ff7' title="">Feb 24 19:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      It will. i’m working on that next/ now.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a80fa9f20553b4b7364 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      everything works except for Delete so far.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542a91ed27b13c42f9ccde burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542a91ed27b13c42f9ccde' title="">Feb 24 19:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok cool if you have time can you see if my PR into the python client two needs any updates too 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542ad08f8af6553a00103f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542ad08f8af6553a00103f' title="">Feb 24 19:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      It will actually quite a bit because i need to support custom headers.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542aef1c4f1707f8ca4330 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      My test config for the two servers is …<pre><code>(<span class="atom">venv</span>) <span class="atom">nsatterl</span>@<span class="atom">macbook</span> <span class="atom">alerta</span> <span class="comment">% cat ~/.alertad-mlm.conf</span>
+<span class="name">DEBUG</span>=<span class="name">False</span>
+
+<span class="name">HMAC_AUTH_CREDENTIALS</span> = [
+    {
+        <span class="string">'id'</span>: <span class="string">'AKID002'</span>,
+        <span class="string">'key'</span>: <span class="string">'supersecret2'</span>,
+        <span class="string">'algorithm'</span>: <span class="string">'sha256'</span>
+    }
+]
+
+<span class="name">DATABASE_URL</span>=<span class="string">'postgres:///mlm'</span>
+
+# <span class="name">Plugins</span>
+<span class="name">PLUGINS</span> = [<span class="string">'forwarder'</span>]
+
+# <span class="atom">northbound</span> <span class="atom">interface</span>
+<span class="name">X_FORWARDED</span> = <span class="string">'mid-level-manager'</span>
+<span class="name">FWD_DESTINATIONS</span> = [
+    (<span class="string">'http://mom.local.alerta.io:8080'</span>, <span class="string">'AKID001'</span>, <span class="string">'supersecret'</span>, [<span class="string">'*'</span>])  # <span class="atom">forward</span> <span class="atom">everything</span> <span class="atom">ie</span>. <span class="atom">alerts</span> <span class="atom">and</span> <span class="atom">actions</span>
+]</code></pre><pre><code>(<span class="atom">venv</span>) <span class="atom">nsatterl</span>@<span class="atom">macbook</span> <span class="atom">alerta</span> <span class="comment">% cat ~/.alertad-mom.conf</span>
+<span class="name">DEBUG</span>=<span class="name">False</span>
+
+<span class="name">HMAC_AUTH_CREDENTIALS</span> = [
+    {
+        <span class="string">'id'</span>: <span class="string">'AKID001'</span>,
+        <span class="string">'key'</span>: <span class="string">'supersecret'</span>,
+        <span class="string">'algorithm'</span>: <span class="string">'sha256'</span>
+    }
+]
+
+<span class="name">DATABASE_URL</span>=<span class="string">'postgres:///mom'</span>
+
+<span class="name">PLUGINS</span>=[<span class="string">'forwarder'</span>]
+
+# <span class="atom">southbound</span> <span class="atom">interface</span>
+<span class="name">X_FORWARDED</span> = <span class="string">'manager-of-managers'</span>
+<span class="name">FWD_DESTINATIONS</span> = [
+    # (<span class="string">'http://localhost:9080'</span>, <span class="string">'AKID002'</span>, <span class="string">'supersecret2'</span>, [<span class="string">'actions'</span>])  # <span class="atom">only</span> <span class="atom">forward</span> <span class="atom">all</span> <span class="atom">actions</span> <span class="atom">ie</span>. <span class="atom">not</span> <span class="atom">alerts</span>
+    (<span class="string">'http://mlm.local.alerta.io:9080'</span>, <span class="string">'AKID002'</span>, <span class="string">'supersecret2'</span>, [<span class="string">'*'</span>])  # <span class="atom">only</span> <span class="atom">forward</span> <span class="atom">all</span> <span class="atom">actions</span> <span class="atom">ie</span>. <span class="atom">not</span> <span class="atom">alerts</span>
+]</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542b249aeef65232173b5a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      those hostnames will work for you. they are just DNS pointers to localhost
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542b5f9c3b2f07f714fce0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      if using postgres (like me above) you can create to test databases by simply running …<pre><code><span class="variable">$ </span>createdb mom
+<span class="variable">$ </span>createdb mlm</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542bc0476ff13c43b0a477 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      let me know if you need help testing. it was a bit fiddly. ideally this would be a docker setp which you could just launch using docker-compose. Working on that...
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542bef901209179b390cf6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542bef901209179b390cf6' title="">Feb 24 20:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yeah I have two vms running container I built with a modified Dockerfile from you docker-Alerta repo 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542c063e6ef6416171af59 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ll tests those tonight soon as I get home for you 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542c28d7bb4e179c9c5e48 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I just need to tweak my Alertad confs
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542c3a1c4f1707f8ca4888 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And build new images 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542c403e6ef6416171b0b3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542c403e6ef6416171b0b3' title="">Feb 24 20:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Cool. thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542ce2476ff13c43b0a7f6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      oh and you’ll need to use this branch for the python client… <a href="https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e542d21ed27b13c42f9d46d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55918e5415522ed4b3e30a4e avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/487229?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Steven Bambling</div>
+      <div class='chat-item__username js-chat-item-from'>@smbambling</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e542d21ed27b13c42f9d46d' title="">Feb 24 20:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Was just about to ask.  Thanks 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e54368a1ec15e02119b6273 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e54368a1ec15e02119b6273' title="">Feb 24 20:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  I have given my views on <a target="_blank" data-link-type="issue" data-issue="1132" href="https://github.com/alerta/alerta/issues/1132" data-provider="github" data-issue-repo="alerta/alerta" class="issue">alerta/alerta#1132</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e5436b9d7bb4e179c9c7e07 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I wanted to know what would be way to blackout an alert which is already firing? Does it involve creating blackout rule with older start time in the past?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e5439a8ef8d646099ccdc76 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e5439a8ef8d646099ccdc76' title="">Feb 24 21:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="sushovan23" class="mention">@sushovan23</span> thanks for your input. i’ll need to think about this issue a bit more. the last thing i want to do is make a change that makes things worse.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e5439db5cd3836098c8211c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Having to create a blackout rule in the past to suppress an alert happening now is crazy. there must be a better way.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e543b9d1c4f1707f8ca72fd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e543b9d1c4f1707f8ca72fd' title="">Feb 24 21:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I agree but this is a big issue for big ops teams. in older 5.x versions new blackout rules would work on  old/repeated/refired alerts also.<br>I want to provide a procedure where teams can blackout alerts which are already firing. If you can provide any steps which would help in achieving that it would be welcomed
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e543bec901209179b3939fa burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Since we are using alert manager and repeat interval is every hour so expectation is that within the one hour if issue is not fixed they can atleast create the blackout rule to stop further alerts
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e543d87fa9f20553b4baf29 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/02/24?at=5e543d87fa9f20553b4baf29' title="">Feb 24 21:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I even attempted to delete alerts from alerta and let alertmanager fire alerts again in next interval so alerta treats it as new alert. Still that didn&#39;t get suppressed even though blackout rule was in effect. I&#39;m beginning to think blackout feature is broken completely
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$HfJ+PWwjHu7y7LdAFn7gH49VtcRPQ2Vlb05wfAoRnxU=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-02-24T00:00:00.000Z","nextDate":"2020-02-25T23:59:59.999Z","previousDate":"2020-02-23T00:00:00.000Z","messages":[{"id":"5e536c55d97c107ed271428b","text":"hi\npls help me out to integrate pagerduty with alerta.\nI tried to integrate but calls are not coming via pagerduty","html":"hi<br>pls help me out to integrate pagerduty with alerta.<br>I tried to integrate but calls are not coming via pagerduty","sent":"2020-02-24T06:25:25.971Z","editedAt":"2020-02-24T06:26:08.382Z","fromUser":{"id":"5e536c23d73408ce4fda8877","username":"jeetudheeman","displayName":"jeetudheeman","url":"/jeetudheeman","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/jeetudheeman","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47589946?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47589946?v=4&s=128","v":1,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5e537df96053e67dc4e1227e","text":"Hi @satterly i add column \"acked-by\" but when i ack an alert, nothing gets filled in the column.","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> i add column &quot;acked-by&quot; but when i ack an alert, nothing gets filled in the column.","sent":"2020-02-24T07:40:41.268Z","editedAt":"2020-02-24T07:40:50.526Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5e537e214880f07ed1f5e1e8","text":"How should I do ?","html":"How should I do ?","sent":"2020-02-24T07:41:21.638Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e538932a0aa6629f5eba539","text":"are you logged in?","html":"are you logged in?","sent":"2020-02-24T08:28:34.635Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53899c8e726c7dc5c48248","text":"did you add the “acked_by” plugin to the list of `PLUGINS` in alertad.conf ?","html":"did you add the “acked_by” plugin to the list of <code>PLUGINS<\/code> in alertad.conf ?","sent":"2020-02-24T08:30:20.341Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e53962714b4d670a3452f05","text":"Yes i am logged in, i don't add \"acked_by\" in list of PLUGINS, i will try, thx.","html":"Yes i am logged in, i don&#39;t add &quot;acked_by&quot; in list of PLUGINS, i will try, thx.","sent":"2020-02-24T09:23:51.464Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53a0e740ac4a7fb90560cf","text":"When i added \"acked_by\" in list of PLUGINS, it doesn't work but if i put this line in __init__.py, it work.","html":"When i added &quot;acked_by&quot; in list of PLUGINS, it doesn&#39;t work but if i put this line in <strong>init<\/strong>.py, it work.","sent":"2020-02-24T10:09:43.467Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53a0ea40ac4a7fb90560d1","text":"if action == 'ack':\n            watch = 'watch:' + g.login\n            alert.tags.append(watch)\n            alert.attributes['acked-by'] = g.login","html":"if action == &#39;ack&#39;:<br>            watch = &#39;watch:&#39; + g.login<br>            alert.tags.append(watch)<br>            alert.attributes[&#39;acked-by&#39;] = g.login","sent":"2020-02-24T10:09:46.471Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e53ae2a101adb4160c2667a","text":"In `__init__.py` of what directory?","html":"In <code>__init__.py<\/code> of what directory?","sent":"2020-02-24T11:06:18.853Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53aec1901209179b37655b","text":"@jeetudheeman Can you explain exactly what you want (eg. Alerta -> Pagerduty only or bi-directional) and what you have tried to do (commands run, config files used, etc) ? Can't help you without more info.","html":"<span data-link-type=\"mention\" data-screen-name=\"jeetudheeman\" class=\"mention\">@jeetudheeman<\/span> Can you explain exactly what you want (eg. Alerta -&gt; Pagerduty only or bi-directional) and what you have tried to do (commands run, config files used, etc) ? Can&#39;t help you without more info.","sent":"2020-02-24T11:08:49.211Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"jeetudheeman","userId":"5e536c23d73408ce4fda8877","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e53b8851c4f1707f8c8aeef","text":"in directory plugins","html":"in directory plugins","sent":"2020-02-24T11:50:29.686Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53ba05d7bb4e179c9ac478","text":"I don't know why the acked_by plugin doesn't work for you or why your hack does. Sorry.","html":"I don&#39;t know why the acked_by plugin doesn&#39;t work for you or why your hack does. Sorry.","sent":"2020-02-24T11:56:53.928Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53bf3f901209179b3799be","text":"No problem, i don't know too. ","html":"No problem, i don&#39;t know too. ","sent":"2020-02-24T12:19:11.319Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53d562fa9f20553b4a4330","text":"@satterly I see you've been working with the branch alert-forwarder-plugin.  Please let me know if I can help with any testing ","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I see you&#39;ve been working with the branch alert-forwarder-plugin.  Please let me know if I can help with any testing ","sent":"2020-02-24T13:53:38.420Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53d5bce40da4526f10392a","text":"sure. i’ll have something to test later tonight. Thanks.","html":"sure. i’ll have something to test later tonight. Thanks.","sent":"2020-02-24T13:55:08.083Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53d664d7bb4e179c9b1da6","text":"Cool, yeah the forwarding is more complicated then I thought it would be.  Our use case is to have a single pane of glass instance that only receives forwards from multiple other alerta stances and acts as a command and control center.  Not other monitoring engines or tools will be sending events to the main instance hopefully making it a little easier ","html":"Cool, yeah the forwarding is more complicated then I thought it would be.  Our use case is to have a single pane of glass instance that only receives forwards from multiple other alerta stances and acts as a command and control center.  Not other monitoring engines or tools will be sending events to the main instance hopefully making it a little easier ","sent":"2020-02-24T13:57:56.626Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e53d795ef8d646099cb74ed","text":"Is there a way to browse duplicate entries for an alert?  I put a stacktrace in one of the field so each alert is \"unique\"  and when I go to the data view of a single alert, it would have been nice to browse each alert but  I'm not sure they are logged in the DB, maybe it just increment the duplicationc ounter?","html":"Is there a way to browse duplicate entries for an alert?  I put a stacktrace in one of the field so each alert is &quot;unique&quot;  and when I go to the data view of a single alert, it would have been nice to browse each alert but  I&#39;m not sure they are logged in the DB, maybe it just increment the duplicationc ounter?","sent":"2020-02-24T14:03:01.953Z","fromUser":{"id":"5e4af2d1d73408ce4fd9e3e4","username":"xwing22","displayName":"xwing22","url":"/xwing22","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/xwing22","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/52837583?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/52837583?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e5429b88f8af6553a000c9b","text":"hey @smbambling if you have some time could you test this branch ? https://github.com/alerta/alerta/compare/alert-forwarder-plugin","html":"hey <span data-link-type=\"mention\" data-screen-name=\"smbambling\" class=\"mention\">@smbambling<\/span> if you have some time could you test this branch ? <a href=\"https://github.com/alerta/alerta/compare/alert-forwarder-plugin\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/alerta/compare/alert-forwarder-plugin<\/a>","sent":"2020-02-24T19:53:28.563Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[{"url":"https://github.com/alerta/alerta/compare/alert-forwarder-plugin"}],"mentions":[{"screenName":"smbambling","userId":"55918e5415522ed4b3e30a4e","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542a41fa9f20553b4b7132","text":"I have two servers configured. An MLM (a mid-level manger) that receives the Alerts from source and an MoM (manager-of-managers) that only receives alerts from MLMs. You can action alerts on either the MLM or MoM and the action should propogate to the other. However, alerts should only go MLM to MoM in this configuration.","html":"I have two servers configured. An MLM (a mid-level manger) that receives the Alerts from source and an MoM (manager-of-managers) that only receives alerts from MLMs. You can action alerts on either the MLM or MoM and the action should propogate to the other. However, alerts should only go MLM to MoM in this configuration.","sent":"2020-02-24T19:55:45.012Z","editedAt":"2020-02-24T19:56:08.046Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5e542a55ed27b13c42f9cc0f","text":"Yep I can take a look at that for you. It will not require the other delete action plugin branch to be merged into it correct ?","html":"Yep I can take a look at that for you. It will not require the other delete action plugin branch to be merged into it correct ?","sent":"2020-02-24T19:56:05.531Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542a6c476ff13c43b09ff7","text":"It will. i’m working on that next/ now.","html":"It will. i’m working on that next/ now.","sent":"2020-02-24T19:56:28.009Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542a80fa9f20553b4b7364","text":"everything works except for Delete so far.","html":"everything works except for Delete so far.","sent":"2020-02-24T19:56:48.597Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542a91ed27b13c42f9ccde","text":"Ok cool if you have time can you see if my PR into the python client two needs any updates too ","html":"Ok cool if you have time can you see if my PR into the python client two needs any updates too ","sent":"2020-02-24T19:57:05.009Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542ad08f8af6553a00103f","text":"It will actually quite a bit because i need to support custom headers.","html":"It will actually quite a bit because i need to support custom headers.","sent":"2020-02-24T19:58:08.418Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542aef1c4f1707f8ca4330","text":"My test config for the two servers is …\n```\n(venv) nsatterl@macbook alerta % cat ~/.alertad-mlm.conf\nDEBUG=False\n\nHMAC_AUTH_CREDENTIALS = [\n    {\n        'id': 'AKID002',\n        'key': 'supersecret2',\n        'algorithm': 'sha256'\n    }\n]\n\nDATABASE_URL='postgres:///mlm'\n\n# Plugins\nPLUGINS = ['forwarder']\n\n# northbound interface\nX_FORWARDED = 'mid-level-manager'\nFWD_DESTINATIONS = [\n    ('http://mom.local.alerta.io:8080', 'AKID001', 'supersecret', ['*'])  # forward everything ie. alerts and actions\n]\n```\n```\n(venv) nsatterl@macbook alerta % cat ~/.alertad-mom.conf\nDEBUG=False\n\nHMAC_AUTH_CREDENTIALS = [\n    {\n        'id': 'AKID001',\n        'key': 'supersecret',\n        'algorithm': 'sha256'\n    }\n]\n\nDATABASE_URL='postgres:///mom'\n\nPLUGINS=['forwarder']\n\n# southbound interface\nX_FORWARDED = 'manager-of-managers'\nFWD_DESTINATIONS = [\n    # ('http://localhost:9080', 'AKID002', 'supersecret2', ['actions'])  # only forward all actions ie. not alerts\n    ('http://mlm.local.alerta.io:9080', 'AKID002', 'supersecret2', ['*'])  # only forward all actions ie. not alerts\n]\n```","html":"My test config for the two servers is …<pre><code>(<span class=\"atom\">venv<\/span>) <span class=\"atom\">nsatterl<\/span>@<span class=\"atom\">macbook<\/span> <span class=\"atom\">alerta<\/span> <span class=\"comment\">% cat ~/.alertad-mlm.conf<\/span>\n<span class=\"name\">DEBUG<\/span>=<span class=\"name\">False<\/span>\n\n<span class=\"name\">HMAC_AUTH_CREDENTIALS<\/span> = [\n    {\n        <span class=\"string\">'id'<\/span>: <span class=\"string\">'AKID002'<\/span>,\n        <span class=\"string\">'key'<\/span>: <span class=\"string\">'supersecret2'<\/span>,\n        <span class=\"string\">'algorithm'<\/span>: <span class=\"string\">'sha256'<\/span>\n    }\n]\n\n<span class=\"name\">DATABASE_URL<\/span>=<span class=\"string\">'postgres:///mlm'<\/span>\n\n# <span class=\"name\">Plugins<\/span>\n<span class=\"name\">PLUGINS<\/span> = [<span class=\"string\">'forwarder'<\/span>]\n\n# <span class=\"atom\">northbound<\/span> <span class=\"atom\">interface<\/span>\n<span class=\"name\">X_FORWARDED<\/span> = <span class=\"string\">'mid-level-manager'<\/span>\n<span class=\"name\">FWD_DESTINATIONS<\/span> = [\n    (<span class=\"string\">'http://mom.local.alerta.io:8080'<\/span>, <span class=\"string\">'AKID001'<\/span>, <span class=\"string\">'supersecret'<\/span>, [<span class=\"string\">'*'<\/span>])  # <span class=\"atom\">forward<\/span> <span class=\"atom\">everything<\/span> <span class=\"atom\">ie<\/span>. <span class=\"atom\">alerts<\/span> <span class=\"atom\">and<\/span> <span class=\"atom\">actions<\/span>\n]<\/code><\/pre><pre><code>(<span class=\"atom\">venv<\/span>) <span class=\"atom\">nsatterl<\/span>@<span class=\"atom\">macbook<\/span> <span class=\"atom\">alerta<\/span> <span class=\"comment\">% cat ~/.alertad-mom.conf<\/span>\n<span class=\"name\">DEBUG<\/span>=<span class=\"name\">False<\/span>\n\n<span class=\"name\">HMAC_AUTH_CREDENTIALS<\/span> = [\n    {\n        <span class=\"string\">'id'<\/span>: <span class=\"string\">'AKID001'<\/span>,\n        <span class=\"string\">'key'<\/span>: <span class=\"string\">'supersecret'<\/span>,\n        <span class=\"string\">'algorithm'<\/span>: <span class=\"string\">'sha256'<\/span>\n    }\n]\n\n<span class=\"name\">DATABASE_URL<\/span>=<span class=\"string\">'postgres:///mom'<\/span>\n\n<span class=\"name\">PLUGINS<\/span>=[<span class=\"string\">'forwarder'<\/span>]\n\n# <span class=\"atom\">southbound<\/span> <span class=\"atom\">interface<\/span>\n<span class=\"name\">X_FORWARDED<\/span> = <span class=\"string\">'manager-of-managers'<\/span>\n<span class=\"name\">FWD_DESTINATIONS<\/span> = [\n    # (<span class=\"string\">'http://localhost:9080'<\/span>, <span class=\"string\">'AKID002'<\/span>, <span class=\"string\">'supersecret2'<\/span>, [<span class=\"string\">'actions'<\/span>])  # <span class=\"atom\">only<\/span> <span class=\"atom\">forward<\/span> <span class=\"atom\">all<\/span> <span class=\"atom\">actions<\/span> <span class=\"atom\">ie<\/span>. <span class=\"atom\">not<\/span> <span class=\"atom\">alerts<\/span>\n    (<span class=\"string\">'http://mlm.local.alerta.io:9080'<\/span>, <span class=\"string\">'AKID002'<\/span>, <span class=\"string\">'supersecret2'<\/span>, [<span class=\"string\">'*'<\/span>])  # <span class=\"atom\">only<\/span> <span class=\"atom\">forward<\/span> <span class=\"atom\">all<\/span> <span class=\"atom\">actions<\/span> <span class=\"atom\">ie<\/span>. <span class=\"atom\">not<\/span> <span class=\"atom\">alerts<\/span>\n]<\/code><\/pre>","sent":"2020-02-24T19:58:39.557Z","editedAt":"2020-02-24T19:58:53.812Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5e542b249aeef65232173b5a","text":"those hostnames will work for you. they are just DNS pointers to localhost","html":"those hostnames will work for you. they are just DNS pointers to localhost","sent":"2020-02-24T19:59:32.263Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542b5f9c3b2f07f714fce0","text":"if using postgres (like me above) you can create to test databases by simply running …\n```\n$ createdb mom\n$ createdb mlm\n```","html":"if using postgres (like me above) you can create to test databases by simply running …<pre><code><span class=\"variable\">$ <\/span>createdb mom\n<span class=\"variable\">$ <\/span>createdb mlm<\/code><\/pre>","sent":"2020-02-24T20:00:31.834Z","editedAt":"2020-02-24T20:00:41.371Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5e542bc0476ff13c43b0a477","text":"let me know if you need help testing. it was a bit fiddly. ideally this would be a docker setp which you could just launch using docker-compose. Working on that...","html":"let me know if you need help testing. it was a bit fiddly. ideally this would be a docker setp which you could just launch using docker-compose. Working on that...","sent":"2020-02-24T20:02:08.923Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542bef901209179b390cf6","text":"Yeah I have two vms running container I built with a modified Dockerfile from you docker-Alerta repo ","html":"Yeah I have two vms running container I built with a modified Dockerfile from you docker-Alerta repo ","sent":"2020-02-24T20:02:55.170Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542c063e6ef6416171af59","text":"I'll tests those tonight soon as I get home for you ","html":"I&#39;ll tests those tonight soon as I get home for you ","sent":"2020-02-24T20:03:18.253Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542c28d7bb4e179c9c5e48","text":"I just need to tweak my Alertad confs","html":"I just need to tweak my Alertad confs","sent":"2020-02-24T20:03:52.172Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542c3a1c4f1707f8ca4888","text":"And build new images ","html":"And build new images ","sent":"2020-02-24T20:04:10.388Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542c403e6ef6416171b0b3","text":"Cool. thanks.","html":"Cool. thanks.","sent":"2020-02-24T20:04:16.012Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e542ce2476ff13c43b0a7f6","text":"oh and you’ll need to use this branch for the python client… https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1","html":"oh and you’ll need to use this branch for the python client… <a href=\"https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1<\/a>","sent":"2020-02-24T20:06:58.503Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[{"url":"https://github.com/alerta/python-alerta-client/compare/hmac-auth?expand=1"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e542d21ed27b13c42f9d46d","text":"Was just about to ask.  Thanks ","html":"Was just about to ask.  Thanks ","sent":"2020-02-24T20:08:01.921Z","fromUser":{"id":"55918e5415522ed4b3e30a4e","username":"smbambling","displayName":"Steven Bambling","url":"/smbambling","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/smbambling","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/487229?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/487229?v=4&s=128","v":12,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e54368a1ec15e02119b6273","text":"Hi @satterly  I have given my views on https://github.com/alerta/alerta/issues/1132\n","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  I have given my views on <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"1132\" href=\"https://github.com/alerta/alerta/issues/1132\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"issue\">alerta/alerta#1132<\/a>","sent":"2020-02-24T20:48:10.035Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"repo":"alerta/alerta","number":"1132"}],"meta":[],"v":1,"burstStart":true},{"id":"5e5436b9d7bb4e179c9c7e07","text":"I wanted to know what would be way to blackout an alert which is already firing? Does it involve creating blackout rule with older start time in the past?","html":"I wanted to know what would be way to blackout an alert which is already firing? Does it involve creating blackout rule with older start time in the past?","sent":"2020-02-24T20:48:57.044Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e5439a8ef8d646099ccdc76","text":"@sushovan23 thanks for your input. i’ll need to think about this issue a bit more. the last thing i want to do is make a change that makes things worse.","html":"<span data-link-type=\"mention\" data-screen-name=\"sushovan23\" class=\"mention\">@sushovan23<\/span> thanks for your input. i’ll need to think about this issue a bit more. the last thing i want to do is make a change that makes things worse.","sent":"2020-02-24T21:01:28.720Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"sushovan23","userId":"5a948131d73408ce4f8ef365","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e5439db5cd3836098c8211c","text":"Having to create a blackout rule in the past to suppress an alert happening now is crazy. there must be a better way.","html":"Having to create a blackout rule in the past to suppress an alert happening now is crazy. there must be a better way.","sent":"2020-02-24T21:02:19.768Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e543b9d1c4f1707f8ca72fd","text":"I agree but this is a big issue for big ops teams. in older 5.x versions new blackout rules would work on  old/repeated/refired alerts also. \nI want to provide a procedure where teams can blackout alerts which are already firing. If you can provide any steps which would help in achieving that it would be welcomed","html":"I agree but this is a big issue for big ops teams. in older 5.x versions new blackout rules would work on  old/repeated/refired alerts also.<br>I want to provide a procedure where teams can blackout alerts which are already firing. If you can provide any steps which would help in achieving that it would be welcomed","sent":"2020-02-24T21:09:49.351Z","editedAt":"2020-02-24T21:10:09.110Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5e543bec901209179b3939fa","text":"Since we are using alert manager and repeat interval is every hour so expectation is that within the one hour if issue is not fixed they can atleast create the blackout rule to stop further alerts","html":"Since we are using alert manager and repeat interval is every hour so expectation is that within the one hour if issue is not fixed they can atleast create the blackout rule to stop further alerts","sent":"2020-02-24T21:11:08.682Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e543d87fa9f20553b4baf29","text":"I even attempted to delete alerts from alerta and let alertmanager fire alerts again in next interval so alerta treats it as new alert. Still that didn't get suppressed even though blackout rule was in effect. I'm beginning to think blackout feature is broken completely","html":"I even attempted to delete alerts from alerta and let alertmanager fire alerts again in next interval so alerta treats it as new alert. Still that didn&#39;t get suppressed even though blackout rule was in effect. I&#39;m beginning to think blackout feature is broken completely","sent":"2020-02-24T21:17:59.123Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2017/06/21"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2017/06/19"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">20<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jun 2017</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5948ef10c98bc6d563875b6a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=5948ef10c98bc6d563875b6a' title="">Jun 20 2017 09:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I started working on JIRA integration today and have some thought.<br>In an effort to make it more generic would it be ok to implement an new status called escalated (or similar). This would then be set on the alert in combination with some additional attributes. Then it is up to the user to create an output plugin that connects to the escalation system and returns the ticket id or simply send an email to 2nd line.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-594923a6cf9c13503ca579ac burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5949236cd73408ce4f68baad avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/9611667?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/9611667?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>aqmdla2002-2</div>
+      <div class='chat-item__username js-chat-item-from'>@aqmdla2002-2</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=594923a6cf9c13503ca579ac' title="">Jun 20 2017 13:31 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , about Timeout ignored after an expired alert (<span data-link-type="issue" data-issue="357" class="issue">#357</span>), could I provide you more info?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59493fd5c98bc6d5638911fe burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59239ba2d73408ce4f6184a7 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Madan</div>
+      <div class='chat-item__username js-chat-item-from'>@madan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=59493fd5c98bc6d5638911fe' title="">Jun 20 2017 15:31 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="tester22" class="mention">@tester22</span> , that sounds like the right way to go here as we need a status change to trigger plugins.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59494025746f1fd66321b5a8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      My understanding  of alerta might be wrong, lets wait for <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> to comment
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5949406aada49d7f5aa17d2b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=5949406aada49d7f5aa17d2b' title="">Jun 20 2017 15:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="tester22" class="mention">@tester22</span> sorry but i think that adding a status could be very complicated.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-594940f2de4ce6a50ce08fe2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i have a state diagram somewhere of status changes. trying to find it so i can share it with you. from that you’ll be able to see that just adding a new status is not as straight forward as you might think.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5949415817a306667084b1ca burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=5949415817a306667084b1ca' title="">Jun 20 2017 15:38 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok. It was just a thought. Could be ack status together with an attribute but an own status would be cleaner.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-594941dcbf1bfe6770cf9e8e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59239ba2d73408ce4f6184a7 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Madan</div>
+      <div class='chat-item__username js-chat-item-from'>@madan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=594941dcbf1bfe6770cf9e8e' title="">Jun 20 2017 15:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I tried to work on it over the weekend, but looked complicated. Maybe your way of ack with an attribute might work.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-594941fede4ce6a50ce08fff burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=594941fede4ce6a50ce08fff' title="">Jun 20 2017 15:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      sorry. can’t find it. will share if i do.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59494212de4ce6a50ce09001 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      ack with an attribute sounds better.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5949430dbf1bfe6770cfa49b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59239ba2d73408ce4f6184a7 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Madan</div>
+      <div class='chat-item__username js-chat-item-from'>@madan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=5949430dbf1bfe6770cfa49b' title="">Jun 20 2017 15:45 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Can we use alert routing rules to trigger the ticketing plugin when an existing alert&#39;s status changes to ack and an attribute value changes
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5949486fa44c60fa4c4561ef burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=5949486fa44c60fa4c4561ef' title="">Jun 20 2017 16:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Based on just searching throgh the code it doesn&#39;t seem like it is that hard tim implement an status like escelate: <a href="https://github.com/guardian/alerta/search?q=ack&amp;type=Code&amp;utf8=%E2%9C%93" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/guardian/alerta/search?q=ack&amp;type=Code&amp;utf8=%E2%9C%93</a> but there might be something that I am missing.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59494a18746f1fd66321ed45 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=59494a18746f1fd66321ed45' title="">Jun 20 2017 16:15 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/cZQM/image.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/cZQM/thumb/image.png" alt="image.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59494a18bf1bfe6770cfccde burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it is possible to reack an alert so ack with an atribute should be doable .
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59494ac66462d8493c30f6c4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59239ba2d73408ce4f6184a7 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Madan</div>
+      <div class='chat-item__username js-chat-item-from'>@madan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=59494ac66462d8493c30f6c4' title="">Jun 20 2017 16:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Interesting
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59494b56746f1fd66321f4fc burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/20?at=59494b56746f1fd66321f4fc' title="">Jun 20 2017 16:20 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Would it be enough to have status ack, attribute escelate and one field with an comment?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59494b7ccf9c13503ca668bf burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I think that would work for my use case since the rest of the fields in our tickets will be other attributes from the alert.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$5DiGa4y/A/16sTEL7f68kzpyjakBt7IYUVKtF7PG4z8=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2017-06-20T00:00:00.000Z","nextDate":"2017-06-21T23:59:59.999Z","previousDate":"2017-06-19T00:00:00.000Z","messages":[{"id":"5948ef10c98bc6d563875b6a","text":"@satterly I started working on JIRA integration today and have some thought.\nIn an effort to make it more generic would it be ok to implement an new status called escalated (or similar). This would then be set on the alert in combination with some additional attributes. Then it is up to the user to create an output plugin that connects to the escalation system and returns the ticket id or simply send an email to 2nd line.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I started working on JIRA integration today and have some thought.<br>In an effort to make it more generic would it be ok to implement an new status called escalated (or similar). This would then be set on the alert in combination with some additional attributes. Then it is up to the user to create an output plugin that connects to the escalation system and returns the ticket id or simply send an email to 2nd line.","sent":"2017-06-20T09:46:56.127Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":6,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"594923a6cf9c13503ca579ac","text":"Hi @satterly , about Timeout ignored after an expired alert (#357), could I provide you more info?","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , about Timeout ignored after an expired alert (<span data-link-type=\"issue\" data-issue=\"357\" class=\"issue\">#357<\/span>), could I provide you more info?","sent":"2017-06-20T13:31:18.054Z","fromUser":{"id":"5949236cd73408ce4f68baad","username":"aqmdla2002-2","displayName":"aqmdla2002-2","url":"/aqmdla2002-2","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/aqmdla2002-2","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/9611667?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/9611667?v=3&s=128","gv":"3"},"readBy":7,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"number":"357"}],"meta":[],"v":1,"burstStart":true},{"id":"59493fd5c98bc6d5638911fe","text":"@tester22 , that sounds like the right way to go here as we need a status change to trigger plugins.","html":"<span data-link-type=\"mention\" data-screen-name=\"tester22\" class=\"mention\">@tester22<\/span> , that sounds like the right way to go here as we need a status change to trigger plugins.","sent":"2017-06-20T15:31:33.054Z","fromUser":{"id":"59239ba2d73408ce4f6184a7","username":"madan","displayName":"Madan","url":"/madan","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/madan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=128","v":33,"gv":"4"},"readBy":7,"urls":[],"mentions":[{"screenName":"tester22","userId":"5609b0b20fc9f982beb21fdb","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59494025746f1fd66321b5a8","text":"My understanding  of alerta might be wrong, lets wait for @satterly to comment","html":"My understanding  of alerta might be wrong, lets wait for <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> to comment","sent":"2017-06-20T15:32:53.751Z","fromUser":{"id":"59239ba2d73408ce4f6184a7","username":"madan","displayName":"Madan","url":"/madan","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/madan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=128","v":33,"gv":"4"},"readBy":7,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5949406aada49d7f5aa17d2b","text":"@tester22 sorry but i think that adding a status could be very complicated.","html":"<span data-link-type=\"mention\" data-screen-name=\"tester22\" class=\"mention\">@tester22<\/span> sorry but i think that adding a status could be very complicated.","sent":"2017-06-20T15:34:02.197Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[{"screenName":"tester22","userId":"5609b0b20fc9f982beb21fdb","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"594940f2de4ce6a50ce08fe2","text":"i have a state diagram somewhere of status changes. trying to find it so i can share it with you. from that you’ll be able to see that just adding a new status is not as straight forward as you might think.","html":"i have a state diagram somewhere of status changes. trying to find it so i can share it with you. from that you’ll be able to see that just adding a new status is not as straight forward as you might think.","sent":"2017-06-20T15:36:18.645Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5949415817a306667084b1ca","text":"Ok. It was just a thought. Could be ack status together with an attribute but an own status would be cleaner.","html":"Ok. It was just a thought. Could be ack status together with an attribute but an own status would be cleaner.","sent":"2017-06-20T15:38:00.066Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"594941dcbf1bfe6770cf9e8e","text":"I tried to work on it over the weekend, but looked complicated. Maybe your way of ack with an attribute might work.","html":"I tried to work on it over the weekend, but looked complicated. Maybe your way of ack with an attribute might work.","sent":"2017-06-20T15:40:12.726Z","fromUser":{"id":"59239ba2d73408ce4f6184a7","username":"madan","displayName":"Madan","url":"/madan","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/madan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=128","v":33,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"594941fede4ce6a50ce08fff","text":"sorry. can’t find it. will share if i do.","html":"sorry. can’t find it. will share if i do.","sent":"2017-06-20T15:40:46.718Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59494212de4ce6a50ce09001","text":"ack with an attribute sounds better.","html":"ack with an attribute sounds better.","sent":"2017-06-20T15:41:06.897Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5949430dbf1bfe6770cfa49b","text":"Can we use alert routing rules to trigger the ticketing plugin when an existing alert's status changes to ack and an attribute value changes","html":"Can we use alert routing rules to trigger the ticketing plugin when an existing alert&#39;s status changes to ack and an attribute value changes","sent":"2017-06-20T15:45:17.461Z","fromUser":{"id":"59239ba2d73408ce4f6184a7","username":"madan","displayName":"Madan","url":"/madan","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/madan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=128","v":33,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5949486fa44c60fa4c4561ef","text":"Based on just searching throgh the code it doesn't seem like it is that hard tim implement an status like escelate: https://github.com/guardian/alerta/search?q=ack&type=Code&utf8=%E2%9C%93 but there might be something that I am missing.","html":"Based on just searching throgh the code it doesn&#39;t seem like it is that hard tim implement an status like escelate: <a href=\"https://github.com/guardian/alerta/search?q=ack&amp;type=Code&amp;utf8=%E2%9C%93\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/guardian/alerta/search?q=ack&amp;type=Code&amp;utf8=%E2%9C%93<\/a> but there might be something that I am missing.","sent":"2017-06-20T16:08:15.312Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":7,"urls":[{"url":"https://github.com/guardian/alerta/search?q=ack&amp;type=Code&amp;utf8=%E2%9C%93"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59494a18746f1fd66321ed45","text":"[![image.png](https://files.gitter.im/alerta/chat/cZQM/thumb/image.png)](https://files.gitter.im/alerta/chat/cZQM/image.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/cZQM/image.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/cZQM/thumb/image.png\" alt=\"image.png\" rel=\"nofollow\"><\/a>","sent":"2017-06-20T16:15:20.033Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":7,"urls":[{"url":"https://files.gitter.im/alerta/chat/cZQM/thumb/image.png"},{"url":"https://files.gitter.im/alerta/chat/cZQM/image.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59494a18bf1bfe6770cfccde","text":"it is possible to reack an alert so ack with an atribute should be doable .","html":"it is possible to reack an alert so ack with an atribute should be doable .","sent":"2017-06-20T16:15:20.526Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59494ac66462d8493c30f6c4","text":"Interesting","html":"Interesting","sent":"2017-06-20T16:18:14.767Z","fromUser":{"id":"59239ba2d73408ce4f6184a7","username":"madan","displayName":"Madan","url":"/madan","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/madan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=128","v":33,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59494b56746f1fd66321f4fc","text":"Would it be enough to have status ack, attribute escelate and one field with an comment?","html":"Would it be enough to have status ack, attribute escelate and one field with an comment?","sent":"2017-06-20T16:20:38.985Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59494b7ccf9c13503ca668bf","text":"I think that would work for my use case since the rest of the fields in our tickets will be other attributes from the alert.","html":"I think that would work for my use case since the rest of the fields in our tickets will be other attributes from the alert.","sent":"2017-06-20T16:21:16.893Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,988 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/01/17"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/01/15"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">16<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jan 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5e1ff1db000f49789904c66b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cda3bc8d73408ce4fc03205 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23578964?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23578964?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Mochammad Syaifuddin</div>
+      <div class='chat-item__username js-chat-item-from'>@roboticpuppies</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/16?at=5e1ff1db000f49789904c66b' title="">Jan 16 05:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> is it possible to automatically calculate how long an alert takes from Open to Closed?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e205db2c7647778a5d28668 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/16?at=5e205db2c7647778a5d28668' title="">Jan 16 12:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p>Hey <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> ! I&#39;m really glad that I found this chat room. I hope I&#39;m not going to bother you too much with my issue. So there it goes.</p><p>I&#39;ve been working on zabbix-alerta 2-way integration which I did quite a step on zabbix to alerta side. But in alerta to zabbix side I have an issue that we can&#39;t close alarms if they&#39;re not acked before closing. I don&#39;t know if you&#39;ve been able to check it out but this might be due to a 1 line of code. I&#39;m trying to test it if I can install the plugin correctly since I&#39;m not using docker containers this time to make changes and debug.</p><p>I&#39;m just letting you know in the mean time :)</p><p>Issue:<br><a href="https://github.com/alerta/alerta-contrib/issues/307#issue-542347727" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/alerta-contrib/issues/307#issue-542347727</a></p></blockquote>
+<p>Hey again! <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I&#39;ve tested this issue on test environment. The thing is it is working as intended on a local instance. </p><p>In the production env. we&#39;ve several zabbix and alerta instances integrated and all those alerta instances forwarding to single master one. Do you think that using forward plugin have an effect on ack-close actions? When I checked the logs for my local alerta I&#39;m seeing &quot;read timeout&quot; to master one also. </p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e208ca3dd1429262d372e31 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d14be9bd73408ce4fc4a8a1 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/569132?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/569132?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>moix</div>
+      <div class='chat-item__username js-chat-item-from'>@moix</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/16?at=5e208ca3dd1429262d372e31' title="">Jan 16 16:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi! it&#39;s been some time that I couldn&#39;t continue with alertaui setup since I faced some performance issues with the ui loading in browser when a huge amount of alerts<br>Back then I tried to find the root cause of webui performance but I&#39;m not expert in js or vue so can&#39;t find exactly where the issue is<br>I took an screenshot some time ago from chrome dev showing it: time spent in ce @ vue.runtime.esm.js:1901, ~2 sec to sort the environments list and 9-10 for alerts, during that time the browser is frozen so everytime it refresh is not possible to operate
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e208cae71488378988688e7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      here the screenshot: <a href="https://imgur.com/a/3OWdLHi" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://imgur.com/a/3OWdLHi</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e208cb30289c83ba2ab1e2c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      any idea? <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e20dfe44c1f9679ecfb3095 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/16?at=5e20dfe44c1f9679ecfb3095' title="">Jan 16 22:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      getting &quot;Missing authorization API Key or Bearer Token&quot; after our api key expired and I made a new one.  I added &quot;WSGIPassAuthorization&quot; to /etc/uwsgi.ini and restart but still getting error.  Did I add this to right place?  something else?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e20e000ea55e3623e67eb58 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ve confirmed it is using new one.  New one works fine when I test it from alerta cli
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$6hpwp1iURMJnDcvZ9jjB3feZrAiDajL0+RbmHSqjc2M=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-01-16T00:00:00.000Z","nextDate":"2020-01-17T23:59:59.999Z","previousDate":"2020-01-15T00:00:00.000Z","messages":[{"id":"5e1ff1db000f49789904c66b","text":"@satterly is it possible to automatically calculate how long an alert takes from Open to Closed?","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> is it possible to automatically calculate how long an alert takes from Open to Closed?","sent":"2020-01-16T05:17:15.752Z","fromUser":{"id":"5cda3bc8d73408ce4fc03205","username":"roboticpuppies","displayName":"Mochammad Syaifuddin","url":"/roboticpuppies","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/roboticpuppies","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23578964?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23578964?v=4&s=128","v":11,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e205db2c7647778a5d28668","text":"> Hey @satterly ! I'm really glad that I found this chat room. I hope I'm not going to bother you too much with my issue. So there it goes.\n> \n> I've been working on zabbix-alerta 2-way integration which I did quite a step on zabbix to alerta side. But in alerta to zabbix side I have an issue that we can't close alarms if they're not acked before closing. I don't know if you've been able to check it out but this might be due to a 1 line of code. I'm trying to test it if I can install the plugin correctly since I'm not using docker containers this time to make changes and debug.\n> \n> I'm just letting you know in the mean time :)\n> \n> Issue: \n> https://github.com/alerta/alerta-contrib/issues/307#issue-542347727\n\nHey again! @satterly I've tested this issue on test environment. The thing is it is working as intended on a local instance. \n\nIn the production env. we've several zabbix and alerta instances integrated and all those alerta instances forwarding to single master one. Do you think that using forward plugin have an effect on ack-close actions? When I checked the logs for my local alerta I'm seeing \"read timeout\" to master one also. ","html":"<blockquote>\n<p>Hey <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> ! I&#39;m really glad that I found this chat room. I hope I&#39;m not going to bother you too much with my issue. So there it goes.<\/p><p>I&#39;ve been working on zabbix-alerta 2-way integration which I did quite a step on zabbix to alerta side. But in alerta to zabbix side I have an issue that we can&#39;t close alarms if they&#39;re not acked before closing. I don&#39;t know if you&#39;ve been able to check it out but this might be due to a 1 line of code. I&#39;m trying to test it if I can install the plugin correctly since I&#39;m not using docker containers this time to make changes and debug.<\/p><p>I&#39;m just letting you know in the mean time :)<\/p><p>Issue:<br><a href=\"https://github.com/alerta/alerta-contrib/issues/307#issue-542347727\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/alerta-contrib/issues/307#issue-542347727<\/a><\/p><\/blockquote>\n<p>Hey again! <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I&#39;ve tested this issue on test environment. The thing is it is working as intended on a local instance. <\/p><p>In the production env. we&#39;ve several zabbix and alerta instances integrated and all those alerta instances forwarding to single master one. Do you think that using forward plugin have an effect on ack-close actions? When I checked the logs for my local alerta I&#39;m seeing &quot;read timeout&quot; to master one also. <\/p>","sent":"2020-01-16T12:57:22.066Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":15,"urls":[{"url":"https://github.com/alerta/alerta-contrib/issues/307#issue-542347727"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]},{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e208ca3dd1429262d372e31","text":"hi! it's been some time that I couldn't continue with alertaui setup since I faced some performance issues with the ui loading in browser when a huge amount of alerts\nBack then I tried to find the root cause of webui performance but I'm not expert in js or vue so can't find exactly where the issue is\nI took an screenshot some time ago from chrome dev showing it: time spent in ce @ vue.runtime.esm.js:1901, ~2 sec to sort the environments list and 9-10 for alerts, during that time the browser is frozen so everytime it refresh is not possible to operate","html":"hi! it&#39;s been some time that I couldn&#39;t continue with alertaui setup since I faced some performance issues with the ui loading in browser when a huge amount of alerts<br>Back then I tried to find the root cause of webui performance but I&#39;m not expert in js or vue so can&#39;t find exactly where the issue is<br>I took an screenshot some time ago from chrome dev showing it: time spent in ce @ vue.runtime.esm.js:1901, ~2 sec to sort the environments list and 9-10 for alerts, during that time the browser is frozen so everytime it refresh is not possible to operate","sent":"2020-01-16T16:17:39.341Z","fromUser":{"id":"5d14be9bd73408ce4fc4a8a1","username":"moix","displayName":"moix","url":"/moix","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/moix","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/569132?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/569132?v=4&s=128","v":11,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e208cae71488378988688e7","text":"here the screenshot: https://imgur.com/a/3OWdLHi","html":"here the screenshot: <a href=\"https://imgur.com/a/3OWdLHi\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://imgur.com/a/3OWdLHi<\/a>","sent":"2020-01-16T16:17:50.246Z","fromUser":{"id":"5d14be9bd73408ce4fc4a8a1","username":"moix","displayName":"moix","url":"/moix","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/moix","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/569132?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/569132?v=4&s=128","v":11,"gv":"4"},"readBy":14,"urls":[{"url":"https://imgur.com/a/3OWdLHi"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e208cb30289c83ba2ab1e2c","text":"any idea? @satterly ?","html":"any idea? <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> ?","sent":"2020-01-16T16:17:55.288Z","fromUser":{"id":"5d14be9bd73408ce4fc4a8a1","username":"moix","displayName":"moix","url":"/moix","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/moix","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/569132?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/569132?v=4&s=128","v":11,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e20dfe44c1f9679ecfb3095","text":"getting \"Missing authorization API Key or Bearer Token\" after our api key expired and I made a new one.  I added \"WSGIPassAuthorization\" to /etc/uwsgi.ini and restart but still getting error.  Did I add this to right place?  something else?","html":"getting &quot;Missing authorization API Key or Bearer Token&quot; after our api key expired and I made a new one.  I added &quot;WSGIPassAuthorization&quot; to /etc/uwsgi.ini and restart but still getting error.  Did I add this to right place?  something else?","sent":"2020-01-16T22:12:52.622Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e20e000ea55e3623e67eb58","text":"I've confirmed it is using new one.  New one works fine when I test it from alerta cli","html":"I&#39;ve confirmed it is using new one.  New one works fine when I test it from alerta cli","sent":"2020-01-16T22:13:20.087Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/01/17"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/01/15"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">16<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jan 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5e1ff1db000f49789904c66b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cda3bc8d73408ce4fc03205 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23578964?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23578964?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Mochammad Syaifuddin</div>
+      <div class='chat-item__username js-chat-item-from'>@roboticpuppies</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/16?at=5e1ff1db000f49789904c66b' title="">Jan 16 05:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> is it possible to automatically calculate how long an alert takes from Open to Closed?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e205db2c7647778a5d28668 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/16?at=5e205db2c7647778a5d28668' title="">Jan 16 12:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p>Hey <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> ! I&#39;m really glad that I found this chat room. I hope I&#39;m not going to bother you too much with my issue. So there it goes.</p><p>I&#39;ve been working on zabbix-alerta 2-way integration which I did quite a step on zabbix to alerta side. But in alerta to zabbix side I have an issue that we can&#39;t close alarms if they&#39;re not acked before closing. I don&#39;t know if you&#39;ve been able to check it out but this might be due to a 1 line of code. I&#39;m trying to test it if I can install the plugin correctly since I&#39;m not using docker containers this time to make changes and debug.</p><p>I&#39;m just letting you know in the mean time :)</p><p>Issue:<br><a href="https://github.com/alerta/alerta-contrib/issues/307#issue-542347727" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/alerta-contrib/issues/307#issue-542347727</a></p></blockquote>
+<p>Hey again! <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I&#39;ve tested this issue on test environment. The thing is it is working as intended on a local instance. </p><p>In the production env. we&#39;ve several zabbix and alerta instances integrated and all those alerta instances forwarding to single master one. Do you think that using forward plugin have an effect on ack-close actions? When I checked the logs for my local alerta I&#39;m seeing &quot;read timeout&quot; to master one also. </p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e208ca3dd1429262d372e31 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d14be9bd73408ce4fc4a8a1 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/569132?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/569132?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>moix</div>
+      <div class='chat-item__username js-chat-item-from'>@moix</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/16?at=5e208ca3dd1429262d372e31' title="">Jan 16 16:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi! it&#39;s been some time that I couldn&#39;t continue with alertaui setup since I faced some performance issues with the ui loading in browser when a huge amount of alerts<br>Back then I tried to find the root cause of webui performance but I&#39;m not expert in js or vue so can&#39;t find exactly where the issue is<br>I took an screenshot some time ago from chrome dev showing it: time spent in ce @ vue.runtime.esm.js:1901, ~2 sec to sort the environments list and 9-10 for alerts, during that time the browser is frozen so everytime it refresh is not possible to operate
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e208cae71488378988688e7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      here the screenshot: <a href="https://imgur.com/a/3OWdLHi" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://imgur.com/a/3OWdLHi</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e208cb30289c83ba2ab1e2c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      any idea? <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e20dfe44c1f9679ecfb3095 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/16?at=5e20dfe44c1f9679ecfb3095' title="">Jan 16 22:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      getting &quot;Missing authorization API Key or Bearer Token&quot; after our api key expired and I made a new one.  I added &quot;WSGIPassAuthorization&quot; to /etc/uwsgi.ini and restart but still getting error.  Did I add this to right place?  something else?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e20e000ea55e3623e67eb58 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ve confirmed it is using new one.  New one works fine when I test it from alerta cli
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$xAJ6slPCwikggmkBL1NcNUruIygpeOXADvQA7Iv8tV8=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-01-16T00:00:00.000Z","nextDate":"2020-01-17T23:59:59.999Z","previousDate":"2020-01-15T00:00:00.000Z","messages":[{"id":"5e1ff1db000f49789904c66b","text":"@satterly is it possible to automatically calculate how long an alert takes from Open to Closed?","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> is it possible to automatically calculate how long an alert takes from Open to Closed?","sent":"2020-01-16T05:17:15.752Z","fromUser":{"id":"5cda3bc8d73408ce4fc03205","username":"roboticpuppies","displayName":"Mochammad Syaifuddin","url":"/roboticpuppies","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/roboticpuppies","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23578964?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23578964?v=4&s=128","v":11,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e205db2c7647778a5d28668","text":"> Hey @satterly ! I'm really glad that I found this chat room. I hope I'm not going to bother you too much with my issue. So there it goes.\n> \n> I've been working on zabbix-alerta 2-way integration which I did quite a step on zabbix to alerta side. But in alerta to zabbix side I have an issue that we can't close alarms if they're not acked before closing. I don't know if you've been able to check it out but this might be due to a 1 line of code. I'm trying to test it if I can install the plugin correctly since I'm not using docker containers this time to make changes and debug.\n> \n> I'm just letting you know in the mean time :)\n> \n> Issue: \n> https://github.com/alerta/alerta-contrib/issues/307#issue-542347727\n\nHey again! @satterly I've tested this issue on test environment. The thing is it is working as intended on a local instance. \n\nIn the production env. we've several zabbix and alerta instances integrated and all those alerta instances forwarding to single master one. Do you think that using forward plugin have an effect on ack-close actions? When I checked the logs for my local alerta I'm seeing \"read timeout\" to master one also. ","html":"<blockquote>\n<p>Hey <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> ! I&#39;m really glad that I found this chat room. I hope I&#39;m not going to bother you too much with my issue. So there it goes.<\/p><p>I&#39;ve been working on zabbix-alerta 2-way integration which I did quite a step on zabbix to alerta side. But in alerta to zabbix side I have an issue that we can&#39;t close alarms if they&#39;re not acked before closing. I don&#39;t know if you&#39;ve been able to check it out but this might be due to a 1 line of code. I&#39;m trying to test it if I can install the plugin correctly since I&#39;m not using docker containers this time to make changes and debug.<\/p><p>I&#39;m just letting you know in the mean time :)<\/p><p>Issue:<br><a href=\"https://github.com/alerta/alerta-contrib/issues/307#issue-542347727\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/alerta-contrib/issues/307#issue-542347727<\/a><\/p><\/blockquote>\n<p>Hey again! <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I&#39;ve tested this issue on test environment. The thing is it is working as intended on a local instance. <\/p><p>In the production env. we&#39;ve several zabbix and alerta instances integrated and all those alerta instances forwarding to single master one. Do you think that using forward plugin have an effect on ack-close actions? When I checked the logs for my local alerta I&#39;m seeing &quot;read timeout&quot; to master one also. <\/p>","sent":"2020-01-16T12:57:22.066Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":15,"urls":[{"url":"https://github.com/alerta/alerta-contrib/issues/307#issue-542347727"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]},{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e208ca3dd1429262d372e31","text":"hi! it's been some time that I couldn't continue with alertaui setup since I faced some performance issues with the ui loading in browser when a huge amount of alerts\nBack then I tried to find the root cause of webui performance but I'm not expert in js or vue so can't find exactly where the issue is\nI took an screenshot some time ago from chrome dev showing it: time spent in ce @ vue.runtime.esm.js:1901, ~2 sec to sort the environments list and 9-10 for alerts, during that time the browser is frozen so everytime it refresh is not possible to operate","html":"hi! it&#39;s been some time that I couldn&#39;t continue with alertaui setup since I faced some performance issues with the ui loading in browser when a huge amount of alerts<br>Back then I tried to find the root cause of webui performance but I&#39;m not expert in js or vue so can&#39;t find exactly where the issue is<br>I took an screenshot some time ago from chrome dev showing it: time spent in ce @ vue.runtime.esm.js:1901, ~2 sec to sort the environments list and 9-10 for alerts, during that time the browser is frozen so everytime it refresh is not possible to operate","sent":"2020-01-16T16:17:39.341Z","fromUser":{"id":"5d14be9bd73408ce4fc4a8a1","username":"moix","displayName":"moix","url":"/moix","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/moix","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/569132?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/569132?v=4&s=128","v":11,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e208cae71488378988688e7","text":"here the screenshot: https://imgur.com/a/3OWdLHi","html":"here the screenshot: <a href=\"https://imgur.com/a/3OWdLHi\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://imgur.com/a/3OWdLHi<\/a>","sent":"2020-01-16T16:17:50.246Z","fromUser":{"id":"5d14be9bd73408ce4fc4a8a1","username":"moix","displayName":"moix","url":"/moix","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/moix","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/569132?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/569132?v=4&s=128","v":11,"gv":"4"},"readBy":14,"urls":[{"url":"https://imgur.com/a/3OWdLHi"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e208cb30289c83ba2ab1e2c","text":"any idea? @satterly ?","html":"any idea? <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> ?","sent":"2020-01-16T16:17:55.288Z","fromUser":{"id":"5d14be9bd73408ce4fc4a8a1","username":"moix","displayName":"moix","url":"/moix","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/moix","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/569132?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/569132?v=4&s=128","v":11,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e20dfe44c1f9679ecfb3095","text":"getting \"Missing authorization API Key or Bearer Token\" after our api key expired and I made a new one.  I added \"WSGIPassAuthorization\" to /etc/uwsgi.ini and restart but still getting error.  Did I add this to right place?  something else?","html":"getting &quot;Missing authorization API Key or Bearer Token&quot; after our api key expired and I made a new one.  I added &quot;WSGIPassAuthorization&quot; to /etc/uwsgi.ini and restart but still getting error.  Did I add this to right place?  something else?","sent":"2020-01-16T22:12:52.622Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e20e000ea55e3623e67eb58","text":"I've confirmed it is using new one.  New one works fine when I test it from alerta cli","html":"I&#39;ve confirmed it is using new one.  New one works fine when I test it from alerta cli","sent":"2020-01-16T22:13:20.087Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,1806 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/08/02"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/07/31"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">1<sup>st</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5d4325b43d8f1f29e0f3e18d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4325b43d8f1f29e0f3e18d' title="">Aug 01 2019 17:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Is it possible to look up the api key in pre_receive so I can manipulate the alert based on the specific key (description) used?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4326ad75c7976e030d5f17 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4326ad75c7976e030d5f17' title="">Aug 01 2019 17:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      you mean you want to know the actual API key or the user associated with the API key?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4326ec3d8f1f29e0f3ea3e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4326ec3d8f1f29e0f3ea3e' title="">Aug 01 2019 17:52 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      the description of the api key
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4326fb757b7b19c8391103 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      all the API key get associated with my user, i suppose i could make a system account
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43271426e2732446fafce1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but I dont need to see the key at all, just its attributes/owner
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43284426e2732446fb085c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43284426e2732446fb085c' title="">Aug 01 2019 17:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      My usecase is that I can&#39;t manipulate the message before it is sent by Alert Manager because it could cause issue with a different receiver system, so I need to update it upon receipt.  I don&#39;t want to necessary fork the prometheus webhook to add custom logic there
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43286145da450fec8a45c4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      so I was hoping to be able to make a custom plugin that will add the desired service and labels in pre_receive
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d432880d7fc954750dfbf71 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      hmm..  Does pre_receive run when its a webhook?  Is the flow webhook -&gt; pre/post plugins?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d432fed475c0a0febe078e6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d432fed475c0a0febe078e6' title="">Aug 01 2019 18:31 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d433041e939ab2447db142c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      so you only want to modify alerts received by the Prometheus webhook if they come from an Alertmanager configured with a certain API key?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d433948757b7b19c8399ec9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d433948757b7b19c8399ec9' title="">Aug 01 2019 19:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes.  Now that I think about it more, I can probably find some unique attribute in these messages and key off that attribute
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43397aff59f961b4f91df3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but api key was my first &quot;obvious&quot; choice
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d433d3326e2732446fb9ad4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d433d3326e2732446fb9ad4' title="">Aug 01 2019 19:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      If you set the “monitor” label in Prometheus Alertmanager then it will be mapped to “origin” alert attribute in Alerta.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d433d68e939ab2447db7daa burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And “monitor” is usually set here like this … <a href="https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d434017ee80d76164cf039d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d434017ee80d76164cf039d' title="">Aug 01 2019 19:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Cool.  Very helpful.  I have another question now that I am looking through the code that hopefully you can answer.  How/where (in the code) does the webhook and plugins interact?  I see in api.py there is a call to get the plugins, but the prometheus plugin seems to create the alert directly through the model return Alert(...) and not the api.  So how does Alerta know to process which plugins when using prometheus webhook?  It clearly works because it processes my Slack plugin but I can&#39;t figure out how :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43468a75c7976e030e4981 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43468a75c7976e030e4981' title="">Aug 01 2019 20:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Plugins and webhooks are different things. Incoming webhooks are used by Alerta to receive alerts/event/actions from other systems (like Prometheus).
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43469945da450fec8b3155 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43469945da450fec8b3155' title="">Aug 01 2019 20:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Right, I should clarify
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346a8757b7b19c83a05e9 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      So webhook receives a prometheus message and converts it into an alert
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346a93d8f1f29e0f4ca3f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4346a93d8f1f29e0f4ca3f' title="">Aug 01 2019 20:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Plugins are triggered by alerts, actions or status changes and are run before and after an alert is processed.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346b245da450fec8b3229 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      ^ yes.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346cc26e2732446fbdf3e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4346cc26e2732446fbdf3e' title="">Aug 01 2019 20:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      so what is the action from prometheus webhook that triggers the plugin?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346d3ff59f961b4f97c45 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      is that built into the Alert model?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43472a3d8f1f29e0f4cde6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43472a3d8f1f29e0f4cde6' title="">Aug 01 2019 20:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Once an alert is returned by an incoming web hook it is “processed” see <a href="https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43474fff59f961b4f98030 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      and <a href="https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43475d26e2732446fbe3f3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43475d26e2732446fbe3f3' title="">Aug 01 2019 20:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ah
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43477375c7976e030e50f1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      thats what i was missing.  Thanks. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43477a75c7976e030e50f4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      so its using the api
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43477aa96def47519e0fda burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43477aa96def47519e0fda' title="">Aug 01 2019 20:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No problem.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43478f757b7b19c83a0ada burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      the internal “API”. not to be confused with the external “REST API&quot;
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4347bf45da450fec8b3999 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      the internal API is just a collection of reusable components that are shared throughout the application.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4347dc26e2732446fbe6c2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      They are the “business logic” of the Alerta server.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4363ac4635976e0412e3b6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4363ac4635976e0412e3b6' title="">Aug 01 2019 22:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      sorry, i meant api.py
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4363be4635976e0412e3bf burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but i really appreciate your level of responsiveness
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d436710a96def47519ef68f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d436710a96def47519ef68f' title="">Aug 01 2019 22:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      :+1: 
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$VZq8aOw3WpR8NFNaUWX5BGtNnWpwzTi29/fiioXbSw8=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-08-01T00:00:00.000Z","nextDate":"2019-08-02T23:59:59.999Z","previousDate":"2019-07-31T00:00:00.000Z","messages":[{"id":"5d4325b43d8f1f29e0f3e18d","text":"Is it possible to look up the api key in pre_receive so I can manipulate the alert based on the specific key (description) used?","html":"Is it possible to look up the api key in pre_receive so I can manipulate the alert based on the specific key (description) used?","sent":"2019-08-01T17:47:32.910Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4326ad75c7976e030d5f17","text":"you mean you want to know the actual API key or the user associated with the API key?","html":"you mean you want to know the actual API key or the user associated with the API key?","sent":"2019-08-01T17:51:41.808Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4326ec3d8f1f29e0f3ea3e","text":"the description of the api key","html":"the description of the api key","sent":"2019-08-01T17:52:44.169Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4326fb757b7b19c8391103","text":"all the API key get associated with my user, i suppose i could make a system account","html":"all the API key get associated with my user, i suppose i could make a system account","sent":"2019-08-01T17:52:59.509Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43271426e2732446fafce1","text":"but I dont need to see the key at all, just its attributes/owner","html":"but I dont need to see the key at all, just its attributes/owner","sent":"2019-08-01T17:53:24.600Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43284426e2732446fb085c","text":"My usecase is that I can't manipulate the message before it is sent by Alert Manager because it could cause issue with a different receiver system, so I need to update it upon receipt.  I don't want to necessary fork the prometheus webhook to add custom logic there","html":"My usecase is that I can&#39;t manipulate the message before it is sent by Alert Manager because it could cause issue with a different receiver system, so I need to update it upon receipt.  I don&#39;t want to necessary fork the prometheus webhook to add custom logic there","sent":"2019-08-01T17:58:28.403Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43286145da450fec8a45c4","text":"so I was hoping to be able to make a custom plugin that will add the desired service and labels in pre_receive","html":"so I was hoping to be able to make a custom plugin that will add the desired service and labels in pre_receive","sent":"2019-08-01T17:58:57.585Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d432880d7fc954750dfbf71","text":"hmm..  Does pre_receive run when its a webhook?  Is the flow webhook -> pre/post plugins?","html":"hmm..  Does pre_receive run when its a webhook?  Is the flow webhook -&gt; pre/post plugins?","sent":"2019-08-01T17:59:28.143Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d432fed475c0a0febe078e6","text":"yes","html":"yes","sent":"2019-08-01T18:31:09.441Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d433041e939ab2447db142c","text":"so you only want to modify alerts received by the Prometheus webhook if they come from an Alertmanager configured with a certain API key?","html":"so you only want to modify alerts received by the Prometheus webhook if they come from an Alertmanager configured with a certain API key?","sent":"2019-08-01T18:32:33.074Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d433948757b7b19c8399ec9","text":"yes.  Now that I think about it more, I can probably find some unique attribute in these messages and key off that attribute","html":"yes.  Now that I think about it more, I can probably find some unique attribute in these messages and key off that attribute","sent":"2019-08-01T19:11:04.370Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43397aff59f961b4f91df3","text":"but api key was my first \"obvious\" choice","html":"but api key was my first &quot;obvious&quot; choice","sent":"2019-08-01T19:11:54.562Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d433d3326e2732446fb9ad4","text":"If you set the “monitor” label in Prometheus Alertmanager then it will be mapped to “origin” alert attribute in Alerta.","html":"If you set the “monitor” label in Prometheus Alertmanager then it will be mapped to “origin” alert attribute in Alerta.","sent":"2019-08-01T19:27:47.963Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d433d68e939ab2447db7daa","text":"And “monitor” is usually set here like this … https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8","html":"And “monitor” is usually set here like this … <a href=\"https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8<\/a>","sent":"2019-08-01T19:28:40.293Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[{"url":"https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d434017ee80d76164cf039d","text":"Cool.  Very helpful.  I have another question now that I am looking through the code that hopefully you can answer.  How/where (in the code) does the webhook and plugins interact?  I see in api.py there is a call to get the plugins, but the prometheus plugin seems to create the alert directly through the model return Alert(...) and not the api.  So how does Alerta know to process which plugins when using prometheus webhook?  It clearly works because it processes my Slack plugin but I can't figure out how :)","html":"Cool.  Very helpful.  I have another question now that I am looking through the code that hopefully you can answer.  How/where (in the code) does the webhook and plugins interact?  I see in api.py there is a call to get the plugins, but the prometheus plugin seems to create the alert directly through the model return Alert(...) and not the api.  So how does Alerta know to process which plugins when using prometheus webhook?  It clearly works because it processes my Slack plugin but I can&#39;t figure out how :)","sent":"2019-08-01T19:40:07.212Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43468a75c7976e030e4981","text":"Plugins and webhooks are different things. Incoming webhooks are used by Alerta to receive alerts/event/actions from other systems (like Prometheus).","html":"Plugins and webhooks are different things. Incoming webhooks are used by Alerta to receive alerts/event/actions from other systems (like Prometheus).","sent":"2019-08-01T20:07:38.722Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43469945da450fec8b3155","text":"Right, I should clarify","html":"Right, I should clarify","sent":"2019-08-01T20:07:53.621Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4346a8757b7b19c83a05e9","text":"So webhook receives a prometheus message and converts it into an alert","html":"So webhook receives a prometheus message and converts it into an alert","sent":"2019-08-01T20:08:08.823Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4346a93d8f1f29e0f4ca3f","text":"Plugins are triggered by alerts, actions or status changes and are run before and after an alert is processed.","html":"Plugins are triggered by alerts, actions or status changes and are run before and after an alert is processed.","sent":"2019-08-01T20:08:09.423Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4346b245da450fec8b3229","text":"^ yes.","html":"^ yes.","sent":"2019-08-01T20:08:18.323Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4346cc26e2732446fbdf3e","text":"so what is the action from prometheus webhook that triggers the plugin?","html":"so what is the action from prometheus webhook that triggers the plugin?","sent":"2019-08-01T20:08:44.156Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4346d3ff59f961b4f97c45","text":"is that built into the Alert model?","html":"is that built into the Alert model?","sent":"2019-08-01T20:08:51.906Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43472a3d8f1f29e0f4cde6","text":"Once an alert is returned by an incoming web hook it is “processed” see https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46","html":"Once an alert is returned by an incoming web hook it is “processed” see <a href=\"https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46<\/a>","sent":"2019-08-01T20:10:18.809Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[{"url":"https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43474fff59f961b4f98030","text":"and https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31","html":"and <a href=\"https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31<\/a>","sent":"2019-08-01T20:10:55.928Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43475d26e2732446fbe3f3","text":"ah","html":"ah","sent":"2019-08-01T20:11:09.879Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43477375c7976e030e50f1","text":"thats what i was missing.  Thanks. ","html":"thats what i was missing.  Thanks. ","sent":"2019-08-01T20:11:31.843Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43477a75c7976e030e50f4","text":"so its using the api","html":"so its using the api","sent":"2019-08-01T20:11:38.005Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43477aa96def47519e0fda","text":"No problem.","html":"No problem.","sent":"2019-08-01T20:11:38.276Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43478f757b7b19c83a0ada","text":"the internal “API”. not to be confused with the external “REST API\"","html":"the internal “API”. not to be confused with the external “REST API&quot;","sent":"2019-08-01T20:11:59.541Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4347bf45da450fec8b3999","text":"the internal API is just a collection of reusable components that are shared throughout the application.","html":"the internal API is just a collection of reusable components that are shared throughout the application.","sent":"2019-08-01T20:12:47.245Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4347dc26e2732446fbe6c2","text":"They are the “business logic” of the Alerta server.","html":"They are the “business logic” of the Alerta server.","sent":"2019-08-01T20:13:16.345Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4363ac4635976e0412e3b6","text":"sorry, i meant api.py","html":"sorry, i meant api.py","sent":"2019-08-01T22:11:56.649Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4363be4635976e0412e3bf","text":"but i really appreciate your level of responsiveness","html":"but i really appreciate your level of responsiveness","sent":"2019-08-01T22:12:14.327Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d436710a96def47519ef68f","text":":+1: ","html":":+1: ","sent":"2019-08-01T22:26:24.673Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/08/02"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/07/31"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">1<sup>st</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5d4325b43d8f1f29e0f3e18d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4325b43d8f1f29e0f3e18d' title="">Aug 01 2019 17:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Is it possible to look up the api key in pre_receive so I can manipulate the alert based on the specific key (description) used?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4326ad75c7976e030d5f17 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4326ad75c7976e030d5f17' title="">Aug 01 2019 17:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      you mean you want to know the actual API key or the user associated with the API key?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4326ec3d8f1f29e0f3ea3e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4326ec3d8f1f29e0f3ea3e' title="">Aug 01 2019 17:52 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      the description of the api key
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4326fb757b7b19c8391103 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      all the API key get associated with my user, i suppose i could make a system account
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43271426e2732446fafce1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but I dont need to see the key at all, just its attributes/owner
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43284426e2732446fb085c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43284426e2732446fb085c' title="">Aug 01 2019 17:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      My usecase is that I can&#39;t manipulate the message before it is sent by Alert Manager because it could cause issue with a different receiver system, so I need to update it upon receipt.  I don&#39;t want to necessary fork the prometheus webhook to add custom logic there
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43286145da450fec8a45c4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      so I was hoping to be able to make a custom plugin that will add the desired service and labels in pre_receive
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d432880d7fc954750dfbf71 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      hmm..  Does pre_receive run when its a webhook?  Is the flow webhook -&gt; pre/post plugins?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d432fed475c0a0febe078e6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d432fed475c0a0febe078e6' title="">Aug 01 2019 18:31 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d433041e939ab2447db142c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      so you only want to modify alerts received by the Prometheus webhook if they come from an Alertmanager configured with a certain API key?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d433948757b7b19c8399ec9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d433948757b7b19c8399ec9' title="">Aug 01 2019 19:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes.  Now that I think about it more, I can probably find some unique attribute in these messages and key off that attribute
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43397aff59f961b4f91df3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but api key was my first &quot;obvious&quot; choice
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d433d3326e2732446fb9ad4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d433d3326e2732446fb9ad4' title="">Aug 01 2019 19:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      If you set the “monitor” label in Prometheus Alertmanager then it will be mapped to “origin” alert attribute in Alerta.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d433d68e939ab2447db7daa burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And “monitor” is usually set here like this … <a href="https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d434017ee80d76164cf039d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d434017ee80d76164cf039d' title="">Aug 01 2019 19:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Cool.  Very helpful.  I have another question now that I am looking through the code that hopefully you can answer.  How/where (in the code) does the webhook and plugins interact?  I see in api.py there is a call to get the plugins, but the prometheus plugin seems to create the alert directly through the model return Alert(...) and not the api.  So how does Alerta know to process which plugins when using prometheus webhook?  It clearly works because it processes my Slack plugin but I can&#39;t figure out how :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43468a75c7976e030e4981 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43468a75c7976e030e4981' title="">Aug 01 2019 20:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Plugins and webhooks are different things. Incoming webhooks are used by Alerta to receive alerts/event/actions from other systems (like Prometheus).
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43469945da450fec8b3155 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43469945da450fec8b3155' title="">Aug 01 2019 20:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Right, I should clarify
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346a8757b7b19c83a05e9 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      So webhook receives a prometheus message and converts it into an alert
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346a93d8f1f29e0f4ca3f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4346a93d8f1f29e0f4ca3f' title="">Aug 01 2019 20:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Plugins are triggered by alerts, actions or status changes and are run before and after an alert is processed.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346b245da450fec8b3229 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      ^ yes.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346cc26e2732446fbdf3e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4346cc26e2732446fbdf3e' title="">Aug 01 2019 20:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      so what is the action from prometheus webhook that triggers the plugin?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4346d3ff59f961b4f97c45 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      is that built into the Alert model?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43472a3d8f1f29e0f4cde6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43472a3d8f1f29e0f4cde6' title="">Aug 01 2019 20:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Once an alert is returned by an incoming web hook it is “processed” see <a href="https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43474fff59f961b4f98030 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      and <a href="https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43475d26e2732446fbe3f3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43475d26e2732446fbe3f3' title="">Aug 01 2019 20:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ah
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43477375c7976e030e50f1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      thats what i was missing.  Thanks. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43477a75c7976e030e50f4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      so its using the api
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43477aa96def47519e0fda burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d43477aa96def47519e0fda' title="">Aug 01 2019 20:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No problem.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d43478f757b7b19c83a0ada burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      the internal “API”. not to be confused with the external “REST API&quot;
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4347bf45da450fec8b3999 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      the internal API is just a collection of reusable components that are shared throughout the application.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4347dc26e2732446fbe6c2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      They are the “business logic” of the Alerta server.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4363ac4635976e0412e3b6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d4363ac4635976e0412e3b6' title="">Aug 01 2019 22:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      sorry, i meant api.py
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4363be4635976e0412e3bf burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but i really appreciate your level of responsiveness
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d436710a96def47519ef68f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/01?at=5d436710a96def47519ef68f' title="">Aug 01 2019 22:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      :+1: 
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$N+03onJsPdm8Xv+wbRnj3PXR3emQDBslSWaGqwc4F1M=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-08-01T00:00:00.000Z","nextDate":"2019-08-02T23:59:59.999Z","previousDate":"2019-07-31T00:00:00.000Z","messages":[{"id":"5d4325b43d8f1f29e0f3e18d","text":"Is it possible to look up the api key in pre_receive so I can manipulate the alert based on the specific key (description) used?","html":"Is it possible to look up the api key in pre_receive so I can manipulate the alert based on the specific key (description) used?","sent":"2019-08-01T17:47:32.910Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4326ad75c7976e030d5f17","text":"you mean you want to know the actual API key or the user associated with the API key?","html":"you mean you want to know the actual API key or the user associated with the API key?","sent":"2019-08-01T17:51:41.808Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4326ec3d8f1f29e0f3ea3e","text":"the description of the api key","html":"the description of the api key","sent":"2019-08-01T17:52:44.169Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4326fb757b7b19c8391103","text":"all the API key get associated with my user, i suppose i could make a system account","html":"all the API key get associated with my user, i suppose i could make a system account","sent":"2019-08-01T17:52:59.509Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43271426e2732446fafce1","text":"but I dont need to see the key at all, just its attributes/owner","html":"but I dont need to see the key at all, just its attributes/owner","sent":"2019-08-01T17:53:24.600Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43284426e2732446fb085c","text":"My usecase is that I can't manipulate the message before it is sent by Alert Manager because it could cause issue with a different receiver system, so I need to update it upon receipt.  I don't want to necessary fork the prometheus webhook to add custom logic there","html":"My usecase is that I can&#39;t manipulate the message before it is sent by Alert Manager because it could cause issue with a different receiver system, so I need to update it upon receipt.  I don&#39;t want to necessary fork the prometheus webhook to add custom logic there","sent":"2019-08-01T17:58:28.403Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43286145da450fec8a45c4","text":"so I was hoping to be able to make a custom plugin that will add the desired service and labels in pre_receive","html":"so I was hoping to be able to make a custom plugin that will add the desired service and labels in pre_receive","sent":"2019-08-01T17:58:57.585Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d432880d7fc954750dfbf71","text":"hmm..  Does pre_receive run when its a webhook?  Is the flow webhook -> pre/post plugins?","html":"hmm..  Does pre_receive run when its a webhook?  Is the flow webhook -&gt; pre/post plugins?","sent":"2019-08-01T17:59:28.143Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d432fed475c0a0febe078e6","text":"yes","html":"yes","sent":"2019-08-01T18:31:09.441Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d433041e939ab2447db142c","text":"so you only want to modify alerts received by the Prometheus webhook if they come from an Alertmanager configured with a certain API key?","html":"so you only want to modify alerts received by the Prometheus webhook if they come from an Alertmanager configured with a certain API key?","sent":"2019-08-01T18:32:33.074Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d433948757b7b19c8399ec9","text":"yes.  Now that I think about it more, I can probably find some unique attribute in these messages and key off that attribute","html":"yes.  Now that I think about it more, I can probably find some unique attribute in these messages and key off that attribute","sent":"2019-08-01T19:11:04.370Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43397aff59f961b4f91df3","text":"but api key was my first \"obvious\" choice","html":"but api key was my first &quot;obvious&quot; choice","sent":"2019-08-01T19:11:54.562Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d433d3326e2732446fb9ad4","text":"If you set the “monitor” label in Prometheus Alertmanager then it will be mapped to “origin” alert attribute in Alerta.","html":"If you set the “monitor” label in Prometheus Alertmanager then it will be mapped to “origin” alert attribute in Alerta.","sent":"2019-08-01T19:27:47.963Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d433d68e939ab2447db7daa","text":"And “monitor” is usually set here like this … https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8","html":"And “monitor” is usually set here like this … <a href=\"https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8<\/a>","sent":"2019-08-01T19:28:40.293Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[{"url":"https://github.com/alerta/prometheus-config/blob/master/config/prometheus.yml#L8"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d434017ee80d76164cf039d","text":"Cool.  Very helpful.  I have another question now that I am looking through the code that hopefully you can answer.  How/where (in the code) does the webhook and plugins interact?  I see in api.py there is a call to get the plugins, but the prometheus plugin seems to create the alert directly through the model return Alert(...) and not the api.  So how does Alerta know to process which plugins when using prometheus webhook?  It clearly works because it processes my Slack plugin but I can't figure out how :)","html":"Cool.  Very helpful.  I have another question now that I am looking through the code that hopefully you can answer.  How/where (in the code) does the webhook and plugins interact?  I see in api.py there is a call to get the plugins, but the prometheus plugin seems to create the alert directly through the model return Alert(...) and not the api.  So how does Alerta know to process which plugins when using prometheus webhook?  It clearly works because it processes my Slack plugin but I can&#39;t figure out how :)","sent":"2019-08-01T19:40:07.212Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43468a75c7976e030e4981","text":"Plugins and webhooks are different things. Incoming webhooks are used by Alerta to receive alerts/event/actions from other systems (like Prometheus).","html":"Plugins and webhooks are different things. Incoming webhooks are used by Alerta to receive alerts/event/actions from other systems (like Prometheus).","sent":"2019-08-01T20:07:38.722Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43469945da450fec8b3155","text":"Right, I should clarify","html":"Right, I should clarify","sent":"2019-08-01T20:07:53.621Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4346a8757b7b19c83a05e9","text":"So webhook receives a prometheus message and converts it into an alert","html":"So webhook receives a prometheus message and converts it into an alert","sent":"2019-08-01T20:08:08.823Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4346a93d8f1f29e0f4ca3f","text":"Plugins are triggered by alerts, actions or status changes and are run before and after an alert is processed.","html":"Plugins are triggered by alerts, actions or status changes and are run before and after an alert is processed.","sent":"2019-08-01T20:08:09.423Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4346b245da450fec8b3229","text":"^ yes.","html":"^ yes.","sent":"2019-08-01T20:08:18.323Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4346cc26e2732446fbdf3e","text":"so what is the action from prometheus webhook that triggers the plugin?","html":"so what is the action from prometheus webhook that triggers the plugin?","sent":"2019-08-01T20:08:44.156Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4346d3ff59f961b4f97c45","text":"is that built into the Alert model?","html":"is that built into the Alert model?","sent":"2019-08-01T20:08:51.906Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43472a3d8f1f29e0f4cde6","text":"Once an alert is returned by an incoming web hook it is “processed” see https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46","html":"Once an alert is returned by an incoming web hook it is “processed” see <a href=\"https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46<\/a>","sent":"2019-08-01T20:10:18.809Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[{"url":"https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L46"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43474fff59f961b4f98030","text":"and https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31","html":"and <a href=\"https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31<\/a>","sent":"2019-08-01T20:10:55.928Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://github.com/alerta/alerta/blob/master/alerta/utils/api.py#L31"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43475d26e2732446fbe3f3","text":"ah","html":"ah","sent":"2019-08-01T20:11:09.879Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43477375c7976e030e50f1","text":"thats what i was missing.  Thanks. ","html":"thats what i was missing.  Thanks. ","sent":"2019-08-01T20:11:31.843Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43477a75c7976e030e50f4","text":"so its using the api","html":"so its using the api","sent":"2019-08-01T20:11:38.005Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d43477aa96def47519e0fda","text":"No problem.","html":"No problem.","sent":"2019-08-01T20:11:38.276Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d43478f757b7b19c83a0ada","text":"the internal “API”. not to be confused with the external “REST API\"","html":"the internal “API”. not to be confused with the external “REST API&quot;","sent":"2019-08-01T20:11:59.541Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4347bf45da450fec8b3999","text":"the internal API is just a collection of reusable components that are shared throughout the application.","html":"the internal API is just a collection of reusable components that are shared throughout the application.","sent":"2019-08-01T20:12:47.245Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4347dc26e2732446fbe6c2","text":"They are the “business logic” of the Alerta server.","html":"They are the “business logic” of the Alerta server.","sent":"2019-08-01T20:13:16.345Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4363ac4635976e0412e3b6","text":"sorry, i meant api.py","html":"sorry, i meant api.py","sent":"2019-08-01T22:11:56.649Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4363be4635976e0412e3bf","text":"but i really appreciate your level of responsiveness","html":"but i really appreciate your level of responsiveness","sent":"2019-08-01T22:12:14.327Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d436710a96def47519ef68f","text":":+1: ","html":":+1: ","sent":"2019-08-01T22:26:24.673Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

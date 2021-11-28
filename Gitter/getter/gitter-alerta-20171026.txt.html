@@ -1,0 +1,796 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2017/10/27"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2017/10/25"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">26<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Oct 2017</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-59f185ef210ac2692031566f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5947a975d73408ce4f68640d avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>@zoosammen</div>
+      <div class='chat-item__username js-chat-item-from'>@z00dev</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f185ef210ac2692031566f' title="">Oct 26 2017 06:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi. Hoping to aggregate lots of sources with alerta. I set the environment up in a docker-compose so they are on the same network i assume there should be no issues with cors, but the neb i compiled for nagios (3) loads fine but it still says that it cannot connect.</p><p>i loaded the module with debug=1 and key=&lt;generated from webui&gt;</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f186708808bed73d2ca093 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Btw i am doing a rewrite of the we alerta web ui from angular1 to react-redux. At first i was looking at another tool to aggregate my data to, so i wanted to include graphql in order to fetch data async from other sources before presenting it to the view,  but with alerta this does not seem necessary since it has pre and post publish hooks on the api, correct?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f186df0182fa5f4d7c4cd5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      also the main purpose is to monitor services and not hosts, i guess one way is to from .eg icinga/nagios to add extra variables like _ServiceName and then filter on SERVICENAME=foo in the query, which, if i understand correctly, when you are logged in what you subscribe to will be available in your profile
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f18751d6c36fca319a59ba burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5947a975d73408ce4f68640d avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>@zoosammen</div>
+      <div class='chat-item__username js-chat-item-from'>@z00dev</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f18751d6c36fca319a59ba' title="">Oct 26 2017 06:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      and does the webui forward requests from host:port/api or should i set the EP to /api straight away
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f18799614889d475000cf5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Or does anyone else have a better way to group hosts into services, kind of the way icingaweb2 presents its data, where a service represents a multitude of host entitites
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1889c8808bed73d2cab17 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5947a975d73408ce4f68640d avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>@zoosammen</div>
+      <div class='chat-item__username js-chat-item-from'>@z00dev</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f1889c8808bed73d2cab17' title="">Oct 26 2017 07:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Also would be more than happy to know about others setups.</p><p>One thoguht of subscribe was to add pubsub to the FE with apollo, or expose pubsub somehow so other services can subscribe to events easily</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1890432e080696e283b47 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      also, in v5 should we use Bearer and Token instead of Key in the cli config?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f189644ff065ac18792d8b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I think read in v4 docs that pubsub can even be handled by mongo? Would love to have as little dependencies as possible
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f19577210ac2692031ab6b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5947a975d73408ce4f68640d avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>@zoosammen</div>
+      <div class='chat-item__username js-chat-item-from'>@z00dev</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f19577210ac2692031ab6b' title="">Oct 26 2017 07:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      But it would be great if any kind of pubsub were avail so that apart from the UI other applications could subscribe to events, where an event/entity is a service and not a host
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f195980182fa5f4d7c9b73 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Input from you guys on how to best achieve grouping by service and not host alerts is greatly appricated as im about to start now()
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f199dbe44c43700a7cbb1b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f199dbe44c43700a7cbb1b' title="">Oct 26 2017 08:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="z00dev" class="mention">@z00dev</span> &#39;service&#39; in alerta is a list, so you can group hosts by this attribute (we are doing it this way) - you have to pass this info with an alert
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f19a1af7299e8f5333a7dd burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      About pubsub - we are using amqp plugin with rabbitmq, and it work flawlessy
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1a593e44c43700a7cfe04 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5947a975d73408ce4f68640d avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>@zoosammen</div>
+      <div class='chat-item__username js-chat-item-from'>@z00dev</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f1a593e44c43700a7cfe04' title="">Oct 26 2017 09:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="JacksonHill" class="mention">@JacksonHill</span> Thanks. so from icinga/nagios we could just add _Service as an extra variable in the configs/templates. I was a little confused about the api documentation because when i wrote the graphql wrapper around it it said: Services cannot be created, but looking at the json response a service is equal to a host or an alert, and group would be the definition of a service which holds the service entities, correct?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1a5c04ff065ac1879c9ed burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I want to add the ability UI wise to create own groups (services)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1a5d0f7299e8f5333e934 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Will publish to contrib the react webui later on if anyone is interested
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1abd44ff065ac1879e9de burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f1abd44ff065ac1879e9de' title="">Oct 26 2017 09:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Haven&#39;t used nagios with alerta directly, so I&#39;m affraid I cannot help. My comment was from alerta api point of view. So i am pushing an alert with many values inside the service field, and present it on a custom, oembed like  view, grouped by services.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1bfa95a1758ed0f4fc41a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5947a975d73408ce4f68640d avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>@zoosammen</div>
+      <div class='chat-item__username js-chat-item-from'>@z00dev</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f1bfa95a1758ed0f4fc41a' title="">Oct 26 2017 10:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      is v5 the master branch now?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1c01ae44c43700a7d8e0e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f1c01ae44c43700a7d8e0e' title="">Oct 26 2017 10:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1c08f210ac26920329d94 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5947a975d73408ce4f68640d avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>@zoosammen</div>
+      <div class='chat-item__username js-chat-item-from'>@z00dev</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f1c08f210ac26920329d94' title="">Oct 26 2017 11:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Isnt there a EP to retrieve the current user object?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1c1540cef4fed2ebc639e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f1c1540cef4fed2ebc639e' title="">Oct 26 2017 11:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      something like this?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1c16497cedeb0482b1f92 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>$ alerta --debug whoami -u
+<span class="string">send:</span> <span class="string">'GET /userinfo HTTP/1.1\r\nHost: localhost:8080\r\nConnection: keep-alive\r\nAccept-Encoding: gzip, deflate\r\nAccept: */*\r\nUser-Agent: python-requests/2.18.4\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwic3ViIjoiZTU2NDFmZTgtN2M0Yy00YWU3LThjMDUtNDgzZjhhZjE4NDE5IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyIsImV4cCI6MTUxMDIyNTQwOSwibmJmIjoxNTA5MDE1ODA5LCJpYXQiOjE1MDkwMTU4MDksImp0aSI6ImMyNGU5MzBkLThkZTctNDZmMS1hN2I1LTYwMTkwNzA2ZmE2MyIsIm5hbWUiOiJBZG1pbmlzdHJhdG9yIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW5AYWxlcnRhLmlvIiwiZW1haWwiOiJhZG1pbkBhbGVydGEuaW8iLCJwcm92aWRlciI6ImJhc2ljIiwicm9sZXMiOlsiYWRtaW4iXSwic2NvcGUiOiJyZWFkIHdyaXRlIn0.l7YaaclziFwJ2YaRhUqllm3wT137K72mjXxQRFUdE4s\r\n\r\n'</span>
+<span class="string">reply:</span> <span class="string">'HTTP/1.0 200 OK\r\n'</span>
+<span class="string">header:</span> Content-<span class="string">Type:</span> application/json
+<span class="string">header:</span> Access-Control-Allow-<span class="string">Origin:</span> <span class="string">http:</span><span class="comment">//localhost:8000</span>
+<span class="string">header:</span> Content-<span class="string">Length:</span> <span class="number">243</span>
+<span class="string">header:</span> Content-<span class="string">Encoding:</span> gzip
+<span class="string">header:</span> <span class="string">Vary:</span> Accept-Encoding
+<span class="string">header:</span> <span class="string">Server:</span> Werkzeug<span class="regexp">/0.12.2 Python/</span><span class="number">3.6</span>.2
+<span class="string">header:</span> <span class="string">Date:</span> Thu, <span class="number">26</span> Oct <span class="number">2017</span> <span class="number">11</span>:<span class="number">04</span>:<span class="number">22</span> GMT
+<span class="label">
+body:</span> {<span class="string">"aud"</span>:<span class="string">"http://localhost:8080/"</span>,<span class="string">"email"</span>:<span class="string">"admin@alerta.io"</span>,<span class="string">"exp"</span>:<span class="number">1510225409</span>,<span class="string">"iat"</span>:<span class="number">1509015809</span>,<span class="string">"iss"</span>:<span class="string">"http://localhost:8080/"</span>,<span class="string">"jti"</span>:<span class="string">"c24e930d-8de7-46f1-a7b5-60190706fa63"</span>,<span class="string">"name"</span>:<span class="string">"Administrator"</span>,<span class="string">"nbf"</span>:<span class="number">1509015809</span>,<span class="string">"preferred_username"</span>:<span class="string">"admin@alerta.io"</span>,<span class="string">"provider"</span>:<span class="string">"basic"</span>,<span class="string">"roles"</span>:[<span class="string">"admin"</span>],<span class="string">"scope"</span>:<span class="string">"read write"</span>,<span class="string">"sub"</span>:<span class="string">"e5641fe8-7c4c-4ae7-8c05-483f8af18419"</span>}
+
+<span class="string">sub                 :</span> e5641fe8-<span class="number">7</span>c4c-<span class="number">4</span>ae7-<span class="number">8</span>c05-<span class="number">483</span>f8af18419
+<span class="string">aud                 :</span> <span class="string">http:</span><span class="comment">//localhost:8080/</span>
+<span class="string">roles               :</span> admin
+<span class="string">iss                 :</span> <span class="string">http:</span><span class="comment">//localhost:8080/</span>
+<span class="string">preferred_username  :</span> admin<span class="annotation">@alerta</span>.io
+<span class="string">nbf                 :</span> <span class="number">1509015809</span>
+<span class="string">scope               :</span> read write
+<span class="string">jti                 :</span> c24e930d-<span class="number">8</span>de7-<span class="number">46</span>f1-a7b5-<span class="number">60190706</span>fa63
+<span class="string">exp                 :</span> <span class="number">1510225409</span>
+<span class="string">provider            :</span> basic
+<span class="string">iat                 :</span> <span class="number">1509015809</span>
+<span class="string">email               :</span> admin<span class="annotation">@alerta</span>.io
+<span class="string">name                :</span> Administrator</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1d4d04ff065ac187adc10 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5947a975d73408ce4f68640d avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/8131994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>@zoosammen</div>
+      <div class='chat-item__username js-chat-item-from'>@z00dev</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f1d4d04ff065ac187adc10' title="">Oct 26 2017 12:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      a bit premature question, could not find in documentation but i looked up how it was done in satellizer
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f1d4fdf7299e8f5334ebf1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but good idea to use cli to grab the request :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f2370297cedeb0482b2658 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/10/26?at=59f2370297cedeb0482b2658' title="">Oct 26 2017 19:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="z00dev" class="mention">@z00dev</span> the <code>/userinfo</code> endpoint is a standard openID connect endpoint … <a href="https://connect2id.com/products/server/docs/api/userinfo" rel="nofollow noopener noreferrer" target="_blank" class="link">https://connect2id.com/products/server/docs/api/userinfo</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-59f2375197cedeb0482b265b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I just made the info accessible from the <code>alerta</code> command-line tool after i added the ability to “login” for basic auth users so that they didn’t have to add an API key to the config file before being able to run <code>alerta</code> commands.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$4SymlvB2+d8hQhmfvRIBjbvr5/tptcNOYmYWtZAaeGQ=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2017-10-26T00:00:00.000Z","nextDate":"2017-10-27T23:59:59.999Z","previousDate":"2017-10-25T00:00:00.000Z","messages":[{"id":"59f185ef210ac2692031566f","text":"Hi. Hoping to aggregate lots of sources with alerta. I set the environment up in a docker-compose so they are on the same network i assume there should be no issues with cors, but the neb i compiled for nagios (3) loads fine but it still says that it cannot connect.\n\ni loaded the module with debug=1 and key=<generated from webui>","html":"<p>Hi. Hoping to aggregate lots of sources with alerta. I set the environment up in a docker-compose so they are on the same network i assume there should be no issues with cors, but the neb i compiled for nagios (3) loads fine but it still says that it cannot connect.<\/p><p>i loaded the module with debug=1 and key=&lt;generated from webui&gt;<\/p>","sent":"2017-10-26T06:51:27.435Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f186708808bed73d2ca093","text":"Btw i am doing a rewrite of the we alerta web ui from angular1 to react-redux. At first i was looking at another tool to aggregate my data to, so i wanted to include graphql in order to fetch data async from other sources before presenting it to the view,  but with alerta this does not seem necessary since it has pre and post publish hooks on the api, correct?","html":"Btw i am doing a rewrite of the we alerta web ui from angular1 to react-redux. At first i was looking at another tool to aggregate my data to, so i wanted to include graphql in order to fetch data async from other sources before presenting it to the view,  but with alerta this does not seem necessary since it has pre and post publish hooks on the api, correct?","sent":"2017-10-26T06:53:36.926Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f186df0182fa5f4d7c4cd5","text":"also the main purpose is to monitor services and not hosts, i guess one way is to from .eg icinga/nagios to add extra variables like _ServiceName and then filter on SERVICENAME=foo in the query, which, if i understand correctly, when you are logged in what you subscribe to will be available in your profile","html":"also the main purpose is to monitor services and not hosts, i guess one way is to from .eg icinga/nagios to add extra variables like _ServiceName and then filter on SERVICENAME=foo in the query, which, if i understand correctly, when you are logged in what you subscribe to will be available in your profile","sent":"2017-10-26T06:55:27.910Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f18751d6c36fca319a59ba","text":"and does the webui forward requests from host:port/api or should i set the EP to /api straight away","html":"and does the webui forward requests from host:port/api or should i set the EP to /api straight away","sent":"2017-10-26T06:57:21.286Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f18799614889d475000cf5","text":"Or does anyone else have a better way to group hosts into services, kind of the way icingaweb2 presents its data, where a service represents a multitude of host entitites","html":"Or does anyone else have a better way to group hosts into services, kind of the way icingaweb2 presents its data, where a service represents a multitude of host entitites","sent":"2017-10-26T06:58:33.425Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f1889c8808bed73d2cab17","text":"Also would be more than happy to know about others setups.\n\nOne thoguht of subscribe was to add pubsub to the FE with apollo, or expose pubsub somehow so other services can subscribe to events easily","html":"<p>Also would be more than happy to know about others setups.<\/p><p>One thoguht of subscribe was to add pubsub to the FE with apollo, or expose pubsub somehow so other services can subscribe to events easily<\/p>","sent":"2017-10-26T07:02:52.918Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f1890432e080696e283b47","text":"also, in v5 should we use Bearer and Token instead of Key in the cli config?\n","html":"also, in v5 should we use Bearer and Token instead of Key in the cli config?","sent":"2017-10-26T07:04:36.723Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f189644ff065ac18792d8b","text":"I think read in v4 docs that pubsub can even be handled by mongo? Would love to have as little dependencies as possible","html":"I think read in v4 docs that pubsub can even be handled by mongo? Would love to have as little dependencies as possible","sent":"2017-10-26T07:06:12.885Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f19577210ac2692031ab6b","text":"But it would be great if any kind of pubsub were avail so that apart from the UI other applications could subscribe to events, where an event/entity is a service and not a host","html":"But it would be great if any kind of pubsub were avail so that apart from the UI other applications could subscribe to events, where an event/entity is a service and not a host","sent":"2017-10-26T07:57:43.690Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f195980182fa5f4d7c9b73","text":"Input from you guys on how to best achieve grouping by service and not host alerts is greatly appricated as im about to start now()","html":"Input from you guys on how to best achieve grouping by service and not host alerts is greatly appricated as im about to start now()","sent":"2017-10-26T07:58:16.593Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f199dbe44c43700a7cbb1b","text":"@z00dev 'service' in alerta is a list, so you can group hosts by this attribute (we are doing it this way) - you have to pass this info with an alert","html":"<span data-link-type=\"mention\" data-screen-name=\"z00dev\" class=\"mention\">@z00dev<\/span> &#39;service&#39; in alerta is a list, so you can group hosts by this attribute (we are doing it this way) - you have to pass this info with an alert","sent":"2017-10-26T08:16:27.485Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"z00dev","userId":"5947a975d73408ce4f68640d","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f19a1af7299e8f5333a7dd","text":"About pubsub - we are using amqp plugin with rabbitmq, and it work flawlessy","html":"About pubsub - we are using amqp plugin with rabbitmq, and it work flawlessy","sent":"2017-10-26T08:17:30.656Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f1a593e44c43700a7cfe04","text":"@JacksonHill Thanks. so from icinga/nagios we could just add _Service as an extra variable in the configs/templates. I was a little confused about the api documentation because when i wrote the graphql wrapper around it it said: Services cannot be created, but looking at the json response a service is equal to a host or an alert, and group would be the definition of a service which holds the service entities, correct?","html":"<span data-link-type=\"mention\" data-screen-name=\"JacksonHill\" class=\"mention\">@JacksonHill<\/span> Thanks. so from icinga/nagios we could just add _Service as an extra variable in the configs/templates. I was a little confused about the api documentation because when i wrote the graphql wrapper around it it said: Services cannot be created, but looking at the json response a service is equal to a host or an alert, and group would be the definition of a service which holds the service entities, correct?","sent":"2017-10-26T09:06:27.074Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"JacksonHill","userId":"5553151815522ed4b3e05049","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f1a5c04ff065ac1879c9ed","text":"I want to add the ability UI wise to create own groups (services)","html":"I want to add the ability UI wise to create own groups (services)","sent":"2017-10-26T09:07:12.460Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f1a5d0f7299e8f5333e934","text":"Will publish to contrib the react webui later on if anyone is interested","html":"Will publish to contrib the react webui later on if anyone is interested","sent":"2017-10-26T09:07:28.554Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f1abd44ff065ac1879e9de","text":"Haven't used nagios with alerta directly, so I'm affraid I cannot help. My comment was from alerta api point of view. So i am pushing an alert with many values inside the service field, and present it on a custom, oembed like  view, grouped by services.","html":"Haven&#39;t used nagios with alerta directly, so I&#39;m affraid I cannot help. My comment was from alerta api point of view. So i am pushing an alert with many values inside the service field, and present it on a custom, oembed like  view, grouped by services.","sent":"2017-10-26T09:33:08.339Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f1bfa95a1758ed0f4fc41a","text":"is v5 the master branch now?","html":"is v5 the master branch now?","sent":"2017-10-26T10:57:45.831Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f1c01ae44c43700a7d8e0e","text":"Yes. ","html":"Yes. ","sent":"2017-10-26T10:59:38.419Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f1c08f210ac26920329d94","text":"Isnt there a EP to retrieve the current user object?","html":"Isnt there a EP to retrieve the current user object?","sent":"2017-10-26T11:01:35.023Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f1c1540cef4fed2ebc639e","text":"something like this?","html":"something like this?","sent":"2017-10-26T11:04:52.736Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f1c16497cedeb0482b1f92","text":"```\n$ alerta --debug whoami -u\nsend: 'GET /userinfo HTTP/1.1\\r\\nHost: localhost:8080\\r\\nConnection: keep-alive\\r\\nAccept-Encoding: gzip, deflate\\r\\nAccept: */*\\r\\nUser-Agent: python-requests/2.18.4\\r\\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwic3ViIjoiZTU2NDFmZTgtN2M0Yy00YWU3LThjMDUtNDgzZjhhZjE4NDE5IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyIsImV4cCI6MTUxMDIyNTQwOSwibmJmIjoxNTA5MDE1ODA5LCJpYXQiOjE1MDkwMTU4MDksImp0aSI6ImMyNGU5MzBkLThkZTctNDZmMS1hN2I1LTYwMTkwNzA2ZmE2MyIsIm5hbWUiOiJBZG1pbmlzdHJhdG9yIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW5AYWxlcnRhLmlvIiwiZW1haWwiOiJhZG1pbkBhbGVydGEuaW8iLCJwcm92aWRlciI6ImJhc2ljIiwicm9sZXMiOlsiYWRtaW4iXSwic2NvcGUiOiJyZWFkIHdyaXRlIn0.l7YaaclziFwJ2YaRhUqllm3wT137K72mjXxQRFUdE4s\\r\\n\\r\\n'\nreply: 'HTTP/1.0 200 OK\\r\\n'\nheader: Content-Type: application/json\nheader: Access-Control-Allow-Origin: http://localhost:8000\nheader: Content-Length: 243\nheader: Content-Encoding: gzip\nheader: Vary: Accept-Encoding\nheader: Server: Werkzeug/0.12.2 Python/3.6.2\nheader: Date: Thu, 26 Oct 2017 11:04:22 GMT\n\nbody: {\"aud\":\"http://localhost:8080/\",\"email\":\"admin@alerta.io\",\"exp\":1510225409,\"iat\":1509015809,\"iss\":\"http://localhost:8080/\",\"jti\":\"c24e930d-8de7-46f1-a7b5-60190706fa63\",\"name\":\"Administrator\",\"nbf\":1509015809,\"preferred_username\":\"admin@alerta.io\",\"provider\":\"basic\",\"roles\":[\"admin\"],\"scope\":\"read write\",\"sub\":\"e5641fe8-7c4c-4ae7-8c05-483f8af18419\"}\n\nsub                 : e5641fe8-7c4c-4ae7-8c05-483f8af18419\naud                 : http://localhost:8080/\nroles               : admin\niss                 : http://localhost:8080/\npreferred_username  : admin@alerta.io\nnbf                 : 1509015809\nscope               : read write\njti                 : c24e930d-8de7-46f1-a7b5-60190706fa63\nexp                 : 1510225409\nprovider            : basic\niat                 : 1509015809\nemail               : admin@alerta.io\nname                : Administrator\n```","html":"<pre><code>$ alerta --debug whoami -u\n<span class=\"string\">send:<\/span> <span class=\"string\">'GET /userinfo HTTP/1.1\\r\\nHost: localhost:8080\\r\\nConnection: keep-alive\\r\\nAccept-Encoding: gzip, deflate\\r\\nAccept: */*\\r\\nUser-Agent: python-requests/2.18.4\\r\\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvIiwic3ViIjoiZTU2NDFmZTgtN2M0Yy00YWU3LThjMDUtNDgzZjhhZjE4NDE5IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyIsImV4cCI6MTUxMDIyNTQwOSwibmJmIjoxNTA5MDE1ODA5LCJpYXQiOjE1MDkwMTU4MDksImp0aSI6ImMyNGU5MzBkLThkZTctNDZmMS1hN2I1LTYwMTkwNzA2ZmE2MyIsIm5hbWUiOiJBZG1pbmlzdHJhdG9yIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW5AYWxlcnRhLmlvIiwiZW1haWwiOiJhZG1pbkBhbGVydGEuaW8iLCJwcm92aWRlciI6ImJhc2ljIiwicm9sZXMiOlsiYWRtaW4iXSwic2NvcGUiOiJyZWFkIHdyaXRlIn0.l7YaaclziFwJ2YaRhUqllm3wT137K72mjXxQRFUdE4s\\r\\n\\r\\n'<\/span>\n<span class=\"string\">reply:<\/span> <span class=\"string\">'HTTP/1.0 200 OK\\r\\n'<\/span>\n<span class=\"string\">header:<\/span> Content-<span class=\"string\">Type:<\/span> application/json\n<span class=\"string\">header:<\/span> Access-Control-Allow-<span class=\"string\">Origin:<\/span> <span class=\"string\">http:<\/span><span class=\"comment\">//localhost:8000<\/span>\n<span class=\"string\">header:<\/span> Content-<span class=\"string\">Length:<\/span> <span class=\"number\">243<\/span>\n<span class=\"string\">header:<\/span> Content-<span class=\"string\">Encoding:<\/span> gzip\n<span class=\"string\">header:<\/span> <span class=\"string\">Vary:<\/span> Accept-Encoding\n<span class=\"string\">header:<\/span> <span class=\"string\">Server:<\/span> Werkzeug<span class=\"regexp\">/0.12.2 Python/<\/span><span class=\"number\">3.6<\/span>.2\n<span class=\"string\">header:<\/span> <span class=\"string\">Date:<\/span> Thu, <span class=\"number\">26<\/span> Oct <span class=\"number\">2017<\/span> <span class=\"number\">11<\/span>:<span class=\"number\">04<\/span>:<span class=\"number\">22<\/span> GMT\n<span class=\"label\">\nbody:<\/span> {<span class=\"string\">\"aud\"<\/span>:<span class=\"string\">\"http://localhost:8080/\"<\/span>,<span class=\"string\">\"email\"<\/span>:<span class=\"string\">\"admin@alerta.io\"<\/span>,<span class=\"string\">\"exp\"<\/span>:<span class=\"number\">1510225409<\/span>,<span class=\"string\">\"iat\"<\/span>:<span class=\"number\">1509015809<\/span>,<span class=\"string\">\"iss\"<\/span>:<span class=\"string\">\"http://localhost:8080/\"<\/span>,<span class=\"string\">\"jti\"<\/span>:<span class=\"string\">\"c24e930d-8de7-46f1-a7b5-60190706fa63\"<\/span>,<span class=\"string\">\"name\"<\/span>:<span class=\"string\">\"Administrator\"<\/span>,<span class=\"string\">\"nbf\"<\/span>:<span class=\"number\">1509015809<\/span>,<span class=\"string\">\"preferred_username\"<\/span>:<span class=\"string\">\"admin@alerta.io\"<\/span>,<span class=\"string\">\"provider\"<\/span>:<span class=\"string\">\"basic\"<\/span>,<span class=\"string\">\"roles\"<\/span>:[<span class=\"string\">\"admin\"<\/span>],<span class=\"string\">\"scope\"<\/span>:<span class=\"string\">\"read write\"<\/span>,<span class=\"string\">\"sub\"<\/span>:<span class=\"string\">\"e5641fe8-7c4c-4ae7-8c05-483f8af18419\"<\/span>}\n\n<span class=\"string\">sub                 :<\/span> e5641fe8-<span class=\"number\">7<\/span>c4c-<span class=\"number\">4<\/span>ae7-<span class=\"number\">8<\/span>c05-<span class=\"number\">483<\/span>f8af18419\n<span class=\"string\">aud                 :<\/span> <span class=\"string\">http:<\/span><span class=\"comment\">//localhost:8080/<\/span>\n<span class=\"string\">roles               :<\/span> admin\n<span class=\"string\">iss                 :<\/span> <span class=\"string\">http:<\/span><span class=\"comment\">//localhost:8080/<\/span>\n<span class=\"string\">preferred_username  :<\/span> admin<span class=\"annotation\">@alerta<\/span>.io\n<span class=\"string\">nbf                 :<\/span> <span class=\"number\">1509015809<\/span>\n<span class=\"string\">scope               :<\/span> read write\n<span class=\"string\">jti                 :<\/span> c24e930d-<span class=\"number\">8<\/span>de7-<span class=\"number\">46<\/span>f1-a7b5-<span class=\"number\">60190706<\/span>fa63\n<span class=\"string\">exp                 :<\/span> <span class=\"number\">1510225409<\/span>\n<span class=\"string\">provider            :<\/span> basic\n<span class=\"string\">iat                 :<\/span> <span class=\"number\">1509015809<\/span>\n<span class=\"string\">email               :<\/span> admin<span class=\"annotation\">@alerta<\/span>.io\n<span class=\"string\">name                :<\/span> Administrator<\/code><\/pre>","sent":"2017-10-26T11:05:08.302Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f1d4d04ff065ac187adc10","text":"a bit premature question, could not find in documentation but i looked up how it was done in satellizer","html":"a bit premature question, could not find in documentation but i looked up how it was done in satellizer","sent":"2017-10-26T12:28:00.601Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f1d4fdf7299e8f5334ebf1","text":"but good idea to use cli to grab the request :)","html":"but good idea to use cli to grab the request :)","sent":"2017-10-26T12:28:45.765Z","fromUser":{"id":"5947a975d73408ce4f68640d","username":"z00dev","displayName":"@zoosammen","url":"/z00dev","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/z00dev","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/8131994?v=4&s=128","v":19,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"59f2370297cedeb0482b2658","text":"@z00dev the `/userinfo` endpoint is a standard openID connect endpoint … https://connect2id.com/products/server/docs/api/userinfo","html":"<span data-link-type=\"mention\" data-screen-name=\"z00dev\" class=\"mention\">@z00dev<\/span> the <code>/userinfo<\/code> endpoint is a standard openID connect endpoint … <a href=\"https://connect2id.com/products/server/docs/api/userinfo\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://connect2id.com/products/server/docs/api/userinfo<\/a>","sent":"2017-10-26T19:26:58.812Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[{"url":"https://connect2id.com/products/server/docs/api/userinfo"}],"mentions":[{"screenName":"z00dev","userId":"5947a975d73408ce4f68640d","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"59f2375197cedeb0482b265b","text":"I just made the info accessible from the `alerta` command-line tool after i added the ability to “login” for basic auth users so that they didn’t have to add an API key to the config file before being able to run `alerta` commands.","html":"I just made the info accessible from the <code>alerta<\/code> command-line tool after i added the ability to “login” for basic auth users so that they didn’t have to add an API key to the config file before being able to run <code>alerta<\/code> commands.","sent":"2017-10-26T19:28:17.164Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

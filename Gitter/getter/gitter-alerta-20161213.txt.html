@@ -1,0 +1,909 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2016/12/14"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2016/12/12"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">13<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Dec 2016</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-584f4918f666c5a138058285 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=584f4918f666c5a138058285' title="">Dec 13 2016 01:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok, im using a docker-compose with grafana telegaf and influxdb. I will ser which it hás.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-584f4e29aeb49008047edf7c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=584f4e29aeb49008047edf7c' title="">Dec 13 2016 01:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I just updated the grafana image , because I was using grafana:latest, but the newest is grafana:master
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-584f513abe9d43bc63520af3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=584f513abe9d43bc63520af3' title="">Dec 13 2016 01:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok, just worked finaly. Thanks
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-584f54e528d755bf14f9cd96 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=584f54e528d755bf14f9cd96' title="">Dec 13 2016 01:54 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Now again an error. When i make a alert test on grafana(notification) all works fine. But when I used an real alert its give an error : 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-584f54e8b4ffd59e381eaf21 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>POST /api/webhooks/grafana HTTP/1.1<br>Host: 172.17.0.6:80<br>User-Agent: Grafana<br>Content-Length: 321<br>Content-Type: application/json<br>Accept-Encoding: gzip</p><p>{&quot;evalMatches&quot;:[{&quot;value&quot;:33.94752611567212,&quot;metric&quot;:&quot;cpu.mean&quot;,&quot;tags&quot;:null}],&quot;message&quot;:&quot;Error from CPU&quot;,&quot;ruleId&quot;:1,&quot;ruleName&quot;:&quot;Panel Title alert&quot;,&quot;ruleUrl&quot;:&quot;<a href="http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\u0026edit\u0026tab=alert\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting" rel="nofollow" target="_blank" class="link">http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\u0026edit\u0026tab=alert\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting</a>] Panel Title alert&quot;}HTTP/1.1 500 Internal Server Error<br>Server: nginx/1.10.0 (Ubuntu)<br>Date: Tue, 13 Dec 2016 01:52:33 GMT<br>Content-Type: text/html<br>Content-Length: 141<br>Connection: keep-alive</p><p>&lt;html&gt;<br>  &lt;head&gt;<br>    &lt;title&gt;Internal Server Error&lt;/title&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>    &lt;h1&gt;&lt;p&gt;Internal Server Error&lt;/p&gt;&lt;/h1&gt;<br><br>  &lt;/body&gt;<br>&lt;/html&gt;</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-584fccca9750c95b4f8acf8b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=584fccca9750c95b4f8acf8b' title="">Dec 13 2016 10:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="colomboipl" class="mention">@colomboipl</span> After looking at the Grafana webhook code it seems that “imageUrl” and “ruleUrl” are optional fields. I’ve updated the Alerta webhook parser to take account of that so this problem should be fixed now. thanks for reporting it.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58506f9b7a58ca60554bbcac burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=58506f9b7a58ca60554bbcac' title="">Dec 13 2016 22:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok, thank you . I will test after the updated alerta/alerta-web
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850715aaeb490080486256e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=5850715aaeb490080486256e' title="">Dec 13 2016 22:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      The docker container has been updated. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850717428d755bf14002396 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=5850717428d755bf14002396' title="">Dec 13 2016 22:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thank you. Now its working!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-585071abf666c5a1380c03f0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=585071abf666c5a1380c03f0' title="">Dec 13 2016 22:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Cool
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-585071c8aeb490080486281e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=585071c8aeb490080486281e' title="">Dec 13 2016 22:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I think for now its stable, but if the alarm goes normal from grafana side it will not update the alerta alert.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-585071dcaeb490080486291c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I think this beahaviour as pro or cons
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850760796a565f844053924 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=5850760796a565f844053924' title="">Dec 13 2016 22:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Grafana should update Alerta if the alert goes from Alerting -&gt; OK. is this not happening for you?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507615b4ffd59e38254b1a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=58507615b4ffd59e38254b1a' title="">Dec 13 2016 22:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850763928d755bf140043ab burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      The alert state maintain after the alert is ok from grafana side
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507643b4ffd59e38254cb2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Wireshar again! :smile: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850766fdb9cafe91838edf4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=5850766fdb9cafe91838edf4' title="">Dec 13 2016 22:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Is Grafana triggering the web hook? or is Alerta not processing the web hook correctly?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-585078220da034021ba73e31 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=585078220da034021ba73e31' title="">Dec 13 2016 22:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I think is alerta side problem
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850782abb7d528222f533b6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Here is the output
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850782bb4ffd59e38255762 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>POST /api/webhooks/grafana HTTP/1.1<br>Host: 172.17.0.6:80<br>User-Agent: Grafana<br>Content-Length: 258<br>Content-Type: application/json<br>Accept-Encoding: gzip</p><p>{&quot;evalMatches&quot;:[],&quot;message&quot;:&quot;Error from CPU&quot;,&quot;ruleId&quot;:1,&quot;ruleName&quot;:&quot;CPU Performance alert&quot;,&quot;ruleUrl&quot;:&quot;<a href="http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\u0026edit\u0026tab=alert\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK" rel="nofollow" target="_blank" class="link">http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\u0026edit\u0026tab=alert\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK</a>] CPU Performance alert&quot;}HTTP/1.1 201 CREATED<br>Server: nginx/1.10.0 (Ubuntu)<br>Date: Tue, 13 Dec 2016 22:35:23 GMT<br>Content-Type: application/json<br>Content-Length: 35<br>Connection: keep-alive<br>Access-Control-Allow-Origin: <a href="http://explorer.alerta.io" rel="nofollow" target="_blank" class="link">http://explorer.alerta.io</a><br>Vary: Origin</p><p>{<br>  &quot;ids&quot;: [],<br>  &quot;status&quot;: &quot;ok&quot;<br>}</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850788396a565f8440539a2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=5850788396a565f8440539a2' title="">Dec 13 2016 22:38 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Argh! Looks like an OK from Grafana only contains the ruleId of the original alert ie. there are no metrics in the “evalMatches” field.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-585078b0b4ffd59e38255af7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=585078b0b4ffd59e38255af7' title="">Dec 13 2016 22:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes you are right
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5850794628d755bf1400564c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Grafana has updated 7 hours ago i will try this update
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507971d99b1dd03d2c6328 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=58507971d99b1dd03d2c6328' title="">Dec 13 2016 22:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      good idea. can you send me Wireshark examples of both an &quot;Alerting” and an “OK”. preferbly for the same rule.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507b47b4ffd59e38256b03 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-584ca263d73408ce4f3c2b80 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12485946?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>colomboipl</div>
+      <div class='chat-item__username js-chat-item-from'>@colomboipl</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=58507b47b4ffd59e38256b03' title="">Dec 13 2016 22:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      The same problem
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507b4f0da034021ba74fbf burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      This is the alert message:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507b89aeb4900804867313 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>POST /api/webhooks/grafana HTTP/1.1<br>Host: 172.17.0.6:80<br>User-Agent: Grafana<br>Content-Length: 330<br>Content-Type: application/json<br>Accept-Encoding: gzip</p><p>{&quot;evalMatches&quot;:[{&quot;value&quot;:37.689922129804806,&quot;metric&quot;:&quot;Idle Cpu&quot;,&quot;tags&quot;:null}],&quot;message&quot;:&quot;Error from CPU&quot;,&quot;ruleId&quot;:1,&quot;ruleName&quot;:&quot;CPU Performance alert&quot;,&quot;ruleUrl&quot;:&quot;<a href="http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\u0026edit\u0026tab=alert\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting" rel="nofollow" target="_blank" class="link">http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\u0026edit\u0026tab=alert\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting</a>] CPU Performance alert&quot;}HTTP/1.1 201 CREATED</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507b9cbb7d528222f547e7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      This is the OK message from Grafana
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507bbc7a58ca60554c0d83 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>POST /api/webhooks/grafana HTTP/1.1<br>Host: 172.17.0.6:80<br>User-Agent: Grafana<br>Content-Length: 258<br>Content-Type: application/json<br>Accept-Encoding: gzip</p><p>{&quot;evalMatches&quot;:[],&quot;message&quot;:&quot;Error from CPU&quot;,&quot;ruleId&quot;:1,&quot;ruleName&quot;:&quot;CPU Performance alert&quot;,&quot;ruleUrl&quot;:&quot;<a href="http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\u0026edit\u0026tab=alert\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK" rel="nofollow" target="_blank" class="link">http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\u0026edit\u0026tab=alert\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK</a>] CPU Performance alert&quot;}HTTP/1.1 201 CREATED<br>Server: nginx/1.10.0 (Ubuntu)<br>Date: Tue, 13 Dec 2016 22:50:22 GMT<br>Content-Type: application/json<br>Content-Length: 35<br>Connection: keep-alive<br>Access-Control-Allow-Origin: <a href="http://explorer.alerta.io" rel="nofollow" target="_blank" class="link">http://explorer.alerta.io</a><br>Vary: Origin</p><p>{<br>  &quot;ids&quot;: [],<br>  &quot;status&quot;: &quot;ok&quot;<br>}</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507bdfb4ffd59e38256ec2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Do you want the content from the alerta side of the alert message ? I just put the message from grafana to alerta.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58507d05d99b1dd03d2c6380 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/12/13?at=58507d05d99b1dd03d2c6380' title="">Dec 13 2016 22:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No. that’s fine. thanks.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$t/nRBYyhil+8B/wrgJCDDEJYAT0dz6SySwY53odAAf8=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2016-12-13T00:00:00.000Z","nextDate":"2016-12-14T23:59:59.999Z","previousDate":"2016-12-12T00:00:00.000Z","messages":[{"id":"584f4918f666c5a138058285","text":"Ok, im using a docker-compose with grafana telegaf and influxdb. I will ser which it hás.","html":"Ok, im using a docker-compose with grafana telegaf and influxdb. I will ser which it hás.","sent":"2016-12-13T01:04:24.957Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"584f4e29aeb49008047edf7c","text":"I just updated the grafana image , because I was using grafana:latest, but the newest is grafana:master","html":"I just updated the grafana image , because I was using grafana:latest, but the newest is grafana:master","sent":"2016-12-13T01:26:01.679Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"584f513abe9d43bc63520af3","text":"Ok, just worked finaly. Thanks","html":"Ok, just worked finaly. Thanks","sent":"2016-12-13T01:39:06.414Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"584f54e528d755bf14f9cd96","text":"Now again an error. When i make a alert test on grafana(notification) all works fine. But when I used an real alert its give an error : ","html":"Now again an error. When i make a alert test on grafana(notification) all works fine. But when I used an real alert its give an error : ","sent":"2016-12-13T01:54:45.591Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"584f54e8b4ffd59e381eaf21","text":"POST /api/webhooks/grafana HTTP/1.1\nHost: 172.17.0.6:80\nUser-Agent: Grafana\nContent-Length: 321\nContent-Type: application/json\nAccept-Encoding: gzip\n\n{\"evalMatches\":[{\"value\":33.94752611567212,\"metric\":\"cpu.mean\",\"tags\":null}],\"message\":\"Error from CPU\",\"ruleId\":1,\"ruleName\":\"Panel Title alert\",\"ruleUrl\":\"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1\",\"state\":\"alerting\",\"title\":\"[Alerting] Panel Title alert\"}HTTP/1.1 500 Internal Server Error\nServer: nginx/1.10.0 (Ubuntu)\nDate: Tue, 13 Dec 2016 01:52:33 GMT\nContent-Type: text/html\nContent-Length: 141\nConnection: keep-alive\n\n<html>\n  <head>\n    <title>Internal Server Error<\/title>\n  <\/head>\n  <body>\n    <h1><p>Internal Server Error<\/p><\/h1>\n    \n  <\/body>\n<\/html>","html":"<p>POST /api/webhooks/grafana HTTP/1.1<br>Host: 172.17.0.6:80<br>User-Agent: Grafana<br>Content-Length: 321<br>Content-Type: application/json<br>Accept-Encoding: gzip<\/p><p>{&quot;evalMatches&quot;:[{&quot;value&quot;:33.94752611567212,&quot;metric&quot;:&quot;cpu.mean&quot;,&quot;tags&quot;:null}],&quot;message&quot;:&quot;Error from CPU&quot;,&quot;ruleId&quot;:1,&quot;ruleName&quot;:&quot;Panel Title alert&quot;,&quot;ruleUrl&quot;:&quot;<a href=\"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting<\/a>] Panel Title alert&quot;}HTTP/1.1 500 Internal Server Error<br>Server: nginx/1.10.0 (Ubuntu)<br>Date: Tue, 13 Dec 2016 01:52:33 GMT<br>Content-Type: text/html<br>Content-Length: 141<br>Connection: keep-alive<\/p><p>&lt;html&gt;<br>  &lt;head&gt;<br>    &lt;title&gt;Internal Server Error&lt;/title&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>    &lt;h1&gt;&lt;p&gt;Internal Server Error&lt;/p&gt;&lt;/h1&gt;<br><br>  &lt;/body&gt;<br>&lt;/html&gt;<\/p>","sent":"2016-12-13T01:54:48.030Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":6,"urls":[{"url":"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"584fccca9750c95b4f8acf8b","text":"@colomboipl After looking at the Grafana webhook code it seems that “imageUrl” and “ruleUrl” are optional fields. I’ve updated the Alerta webhook parser to take account of that so this problem should be fixed now. thanks for reporting it.","html":"<span data-link-type=\"mention\" data-screen-name=\"colomboipl\" class=\"mention\">@colomboipl<\/span> After looking at the Grafana webhook code it seems that “imageUrl” and “ruleUrl” are optional fields. I’ve updated the Alerta webhook parser to take account of that so this problem should be fixed now. thanks for reporting it.","sent":"2016-12-13T10:26:18.136Z","editedAt":"2016-12-13T10:26:49.485Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[{"screenName":"colomboipl","userId":"584ca263d73408ce4f3c2b80","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"58506f9b7a58ca60554bbcac","text":"Ok, thank you . I will test after the updated alerta/alerta-web","html":"Ok, thank you . I will test after the updated alerta/alerta-web","sent":"2016-12-13T22:00:59.320Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5850715aaeb490080486256e","text":"The docker container has been updated. ","html":"The docker container has been updated. ","sent":"2016-12-13T22:08:26.761Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5850717428d755bf14002396","text":"Thank you. Now its working!","html":"Thank you. Now its working!","sent":"2016-12-13T22:08:52.000Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"585071abf666c5a1380c03f0","text":"Cool","html":"Cool","sent":"2016-12-13T22:09:47.666Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"585071c8aeb490080486281e","text":"I think for now its stable, but if the alarm goes normal from grafana side it will not update the alerta alert.","html":"I think for now its stable, but if the alarm goes normal from grafana side it will not update the alerta alert.","sent":"2016-12-13T22:10:16.327Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"585071dcaeb490080486291c","text":"I think this beahaviour as pro or cons","html":"I think this beahaviour as pro or cons","sent":"2016-12-13T22:10:36.781Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5850760796a565f844053924","text":"Grafana should update Alerta if the alert goes from Alerting -> OK. is this not happening for you?","html":"Grafana should update Alerta if the alert goes from Alerting -&gt; OK. is this not happening for you?","sent":"2016-12-13T22:28:23.834Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58507615b4ffd59e38254b1a","text":"No.","html":"No.","sent":"2016-12-13T22:28:37.509Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5850763928d755bf140043ab","text":"The alert state maintain after the alert is ok from grafana side","html":"The alert state maintain after the alert is ok from grafana side","sent":"2016-12-13T22:29:13.557Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58507643b4ffd59e38254cb2","text":"Wireshar again! :smile: ","html":"Wireshar again! :smile: ","sent":"2016-12-13T22:29:23.577Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5850766fdb9cafe91838edf4","text":"Is Grafana triggering the web hook? or is Alerta not processing the web hook correctly?","html":"Is Grafana triggering the web hook? or is Alerta not processing the web hook correctly?","sent":"2016-12-13T22:30:07.856Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"585078220da034021ba73e31","text":"I think is alerta side problem","html":"I think is alerta side problem","sent":"2016-12-13T22:37:22.934Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5850782abb7d528222f533b6","text":"Here is the output","html":"Here is the output","sent":"2016-12-13T22:37:30.208Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5850782bb4ffd59e38255762","text":"POST /api/webhooks/grafana HTTP/1.1\nHost: 172.17.0.6:80\nUser-Agent: Grafana\nContent-Length: 258\nContent-Type: application/json\nAccept-Encoding: gzip\n\n{\"evalMatches\":[],\"message\":\"Error from CPU\",\"ruleId\":1,\"ruleName\":\"CPU Performance alert\",\"ruleUrl\":\"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1\",\"state\":\"ok\",\"title\":\"[OK] CPU Performance alert\"}HTTP/1.1 201 CREATED\nServer: nginx/1.10.0 (Ubuntu)\nDate: Tue, 13 Dec 2016 22:35:23 GMT\nContent-Type: application/json\nContent-Length: 35\nConnection: keep-alive\nAccess-Control-Allow-Origin: http://explorer.alerta.io\nVary: Origin\n\n{\n  \"ids\": [], \n  \"status\": \"ok\"\n}","html":"<p>POST /api/webhooks/grafana HTTP/1.1<br>Host: 172.17.0.6:80<br>User-Agent: Grafana<br>Content-Length: 258<br>Content-Type: application/json<br>Accept-Encoding: gzip<\/p><p>{&quot;evalMatches&quot;:[],&quot;message&quot;:&quot;Error from CPU&quot;,&quot;ruleId&quot;:1,&quot;ruleName&quot;:&quot;CPU Performance alert&quot;,&quot;ruleUrl&quot;:&quot;<a href=\"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK<\/a>] CPU Performance alert&quot;}HTTP/1.1 201 CREATED<br>Server: nginx/1.10.0 (Ubuntu)<br>Date: Tue, 13 Dec 2016 22:35:23 GMT<br>Content-Type: application/json<br>Content-Length: 35<br>Connection: keep-alive<br>Access-Control-Allow-Origin: <a href=\"http://explorer.alerta.io\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://explorer.alerta.io<\/a><br>Vary: Origin<\/p><p>{<br>  &quot;ids&quot;: [],<br>  &quot;status&quot;: &quot;ok&quot;<br>}<\/p>","sent":"2016-12-13T22:37:31.156Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[{"url":"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK"},{"url":"http://explorer.alerta.io"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5850788396a565f8440539a2","text":"Argh! Looks like an OK from Grafana only contains the ruleId of the original alert ie. there are no metrics in the “evalMatches” field.","html":"Argh! Looks like an OK from Grafana only contains the ruleId of the original alert ie. there are no metrics in the “evalMatches” field.","sent":"2016-12-13T22:38:59.467Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"585078b0b4ffd59e38255af7","text":"yes you are right","html":"yes you are right","sent":"2016-12-13T22:39:44.264Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5850794628d755bf1400564c","text":"Grafana has updated 7 hours ago i will try this update","html":"Grafana has updated 7 hours ago i will try this update","sent":"2016-12-13T22:42:14.927Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58507971d99b1dd03d2c6328","text":"good idea. can you send me Wireshark examples of both an \"Alerting” and an “OK”. preferbly for the same rule.","html":"good idea. can you send me Wireshark examples of both an &quot;Alerting” and an “OK”. preferbly for the same rule.","sent":"2016-12-13T22:42:57.773Z","editedAt":"2016-12-13T22:43:27.684Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"58507b47b4ffd59e38256b03","text":"The same problem","html":"The same problem","sent":"2016-12-13T22:50:47.011Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58507b4f0da034021ba74fbf","text":"This is the alert message:","html":"This is the alert message:","sent":"2016-12-13T22:50:55.775Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58507b89aeb4900804867313","text":"POST /api/webhooks/grafana HTTP/1.1\nHost: 172.17.0.6:80\nUser-Agent: Grafana\nContent-Length: 330\nContent-Type: application/json\nAccept-Encoding: gzip\n\n{\"evalMatches\":[{\"value\":37.689922129804806,\"metric\":\"Idle Cpu\",\"tags\":null}],\"message\":\"Error from CPU\",\"ruleId\":1,\"ruleName\":\"CPU Performance alert\",\"ruleUrl\":\"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1\",\"state\":\"alerting\",\"title\":\"[Alerting] CPU Performance alert\"}HTTP/1.1 201 CREATED","html":"<p>POST /api/webhooks/grafana HTTP/1.1<br>Host: 172.17.0.6:80<br>User-Agent: Grafana<br>Content-Length: 330<br>Content-Type: application/json<br>Accept-Encoding: gzip<\/p><p>{&quot;evalMatches&quot;:[{&quot;value&quot;:37.689922129804806,&quot;metric&quot;:&quot;Idle Cpu&quot;,&quot;tags&quot;:null}],&quot;message&quot;:&quot;Error from CPU&quot;,&quot;ruleId&quot;:1,&quot;ruleName&quot;:&quot;CPU Performance alert&quot;,&quot;ruleUrl&quot;:&quot;<a href=\"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting<\/a>] CPU Performance alert&quot;}HTTP/1.1 201 CREATED<\/p>","sent":"2016-12-13T22:51:53.874Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[{"url":"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;alerting&quot;,&quot;title&quot;:&quot;[Alerting"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58507b9cbb7d528222f547e7","text":"This is the OK message from Grafana","html":"This is the OK message from Grafana","sent":"2016-12-13T22:52:12.021Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58507bbc7a58ca60554c0d83","text":"POST /api/webhooks/grafana HTTP/1.1\nHost: 172.17.0.6:80\nUser-Agent: Grafana\nContent-Length: 258\nContent-Type: application/json\nAccept-Encoding: gzip\n\n{\"evalMatches\":[],\"message\":\"Error from CPU\",\"ruleId\":1,\"ruleName\":\"CPU Performance alert\",\"ruleUrl\":\"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1\",\"state\":\"ok\",\"title\":\"[OK] CPU Performance alert\"}HTTP/1.1 201 CREATED\nServer: nginx/1.10.0 (Ubuntu)\nDate: Tue, 13 Dec 2016 22:50:22 GMT\nContent-Type: application/json\nContent-Length: 35\nConnection: keep-alive\nAccess-Control-Allow-Origin: http://explorer.alerta.io\nVary: Origin\n\n{\n  \"ids\": [], \n  \"status\": \"ok\"\n}\n","html":"<p>POST /api/webhooks/grafana HTTP/1.1<br>Host: 172.17.0.6:80<br>User-Agent: Grafana<br>Content-Length: 258<br>Content-Type: application/json<br>Accept-Encoding: gzip<\/p><p>{&quot;evalMatches&quot;:[],&quot;message&quot;:&quot;Error from CPU&quot;,&quot;ruleId&quot;:1,&quot;ruleName&quot;:&quot;CPU Performance alert&quot;,&quot;ruleUrl&quot;:&quot;<a href=\"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK<\/a>] CPU Performance alert&quot;}HTTP/1.1 201 CREATED<br>Server: nginx/1.10.0 (Ubuntu)<br>Date: Tue, 13 Dec 2016 22:50:22 GMT<br>Content-Type: application/json<br>Content-Length: 35<br>Connection: keep-alive<br>Access-Control-Allow-Origin: <a href=\"http://explorer.alerta.io\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://explorer.alerta.io<\/a><br>Vary: Origin<\/p><p>{<br>  &quot;ids&quot;: [],<br>  &quot;status&quot;: &quot;ok&quot;<br>}<\/p>","sent":"2016-12-13T22:52:44.972Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[{"url":"http://localhost:3000/dashboard/db/new-dashboard-copy?fullscreen\\u0026edit\\u0026tab=alert\\u0026panelId=1&quot;,&quot;state&quot;:&quot;ok&quot;,&quot;title&quot;:&quot;[OK"},{"url":"http://explorer.alerta.io"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58507bdfb4ffd59e38256ec2","text":"Do you want the content from the alerta side of the alert message ? I just put the message from grafana to alerta.","html":"Do you want the content from the alerta side of the alert message ? I just put the message from grafana to alerta.","sent":"2016-12-13T22:53:19.041Z","fromUser":{"id":"584ca263d73408ce4f3c2b80","username":"colomboipl","displayName":"colomboipl","url":"/colomboipl","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/colomboipl","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12485946?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58507d05d99b1dd03d2c6380","text":"No. that’s fine. thanks.","html":"No. that’s fine. thanks.","sent":"2016-12-13T22:58:13.222Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

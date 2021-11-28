@@ -1,0 +1,841 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2016/11/09"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2016/11/07"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">8<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Nov 2016</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5821be3578ec59ab054943ca burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821be3578ec59ab054943ca' title="">Nov 08 2016 11:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hello, is there some good way to filter alerts, from third party services, like if i get alert x, but i want to filter next time it out (any other way besides reject)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821c8bf6cb72076304e8a49 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821c8bf6cb72076304e8a49' title="">Nov 08 2016 12:44 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="Atoms" class="mention">@Atoms</span> you can create &quot;blackout periods” that suppresses alerts for defined periods based on the resource, event, service, group or a tag. see <a href="http://alerta.readthedocs.io/en/latest/server.html?highlight=blackout#blackout-periods" rel="nofollow" target="_blank" class="link">http://alerta.readthedocs.io/en/latest/server.html?highlight=blackout#blackout-periods</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cc5545c9e3eb43114b2c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821cc5545c9e3eb43114b2c' title="">Nov 08 2016 13:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      but it&#39;s for a period, but let&#39;s say i want period to be infinity ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cc6b45c9e3eb43114c3b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821cc6b45c9e3eb43114c3b' title="">Nov 08 2016 13:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      just set the year to 2099.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cc7cc2f2cf7275e53fe6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      or use a plugin.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cd3d78ec59ab0549983b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821cd3d78ec59ab0549983b' title="">Nov 08 2016 13:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok, next question is there some way to add button ignore to alert in alerta-web to get this done ? :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cd5545c9e3eb431153be burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i&#39;m not a developer so it would be hard for me :smile: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cd5edf5ae966452e36d1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821cd5edf5ae966452e36d1' title="">Nov 08 2016 13:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Interesting suggestion.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cdcbe462097a30227e36 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      It would be possible to add it. However, how would the UI work? Do the blackout values get pre-populated and then you can deselect / delete those that aren’t appropriate and hit the submit button?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821ce76c2f2cf7275e54a7f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821ce76c2f2cf7275e54a7f' title="">Nov 08 2016 13:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      when you receive alert and you want it to blackout for logged in users there is button ignore, it gets values from that alert, and asks for duration, and then submits and suppresses alerts which applies with that blackout
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821ce9f31c5cbef43ce5cfd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821ce9f31c5cbef43ce5cfd' title="">Nov 08 2016 13:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok. sounds reasonable. I’ll add to the backlog.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cea9e462097a30228386 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821cea9e462097a30228386' title="">Nov 08 2016 13:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      great
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cf2678ec59ab0549a559 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      also you said just set year to 2099, but blackout asks for duration :) not the date or it&#39;s just not documented how to add some time not duration ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cf8d31c5cbef43ce6172 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821cf8d31c5cbef43ce6172' title="">Nov 08 2016 13:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      the command-line tool asks for start and duration. the web ui asks for start and end
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cf926cb72076304eb537 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821cf926cb72076304eb537' title="">Nov 08 2016 13:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      wow if i just execute &quot;alerta blackout&quot; it adds all values as * it&#39;s wrong i think :D cause i executed it by mistake
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821cfeb6cb72076304eb957 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821cfeb6cb72076304eb957' title="">Nov 08 2016 13:15 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      &quot;with great power comes great responsibility&quot;
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d08731c5cbef43ce6911 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821d08731c5cbef43ce6911' title="">Nov 08 2016 13:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p>the command-line tool asks for start and duration. the web ui asks for start and end</p></blockquote>
+<p>i cannot find in webui such options :/</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d1eae462097a30229d91 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821d1eae462097a30229d91' title="">Nov 08 2016 13:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      oh, just opened endpoint #/blackouts/ and it is there, but no link visible to this page :D
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d28d78ec59ab0549b8dd burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      also in that blackout UI i can only add blackout adding only one type of value (Service, Resource, Event, Group, Tags)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d29378ec59ab0549b903 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      not multiple
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d32f6cb72076304ecdb3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821d32f6cb72076304ecdb3' title="">Nov 08 2016 13:29 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      you may need to log out and log back in to see the blackouts menu option in the “Config” drop down if you’ve only just made yourself an admin.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d37fe097df7575861ad9 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      and yes, you can’t do multiple combinations. that would be insanely complicated, impact performace, be difficult to debug and i’m not convinced it would be very useful.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d3ad78ec59ab0549beca burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it’s extremely flexible as it is (especially with support for tags).
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d52be097df7575862339 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5821a455d73408ce4f3475e7 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/9615?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Atoms</div>
+      <div class='chat-item__username js-chat-item-from'>@Atoms</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821d52be097df7575862339' title="">Nov 08 2016 13:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok, seems i&#39;m missing something, how can i set myself as admin ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d53adf5ae966452e6b16 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      in docs i see only &quot;Managing users ....&quot;
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5821d7c5e462097a3022be38 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/11/08?at=5821d7c5e462097a3022be38' title="">Nov 08 2016 13:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Alerta server setting ADMIN_USERS
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$HIdoHwhmoGsm09viAqQLHzYfWU1q0PW3znnPwn7XT2c=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2016-11-08T00:00:00.000Z","nextDate":"2016-11-09T23:59:59.999Z","previousDate":"2016-11-07T00:00:00.000Z","messages":[{"id":"5821be3578ec59ab054943ca","text":"Hello, is there some good way to filter alerts, from third party services, like if i get alert x, but i want to filter next time it out (any other way besides reject)","html":"Hello, is there some good way to filter alerts, from third party services, like if i get alert x, but i want to filter next time it out (any other way besides reject)","sent":"2016-11-08T11:59:49.053Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821c8bf6cb72076304e8a49","text":"@Atoms you can create \"blackout periods” that suppresses alerts for defined periods based on the resource, event, service, group or a tag. see http://alerta.readthedocs.io/en/latest/server.html?highlight=blackout#blackout-periods","html":"<span data-link-type=\"mention\" data-screen-name=\"Atoms\" class=\"mention\">@Atoms<\/span> you can create &quot;blackout periods” that suppresses alerts for defined periods based on the resource, event, service, group or a tag. see <a href=\"http://alerta.readthedocs.io/en/latest/server.html?highlight=blackout#blackout-periods\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://alerta.readthedocs.io/en/latest/server.html?highlight=blackout#blackout-periods<\/a>","sent":"2016-11-08T12:44:47.075Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[{"url":"http://alerta.readthedocs.io/en/latest/server.html?highlight=blackout#blackout-periods"}],"mentions":[{"screenName":"Atoms","userId":"5821a455d73408ce4f3475e7","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821cc5545c9e3eb43114b2c","text":"but it's for a period, but let's say i want period to be infinity ?","html":"but it&#39;s for a period, but let&#39;s say i want period to be infinity ?","sent":"2016-11-08T13:00:05.050Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821cc6b45c9e3eb43114c3b","text":"just set the year to 2099.","html":"just set the year to 2099.","sent":"2016-11-08T13:00:27.468Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821cc7cc2f2cf7275e53fe6","text":"or use a plugin.","html":"or use a plugin.","sent":"2016-11-08T13:00:44.028Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5821cd3d78ec59ab0549983b","text":"ok, next question is there some way to add button ignore to alert in alerta-web to get this done ? :)","html":"ok, next question is there some way to add button ignore to alert in alerta-web to get this done ? :)","sent":"2016-11-08T13:03:57.552Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821cd5545c9e3eb431153be","text":"i'm not a developer so it would be hard for me :smile: ","html":"i&#39;m not a developer so it would be hard for me :smile: ","sent":"2016-11-08T13:04:21.926Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5821cd5edf5ae966452e36d1","text":"Interesting suggestion.","html":"Interesting suggestion.","sent":"2016-11-08T13:04:30.683Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821cdcbe462097a30227e36","text":"It would be possible to add it. However, how would the UI work? Do the blackout values get pre-populated and then you can deselect / delete those that aren’t appropriate and hit the submit button?","html":"It would be possible to add it. However, how would the UI work? Do the blackout values get pre-populated and then you can deselect / delete those that aren’t appropriate and hit the submit button?","sent":"2016-11-08T13:06:19.817Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5821ce76c2f2cf7275e54a7f","text":"when you receive alert and you want it to blackout for logged in users there is button ignore, it gets values from that alert, and asks for duration, and then submits and suppresses alerts which applies with that blackout","html":"when you receive alert and you want it to blackout for logged in users there is button ignore, it gets values from that alert, and asks for duration, and then submits and suppresses alerts which applies with that blackout","sent":"2016-11-08T13:09:10.100Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821ce9f31c5cbef43ce5cfd","text":"Ok. sounds reasonable. I’ll add to the backlog.","html":"Ok. sounds reasonable. I’ll add to the backlog.","sent":"2016-11-08T13:09:51.823Z","editedAt":"2016-11-08T13:10:02.224Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5821cea9e462097a30228386","text":"great","html":"great","sent":"2016-11-08T13:10:01.750Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821cf2678ec59ab0549a559","text":"also you said just set year to 2099, but blackout asks for duration :) not the date or it's just not documented how to add some time not duration ?","html":"also you said just set year to 2099, but blackout asks for duration :) not the date or it&#39;s just not documented how to add some time not duration ?","sent":"2016-11-08T13:12:06.125Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5821cf8d31c5cbef43ce6172","text":"the command-line tool asks for start and duration. the web ui asks for start and end","html":"the command-line tool asks for start and duration. the web ui asks for start and end","sent":"2016-11-08T13:13:49.096Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821cf926cb72076304eb537","text":"wow if i just execute \"alerta blackout\" it adds all values as * it's wrong i think :D cause i executed it by mistake","html":"wow if i just execute &quot;alerta blackout&quot; it adds all values as * it&#39;s wrong i think :D cause i executed it by mistake","sent":"2016-11-08T13:13:54.068Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821cfeb6cb72076304eb957","text":"\"with great power comes great responsibility\"","html":"&quot;with great power comes great responsibility&quot;","sent":"2016-11-08T13:15:23.592Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821d08731c5cbef43ce6911","text":"> the command-line tool asks for start and duration. the web ui asks for start and end\n\ni cannot find in webui such options :/","html":"<blockquote>\n<p>the command-line tool asks for start and duration. the web ui asks for start and end<\/p><\/blockquote>\n<p>i cannot find in webui such options :/<\/p>","sent":"2016-11-08T13:17:59.956Z","editedAt":"2016-11-08T13:18:05.592Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5821d1eae462097a30229d91","text":"oh, just opened endpoint #/blackouts/ and it is there, but no link visible to this page :D","html":"oh, just opened endpoint #/blackouts/ and it is there, but no link visible to this page :D","sent":"2016-11-08T13:23:54.935Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821d28d78ec59ab0549b8dd","text":"also in that blackout UI i can only add blackout adding only one type of value (Service, Resource, Event, Group, Tags)","html":"also in that blackout UI i can only add blackout adding only one type of value (Service, Resource, Event, Group, Tags)","sent":"2016-11-08T13:26:37.518Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5821d29378ec59ab0549b903","text":"not multiple","html":"not multiple","sent":"2016-11-08T13:26:43.050Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5821d32f6cb72076304ecdb3","text":"you may need to log out and log back in to see the blackouts menu option in the “Config” drop down if you’ve only just made yourself an admin.","html":"you may need to log out and log back in to see the blackouts menu option in the “Config” drop down if you’ve only just made yourself an admin.","sent":"2016-11-08T13:29:19.566Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821d37fe097df7575861ad9","text":"and yes, you can’t do multiple combinations. that would be insanely complicated, impact performace, be difficult to debug and i’m not convinced it would be very useful.","html":"and yes, you can’t do multiple combinations. that would be insanely complicated, impact performace, be difficult to debug and i’m not convinced it would be very useful.","sent":"2016-11-08T13:30:39.853Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5821d3ad78ec59ab0549beca","text":"it’s extremely flexible as it is (especially with support for tags).","html":"it’s extremely flexible as it is (especially with support for tags).","sent":"2016-11-08T13:31:25.589Z","editedAt":"2016-11-08T13:31:35.589Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5821d52be097df7575862339","text":"ok, seems i'm missing something, how can i set myself as admin ?","html":"ok, seems i&#39;m missing something, how can i set myself as admin ?","sent":"2016-11-08T13:37:47.668Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5821d53adf5ae966452e6b16","text":"in docs i see only \"Managing users ....\"","html":"in docs i see only &quot;Managing users ....&quot;","sent":"2016-11-08T13:38:02.036Z","fromUser":{"id":"5821a455d73408ce4f3475e7","username":"Atoms","displayName":"Atoms","url":"/Atoms","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/Atoms","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/9615?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/9615?v=3&s=128","v":2,"gv":"3"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5821d7c5e462097a3022be38","text":"Alerta server setting ADMIN_USERS","html":"Alerta server setting ADMIN_USERS","sent":"2016-11-08T13:48:53.190Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

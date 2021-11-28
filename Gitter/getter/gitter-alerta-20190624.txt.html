@@ -1,0 +1,779 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/06/25"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/06/23"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">24<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jun 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5d107500cedb297a81ad7cd1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d0c81b5d73408ce4fc4211a avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/37612818?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/37612818?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>TheMoralLowGround</div>
+      <div class='chat-item__username js-chat-item-from'>@TheMoralLowGround</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d107500cedb297a81ad7cd1' title="">Jun 24 2019 07:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , I have been trying to enable the blackout plugin. I have followed the steps given in the below-mentioned document to install and write this plugin. <a href="https://github.com/alerta/alerta-docs/blob/master/gettingstarted/tutorial-3-plugins.rst" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-docs/blob/master/gettingstarted/tutorial-3-plugins.rst</a>     </p><p>  And I have used the below-mentioned code as it is to write the blackout  plugin  <a href="https://github.com/alerta/alerta/blob/master/alerta/plugins/blackout.py" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/blob/master/alerta/plugins/blackout.py</a> .</p><p> I have not used a separate routing plugin, I&#39;m using the default method to route alerts to blackout first. The below code is my plugins setting.</p><h1>Plugins</h1>
+<p>PLUGINS = [&#39;blackout&#39;,&#39;reject&#39;]</p><p>And I&#39;m using the below setup file which I have customised a bit to accomodate blackout code.</p><p>from setuptools import setup, find_packages</p><p>version = &#39;0.0.1&#39;</p><p>setup(<br>    name=&quot;alerta-blackout&quot;,<br>    version=version,<br>    description=&#39;Example Alerta plugin for blackouts&#39;,<br>    url=&#39;<a href="https://github.com/alerta/alerta-contrib" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-contrib</a>&#39;,<br>    license=&#39;Apache License 2.0&#39;,<br>    author=&#39;Your name&#39;,<br>    <a href="mailto:author_email=&#39;your.name@example.com" rel="nofollow">author_email=&#39;your.name@example.com</a>&#39;,<br>    packages=find_packages(),<br>    py_modules=[&#39;alerta_blackout&#39;],<br>    install_requires=[],<br>    include_package_data=True,<br>    zip_safe=True,<br>    entry_points={<br>        &#39;alerta.plugins&#39;: [</p><pre><code>        <span class="comment">#'blackout = alerta_blackout:BlackoutHandler'</span>
+        <span class="string">'blackout = alerta.plugins.blackout:BlackoutHandler'</span>
+    ]
+}</code></pre><p>)</p><p>Despite this, am getting the below error. </p><p>2019-06-21 11:17:09,269 - alerta.plugins[54]: ERROR - Server plugin &#39;blackout&#39; could not be loaded: module &#39;alerta.app&#39; has no attribute &#39;logger&#39; [in /venv/lib/python3.6/site-packages/alerta/utils/plugin.py:40]</p><p>Which I think basically means, whatever changes which i have done have no effect in the end. Kindly help me enable blackout plugin and explain me where I&#39;m going wrong.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d107f0d007cff7a820dd23f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cdd37cad73408ce4fc070ca avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Chandants</div>
+      <div class='chat-item__username js-chat-item-from'>@Chandants</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d107f0d007cff7a820dd23f' title="">Jun 24 2019 07:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , I have enabled flapping,but I dont see the RateLimit line getting executed after uncommenting it. And I have imported it as shown below. Kindly assit.</p><p>from alerta.exceptions import RateLimit</p><p>alert.attributes[&#39;flapping&#39;] = True</p><pre><code>        # uncomment following line to stop alerts from being processed
+         raise RateLimit<span class="list">(<span class="string">"Flapping alert received more than %s times in %s seconds"</span> % <span class="list">(<span class="keyword">FLAPPING_COUNT</span>, FLAPPING_WINDOW)</span>)</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10b47e1c1f606239ec6da4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cdd37cad73408ce4fc070ca avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Chandants</div>
+      <div class='chat-item__username js-chat-item-from'>@Chandants</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10b47e1c1f606239ec6da4' title="">Jun 24 2019 11:31 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      aslo <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  please let me know  what is the impact of defining the severity in the below code does for flapping plugin. Does it compare the incoming events with the severity mentioned here?<h1>class TransientAlert(PluginBase):</h1>
+<pre><code><span class="function"><span class="keyword">def</span> <span class="title">pre_receive</span><span class="params">(self, alert)</span>:</span>
+    LOG.info(<span class="string">"Detecting transient alerts..."</span>)
+    <span class="keyword">if</span> alert.is_flapping(window=FLAPPING_WINDOW, count=FLAPPING_COUNT):
+        alert.severity = <span class="string">'indeterminate'</span>
+        alert.attributes[<span class="string">'flapping'</span>] = <span class="keyword">True</span>
+        <span class="comment"># uncomment following line to stop alerts from being processed</span>
+         <span class="keyword">raise</span> RateLimit(<span class="string">"Flapping alert received more than %s times in %s seconds"</span> % (FLAPPING_COUNT, FLAPPING_WINDOW))
+    <span class="keyword">else</span>:
+        alert.attributes[<span class="string">'flapping'</span>] = <span class="keyword">False</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10d230154d273638d188f4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d10d1edd73408ce4fc45d98 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>cisco92</div>
+      <div class='chat-item__username js-chat-item-from'>@cisco92</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10d230154d273638d188f4' title="">Jun 24 2019 13:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hello.<br>Just started using Alerta and can&#39;t get it to work with Curl atm. I Only get the current response:<br>```</p><p>&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;</p><p>&lt;body bgcolor=&quot;white&quot;&gt;</p><p>&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;</p><p>&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10d23930cc05479fb77618 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>```</p><p>&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+
+</p><p>&lt;body bgcolor=&quot;white&quot;&gt;
+
+</p><p>&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+
+</p><p>&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br>´´´</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10d2711c1f606239ed83d6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And this is what I try to execute only to test:<pre><code>curl -<span class="type">XPOST</span> http:<span class="comment">//localhost:8080/alert \</span>
+-<span class="type">H</span> <span class="symbol">'Authorization</span>: <span class="type">Key</span> aiTIRyk45z3TLPPD-wBmuNhVsbhSOqVJSdVZ6yjM' \
+-<span class="type">H</span> <span class="symbol">'Content</span>-<span class="class"><span class="keyword">type</span>:</span> application/json' \
+-d '{
+      <span class="string">"attributes"</span>: {
+        <span class="string">"region"</span>: <span class="string">"EU"</span>
+      },
+      <span class="string">"correlate"</span>: [
+        <span class="string">"HttpServerError"</span>,
+        <span class="string">"HttpServerOK"</span>
+      ],
+      <span class="string">"environment"</span>: <span class="string">"Production"</span>,
+      <span class="string">"event"</span>: <span class="string">"HttpServerError"</span>,
+      <span class="string">"group"</span>: <span class="string">"Web"</span>,
+      <span class="string">"origin"</span>: <span class="string">"curl"</span>,
+      <span class="string">"resource"</span>: <span class="string">"web01"</span>,
+      <span class="string">"service"</span>: [
+        <span class="string">"example.com"</span>
+      ],
+      <span class="string">"severity"</span>: <span class="string">"major"</span>,
+      <span class="string">"tags"</span>: [
+        <span class="string">"dc1"</span>
+      ],
+      <span class="string">"text"</span>: <span class="string">"Site is down."</span>,
+      <span class="string">"type"</span>: <span class="string">"exceptionAlert"</span>,
+      <span class="string">"value"</span>: <span class="string">"Bad Gateway (501)"</span>
+    }'</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10d48067887347a07b8699 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d0c81b5d73408ce4fc4211a avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/37612818?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/37612818?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>TheMoralLowGround</div>
+      <div class='chat-item__username js-chat-item-from'>@TheMoralLowGround</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10d48067887347a07b8699' title="">Jun 24 2019 13:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p><span data-link-type="mention" data-screen-name="TheMoralLowGround" class="mention">@TheMoralLowGround</span></p><p>Also please find the below error message from the container logs...</p><ul>
+<li>echo &#39;Installing plugin &#39;&quot;&#39;&quot;&#39;blackout&#39;&quot;&#39;&quot;<ul>
+<li>/venv/bin/pip install &#39;git+<a href="https://github.com/alerta/alerta-contrib.git#subdirectory=plugins/blackout" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-contrib.git#subdirectory=plugins/blackout</a>&#39;<br>Running command git clone -q <a href="https://github.com/alerta/alerta-contrib.git" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-contrib.git</a> /tmp/pip-req-build-x3osuspr<br>ERROR: Complete output from command python setup.py egg_info:<br>ERROR: Traceback (most recent call last):<br> File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;<br> File &quot;/venv/lib/python3.6/tokenize.py&quot;, line 452, in open<br>   buffer = _builtin_open(filename, &#39;rb&#39;)<h2>FileNotFoundError: [Errno 2] No such file or directory: &#39;/tmp/pip-req-build-x3osuspr/plugins/blackout/setup.py&#39;</h2>
+ERROR: Command &quot;python setup.py egg_info&quot; failed with error code 1 in /tmp/pip-req-build-x3osuspr/plugins/blackout</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10d82df5b00456dfd265ff burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d10d1edd73408ce4fc45d98 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>cisco92</div>
+      <div class='chat-item__username js-chat-item-from'>@cisco92</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10d82df5b00456dfd265ff' title="">Jun 24 2019 14:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Anyone has any idea why I get 405 Not Allowed? 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10d9e580f91e2d3e827157 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d10d1edd73408ce4fc45d98 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>cisco92</div>
+      <div class='chat-item__username js-chat-item-from'>@cisco92</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10d9e580f91e2d3e827157' title="">Jun 24 2019 14:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      If only running a empty curl request to localhost:8080 I get this response:<pre><code><span class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">en</span>&gt;</span><span class="tag">&lt;<span class="title">head</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">utf-8</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">X-UA-Compatible</span> <span class="attribute">content</span>=<span class="value">"IE=edge"</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">viewport</span> <span class="attribute">content</span>=<span class="value">"width=device-width,initial-scale=1"</span>&gt;</span><span class="tag">&lt;<span class="title">title</span>&gt;</span>Alerta<span class="tag">&lt;/<span class="title">title</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">application-name</span> <span class="attribute">content</span>=<span class="value">Alerta</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">apple-touch-icon-precomposed</span> <span class="attribute">sizes</span>=<span class="value">57x57</span> <span class="attribute">href</span>=/<span class="attribute">apple-touch-icon-57x57.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">apple-touch-icon-precomposed</span> <span class="attribute">sizes</span>=<span class="value">114x114</span> <span class="attribute">href</span>=/<span class="attribute">apple-touch-icon-114x114.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">apple-touch-icon-precomposed</span> <span class="attribute">sizes</span>=<span class="value">72x72</span> <span class="attribute">href</span>=/<span class="attribute">apple-touch-icon-72x72.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">apple-touch-icon-precomposed</span> <span class="attribute">sizes</span>=<span class="value">144x144</span> <span class="attribute">href</span>=/<span class="attribute">apple-touch-icon-144x144.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">apple-touch-icon-precomposed</span> <span class="attribute">sizes</span>=<span class="value">60x60</span> <span class="attribute">href</span>=/<span class="attribute">apple-touch-icon-60x60.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">apple-touch-icon-precomposed</span> <span class="attribute">sizes</span>=<span class="value">120x120</span> <span class="attribute">href</span>=/<span class="attribute">apple-touch-icon-120x120.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">apple-touch-icon-precomposed</span> <span class="attribute">sizes</span>=<span class="value">76x76</span> <span class="attribute">href</span>=/<span class="attribute">apple-touch-icon-76x76.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">apple-touch-icon-precomposed</span> <span class="attribute">sizes</span>=<span class="value">152x152</span> <span class="attribute">href</span>=/<span class="attribute">apple-touch-icon-152x152.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">icon</span> <span class="attribute">type</span>=<span class="value">image</span>/<span class="attribute">png</span> <span class="attribute">href</span>=/<span class="attribute">favicon-196x196.png</span> <span class="attribute">sizes</span>=<span class="value">196x196</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">icon</span> <span class="attribute">type</span>=<span class="value">image</span>/<span class="attribute">png</span> <span class="attribute">href</span>=/<span class="attribute">favicon-96x96.png</span> <span class="attribute">sizes</span>=<span class="value">96x96</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">icon</span> <span class="attribute">type</span>=<span class="value">image</span>/<span class="attribute">png</span> <span class="attribute">href</span>=/<span class="attribute">favicon-32x32.png</span> <span class="attribute">sizes</span>=<span class="value">32x32</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">icon</span> <span class="attribute">type</span>=<span class="value">image</span>/<span class="attribute">png</span> <span class="attribute">href</span>=/<span class="attribute">favicon-16x16.png</span> <span class="attribute">sizes</span>=<span class="value">16x16</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">icon</span> <span class="attribute">type</span>=<span class="value">image</span>/<span class="attribute">png</span> <span class="attribute">href</span>=/<span class="attribute">favicon-128.png</span> <span class="attribute">sizes</span>=<span class="value">128x128</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">msapplication-TileColor</span> <span class="attribute">content</span>=<span class="value">#FFFFFF</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">msapplication-TileImage</span> <span class="attribute">content</span>=/<span class="attribute">mstile-144x144.png</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">msapplication-square70x70logo</span> <span class="attribute">content</span>=/<span class="attribute">mstile-70x70.png</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">msapplication-square150x150logo</span> <span class="attribute">content</span>=/<span class="attribute">mstile-150x150.png</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">msapplication-wide310x150logo</span> <span class="attribute">content</span>=/<span class="attribute">mstile-310x150.png</span>&gt;</span><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">msapplication-square310x310logo</span> <span class="attribute">content</span>=/<span class="attribute">mstile-310x310.png</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=/<span class="attribute">css</span>/<span class="attribute">about.ec2999de.css</span> <span class="attribute">rel</span>=<span class="value">prefetch</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=/<span class="attribute">js</span>/<span class="attribute">about.801487e6.js</span> <span class="attribute">rel</span>=<span class="value">prefetch</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=/<span class="attribute">css</span>/<span class="attribute">app.890335cb.css</span> <span class="attribute">rel</span>=<span class="value">preload</span> <span class="attribute">as</span>=<span class="value">style</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=/<span class="attribute">css</span>/<span class="attribute">chunk-vendors.c67a5a59.css</span> <span class="attribute">rel</span>=<span class="value">preload</span> <span class="attribute">as</span>=<span class="value">style</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=/<span class="attribute">js</span>/<span class="attribute">app.2d400df6.js</span> <span class="attribute">rel</span>=<span class="value">preload</span> <span class="attribute">as</span>=<span class="value">script</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=/<span class="attribute">js</span>/<span class="attribute">chunk-vendors.cdaaeede.js</span> <span class="attribute">rel</span>=<span class="value">preload</span> <span class="attribute">as</span>=<span class="value">script</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=/<span class="attribute">css</span>/<span class="attribute">chunk-vendors.c67a5a59.css</span> <span class="attribute">rel</span>=<span class="value">stylesheet</span>&gt;</span><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=/<span class="attribute">css</span>/<span class="attribute">app.890335cb.css</span> <span class="attribute">rel</span>=<span class="value">stylesheet</span>&gt;</span><span class="tag">&lt;/<span class="title">head</span>&gt;</span><span class="tag">&lt;<span class="title">body</span>&gt;</span><span class="tag">&lt;<span class="title">noscript</span>&gt;</span><span class="tag">&lt;<span class="title">strong</span>&gt;</span>We're sorry but Vue doesn't work properly without JavaScript enabled. Please enable it to continue.<span class="tag">&lt;/<span class="title">strong</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+        <span class="keyword">var</span> redirect = sessionStorage.redirect;
+        <span class="keyword">delete</span> sessionStorage.redirect;
+        <span class="keyword">if</span> (redirect &amp;&amp; redirect != location.href) {
+            history.replaceState(<span class="literal">null</span>, <span class="literal">null</span>, redirect);
+        }
+      })();</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">app</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=/<span class="attribute">js</span>/<span class="attribute">chunk-vendors.cdaaeede.js</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=/<span class="attribute">js</span>/<span class="attribute">app.2d400df6.js</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span><span class="tag">&lt;/<span class="title">body</span>&gt;</span><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10df59d010383639c59219 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10df59d010383639c59219' title="">Jun 24 2019 14:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="cisco92" class="mention">@cisco92</span> for Docker the API endpoint is <code>/api</code> not <code>/</code>. So if you want to post an alert using curl you need to send the request to <code>/api/alert</code>. See <a href="https://github.com/alerta/docker-alerta#how-to-use-this-image" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/docker-alerta#how-to-use-this-image</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10df6895efec2d3dfc5baf burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>The API endpoint <span class="keyword">is</span> at:
+
+http:<span class="comment">//&lt;docker&gt;:&lt;port&gt;/api</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10dfac5e67ff0bcbdd388d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d10d1edd73408ce4fc45d98 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>cisco92</div>
+      <div class='chat-item__username js-chat-item-from'>@cisco92</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10dfac5e67ff0bcbdd388d' title="">Jun 24 2019 14:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thank you soooo much! I thought about that there must be something different when running in Docker but couldn&#39;t find it! 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10e229f5b00456dfd2c7c1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10e229f5b00456dfd2c7c1' title="">Jun 24 2019 14:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="Chandants" class="mention">@Chandants</span> assigning the severity like that will make the severity of the incoming alert ‘indeterminate’.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10e279f5b00456dfd2cb36 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="TheMoralLowGround" class="mention">@TheMoralLowGround</span> what happens if the call your plugin something different to <code>blackout</code>? ie. there is a built-in plugin with the same name and i’m not sure what having two with the same name will work.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10e3745e67ff0bcbdd5bca burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d10d1edd73408ce4fc45d98 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/22174011?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>cisco92</div>
+      <div class='chat-item__username js-chat-item-from'>@cisco92</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10e3745e67ff0bcbdd5bca' title="">Jun 24 2019 14:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      What API call can I use to change severity to normal when closing an alarm?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d10e94c80f91e2d3e830ed9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cdd37cad73408ce4fc070ca avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Chandants</div>
+      <div class='chat-item__username js-chat-item-from'>@Chandants</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d10e94c80f91e2d3e830ed9' title="">Jun 24 2019 15:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p>Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , I have enabled flapping,but I dont see the RateLimit line getting executed after uncommenting it. And I have imported it as shown below. Kindly assit.</p><p>from alerta.exceptions import RateLimit</p><p>alert.attributes[&#39;flapping&#39;] = True</p><pre><code>        # uncomment following line to stop alerts from being processed
+         raise RateLimit<span class="list">(<span class="string">"Flapping alert received more than %s times in %s seconds"</span> % <span class="list">(<span class="keyword">FLAPPING_COUNT</span>, FLAPPING_WINDOW)</span>)</span></code></pre></blockquote>
+<p><span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> . Kindly let me know how to enable/ how to execute RateLimit exception line in pre_receive of is_flapping function.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d1129a21c1f606239f0bc5c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/24?at=5d1129a21c1f606239f0bc5c' title="">Jun 24 2019 19:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="cisco92" class="mention">@cisco92</span> if you close an alert it will be set to severity normal. is that not what is happening?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d1129f918e3256238315680 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="Chandants" class="mention">@Chandants</span> can you raise an issue and fill in the issue template with exactly what you have done. step-by-step so I can reproduce the issue. Thanks.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$ISOHPunqnfjJxPTKu3tv3ppg93RNpBlgK7UPsr8tFDY=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-06-24T00:00:00.000Z","nextDate":"2019-06-25T23:59:59.999Z","previousDate":"2019-06-23T00:00:00.000Z","messages":[{"id":"5d107500cedb297a81ad7cd1","text":"Hi @satterly , I have been trying to enable the blackout plugin. I have followed the steps given in the below-mentioned document to install and write this plugin. https://github.com/alerta/alerta-docs/blob/master/gettingstarted/tutorial-3-plugins.rst     \n \n  And I have used the below-mentioned code as it is to write the blackout  plugin  https://github.com/alerta/alerta/blob/master/alerta/plugins/blackout.py .\n\n I have not used a separate routing plugin, I'm using the default method to route alerts to blackout first. The below code is my plugins setting.\n # Plugins\nPLUGINS = ['blackout','reject']\n\nAnd I'm using the below setup file which I have customised a bit to accomodate blackout code.\n\nfrom setuptools import setup, find_packages\n\nversion = '0.0.1'\n\nsetup(\n    name=\"alerta-blackout\",\n    version=version,\n    description='Example Alerta plugin for blackouts',\n    url='https://github.com/alerta/alerta-contrib',\n    license='Apache License 2.0',\n    author='Your name',\n    author_email='your.name@example.com',\n    packages=find_packages(),\n    py_modules=['alerta_blackout'],\n    install_requires=[],\n    include_package_data=True,\n    zip_safe=True,\n    entry_points={\n        'alerta.plugins': [\n            #'blackout = alerta_blackout:BlackoutHandler'\n            'blackout = alerta.plugins.blackout:BlackoutHandler'\n        ]\n    }\n)\n\n\nDespite this, am getting the below error. \n\n2019-06-21 11:17:09,269 - alerta.plugins[54]: ERROR - Server plugin 'blackout' could not be loaded: module 'alerta.app' has no attribute 'logger' [in /venv/lib/python3.6/site-packages/alerta/utils/plugin.py:40]\n\nWhich I think basically means, whatever changes which i have done have no effect in the end. Kindly help me enable blackout plugin and explain me where I'm going wrong.\n\n\n\n\n    \n\n","html":"<p>Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , I have been trying to enable the blackout plugin. I have followed the steps given in the below-mentioned document to install and write this plugin. <a href=\"https://github.com/alerta/alerta-docs/blob/master/gettingstarted/tutorial-3-plugins.rst\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-docs/blob/master/gettingstarted/tutorial-3-plugins.rst<\/a>     <\/p><p>  And I have used the below-mentioned code as it is to write the blackout  plugin  <a href=\"https://github.com/alerta/alerta/blob/master/alerta/plugins/blackout.py\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/blob/master/alerta/plugins/blackout.py<\/a> .<\/p><p> I have not used a separate routing plugin, I&#39;m using the default method to route alerts to blackout first. The below code is my plugins setting.<\/p><h1>Plugins<\/h1>\n<p>PLUGINS = [&#39;blackout&#39;,&#39;reject&#39;]<\/p><p>And I&#39;m using the below setup file which I have customised a bit to accomodate blackout code.<\/p><p>from setuptools import setup, find_packages<\/p><p>version = &#39;0.0.1&#39;<\/p><p>setup(<br>    name=&quot;alerta-blackout&quot;,<br>    version=version,<br>    description=&#39;Example Alerta plugin for blackouts&#39;,<br>    url=&#39;<a href=\"https://github.com/alerta/alerta-contrib\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-contrib<\/a>&#39;,<br>    license=&#39;Apache License 2.0&#39;,<br>    author=&#39;Your name&#39;,<br>    <a href=\"mailto:author_email=&#39;your.name@example.com\" rel=\"nofollow\">author_email=&#39;your.name@example.com<\/a>&#39;,<br>    packages=find_packages(),<br>    py_modules=[&#39;alerta_blackout&#39;],<br>    install_requires=[],<br>    include_package_data=True,<br>    zip_safe=True,<br>    entry_points={<br>        &#39;alerta.plugins&#39;: [<\/p><pre><code>        <span class=\"comment\">#'blackout = alerta_blackout:BlackoutHandler'<\/span>\n        <span class=\"string\">'blackout = alerta.plugins.blackout:BlackoutHandler'<\/span>\n    ]\n}<\/code><\/pre><p>)<\/p><p>Despite this, am getting the below error. <\/p><p>2019-06-21 11:17:09,269 - alerta.plugins[54]: ERROR - Server plugin &#39;blackout&#39; could not be loaded: module &#39;alerta.app&#39; has no attribute &#39;logger&#39; [in /venv/lib/python3.6/site-packages/alerta/utils/plugin.py:40]<\/p><p>Which I think basically means, whatever changes which i have done have no effect in the end. Kindly help me enable blackout plugin and explain me where I&#39;m going wrong.<\/p>","sent":"2019-06-24T07:00:16.760Z","fromUser":{"id":"5d0c81b5d73408ce4fc4211a","username":"TheMoralLowGround","displayName":"TheMoralLowGround","url":"/TheMoralLowGround","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/TheMoralLowGround","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/37612818?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/37612818?v=4&s=128","v":9,"gv":"4"},"readBy":17,"urls":[{"url":"https://github.com/alerta/alerta-docs/blob/master/gettingstarted/tutorial-3-plugins.rst"},{"url":"https://github.com/alerta/alerta/blob/master/alerta/plugins/blackout.py"},{"url":"https://github.com/alerta/alerta-contrib"},{"url":"mailto:author_email=&#39;your.name@example.com"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d107f0d007cff7a820dd23f","text":"Hi @satterly , I have enabled flapping,but I dont see the RateLimit line getting executed after uncommenting it. And I have imported it as shown below. Kindly assit.\n\nfrom alerta.exceptions import RateLimit\n\nalert.attributes['flapping'] = True\n            # uncomment following line to stop alerts from being processed\n             raise RateLimit(\"Flapping alert received more than %s times in %s seconds\" % (FLAPPING_COUNT, FLAPPING_WINDOW))","html":"<p>Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , I have enabled flapping,but I dont see the RateLimit line getting executed after uncommenting it. And I have imported it as shown below. Kindly assit.<\/p><p>from alerta.exceptions import RateLimit<\/p><p>alert.attributes[&#39;flapping&#39;] = True<\/p><pre><code>        # uncomment following line to stop alerts from being processed\n         raise RateLimit<span class=\"list\">(<span class=\"string\">\"Flapping alert received more than %s times in %s seconds\"<\/span> % <span class=\"list\">(<span class=\"keyword\">FLAPPING_COUNT<\/span>, FLAPPING_WINDOW)<\/span>)<\/span><\/code><\/pre>","sent":"2019-06-24T07:43:09.289Z","fromUser":{"id":"5cdd37cad73408ce4fc070ca","username":"Chandants","displayName":"Chandants","url":"/Chandants","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Chandants","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=128","v":13,"gv":"4"},"readBy":17,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10b47e1c1f606239ec6da4","text":"aslo @satterly  please let me know  what is the impact of defining the severity in the below code does for flapping plugin. Does it compare the incoming events with the severity mentioned here?\n\n#class TransientAlert(PluginBase):\n    def pre_receive(self, alert):\n        LOG.info(\"Detecting transient alerts...\")\n        if alert.is_flapping(window=FLAPPING_WINDOW, count=FLAPPING_COUNT):\n            alert.severity = 'indeterminate'\n            alert.attributes['flapping'] = True\n            # uncomment following line to stop alerts from being processed\n             raise RateLimit(\"Flapping alert received more than %s times in %s seconds\" % (FLAPPING_COUNT, FLAPPING_WINDOW))\n        else:\n            alert.attributes['flapping'] = False","html":"aslo <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  please let me know  what is the impact of defining the severity in the below code does for flapping plugin. Does it compare the incoming events with the severity mentioned here?<h1>class TransientAlert(PluginBase):<\/h1>\n<pre><code><span class=\"function\"><span class=\"keyword\">def<\/span> <span class=\"title\">pre_receive<\/span><span class=\"params\">(self, alert)<\/span>:<\/span>\n    LOG.info(<span class=\"string\">\"Detecting transient alerts...\"<\/span>)\n    <span class=\"keyword\">if<\/span> alert.is_flapping(window=FLAPPING_WINDOW, count=FLAPPING_COUNT):\n        alert.severity = <span class=\"string\">'indeterminate'<\/span>\n        alert.attributes[<span class=\"string\">'flapping'<\/span>] = <span class=\"keyword\">True<\/span>\n        <span class=\"comment\"># uncomment following line to stop alerts from being processed<\/span>\n         <span class=\"keyword\">raise<\/span> RateLimit(<span class=\"string\">\"Flapping alert received more than %s times in %s seconds\"<\/span> % (FLAPPING_COUNT, FLAPPING_WINDOW))\n    <span class=\"keyword\">else<\/span>:\n        alert.attributes[<span class=\"string\">'flapping'<\/span>] = <span class=\"keyword\">False<\/span><\/code><\/pre>","sent":"2019-06-24T11:31:10.447Z","editedAt":"2019-06-24T11:34:26.776Z","fromUser":{"id":"5cdd37cad73408ce4fc070ca","username":"Chandants","displayName":"Chandants","url":"/Chandants","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Chandants","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=128","v":13,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":6,"burstStart":true},{"id":"5d10d230154d273638d188f4","text":"Hello. \nJust started using Alerta and can't get it to work with Curl atm. I Only get the current response:\n```\n<head><title>405 Not Allowed<\/title><\/head>\n<body bgcolor=\"white\">\n<center><h1>405 Not Allowed<\/h1><\/center>\n<hr><center>nginx/1.10.3<\/center>\n<\/body>\n<\/html>","html":"<p>Hello.<br>Just started using Alerta and can&#39;t get it to work with Curl atm. I Only get the current response:<br>```<\/p><p>&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;<\/p><p>&lt;body bgcolor=&quot;white&quot;&gt;<\/p><p>&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;<\/p><p>&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<\/p>","sent":"2019-06-24T13:37:52.479Z","fromUser":{"id":"5d10d1edd73408ce4fc45d98","username":"cisco92","displayName":"cisco92","url":"/cisco92","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/cisco92","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=128","v":15,"gv":"4"},"readBy":17,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10d23930cc05479fb77618","text":"```\n\n<head><title>405 Not Allowed<\/title><\/head>\n\n<body bgcolor=\"white\">\n\n<center><h1>405 Not Allowed<\/h1><\/center>\n\n<hr><center>nginx/1.10.3<\/center>\n<\/body>\n<\/html>\n´´´","html":"<p>```<\/p><p>&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;\n\n<\/p><p>&lt;body bgcolor=&quot;white&quot;&gt;\n\n<\/p><p>&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;\n\n<\/p><p>&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br>´´´<\/p>","sent":"2019-06-24T13:38:01.769Z","fromUser":{"id":"5d10d1edd73408ce4fc45d98","username":"cisco92","displayName":"cisco92","url":"/cisco92","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/cisco92","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=128","v":15,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d10d2711c1f606239ed83d6","text":"And this is what I try to execute only to test:\n```\ncurl -XPOST http://localhost:8080/alert \\\n-H 'Authorization: Key aiTIRyk45z3TLPPD-wBmuNhVsbhSOqVJSdVZ6yjM' \\\n-H 'Content-type: application/json' \\\n-d '{\n      \"attributes\": {\n        \"region\": \"EU\"\n      },\n      \"correlate\": [\n        \"HttpServerError\",\n        \"HttpServerOK\"\n      ],\n      \"environment\": \"Production\",\n      \"event\": \"HttpServerError\",\n      \"group\": \"Web\",\n      \"origin\": \"curl\",\n      \"resource\": \"web01\",\n      \"service\": [\n        \"example.com\"\n      ],\n      \"severity\": \"major\",\n      \"tags\": [\n        \"dc1\"\n      ],\n      \"text\": \"Site is down.\",\n      \"type\": \"exceptionAlert\",\n      \"value\": \"Bad Gateway (501)\"\n    }'\n```","html":"And this is what I try to execute only to test:<pre><code>curl -<span class=\"type\">XPOST<\/span> http:<span class=\"comment\">//localhost:8080/alert \\<\/span>\n-<span class=\"type\">H<\/span> <span class=\"symbol\">'Authorization<\/span>: <span class=\"type\">Key<\/span> aiTIRyk45z3TLPPD-wBmuNhVsbhSOqVJSdVZ6yjM' \\\n-<span class=\"type\">H<\/span> <span class=\"symbol\">'Content<\/span>-<span class=\"class\"><span class=\"keyword\">type<\/span>:<\/span> application/json' \\\n-d '{\n      <span class=\"string\">\"attributes\"<\/span>: {\n        <span class=\"string\">\"region\"<\/span>: <span class=\"string\">\"EU\"<\/span>\n      },\n      <span class=\"string\">\"correlate\"<\/span>: [\n        <span class=\"string\">\"HttpServerError\"<\/span>,\n        <span class=\"string\">\"HttpServerOK\"<\/span>\n      ],\n      <span class=\"string\">\"environment\"<\/span>: <span class=\"string\">\"Production\"<\/span>,\n      <span class=\"string\">\"event\"<\/span>: <span class=\"string\">\"HttpServerError\"<\/span>,\n      <span class=\"string\">\"group\"<\/span>: <span class=\"string\">\"Web\"<\/span>,\n      <span class=\"string\">\"origin\"<\/span>: <span class=\"string\">\"curl\"<\/span>,\n      <span class=\"string\">\"resource\"<\/span>: <span class=\"string\">\"web01\"<\/span>,\n      <span class=\"string\">\"service\"<\/span>: [\n        <span class=\"string\">\"example.com\"<\/span>\n      ],\n      <span class=\"string\">\"severity\"<\/span>: <span class=\"string\">\"major\"<\/span>,\n      <span class=\"string\">\"tags\"<\/span>: [\n        <span class=\"string\">\"dc1\"<\/span>\n      ],\n      <span class=\"string\">\"text\"<\/span>: <span class=\"string\">\"Site is down.\"<\/span>,\n      <span class=\"string\">\"type\"<\/span>: <span class=\"string\">\"exceptionAlert\"<\/span>,\n      <span class=\"string\">\"value\"<\/span>: <span class=\"string\">\"Bad Gateway (501)\"<\/span>\n    }'<\/code><\/pre>","sent":"2019-06-24T13:38:57.401Z","fromUser":{"id":"5d10d1edd73408ce4fc45d98","username":"cisco92","displayName":"cisco92","url":"/cisco92","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/cisco92","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=128","v":15,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d10d48067887347a07b8699","text":"@TheMoralLowGround\n\nAlso please find the below error message from the container logs...\n\n + echo 'Installing plugin '\"'\"'blackout'\"'\"\n+ /venv/bin/pip install 'git+https://github.com/alerta/alerta-contrib.git#subdirectory=plugins/blackout'\n  Running command git clone -q https://github.com/alerta/alerta-contrib.git /tmp/pip-req-build-x3osuspr\n    ERROR: Complete output from command python setup.py egg_info:\n    ERROR: Traceback (most recent call last):\n      File \"<string>\", line 1, in <module>\n      File \"/venv/lib/python3.6/tokenize.py\", line 452, in open\n        buffer = _builtin_open(filename, 'rb')\n    FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pip-req-build-x3osuspr/plugins/blackout/setup.py'\n    ----------------------------------------\nERROR: Command \"python setup.py egg_info\" failed with error code 1 in /tmp/pip-req-build-x3osuspr/plugins/blackout\n","html":"<p><span data-link-type=\"mention\" data-screen-name=\"TheMoralLowGround\" class=\"mention\">@TheMoralLowGround<\/span><\/p><p>Also please find the below error message from the container logs...<\/p><ul>\n<li>echo &#39;Installing plugin &#39;&quot;&#39;&quot;&#39;blackout&#39;&quot;&#39;&quot;<ul>\n<li>/venv/bin/pip install &#39;git+<a href=\"https://github.com/alerta/alerta-contrib.git#subdirectory=plugins/blackout\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-contrib.git#subdirectory=plugins/blackout<\/a>&#39;<br>Running command git clone -q <a href=\"https://github.com/alerta/alerta-contrib.git\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-contrib.git<\/a> /tmp/pip-req-build-x3osuspr<br>ERROR: Complete output from command python setup.py egg_info:<br>ERROR: Traceback (most recent call last):<br> File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;<br> File &quot;/venv/lib/python3.6/tokenize.py&quot;, line 452, in open<br>   buffer = _builtin_open(filename, &#39;rb&#39;)<h2>FileNotFoundError: [Errno 2] No such file or directory: &#39;/tmp/pip-req-build-x3osuspr/plugins/blackout/setup.py&#39;<\/h2>\nERROR: Command &quot;python setup.py egg_info&quot; failed with error code 1 in /tmp/pip-req-build-x3osuspr/plugins/blackout<\/li>\n<\/ul>\n<\/li>\n<\/ul>\n","sent":"2019-06-24T13:47:44.237Z","fromUser":{"id":"5d0c81b5d73408ce4fc4211a","username":"TheMoralLowGround","displayName":"TheMoralLowGround","url":"/TheMoralLowGround","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/TheMoralLowGround","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/37612818?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/37612818?v=4&s=128","v":9,"gv":"4"},"readBy":18,"urls":[{"url":"https://github.com/alerta/alerta-contrib.git#subdirectory=plugins/blackout"},{"url":"https://github.com/alerta/alerta-contrib.git"}],"mentions":[{"screenName":"TheMoralLowGround","userId":"5d0c81b5d73408ce4fc4211a","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10d82df5b00456dfd265ff","text":"Anyone has any idea why I get 405 Not Allowed? ","html":"Anyone has any idea why I get 405 Not Allowed? ","sent":"2019-06-24T14:03:25.597Z","fromUser":{"id":"5d10d1edd73408ce4fc45d98","username":"cisco92","displayName":"cisco92","url":"/cisco92","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/cisco92","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=128","v":15,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10d9e580f91e2d3e827157","text":"If only running a empty curl request to localhost:8080 I get this response:\n```\n<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content=\"IE=edge\"><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Alerta<\/title><meta name=application-name content=Alerta><link rel=apple-touch-icon-precomposed sizes=57x57 href=/apple-touch-icon-57x57.png><link rel=apple-touch-icon-precomposed sizes=114x114 href=/apple-touch-icon-114x114.png><link rel=apple-touch-icon-precomposed sizes=72x72 href=/apple-touch-icon-72x72.png><link rel=apple-touch-icon-precomposed sizes=144x144 href=/apple-touch-icon-144x144.png><link rel=apple-touch-icon-precomposed sizes=60x60 href=/apple-touch-icon-60x60.png><link rel=apple-touch-icon-precomposed sizes=120x120 href=/apple-touch-icon-120x120.png><link rel=apple-touch-icon-precomposed sizes=76x76 href=/apple-touch-icon-76x76.png><link rel=apple-touch-icon-precomposed sizes=152x152 href=/apple-touch-icon-152x152.png><link rel=icon type=image/png href=/favicon-196x196.png sizes=196x196><link rel=icon type=image/png href=/favicon-96x96.png sizes=96x96><link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/favicon-128.png sizes=128x128><meta name=msapplication-TileColor content=#FFFFFF><meta name=msapplication-TileImage content=/mstile-144x144.png><meta name=msapplication-square70x70logo content=/mstile-70x70.png><meta name=msapplication-square150x150logo content=/mstile-150x150.png><meta name=msapplication-wide310x150logo content=/mstile-310x150.png><meta name=msapplication-square310x310logo content=/mstile-310x310.png><link href=/css/about.ec2999de.css rel=prefetch><link href=/js/about.801487e6.js rel=prefetch><link href=/css/app.890335cb.css rel=preload as=style><link href=/css/chunk-vendors.c67a5a59.css rel=preload as=style><link href=/js/app.2d400df6.js rel=preload as=script><link href=/js/chunk-vendors.cdaaeede.js rel=preload as=script><link href=/css/chunk-vendors.c67a5a59.css rel=stylesheet><link href=/css/app.890335cb.css rel=stylesheet><\/head><body><noscript><strong>We're sorry but Vue doesn't work properly without JavaScript enabled. Please enable it to continue.<\/strong><\/noscript><script>(function(){\n        var redirect = sessionStorage.redirect;\n        delete sessionStorage.redirect;\n        if (redirect && redirect != location.href) {\n            history.replaceState(null, null, redirect);\n        }\n      })();<\/script><div id=app><\/div><script src=/js/chunk-vendors.cdaaeede.js><\/script><script src=/js/app.2d400df6.js><\/script><\/body><\/html>\n```","html":"If only running a empty curl request to localhost:8080 I get this response:<pre><code><span class=\"xml\"><span class=\"doctype\">&lt;!DOCTYPE html&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">html<\/span> <span class=\"attribute\">lang<\/span>=<span class=\"value\">en<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">head<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">charset<\/span>=<span class=\"value\">utf-8<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">http-equiv<\/span>=<span class=\"value\">X-UA-Compatible<\/span> <span class=\"attribute\">content<\/span>=<span class=\"value\">\"IE=edge\"<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">name<\/span>=<span class=\"value\">viewport<\/span> <span class=\"attribute\">content<\/span>=<span class=\"value\">\"width=device-width,initial-scale=1\"<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">title<\/span>&gt;<\/span>Alerta<span class=\"tag\">&lt;/<span class=\"title\">title<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">name<\/span>=<span class=\"value\">application-name<\/span> <span class=\"attribute\">content<\/span>=<span class=\"value\">Alerta<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">apple-touch-icon-precomposed<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">57x57<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">apple-touch-icon-57x57.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">apple-touch-icon-precomposed<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">114x114<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">apple-touch-icon-114x114.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">apple-touch-icon-precomposed<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">72x72<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">apple-touch-icon-72x72.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">apple-touch-icon-precomposed<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">144x144<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">apple-touch-icon-144x144.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">apple-touch-icon-precomposed<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">60x60<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">apple-touch-icon-60x60.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">apple-touch-icon-precomposed<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">120x120<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">apple-touch-icon-120x120.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">apple-touch-icon-precomposed<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">76x76<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">apple-touch-icon-76x76.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">apple-touch-icon-precomposed<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">152x152<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">apple-touch-icon-152x152.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">icon<\/span> <span class=\"attribute\">type<\/span>=<span class=\"value\">image<\/span>/<span class=\"attribute\">png<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">favicon-196x196.png<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">196x196<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">icon<\/span> <span class=\"attribute\">type<\/span>=<span class=\"value\">image<\/span>/<span class=\"attribute\">png<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">favicon-96x96.png<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">96x96<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">icon<\/span> <span class=\"attribute\">type<\/span>=<span class=\"value\">image<\/span>/<span class=\"attribute\">png<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">favicon-32x32.png<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">32x32<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">icon<\/span> <span class=\"attribute\">type<\/span>=<span class=\"value\">image<\/span>/<span class=\"attribute\">png<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">favicon-16x16.png<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">16x16<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">icon<\/span> <span class=\"attribute\">type<\/span>=<span class=\"value\">image<\/span>/<span class=\"attribute\">png<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">favicon-128.png<\/span> <span class=\"attribute\">sizes<\/span>=<span class=\"value\">128x128<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">name<\/span>=<span class=\"value\">msapplication-TileColor<\/span> <span class=\"attribute\">content<\/span>=<span class=\"value\">#FFFFFF<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">name<\/span>=<span class=\"value\">msapplication-TileImage<\/span> <span class=\"attribute\">content<\/span>=/<span class=\"attribute\">mstile-144x144.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">name<\/span>=<span class=\"value\">msapplication-square70x70logo<\/span> <span class=\"attribute\">content<\/span>=/<span class=\"attribute\">mstile-70x70.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">name<\/span>=<span class=\"value\">msapplication-square150x150logo<\/span> <span class=\"attribute\">content<\/span>=/<span class=\"attribute\">mstile-150x150.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">name<\/span>=<span class=\"value\">msapplication-wide310x150logo<\/span> <span class=\"attribute\">content<\/span>=/<span class=\"attribute\">mstile-310x150.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">meta<\/span> <span class=\"attribute\">name<\/span>=<span class=\"value\">msapplication-square310x310logo<\/span> <span class=\"attribute\">content<\/span>=/<span class=\"attribute\">mstile-310x310.png<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">css<\/span>/<span class=\"attribute\">about.ec2999de.css<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">prefetch<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">js<\/span>/<span class=\"attribute\">about.801487e6.js<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">prefetch<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">css<\/span>/<span class=\"attribute\">app.890335cb.css<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">preload<\/span> <span class=\"attribute\">as<\/span>=<span class=\"value\">style<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">css<\/span>/<span class=\"attribute\">chunk-vendors.c67a5a59.css<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">preload<\/span> <span class=\"attribute\">as<\/span>=<span class=\"value\">style<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">js<\/span>/<span class=\"attribute\">app.2d400df6.js<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">preload<\/span> <span class=\"attribute\">as<\/span>=<span class=\"value\">script<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">js<\/span>/<span class=\"attribute\">chunk-vendors.cdaaeede.js<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">preload<\/span> <span class=\"attribute\">as<\/span>=<span class=\"value\">script<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">css<\/span>/<span class=\"attribute\">chunk-vendors.c67a5a59.css<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">stylesheet<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">link<\/span> <span class=\"attribute\">href<\/span>=/<span class=\"attribute\">css<\/span>/<span class=\"attribute\">app.890335cb.css<\/span> <span class=\"attribute\">rel<\/span>=<span class=\"value\">stylesheet<\/span>&gt;<\/span><span class=\"tag\">&lt;/<span class=\"title\">head<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">body<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">noscript<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">strong<\/span>&gt;<\/span>We're sorry but Vue doesn't work properly without JavaScript enabled. Please enable it to continue.<span class=\"tag\">&lt;/<span class=\"title\">strong<\/span>&gt;<\/span><span class=\"tag\">&lt;/<span class=\"title\">noscript<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">script<\/span>&gt;<\/span><span class=\"actionscript\">(<span class=\"function\"><span class=\"keyword\">function<\/span><span class=\"params\">()<\/span><\/span>{\n        <span class=\"keyword\">var<\/span> redirect = sessionStorage.redirect;\n        <span class=\"keyword\">delete<\/span> sessionStorage.redirect;\n        <span class=\"keyword\">if<\/span> (redirect &amp;&amp; redirect != location.href) {\n            history.replaceState(<span class=\"literal\">null<\/span>, <span class=\"literal\">null<\/span>, redirect);\n        }\n      })();<\/span><span class=\"tag\">&lt;/<span class=\"title\">script<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">div<\/span> <span class=\"attribute\">id<\/span>=<span class=\"value\">app<\/span>&gt;<\/span><span class=\"tag\">&lt;/<span class=\"title\">div<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">script<\/span> <span class=\"attribute\">src<\/span>=/<span class=\"attribute\">js<\/span>/<span class=\"attribute\">chunk-vendors.cdaaeede.js<\/span>&gt;<\/span><span class=\"undefined\"><\/span><span class=\"tag\">&lt;/<span class=\"title\">script<\/span>&gt;<\/span><span class=\"tag\">&lt;<span class=\"title\">script<\/span> <span class=\"attribute\">src<\/span>=/<span class=\"attribute\">js<\/span>/<span class=\"attribute\">app.2d400df6.js<\/span>&gt;<\/span><span class=\"undefined\"><\/span><span class=\"tag\">&lt;/<span class=\"title\">script<\/span>&gt;<\/span><span class=\"tag\">&lt;/<span class=\"title\">body<\/span>&gt;<\/span><span class=\"tag\">&lt;/<span class=\"title\">html<\/span>&gt;<\/span><\/span><\/code><\/pre>","sent":"2019-06-24T14:10:45.916Z","fromUser":{"id":"5d10d1edd73408ce4fc45d98","username":"cisco92","displayName":"cisco92","url":"/cisco92","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/cisco92","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=128","v":15,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10df59d010383639c59219","text":"@cisco92 for Docker the API endpoint is `/api` not `/`. So if you want to post an alert using curl you need to send the request to `/api/alert`. See https://github.com/alerta/docker-alerta#how-to-use-this-image","html":"<span data-link-type=\"mention\" data-screen-name=\"cisco92\" class=\"mention\">@cisco92<\/span> for Docker the API endpoint is <code>/api<\/code> not <code>/<\/code>. So if you want to post an alert using curl you need to send the request to <code>/api/alert<\/code>. See <a href=\"https://github.com/alerta/docker-alerta#how-to-use-this-image\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/docker-alerta#how-to-use-this-image<\/a>","sent":"2019-06-24T14:34:01.153Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":18,"urls":[{"url":"https://github.com/alerta/docker-alerta#how-to-use-this-image"}],"mentions":[{"screenName":"cisco92","userId":"5d10d1edd73408ce4fc45d98","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10df6895efec2d3dfc5baf","text":"```\nThe API endpoint is at:\n\nhttp://<docker>:<port>/api\n```\n","html":"<pre><code>The API endpoint <span class=\"keyword\">is<\/span> at:\n\nhttp:<span class=\"comment\">//&lt;docker&gt;:&lt;port&gt;/api<\/span><\/code><\/pre>","sent":"2019-06-24T14:34:16.661Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d10dfac5e67ff0bcbdd388d","text":"Thank you soooo much! I thought about that there must be something different when running in Docker but couldn't find it! ","html":"Thank you soooo much! I thought about that there must be something different when running in Docker but couldn&#39;t find it! ","sent":"2019-06-24T14:35:24.064Z","fromUser":{"id":"5d10d1edd73408ce4fc45d98","username":"cisco92","displayName":"cisco92","url":"/cisco92","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/cisco92","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=128","v":15,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10e229f5b00456dfd2c7c1","text":"@Chandants assigning the severity like that will make the severity of the incoming alert ‘indeterminate’.","html":"<span data-link-type=\"mention\" data-screen-name=\"Chandants\" class=\"mention\">@Chandants<\/span> assigning the severity like that will make the severity of the incoming alert ‘indeterminate’.","sent":"2019-06-24T14:46:01.356Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":19,"urls":[],"mentions":[{"screenName":"Chandants","userId":"5cdd37cad73408ce4fc070ca","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10e279f5b00456dfd2cb36","text":"@TheMoralLowGround what happens if the call your plugin something different to `blackout`? ie. there is a built-in plugin with the same name and i’m not sure what having two with the same name will work.","html":"<span data-link-type=\"mention\" data-screen-name=\"TheMoralLowGround\" class=\"mention\">@TheMoralLowGround<\/span> what happens if the call your plugin something different to <code>blackout<\/code>? ie. there is a built-in plugin with the same name and i’m not sure what having two with the same name will work.","sent":"2019-06-24T14:47:21.112Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":20,"urls":[],"mentions":[{"screenName":"TheMoralLowGround","userId":"5d0c81b5d73408ce4fc4211a","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d10e3745e67ff0bcbdd5bca","text":"What API call can I use to change severity to normal when closing an alarm?","html":"What API call can I use to change severity to normal when closing an alarm?","sent":"2019-06-24T14:51:32.941Z","fromUser":{"id":"5d10d1edd73408ce4fc45d98","username":"cisco92","displayName":"cisco92","url":"/cisco92","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/cisco92","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/22174011?v=4&s=128","v":15,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d10e94c80f91e2d3e830ed9","text":"> Hi @satterly , I have enabled flapping,but I dont see the RateLimit line getting executed after uncommenting it. And I have imported it as shown below. Kindly assit.\n> \n> from alerta.exceptions import RateLimit\n> \n> alert.attributes['flapping'] = True\n>             # uncomment following line to stop alerts from being processed\n>              raise RateLimit(\"Flapping alert received more than %s times in %s seconds\" % (FLAPPING_COUNT, FLAPPING_WINDOW))\n\n@satterly . Kindly let me know how to enable/ how to execute RateLimit exception line in pre_receive of is_flapping function.","html":"<blockquote>\n<p>Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , I have enabled flapping,but I dont see the RateLimit line getting executed after uncommenting it. And I have imported it as shown below. Kindly assit.<\/p><p>from alerta.exceptions import RateLimit<\/p><p>alert.attributes[&#39;flapping&#39;] = True<\/p><pre><code>        # uncomment following line to stop alerts from being processed\n         raise RateLimit<span class=\"list\">(<span class=\"string\">\"Flapping alert received more than %s times in %s seconds\"<\/span> % <span class=\"list\">(<span class=\"keyword\">FLAPPING_COUNT<\/span>, FLAPPING_WINDOW)<\/span>)<\/span><\/code><\/pre><\/blockquote>\n<p><span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> . Kindly let me know how to enable/ how to execute RateLimit exception line in pre_receive of is_flapping function.<\/p>","sent":"2019-06-24T15:16:28.288Z","editedAt":"2019-06-24T15:17:06.629Z","fromUser":{"id":"5cdd37cad73408ce4fc070ca","username":"Chandants","displayName":"Chandants","url":"/Chandants","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Chandants","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=128","v":13,"gv":"4"},"readBy":20,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]},{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5d1129a21c1f606239f0bc5c","text":"@cisco92 if you close an alert it will be set to severity normal. is that not what is happening?","html":"<span data-link-type=\"mention\" data-screen-name=\"cisco92\" class=\"mention\">@cisco92<\/span> if you close an alert it will be set to severity normal. is that not what is happening?","sent":"2019-06-24T19:50:58.456Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":21,"urls":[],"mentions":[{"screenName":"cisco92","userId":"5d10d1edd73408ce4fc45d98","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d1129f918e3256238315680","text":"@Chandants can you raise an issue and fill in the issue template with exactly what you have done. step-by-step so I can reproduce the issue. Thanks.","html":"<span data-link-type=\"mention\" data-screen-name=\"Chandants\" class=\"mention\">@Chandants<\/span> can you raise an issue and fill in the issue template with exactly what you have done. step-by-step so I can reproduce the issue. Thanks.","sent":"2019-06-24T19:52:25.262Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":21,"urls":[],"mentions":[{"screenName":"Chandants","userId":"5cdd37cad73408ce4fc070ca","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

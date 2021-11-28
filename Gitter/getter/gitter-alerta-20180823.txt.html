@@ -1,0 +1,882 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/08/24"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/08/22"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">23<sup>rd</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5b7e025bac25fd11b57ee66e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b573772d73408ce4fa21e42 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/3032922?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/3032922?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ivan Savčić</div>
+      <div class='chat-item__username js-chat-item-from'>@isavcic</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e025bac25fd11b57ee66e' title="">Aug 23 2018 00:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok, i get it, the event names should be correlated. but how to specify more than one event name in prometheus alert rules?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e0692a491f45917893aae burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b573772d73408ce4fa21e42 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/3032922?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/3032922?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ivan Savčić</div>
+      <div class='chat-item__username js-chat-item-from'>@isavcic</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e0692a491f45917893aae' title="">Aug 23 2018 00:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p><span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>, some help with this would be appreciated. i have two alerts as such:</p><pre><code>- name: node_disk_space
+  rules:
+  - alert: <span class="keyword">Disk</span> <span class="keyword">Space</span>
+    expr: round(<span class="number">100</span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class="number">100</span>)&gt;<span class="number">80</span> and <span class="number">100</span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class="number">100</span>)&lt;<span class="number">90</span>)
+    for: <span class="number">5</span>m
+    labels:
+      service: <span class="keyword">Disk</span> <span class="keyword">Space</span>
+      correlate: <span class="keyword">Disk</span> <span class="keyword">Space</span>
+      severity: warning
+    annotations:
+      value: <span class="string">"{{ $value }}"</span>
+      summary: <span class="string">"Disk space at {{ $value }}%"</span>
+  - alert: <span class="keyword">Disk</span> <span class="keyword">Space</span>
+    expr: round(<span class="number">100</span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class="number">100</span>)&gt;=<span class="number">90</span>)
+    for: <span class="number">5</span>m
+    labels:
+      service: <span class="keyword">Disk</span> <span class="keyword">Space</span>
+      correlate: <span class="keyword">Disk</span> <span class="keyword">Space</span>
+      severity: critical
+    annotations:
+      value: <span class="string">"{{ $value }}"</span>
+      summary: <span class="string">"Disk space at {{ $value }}%"</span></code></pre><p>is this correlation correct? thanks!</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e072cf86b741b05acce8e burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      also, is it possible (necessary?) to specify multiple correlations, so i could rename the <code>alert:</code> to two different names, such as <code>Disk Space Warning</code> and <code>Disk Space Critical</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e69753815912505664ae8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e69753815912505664ae8' title="">Aug 23 2018 07:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="hasso" class="mention">@hasso</span> regarding the prometheus webhook changes, i’ve just realised that the word “label” is used to describe different things in prometheus. :frowning: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e69c39fc431606e9226be burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      There are metrics labels which describe different dimensions of data collected from a target.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e69e4844de2337cdc7ece burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And then there are alert labels that are defined in alertmanager.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e69eae580cd3c2aa2d15d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i was getting the two confused.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e716826bac95353c9e399 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e716826bac95353c9e399' title="">Aug 23 2018 08:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I’m going to revert most of the PR that meant that &quot;service&quot;, &quot;group&quot; and &quot;correlate&quot; needed to be annotations. However, i’m still not sure whether &quot;value&quot; should be a label or annotation.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e721c60f9ee7aa47c9155 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e721c60f9ee7aa47c9155' title="">Aug 23 2018 08:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      value must be annotation clearly, it can change with every prometheus -&gt; alertmanager notification
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e728b146618721cac8edf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e728b146618721cac8edf' title="">Aug 23 2018 08:38 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok. that make sense. so the original premise for this PR <a target="_blank" data-link-type="pr" data-issue="595" href="https://github.com/alerta/alerta/pull/595" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#595</a> was correct. I just took it too far and instead of just moving value from label to annotations i moved a few other things as well.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e7632146618721cac8ee7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e7632146618721cac8ee7' title="">Aug 23 2018 08:54 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      This should be fixed with <a target="_blank" data-link-type="pr" data-issue="610" href="https://github.com/alerta/alerta/pull/610" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#610</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e780788520a0c6ee5eeac burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e780788520a0c6ee5eeac' title="">Aug 23 2018 09:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Alerta server version 5.2.9 which has this fix is now available.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e7bb13815912505664b2b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7e7bb13815912505664b2b' title="">Aug 23 2018 09:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <strong>NOTE: This will be the last release to support Python 2.7</strong>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7e7bd53815912505664b2d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      See <a target="_blank" data-link-type="issue" data-issue="480" href="https://github.com/alerta/alerta/issues/480" data-provider="github" data-issue-repo="alerta/alerta" class="issue">alerta/alerta#480</a> for more details.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ea945d8d36815e57b6b70 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7ea945d8d36815e57b6b70' title="">Aug 23 2018 12:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Many thanks, <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>. Your support is top notch as always :).
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ebdcbfd3c641b06fb59c4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7ebdcbfd3c641b06fb59c4' title="">Aug 23 2018 13:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , I am facing issues for reject plugin.<br>alerta.plugins[33]: ERROR - Server plugin &#39;reject&#39; could not be loaded: name &#39;app&#39; is not defined [in /venv/lib/python3.7/site-packages/alerta/utils/plugin.py:33]
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ebdd394f8164c178bebf4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      can you please help me in this 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ec641ac25fd11b5834bef burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-556123fa15522ed4b3e0dce3 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/2698648?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/2698648?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Andreas Skoglund</div>
+      <div class='chat-item__username js-chat-item-from'>@Anderen2</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7ec641ac25fd11b5834bef' title="">Aug 23 2018 14:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="manavrawat10" class="mention">@manavrawat10</span> Could you provide some more information? Eg. which Alerta version are you running, how did you install it, in what way are you running it and what configuration are you running with? 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f11661d3a5711b68b6fce burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b573772d73408ce4fa21e42 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/3032922?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/3032922?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ivan Savčić</div>
+      <div class='chat-item__username js-chat-item-from'>@isavcic</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7f11661d3a5711b68b6fce' title="">Aug 23 2018 19:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i&#39;m getting some weird messages on slack when i&#39;ve correlated the warning and the critical prometheus checks for disk space:<pre><code>*WARNING: <span class="keyword">Disk</span> space at <span class="number">96</span>%*
+...
+Resource
+foo.bar.com:<span class="number">9100</span>
+Event
+<span class="keyword">Disk</span> <span class="keyword">Space</span> Critical
+Status
+<span class="keyword">Open</span>
+...</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f118c4be56c5918879af7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      why is it WARNING: when it&#39;s critical (that is the critical threshold as well)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f20fb8d59fb7567e18207 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7f20fb8d59fb7567e18207' title="">Aug 23 2018 21:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="isavcic" class="mention">@isavcic</span> don’t know. can you share the alertmanager yaml file for this alert?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f303560f9ee7aa4813161 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b573772d73408ce4fa21e42 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/3032922?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/3032922?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ivan Savčić</div>
+      <div class='chat-item__username js-chat-item-from'>@isavcic</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/23?at=5b7f303560f9ee7aa4813161' title="">Aug 23 2018 22:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      absolutely:<pre><code>- name: node_disk_space
+  rules:
+  - alert: <span class="keyword">Disk</span> <span class="keyword">Space</span> Warning
+    expr: round(<span class="number">100</span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class="number">100</span>)&gt;<span class="number">80</span> and <span class="number">100</span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class="number">100</span>)&lt;<span class="number">90</span>)
+    for: <span class="number">5</span>m
+    labels:
+      service: <span class="keyword">Disk</span> <span class="keyword">Space</span>
+      correlate: <span class="keyword">Disk</span> <span class="keyword">Space</span> Warning,<span class="keyword">Disk</span> <span class="keyword">Space</span> Critical
+      severity: warning
+    annotations:
+      value: <span class="string">"{{ $value }}"</span>
+      summary: <span class="string">"Disk space at {{ $value }}%"</span>
+  - alert: <span class="keyword">Disk</span> <span class="keyword">Space</span> Critical
+    expr: round(<span class="number">100</span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class="number">100</span>)&gt;=<span class="number">90</span>)
+    for: <span class="number">5</span>m
+    labels:
+      service: <span class="keyword">Disk</span> <span class="keyword">Space</span>
+      correlate: <span class="keyword">Disk</span> <span class="keyword">Space</span> Warning,<span class="keyword">Disk</span> <span class="keyword">Space</span> Critical
+    annotations:
+      value: <span class="string">"{{ $value }}"</span>
+      summary: <span class="string">"Disk space at {{ $value }}%"</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f304df86b741b05b3ca51 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      oh snap
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f3057ac25fd11b585f71a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it seems that i&#39;ve cropped the severity from that critical
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f307ef5402f32aa8162a2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      my apologies, my bad
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f30bdd8d36815e57eb9ff burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      sorry
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f30e9f86b741b05b3ce13 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      btw it should perhaps be added to the README.md for prometheus config that <code>service</code> and <code>correlate</code> are split on comma
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f30f9f5402f32aa8164bc burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      (found that via the code for prometheus plugin)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7f310efd3c641b06fe2aca burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      what has moved to annotations? only <code>value</code>, right?
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$Yl44xyfm30Sbbi04ylMBphmJAdlYuG8nqmZS43mK0FY=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-08-23T00:00:00.000Z","nextDate":"2018-08-24T23:59:59.999Z","previousDate":"2018-08-22T00:00:00.000Z","messages":[{"id":"5b7e025bac25fd11b57ee66e","text":"ok, i get it, the event names should be correlated. but how to specify more than one event name in prometheus alert rules?","html":"ok, i get it, the event names should be correlated. but how to specify more than one event name in prometheus alert rules?","sent":"2018-08-23T00:39:55.484Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7e0692a491f45917893aae","text":"@satterly, some help with this would be appreciated. i have two alerts as such:\n```\n- name: node_disk_space\n  rules:\n  - alert: Disk Space\n    expr: round(100-(node_filesystem_avail_bytes/node_filesystem_size_bytes*100)>80 and 100-(node_filesystem_avail_bytes/node_filesystem_size_bytes*100)<90)\n    for: 5m\n    labels:\n      service: Disk Space\n      correlate: Disk Space\n      severity: warning\n    annotations:\n      value: \"{{ $value }}\"\n      summary: \"Disk space at {{ $value }}%\"\n  - alert: Disk Space\n    expr: round(100-(node_filesystem_avail_bytes/node_filesystem_size_bytes*100)>=90)\n    for: 5m\n    labels:\n      service: Disk Space\n      correlate: Disk Space\n      severity: critical\n    annotations:\n      value: \"{{ $value }}\"\n      summary: \"Disk space at {{ $value }}%\"\n```\nis this correlation correct? thanks!","html":"<p><span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>, some help with this would be appreciated. i have two alerts as such:<\/p><pre><code>- name: node_disk_space\n  rules:\n  - alert: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span>\n    expr: round(<span class=\"number\">100<\/span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class=\"number\">100<\/span>)&gt;<span class=\"number\">80<\/span> and <span class=\"number\">100<\/span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class=\"number\">100<\/span>)&lt;<span class=\"number\">90<\/span>)\n    for: <span class=\"number\">5<\/span>m\n    labels:\n      service: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span>\n      correlate: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span>\n      severity: warning\n    annotations:\n      value: <span class=\"string\">\"{{ $value }}\"<\/span>\n      summary: <span class=\"string\">\"Disk space at {{ $value }}%\"<\/span>\n  - alert: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span>\n    expr: round(<span class=\"number\">100<\/span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class=\"number\">100<\/span>)&gt;=<span class=\"number\">90<\/span>)\n    for: <span class=\"number\">5<\/span>m\n    labels:\n      service: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span>\n      correlate: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span>\n      severity: critical\n    annotations:\n      value: <span class=\"string\">\"{{ $value }}\"<\/span>\n      summary: <span class=\"string\">\"Disk space at {{ $value }}%\"<\/span><\/code><\/pre><p>is this correlation correct? thanks!<\/p>","sent":"2018-08-23T00:57:54.488Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7e072cf86b741b05acce8e","text":"also, is it possible (necessary?) to specify multiple correlations, so i could rename the `alert:` to two different names, such as `Disk Space Warning` and `Disk Space Critical`","html":"also, is it possible (necessary?) to specify multiple correlations, so i could rename the <code>alert:<\/code> to two different names, such as <code>Disk Space Warning<\/code> and <code>Disk Space Critical<\/code>","sent":"2018-08-23T01:00:28.044Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7e69753815912505664ae8","text":"@hasso regarding the prometheus webhook changes, i’ve just realised that the word “label” is used to describe different things in prometheus. :frowning: ","html":"<span data-link-type=\"mention\" data-screen-name=\"hasso\" class=\"mention\">@hasso<\/span> regarding the prometheus webhook changes, i’ve just realised that the word “label” is used to describe different things in prometheus. :frowning: ","sent":"2018-08-23T07:59:49.238Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[{"screenName":"hasso","userId":"56790dc316b6c7089cbfd8d3","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7e69c39fc431606e9226be","text":"There are metrics labels which describe different dimensions of data collected from a target.","html":"There are metrics labels which describe different dimensions of data collected from a target.","sent":"2018-08-23T08:01:07.933Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7e69e4844de2337cdc7ece","text":"And then there are alert labels that are defined in alertmanager.","html":"And then there are alert labels that are defined in alertmanager.","sent":"2018-08-23T08:01:40.015Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7e69eae580cd3c2aa2d15d","text":"i was getting the two confused.","html":"i was getting the two confused.","sent":"2018-08-23T08:01:46.700Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7e716826bac95353c9e399","text":"I’m going to revert most of the PR that meant that \"service\", \"group\" and \"correlate\" needed to be annotations. However, i’m still not sure whether \"value\" should be a label or annotation.","html":"I’m going to revert most of the PR that meant that &quot;service&quot;, &quot;group&quot; and &quot;correlate&quot; needed to be annotations. However, i’m still not sure whether &quot;value&quot; should be a label or annotation.","sent":"2018-08-23T08:33:44.103Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7e721c60f9ee7aa47c9155","text":"value must be annotation clearly, it can change with every prometheus -> alertmanager notification","html":"value must be annotation clearly, it can change with every prometheus -&gt; alertmanager notification","sent":"2018-08-23T08:36:44.512Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7e728b146618721cac8edf","text":"ok. that make sense. so the original premise for this PR https://github.com/alerta/alerta/pull/595 was correct. I just took it too far and instead of just moving value from label to annotations i moved a few other things as well.","html":"ok. that make sense. so the original premise for this PR <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"595\" href=\"https://github.com/alerta/alerta/pull/595\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#595<\/a> was correct. I just took it too far and instead of just moving value from label to annotations i moved a few other things as well.","sent":"2018-08-23T08:38:35.255Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta","number":"595"}],"meta":[],"v":1,"burstStart":true},{"id":"5b7e7632146618721cac8ee7","text":"This should be fixed with https://github.com/alerta/alerta/pull/610","html":"This should be fixed with <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"610\" href=\"https://github.com/alerta/alerta/pull/610\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#610<\/a>","sent":"2018-08-23T08:54:10.340Z","editedAt":"2018-08-23T08:54:27.591Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta","number":"610"}],"meta":[],"v":2,"burstStart":true},{"id":"5b7e780788520a0c6ee5eeac","text":"Alerta server version 5.2.9 which has this fix is now available.","html":"Alerta server version 5.2.9 which has this fix is now available.","sent":"2018-08-23T09:01:59.878Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7e7bb13815912505664b2b","text":"**NOTE: This will be the last release to support Python 2.7**","html":"<strong>NOTE: This will be the last release to support Python 2.7<\/strong>","sent":"2018-08-23T09:17:37.125Z","editedAt":"2018-08-23T09:17:47.682Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5b7e7bd53815912505664b2d","text":"See https://github.com/alerta/alerta/issues/480 for more details.","html":"See <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"480\" href=\"https://github.com/alerta/alerta/issues/480\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"issue\">alerta/alerta#480<\/a> for more details.","sent":"2018-08-23T09:18:13.641Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta","number":"480"}],"meta":[],"v":1,"burstStart":false},{"id":"5b7ea945d8d36815e57b6b70","text":"Many thanks, @satterly. Your support is top notch as always :).","html":"Many thanks, <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>. Your support is top notch as always :).","sent":"2018-08-23T12:32:05.879Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":12,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7ebdcbfd3c641b06fb59c4","text":"hi @satterly , I am facing issues for reject plugin. \nalerta.plugins[33]: ERROR - Server plugin 'reject' could not be loaded: name 'app' is not defined [in /venv/lib/python3.7/site-packages/alerta/utils/plugin.py:33]\n","html":"hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , I am facing issues for reject plugin.<br>alerta.plugins[33]: ERROR - Server plugin &#39;reject&#39; could not be loaded: name &#39;app&#39; is not defined [in /venv/lib/python3.7/site-packages/alerta/utils/plugin.py:33]","sent":"2018-08-23T13:59:39.976Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7ebdd394f8164c178bebf4","text":"can you please help me in this ","html":"can you please help me in this ","sent":"2018-08-23T13:59:47.500Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7ec641ac25fd11b5834bef","text":"@manavrawat10 Could you provide some more information? Eg. which Alerta version are you running, how did you install it, in what way are you running it and what configuration are you running with? ","html":"<span data-link-type=\"mention\" data-screen-name=\"manavrawat10\" class=\"mention\">@manavrawat10<\/span> Could you provide some more information? Eg. which Alerta version are you running, how did you install it, in what way are you running it and what configuration are you running with? ","sent":"2018-08-23T14:35:45.050Z","editedAt":"2018-08-23T14:38:22.096Z","fromUser":{"id":"556123fa15522ed4b3e0dce3","username":"Anderen2","displayName":"Andreas Skoglund","url":"/Anderen2","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/Anderen2","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/2698648?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/2698648?v=4&s=128","v":6,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"manavrawat10","userId":"5a0147bad73408ce4f7d7908","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5b7f11661d3a5711b68b6fce","text":"i'm getting some weird messages on slack when i've correlated the warning and the critical prometheus checks for disk space:\n\n```\n*WARNING: Disk space at 96%*\n...\nResource\nfoo.bar.com:9100\nEvent\nDisk Space Critical\nStatus\nOpen\n...\n```","html":"i&#39;m getting some weird messages on slack when i&#39;ve correlated the warning and the critical prometheus checks for disk space:<pre><code>*WARNING: <span class=\"keyword\">Disk<\/span> space at <span class=\"number\">96<\/span>%*\n...\nResource\nfoo.bar.com:<span class=\"number\">9100<\/span>\nEvent\n<span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span> Critical\nStatus\n<span class=\"keyword\">Open<\/span>\n...<\/code><\/pre>","sent":"2018-08-23T19:56:22.099Z","editedAt":"2018-08-23T19:56:37.384Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5b7f118c4be56c5918879af7","text":"why is it WARNING: when it's critical (that is the critical threshold as well)","html":"why is it WARNING: when it&#39;s critical (that is the critical threshold as well)","sent":"2018-08-23T19:57:00.239Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7f20fb8d59fb7567e18207","text":"@isavcic don’t know. can you share the alertmanager yaml file for this alert?","html":"<span data-link-type=\"mention\" data-screen-name=\"isavcic\" class=\"mention\">@isavcic<\/span> don’t know. can you share the alertmanager yaml file for this alert?","sent":"2018-08-23T21:02:51.614Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"isavcic","userId":"5b573772d73408ce4fa21e42","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7f303560f9ee7aa4813161","text":"absolutely:\n\n```\n- name: node_disk_space\n  rules:\n  - alert: Disk Space Warning\n    expr: round(100-(node_filesystem_avail_bytes/node_filesystem_size_bytes*100)>80 and 100-(node_filesystem_avail_bytes/node_filesystem_size_bytes*100)<90)\n    for: 5m\n    labels:\n      service: Disk Space\n      correlate: Disk Space Warning,Disk Space Critical\n      severity: warning\n    annotations:\n      value: \"{{ $value }}\"\n      summary: \"Disk space at {{ $value }}%\"\n  - alert: Disk Space Critical\n    expr: round(100-(node_filesystem_avail_bytes/node_filesystem_size_bytes*100)>=90)\n    for: 5m\n    labels:\n      service: Disk Space\n      correlate: Disk Space Warning,Disk Space Critical\n    annotations:\n      value: \"{{ $value }}\"\n      summary: \"Disk space at {{ $value }}%\"\n```","html":"absolutely:<pre><code>- name: node_disk_space\n  rules:\n  - alert: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span> Warning\n    expr: round(<span class=\"number\">100<\/span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class=\"number\">100<\/span>)&gt;<span class=\"number\">80<\/span> and <span class=\"number\">100<\/span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class=\"number\">100<\/span>)&lt;<span class=\"number\">90<\/span>)\n    for: <span class=\"number\">5<\/span>m\n    labels:\n      service: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span>\n      correlate: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span> Warning,<span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span> Critical\n      severity: warning\n    annotations:\n      value: <span class=\"string\">\"{{ $value }}\"<\/span>\n      summary: <span class=\"string\">\"Disk space at {{ $value }}%\"<\/span>\n  - alert: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span> Critical\n    expr: round(<span class=\"number\">100<\/span>-(node_filesystem_avail_bytes/node_filesystem_size_bytes*<span class=\"number\">100<\/span>)&gt;=<span class=\"number\">90<\/span>)\n    for: <span class=\"number\">5<\/span>m\n    labels:\n      service: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span>\n      correlate: <span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span> Warning,<span class=\"keyword\">Disk<\/span> <span class=\"keyword\">Space<\/span> Critical\n    annotations:\n      value: <span class=\"string\">\"{{ $value }}\"<\/span>\n      summary: <span class=\"string\">\"Disk space at {{ $value }}%\"<\/span><\/code><\/pre>","sent":"2018-08-23T22:07:49.176Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7f304df86b741b05b3ca51","text":"oh snap","html":"oh snap","sent":"2018-08-23T22:08:13.829Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7f3057ac25fd11b585f71a","text":"it seems that i've cropped the severity from that critical","html":"it seems that i&#39;ve cropped the severity from that critical","sent":"2018-08-23T22:08:23.768Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7f307ef5402f32aa8162a2","text":"my apologies, my bad","html":"my apologies, my bad","sent":"2018-08-23T22:09:02.897Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7f30bdd8d36815e57eb9ff","text":"sorry","html":"sorry","sent":"2018-08-23T22:10:05.597Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7f30e9f86b741b05b3ce13","text":"btw it should perhaps be added to the README.md for prometheus config that `service` and `correlate` are split on comma","html":"btw it should perhaps be added to the README.md for prometheus config that <code>service<\/code> and <code>correlate<\/code> are split on comma","sent":"2018-08-23T22:10:49.007Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7f30f9f5402f32aa8164bc","text":"(found that via the code for prometheus plugin)","html":"(found that via the code for prometheus plugin)","sent":"2018-08-23T22:11:05.042Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7f310efd3c641b06fe2aca","text":"what has moved to annotations? only `value`, right?","html":"what has moved to annotations? only <code>value<\/code>, right?","sent":"2018-08-23T22:11:26.623Z","editedAt":"2018-08-23T22:12:03.237Z","fromUser":{"id":"5b573772d73408ce4fa21e42","username":"isavcic","displayName":"Ivan Savčić","url":"/isavcic","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/isavcic","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/3032922?v=4&s=128","v":14,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

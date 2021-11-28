@@ -1,0 +1,646 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/03/09"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/03/07"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">8<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Mar 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5c822cb486e34a126fa787fc burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c63fa80d73408ce4fb7ac04 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/206623?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/206623?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Linuxtechie</div>
+      <div class='chat-item__username js-chat-item-from'>@linuxtechie</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c822cb486e34a126fa787fc' title="">Mar 08 2019 08:49 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> lets say I have following transition ok-&gt;high-&gt;high-&gt;disaster, now in the json data I cant find the duplicate count of high, even though high is available. Is that data available and not just shown?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c823bb60a6b915163f56be5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c823bb60a6b915163f56be5' title="">Mar 08 2019 09:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      it won’t be available in a pre-receive plugin if that’s where you’re looking as it hasn’t hit the database yet at that point. Alerta only knows it’s a duplicate after checking the database which you will see in a post-receive plugin.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c823bbad3b35423cb844035 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      is that the question?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c824da2f895944c085e6b24 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c63fa80d73408ce4fb7ac04 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/206623?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/206623?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Linuxtechie</div>
+      <div class='chat-item__username js-chat-item-from'>@linuxtechie</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c824da2f895944c085e6b24' title="">Mar 08 2019 11:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ^Nope, after all processing is the data available? So that it can be queried via the api.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c8253ae1c597e5db6a31198 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c8253ae1c597e5db6a31198' title="">Mar 08 2019 11:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Sure. There’s an example API response  here … <a href="https://docs.alerta.io/en/latest/api/alert.html#example" rel="nofollow noopener noreferrer" target="_blank" class="link">https://docs.alerta.io/en/latest/api/alert.html#example</a> that shows the “duplicateCount” attribute. Is that what you want?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c8298df7851db13498c82f9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5bc46f03d73408ce4fab7b92 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/136214?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/136214?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>mgiammarco</div>
+      <div class='chat-item__username js-chat-item-from'>@mgiammarco</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c8298df7851db13498c82f9' title="">Mar 08 2019 16:31 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      May I suggest you to add your software to alternativeto.net ? you will increase its visibility, I discovered it by accident reading kapacitor documentation
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c8299b5d1e7281f09f77e71 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c8299b5d1e7281f09f77e71' title="">Mar 08 2019 16:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I didn’t know you could.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c82b91686e34a126fab66c0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c82b91686e34a126fab66c0' title="">Mar 08 2019 18:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hey <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  a qq.  I notice that API key is not needed to add a blackout rule. can you let me know how to restrict it
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c82baccd1e7281f09f84fd3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c82baccd1e7281f09f84fd3' title="">Mar 08 2019 18:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I dont have <code>AUTH_REQUIRED = True</code> because we want users to see the alerts without logging in. but perform actions in UI only after they are logged in. So we have SSO for that.<br>but api usage we thought api key is needed but it seems it not needed
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c82d03d25e4e24c07397eba burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c82d03d25e4e24c07397eba' title="">Mar 08 2019 20:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Nothing requires an API key if you set <code>AUTH_REQUIRED=False</code>.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c82d09e7851db13498dfcb2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Not sure why you think API Key isn’t needed to create a blackout rule. You need “write:blackouts” scope as you can see here in the code <a href="https://github.com/alerta/alerta/blob/master/alerta/views/blackouts.py#L19" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/blob/master/alerta/views/blackouts.py#L19</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c82d0f71c597e5db6a682ea burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If you want anyone to see the alerts but only authorized users to make changes why not turn on authentication and create a “read only” user with an easy password like “alerta” or something that anyone can use. But restrict write access to people who log in with a privileged account.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c82ea08bf7990126e70ce00 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/03/08?at=5c82ea08bf7990126e70ce00' title="">Mar 08 2019 22:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I thought ‘AUTH_REQUIRED’ would not affect API.then in my case I would need to make it true to ensure that API needs key auth as cant have open APIs. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c82ea193162ec7bc73f2e59 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      So my understanding is correct? 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c82eab50a6b915163fa32e5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Also webhook would require authentication 
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$LNSdvjKWqPLeW3M9kM9GEcNFKR9lVEjSOMv4v9AVrho=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-03-08T00:00:00.000Z","nextDate":"2019-03-09T23:59:59.999Z","previousDate":"2019-03-07T00:00:00.000Z","messages":[{"id":"5c822cb486e34a126fa787fc","text":"Hi @satterly lets say I have following transition ok->high->high->disaster, now in the json data I cant find the duplicate count of high, even though high is available. Is that data available and not just shown?","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> lets say I have following transition ok-&gt;high-&gt;high-&gt;disaster, now in the json data I cant find the duplicate count of high, even though high is available. Is that data available and not just shown?","sent":"2019-03-08T08:49:56.900Z","fromUser":{"id":"5c63fa80d73408ce4fb7ac04","username":"linuxtechie","displayName":"Linuxtechie","url":"/linuxtechie","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/linuxtechie","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/206623?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/206623?v=4&s=128","v":13,"gv":"4"},"readBy":18,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c823bb60a6b915163f56be5","text":"it won’t be available in a pre-receive plugin if that’s where you’re looking as it hasn’t hit the database yet at that point. Alerta only knows it’s a duplicate after checking the database which you will see in a post-receive plugin.","html":"it won’t be available in a pre-receive plugin if that’s where you’re looking as it hasn’t hit the database yet at that point. Alerta only knows it’s a duplicate after checking the database which you will see in a post-receive plugin.","sent":"2019-03-08T09:53:58.083Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c823bbad3b35423cb844035","text":"is that the question?","html":"is that the question?","sent":"2019-03-08T09:54:02.492Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c824da2f895944c085e6b24","text":"^Nope, after all processing is the data available? So that it can be queried via the api.","html":"^Nope, after all processing is the data available? So that it can be queried via the api.","sent":"2019-03-08T11:10:26.676Z","fromUser":{"id":"5c63fa80d73408ce4fb7ac04","username":"linuxtechie","displayName":"Linuxtechie","url":"/linuxtechie","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/linuxtechie","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/206623?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/206623?v=4&s=128","v":13,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c8253ae1c597e5db6a31198","text":"Sure. There’s an example API response  here … https://docs.alerta.io/en/latest/api/alert.html#example that shows the “duplicateCount” attribute. Is that what you want?","html":"Sure. There’s an example API response  here … <a href=\"https://docs.alerta.io/en/latest/api/alert.html#example\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://docs.alerta.io/en/latest/api/alert.html#example<\/a> that shows the “duplicateCount” attribute. Is that what you want?","sent":"2019-03-08T11:36:14.266Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":18,"urls":[{"url":"https://docs.alerta.io/en/latest/api/alert.html#example"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c8298df7851db13498c82f9","text":"May I suggest you to add your software to alternativeto.net ? you will increase its visibility, I discovered it by accident reading kapacitor documentation","html":"May I suggest you to add your software to alternativeto.net ? you will increase its visibility, I discovered it by accident reading kapacitor documentation","sent":"2019-03-08T16:31:27.391Z","fromUser":{"id":"5bc46f03d73408ce4fab7b92","username":"mgiammarco","displayName":"mgiammarco","url":"/mgiammarco","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/mgiammarco","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/136214?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/136214?v=4&s=128","v":9,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c8299b5d1e7281f09f77e71","text":"I didn’t know you could.","html":"I didn’t know you could.","sent":"2019-03-08T16:35:01.246Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c82b91686e34a126fab66c0","text":"hey @satterly  a qq.  I notice that API key is not needed to add a blackout rule. can you let me know how to restrict it","html":"hey <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  a qq.  I notice that API key is not needed to add a blackout rule. can you let me know how to restrict it","sent":"2019-03-08T18:48:54.393Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":19,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c82baccd1e7281f09f84fd3","text":"I dont have `AUTH_REQUIRED = True` because we want users to see the alerts without logging in. but perform actions in UI only after they are logged in. So we have SSO for that.\nbut api usage we thought api key is needed but it seems it not needed","html":"I dont have <code>AUTH_REQUIRED = True<\/code> because we want users to see the alerts without logging in. but perform actions in UI only after they are logged in. So we have SSO for that.<br>but api usage we thought api key is needed but it seems it not needed","sent":"2019-03-08T18:56:12.226Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c82d03d25e4e24c07397eba","text":"Nothing requires an API key if you set `AUTH_REQUIRED=False`.","html":"Nothing requires an API key if you set <code>AUTH_REQUIRED=False<\/code>.","sent":"2019-03-08T20:27:41.694Z","editedAt":"2019-03-08T20:27:51.333Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5c82d09e7851db13498dfcb2","text":"Not sure why you think API Key isn’t needed to create a blackout rule. You need “write:blackouts” scope as you can see here in the code https://github.com/alerta/alerta/blob/master/alerta/views/blackouts.py#L19","html":"Not sure why you think API Key isn’t needed to create a blackout rule. You need “write:blackouts” scope as you can see here in the code <a href=\"https://github.com/alerta/alerta/blob/master/alerta/views/blackouts.py#L19\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/blob/master/alerta/views/blackouts.py#L19<\/a>","sent":"2019-03-08T20:29:18.478Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":20,"urls":[{"url":"https://github.com/alerta/alerta/blob/master/alerta/views/blackouts.py#L19"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c82d0f71c597e5db6a682ea","text":"If you want anyone to see the alerts but only authorized users to make changes why not turn on authentication and create a “read only” user with an easy password like “alerta” or something that anyone can use. But restrict write access to people who log in with a privileged account.","html":"If you want anyone to see the alerts but only authorized users to make changes why not turn on authentication and create a “read only” user with an easy password like “alerta” or something that anyone can use. But restrict write access to people who log in with a privileged account.","sent":"2019-03-08T20:30:47.167Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c82ea08bf7990126e70ce00","text":"I thought ‘AUTH_REQUIRED’ would not affect API.then in my case I would need to make it true to ensure that API needs key auth as cant have open APIs. ","html":"I thought ‘AUTH_REQUIRED’ would not affect API.then in my case I would need to make it true to ensure that API needs key auth as cant have open APIs. ","sent":"2019-03-08T22:17:44.292Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c82ea193162ec7bc73f2e59","text":"So my understanding is correct? ","html":"So my understanding is correct? ","sent":"2019-03-08T22:18:01.750Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":21,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c82eab50a6b915163fa32e5","text":"Also webhook would require authentication ","html":"Also webhook would require authentication ","sent":"2019-03-08T22:20:37.159Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":21,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

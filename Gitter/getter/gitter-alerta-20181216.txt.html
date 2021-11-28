@@ -1,0 +1,980 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/12/17"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/12/15"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">16<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Dec 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5c16ae72b512ce0b9d9f157a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16ae72b512ce0b9d9f157a' title="">Dec 16 2018 19:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p><span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>, looks like Alerta 5.x and 6.x both have a huge security issue. Or at least it looks like.</p><p>We&#39;ve found that API keys are available for everyone, even for anonymous users. I.e. when someone hits <a href="https://alerta.somedomain.tld/api/keys" rel="nofollow noopener noreferrer" target="_blank" class="link">https://alerta.somedomain.tld/api/keys</a> - he would get ALL api keys. Even if in Alerta 6.x you set USER_DEFAULT_SCOPES = [ &#39;read:alerts&#39;, &#39;read:blackouts&#39; ]. Is it bug or we missed something (e.g. some flag in settings?). Same goes for <a href="https://alerta.somedomain.tld/api/management/status" rel="nofollow noopener noreferrer" target="_blank" class="link">https://alerta.somedomain.tld/api/management/status</a>.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16b6f70a86bc6f8dba9c54 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16b6f70a86bc6f8dba9c54' title="">Dec 16 2018 20:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Discussion in <a target="_blank" data-link-type="issue" data-issue="784" href="https://github.com/alerta/alerta/issues/784" data-provider="github" data-issue-repo="alerta/alerta" class="issue">alerta/alerta#784</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16bacdae1ab5539ef814b8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16bacdae1ab5539ef814b8' title="">Dec 16 2018 20:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what do you get if you run …<pre><code><span class="variable">$ </span>curl <span class="symbol">http:</span>/<span class="regexp">/localhost:8080/management</span><span class="regexp">/properties | grep ^AUTH_REQUIRED</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16baf80a145b0e24aeb12d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      using your Alerta API URL.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16bceec428e9539d4c284f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16bceec428e9539d4c284f' title="">Dec 16 2018 21:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>if AUTH_REQUIRED=True, then this:</p><p>$ curl -s <a href="http://localhost:8080/management/properties" rel="nofollow noopener noreferrer" target="_blank" class="link">http://localhost:8080/management/properties</a><br>{<br>  &quot;code&quot;: 401,<br>  &quot;errors&quot;: null,<br>  &quot;message&quot;: &quot;Missing authorization API Key or Bearer Token&quot;,<br>  &quot;status&quot;: &quot;error&quot;<br>}</p><p>But with AUTH_REQUIRED=False we still can get not only current params, but also all of API keys. Is it expected behavior?</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16bd65e86b0460b3aad418 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16bd65e86b0460b3aad418' title="">Dec 16 2018 21:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes. “AUTH_REQUIRED” means “Authentication is required for protected endpoints”. If you set “AUTH_REQUIRED=False” then do not require any authentication for anything — even if you ask for a list of all API Keys.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16bdc9039551387faaea43 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16bdc9039551387faaea43' title="">Dec 16 2018 21:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I.e. we have &quot;local&quot; users with different roles (in alerta&#39;s database). And as expected they have different permissions in alerta web ui after authorization. But what the point of creating users, when any of them could get all of API keys? Even those, which have admin permissions. 0_o
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16be16b4c74555ccdacabd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16be16b4c74555ccdacabd' title="">Dec 16 2018 21:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      There are few reasons (if any) to have users if  you set “AUTH_REQUIRED=False”.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16be44ae1ab5539ef82813 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Why would you set “AUTH_REQUIRED=False” if you want to protect API keys?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16be56b18e825e3b3ca082 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16be56b18e825e3b3ca082' title="">Dec 16 2018 21:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      To be clear ... I&#39;m not insisting on anything, just trying to understand. To be honest, it&#39;s very confusing behavior. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16be70039551387faaed7a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16be70039551387faaed7a' title="">Dec 16 2018 21:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I’m confused too :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16bebbc428e9539d4c32bd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16bebbc428e9539d4c32bd' title="">Dec 16 2018 21:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p>Why would you set “AUTH_REQUIRED=False” if you want to protect API keys?</p></blockquote>
+<p>We just found it) When we first time read the docs and tested Alerta&#39;s behavior, the only difference that we found - that anonymous users can&#39;t see alerts list and webhooks required authorization.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16bef9039551387faaf235 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>From the docs:</p><blockquote>
+<p>AUTH_REQUIRED - users must authenticate when using web UI or command-line tool (default False)</p></blockquote>
+<p>Looks like we didn&#39;t read carefully enough. Our mistake, though.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16bf28e806954a9a2b12ad burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p>There are few reasons (if any) to have users if  you set “AUTH_REQUIRED=False”.</p></blockquote>
+<p>Could you, please, share few examples (if you know such)?</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16bfd8e86b0460b3aae534 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16bfd8e86b0460b3aae534' title="">Dec 16 2018 21:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      One possible use case is if operators want to watch alerts then you must login first so that Alerta knows who has clicked the “watch” button. However, perhaps your Alerta API is on a protected network, not exposed to the internet, so there is no security reason to enforce authentication.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c017e806954a9a2b18ce burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      So by setting “AUTH_REQUIRED=False” you could allow anyone to do anything on alerta but if operators want to watch an alert they need to login first.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c14072f31355cd66c58e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c14072f31355cd66c58e' title="">Dec 16 2018 21:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Another possible use case could be to ensure that all systems that send alerts to Alerta use an API key so that you can revoke it if you don’t want alerts from that system any more. You can still have “AUTH_REQUIRED=False” but if an invalid API is presented as credential it will be denied.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c169e806954a9a2b1f57 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I have configured <code>AUTH_REQUIRED=False</code> and sent an invalid API key …<pre><code><span class="variable">$ </span>curl <span class="symbol">http:</span>/<span class="regexp">/localhost:8080/keys</span> -<span class="constant">H </span><span class="string">'X-API-Key: Foo'</span>
+{<span class="string">"code"</span><span class="symbol">:</span><span class="number">401</span>,<span class="string">"errors"</span><span class="symbol">:null</span>,<span class="string">"message"</span><span class="symbol">:<span class="string">"API key parameter 'Foo' is invalid"</span></span>,<span class="string">"status"</span><span class="symbol">:<span class="string">"error"</span></span>}</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c17db18e825e3b3cb48f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but if I remove the API Key header the request will succeed.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c1abe806954a9a2b20f1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c1abe806954a9a2b20f1' title="">Dec 16 2018 21:20 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p>Another possible use case could be to ensure that all systems that send alerts to Alerta use an API key so that you can revoke it if you don’t want alerts from that system any more. You can still have “AUTH_REQUIRED=False” but if an invalid API is presented as credential it will be denied.</p></blockquote>
+<p>But without specifying api keys those systems still could write to a webhook? Because we have pingdom, alertmanager and grafana pointed to Alerta&#39;s webhooks. And all of them successfully send alerts to Alerta without any API key.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c1ec039551387fab0480 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c1ec039551387fab0480' title="">Dec 16 2018 21:21 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      sure. that’s what I said. If you have <code>AUTH_REQUIRED=False</code> nothing <em>requires</em> an API key. But if you present an API key and it is invalid, then the request will be denied.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c208b512ce0b9d9f8ad5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c208b512ce0b9d9f8ad5' title="">Dec 16 2018 21:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p>but if I remove the API Key header the request will succeed.</p></blockquote>
+<p>Yep, i meant exactly this in previous question. This looks little inconsistent, imho. Or at least an &quot;unexpected&quot; 0_o</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c21e72f31355cd66cc6e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c21e72f31355cd66cc6e' title="">Dec 16 2018 21:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      is this the source of confusion?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c255b512ce0b9d9f8e16 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c255b512ce0b9d9f8e16' title="">Dec 16 2018 21:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Nope, the real reason for all of this - it&#39;s our &quot;unverified&quot; assumptions about Alerta&#39;s behavior. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c272b4c74555ccdae3b4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c272b4c74555ccdae3b4' title="">Dec 16 2018 21:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Oh. ok. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c286987052387ef78d5f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c286987052387ef78d5f' title="">Dec 16 2018 21:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      So, back to our recent discussion about improving Alerta&#39;s documentation. Now we have two sections to improve - about Google OAuth (missing &quot;roles/groups&quot;) and about enforcing/disabling authentication (and following consequences).
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c2c4039551387fab0950 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Anyway, thank you very much for the information. And sorry for wasting your time 0:)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c2dfb18e825e3b3cbe40 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c2dfb18e825e3b3cbe40' title="">Dec 16 2018 21:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No problem. I’ll take those suggestions to improve the documentation on board.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c3edc428e9539d4c4e2c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c3edc428e9539d4c4e2c' title="">Dec 16 2018 21:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>, i&#39;ll try to find some time on this week and join you in <a target="_blank" data-link-type="issue" data-issue="51" data-issue-repo="alerta/alerta-docs" class="issue">alerta/alerta-docs#51</a>.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c431ca317a0e25d9b6ba burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c431ca317a0e25d9b6ba' title="">Dec 16 2018 21:31 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks a lot. Even if you don’t have time to actually write (or rewrite) the documentation, just pointing out where it is missing or needs further clarification would help.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c16c4d0e806954a9a2b35e9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59c2d5e6d73408ce4f76a75c avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/5829393?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Evgeniy K.</div>
+      <div class='chat-item__username js-chat-item-from'>@n0guest</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/12/16?at=5c16c4d0e806954a9a2b35e9' title="">Dec 16 2018 21:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok, i&#39;ll try to re-read the docs and will get back to you at <a target="_blank" data-link-type="issue" data-issue="51" data-issue-repo="alerta/alerta-docs" class="issue">alerta/alerta-docs#51</a>. Thanks again for help.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$ADmFgZI5R754L4q/Cwhop1xGPpOKNEKsCxxrf0nNsS0=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-12-16T00:00:00.000Z","nextDate":"2018-12-17T23:59:59.999Z","previousDate":"2018-12-15T00:00:00.000Z","messages":[{"id":"5c16ae72b512ce0b9d9f157a","text":"@satterly, looks like Alerta 5.x and 6.x both have a huge security issue. Or at least it looks like.\n\nWe've found that API keys are available for everyone, even for anonymous users. I.e. when someone hits https://alerta.somedomain.tld/api/keys - he would get ALL api keys. Even if in Alerta 6.x you set USER_DEFAULT_SCOPES = [ 'read:alerts', 'read:blackouts' ]. Is it bug or we missed something (e.g. some flag in settings?). Same goes for https://alerta.somedomain.tld/api/management/status.","html":"<p><span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>, looks like Alerta 5.x and 6.x both have a huge security issue. Or at least it looks like.<\/p><p>We&#39;ve found that API keys are available for everyone, even for anonymous users. I.e. when someone hits <a href=\"https://alerta.somedomain.tld/api/keys\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://alerta.somedomain.tld/api/keys<\/a> - he would get ALL api keys. Even if in Alerta 6.x you set USER_DEFAULT_SCOPES = [ &#39;read:alerts&#39;, &#39;read:blackouts&#39; ]. Is it bug or we missed something (e.g. some flag in settings?). Same goes for <a href=\"https://alerta.somedomain.tld/api/management/status\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://alerta.somedomain.tld/api/management/status<\/a>.<\/p>","sent":"2018-12-16T19:58:42.428Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":11,"urls":[{"url":"https://alerta.somedomain.tld/api/keys"},{"url":"https://alerta.somedomain.tld/api/management/status"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16b6f70a86bc6f8dba9c54","text":"Discussion in https://github.com/alerta/alerta/issues/784","html":"Discussion in <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"784\" href=\"https://github.com/alerta/alerta/issues/784\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"issue\">alerta/alerta#784<\/a>","sent":"2018-12-16T20:35:03.296Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta","number":"784"}],"meta":[],"v":1,"burstStart":true},{"id":"5c16bacdae1ab5539ef814b8","text":"what do you get if you run …\n```\n$ curl http://localhost:8080/management/properties | grep ^AUTH_REQUIRED\n```\n","html":"what do you get if you run …<pre><code><span class=\"variable\">$ <\/span>curl <span class=\"symbol\">http:<\/span>/<span class=\"regexp\">/localhost:8080/management<\/span><span class=\"regexp\">/properties | grep ^AUTH_REQUIRED<\/span><\/code><\/pre>","sent":"2018-12-16T20:51:25.313Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16baf80a145b0e24aeb12d","text":"using your Alerta API URL.","html":"using your Alerta API URL.","sent":"2018-12-16T20:52:08.027Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c16bceec428e9539d4c284f","text":"if AUTH_REQUIRED=True, then this:\n\n$ curl -s http://localhost:8080/management/properties \n{\n  \"code\": 401, \n  \"errors\": null, \n  \"message\": \"Missing authorization API Key or Bearer Token\", \n  \"status\": \"error\"\n}\n\nBut with AUTH_REQUIRED=False we still can get not only current params, but also all of API keys. Is it expected behavior?","html":"<p>if AUTH_REQUIRED=True, then this:<\/p><p>$ curl -s <a href=\"http://localhost:8080/management/properties\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://localhost:8080/management/properties<\/a><br>{<br>  &quot;code&quot;: 401,<br>  &quot;errors&quot;: null,<br>  &quot;message&quot;: &quot;Missing authorization API Key or Bearer Token&quot;,<br>  &quot;status&quot;: &quot;error&quot;<br>}<\/p><p>But with AUTH_REQUIRED=False we still can get not only current params, but also all of API keys. Is it expected behavior?<\/p>","sent":"2018-12-16T21:00:30.686Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":11,"urls":[{"url":"http://localhost:8080/management/properties"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16bd65e86b0460b3aad418","text":"Yes. “AUTH_REQUIRED” means “Authentication is required for protected endpoints”. If you set “AUTH_REQUIRED=False” then do not require any authentication for anything — even if you ask for a list of all API Keys.","html":"Yes. “AUTH_REQUIRED” means “Authentication is required for protected endpoints”. If you set “AUTH_REQUIRED=False” then do not require any authentication for anything — even if you ask for a list of all API Keys.","sent":"2018-12-16T21:02:29.517Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16bdc9039551387faaea43","text":"I.e. we have \"local\" users with different roles (in alerta's database). And as expected they have different permissions in alerta web ui after authorization. But what the point of creating users, when any of them could get all of API keys? Even those, which have admin permissions. 0_o","html":"I.e. we have &quot;local&quot; users with different roles (in alerta&#39;s database). And as expected they have different permissions in alerta web ui after authorization. But what the point of creating users, when any of them could get all of API keys? Even those, which have admin permissions. 0_o","sent":"2018-12-16T21:04:09.015Z","editedAt":"2018-12-16T21:04:34.556Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":3,"burstStart":true},{"id":"5c16be16b4c74555ccdacabd","text":"There are few reasons (if any) to have users if  you set “AUTH_REQUIRED=False”.","html":"There are few reasons (if any) to have users if  you set “AUTH_REQUIRED=False”.","sent":"2018-12-16T21:05:26.145Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16be44ae1ab5539ef82813","text":"Why would you set “AUTH_REQUIRED=False” if you want to protect API keys?","html":"Why would you set “AUTH_REQUIRED=False” if you want to protect API keys?","sent":"2018-12-16T21:06:12.490Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c16be56b18e825e3b3ca082","text":"To be clear ... I'm not insisting on anything, just trying to understand. To be honest, it's very confusing behavior. ","html":"To be clear ... I&#39;m not insisting on anything, just trying to understand. To be honest, it&#39;s very confusing behavior. ","sent":"2018-12-16T21:06:30.829Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16be70039551387faaed7a","text":"I’m confused too :)","html":"I’m confused too :)","sent":"2018-12-16T21:06:56.355Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16bebbc428e9539d4c32bd","text":"> Why would you set “AUTH_REQUIRED=False” if you want to protect API keys?\n\nWe just found it) When we first time read the docs and tested Alerta's behavior, the only difference that we found - that anonymous users can't see alerts list and webhooks required authorization.","html":"<blockquote>\n<p>Why would you set “AUTH_REQUIRED=False” if you want to protect API keys?<\/p><\/blockquote>\n<p>We just found it) When we first time read the docs and tested Alerta&#39;s behavior, the only difference that we found - that anonymous users can&#39;t see alerts list and webhooks required authorization.<\/p>","sent":"2018-12-16T21:08:11.544Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16bef9039551387faaf235","text":"From the docs:\n\n> AUTH_REQUIRED - users must authenticate when using web UI or command-line tool (default False)\n\nLooks like we didn't read carefully enough. Our mistake, though.","html":"<p>From the docs:<\/p><blockquote>\n<p>AUTH_REQUIRED - users must authenticate when using web UI or command-line tool (default False)<\/p><\/blockquote>\n<p>Looks like we didn&#39;t read carefully enough. Our mistake, though.<\/p>","sent":"2018-12-16T21:09:13.335Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c16bf28e806954a9a2b12ad","text":"> There are few reasons (if any) to have users if  you set “AUTH_REQUIRED=False”.\n\nCould you, please, share few examples (if you know such)?","html":"<blockquote>\n<p>There are few reasons (if any) to have users if  you set “AUTH_REQUIRED=False”.<\/p><\/blockquote>\n<p>Could you, please, share few examples (if you know such)?<\/p>","sent":"2018-12-16T21:10:00.134Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c16bfd8e86b0460b3aae534","text":"One possible use case is if operators want to watch alerts then you must login first so that Alerta knows who has clicked the “watch” button. However, perhaps your Alerta API is on a protected network, not exposed to the internet, so there is no security reason to enforce authentication.","html":"One possible use case is if operators want to watch alerts then you must login first so that Alerta knows who has clicked the “watch” button. However, perhaps your Alerta API is on a protected network, not exposed to the internet, so there is no security reason to enforce authentication.","sent":"2018-12-16T21:12:56.849Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c017e806954a9a2b18ce","text":"So by setting “AUTH_REQUIRED=False” you could allow anyone to do anything on alerta but if operators want to watch an alert they need to login first.","html":"So by setting “AUTH_REQUIRED=False” you could allow anyone to do anything on alerta but if operators want to watch an alert they need to login first.","sent":"2018-12-16T21:13:59.898Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c16c14072f31355cd66c58e","text":"Another possible use case could be to ensure that all systems that send alerts to Alerta use an API key so that you can revoke it if you don’t want alerts from that system any more. You can still have “AUTH_REQUIRED=False” but if an invalid API is presented as credential it will be denied.","html":"Another possible use case could be to ensure that all systems that send alerts to Alerta use an API key so that you can revoke it if you don’t want alerts from that system any more. You can still have “AUTH_REQUIRED=False” but if an invalid API is presented as credential it will be denied.","sent":"2018-12-16T21:18:56.952Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c169e806954a9a2b1f57","text":"I have configured `AUTH_REQUIRED=False` and sent an invalid API key …\n```\n$ curl http://localhost:8080/keys -H 'X-API-Key: Foo'\n{\"code\":401,\"errors\":null,\"message\":\"API key parameter 'Foo' is invalid\",\"status\":\"error\"}\n```","html":"I have configured <code>AUTH_REQUIRED=False<\/code> and sent an invalid API key …<pre><code><span class=\"variable\">$ <\/span>curl <span class=\"symbol\">http:<\/span>/<span class=\"regexp\">/localhost:8080/keys<\/span> -<span class=\"constant\">H <\/span><span class=\"string\">'X-API-Key: Foo'<\/span>\n{<span class=\"string\">\"code\"<\/span><span class=\"symbol\">:<\/span><span class=\"number\">401<\/span>,<span class=\"string\">\"errors\"<\/span><span class=\"symbol\">:null<\/span>,<span class=\"string\">\"message\"<\/span><span class=\"symbol\">:<span class=\"string\">\"API key parameter 'Foo' is invalid\"<\/span><\/span>,<span class=\"string\">\"status\"<\/span><span class=\"symbol\">:<span class=\"string\">\"error\"<\/span><\/span>}<\/code><\/pre>","sent":"2018-12-16T21:19:37.188Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c16c17db18e825e3b3cb48f","text":"but if I remove the API Key header the request will succeed.","html":"but if I remove the API Key header the request will succeed.","sent":"2018-12-16T21:19:57.897Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c16c1abe806954a9a2b20f1","text":"> Another possible use case could be to ensure that all systems that send alerts to Alerta use an API key so that you can revoke it if you don’t want alerts from that system any more. You can still have “AUTH_REQUIRED=False” but if an invalid API is presented as credential it will be denied.\n\nBut without specifying api keys those systems still could write to a webhook? Because we have pingdom, alertmanager and grafana pointed to Alerta's webhooks. And all of them successfully send alerts to Alerta without any API key.","html":"<blockquote>\n<p>Another possible use case could be to ensure that all systems that send alerts to Alerta use an API key so that you can revoke it if you don’t want alerts from that system any more. You can still have “AUTH_REQUIRED=False” but if an invalid API is presented as credential it will be denied.<\/p><\/blockquote>\n<p>But without specifying api keys those systems still could write to a webhook? Because we have pingdom, alertmanager and grafana pointed to Alerta&#39;s webhooks. And all of them successfully send alerts to Alerta without any API key.<\/p>","sent":"2018-12-16T21:20:43.642Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c1ec039551387fab0480","text":"sure. that’s what I said. If you have `AUTH_REQUIRED=False` nothing *requires* an API key. But if you present an API key and it is invalid, then the request will be denied.","html":"sure. that’s what I said. If you have <code>AUTH_REQUIRED=False<\/code> nothing <em>requires<\/em> an API key. But if you present an API key and it is invalid, then the request will be denied.","sent":"2018-12-16T21:21:48.171Z","editedAt":"2018-12-16T21:22:01.127Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5c16c208b512ce0b9d9f8ad5","text":"> but if I remove the API Key header the request will succeed.\n\nYep, i meant exactly this in previous question. This looks little inconsistent, imho. Or at least an \"unexpected\" 0_o","html":"<blockquote>\n<p>but if I remove the API Key header the request will succeed.<\/p><\/blockquote>\n<p>Yep, i meant exactly this in previous question. This looks little inconsistent, imho. Or at least an &quot;unexpected&quot; 0_o<\/p>","sent":"2018-12-16T21:22:16.128Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c21e72f31355cd66cc6e","text":"is this the source of confusion?","html":"is this the source of confusion?","sent":"2018-12-16T21:22:38.788Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c255b512ce0b9d9f8e16","text":"Nope, the real reason for all of this - it's our \"unverified\" assumptions about Alerta's behavior. ","html":"Nope, the real reason for all of this - it&#39;s our &quot;unverified&quot; assumptions about Alerta&#39;s behavior. ","sent":"2018-12-16T21:23:33.743Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c272b4c74555ccdae3b4","text":"Oh. ok. ","html":"Oh. ok. ","sent":"2018-12-16T21:24:02.580Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c286987052387ef78d5f","text":"So, back to our recent discussion about improving Alerta's documentation. Now we have two sections to improve - about Google OAuth (missing \"roles/groups\") and about enforcing/disabling authentication (and following consequences).","html":"So, back to our recent discussion about improving Alerta&#39;s documentation. Now we have two sections to improve - about Google OAuth (missing &quot;roles/groups&quot;) and about enforcing/disabling authentication (and following consequences).","sent":"2018-12-16T21:24:22.424Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c2c4039551387fab0950","text":"Anyway, thank you very much for the information. And sorry for wasting your time 0:)","html":"Anyway, thank you very much for the information. And sorry for wasting your time 0:)","sent":"2018-12-16T21:25:24.226Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c16c2dfb18e825e3b3cbe40","text":"No problem. I’ll take those suggestions to improve the documentation on board.","html":"No problem. I’ll take those suggestions to improve the documentation on board.","sent":"2018-12-16T21:25:51.213Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c3edc428e9539d4c4e2c","text":"@satterly, i'll try to find some time on this week and join you in alerta/alerta-docs#51.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>, i&#39;ll try to find some time on this week and join you in <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"51\" data-issue-repo=\"alerta/alerta-docs\" class=\"issue\">alerta/alerta-docs#51<\/a>.","sent":"2018-12-16T21:30:21.846Z","editedAt":"2018-12-16T21:30:37.356Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"repo":"alerta/alerta-docs","number":"51"}],"meta":[],"v":2,"burstStart":true},{"id":"5c16c431ca317a0e25d9b6ba","text":"Thanks a lot. Even if you don’t have time to actually write (or rewrite) the documentation, just pointing out where it is missing or needs further clarification would help.","html":"Thanks a lot. Even if you don’t have time to actually write (or rewrite) the documentation, just pointing out where it is missing or needs further clarification would help.","sent":"2018-12-16T21:31:29.551Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c16c4d0e806954a9a2b35e9","text":"Ok, i'll try to re-read the docs and will get back to you at alerta/alerta-docs#51. Thanks again for help.","html":"Ok, i&#39;ll try to re-read the docs and will get back to you at <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"51\" data-issue-repo=\"alerta/alerta-docs\" class=\"issue\">alerta/alerta-docs#51<\/a>. Thanks again for help.","sent":"2018-12-16T21:34:08.343Z","fromUser":{"id":"59c2d5e6d73408ce4f76a75c","username":"n0guest","displayName":"Evgeniy K.","url":"/n0guest","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/n0guest","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/5829393?v=4&s=128","v":31,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta-docs","number":"51"}],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

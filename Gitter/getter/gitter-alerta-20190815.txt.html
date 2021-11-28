@@ -1,0 +1,686 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/08/16"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/08/14"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">15<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5d54c62a5178a724768cdeb8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d538adbd73408ce4fc862d2 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/37995994?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/37995994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>binhvcom</div>
+      <div class='chat-item__username js-chat-item-from'>@binhvcom</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d54c62a5178a724768cdeb8' title="">Aug 15 2019 02:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi, i use python 3.7.3 on ubuntu 18.04, run this command <code>ALERTA_SVR_CONF_FILE= DATABASE_URL=postgres:///test5 python3 -m pytest</code> on psql db and have Error at alerta/tests/test_alerts.py:512: AssertionError (foo,bar)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d5501f9bb5364334c34524c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d5501f9bb5364334c34524c' title="">Aug 15 2019 06:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="binhvcom" class="mention">@binhvcom</span> I use python 3.7.3 on Mac and the CI tests run on python 3.7.1 on ubuntu 16.04 and neither environments give this error. can you provide more verbose log output? thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d5509b44e17537f523526b2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c2d3cc8d73408ce4fb36e72 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46331649?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46331649?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Mats L</div>
+      <div class='chat-item__username js-chat-item-from'>@mala57</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d5509b44e17537f523526b2' title="">Aug 15 2019 07:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> It’s all on the same machine and two docker images as per your instructions 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d5509d8beba830fff96e14a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d5509d8beba830fff96e14a' title="">Aug 15 2019 07:29 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      which instructions? (there are many)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d551ead53490e334df6431e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d538adbd73408ce4fc862d2 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/37995994?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/37995994?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>binhvcom</div>
+      <div class='chat-item__username js-chat-item-from'>@binhvcom</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d551ead53490e334df6431e' title="">Aug 15 2019 08:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>`ALERTA_SVR_CONF_FILE= DATABASE_URL=postgres:///test python3 -m pytest<br>============================= test session starts ==============================<br>platform linux -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0<br>rootdir: /home<br>plugins: requests-mock-1.6.0<br>collected 122 items                                                            </p><p>alerta/tests/test_actions.py ..                                          [  1%]<br>alerta/tests/test_aggregations.py .                                      [  2%]<br>alerta/tests/test_alerts.py .....F..</p><p>=================================== FAILURES ===================================<br><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong> AlertsTestCase.test_alert<em>tagging <strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></em></p><p>self = &lt;tests.test_alerts.AlertsTestCase testMethod=test_alert_tagging&gt;</p><pre><code>def test_alert_tagging(self):
+
+    # <span class="operator"><span class="keyword">create</span> alert
+    response = <span class="keyword">self</span>.<span class="keyword">client</span>.post(<span class="string">'/alert'</span>, <span class="keyword">data</span>=<span class="keyword">json</span>.dumps(<span class="keyword">self</span>.fatal_alert), headers=<span class="keyword">self</span>.headers)
+    <span class="keyword">self</span>.assertEqual(response.status_code, <span class="number">201</span>)
+    <span class="keyword">data</span> = <span class="keyword">json</span>.loads(response.<span class="keyword">data</span>.<span class="keyword">decode</span>(<span class="string">'utf-8'</span>))
+    <span class="keyword">self</span>.assertEqual(<span class="keyword">data</span>[<span class="string">'alert'</span>][<span class="string">'tags'</span>], [<span class="string">'foo'</span>])
+
+    alert_id = <span class="keyword">data</span>[<span class="string">'id'</span>]
+
+    # append tag <span class="keyword">to</span> existing
+    response = <span class="keyword">self</span>.<span class="keyword">client</span>.put(<span class="string">'/alert/'</span> + alert_id + <span class="string">'/tag'</span>,
+                               <span class="keyword">data</span>=<span class="keyword">json</span>.dumps({<span class="string">'tags'</span>: [<span class="string">'bar'</span>]}), headers=<span class="keyword">self</span>.headers)
+    <span class="keyword">self</span>.assertEqual(response.status_code, <span class="number">200</span>)
+    response = <span class="keyword">self</span>.<span class="keyword">client</span>.<span class="keyword">get</span>(<span class="string">'/alert/'</span> + alert_id)
+    <span class="keyword">self</span>.assertEqual(response.status_code, <span class="number">200</span>)
+    <span class="keyword">data</span> = <span class="keyword">json</span>.loads(response.<span class="keyword">data</span>.<span class="keyword">decode</span>(<span class="string">'utf-8'</span>))</span></code></pre><blockquote>
+<pre><code>  self.assertEqual(data[<span class="link_label">'alert'</span>][<span class="link_reference">'tags'</span>], ['foo', 'bar'])</code></pre><p>E       AssertionError: Lists differ: [&#39;bar&#39;, &#39;foo&#39;] != [&#39;foo&#39;, &#39;bar&#39;]<br>E<br>E       First differing element 0:<br>E       &#39;bar&#39;<br>E       &#39;foo&#39;<br>E<br>E       - [&#39;bar&#39;, &#39;foo&#39;]<br>E       + [&#39;foo&#39;, &#39;bar&#39;]</p></blockquote>
+<p>alerta/tests/test_alerts.py:512: AssertionError` </p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d551ee05178a724768f5738 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      More information about my error, please have a look, thank you
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d553ce0029a51607f9a2ecd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d553ce0029a51607f9a2ecd' title="">Aug 15 2019 11:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      List order in Python is non-deterministic
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d553d037d56bc6080595bd0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ll change the test not to insist on a specific order
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d554617bb5364334c364c30 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c2d3cc8d73408ce4fb36e72 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46331649?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46331649?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Mats L</div>
+      <div class='chat-item__username js-chat-item-from'>@mala57</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d554617bb5364334c364c30' title="">Aug 15 2019 11:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  the install Aleta on Docker instruction 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d5552fb5178a7247690c5c3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-556123fa15522ed4b3e0dce3 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/2698648?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/2698648?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Andreas Skoglund</div>
+      <div class='chat-item__username js-chat-item-from'>@Anderen2</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d5552fb5178a7247690c5c3' title="">Aug 15 2019 12:41 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="mala57" class="mention">@mala57</span> Have you exposed the port with Docker then? Is the housekeeping and the Alerta server on different Docker containers? 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d55553ac87a0963e775e438 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cb9dfd5d73408ce4fbe2db0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46223796?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>fshaikh-eg</div>
+      <div class='chat-item__username js-chat-item-from'>@fshaikh-eg</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d55553ac87a0963e775e438' title="">Aug 15 2019 12:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>.  When will you do a version update on Alerta so I can get the latest changes using pip?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d5560cf1dadc42a1175fc17 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d3b4fdad73408ce4fc70dc7 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/32399029?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/32399029?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>lucasalvatore1</div>
+      <div class='chat-item__username js-chat-item-from'>@lucasalvatore1</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d5560cf1dadc42a1175fc17' title="">Aug 15 2019 13:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      is there a way to show what version of the webUI i&#39;m running?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d556ac1c87a0963e7768b40 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c2d3cc8d73408ce4fb36e72 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/46331649?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/46331649?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Mats L</div>
+      <div class='chat-item__username js-chat-item-from'>@mala57</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d556ac1c87a0963e7768b40' title="">Aug 15 2019 14:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="Anderen2" class="mention">@Anderen2</span>  Yes it is exposed. No the Alerta server and the housekeeping  are on the same Docker container
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d55962e029a51607f9cf4a6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c70226ad73408ce4fb8a55f avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/33735706?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/33735706?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>te4336</div>
+      <div class='chat-item__username js-chat-item-from'>@te4336</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/15?at=5d55962e029a51607f9cf4a6' title="">Aug 15 2019 17:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Does anyone have different environments being monitored in the same Alerta instance and have custom routing turned on? Was hoping to compare how they have their routing file done compared to ours
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$6iHxT0BruFQxXXVNwK9XrnIbglBrKwqUYIy2Nit/UcM=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-08-15T00:00:00.000Z","nextDate":"2019-08-16T23:59:59.999Z","previousDate":"2019-08-14T00:00:00.000Z","messages":[{"id":"5d54c62a5178a724768cdeb8","text":"Hi, i use python 3.7.3 on ubuntu 18.04, run this command `ALERTA_SVR_CONF_FILE= DATABASE_URL=postgres:///test5 python3 -m pytest` on psql db and have Error at alerta/tests/test_alerts.py:512: AssertionError (foo,bar)","html":"Hi, i use python 3.7.3 on ubuntu 18.04, run this command <code>ALERTA_SVR_CONF_FILE= DATABASE_URL=postgres:///test5 python3 -m pytest<\/code> on psql db and have Error at alerta/tests/test_alerts.py:512: AssertionError (foo,bar)","sent":"2019-08-15T02:40:42.772Z","fromUser":{"id":"5d538adbd73408ce4fc862d2","username":"binhvcom","displayName":"binhvcom","url":"/binhvcom","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/binhvcom","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/37995994?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/37995994?v=4&s=128","v":5,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d5501f9bb5364334c34524c","text":"@binhvcom I use python 3.7.3 on Mac and the CI tests run on python 3.7.1 on ubuntu 16.04 and neither environments give this error. can you provide more verbose log output? thanks.","html":"<span data-link-type=\"mention\" data-screen-name=\"binhvcom\" class=\"mention\">@binhvcom<\/span> I use python 3.7.3 on Mac and the CI tests run on python 3.7.1 on ubuntu 16.04 and neither environments give this error. can you provide more verbose log output? thanks.","sent":"2019-08-15T06:55:53.480Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"binhvcom","userId":"5d538adbd73408ce4fc862d2","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d5509b44e17537f523526b2","text":"@satterly It’s all on the same machine and two docker images as per your instructions ","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> It’s all on the same machine and two docker images as per your instructions ","sent":"2019-08-15T07:28:52.804Z","fromUser":{"id":"5c2d3cc8d73408ce4fb36e72","username":"mala57","displayName":"Mats L","url":"/mala57","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/mala57","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46331649?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46331649?v=4&s=128","v":7,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d5509d8beba830fff96e14a","text":"which instructions? (there are many)","html":"which instructions? (there are many)","sent":"2019-08-15T07:29:28.576Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d551ead53490e334df6431e","text":"`ALERTA_SVR_CONF_FILE= DATABASE_URL=postgres:///test python3 -m pytest\n============================= test session starts ==============================\nplatform linux -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0\nrootdir: /home\nplugins: requests-mock-1.6.0\ncollected 122 items                                                            \n\nalerta/tests/test_actions.py ..                                          [  1%]\nalerta/tests/test_aggregations.py .                                      [  2%]\nalerta/tests/test_alerts.py .....F..\n\n=================================== FAILURES ===================================\n______________________ AlertsTestCase.test_alert_tagging _______________________\n\nself = <tests.test_alerts.AlertsTestCase testMethod=test_alert_tagging>\n\n    def test_alert_tagging(self):\n    \n        # create alert\n        response = self.client.post('/alert', data=json.dumps(self.fatal_alert), headers=self.headers)\n        self.assertEqual(response.status_code, 201)\n        data = json.loads(response.data.decode('utf-8'))\n        self.assertEqual(data['alert']['tags'], ['foo'])\n    \n        alert_id = data['id']\n    \n        # append tag to existing\n        response = self.client.put('/alert/' + alert_id + '/tag',\n                                   data=json.dumps({'tags': ['bar']}), headers=self.headers)\n        self.assertEqual(response.status_code, 200)\n        response = self.client.get('/alert/' + alert_id)\n        self.assertEqual(response.status_code, 200)\n        data = json.loads(response.data.decode('utf-8'))\n>       self.assertEqual(data['alert']['tags'], ['foo', 'bar'])\nE       AssertionError: Lists differ: ['bar', 'foo'] != ['foo', 'bar']\nE       \nE       First differing element 0:\nE       'bar'\nE       'foo'\nE       \nE       - ['bar', 'foo']\nE       + ['foo', 'bar']\n\nalerta/tests/test_alerts.py:512: AssertionError` ","html":"<p>`ALERTA_SVR_CONF_FILE= DATABASE_URL=postgres:///test python3 -m pytest<br>============================= test session starts ==============================<br>platform linux -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0<br>rootdir: /home<br>plugins: requests-mock-1.6.0<br>collected 122 items                                                            <\/p><p>alerta/tests/test_actions.py ..                                          [  1%]<br>alerta/tests/test_aggregations.py .                                      [  2%]<br>alerta/tests/test_alerts.py .....F..<\/p><p>=================================== FAILURES ===================================<br><strong><strong><strong><strong><strong>__<\/strong><\/strong><\/strong><\/strong><\/strong> AlertsTestCase.test_alert<em>tagging <strong><strong><strong><strong><strong>__<\/strong><\/strong><\/strong><\/strong><\/strong><\/em><\/p><p>self = &lt;tests.test_alerts.AlertsTestCase testMethod=test_alert_tagging&gt;<\/p><pre><code>def test_alert_tagging(self):\n\n    # <span class=\"operator\"><span class=\"keyword\">create<\/span> alert\n    response = <span class=\"keyword\">self<\/span>.<span class=\"keyword\">client<\/span>.post(<span class=\"string\">'/alert'<\/span>, <span class=\"keyword\">data<\/span>=<span class=\"keyword\">json<\/span>.dumps(<span class=\"keyword\">self<\/span>.fatal_alert), headers=<span class=\"keyword\">self<\/span>.headers)\n    <span class=\"keyword\">self<\/span>.assertEqual(response.status_code, <span class=\"number\">201<\/span>)\n    <span class=\"keyword\">data<\/span> = <span class=\"keyword\">json<\/span>.loads(response.<span class=\"keyword\">data<\/span>.<span class=\"keyword\">decode<\/span>(<span class=\"string\">'utf-8'<\/span>))\n    <span class=\"keyword\">self<\/span>.assertEqual(<span class=\"keyword\">data<\/span>[<span class=\"string\">'alert'<\/span>][<span class=\"string\">'tags'<\/span>], [<span class=\"string\">'foo'<\/span>])\n\n    alert_id = <span class=\"keyword\">data<\/span>[<span class=\"string\">'id'<\/span>]\n\n    # append tag <span class=\"keyword\">to<\/span> existing\n    response = <span class=\"keyword\">self<\/span>.<span class=\"keyword\">client<\/span>.put(<span class=\"string\">'/alert/'<\/span> + alert_id + <span class=\"string\">'/tag'<\/span>,\n                               <span class=\"keyword\">data<\/span>=<span class=\"keyword\">json<\/span>.dumps({<span class=\"string\">'tags'<\/span>: [<span class=\"string\">'bar'<\/span>]}), headers=<span class=\"keyword\">self<\/span>.headers)\n    <span class=\"keyword\">self<\/span>.assertEqual(response.status_code, <span class=\"number\">200<\/span>)\n    response = <span class=\"keyword\">self<\/span>.<span class=\"keyword\">client<\/span>.<span class=\"keyword\">get<\/span>(<span class=\"string\">'/alert/'<\/span> + alert_id)\n    <span class=\"keyword\">self<\/span>.assertEqual(response.status_code, <span class=\"number\">200<\/span>)\n    <span class=\"keyword\">data<\/span> = <span class=\"keyword\">json<\/span>.loads(response.<span class=\"keyword\">data<\/span>.<span class=\"keyword\">decode<\/span>(<span class=\"string\">'utf-8'<\/span>))<\/span><\/code><\/pre><blockquote>\n<pre><code>  self.assertEqual(data[<span class=\"link_label\">'alert'<\/span>][<span class=\"link_reference\">'tags'<\/span>], ['foo', 'bar'])<\/code><\/pre><p>E       AssertionError: Lists differ: [&#39;bar&#39;, &#39;foo&#39;] != [&#39;foo&#39;, &#39;bar&#39;]<br>E<br>E       First differing element 0:<br>E       &#39;bar&#39;<br>E       &#39;foo&#39;<br>E<br>E       - [&#39;bar&#39;, &#39;foo&#39;]<br>E       + [&#39;foo&#39;, &#39;bar&#39;]<\/p><\/blockquote>\n<p>alerta/tests/test_alerts.py:512: AssertionError` <\/p>","sent":"2019-08-15T08:58:21.718Z","fromUser":{"id":"5d538adbd73408ce4fc862d2","username":"binhvcom","displayName":"binhvcom","url":"/binhvcom","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/binhvcom","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/37995994?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/37995994?v=4&s=128","v":5,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d551ee05178a724768f5738","text":"More information about my error, please have a look, thank you","html":"More information about my error, please have a look, thank you","sent":"2019-08-15T08:59:12.924Z","fromUser":{"id":"5d538adbd73408ce4fc862d2","username":"binhvcom","displayName":"binhvcom","url":"/binhvcom","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/binhvcom","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/37995994?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/37995994?v=4&s=128","v":5,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d553ce0029a51607f9a2ecd","text":"List order in Python is non-deterministic","html":"List order in Python is non-deterministic","sent":"2019-08-15T11:07:12.729Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d553d037d56bc6080595bd0","text":"I'll change the test not to insist on a specific order","html":"I&#39;ll change the test not to insist on a specific order","sent":"2019-08-15T11:07:47.467Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d554617bb5364334c364c30","text":"@satterly  the install Aleta on Docker instruction ","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  the install Aleta on Docker instruction ","sent":"2019-08-15T11:46:31.069Z","fromUser":{"id":"5c2d3cc8d73408ce4fb36e72","username":"mala57","displayName":"Mats L","url":"/mala57","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/mala57","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46331649?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46331649?v=4&s=128","v":7,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d5552fb5178a7247690c5c3","text":"@mala57 Have you exposed the port with Docker then? Is the housekeeping and the Alerta server on different Docker containers? ","html":"<span data-link-type=\"mention\" data-screen-name=\"mala57\" class=\"mention\">@mala57<\/span> Have you exposed the port with Docker then? Is the housekeeping and the Alerta server on different Docker containers? ","sent":"2019-08-15T12:41:31.252Z","fromUser":{"id":"556123fa15522ed4b3e0dce3","username":"Anderen2","displayName":"Andreas Skoglund","url":"/Anderen2","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/Anderen2","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/2698648?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/2698648?v=4&s=128","v":6,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"mala57","userId":"5c2d3cc8d73408ce4fb36e72","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d55553ac87a0963e775e438","text":"hi @satterly.  When will you do a version update on Alerta so I can get the latest changes using pip?","html":"hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>.  When will you do a version update on Alerta so I can get the latest changes using pip?","sent":"2019-08-15T12:51:06.571Z","fromUser":{"id":"5cb9dfd5d73408ce4fbe2db0","username":"fshaikh-eg","displayName":"fshaikh-eg","url":"/fshaikh-eg","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/fshaikh-eg","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46223796?v=4&s=128","v":1,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d5560cf1dadc42a1175fc17","text":"is there a way to show what version of the webUI i'm running?","html":"is there a way to show what version of the webUI i&#39;m running?","sent":"2019-08-15T13:40:31.659Z","fromUser":{"id":"5d3b4fdad73408ce4fc70dc7","username":"lucasalvatore1","displayName":"lucasalvatore1","url":"/lucasalvatore1","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/lucasalvatore1","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/32399029?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/32399029?v=4&s=128","v":7,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d556ac1c87a0963e7768b40","text":"@Anderen2  Yes it is exposed. No the Alerta server and the housekeeping  are on the same Docker container","html":"<span data-link-type=\"mention\" data-screen-name=\"Anderen2\" class=\"mention\">@Anderen2<\/span>  Yes it is exposed. No the Alerta server and the housekeeping  are on the same Docker container","sent":"2019-08-15T14:22:57.286Z","fromUser":{"id":"5c2d3cc8d73408ce4fb36e72","username":"mala57","displayName":"Mats L","url":"/mala57","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/mala57","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/46331649?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/46331649?v=4&s=128","v":7,"gv":"4"},"readBy":15,"urls":[],"mentions":[{"screenName":"Anderen2","userId":"556123fa15522ed4b3e0dce3","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d55962e029a51607f9cf4a6","text":"Does anyone have different environments being monitored in the same Alerta instance and have custom routing turned on? Was hoping to compare how they have their routing file done compared to ours","html":"Does anyone have different environments being monitored in the same Alerta instance and have custom routing turned on? Was hoping to compare how they have their routing file done compared to ours","sent":"2019-08-15T17:28:14.436Z","fromUser":{"id":"5c70226ad73408ce4fb8a55f","username":"te4336","displayName":"te4336","url":"/te4336","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/te4336","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=128","v":13,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

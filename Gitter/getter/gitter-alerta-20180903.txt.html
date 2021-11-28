@@ -1,0 +1,982 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/09/04"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/09/02"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">3<sup>rd</sup></span><br>
+      <span class="gtrArchiveMonth">Sep 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5b8cc90fc9500b4bab7413fc burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8cc90fc9500b4bab7413fc' title="">Sep 03 2018 05:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/1GyZ/image.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/1GyZ/thumb/image.png" alt="image.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8cc92b1d3a5711b6d7b349 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  for Base URL, I added environment variable BASE_URL while deploying Docker container.  In logs I can see duplicate errors
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8cc9fce5b40332ab37dfb0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      docker entry point file has successfully replaced BASE_URL in nginx as well as supervisord file, but I think in nginx file for web url it says duplicate entry
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8cdf7a844de2337cdc9e7a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8cdf7a844de2337cdc9e7a' title="">Sep 03 2018 07:15 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi <span data-link-type="mention" data-screen-name="jaretclifton" class="mention">@jaretclifton</span>, i’ve updated the riemann integration <code>alerta.clj</code> so it should work now. The usage has had to change to support Riemann v3 so take care to review the example <code>riemann.config</code> closely (or refer to the README) to ensure you use it correctly. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8cdf82146618721cacaecd burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      See <a target="_blank" data-link-type="pr" data-issue="1" href="https://github.com/alerta/riemann-alerta/pull/1" data-provider="github" data-issue-repo="alerta/riemann-alerta" class="pr">alerta/riemann-alerta#1</a> for more info on changes. Let me know if you need any help.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8cdfed88520a0c6ee60f55 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="manavrawat10" class="mention">@manavrawat10</span> can you show me the nginx.conf file?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce071e5b40332ab386b46 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8ce071e5b40332ab386b46' title="">Sep 03 2018 07:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> nginx file is exactly same <a href="https://github.com/alerta/docker-alerta/blob/master/nginx.conf" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/docker-alerta/blob/master/nginx.conf</a> I have not changed anything here
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce29bd457a1406c9a3b63 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8ce29bd457a1406c9a3b63' title="">Sep 03 2018 07:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I tried even with the latest version of alerta 5.2.9 same duplicate entry issue was there 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce3a98d59fb7567e19f24 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8ce3a98d59fb7567e19f24' title="">Sep 03 2018 07:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what did you set the BASE_URL env var to?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce3c6e5b40332ab387f8f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8ce3c6e5b40332ab387f8f' title="">Sep 03 2018 07:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      BASE_URL=alertaServer
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce3d88d59fb7567e19f26 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8ce3d88d59fb7567e19f26' title="">Sep 03 2018 07:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      that’s not a URL path
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce3e9844de2337cdc9e8b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it should be something like <code>/api</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce3fcd8d36815e5cb1022 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8ce3fcd8d36815e5cb1022' title="">Sep 03 2018 07:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      okk 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce58094f8164c17d5a704 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8ce58094f8164c17d5a704' title="">Sep 03 2018 07:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Now I gave BASE_URL=&quot;/event/api&quot; with this my webhooks are working 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce5924be56c5918d46798 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but the Alerta Page is not loading 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce7ce3815912505666cd8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8ce7ce3815912505666cd8' title="">Sep 03 2018 07:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i think your BASE_URL should be <code>/event</code> and then the API would be at <code>/event/api</code> and the web UI at <code>/event</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce8d1844de2337cdc9e90 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      No, ignore that. the BASE_URL is correct. ie. <code>/event/api</code> . the web UI will be at <code>/event</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8ce8de146618721cacaeea burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      See here for an example <a href="https://github.com/alerta/docker-alerta/blob/3185d909a9e78ef795e5b5804a6e10c7e957e0d1/docker-compose.yml#L16" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/docker-alerta/blob/3185d909a9e78ef795e5b5804a6e10c7e957e0d1/docker-compose.yml#L16</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d034911227d711d0ab7a1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8d034911227d711d0ab7a1' title="">Sep 03 2018 09:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Now its coming up... I think for UI the issue was cache/cookies. I opened the same url in guest mode and it worked.. I feel there is little inconsistency..  I will test all my possible combinations and will update you. . Thanks  
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d086858a3797aa3f6a0e7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b8d07d5d73408ce4fa6b806 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/29057943?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/29057943?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Wim Fabri</div>
+      <div class='chat-item__username js-chat-item-from'>@wimfabri</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8d086858a3797aa3f6a0e7' title="">Sep 03 2018 10:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi. Is it possible to configure sound for a subset off severities, so that a sound is triggered only when new alerts for the highest severities come in ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d0fe7844de2337cdc9f34 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8d0fe7844de2337cdc9f34' title="">Sep 03 2018 10:41 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="wimfabri" class="mention">@wimfabri</span> hi, it’s not a configuration option but you could modify the web UI to do this relatively easily. see <a href="https://github.com/alerta/angular-alerta-webui/blob/master/app/js/controllers.js#L292" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/angular-alerta-webui/blob/master/app/js/controllers.js#L292</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d168ed457a1406c9aefa6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b718dc5d73408ce4fa4714c avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/42347815?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/42347815?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>diksha-rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@diksha-rawat</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8d168ed457a1406c9aefa6' title="">Sep 03 2018 11:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>, I tried installing nagios as a docker container as well as standalone but I am not able to install by following required steps given in <a href="https://github.com/alerta/nagios-alerta#system-requirements" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/nagios-alerta#system-requirements</a> for both Ubuntu and centos. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d16efc9500b4bab7604fc burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      for ubuntu, while restarting the nagios service, I faced an issue which says- nagios: unrecognized service
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d173794f8164c17d64a3b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I tried troubleshooting for nagios.cfg file but the file was not there in the specified path. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d177ae5b40332ab39d29d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      for centos, I am facing issue with the systemctl - Failed to get D-Bus connection: Operation not permitted 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d46784be56c5918d6df69 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-581156fed73408ce4f311ca3 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/162537?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/162537?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Gerben Meijer</div>
+      <div class='chat-item__username js-chat-item-from'>@infernix</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8d46784be56c5918d6df69' title="">Sep 03 2018 14:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> it looks like <code>RichHistory</code> <code>status</code> field doesn&#39;t get updates when using <code>alertaclient</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d46ac58a3797aa3f83eb0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i am seeing a Change Ack with Type Status in an events history
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d46bf1d3a5711b6dae55f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but if I use get_history in the alertaclient api, the status field is None
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d46dc11b41f69dbb458b3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      in other words. I can&#39;t seem to determine when Status changes in a list of RichHistory objects as its Status there is always None
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d6bc211b41f69dbb54a7e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-581156fed73408ce4f311ca3 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/162537?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/162537?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Gerben Meijer</div>
+      <div class='chat-item__username js-chat-item-from'>@infernix</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8d6bc211b41f69dbb54a7e' title="">Sep 03 2018 17:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      looking further into it, the query to api/alerts/history doesn&#39;t even return that data
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d6bf5c2bd5d117a136524 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but it&#39;s displayed just fine in the JSON output for the history view of an alert on the web gui
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d6dde60f9ee7aa4d11b84 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-581156fed73408ce4f311ca3 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/162537?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/162537?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Gerben Meijer</div>
+      <div class='chat-item__username js-chat-item-from'>@infernix</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8d6dde60f9ee7aa4d11b84' title="">Sep 03 2018 17:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>{<span class="string">'attributes'</span>: {<span class="string">'ip'</span>: <span class="string">'127.0.0.1'</span>}, <span class="string">'customer'</span>: <span class="string">'REDACTED'</span>, <span class="string">'environment'</span>: <span class="string">'REDACTED'</span>, <span class="string">'event'</span>: <span class="string">'REDACTED/ec7b74aa-4eeb-4efa-9d35-0c335d1710be'</span>, <span class="string">'group'</span>: <span class="string">'host=REDACTED'</span>, <span class="string">'href'</span>: <span class="string">'http://REDACTED/alert/c03d65b2-f267-4783-8c14-b59b37df91be'</span>, <span class="string">'id'</span>: <span class="string">'c03d65b2-f267-4783-8c14-b59b37df91be'</span>, <span class="string">'origin'</span>: <span class="string">'REDACTED'</span>, <span class="string">'resource'</span>: <span class="string">'REDACTED'</span>, <span class="string">'service'</span>: [<span class="string">'REDACTED'</span>], <span class="string">'tags'</span>: [<span class="string">'host=REDACTED'</span>, <span class="string">'id=ec7b74aa-4eeb-4efa-9d35-0c335d1710be'</span>, <span class="string">'severity=ALERT_HIGH'</span>, <span class="string">'source=REDACTED'</span>, <span class="string">'type=REDACTED'</span>], <span class="string">'text'</span>: <span class="string">'REDACTED'</span>, <span class="string">'type'</span>: <span class="string">'status'</span>, <span class="string">'updateTime'</span>: <span class="string">'2018-09-02T17:20:03.716Z'</span>}</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d6def4be56c5918d7d87c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      so this is a db.get_history from mongo with type=status
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d6df6c2bd5d117a137221 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but there is no status key in this dict
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d6f14d8d36815e5ceaeab burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-581156fed73408ce4f311ca3 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/162537?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/162537?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Gerben Meijer</div>
+      <div class='chat-item__username js-chat-item-from'>@infernix</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8d6f14d8d36815e5ceaeab' title="">Sep 03 2018 17:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i must be missing the point of get_history
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d6f3158a3797aa3f95c91 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      FWIW what I want to do is get a list of all alert and state changes between two timestamps
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8d6f4558a3797aa3f95d7b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I don&#39;t see how I can do that with get_history api  calls
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8db42726bac95353ca062e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/09/03?at=5b8db42726bac95353ca062e' title="">Sep 03 2018 22:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="infernix" class="mention">@infernix</span> to query for history you need to query using mongo “dot” notation.<pre><code>&gt;&gt;&gt; client.<span class="function"><span class="title">get_history</span><span class="params">([(<span class="string">'history.type'</span>,<span class="string">'status'</span>)</span></span>])
+[<span class="function"><span class="title">RichHistory</span><span class="params">(id=<span class="string">'212534d0-7d73-4a61-93c1-50115e97785a'</span>, environment=<span class="string">'Production'</span>, resource=<span class="string">'r4'</span>, event=<span class="string">'e1'</span>, severity=None, status=<span class="string">'open'</span>, type=<span class="string">'status'</span>, customer=None)</span></span>]</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8db46c146618721cacb162 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      there is a bug with MongoDB history which you have discovered so you might not be able to get this to work.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8db4f73815912505666f23 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      see <a target="_blank" data-link-type="pr" data-issue="626" href="https://github.com/alerta/alerta/pull/626" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#626</a>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$EBnPJkdK5X+ypMVzAsK08eWyZ1a6R8mH5+etE44jWuI=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-09-03T00:00:00.000Z","nextDate":"2018-09-04T23:59:59.999Z","previousDate":"2018-09-02T00:00:00.000Z","messages":[{"id":"5b8cc90fc9500b4bab7413fc","text":"[![image.png](https://files.gitter.im/alerta/chat/1GyZ/thumb/image.png)](https://files.gitter.im/alerta/chat/1GyZ/image.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/1GyZ/image.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/1GyZ/thumb/image.png\" alt=\"image.png\" rel=\"nofollow\"><\/a>","sent":"2018-09-03T05:39:27.004Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[{"url":"https://files.gitter.im/alerta/chat/1GyZ/thumb/image.png"},{"url":"https://files.gitter.im/alerta/chat/1GyZ/image.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8cc92b1d3a5711b6d7b349","text":"Hi @satterly  for Base URL, I added environment variable BASE_URL while deploying Docker container.  In logs I can see duplicate errors","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  for Base URL, I added environment variable BASE_URL while deploying Docker container.  In logs I can see duplicate errors","sent":"2018-09-03T05:39:55.066Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8cc9fce5b40332ab37dfb0","text":"docker entry point file has successfully replaced BASE_URL in nginx as well as supervisord file, but I think in nginx file for web url it says duplicate entry","html":"docker entry point file has successfully replaced BASE_URL in nginx as well as supervisord file, but I think in nginx file for web url it says duplicate entry","sent":"2018-09-03T05:43:24.856Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8cdf7a844de2337cdc9e7a","text":"hi @jaretclifton, i’ve updated the riemann integration `alerta.clj` so it should work now. The usage has had to change to support Riemann v3 so take care to review the example `riemann.config` closely (or refer to the README) to ensure you use it correctly. ","html":"hi <span data-link-type=\"mention\" data-screen-name=\"jaretclifton\" class=\"mention\">@jaretclifton<\/span>, i’ve updated the riemann integration <code>alerta.clj<\/code> so it should work now. The usage has had to change to support Riemann v3 so take care to review the example <code>riemann.config<\/code> closely (or refer to the README) to ensure you use it correctly. ","sent":"2018-09-03T07:15:06.598Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"jaretclifton","userId":"58900a17d73408ce4f471759","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8cdf82146618721cacaecd","text":"See https://github.com/alerta/riemann-alerta/pull/1 for more info on changes. Let me know if you need any help.","html":"See <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"1\" href=\"https://github.com/alerta/riemann-alerta/pull/1\" data-provider=\"github\" data-issue-repo=\"alerta/riemann-alerta\" class=\"pr\">alerta/riemann-alerta#1<\/a> for more info on changes. Let me know if you need any help.","sent":"2018-09-03T07:15:14.107Z","editedAt":"2018-09-03T07:16:05.158Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[{"number":"1","repo":"alerta/riemann-alerta"}],"meta":[],"v":2,"burstStart":false},{"id":"5b8cdfed88520a0c6ee60f55","text":"@manavrawat10 can you show me the nginx.conf file?","html":"<span data-link-type=\"mention\" data-screen-name=\"manavrawat10\" class=\"mention\">@manavrawat10<\/span> can you show me the nginx.conf file?","sent":"2018-09-03T07:17:01.679Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"manavrawat10","userId":"5a0147bad73408ce4f7d7908","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8ce071e5b40332ab386b46","text":"@satterly nginx file is exactly same https://github.com/alerta/docker-alerta/blob/master/nginx.conf I have not changed anything here","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> nginx file is exactly same <a href=\"https://github.com/alerta/docker-alerta/blob/master/nginx.conf\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/docker-alerta/blob/master/nginx.conf<\/a> I have not changed anything here","sent":"2018-09-03T07:19:13.194Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[{"url":"https://github.com/alerta/docker-alerta/blob/master/nginx.conf"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8ce29bd457a1406c9a3b63","text":"I tried even with the latest version of alerta 5.2.9 same duplicate entry issue was there ","html":"I tried even with the latest version of alerta 5.2.9 same duplicate entry issue was there ","sent":"2018-09-03T07:28:27.869Z","editedAt":"2018-09-03T07:28:42.257Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5b8ce3a98d59fb7567e19f24","text":"what did you set the BASE_URL env var to?","html":"what did you set the BASE_URL env var to?","sent":"2018-09-03T07:32:57.354Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8ce3c6e5b40332ab387f8f","text":"BASE_URL=alertaServer","html":"BASE_URL=alertaServer","sent":"2018-09-03T07:33:26.664Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8ce3d88d59fb7567e19f26","text":"that’s not a URL path","html":"that’s not a URL path","sent":"2018-09-03T07:33:44.644Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8ce3e9844de2337cdc9e8b","text":"it should be something like `/api`","html":"it should be something like <code>/api<\/code>","sent":"2018-09-03T07:34:01.110Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8ce3fcd8d36815e5cb1022","text":"okk ","html":"okk ","sent":"2018-09-03T07:34:20.709Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8ce58094f8164c17d5a704","text":"Now I gave BASE_URL=\"/event/api\" with this my webhooks are working ","html":"Now I gave BASE_URL=&quot;/event/api&quot; with this my webhooks are working ","sent":"2018-09-03T07:40:48.537Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8ce5924be56c5918d46798","text":"but the Alerta Page is not loading ","html":"but the Alerta Page is not loading ","sent":"2018-09-03T07:41:06.729Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8ce7ce3815912505666cd8","text":"i think your BASE_URL should be `/event` and then the API would be at `/event/api` and the web UI at `/event`","html":"i think your BASE_URL should be <code>/event<\/code> and then the API would be at <code>/event/api<\/code> and the web UI at <code>/event<\/code>","sent":"2018-09-03T07:50:38.747Z","editedAt":"2018-09-03T07:50:48.737Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5b8ce8d1844de2337cdc9e90","text":"No, ignore that. the BASE_URL is correct. ie. `/event/api` . the web UI will be at `/event`","html":"No, ignore that. the BASE_URL is correct. ie. <code>/event/api<\/code> . the web UI will be at <code>/event<\/code>","sent":"2018-09-03T07:54:57.205Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8ce8de146618721cacaeea","text":"See here for an example https://github.com/alerta/docker-alerta/blob/3185d909a9e78ef795e5b5804a6e10c7e957e0d1/docker-compose.yml#L16","html":"See here for an example <a href=\"https://github.com/alerta/docker-alerta/blob/3185d909a9e78ef795e5b5804a6e10c7e957e0d1/docker-compose.yml#L16\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/docker-alerta/blob/3185d909a9e78ef795e5b5804a6e10c7e957e0d1/docker-compose.yml#L16<\/a>","sent":"2018-09-03T07:55:10.145Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://github.com/alerta/docker-alerta/blob/3185d909a9e78ef795e5b5804a6e10c7e957e0d1/docker-compose.yml#L16"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d034911227d711d0ab7a1","text":"Now its coming up... I think for UI the issue was cache/cookies. I opened the same url in guest mode and it worked.. I feel there is little inconsistency..  I will test all my possible combinations and will update you. . Thanks  ","html":"Now its coming up... I think for UI the issue was cache/cookies. I opened the same url in guest mode and it worked.. I feel there is little inconsistency..  I will test all my possible combinations and will update you. . Thanks  ","sent":"2018-09-03T09:47:53.410Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8d086858a3797aa3f6a0e7","text":"Hi. Is it possible to configure sound for a subset off severities, so that a sound is triggered only when new alerts for the highest severities come in ?","html":"Hi. Is it possible to configure sound for a subset off severities, so that a sound is triggered only when new alerts for the highest severities come in ?","sent":"2018-09-03T10:09:44.631Z","fromUser":{"id":"5b8d07d5d73408ce4fa6b806","username":"wimfabri","displayName":"Wim Fabri","url":"/wimfabri","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/wimfabri","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/29057943?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/29057943?v=4&s=128","v":7,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8d0fe7844de2337cdc9f34","text":"@wimfabri hi, it’s not a configuration option but you could modify the web UI to do this relatively easily. see https://github.com/alerta/angular-alerta-webui/blob/master/app/js/controllers.js#L292","html":"<span data-link-type=\"mention\" data-screen-name=\"wimfabri\" class=\"mention\">@wimfabri<\/span> hi, it’s not a configuration option but you could modify the web UI to do this relatively easily. see <a href=\"https://github.com/alerta/angular-alerta-webui/blob/master/app/js/controllers.js#L292\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/angular-alerta-webui/blob/master/app/js/controllers.js#L292<\/a>","sent":"2018-09-03T10:41:43.027Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[{"url":"https://github.com/alerta/angular-alerta-webui/blob/master/app/js/controllers.js#L292"}],"mentions":[{"screenName":"wimfabri","userId":"5b8d07d5d73408ce4fa6b806","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8d168ed457a1406c9aefa6","text":"Hi @satterly, I tried installing nagios as a docker container as well as standalone but I am not able to install by following required steps given in https://github.com/alerta/nagios-alerta#system-requirements for both Ubuntu and centos. ","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>, I tried installing nagios as a docker container as well as standalone but I am not able to install by following required steps given in <a href=\"https://github.com/alerta/nagios-alerta#system-requirements\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/nagios-alerta#system-requirements<\/a> for both Ubuntu and centos. ","sent":"2018-09-03T11:10:06.142Z","editedAt":"2018-09-03T11:14:51.462Z","fromUser":{"id":"5b718dc5d73408ce4fa4714c","username":"diksha-rawat","displayName":"diksha-rawat","url":"/diksha-rawat","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/diksha-rawat","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/42347815?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/42347815?v=4&s=128","v":17,"gv":"4"},"readBy":12,"urls":[{"url":"https://github.com/alerta/nagios-alerta#system-requirements"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5b8d16efc9500b4bab7604fc","text":"for ubuntu, while restarting the nagios service, I faced an issue which says- nagios: unrecognized service","html":"for ubuntu, while restarting the nagios service, I faced an issue which says- nagios: unrecognized service","sent":"2018-09-03T11:11:43.699Z","fromUser":{"id":"5b718dc5d73408ce4fa4714c","username":"diksha-rawat","displayName":"diksha-rawat","url":"/diksha-rawat","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/diksha-rawat","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/42347815?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/42347815?v=4&s=128","v":17,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d173794f8164c17d64a3b","text":"I tried troubleshooting for nagios.cfg file but the file was not there in the specified path. ","html":"I tried troubleshooting for nagios.cfg file but the file was not there in the specified path. ","sent":"2018-09-03T11:12:55.314Z","fromUser":{"id":"5b718dc5d73408ce4fa4714c","username":"diksha-rawat","displayName":"diksha-rawat","url":"/diksha-rawat","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/diksha-rawat","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/42347815?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/42347815?v=4&s=128","v":17,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d177ae5b40332ab39d29d","text":"for centos, I am facing issue with the systemctl - Failed to get D-Bus connection: Operation not permitted ","html":"for centos, I am facing issue with the systemctl - Failed to get D-Bus connection: Operation not permitted ","sent":"2018-09-03T11:14:02.989Z","fromUser":{"id":"5b718dc5d73408ce4fa4714c","username":"diksha-rawat","displayName":"diksha-rawat","url":"/diksha-rawat","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/diksha-rawat","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/42347815?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/42347815?v=4&s=128","v":17,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d46784be56c5918d6df69","text":"@satterly it looks like `RichHistory` `status` field doesn't get updates when using `alertaclient`","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> it looks like <code>RichHistory<\/code> <code>status<\/code> field doesn&#39;t get updates when using <code>alertaclient<\/code>","sent":"2018-09-03T14:34:32.597Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":12,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8d46ac58a3797aa3f83eb0","text":"i am seeing a Change Ack with Type Status in an events history","html":"i am seeing a Change Ack with Type Status in an events history","sent":"2018-09-03T14:35:24.552Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d46bf1d3a5711b6dae55f","text":"but if I use get_history in the alertaclient api, the status field is None","html":"but if I use get_history in the alertaclient api, the status field is None","sent":"2018-09-03T14:35:43.658Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d46dc11b41f69dbb458b3","text":"in other words. I can't seem to determine when Status changes in a list of RichHistory objects as its Status there is always None","html":"in other words. I can&#39;t seem to determine when Status changes in a list of RichHistory objects as its Status there is always None","sent":"2018-09-03T14:36:12.413Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d6bc211b41f69dbb54a7e","text":"looking further into it, the query to api/alerts/history doesn't even return that data","html":"looking further into it, the query to api/alerts/history doesn&#39;t even return that data","sent":"2018-09-03T17:13:38.657Z","editedAt":"2018-09-03T17:14:09.169Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5b8d6bf5c2bd5d117a136524","text":"but it's displayed just fine in the JSON output for the history view of an alert on the web gui","html":"but it&#39;s displayed just fine in the JSON output for the history view of an alert on the web gui","sent":"2018-09-03T17:14:29.993Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d6dde60f9ee7aa4d11b84","text":"```\n{'attributes': {'ip': '127.0.0.1'}, 'customer': 'REDACTED', 'environment': 'REDACTED', 'event': 'REDACTED/ec7b74aa-4eeb-4efa-9d35-0c335d1710be', 'group': 'host=REDACTED', 'href': 'http://REDACTED/alert/c03d65b2-f267-4783-8c14-b59b37df91be', 'id': 'c03d65b2-f267-4783-8c14-b59b37df91be', 'origin': 'REDACTED', 'resource': 'REDACTED', 'service': ['REDACTED'], 'tags': ['host=REDACTED', 'id=ec7b74aa-4eeb-4efa-9d35-0c335d1710be', 'severity=ALERT_HIGH', 'source=REDACTED', 'type=REDACTED'], 'text': 'REDACTED', 'type': 'status', 'updateTime': '2018-09-02T17:20:03.716Z'}\n```","html":"<pre><code>{<span class=\"string\">'attributes'<\/span>: {<span class=\"string\">'ip'<\/span>: <span class=\"string\">'127.0.0.1'<\/span>}, <span class=\"string\">'customer'<\/span>: <span class=\"string\">'REDACTED'<\/span>, <span class=\"string\">'environment'<\/span>: <span class=\"string\">'REDACTED'<\/span>, <span class=\"string\">'event'<\/span>: <span class=\"string\">'REDACTED/ec7b74aa-4eeb-4efa-9d35-0c335d1710be'<\/span>, <span class=\"string\">'group'<\/span>: <span class=\"string\">'host=REDACTED'<\/span>, <span class=\"string\">'href'<\/span>: <span class=\"string\">'http://REDACTED/alert/c03d65b2-f267-4783-8c14-b59b37df91be'<\/span>, <span class=\"string\">'id'<\/span>: <span class=\"string\">'c03d65b2-f267-4783-8c14-b59b37df91be'<\/span>, <span class=\"string\">'origin'<\/span>: <span class=\"string\">'REDACTED'<\/span>, <span class=\"string\">'resource'<\/span>: <span class=\"string\">'REDACTED'<\/span>, <span class=\"string\">'service'<\/span>: [<span class=\"string\">'REDACTED'<\/span>], <span class=\"string\">'tags'<\/span>: [<span class=\"string\">'host=REDACTED'<\/span>, <span class=\"string\">'id=ec7b74aa-4eeb-4efa-9d35-0c335d1710be'<\/span>, <span class=\"string\">'severity=ALERT_HIGH'<\/span>, <span class=\"string\">'source=REDACTED'<\/span>, <span class=\"string\">'type=REDACTED'<\/span>], <span class=\"string\">'text'<\/span>: <span class=\"string\">'REDACTED'<\/span>, <span class=\"string\">'type'<\/span>: <span class=\"string\">'status'<\/span>, <span class=\"string\">'updateTime'<\/span>: <span class=\"string\">'2018-09-02T17:20:03.716Z'<\/span>}<\/code><\/pre>","sent":"2018-09-03T17:22:38.763Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8d6def4be56c5918d7d87c","text":"so this is a db.get_history from mongo with type=status","html":"so this is a db.get_history from mongo with type=status","sent":"2018-09-03T17:22:55.929Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d6df6c2bd5d117a137221","text":"but there is no status key in this dict","html":"but there is no status key in this dict","sent":"2018-09-03T17:23:02.794Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d6f14d8d36815e5ceaeab","text":"i must be missing the point of get_history","html":"i must be missing the point of get_history","sent":"2018-09-03T17:27:48.385Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8d6f3158a3797aa3f95c91","text":"FWIW what I want to do is get a list of all alert and state changes between two timestamps","html":"FWIW what I want to do is get a list of all alert and state changes between two timestamps","sent":"2018-09-03T17:28:17.179Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8d6f4558a3797aa3f95d7b","text":"I don't see how I can do that with get_history api  calls","html":"I don&#39;t see how I can do that with get_history api  calls","sent":"2018-09-03T17:28:37.513Z","fromUser":{"id":"581156fed73408ce4f311ca3","username":"infernix","displayName":"Gerben Meijer","url":"/infernix","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/infernix","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/162537?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/162537?v=4&s=128","v":157,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8db42726bac95353ca062e","text":"@infernix to query for history you need to query using mongo “dot” notation.\n```\n>>> client.get_history([('history.type','status')])\n[RichHistory(id='212534d0-7d73-4a61-93c1-50115e97785a', environment='Production', resource='r4', event='e1', severity=None, status='open', type='status', customer=None)]\n```","html":"<span data-link-type=\"mention\" data-screen-name=\"infernix\" class=\"mention\">@infernix<\/span> to query for history you need to query using mongo “dot” notation.<pre><code>&gt;&gt;&gt; client.<span class=\"function\"><span class=\"title\">get_history<\/span><span class=\"params\">([(<span class=\"string\">'history.type'<\/span>,<span class=\"string\">'status'<\/span>)<\/span><\/span>])\n[<span class=\"function\"><span class=\"title\">RichHistory<\/span><span class=\"params\">(id=<span class=\"string\">'212534d0-7d73-4a61-93c1-50115e97785a'<\/span>, environment=<span class=\"string\">'Production'<\/span>, resource=<span class=\"string\">'r4'<\/span>, event=<span class=\"string\">'e1'<\/span>, severity=None, status=<span class=\"string\">'open'<\/span>, type=<span class=\"string\">'status'<\/span>, customer=None)<\/span><\/span>]<\/code><\/pre>","sent":"2018-09-03T22:22:30.977Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[{"screenName":"infernix","userId":"581156fed73408ce4f311ca3","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8db46c146618721cacb162","text":"there is a bug with MongoDB history which you have discovered so you might not be able to get this to work.","html":"there is a bug with MongoDB history which you have discovered so you might not be able to get this to work.","sent":"2018-09-03T22:23:40.690Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b8db4f73815912505666f23","text":"see https://github.com/alerta/alerta/pull/626","html":"see <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"626\" href=\"https://github.com/alerta/alerta/pull/626\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#626<\/a>","sent":"2018-09-03T22:25:59.744Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta","number":"626"}],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

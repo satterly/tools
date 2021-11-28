@@ -1,0 +1,669 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/07/12"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/07/10"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">11<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jul 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5b45bfac3d8f71623d6ea82e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b45bfac3d8f71623d6ea82e' title="">Jul 11 2018 08:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I am porting my incomming mailgun integration be more standard. The problem I am facing is that mailgun isn&#39;t sending an raw http call with the data, it is using application/x-www-form-urlencoded and it seems like the custom webhooks only allows application/json. Should i add support for using application/x-www-form-urlencoded in custom webhooks or create an webhook the old way?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b45d457b0ae561c877cbe5e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b45d457b0ae561c877cbe5e' title="">Jul 11 2018 09:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="tester22" class="mention">@tester22</span> it would make sense to extend custom webhooks to support application/x-www-form-urlencoded. If you can add that yourself it would be appreciated. Let me know if you need any help.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b45dc53b0ae561c877cbe67 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b45dc53b0ae561c877cbe67' title="">Jul 11 2018 10:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="tester22" class="mention">@tester22</span> just had another look. are you sure this isn’t supported already? the custom webhook tries to decode json data and it that is empty it assumes raw data … <a href="https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L19" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L19</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b461d5081816669a443d2bd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b461d5081816669a443d2bd' title="">Jul 11 2018 15:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> no, that didn&#39;t work but after changing the line to: &quot;payload=request.get_json() or request.get_data(as_text=True) or request.values&quot; it works
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b462372a99e1e52b7298ade burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b462372a99e1e52b7298ade' title="">Jul 11 2018 15:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      This is what an incomming email looks like now:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4623779b82c6701bb5c105 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/m7h0/image.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/m7h0/thumb/image.png" alt="image.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4623baa99e1e52b7298b6f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Resource is sender but since the entire message is passed as raw an enrichment plugin can move the fields and do convertsions.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4636786697b22536f9396a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b4636786697b22536f9396a' title="">Jul 11 2018 16:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="tester22" class="mention">@tester22</span> nice one. do you want to submit a PR for this?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4636b1ba5f154b3b94a1f2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b4636b1ba5f154b3b94a1f2' title="">Jul 11 2018 16:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes, need to clean up the functions but will create PR when done.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4636fab6b6632c7f1b23d8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b4636fab6b6632c7f1b23d8' title="">Jul 11 2018 16:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b46660e73026160f59712ec burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b46660e73026160f59712ec' title="">Jul 11 2018 20:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> have you made any decision regarding <span data-link-type="issue" data-issue="554" data-issue-repo="alerta/alerta" class="issue">alerta/alerta#554</span> I can do some work on it in the next weeks. What about making an endpoint eg (createIssue), when making an GET to that endpoint the preferences available for that alert is returned. Eg an list of fields that are mandatory or an list of the users that the message could be forwarded to. This is then called by the webui to create an dialog with the required controls. Then an POST is made to the same endpoint and this updates the alert and triggers the call in the backend to the  receiving system.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4670d96008b5196d58e21e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b4670d96008b5196d58e21e' title="">Jul 11 2018 21:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="tester22" class="mention">@tester22</span> i have been working on this the last few days but have taken a break to rethink the approach. At present, the idea was to have “action” plugins that can be configured for any alert that could do whatever you want if you POST to /alert/:id/:action
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b46711eb6b6632c7f1b24d9 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I got a bit stuck when I was trying to work out how downstream systems would be kept up-to-date if alert status changes.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4671be6697b22536f93ad3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If you’re interested, you can see the working branch here <a href="https://github.com/alerta/alerta/tree/action-plugins" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta/tree/action-plugins</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4672156008b5196d58e225 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/07/11?at=5b4672156008b5196d58e225' title="">Jul 11 2018 21:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      you’re idea of having the GET endpoint return a list of valid actions is a good one. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b4672a9b6b6632c7f1b24e4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      so, no, i haven’t made any concrete decisions so you are welcome to have a go. fork my branch or start from scratch. let me know how you get on and maybe we can come up with something that works for all use-cases.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$PMHgnFMg2KukDbKwEYsOnCcYo/L+RztCpUMhqj3ebpo=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-07-11T00:00:00.000Z","nextDate":"2018-07-12T23:59:59.999Z","previousDate":"2018-07-10T00:00:00.000Z","messages":[{"id":"5b45bfac3d8f71623d6ea82e","text":"@satterly I am porting my incomming mailgun integration be more standard. The problem I am facing is that mailgun isn't sending an raw http call with the data, it is using application/x-www-form-urlencoded and it seems like the custom webhooks only allows application/json. Should i add support for using application/x-www-form-urlencoded in custom webhooks or create an webhook the old way?","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I am porting my incomming mailgun integration be more standard. The problem I am facing is that mailgun isn&#39;t sending an raw http call with the data, it is using application/x-www-form-urlencoded and it seems like the custom webhooks only allows application/json. Should i add support for using application/x-www-form-urlencoded in custom webhooks or create an webhook the old way?","sent":"2018-07-11T08:28:28.116Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b45d457b0ae561c877cbe5e","text":"@tester22 it would make sense to extend custom webhooks to support application/x-www-form-urlencoded. If you can add that yourself it would be appreciated. Let me know if you need any help.","html":"<span data-link-type=\"mention\" data-screen-name=\"tester22\" class=\"mention\">@tester22<\/span> it would make sense to extend custom webhooks to support application/x-www-form-urlencoded. If you can add that yourself it would be appreciated. Let me know if you need any help.","sent":"2018-07-11T09:56:39.409Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"tester22","userId":"5609b0b20fc9f982beb21fdb","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b45dc53b0ae561c877cbe67","text":"@tester22 just had another look. are you sure this isn’t supported already? the custom webhook tries to decode json data and it that is empty it assumes raw data … https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L19","html":"<span data-link-type=\"mention\" data-screen-name=\"tester22\" class=\"mention\">@tester22<\/span> just had another look. are you sure this isn’t supported already? the custom webhook tries to decode json data and it that is empty it assumes raw data … <a href=\"https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L19\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L19<\/a>","sent":"2018-07-11T10:30:43.178Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[{"url":"https://github.com/alerta/alerta/blob/master/alerta/webhooks/custom.py#L19"}],"mentions":[{"screenName":"tester22","userId":"5609b0b20fc9f982beb21fdb","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b461d5081816669a443d2bd","text":"@satterly no, that didn't work but after changing the line to: \"payload=request.get_json() or request.get_data(as_text=True) or request.values\" it works","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> no, that didn&#39;t work but after changing the line to: &quot;payload=request.get_json() or request.get_data(as_text=True) or request.values&quot; it works","sent":"2018-07-11T15:08:00.470Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b462372a99e1e52b7298ade","text":"This is what an incomming email looks like now:","html":"This is what an incomming email looks like now:","sent":"2018-07-11T15:34:10.975Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b4623779b82c6701bb5c105","text":"[![image.png](https://files.gitter.im/alerta/chat/m7h0/thumb/image.png)](https://files.gitter.im/alerta/chat/m7h0/image.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/m7h0/image.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/m7h0/thumb/image.png\" alt=\"image.png\" rel=\"nofollow\"><\/a>","sent":"2018-07-11T15:34:15.940Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":9,"urls":[{"url":"https://files.gitter.im/alerta/chat/m7h0/thumb/image.png"},{"url":"https://files.gitter.im/alerta/chat/m7h0/image.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b4623baa99e1e52b7298b6f","text":"Resource is sender but since the entire message is passed as raw an enrichment plugin can move the fields and do convertsions.","html":"Resource is sender but since the entire message is passed as raw an enrichment plugin can move the fields and do convertsions.","sent":"2018-07-11T15:35:22.206Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b4636786697b22536f9396a","text":"@tester22 nice one. do you want to submit a PR for this?","html":"<span data-link-type=\"mention\" data-screen-name=\"tester22\" class=\"mention\">@tester22<\/span> nice one. do you want to submit a PR for this?","sent":"2018-07-11T16:55:20.257Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"tester22","userId":"5609b0b20fc9f982beb21fdb","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b4636b1ba5f154b3b94a1f2","text":"Yes, need to clean up the functions but will create PR when done.","html":"Yes, need to clean up the functions but will create PR when done.","sent":"2018-07-11T16:56:17.969Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b4636fab6b6632c7f1b23d8","text":"Thanks","html":"Thanks","sent":"2018-07-11T16:57:30.921Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b46660e73026160f59712ec","text":"@satterly have you made any decision regarding https://github.com/alerta/alerta/issues/554? I can do some work on it in the next weeks. What about making an endpoint eg (createIssue), when making an GET to that endpoint the preferences available for that alert is returned. Eg an list of fields that are mandatory or an list of the users that the message could be forwarded to. This is then called by the webui to create an dialog with the required controls. Then an POST is made to the same endpoint and this updates the alert and triggers the call in the backend to the  receiving system.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> have you made any decision regarding <span data-link-type=\"issue\" data-issue=\"554\" data-issue-repo=\"alerta/alerta\" class=\"issue\">alerta/alerta#554<\/span> I can do some work on it in the next weeks. What about making an endpoint eg (createIssue), when making an GET to that endpoint the preferences available for that alert is returned. Eg an list of fields that are mandatory or an list of the users that the message could be forwarded to. This is then called by the webui to create an dialog with the required controls. Then an POST is made to the same endpoint and this updates the alert and triggers the call in the backend to the  receiving system.","sent":"2018-07-11T20:18:22.482Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"repo":"alerta/alerta","number":"554"}],"meta":[],"v":1,"burstStart":true},{"id":"5b4670d96008b5196d58e21e","text":"@tester22 i have been working on this the last few days but have taken a break to rethink the approach. At present, the idea was to have “action” plugins that can be configured for any alert that could do whatever you want if you POST to /alert/:id/:action","html":"<span data-link-type=\"mention\" data-screen-name=\"tester22\" class=\"mention\">@tester22<\/span> i have been working on this the last few days but have taken a break to rethink the approach. At present, the idea was to have “action” plugins that can be configured for any alert that could do whatever you want if you POST to /alert/:id/:action","sent":"2018-07-11T21:04:25.771Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"tester22","userId":"5609b0b20fc9f982beb21fdb","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b46711eb6b6632c7f1b24d9","text":"I got a bit stuck when I was trying to work out how downstream systems would be kept up-to-date if alert status changes.","html":"I got a bit stuck when I was trying to work out how downstream systems would be kept up-to-date if alert status changes.","sent":"2018-07-11T21:05:34.026Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b4671be6697b22536f93ad3","text":"If you’re interested, you can see the working branch here https://github.com/alerta/alerta/tree/action-plugins","html":"If you’re interested, you can see the working branch here <a href=\"https://github.com/alerta/alerta/tree/action-plugins\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta/tree/action-plugins<\/a>","sent":"2018-07-11T21:08:14.752Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[{"url":"https://github.com/alerta/alerta/tree/action-plugins"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b4672156008b5196d58e225","text":"you’re idea of having the GET endpoint return a list of valid actions is a good one. ","html":"you’re idea of having the GET endpoint return a list of valid actions is a good one. ","sent":"2018-07-11T21:09:41.537Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b4672a9b6b6632c7f1b24e4","text":"so, no, i haven’t made any concrete decisions so you are welcome to have a go. fork my branch or start from scratch. let me know how you get on and maybe we can come up with something that works for all use-cases.","html":"so, no, i haven’t made any concrete decisions so you are welcome to have a go. fork my branch or start from scratch. let me know how you get on and maybe we can come up with something that works for all use-cases.","sent":"2018-07-11T21:12:09.587Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

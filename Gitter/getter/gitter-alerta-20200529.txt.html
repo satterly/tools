@@ -1,0 +1,701 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/983cd202f/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/983cd202f/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/983cd202f/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/983cd202f/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/983cd202f/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/983cd202f/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/983cd202f/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/983cd202f/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/983cd202f/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/983cd202f/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/983cd202f/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/983cd202f/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/05/30"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/05/28"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">29<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">May 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5ed0dafa4412600ccd75f9c4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5852696dd73408ce4f3d3854 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Lars Van Casteren</div>
+      <div class='chat-item__username js-chat-item-from'>@cukal</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed0dafa4412600ccd75f9c4' title="">May 29 09:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi, quick question: I&#39;m running docker 7.5.5 set up with Prometheus / Alertmanager, all working, all good!<br>I noticed that there are some nightly incoming alerts that make it all the way through to Alerta and after a while get cleared automatically by alertmanager so all good. </p><p>I can&#39;t seem to find them anymore using the alerta frontend after a while? Is this the housekeeping that removes them? Checking the About page I do see count alerts etc but there&#39;s nothing anymore. </p><p>If so, how can I increase the housekeeping parameter to, let&#39;s say, keep everything for 1 month?</p><p>Thanks!</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed0dd48ff7a920a721c2658 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5852696dd73408ce4f3d3854 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Lars Van Casteren</div>
+      <div class='chat-item__username js-chat-item-from'>@cukal</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed0dd48ff7a920a721c2658' title="">May 29 10:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Just came across: <a target="_blank" data-link-type="issue" data-issue="119" href="https://github.com/alerta/docker-alerta/issues/119" data-provider="github" data-issue-repo="alerta/docker-alerta" class="issue">alerta/docker-alerta#119</a> 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed0dd4f4c9b0f060d2f8f97 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I guess that&#39;s what I need
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed0de849da05a060a3b2275 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea5b102d73408ce4fe1bfe7 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>annu9103</div>
+      <div class='chat-item__username js-chat-item-from'>@annu9103</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed0de849da05a060a3b2275' title="">May 29 10:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi ....could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl <a href="http://localhost:8080/alerts?lastReceiveTime" rel="nofollow noopener noreferrer" target="_blank" class="link ">http://localhost:8080/alerts?lastReceiveTime</a> &lt;= to-date (now) \<br>-H &#39;Authorization: Key demo-key&#39;  (i want alarm that are generated in last 10 min )
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed0dfb7b101510b2024f3cd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea5b102d73408ce4fe1bfe7 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>annu9103</div>
+      <div class='chat-item__username js-chat-item-from'>@annu9103</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed0dfb7b101510b2024f3cd' title="">May 29 10:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>.... hi ....could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl <a href="http://localhost:8080/alerts?lastReceiveTime" rel="nofollow noopener noreferrer" target="_blank" class="link ">http://localhost:8080/alerts?lastReceiveTime</a> &lt;= to-date (now) \<br>-H &#39;Authorization: Key demo-key&#39;  (i want alarm that are generated in last 10 min )
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed0e55589941d051a2dedad burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea5b102d73408ce4fe1bfe7 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>annu9103</div>
+      <div class='chat-item__username js-chat-item-from'>@annu9103</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed0e55589941d051a2dedad' title="">May 29 10:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="sandeepl337" class="mention">@sandeepl337</span> could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl <a href="http://localhost:8080/alerts?lastReceiveTime" rel="nofollow noopener noreferrer" target="_blank" class="link ">http://localhost:8080/alerts?lastReceiveTime</a> &lt;= to-date (now) \<br>-H &#39;Authorization: Key demo-key&#39; (i want alarm that are generated in last 10 min ) 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed0f5154c9b0f060d2fc684 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea5b102d73408ce4fe1bfe7 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>annu9103</div>
+      <div class='chat-item__username js-chat-item-from'>@annu9103</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed0f5154c9b0f060d2fc684' title="">May 29 11:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ??
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed10b489da05a060a3b8c3c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea5b102d73408ce4fe1bfe7 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/64230083?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>annu9103</div>
+      <div class='chat-item__username js-chat-item-from'>@annu9103</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed10b489da05a060a3b8c3c' title="">May 29 13:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      how to write api query for generate last 10 min alarm
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed1174f9da05a060a3bac57 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5852696dd73408ce4f3d3854 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Lars Van Casteren</div>
+      <div class='chat-item__username js-chat-item-from'>@cukal</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed1174f9da05a060a3bac57' title="">May 29 14:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> Hi Nick, thanks for Alerta!<br>I&#39;m setting these env vars in docker-compose.yml (7.5.5) :<br><code>DEFAULT_EXPIRED_DELETE_HRS = 0</code><br><code>DEFAULT_INFO_DELETE_HRS = 0</code><br>but still closed tickets get removed. Checked inside the container and the env vars are set. Any idea where I should start looking? 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed1195b549761730b664dbd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5852696dd73408ce4f3d3854 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Lars Van Casteren</div>
+      <div class='chat-item__username js-chat-item-from'>@cukal</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed1195b549761730b664dbd' title="">May 29 14:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      When checking the logs I do see:<br><code>web_1  |                 DELETE FROM alerts
+web_1  |                  WHERE (status IN (&#39;closed&#39;, &#39;expired&#39;)
+web_1  |                         AND last_receive_time &lt; (NOW() at time zone &#39;utc&#39; - INTERVAL &#39;2 hours&#39;))</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed123b727513a72fbbed321 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5852696dd73408ce4f3d3854 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Lars Van Casteren</div>
+      <div class='chat-item__username js-chat-item-from'>@cukal</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed123b727513a72fbbed321' title="">May 29 15:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hmm, it seems the crontab inside the docker container is doing the housekeeping call without--expired, defaulting it to 2h, possible?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed125c6225dc25f54b36d33 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed125c6225dc25f54b36d33' title="">May 29 15:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      none of those variables are supported as environment variables
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed125eff0b8a2053abfd013 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      The docker readme lists all of the supported env vars <a href="https://hub.docker.com/repository/docker/alerta/alerta-web" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://hub.docker.com/repository/docker/alerta/alerta-web</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed125fd778fad0b13343ac6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      if you need to set other variables use alertad.conf file
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed12af22c49c45f5aadbc64 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5852696dd73408ce4f3d3854 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/627072?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Lars Van Casteren</div>
+      <div class='chat-item__username js-chat-item-from'>@cukal</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed12af22c49c45f5aadbc64' title="">May 29 15:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks for your reply! I backtracked the housekeeping command to the --expired value and figured that what&#39;s causing it because the env variable I set doesn&#39;t get used inside the container and indeed, it&#39;s not in the list. No worries, I&#39;ll add them. thanks again for Alerta Nick! 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ed12feab101510b2025cd80 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/05/29?at=5ed12feab101510b2025cd80' title="">May 29 15:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No problem.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"983cd2","assetTag":"983cd202f","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$vDvoOQTppF7uAq6aQ8EMxVoO3mndcQZUdwTz95GWiHg=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":380,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-05-29T00:00:00.000Z","nextDate":"2020-05-30T23:59:59.999Z","previousDate":"2020-05-28T00:00:00.000Z","messages":[{"id":"5ed0dafa4412600ccd75f9c4","text":"Hi, quick question: I'm running docker 7.5.5 set up with Prometheus / Alertmanager, all working, all good!\nI noticed that there are some nightly incoming alerts that make it all the way through to Alerta and after a while get cleared automatically by alertmanager so all good. \n\nI can't seem to find them anymore using the alerta frontend after a while? Is this the housekeeping that removes them? Checking the About page I do see count alerts etc but there's nothing anymore. \n\nIf so, how can I increase the housekeeping parameter to, let's say, keep everything for 1 month?\n\nThanks!\n","html":"<p>Hi, quick question: I&#39;m running docker 7.5.5 set up with Prometheus / Alertmanager, all working, all good!<br>I noticed that there are some nightly incoming alerts that make it all the way through to Alerta and after a while get cleared automatically by alertmanager so all good. <\/p><p>I can&#39;t seem to find them anymore using the alerta frontend after a while? Is this the housekeeping that removes them? Checking the About page I do see count alerts etc but there&#39;s nothing anymore. <\/p><p>If so, how can I increase the housekeeping parameter to, let&#39;s say, keep everything for 1 month?<\/p><p>Thanks!<\/p>","sent":"2020-05-29T09:50:50.537Z","fromUser":{"id":"5852696dd73408ce4f3d3854","username":"cukal","displayName":"Lars Van Casteren","url":"/cukal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/cukal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/627072?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/627072?v=4&s=128","v":6,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed0dd48ff7a920a721c2658","text":"Just came across: https://github.com/alerta/docker-alerta/issues/119 ","html":"Just came across: <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"119\" href=\"https://github.com/alerta/docker-alerta/issues/119\" data-provider=\"github\" data-issue-repo=\"alerta/docker-alerta\" class=\"issue\">alerta/docker-alerta#119<\/a> ","sent":"2020-05-29T10:00:40.310Z","fromUser":{"id":"5852696dd73408ce4f3d3854","username":"cukal","displayName":"Lars Van Casteren","url":"/cukal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/cukal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/627072?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/627072?v=4&s=128","v":6,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[{"repo":"alerta/docker-alerta","number":"119"}],"meta":[],"v":1,"burstStart":true},{"id":"5ed0dd4f4c9b0f060d2f8f97","text":"I guess that's what I need","html":"I guess that&#39;s what I need","sent":"2020-05-29T10:00:47.391Z","fromUser":{"id":"5852696dd73408ce4f3d3854","username":"cukal","displayName":"Lars Van Casteren","url":"/cukal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/cukal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/627072?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/627072?v=4&s=128","v":6,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5ed0de849da05a060a3b2275","text":"hi ....could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl http://localhost:8080/alerts?lastReceiveTime <= to-date (now) \\\n-H 'Authorization: Key demo-key'  (i want alarm that are generated in last 10 min )","html":"hi ....could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl <a href=\"http://localhost:8080/alerts?lastReceiveTime\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">http://localhost:8080/alerts?lastReceiveTime<\/a> &lt;= to-date (now) \\<br>-H &#39;Authorization: Key demo-key&#39;  (i want alarm that are generated in last 10 min )","sent":"2020-05-29T10:05:56.895Z","fromUser":{"id":"5ea5b102d73408ce4fe1bfe7","username":"annu9103","displayName":"annu9103","url":"/annu9103","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/annu9103","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=128","v":12,"gv":"4"},"readBy":7,"urls":[{"url":"http://localhost:8080/alerts?lastReceiveTime"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed0dfb7b101510b2024f3cd","text":"\n@satterly.... hi ....could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl http://localhost:8080/alerts?lastReceiveTime <= to-date (now) \\\n-H 'Authorization: Key demo-key'  (i want alarm that are generated in last 10 min )","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>.... hi ....could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl <a href=\"http://localhost:8080/alerts?lastReceiveTime\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">http://localhost:8080/alerts?lastReceiveTime<\/a> &lt;= to-date (now) \\<br>-H &#39;Authorization: Key demo-key&#39;  (i want alarm that are generated in last 10 min )","sent":"2020-05-29T10:11:03.386Z","fromUser":{"id":"5ea5b102d73408ce4fe1bfe7","username":"annu9103","displayName":"annu9103","url":"/annu9103","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/annu9103","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=128","v":12,"gv":"4"},"readBy":7,"urls":[{"url":"http://localhost:8080/alerts?lastReceiveTime"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed0e55589941d051a2dedad","text":"@sandeepl337 could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl http://localhost:8080/alerts?lastReceiveTime <= to-date (now) \\\n-H 'Authorization: Key demo-key' (i want alarm that are generated in last 10 min ) ","html":"<span data-link-type=\"mention\" data-screen-name=\"sandeepl337\" class=\"mention\">@sandeepl337<\/span> could you please suggest me the curl command for last 10 min alert available in alert dashboard like $ curl <a href=\"http://localhost:8080/alerts?lastReceiveTime\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">http://localhost:8080/alerts?lastReceiveTime<\/a> &lt;= to-date (now) \\<br>-H &#39;Authorization: Key demo-key&#39; (i want alarm that are generated in last 10 min ) ","sent":"2020-05-29T10:35:01.275Z","fromUser":{"id":"5ea5b102d73408ce4fe1bfe7","username":"annu9103","displayName":"annu9103","url":"/annu9103","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/annu9103","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=128","v":12,"gv":"4"},"readBy":7,"urls":[{"url":"http://localhost:8080/alerts?lastReceiveTime"}],"mentions":[{"screenName":"sandeepl337","userId":"5528dc3d15522ed4b3ded84e","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed0f5154c9b0f060d2fc684","text":"??","html":"??","sent":"2020-05-29T11:42:13.281Z","fromUser":{"id":"5ea5b102d73408ce4fe1bfe7","username":"annu9103","displayName":"annu9103","url":"/annu9103","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/annu9103","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=128","v":12,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed10b489da05a060a3b8c3c","text":"how to write api query for generate last 10 min alarm","html":"how to write api query for generate last 10 min alarm","sent":"2020-05-29T13:16:56.067Z","fromUser":{"id":"5ea5b102d73408ce4fe1bfe7","username":"annu9103","displayName":"annu9103","url":"/annu9103","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/annu9103","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/64230083?v=4&s=128","v":12,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed1174f9da05a060a3bac57","text":"@satterly Hi Nick, thanks for Alerta! \nI'm setting these env vars in docker-compose.yml (7.5.5) : \n```DEFAULT_EXPIRED_DELETE_HRS = 0```\n```DEFAULT_INFO_DELETE_HRS = 0```\nbut still closed tickets get removed. Checked inside the container and the env vars are set. Any idea where I should start looking? ","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> Hi Nick, thanks for Alerta!<br>I&#39;m setting these env vars in docker-compose.yml (7.5.5) :<br><code>DEFAULT_EXPIRED_DELETE_HRS = 0<\/code><br><code>DEFAULT_INFO_DELETE_HRS = 0<\/code><br>but still closed tickets get removed. Checked inside the container and the env vars are set. Any idea where I should start looking? ","sent":"2020-05-29T14:08:15.319Z","editedAt":"2020-05-29T14:08:32.141Z","fromUser":{"id":"5852696dd73408ce4f3d3854","username":"cukal","displayName":"Lars Van Casteren","url":"/cukal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/cukal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/627072?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/627072?v=4&s=128","v":6,"gv":"4"},"readBy":7,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5ed1195b549761730b664dbd","text":"When checking the logs I do see:\n```web_1  |                 DELETE FROM alerts\nweb_1  |                  WHERE (status IN ('closed', 'expired')\nweb_1  |                         AND last_receive_time < (NOW() at time zone 'utc' - INTERVAL '2 hours'))```","html":"When checking the logs I do see:<br><code>web_1  |                 DELETE FROM alerts\nweb_1  |                  WHERE (status IN (&#39;closed&#39;, &#39;expired&#39;)\nweb_1  |                         AND last_receive_time &lt; (NOW() at time zone &#39;utc&#39; - INTERVAL &#39;2 hours&#39;))<\/code>","sent":"2020-05-29T14:16:59.283Z","fromUser":{"id":"5852696dd73408ce4f3d3854","username":"cukal","displayName":"Lars Van Casteren","url":"/cukal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/cukal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/627072?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/627072?v=4&s=128","v":6,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed123b727513a72fbbed321","text":"hmm, it seems the crontab inside the docker container is doing the housekeeping call without--expired, defaulting it to 2h, possible?","html":"hmm, it seems the crontab inside the docker container is doing the housekeeping call without--expired, defaulting it to 2h, possible?","sent":"2020-05-29T15:01:11.432Z","fromUser":{"id":"5852696dd73408ce4f3d3854","username":"cukal","displayName":"Lars Van Casteren","url":"/cukal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/cukal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/627072?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/627072?v=4&s=128","v":6,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed125c6225dc25f54b36d33","text":"none of those variables are supported as environment variables","html":"none of those variables are supported as environment variables","sent":"2020-05-29T15:09:58.747Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed125eff0b8a2053abfd013","text":"The docker readme lists all of the supported env vars https://hub.docker.com/repository/docker/alerta/alerta-web","html":"The docker readme lists all of the supported env vars <a href=\"https://hub.docker.com/repository/docker/alerta/alerta-web\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://hub.docker.com/repository/docker/alerta/alerta-web<\/a>","sent":"2020-05-29T15:10:39.297Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[{"url":"https://hub.docker.com/repository/docker/alerta/alerta-web"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5ed125fd778fad0b13343ac6","text":"if you need to set other variables use alertad.conf file","html":"if you need to set other variables use alertad.conf file","sent":"2020-05-29T15:10:53.883Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5ed12af22c49c45f5aadbc64","text":"Thanks for your reply! I backtracked the housekeeping command to the --expired value and figured that what's causing it because the env variable I set doesn't get used inside the container and indeed, it's not in the list. No worries, I'll add them. thanks again for Alerta Nick! ","html":"Thanks for your reply! I backtracked the housekeeping command to the --expired value and figured that what&#39;s causing it because the env variable I set doesn&#39;t get used inside the container and indeed, it&#39;s not in the list. No worries, I&#39;ll add them. thanks again for Alerta Nick! ","sent":"2020-05-29T15:32:02.463Z","fromUser":{"id":"5852696dd73408ce4f3d3854","username":"cukal","displayName":"Lars Van Casteren","url":"/cukal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/cukal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/627072?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/627072?v=4&s=128","v":6,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ed12feab101510b2025cd80","text":"No problem.","html":"No problem.","sent":"2020-05-29T15:53:14.385Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/983cd202f/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/983cd202f/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/983cd202f/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/983cd202f/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/983cd202f/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

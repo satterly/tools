@@ -1,0 +1,507 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/08/11"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/08/09"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">10<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5b6d947a937eee2423fb9ea2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/10?at=5b6d947a937eee2423fb9ea2' title="">Aug 10 2018 13:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> noticing a strange issue on of our installations - we have 262 closed alerts and when trying to view the closed alerts in UI its crashing and I can see following in logs:<pre><code><span class="number">7</span>/site-packages/alerta/exceptions<span class="class">.py</span>:<span class="number">77</span>]
+Traceback (most recent call last):
+  File <span class="string">"/usr/lib/python2.7/site-packages/flask/app.py"</span>, line <span class="number">1813</span>, <span class="keyword">in</span> full_dispatch_request
+    rv = self.<span class="function"><span class="title">dispatch_request</span><span class="params">()</span></span>
+  File <span class="string">"/usr/lib/python2.7/site-packages/flask/app.py"</span>, line <span class="number">1799</span>, <span class="keyword">in</span> dispatch_request
+    return self<span class="class">.view_functions</span>[rule.endpoint](**req.view_args)
+  File <span class="string">"/usr/lib/python2.7/site-packages/flask_cors/decorator.py"</span>, line <span class="number">128</span>, <span class="keyword">in</span> wrapped_function
+    resp = <span class="function"><span class="title">make_response</span><span class="params">(f(*args, **kwargs)</span></span>)
+  File <span class="string">"/usr/lib/python2.7/site-packages/alerta/auth/utils.py"</span>, line <span class="number">115</span>, <span class="keyword">in</span> wrapped
+    return <span class="function"><span class="title">f</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/lib/python2.7/site-packages/alerta/models/metrics.py"</span>, line <span class="number">259</span>, <span class="keyword">in</span> wrapped
+    response = <span class="function"><span class="title">f</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/lib/python2.7/site-packages/alerta/utils/api.py"</span>, line <span class="number">31</span>, <span class="keyword">in</span> decorated
+    return <span class="function"><span class="title">func</span><span class="params">(*args, **kwargs)</span></span>
+  File <span class="string">"/usr/lib/python2.7/site-packages/alerta/views/alerts.py"</span>, line <span class="number">238</span>, <span class="keyword">in</span> search_alerts
+    alerts = Alert.<span class="function"><span class="title">find_all</span><span class="params">(query, paging.page, paging.page_size)</span></span>
+  File <span class="string">"/usr/lib/python2.7/site-packages/alerta/models/alert.py"</span>, line <span class="number">417</span>, <span class="keyword">in</span> find_all
+    return [Alert.<span class="function"><span class="title">from_db</span><span class="params">(alert)</span></span> <span class="keyword">for</span> alert <span class="keyword">in</span> db.<span class="function"><span class="title">get_alerts</span><span class="params">(query, page, page_size)</span></span>]
+  File <span class="string">"/usr/lib64/python2.7/site-packages/pymongo/cursor.py"</span>, line <span class="number">1169</span>, <span class="keyword">in</span> next
+    <span class="keyword">if</span> <span class="function"><span class="title">len</span><span class="params">(self.__data)</span></span> or self._refresh():
+  File <span class="string">"/usr/lib64/python2.7/site-packages/pymongo/cursor.py"</span>, line <span class="number">1085</span>, <span class="keyword">in</span> _refresh
+    self.__send_message(q)
+  File <span class="string">"/usr/lib64/python2.7/site-packages/pymongo/cursor.py"</span>, line <span class="number">975</span>, <span class="keyword">in</span> __send_message
+    helpers._check_command_response(first)
+  File <span class="string">"/usr/lib64/python2.7/site-packages/pymongo/helpers.py"</span>, line <span class="number">145</span>, <span class="keyword">in</span> _check_command_response
+    raise <span class="function"><span class="title">OperationFailure</span><span class="params">(msg % errmsg, code, response)</span></span>
+OperationFailure: Executor error during find command: OperationFailed: Sort operation used more than the maximum <span class="number">33554432</span> bytes of RAM. Add an index, or specify <span class="tag">a</span> smaller limit.</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b6dd216988005174ebf3f77 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b6dd1f7d73408ce4fa4352f avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/4048174?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/4048174?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Tiago Cruz</div>
+      <div class='chat-item__username js-chat-item-from'>@tiago-cruz-movile</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/10?at=5b6dd216988005174ebf3f77' title="">Aug 10 2018 17:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hello guys! did you already saw this error?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b6dd22f937eee2423fd1e83 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>2018-08-09 21:46:50.159 root[19423] MainThread INFO - [alerta] endpoint=https://alerta.it.xxxx.com/ key=
+2018-08-09 21:46:50.207 root[19423] MainThread ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent <span class="operator"><span class="keyword">call</span> <span class="keyword">last</span>):
+  File <span class="string">"/usr/lib/python2.7/site-packages/zabbix_alerta.py"</span>, line <span class="number">222</span>, <span class="keyword">in</span> main
+    api.send_alert(**alert)
+  File <span class="string">"/usr/lib/python2.7/site-packages/alertaclient/api.py"</span>, line <span class="number">68</span>, <span class="keyword">in</span> send_alert
+    r = self.http.post(<span class="string">'/alert'</span>, <span class="keyword">data</span>)
+  File <span class="string">"/usr/lib/python2.7/site-packages/alertaclient/api.py"</span>, line <span class="number">350</span>, <span class="keyword">in</span> post
+    <span class="keyword">return</span> self._handle_error(response)
+  File <span class="string">"/usr/lib/python2.7/site-packages/alertaclient/api.py"</span>, line <span class="number">373</span>, <span class="keyword">in</span> _handle_error
+    resp = response.json()
+  File <span class="string">"/usr/lib/python2.7/site-packages/requests/models.py"</span>, line <span class="number">896</span>, <span class="keyword">in</span> json
+    <span class="keyword">return</span> complexjson.loads(self.<span class="built_in">text</span>, **kwargs)
+  File <span class="string">"/usr/lib64/python2.7/site-packages/simplejson/__init__.py"</span>, line <span class="number">518</span>, <span class="keyword">in</span> loads
+    <span class="keyword">return</span> _default_decoder.<span class="keyword">decode</span>(s)
+  File <span class="string">"/usr/lib64/python2.7/site-packages/simplejson/decoder.py"</span>, line <span class="number">370</span>, <span class="keyword">in</span> <span class="keyword">decode</span>
+    obj, <span class="keyword">end</span> = self.raw_decode(s)
+  File <span class="string">"/usr/lib64/python2.7/site-packages/simplejson/decoder.py"</span>, line <span class="number">400</span>, <span class="keyword">in</span> raw_decode
+    <span class="keyword">return</span> self.scan_once(s, idx=_w(s, idx).<span class="keyword">end</span>())
+JSONDecodeError: Expecting <span class="keyword">value</span>: line <span class="number">1</span> <span class="keyword">column</span> <span class="number">1</span> (<span class="built_in">char</span> <span class="number">0</span>)</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b6dd24e2a8e6c6083a68d85 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      in the webserver:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b6dd2565ec2bc174fdebebb burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>ip=<span class="string">\10.111.83.71</span> [<span class="string">\10/Aug/2018:17:42:27</span> +<span class="number">0000</span>] <span class="string">"\POST /alert HTTP/1.0"</span> <span class="string">\404</span> <span class="string">\169</span> <span class="string">"\-"</span> <span class="string">"\python-requests/2.19.1"</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b6dd26d67eb9f60fec1538f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ve tried with and without key, same result
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b6dd289196bc60b6bafc4a5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      centos 7, zabbix 3.2, python 2.7
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$FCpxnfWPxSv9vD/UZSlWqJXsmswBNTrNKaPnf6daYQI=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-08-10T00:00:00.000Z","nextDate":"2018-08-11T23:59:59.999Z","previousDate":"2018-08-09T00:00:00.000Z","messages":[{"id":"5b6d947a937eee2423fb9ea2","text":"Hi @satterly noticing a strange issue on of our installations - we have 262 closed alerts and when trying to view the closed alerts in UI its crashing and I can see following in logs:\n```\n7/site-packages/alerta/exceptions.py:77]\nTraceback (most recent call last):\n  File \"/usr/lib/python2.7/site-packages/flask/app.py\", line 1813, in full_dispatch_request\n    rv = self.dispatch_request()\n  File \"/usr/lib/python2.7/site-packages/flask/app.py\", line 1799, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File \"/usr/lib/python2.7/site-packages/flask_cors/decorator.py\", line 128, in wrapped_function\n    resp = make_response(f(*args, **kwargs))\n  File \"/usr/lib/python2.7/site-packages/alerta/auth/utils.py\", line 115, in wrapped\n    return f(*args, **kwargs)\n  File \"/usr/lib/python2.7/site-packages/alerta/models/metrics.py\", line 259, in wrapped\n    response = f(*args, **kwargs)\n  File \"/usr/lib/python2.7/site-packages/alerta/utils/api.py\", line 31, in decorated\n    return func(*args, **kwargs)\n  File \"/usr/lib/python2.7/site-packages/alerta/views/alerts.py\", line 238, in search_alerts\n    alerts = Alert.find_all(query, paging.page, paging.page_size)\n  File \"/usr/lib/python2.7/site-packages/alerta/models/alert.py\", line 417, in find_all\n    return [Alert.from_db(alert) for alert in db.get_alerts(query, page, page_size)]\n  File \"/usr/lib64/python2.7/site-packages/pymongo/cursor.py\", line 1169, in next\n    if len(self.__data) or self._refresh():\n  File \"/usr/lib64/python2.7/site-packages/pymongo/cursor.py\", line 1085, in _refresh\n    self.__send_message(q)\n  File \"/usr/lib64/python2.7/site-packages/pymongo/cursor.py\", line 975, in __send_message\n    helpers._check_command_response(first)\n  File \"/usr/lib64/python2.7/site-packages/pymongo/helpers.py\", line 145, in _check_command_response\n    raise OperationFailure(msg % errmsg, code, response)\nOperationFailure: Executor error during find command: OperationFailed: Sort operation used more than the maximum 33554432 bytes of RAM. Add an index, or specify a smaller limit.\n```","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> noticing a strange issue on of our installations - we have 262 closed alerts and when trying to view the closed alerts in UI its crashing and I can see following in logs:<pre><code><span class=\"number\">7<\/span>/site-packages/alerta/exceptions<span class=\"class\">.py<\/span>:<span class=\"number\">77<\/span>]\nTraceback (most recent call last):\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/flask/app.py\"<\/span>, line <span class=\"number\">1813<\/span>, <span class=\"keyword\">in<\/span> full_dispatch_request\n    rv = self.<span class=\"function\"><span class=\"title\">dispatch_request<\/span><span class=\"params\">()<\/span><\/span>\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/flask/app.py\"<\/span>, line <span class=\"number\">1799<\/span>, <span class=\"keyword\">in<\/span> dispatch_request\n    return self<span class=\"class\">.view_functions<\/span>[rule.endpoint](**req.view_args)\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/flask_cors/decorator.py\"<\/span>, line <span class=\"number\">128<\/span>, <span class=\"keyword\">in<\/span> wrapped_function\n    resp = <span class=\"function\"><span class=\"title\">make_response<\/span><span class=\"params\">(f(*args, **kwargs)<\/span><\/span>)\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/alerta/auth/utils.py\"<\/span>, line <span class=\"number\">115<\/span>, <span class=\"keyword\">in<\/span> wrapped\n    return <span class=\"function\"><span class=\"title\">f<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/alerta/models/metrics.py\"<\/span>, line <span class=\"number\">259<\/span>, <span class=\"keyword\">in<\/span> wrapped\n    response = <span class=\"function\"><span class=\"title\">f<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/alerta/utils/api.py\"<\/span>, line <span class=\"number\">31<\/span>, <span class=\"keyword\">in<\/span> decorated\n    return <span class=\"function\"><span class=\"title\">func<\/span><span class=\"params\">(*args, **kwargs)<\/span><\/span>\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/alerta/views/alerts.py\"<\/span>, line <span class=\"number\">238<\/span>, <span class=\"keyword\">in<\/span> search_alerts\n    alerts = Alert.<span class=\"function\"><span class=\"title\">find_all<\/span><span class=\"params\">(query, paging.page, paging.page_size)<\/span><\/span>\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/alerta/models/alert.py\"<\/span>, line <span class=\"number\">417<\/span>, <span class=\"keyword\">in<\/span> find_all\n    return [Alert.<span class=\"function\"><span class=\"title\">from_db<\/span><span class=\"params\">(alert)<\/span><\/span> <span class=\"keyword\">for<\/span> alert <span class=\"keyword\">in<\/span> db.<span class=\"function\"><span class=\"title\">get_alerts<\/span><span class=\"params\">(query, page, page_size)<\/span><\/span>]\n  File <span class=\"string\">\"/usr/lib64/python2.7/site-packages/pymongo/cursor.py\"<\/span>, line <span class=\"number\">1169<\/span>, <span class=\"keyword\">in<\/span> next\n    <span class=\"keyword\">if<\/span> <span class=\"function\"><span class=\"title\">len<\/span><span class=\"params\">(self.__data)<\/span><\/span> or self._refresh():\n  File <span class=\"string\">\"/usr/lib64/python2.7/site-packages/pymongo/cursor.py\"<\/span>, line <span class=\"number\">1085<\/span>, <span class=\"keyword\">in<\/span> _refresh\n    self.__send_message(q)\n  File <span class=\"string\">\"/usr/lib64/python2.7/site-packages/pymongo/cursor.py\"<\/span>, line <span class=\"number\">975<\/span>, <span class=\"keyword\">in<\/span> __send_message\n    helpers._check_command_response(first)\n  File <span class=\"string\">\"/usr/lib64/python2.7/site-packages/pymongo/helpers.py\"<\/span>, line <span class=\"number\">145<\/span>, <span class=\"keyword\">in<\/span> _check_command_response\n    raise <span class=\"function\"><span class=\"title\">OperationFailure<\/span><span class=\"params\">(msg % errmsg, code, response)<\/span><\/span>\nOperationFailure: Executor error during find command: OperationFailed: Sort operation used more than the maximum <span class=\"number\">33554432<\/span> bytes of RAM. Add an index, or specify <span class=\"tag\">a<\/span> smaller limit.<\/code><\/pre>","sent":"2018-08-10T13:34:49.993Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b6dd216988005174ebf3f77","text":"hello guys! did you already saw this error?","html":"hello guys! did you already saw this error?","sent":"2018-08-10T17:57:42.387Z","fromUser":{"id":"5b6dd1f7d73408ce4fa4352f","username":"tiago-cruz-movile","displayName":"Tiago Cruz","url":"/tiago-cruz-movile","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tiago-cruz-movile","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b6dd22f937eee2423fd1e83","text":"```\n2018-08-09 21:46:50.159 root[19423] MainThread INFO - [alerta] endpoint=https://alerta.it.xxxx.com/ key=\n2018-08-09 21:46:50.207 root[19423] MainThread ERROR - Expecting value: line 1 column 1 (char 0)\nTraceback (most recent call last):\n  File \"/usr/lib/python2.7/site-packages/zabbix_alerta.py\", line 222, in main\n    api.send_alert(**alert)\n  File \"/usr/lib/python2.7/site-packages/alertaclient/api.py\", line 68, in send_alert\n    r = self.http.post('/alert', data)\n  File \"/usr/lib/python2.7/site-packages/alertaclient/api.py\", line 350, in post\n    return self._handle_error(response)\n  File \"/usr/lib/python2.7/site-packages/alertaclient/api.py\", line 373, in _handle_error\n    resp = response.json()\n  File \"/usr/lib/python2.7/site-packages/requests/models.py\", line 896, in json\n    return complexjson.loads(self.text, **kwargs)\n  File \"/usr/lib64/python2.7/site-packages/simplejson/__init__.py\", line 518, in loads\n    return _default_decoder.decode(s)\n  File \"/usr/lib64/python2.7/site-packages/simplejson/decoder.py\", line 370, in decode\n    obj, end = self.raw_decode(s)\n  File \"/usr/lib64/python2.7/site-packages/simplejson/decoder.py\", line 400, in raw_decode\n    return self.scan_once(s, idx=_w(s, idx).end())\nJSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n```","html":"<pre><code>2018-08-09 21:46:50.159 root[19423] MainThread INFO - [alerta] endpoint=https://alerta.it.xxxx.com/ key=\n2018-08-09 21:46:50.207 root[19423] MainThread ERROR - Expecting value: line 1 column 1 (char 0)\nTraceback (most recent <span class=\"operator\"><span class=\"keyword\">call<\/span> <span class=\"keyword\">last<\/span>):\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/zabbix_alerta.py\"<\/span>, line <span class=\"number\">222<\/span>, <span class=\"keyword\">in<\/span> main\n    api.send_alert(**alert)\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/alertaclient/api.py\"<\/span>, line <span class=\"number\">68<\/span>, <span class=\"keyword\">in<\/span> send_alert\n    r = self.http.post(<span class=\"string\">'/alert'<\/span>, <span class=\"keyword\">data<\/span>)\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/alertaclient/api.py\"<\/span>, line <span class=\"number\">350<\/span>, <span class=\"keyword\">in<\/span> post\n    <span class=\"keyword\">return<\/span> self._handle_error(response)\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/alertaclient/api.py\"<\/span>, line <span class=\"number\">373<\/span>, <span class=\"keyword\">in<\/span> _handle_error\n    resp = response.json()\n  File <span class=\"string\">\"/usr/lib/python2.7/site-packages/requests/models.py\"<\/span>, line <span class=\"number\">896<\/span>, <span class=\"keyword\">in<\/span> json\n    <span class=\"keyword\">return<\/span> complexjson.loads(self.<span class=\"built_in\">text<\/span>, **kwargs)\n  File <span class=\"string\">\"/usr/lib64/python2.7/site-packages/simplejson/__init__.py\"<\/span>, line <span class=\"number\">518<\/span>, <span class=\"keyword\">in<\/span> loads\n    <span class=\"keyword\">return<\/span> _default_decoder.<span class=\"keyword\">decode<\/span>(s)\n  File <span class=\"string\">\"/usr/lib64/python2.7/site-packages/simplejson/decoder.py\"<\/span>, line <span class=\"number\">370<\/span>, <span class=\"keyword\">in<\/span> <span class=\"keyword\">decode<\/span>\n    obj, <span class=\"keyword\">end<\/span> = self.raw_decode(s)\n  File <span class=\"string\">\"/usr/lib64/python2.7/site-packages/simplejson/decoder.py\"<\/span>, line <span class=\"number\">400<\/span>, <span class=\"keyword\">in<\/span> raw_decode\n    <span class=\"keyword\">return<\/span> self.scan_once(s, idx=_w(s, idx).<span class=\"keyword\">end<\/span>())\nJSONDecodeError: Expecting <span class=\"keyword\">value<\/span>: line <span class=\"number\">1<\/span> <span class=\"keyword\">column<\/span> <span class=\"number\">1<\/span> (<span class=\"built_in\">char<\/span> <span class=\"number\">0<\/span>)<\/span><\/code><\/pre>","sent":"2018-08-10T17:58:07.089Z","fromUser":{"id":"5b6dd1f7d73408ce4fa4352f","username":"tiago-cruz-movile","displayName":"Tiago Cruz","url":"/tiago-cruz-movile","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tiago-cruz-movile","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b6dd24e2a8e6c6083a68d85","text":"in the webserver:","html":"in the webserver:","sent":"2018-08-10T17:58:38.126Z","fromUser":{"id":"5b6dd1f7d73408ce4fa4352f","username":"tiago-cruz-movile","displayName":"Tiago Cruz","url":"/tiago-cruz-movile","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tiago-cruz-movile","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=128","v":1,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b6dd2565ec2bc174fdebebb","text":"```\nip=\\10.111.83.71 [\\10/Aug/2018:17:42:27 +0000] \"\\POST /alert HTTP/1.0\" \\404 \\169 \"\\-\" \"\\python-requests/2.19.1\"\n\n```\n\n\n\n\n","html":"<pre><code>ip=<span class=\"string\">\\10.111.83.71<\/span> [<span class=\"string\">\\10/Aug/2018:17:42:27<\/span> +<span class=\"number\">0000<\/span>] <span class=\"string\">\"\\POST /alert HTTP/1.0\"<\/span> <span class=\"string\">\\404<\/span> <span class=\"string\">\\169<\/span> <span class=\"string\">\"\\-\"<\/span> <span class=\"string\">\"\\python-requests/2.19.1\"<\/span><\/code><\/pre>","sent":"2018-08-10T17:58:46.142Z","fromUser":{"id":"5b6dd1f7d73408ce4fa4352f","username":"tiago-cruz-movile","displayName":"Tiago Cruz","url":"/tiago-cruz-movile","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tiago-cruz-movile","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=128","v":1,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b6dd26d67eb9f60fec1538f","text":"I've tried with and without key, same result","html":"I&#39;ve tried with and without key, same result","sent":"2018-08-10T17:59:09.166Z","fromUser":{"id":"5b6dd1f7d73408ce4fa4352f","username":"tiago-cruz-movile","displayName":"Tiago Cruz","url":"/tiago-cruz-movile","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tiago-cruz-movile","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=128","v":1,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b6dd289196bc60b6bafc4a5","text":"centos 7, zabbix 3.2, python 2.7","html":"centos 7, zabbix 3.2, python 2.7","sent":"2018-08-10T17:59:37.836Z","editedAt":"2018-08-10T17:59:51.777Z","fromUser":{"id":"5b6dd1f7d73408ce4fa4352f","username":"tiago-cruz-movile","displayName":"Tiago Cruz","url":"/tiago-cruz-movile","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tiago-cruz-movile","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/4048174?v=4&s=128","v":1,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

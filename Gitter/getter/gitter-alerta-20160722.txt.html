@@ -1,0 +1,564 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2016/07/23"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2016/07/21"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">22<sup>nd</sup></span><br>
+      <span class="gtrArchiveMonth">Jul 2016</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5791ce7a7d3b50ce77b8d5ee burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/22?at=5791ce7a7d3b50ce77b8d5ee' title="">Jul 22 2016 07:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi Nick, 3 questions: 1. Have you checked maximum throughput of alerta - how many alerts per sec it can process? 2. Do you know if any other organisation is using alerta? 3. Can you tell how many alerts per sec/ per day are processed in The Guardian?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5791dcd59d1dc62e491ab09e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/22?at=5791dcd59d1dc62e491ab09e' title="">Jul 22 2016 08:44 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="JacekGrzechnik" class="mention">@JacekGrzechnik</span> i’ve just run apache bench against alerta on a t2.micro ec2 instance and here are the results…<pre><code>Finished <span class="number">10000</span> requests
+
+
+Server <span class="string">Software:</span>        Apache/<span class="number">2.4</span>.12
+Server <span class="string">Hostname:</span>        <span class="number">52.208</span>.82.220
+Server <span class="string">Port:</span>            <span class="number">80</span>
+
+Document <span class="string">Path:</span>          <span class="regexp">/api/</span>alert?api-key=aW2wIfI0bGIHNOe8Br4uiB70PyaXqGo8xIVyJjzz
+Document Length:        <span class="number">1032</span> bytes
+
+Concurrency <span class="string">Level:</span>      <span class="number">300</span>
+Time taken <span class="keyword">for</span> <span class="string">tests:</span>   <span class="number">56.913</span> seconds
+Complete <span class="string">requests:</span>      <span class="number">10000</span>
+Failed <span class="string">requests:</span>        <span class="number">2061</span>
+   (<span class="string">Connect:</span> <span class="number">0</span>, <span class="string">Receive:</span> <span class="number">0</span>, <span class="string">Length:</span> <span class="number">2061</span>, <span class="string">Exceptions:</span> <span class="number">0</span>)
+Non-<span class="number">2</span>xx <span class="string">responses:</span>      <span class="number">2061</span>
+Total <span class="string">transferred:</span>      <span class="number">11464546</span> bytes
+Total body <span class="string">sent:</span>        <span class="number">6130000</span>
+HTML <span class="string">transferred:</span>       <span class="number">9176145</span> bytes
+Requests per <span class="string">second:</span>    <span class="number">175.71</span> [#/sec] (mean)
+Time per <span class="string">request:</span>       <span class="number">1707.382</span> [ms] (mean)
+Time per <span class="string">request:</span>       <span class="number">5.691</span> [ms] (mean, across all concurrent requests)
+Transfer <span class="string">rate:</span>          <span class="number">196.72</span> [Kbytes/sec] received
+                        <span class="number">105.18</span> kb/s sent
+                        <span class="number">301.90</span> kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+<span class="string">Connect:</span>       <span class="number">17</span>  <span class="number">347</span> <span class="number">751.9</span>     <span class="number">22</span>    <span class="number">8493</span>
+<span class="string">Processing:</span>   <span class="number">132</span> <span class="number">1304</span> <span class="number">2241.3</span>   <span class="number">1221</span>   <span class="number">56625</span>
+<span class="string">Waiting:</span>      <span class="number">132</span> <span class="number">1304</span> <span class="number">2241.3</span>   <span class="number">1221</span>   <span class="number">56624</span>
+<span class="string">Total:</span>        <span class="number">370</span> <span class="number">1651</span> <span class="number">2365.1</span>   <span class="number">1271</span>   <span class="number">56903</span>
+
+Percentage of the requests served within a certain time (ms)
+  <span class="number">50</span>%   <span class="number">1271</span>
+  <span class="number">66</span>%   <span class="number">1345</span>
+  <span class="number">75</span>%   <span class="number">1518</span>
+  <span class="number">80</span>%   <span class="number">1961</span>
+  <span class="number">90</span>%   <span class="number">2529</span>
+  <span class="number">95</span>%   <span class="number">3613</span>
+  <span class="number">98</span>%   <span class="number">4761</span>
+  <span class="number">99</span>%   <span class="number">5347</span>
+ <span class="number">100</span>%  <span class="number">56903</span> (longest request)</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5791e8f64131ddc877828405 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/22?at=5791e8f64131ddc877828405' title="">Jul 22 2016 09:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ve got similar results (around 175-200) request per second on 2cpu x 4gb VM. Looks like we&#39;ve been hitting limit of some component. I&#39;ve tested it by pushing alerts from rabbitmq, and watching ack rate.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5791ed9b4131ddc87782b595 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/22?at=5791ed9b4131ddc87782b595' title="">Jul 22 2016 09:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i’ll see if i can find out what the bottle neck is. will get back to you.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5791ee0e4131ddc87782b716 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/22?at=5791ee0e4131ddc87782b716' title="">Jul 22 2016 09:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks, I&#39;ll try also.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-579240fa1d2852c8436f6a56 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/22?at=579240fa1d2852c8436f6a56' title="">Jul 22 2016 15:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="JacekGrzechnik" class="mention">@JacekGrzechnik</span> with a t2.medium and apache wsgi settings <code>WSGIDaemonProcess alerta processes=10 threads=10</code>  i get …<pre><code>Requests per <span class="keyword">second</span>:    <span class="number">398.31</span> [<span class="comment">#/sec] (mean)</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57924162bc636a263ed1faa2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i don’t think alerta is doing anything particularly inefficient. i think it’s just a matter of scaling out or up and playing with the processes/threads settings until you find the sweet spot.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$Bd6FgTwGarOn1OqbU14CZ4hQcUB6OaFZZXGSxXt4QwY=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":377,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2016-07-22T00:00:00.000Z","nextDate":"2016-07-23T23:59:59.999Z","previousDate":"2016-07-21T00:00:00.000Z","messages":[{"id":"5791ce7a7d3b50ce77b8d5ee","text":"Hi Nick, 3 questions: 1. Have you checked maximum throughput of alerta - how many alerts per sec it can process? 2. Do you know if any other organisation is using alerta? 3. Can you tell how many alerts per sec/ per day are processed in The Guardian?","html":"Hi Nick, 3 questions: 1. Have you checked maximum throughput of alerta - how many alerts per sec it can process? 2. Do you know if any other organisation is using alerta? 3. Can you tell how many alerts per sec/ per day are processed in The Guardian?","sent":"2016-07-22T07:42:50.778Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5791dcd59d1dc62e491ab09e","text":"Hi @JacekGrzechnik i’ve just run apache bench against alerta on a t2.micro ec2 instance and here are the results…\n```\nFinished 10000 requests\n\n\nServer Software:        Apache/2.4.12\nServer Hostname:        52.208.82.220\nServer Port:            80\n\nDocument Path:          /api/alert?api-key=aW2wIfI0bGIHNOe8Br4uiB70PyaXqGo8xIVyJjzz\nDocument Length:        1032 bytes\n\nConcurrency Level:      300\nTime taken for tests:   56.913 seconds\nComplete requests:      10000\nFailed requests:        2061\n   (Connect: 0, Receive: 0, Length: 2061, Exceptions: 0)\nNon-2xx responses:      2061\nTotal transferred:      11464546 bytes\nTotal body sent:        6130000\nHTML transferred:       9176145 bytes\nRequests per second:    175.71 [#/sec] (mean)\nTime per request:       1707.382 [ms] (mean)\nTime per request:       5.691 [ms] (mean, across all concurrent requests)\nTransfer rate:          196.72 [Kbytes/sec] received\n                        105.18 kb/s sent\n                        301.90 kb/s total\n\nConnection Times (ms)\n              min  mean[+/-sd] median   max\nConnect:       17  347 751.9     22    8493\nProcessing:   132 1304 2241.3   1221   56625\nWaiting:      132 1304 2241.3   1221   56624\nTotal:        370 1651 2365.1   1271   56903\n\nPercentage of the requests served within a certain time (ms)\n  50%   1271\n  66%   1345\n  75%   1518\n  80%   1961\n  90%   2529\n  95%   3613\n  98%   4761\n  99%   5347\n 100%  56903 (longest request)\n```","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"JacekGrzechnik\" class=\"mention\">@JacekGrzechnik<\/span> i’ve just run apache bench against alerta on a t2.micro ec2 instance and here are the results…<pre><code>Finished <span class=\"number\">10000<\/span> requests\n\n\nServer <span class=\"string\">Software:<\/span>        Apache/<span class=\"number\">2.4<\/span>.12\nServer <span class=\"string\">Hostname:<\/span>        <span class=\"number\">52.208<\/span>.82.220\nServer <span class=\"string\">Port:<\/span>            <span class=\"number\">80<\/span>\n\nDocument <span class=\"string\">Path:<\/span>          <span class=\"regexp\">/api/<\/span>alert?api-key=aW2wIfI0bGIHNOe8Br4uiB70PyaXqGo8xIVyJjzz\nDocument Length:        <span class=\"number\">1032<\/span> bytes\n\nConcurrency <span class=\"string\">Level:<\/span>      <span class=\"number\">300<\/span>\nTime taken <span class=\"keyword\">for<\/span> <span class=\"string\">tests:<\/span>   <span class=\"number\">56.913<\/span> seconds\nComplete <span class=\"string\">requests:<\/span>      <span class=\"number\">10000<\/span>\nFailed <span class=\"string\">requests:<\/span>        <span class=\"number\">2061<\/span>\n   (<span class=\"string\">Connect:<\/span> <span class=\"number\">0<\/span>, <span class=\"string\">Receive:<\/span> <span class=\"number\">0<\/span>, <span class=\"string\">Length:<\/span> <span class=\"number\">2061<\/span>, <span class=\"string\">Exceptions:<\/span> <span class=\"number\">0<\/span>)\nNon-<span class=\"number\">2<\/span>xx <span class=\"string\">responses:<\/span>      <span class=\"number\">2061<\/span>\nTotal <span class=\"string\">transferred:<\/span>      <span class=\"number\">11464546<\/span> bytes\nTotal body <span class=\"string\">sent:<\/span>        <span class=\"number\">6130000<\/span>\nHTML <span class=\"string\">transferred:<\/span>       <span class=\"number\">9176145<\/span> bytes\nRequests per <span class=\"string\">second:<\/span>    <span class=\"number\">175.71<\/span> [#/sec] (mean)\nTime per <span class=\"string\">request:<\/span>       <span class=\"number\">1707.382<\/span> [ms] (mean)\nTime per <span class=\"string\">request:<\/span>       <span class=\"number\">5.691<\/span> [ms] (mean, across all concurrent requests)\nTransfer <span class=\"string\">rate:<\/span>          <span class=\"number\">196.72<\/span> [Kbytes/sec] received\n                        <span class=\"number\">105.18<\/span> kb/s sent\n                        <span class=\"number\">301.90<\/span> kb/s total\n\nConnection Times (ms)\n              min  mean[+/-sd] median   max\n<span class=\"string\">Connect:<\/span>       <span class=\"number\">17<\/span>  <span class=\"number\">347<\/span> <span class=\"number\">751.9<\/span>     <span class=\"number\">22<\/span>    <span class=\"number\">8493<\/span>\n<span class=\"string\">Processing:<\/span>   <span class=\"number\">132<\/span> <span class=\"number\">1304<\/span> <span class=\"number\">2241.3<\/span>   <span class=\"number\">1221<\/span>   <span class=\"number\">56625<\/span>\n<span class=\"string\">Waiting:<\/span>      <span class=\"number\">132<\/span> <span class=\"number\">1304<\/span> <span class=\"number\">2241.3<\/span>   <span class=\"number\">1221<\/span>   <span class=\"number\">56624<\/span>\n<span class=\"string\">Total:<\/span>        <span class=\"number\">370<\/span> <span class=\"number\">1651<\/span> <span class=\"number\">2365.1<\/span>   <span class=\"number\">1271<\/span>   <span class=\"number\">56903<\/span>\n\nPercentage of the requests served within a certain time (ms)\n  <span class=\"number\">50<\/span>%   <span class=\"number\">1271<\/span>\n  <span class=\"number\">66<\/span>%   <span class=\"number\">1345<\/span>\n  <span class=\"number\">75<\/span>%   <span class=\"number\">1518<\/span>\n  <span class=\"number\">80<\/span>%   <span class=\"number\">1961<\/span>\n  <span class=\"number\">90<\/span>%   <span class=\"number\">2529<\/span>\n  <span class=\"number\">95<\/span>%   <span class=\"number\">3613<\/span>\n  <span class=\"number\">98<\/span>%   <span class=\"number\">4761<\/span>\n  <span class=\"number\">99<\/span>%   <span class=\"number\">5347<\/span>\n <span class=\"number\">100<\/span>%  <span class=\"number\">56903<\/span> (longest request)<\/code><\/pre>","sent":"2016-07-22T08:44:05.595Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":6,"urls":[],"mentions":[{"screenName":"JacekGrzechnik","userId":"5553151815522ed4b3e05049","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5791e8f64131ddc877828405","text":"I've got similar results (around 175-200) request per second on 2cpu x 4gb VM. Looks like we've been hitting limit of some component. I've tested it by pushing alerts from rabbitmq, and watching ack rate.","html":"I&#39;ve got similar results (around 175-200) request per second on 2cpu x 4gb VM. Looks like we&#39;ve been hitting limit of some component. I&#39;ve tested it by pushing alerts from rabbitmq, and watching ack rate.","sent":"2016-07-22T09:35:50.118Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5791ed9b4131ddc87782b595","text":"i’ll see if i can find out what the bottle neck is. will get back to you.","html":"i’ll see if i can find out what the bottle neck is. will get back to you.","sent":"2016-07-22T09:55:39.545Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5791ee0e4131ddc87782b716","text":"Thanks, I'll try also.","html":"Thanks, I&#39;ll try also.","sent":"2016-07-22T09:57:34.575Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"579240fa1d2852c8436f6a56","text":"@JacekGrzechnik with a t2.medium and apache wsgi settings `WSGIDaemonProcess alerta processes=10 threads=10`  i get …\n```\nRequests per second:    398.31 [#/sec] (mean)\n```","html":"<span data-link-type=\"mention\" data-screen-name=\"JacekGrzechnik\" class=\"mention\">@JacekGrzechnik<\/span> with a t2.medium and apache wsgi settings <code>WSGIDaemonProcess alerta processes=10 threads=10<\/code>  i get …<pre><code>Requests per <span class=\"keyword\">second<\/span>:    <span class=\"number\">398.31<\/span> [<span class=\"comment\">#/sec] (mean)<\/span><\/code><\/pre>","sent":"2016-07-22T15:51:22.790Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":6,"urls":[],"mentions":[{"screenName":"JacekGrzechnik","userId":"5553151815522ed4b3e05049","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57924162bc636a263ed1faa2","text":"i don’t think alerta is doing anything particularly inefficient. i think it’s just a matter of scaling out or up and playing with the processes/threads settings until you find the sweet spot.","html":"i don’t think alerta is doing anything particularly inefficient. i think it’s just a matter of scaling out or up and playing with the processes/threads settings until you find the sweet spot.","sent":"2016-07-22T15:53:06.410Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

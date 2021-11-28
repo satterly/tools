@@ -1,0 +1,572 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/01/24"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/01/22"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">23<sup>rd</sup></span><br>
+      <span class="gtrArchiveMonth">Jan 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5a6733c0ae53c1590323c1ec burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/01/23?at=5a6733c0ae53c1590323c1ec' title="">Jan 23 2018 13:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> . blackout delete is not working from web
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a67363bae53c1590323d121 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/01/23?at=5a67363bae53c1590323d121' title="">Jan 23 2018 13:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I am using postgres
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a6737b6d9f895c3604e45e9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/01/23?at=5a6737b6d9f895c3604e45e9' title="">Jan 23 2018 13:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      curl -X DELETE <a href="https://alerta.server.com/api/blackout/8a2402c5-6175-44da-ae54-dddeccf11575" rel="nofollow noopener noreferrer" target="_blank" class="link">https://alerta.server.com/api/blackout/8a2402c5-6175-44da-ae54-dddeccf11575</a> -H &#39;Authorization: Key API_KEY&#39;<br>{<br>  &quot;code&quot;: 404,<br>  &quot;errors&quot;: null,<br>  &quot;message&quot;: &quot;not found&quot;,<br>  &quot;status&quot;: &quot;error&quot;<br>}
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a67b68a19147ac3231bfcfb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/01/23?at=5a67b68a19147ac3231bfcfb' title="">Jan 23 2018 22:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p><span data-link-type="mention" data-screen-name="arindamchoudhury" class="mention">@arindamchoudhury</span> works for me …</p><pre><code>$ http DELETE :<span class="number">8080</span>/blackout/<span class="number">3</span>d9<span class="built_in">cd</span>715<span class="operator">-a</span>6b3-<span class="number">48</span>f4<span class="operator">-a</span>523-<span class="number">7360</span>dd888d96 <span class="string">'Authorization:Key kNGpojUNiBhq42sDq-5ZZ9W7w7JBA-2UVulwF2Pm'</span>
+HTTP/<span class="number">1.0</span> <span class="number">200</span> OK
+Access-Control-Allow-Origin: http://localhost
+Content-Encoding: gzip
+Content-Length: <span class="number">36</span>
+Content-Type: application/json
+Date: Tue, <span class="number">23</span> Jan <span class="number">2018</span> <span class="number">22</span>:<span class="number">24</span>:<span class="number">26</span> GMT
+Server: Werkzeug/<span class="number">0.12</span>.<span class="number">2</span> Python/<span class="number">3.6</span>.<span class="number">2</span>
+Vary: Origin, Accept-Encoding
+
+{
+    <span class="string">"status"</span>: <span class="string">"ok”
+}</span></code></pre><p>what version of the Alerta API are you using? and do you know for sure that blackout ID actually exists?</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a67bbbe97cedeb0482e59cd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/01/23?at=5a67bbbe97cedeb0482e59cd' title="">Jan 23 2018 22:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="sbds" class="mention">@sbds</span> I’ve managed to reproduce the pagerduty error you are seeing. The problem is to do with the incident_key being set to “null”. why would it be null? the incident key is used by alerta to de-duplicate alerts and so that it can close alerts that are resolved. if the incident key is null then integration with Alerta is impossible. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a67bcd498927d574529bb09 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a5fe05fd73408ce4f88d2bf avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/2080185?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/2080185?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sbds</div>
+      <div class='chat-item__username js-chat-item-from'>@sbds</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/01/23?at=5a67bcd498927d574529bb09' title="">Jan 23 2018 22:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  I&#39;m not sure. This is the exact request from PagerDuty&#39;s WebHook. In this case I have used v1 of the WebHook but v2 of the API and v2 of the PagerDuty Service Integration. Also I generated the incident manually by CLI rather than naturally by Prometheus or something. I will try varying those 3 methods and see if it is the same.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a67bf5397cedeb0482e5a0c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/01/23?at=5a67bf5397cedeb0482e5a0c' title="">Jan 23 2018 23:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="sbds" class="mention">@sbds</span> ok, thanks. i’m very puzzled by this. any help much appreciated.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a67c4f9c95f22546dd7efec burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a5fe05fd73408ce4f88d2bf avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/2080185?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/2080185?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sbds</div>
+      <div class='chat-item__username js-chat-item-from'>@sbds</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/01/23?at=5a67c4f9c95f22546dd7efec' title="">Jan 23 2018 23:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I get the same result using both v1 and v2 of each PagerDuty API and Service Integration. Here is a request from PagerDuty&#39;s WebHook after a Prometheus-triggered incident:<br> {<br>  &quot;messages&quot;:[<br>    {<br>      &quot;type&quot;:&quot;incident.trigger&quot;,<br>      &quot;data&quot;:{<br>        &quot;incident&quot;:{<br>          &quot;id&quot;:&quot;PQWQIP2&quot;,<br>          &quot;incident_number&quot;:25664,<br>          &quot;created_on&quot;:&quot;2018-01-23T23:18:51Z&quot;,<br>          &quot;status&quot;:&quot;triggered&quot;,<br>          &quot;pending_actions&quot;:[<br>            {<br>              &quot;type&quot;:&quot;resolve&quot;,<br>              &quot;at&quot;:&quot;2018-01-24T03:18:51Z&quot;<br>            }<br>          ],<br>          &quot;html_url&quot;:&quot;<a href="https://blank.pagerduty.com/incidents/PQWQIP2" rel="nofollow noopener noreferrer" target="_blank" class="link">https://blank.pagerduty.com/incidents/PQWQIP2</a>&quot;,<br>          &quot;incident_key&quot;:null,<br>          &quot;service&quot;:{<br>            &quot;id&quot;:&quot;PGFUM6I&quot;,<br>            &quot;name&quot;:&quot;lurker_alerta_majors&quot;,<br>            &quot;html_url&quot;:&quot;<a href="https://blank.pagerduty.com/services/PGFUM6I" rel="nofollow noopener noreferrer" target="_blank" class="link">https://blank.pagerduty.com/services/PGFUM6I</a>&quot;,<br>            &quot;deleted_at&quot;:null,<br>            &quot;description&quot;:&quot;&quot;<br>          },<br>          &quot;escalation_policy&quot;:{<br>            &quot;id&quot;:&quot;PZQXS07&quot;,<br>            &quot;name&quot;:&quot;me&quot;,<br>            &quot;deleted_at&quot;:null<br>          },<br>          &quot;assigned_to_user&quot;:{<br>            &quot;id&quot;:&quot;PDOST60&quot;,<br>            &quot;name&quot;:&quot;me&quot;,<br>            &quot;email&quot;:&quot;<a href="mailto:me@blank.com" rel="nofollow">me@blank.com</a>&quot;,<br>            &quot;html_url&quot;:&quot;<a href="https://blank.pagerduty.com/users/PDOST60" rel="nofollow noopener noreferrer" target="_blank" class="link">https://blank.pagerduty.com/users/PDOST60</a>&quot;<br>          },<br>          &quot;trigger_summary_data&quot;:{<br>            &quot;description&quot;:&quot;Production: Major alert for pci web - 172.30.2.250:9091 is LowDiskSpace&quot;,<br>            &quot;client&quot;:&quot;alerta&quot;,<br>            &quot;client_url&quot;:&quot;<a href="https://blank.com/#/alert/ba87c613-6cac-414b-9e4b-e13e3cc140af" rel="nofollow noopener noreferrer" target="_blank" class="link">https://blank.com/#/alert/ba87c613-6cac-414b-9e4b-e13e3cc140af</a>&quot;<br>          },<br>          &quot;trigger_details_html_url&quot;:&quot;<a href="https://blank.pagerduty.com/incidents/PQWQIP2/log_entries/RNAFDIQ6Q7L9U43BMTARFVJMKU" rel="nofollow noopener noreferrer" target="_blank" class="link">https://blank.pagerduty.com/incidents/PQWQIP2/log_entries/RNAFDIQ6Q7L9U43BMTARFVJMKU</a>&quot;,<br>          &quot;trigger_type&quot;:&quot;trigger_svc_event&quot;,<br>          &quot;last_status_change_on&quot;:&quot;2018-01-23T23:18:51Z&quot;,<br>          &quot;last_status_change_by&quot;:null,<br>          &quot;number_of_escalations&quot;:null,<br>          &quot;integration_name&quot;:&quot;lurker_alerta_eventsAPIv1&quot;,<br>          &quot;assigned_to&quot;:[<br>            {<br>              &quot;at&quot;:&quot;2018-01-23T23:18:51Z&quot;,<br>              &quot;object&quot;:{<br>                &quot;id&quot;:&quot;PDOST60&quot;,<br>                &quot;name&quot;:&quot;me&quot;,<br>                &quot;email&quot;:&quot;<a href="mailto:me@blank.com" rel="nofollow">me@blank.com</a>&quot;,<br>                &quot;html_url&quot;:&quot;<a href="https://blank.pagerduty.com/users/PDOST60" rel="nofollow noopener noreferrer" target="_blank" class="link">https://blank.pagerduty.com/users/PDOST60</a>&quot;,<br>                &quot;type&quot;:&quot;user&quot;<br>              }<br>            }<br>          ],<br>          &quot;urgency&quot;:&quot;high&quot;<br>        }<br>      },<br>      &quot;id&quot;:&quot;c6a89690-0093-11e8-a812-000d3a31cb72&quot;,<br>      &quot;created_on&quot;:&quot;2018-01-23T23:18:51Z&quot;<br>    }<br>  ]<br>}
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$oK4J53k5sliJ1K9/av8usPSGNphA3QbKT732rV5SCME=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-01-23T00:00:00.000Z","nextDate":"2018-01-24T23:59:59.999Z","previousDate":"2018-01-22T00:00:00.000Z","messages":[{"id":"5a6733c0ae53c1590323c1ec","text":"Hi @satterly . blackout delete is not working from web","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> . blackout delete is not working from web","sent":"2018-01-23T13:08:16.653Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a67363bae53c1590323d121","text":"I am using postgres","html":"I am using postgres","sent":"2018-01-23T13:18:51.392Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a6737b6d9f895c3604e45e9","text":"curl -X DELETE https://alerta.server.com/api/blackout/8a2402c5-6175-44da-ae54-dddeccf11575 -H 'Authorization: Key API_KEY'\n{\n  \"code\": 404, \n  \"errors\": null, \n  \"message\": \"not found\", \n  \"status\": \"error\"\n}","html":"curl -X DELETE <a href=\"https://alerta.server.com/api/blackout/8a2402c5-6175-44da-ae54-dddeccf11575\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://alerta.server.com/api/blackout/8a2402c5-6175-44da-ae54-dddeccf11575<\/a> -H &#39;Authorization: Key API_KEY&#39;<br>{<br>  &quot;code&quot;: 404,<br>  &quot;errors&quot;: null,<br>  &quot;message&quot;: &quot;not found&quot;,<br>  &quot;status&quot;: &quot;error&quot;<br>}","sent":"2018-01-23T13:25:10.348Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":8,"urls":[{"url":"https://alerta.server.com/api/blackout/8a2402c5-6175-44da-ae54-dddeccf11575"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a67b68a19147ac3231bfcfb","text":"@arindamchoudhury works for me …\n```\n$ http DELETE :8080/blackout/3d9cd715-a6b3-48f4-a523-7360dd888d96 'Authorization:Key kNGpojUNiBhq42sDq-5ZZ9W7w7JBA-2UVulwF2Pm'\nHTTP/1.0 200 OK\nAccess-Control-Allow-Origin: http://localhost\nContent-Encoding: gzip\nContent-Length: 36\nContent-Type: application/json\nDate: Tue, 23 Jan 2018 22:24:26 GMT\nServer: Werkzeug/0.12.2 Python/3.6.2\nVary: Origin, Accept-Encoding\n\n{\n    \"status\": \"ok”\n}\n```\nwhat version of the Alerta API are you using? and do you know for sure that blackout ID actually exists?\n","html":"<p><span data-link-type=\"mention\" data-screen-name=\"arindamchoudhury\" class=\"mention\">@arindamchoudhury<\/span> works for me …<\/p><pre><code>$ http DELETE :<span class=\"number\">8080<\/span>/blackout/<span class=\"number\">3<\/span>d9<span class=\"built_in\">cd<\/span>715<span class=\"operator\">-a<\/span>6b3-<span class=\"number\">48<\/span>f4<span class=\"operator\">-a<\/span>523-<span class=\"number\">7360<\/span>dd888d96 <span class=\"string\">'Authorization:Key kNGpojUNiBhq42sDq-5ZZ9W7w7JBA-2UVulwF2Pm'<\/span>\nHTTP/<span class=\"number\">1.0<\/span> <span class=\"number\">200<\/span> OK\nAccess-Control-Allow-Origin: http://localhost\nContent-Encoding: gzip\nContent-Length: <span class=\"number\">36<\/span>\nContent-Type: application/json\nDate: Tue, <span class=\"number\">23<\/span> Jan <span class=\"number\">2018<\/span> <span class=\"number\">22<\/span>:<span class=\"number\">24<\/span>:<span class=\"number\">26<\/span> GMT\nServer: Werkzeug/<span class=\"number\">0.12<\/span>.<span class=\"number\">2<\/span> Python/<span class=\"number\">3.6<\/span>.<span class=\"number\">2<\/span>\nVary: Origin, Accept-Encoding\n\n{\n    <span class=\"string\">\"status\"<\/span>: <span class=\"string\">\"ok”\n}<\/span><\/code><\/pre><p>what version of the Alerta API are you using? and do you know for sure that blackout ID actually exists?<\/p>","sent":"2018-01-23T22:26:18.358Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"arindamchoudhury","userId":"54da27e515522ed4b3dbd8bd","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a67bbbe97cedeb0482e59cd","text":"@sbds I’ve managed to reproduce the pagerduty error you are seeing. The problem is to do with the incident_key being set to “null”. why would it be null? the incident key is used by alerta to de-duplicate alerts and so that it can close alerts that are resolved. if the incident key is null then integration with Alerta is impossible. ","html":"<span data-link-type=\"mention\" data-screen-name=\"sbds\" class=\"mention\">@sbds<\/span> I’ve managed to reproduce the pagerduty error you are seeing. The problem is to do with the incident_key being set to “null”. why would it be null? the incident key is used by alerta to de-duplicate alerts and so that it can close alerts that are resolved. if the incident key is null then integration with Alerta is impossible. ","sent":"2018-01-23T22:48:30.581Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[{"screenName":"sbds","userId":"5a5fe05fd73408ce4f88d2bf","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a67bcd498927d574529bb09","text":"@satterly  I'm not sure. This is the exact request from PagerDuty's WebHook. In this case I have used v1 of the WebHook but v2 of the API and v2 of the PagerDuty Service Integration. Also I generated the incident manually by CLI rather than naturally by Prometheus or something. I will try varying those 3 methods and see if it is the same.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  I&#39;m not sure. This is the exact request from PagerDuty&#39;s WebHook. In this case I have used v1 of the WebHook but v2 of the API and v2 of the PagerDuty Service Integration. Also I generated the incident manually by CLI rather than naturally by Prometheus or something. I will try varying those 3 methods and see if it is the same.","sent":"2018-01-23T22:53:08.665Z","fromUser":{"id":"5a5fe05fd73408ce4f88d2bf","username":"sbds","displayName":"sbds","url":"/sbds","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/sbds","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/2080185?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/2080185?v=4&s=128","gv":"4"},"readBy":7,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a67bf5397cedeb0482e5a0c","text":"@sbds ok, thanks. i’m very puzzled by this. any help much appreciated.","html":"<span data-link-type=\"mention\" data-screen-name=\"sbds\" class=\"mention\">@sbds<\/span> ok, thanks. i’m very puzzled by this. any help much appreciated.","sent":"2018-01-23T23:03:47.416Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":7,"urls":[],"mentions":[{"screenName":"sbds","userId":"5a5fe05fd73408ce4f88d2bf","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a67c4f9c95f22546dd7efec","text":"I get the same result using both v1 and v2 of each PagerDuty API and Service Integration. Here is a request from PagerDuty's WebHook after a Prometheus-triggered incident:\n {\n  \"messages\":[\n    {\n      \"type\":\"incident.trigger\",\n      \"data\":{\n        \"incident\":{\n          \"id\":\"PQWQIP2\",\n          \"incident_number\":25664,\n          \"created_on\":\"2018-01-23T23:18:51Z\",\n          \"status\":\"triggered\",\n          \"pending_actions\":[\n            {\n              \"type\":\"resolve\",\n              \"at\":\"2018-01-24T03:18:51Z\"\n            }\n          ],\n          \"html_url\":\"https://blank.pagerduty.com/incidents/PQWQIP2\",\n          \"incident_key\":null,\n          \"service\":{\n            \"id\":\"PGFUM6I\",\n            \"name\":\"lurker_alerta_majors\",\n            \"html_url\":\"https://blank.pagerduty.com/services/PGFUM6I\",\n            \"deleted_at\":null,\n            \"description\":\"\"\n          },\n          \"escalation_policy\":{\n            \"id\":\"PZQXS07\",\n            \"name\":\"me\",\n            \"deleted_at\":null\n          },\n          \"assigned_to_user\":{\n            \"id\":\"PDOST60\",\n            \"name\":\"me\",\n            \"email\":\"me@blank.com\",\n            \"html_url\":\"https://blank.pagerduty.com/users/PDOST60\"\n          },\n          \"trigger_summary_data\":{\n            \"description\":\"Production: Major alert for pci web - 172.30.2.250:9091 is LowDiskSpace\",\n            \"client\":\"alerta\",\n            \"client_url\":\"https://blank.com/#/alert/ba87c613-6cac-414b-9e4b-e13e3cc140af\"\n          },\n          \"trigger_details_html_url\":\"https://blank.pagerduty.com/incidents/PQWQIP2/log_entries/RNAFDIQ6Q7L9U43BMTARFVJMKU\",\n          \"trigger_type\":\"trigger_svc_event\",\n          \"last_status_change_on\":\"2018-01-23T23:18:51Z\",\n          \"last_status_change_by\":null,\n          \"number_of_escalations\":null,\n          \"integration_name\":\"lurker_alerta_eventsAPIv1\",\n          \"assigned_to\":[\n            {\n              \"at\":\"2018-01-23T23:18:51Z\",\n              \"object\":{\n                \"id\":\"PDOST60\",\n                \"name\":\"me\",\n                \"email\":\"me@blank.com\",\n                \"html_url\":\"https://blank.pagerduty.com/users/PDOST60\",\n                \"type\":\"user\"\n              }\n            }\n          ],\n          \"urgency\":\"high\"\n        }\n      },\n      \"id\":\"c6a89690-0093-11e8-a812-000d3a31cb72\",\n      \"created_on\":\"2018-01-23T23:18:51Z\"\n    }\n  ]\n}","html":"I get the same result using both v1 and v2 of each PagerDuty API and Service Integration. Here is a request from PagerDuty&#39;s WebHook after a Prometheus-triggered incident:<br> {<br>  &quot;messages&quot;:[<br>    {<br>      &quot;type&quot;:&quot;incident.trigger&quot;,<br>      &quot;data&quot;:{<br>        &quot;incident&quot;:{<br>          &quot;id&quot;:&quot;PQWQIP2&quot;,<br>          &quot;incident_number&quot;:25664,<br>          &quot;created_on&quot;:&quot;2018-01-23T23:18:51Z&quot;,<br>          &quot;status&quot;:&quot;triggered&quot;,<br>          &quot;pending_actions&quot;:[<br>            {<br>              &quot;type&quot;:&quot;resolve&quot;,<br>              &quot;at&quot;:&quot;2018-01-24T03:18:51Z&quot;<br>            }<br>          ],<br>          &quot;html_url&quot;:&quot;<a href=\"https://blank.pagerduty.com/incidents/PQWQIP2\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://blank.pagerduty.com/incidents/PQWQIP2<\/a>&quot;,<br>          &quot;incident_key&quot;:null,<br>          &quot;service&quot;:{<br>            &quot;id&quot;:&quot;PGFUM6I&quot;,<br>            &quot;name&quot;:&quot;lurker_alerta_majors&quot;,<br>            &quot;html_url&quot;:&quot;<a href=\"https://blank.pagerduty.com/services/PGFUM6I\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://blank.pagerduty.com/services/PGFUM6I<\/a>&quot;,<br>            &quot;deleted_at&quot;:null,<br>            &quot;description&quot;:&quot;&quot;<br>          },<br>          &quot;escalation_policy&quot;:{<br>            &quot;id&quot;:&quot;PZQXS07&quot;,<br>            &quot;name&quot;:&quot;me&quot;,<br>            &quot;deleted_at&quot;:null<br>          },<br>          &quot;assigned_to_user&quot;:{<br>            &quot;id&quot;:&quot;PDOST60&quot;,<br>            &quot;name&quot;:&quot;me&quot;,<br>            &quot;email&quot;:&quot;<a href=\"mailto:me@blank.com\" rel=\"nofollow\">me@blank.com<\/a>&quot;,<br>            &quot;html_url&quot;:&quot;<a href=\"https://blank.pagerduty.com/users/PDOST60\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://blank.pagerduty.com/users/PDOST60<\/a>&quot;<br>          },<br>          &quot;trigger_summary_data&quot;:{<br>            &quot;description&quot;:&quot;Production: Major alert for pci web - 172.30.2.250:9091 is LowDiskSpace&quot;,<br>            &quot;client&quot;:&quot;alerta&quot;,<br>            &quot;client_url&quot;:&quot;<a href=\"https://blank.com/#/alert/ba87c613-6cac-414b-9e4b-e13e3cc140af\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://blank.com/#/alert/ba87c613-6cac-414b-9e4b-e13e3cc140af<\/a>&quot;<br>          },<br>          &quot;trigger_details_html_url&quot;:&quot;<a href=\"https://blank.pagerduty.com/incidents/PQWQIP2/log_entries/RNAFDIQ6Q7L9U43BMTARFVJMKU\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://blank.pagerduty.com/incidents/PQWQIP2/log_entries/RNAFDIQ6Q7L9U43BMTARFVJMKU<\/a>&quot;,<br>          &quot;trigger_type&quot;:&quot;trigger_svc_event&quot;,<br>          &quot;last_status_change_on&quot;:&quot;2018-01-23T23:18:51Z&quot;,<br>          &quot;last_status_change_by&quot;:null,<br>          &quot;number_of_escalations&quot;:null,<br>          &quot;integration_name&quot;:&quot;lurker_alerta_eventsAPIv1&quot;,<br>          &quot;assigned_to&quot;:[<br>            {<br>              &quot;at&quot;:&quot;2018-01-23T23:18:51Z&quot;,<br>              &quot;object&quot;:{<br>                &quot;id&quot;:&quot;PDOST60&quot;,<br>                &quot;name&quot;:&quot;me&quot;,<br>                &quot;email&quot;:&quot;<a href=\"mailto:me@blank.com\" rel=\"nofollow\">me@blank.com<\/a>&quot;,<br>                &quot;html_url&quot;:&quot;<a href=\"https://blank.pagerduty.com/users/PDOST60\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://blank.pagerduty.com/users/PDOST60<\/a>&quot;,<br>                &quot;type&quot;:&quot;user&quot;<br>              }<br>            }<br>          ],<br>          &quot;urgency&quot;:&quot;high&quot;<br>        }<br>      },<br>      &quot;id&quot;:&quot;c6a89690-0093-11e8-a812-000d3a31cb72&quot;,<br>      &quot;created_on&quot;:&quot;2018-01-23T23:18:51Z&quot;<br>    }<br>  ]<br>}","sent":"2018-01-23T23:27:53.707Z","editedAt":"2018-01-23T23:32:26.777Z","fromUser":{"id":"5a5fe05fd73408ce4f88d2bf","username":"sbds","displayName":"sbds","url":"/sbds","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/sbds","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/2080185?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/2080185?v=4&s=128","gv":"4"},"readBy":7,"urls":[{"url":"https://blank.pagerduty.com/incidents/PQWQIP2"},{"url":"https://blank.pagerduty.com/services/PGFUM6I"},{"url":"mailto:me@blank.com"},{"url":"https://blank.pagerduty.com/users/PDOST60"},{"url":"https://blank.com/#/alert/ba87c613-6cac-414b-9e4b-e13e3cc140af"},{"url":"https://blank.pagerduty.com/incidents/PQWQIP2/log_entries/RNAFDIQ6Q7L9U43BMTARFVJMKU"},{"url":"mailto:me@blank.com"},{"url":"https://blank.pagerduty.com/users/PDOST60"}],"mentions":[],"issues":[],"meta":[],"v":3,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,787 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2016/10/11"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2016/10/09"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">10<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Oct 2016</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-57fb2f7fa7c618cd26fa3aee burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5768d8e6c2f0db084a1f0e74 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/16890515?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/16890515?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Iku Turso</div>
+      <div class='chat-item__username js-chat-item-from'>@gromit6891</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb2f7fa7c618cd26fa3aee' title="">Oct 10 2016 06:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks for that. From the examples the format expected is {&quot;resource&quot;: &quot;web01&quot;,&quot;event&quot;: &quot;HttpServerError&quot;, etc } Can you give any tips on how to begin parsing when the format is [] enclosed as in the previous example?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb7d4284f1db061499687c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb7d4284f1db061499687c' title="">Oct 10 2016 11:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="gromit6891" class="mention">@gromit6891</span> <pre><code><span class="prompt">&gt;&gt;</span>&gt; ms = [{<span class="string">"rule.firedtimes"</span><span class="symbol">:</span><span class="number">2</span>,<span class="string">"rule.AlertLevel"</span><span class="symbol">:</span><span class="number">10</span>,<span class="string">"value"</span><span class="symbol">:<span class="string">"windows"</span></span>,<span class="string">"resource"</span><span class="symbol">:<span class="string">"VPS-1-WKS"</span></span>,<span class="string">"text"</span><span class="symbol">:<span class="string">"Multiple Windows audit failure events."</span></span>,<span class="string">"event"</span><span class="symbol">:<span class="string">"Microsoft-Windows-Security-Auditing"</span></span>}]
+<span class="prompt">&gt;&gt;</span>&gt; ms[<span class="number">0</span>][<span class="string">'resource'</span>]
+<span class="string">'VPS-1-WKS'</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb7dd7dfe82a365b119f07 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5697894116b6c7089cc28123 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Kurt Westerfeld</div>
+      <div class='chat-item__username js-chat-item-from'>@kwesterfeld</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb7dd7dfe82a365b119f07' title="">Oct 10 2016 11:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I am trying to run “npm start” from the angular-alerts-webui to start the UI.  My preference is to run the nodejs backend to start testing because I cannot get the python sipmlewebserver to supply a CORS header.  I am familiar enough with the express stuff that I think I can get the CORS header sent properly.  I am not testing on “localhost”.  Any help would be appreciated.   When I run with “npm start”, it creates what looks like a running web server, but doing a curl against that indicates <code>curl: (35) gnutls_handshake() failed: The TLS connection was non-properly terminated.</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb880bd6251fd126a7f2d1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5697894116b6c7089cc28123 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Kurt Westerfeld</div>
+      <div class='chat-item__username js-chat-item-from'>@kwesterfeld</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb880bd6251fd126a7f2d1' title="">Oct 10 2016 12:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ah, nevermind…..I got the simplewebserver to work for me
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb8b250aa72e3c5beca55a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb8b250aa72e3c5beca55a' title="">Oct 10 2016 12:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok, great. the web.js file is just for the heroku deploy.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb8bd80aa72e3c5beca847 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5697894116b6c7089cc28123 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Kurt Westerfeld</div>
+      <div class='chat-item__username js-chat-item-from'>@kwesterfeld</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb8bd80aa72e3c5beca847' title="">Oct 10 2016 12:38 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I hacked on the web.js code because I’m not a python developer and I could not figure out the CORS config, but then I found where I was going wrong.  It was a confluence of haste and misreading doc.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb9cca4fde72031424e604 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5697894116b6c7089cc28123 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Kurt Westerfeld</div>
+      <div class='chat-item__username js-chat-item-from'>@kwesterfeld</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb9cca4fde72031424e604' title="">Oct 10 2016 13:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I am a total newbie with python, and I am struggling a bit to get the hipchat notification setup.  I’ve got alerts coming in, but I cannot get hipchat notifications out.  I believe I have installed it properly, but I am unsure how to get it to log.  I think if I can just get some logging going I can figure out what is wrong
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb9d9770fcb5db0c44b826 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I setup LOG_FILE in the config, but the only log messages I am seeing are http
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb9de3dfe82a365b122b66 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb9de3dfe82a365b122b66' title="">Oct 10 2016 13:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Do you have <code>DEBUG = True</code> in the <code>alertad.conf</code> server config file?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb9df284f1db061499f98a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5697894116b6c7089cc28123 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Kurt Westerfeld</div>
+      <div class='chat-item__username js-chat-item-from'>@kwesterfeld</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb9df284f1db061499f98a' title="">Oct 10 2016 13:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Nope; I will add
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb9ee94fde72031424f333 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>So I did that, and nothing “hipchat” is being logged.  I also modified the source to see if I couldn’t get it to bark during init, like this:</p><pre><code><span class="built_in">LOG</span>.info(<span class="string">'Setting up hipchat plugin’)</span></code></pre><p>No dice.  So I think it just doesnt load it</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb9f3ba7c618cd26fbdd10 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5697894116b6c7089cc28123 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Kurt Westerfeld</div>
+      <div class='chat-item__username js-chat-item-from'>@kwesterfeld</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fb9f3ba7c618cd26fbdd10' title="">Oct 10 2016 14:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>I also ended up using </p><pre><code>python setup.py <span class="operator"><span class="keyword">install</span> —<span class="keyword">user</span></span></code></pre><p>because somehow when I did the install for alertad it ended up in ~/.local.   </p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fb9f92a7c618cd26fbde49 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>So I can see that I have this in place:</p><pre><code><span class="regexp">/home/</span>data<span class="regexp">/.local/</span>lib<span class="regexp">/python2.7/</span>site-packages<span class="regexp">/alerta_hipchat-0.3.1-py2.7.egg</span></code></pre><p>And that file is listed in <code>/home/data/.local/lib/python2.7/site-packages/easy-install.pth</code></p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba056d6251fd126a85bc1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fba056d6251fd126a85bc1' title="">Oct 10 2016 14:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Is hipchat listed in the list of enabled plugins?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba0600aa72e3c5bed0332 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      e.g.. <code>PLUGINS=[‘hipchat’]</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba068a7c618cd26fbe412 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      in <code>alertad.conf</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba140a7c618cd26fbe720 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5697894116b6c7089cc28123 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Kurt Westerfeld</div>
+      <div class='chat-item__username js-chat-item-from'>@kwesterfeld</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fba140a7c618cd26fbe720' title="">Oct 10 2016 14:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba142dfe82a365b123ce4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba144dfe82a365b123cfa burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      That’s gotta be it
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba17a70fcb5db0c44c7c8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      FYI, the PLUGINS= is only referred to in 3 places in contrib, so I missed that step
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba25b70fcb5db0c44cbd7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fba25b70fcb5db0c44cbd7' title="">Oct 10 2016 14:14 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Good point. I can see that there is no reference to PLUGINS in the hipchat README. That would be a least one place it should have been mentioned. I’ll fix.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba313a7c618cd26fbeed5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5697894116b6c7089cc28123 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/703639?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Kurt Westerfeld</div>
+      <div class='chat-item__username js-chat-item-from'>@kwesterfeld</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fba313a7c618cd26fbeed5' title="">Oct 10 2016 14:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> OK, this is rocking for me now.  Thank you!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-57fba48fa7c618cd26fbf54c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/10/10?at=57fba48fa7c618cd26fbf54c' title="">Oct 10 2016 14:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      great.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$zfueFBs5L73fIglBK8WLUya4PRR5TtVGjRdMf94XZH8=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":377,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2016-10-10T00:00:00.000Z","nextDate":"2016-10-11T23:59:59.999Z","previousDate":"2016-10-09T00:00:00.000Z","messages":[{"id":"57fb2f7fa7c618cd26fa3aee","text":"Thanks for that. From the examples the format expected is {\"resource\": \"web01\",\"event\": \"HttpServerError\", etc } Can you give any tips on how to begin parsing when the format is [] enclosed as in the previous example?","html":"Thanks for that. From the examples the format expected is {&quot;resource&quot;: &quot;web01&quot;,&quot;event&quot;: &quot;HttpServerError&quot;, etc } Can you give any tips on how to begin parsing when the format is [] enclosed as in the previous example?","sent":"2016-10-10T06:04:47.726Z","fromUser":{"id":"5768d8e6c2f0db084a1f0e74","username":"gromit6891","displayName":"Iku Turso","url":"/gromit6891","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/gromit6891","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/16890515?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/16890515?v=4&s=128","v":17,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb7d4284f1db061499687c","text":"@gromit6891 \n```\n>>> ms = [{\"rule.firedtimes\":2,\"rule.AlertLevel\":10,\"value\":\"windows\",\"resource\":\"VPS-1-WKS\",\"text\":\"Multiple Windows audit failure events.\",\"event\":\"Microsoft-Windows-Security-Auditing\"}]\n>>> ms[0]['resource']\n'VPS-1-WKS'\n```","html":"<span data-link-type=\"mention\" data-screen-name=\"gromit6891\" class=\"mention\">@gromit6891<\/span> <pre><code><span class=\"prompt\">&gt;&gt;<\/span>&gt; ms = [{<span class=\"string\">\"rule.firedtimes\"<\/span><span class=\"symbol\">:<\/span><span class=\"number\">2<\/span>,<span class=\"string\">\"rule.AlertLevel\"<\/span><span class=\"symbol\">:<\/span><span class=\"number\">10<\/span>,<span class=\"string\">\"value\"<\/span><span class=\"symbol\">:<span class=\"string\">\"windows\"<\/span><\/span>,<span class=\"string\">\"resource\"<\/span><span class=\"symbol\">:<span class=\"string\">\"VPS-1-WKS\"<\/span><\/span>,<span class=\"string\">\"text\"<\/span><span class=\"symbol\">:<span class=\"string\">\"Multiple Windows audit failure events.\"<\/span><\/span>,<span class=\"string\">\"event\"<\/span><span class=\"symbol\">:<span class=\"string\">\"Microsoft-Windows-Security-Auditing\"<\/span><\/span>}]\n<span class=\"prompt\">&gt;&gt;<\/span>&gt; ms[<span class=\"number\">0<\/span>][<span class=\"string\">'resource'<\/span>]\n<span class=\"string\">'VPS-1-WKS'<\/span><\/code><\/pre>","sent":"2016-10-10T11:36:34.794Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[{"screenName":"gromit6891","userId":"5768d8e6c2f0db084a1f0e74","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb7dd7dfe82a365b119f07","text":"I am trying to run “npm start” from the angular-alerts-webui to start the UI.  My preference is to run the nodejs backend to start testing because I cannot get the python sipmlewebserver to supply a CORS header.  I am familiar enough with the express stuff that I think I can get the CORS header sent properly.  I am not testing on “localhost”.  Any help would be appreciated.   When I run with “npm start”, it creates what looks like a running web server, but doing a curl against that indicates `curl: (35) gnutls_handshake() failed: The TLS connection was non-properly terminated.`","html":"I am trying to run “npm start” from the angular-alerts-webui to start the UI.  My preference is to run the nodejs backend to start testing because I cannot get the python sipmlewebserver to supply a CORS header.  I am familiar enough with the express stuff that I think I can get the CORS header sent properly.  I am not testing on “localhost”.  Any help would be appreciated.   When I run with “npm start”, it creates what looks like a running web server, but doing a curl against that indicates <code>curl: (35) gnutls_handshake() failed: The TLS connection was non-properly terminated.<\/code>","sent":"2016-10-10T11:39:03.341Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb880bd6251fd126a7f2d1","text":"Ah, nevermind…..I got the simplewebserver to work for me","html":"Ah, nevermind…..I got the simplewebserver to work for me","sent":"2016-10-10T12:22:35.815Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb8b250aa72e3c5beca55a","text":"ok, great. the web.js file is just for the heroku deploy.","html":"ok, great. the web.js file is just for the heroku deploy.","sent":"2016-10-10T12:35:49.734Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb8bd80aa72e3c5beca847","text":"I hacked on the web.js code because I’m not a python developer and I could not figure out the CORS config, but then I found where I was going wrong.  It was a confluence of haste and misreading doc.","html":"I hacked on the web.js code because I’m not a python developer and I could not figure out the CORS config, but then I found where I was going wrong.  It was a confluence of haste and misreading doc.","sent":"2016-10-10T12:38:48.020Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb9cca4fde72031424e604","text":"@satterly I am a total newbie with python, and I am struggling a bit to get the hipchat notification setup.  I’ve got alerts coming in, but I cannot get hipchat notifications out.  I believe I have installed it properly, but I am unsure how to get it to log.  I think if I can just get some logging going I can figure out what is wrong","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I am a total newbie with python, and I am struggling a bit to get the hipchat notification setup.  I’ve got alerts coming in, but I cannot get hipchat notifications out.  I believe I have installed it properly, but I am unsure how to get it to log.  I think if I can just get some logging going I can figure out what is wrong","sent":"2016-10-10T13:51:06.755Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":5,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb9d9770fcb5db0c44b826","text":"I setup LOG_FILE in the config, but the only log messages I am seeing are http","html":"I setup LOG_FILE in the config, but the only log messages I am seeing are http","sent":"2016-10-10T13:54:31.388Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57fb9de3dfe82a365b122b66","text":"Do you have `DEBUG = True` in the `alertad.conf` server config file?","html":"Do you have <code>DEBUG = True<\/code> in the <code>alertad.conf<\/code> server config file?","sent":"2016-10-10T13:55:47.696Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb9df284f1db061499f98a","text":"Nope; I will add","html":"Nope; I will add","sent":"2016-10-10T13:56:02.245Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb9ee94fde72031424f333","text":"So I did that, and nothing “hipchat” is being logged.  I also modified the source to see if I couldn’t get it to bark during init, like this:\n```\nLOG.info('Setting up hipchat plugin’)\n```\nNo dice.  So I think it just doesnt load it","html":"<p>So I did that, and nothing “hipchat” is being logged.  I also modified the source to see if I couldn’t get it to bark during init, like this:<\/p><pre><code><span class=\"built_in\">LOG<\/span>.info(<span class=\"string\">'Setting up hipchat plugin’)<\/span><\/code><\/pre><p>No dice.  So I think it just doesnt load it<\/p>","sent":"2016-10-10T14:00:09.930Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57fb9f3ba7c618cd26fbdd10","text":"I also ended up using \n```\npython setup.py install —user\n```\nbecause somehow when I did the install for alertad it ended up in ~/.local.   ","html":"<p>I also ended up using <\/p><pre><code>python setup.py <span class=\"operator\"><span class=\"keyword\">install<\/span> —<span class=\"keyword\">user<\/span><\/span><\/code><\/pre><p>because somehow when I did the install for alertad it ended up in ~/.local.   <\/p>","sent":"2016-10-10T14:01:31.910Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fb9f92a7c618cd26fbde49","text":"So I can see that I have this in place:\n```\n/home/data/.local/lib/python2.7/site-packages/alerta_hipchat-0.3.1-py2.7.egg\n```\nAnd that file is listed in `/home/data/.local/lib/python2.7/site-packages/easy-install.pth`","html":"<p>So I can see that I have this in place:<\/p><pre><code><span class=\"regexp\">/home/<\/span>data<span class=\"regexp\">/.local/<\/span>lib<span class=\"regexp\">/python2.7/<\/span>site-packages<span class=\"regexp\">/alerta_hipchat-0.3.1-py2.7.egg<\/span><\/code><\/pre><p>And that file is listed in <code>/home/data/.local/lib/python2.7/site-packages/easy-install.pth<\/code><\/p>","sent":"2016-10-10T14:02:58.875Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57fba056d6251fd126a85bc1","text":"Is hipchat listed in the list of enabled plugins?","html":"Is hipchat listed in the list of enabled plugins?","sent":"2016-10-10T14:06:14.905Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fba0600aa72e3c5bed0332","text":"e.g.. `PLUGINS=[‘hipchat’]`","html":"e.g.. <code>PLUGINS=[‘hipchat’]<\/code>","sent":"2016-10-10T14:06:24.819Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57fba068a7c618cd26fbe412","text":"in `alertad.conf`","html":"in <code>alertad.conf<\/code>","sent":"2016-10-10T14:06:32.221Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57fba140a7c618cd26fbe720","text":"No","html":"No","sent":"2016-10-10T14:10:08.816Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fba142dfe82a365b123ce4","text":":)","html":":)","sent":"2016-10-10T14:10:10.078Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57fba144dfe82a365b123cfa","text":"That’s gotta be it","html":"That’s gotta be it","sent":"2016-10-10T14:10:12.854Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57fba17a70fcb5db0c44c7c8","text":"FYI, the PLUGINS= is only referred to in 3 places in contrib, so I missed that step","html":"FYI, the PLUGINS= is only referred to in 3 places in contrib, so I missed that step","sent":"2016-10-10T14:11:06.788Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"57fba25b70fcb5db0c44cbd7","text":"Good point. I can see that there is no reference to PLUGINS in the hipchat README. That would be a least one place it should have been mentioned. I’ll fix.","html":"Good point. I can see that there is no reference to PLUGINS in the hipchat README. That would be a least one place it should have been mentioned. I’ll fix.","sent":"2016-10-10T14:14:51.410Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fba313a7c618cd26fbeed5","text":"@satterly OK, this is rocking for me now.  Thank you!","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> OK, this is rocking for me now.  Thank you!","sent":"2016-10-10T14:17:55.061Z","fromUser":{"id":"5697894116b6c7089cc28123","username":"kwesterfeld","displayName":"Kurt Westerfeld","url":"/kwesterfeld","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/kwesterfeld","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/703639?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/703639?v=4&s=128","v":3,"gv":"4"},"readBy":4,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"57fba48fa7c618cd26fbf54c","text":"great.","html":"great.","sent":"2016-10-10T14:24:15.914Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

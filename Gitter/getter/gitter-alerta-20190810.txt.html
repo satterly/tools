@@ -1,0 +1,707 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/08/11"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/08/09"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">10<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5d4e5ea490bba62a124d2a23 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4e5ea490bba62a124d2a23' title="">Aug 10 2019 06:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Not sure I understand. Heartbeats don&#39;t have an environment
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4e7635029a51607f6a780f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b60ba4fd73408ce4fa30336 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>darkl0rd</div>
+      <div class='chat-item__username js-chat-item-from'>@darkl0rd</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4e7635029a51607f6a780f' title="">Aug 10 2019 07:45 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://github.com/alerta/prometheus-config" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/prometheus-config</a><br>This example by the way, does exactly what I was trying to achieve yesterday. In the global section of prometheus it defines a bunch of external_labels, such as &quot;dc&quot; and &quot;region&quot;. I&#39;m assuming you had the same idea I did when you did that, that is visualising those as &quot;custom columns&quot; in Alerta?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4e765c1db76d0ffea816fd burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ve been dicking around for a while, and I haven&#39;t found a way to populate those custom columns at all
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4e7bd77d56bc60802a14a7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b60ba4fd73408ce4fa30336 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>darkl0rd</div>
+      <div class='chat-item__username js-chat-item-from'>@darkl0rd</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4e7bd77d56bc60802a14a7' title="">Aug 10 2019 08:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I did find out that those external_labels end up in Alerta&#39;s &quot;tags&quot; field.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4e86f0beba830fff68fe4a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4e86f0beba830fff68fe4a' title="">Aug 10 2019 08:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      They need to be attributes to appear as a display column. You can parse the alert in a pre-receive hook and convert any wanted tags into attributes.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4e87141db76d0ffea88b7b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Or the webhook could be enhanced to convert commonLabels into attributes automatically
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4e962bbb5364334c072d05 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b60ba4fd73408ce4fa30336 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>darkl0rd</div>
+      <div class='chat-item__username js-chat-item-from'>@darkl0rd</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4e962bbb5364334c072d05' title="">Aug 10 2019 10:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>It would be great that when a key exists in commonLabels it would be automatically mapped onto the corresponding (custom) Column.</p><p>I personally have a mix of mostly Zabbix &amp; Prometheus - being able to add and visualise the Datacenter, Region in a common way would be really beneficial - and very much inline I think with what Alerta is trying to accomplish, a single, pretty, effective &amp; unified dashboard.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4eaa1890bba62a124f17f1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b60ba4fd73408ce4fa30336 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>darkl0rd</div>
+      <div class='chat-item__username js-chat-item-from'>@darkl0rd</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4eaa1890bba62a124f17f1' title="">Aug 10 2019 11:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>And Nick, to get back to yesterday -- Heartbeats might not have an &#39;Environment&#39; itself, but the incoming alert (AlertManager) from which it&#39;s generated does.</p><p>This means, that when you change the filter to show everything (open, closed etc.), the original HeartBeat alerts also show up - with an environment of &quot;Production&quot;.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4eb2c85178a7247662082a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d4eb268d73408ce4fc82541 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/47253526?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/47253526?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>p4k8</div>
+      <div class='chat-item__username js-chat-item-from'>@p4k8</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4eb2c85178a7247662082a' title="">Aug 10 2019 12:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Good day everyone<br>Anyone got working config of alerta with snmptrap integration? Somehow just can&#39;t make it work with default setup.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4eb3efbeba830fff6a4280 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it looks like handler is connecting to 8080 and I can&#39;t seem to find a way to change it
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4eb7191dadc42a1146b214 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4eb7191dadc42a1146b214' title="">Aug 10 2019 12:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="darkl0rd" class="mention">@darkl0rd</span> that shouldn&#39;t happen. I suspect you have old alerts that weren&#39;t converted into heartbeats still in the database
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4eb840c87a0963e7474aac burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d4eb268d73408ce4fc82541 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/47253526?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/47253526?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>p4k8</div>
+      <div class='chat-item__username js-chat-item-from'>@p4k8</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4eb840c87a0963e7474aac' title="">Aug 10 2019 12:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Oh, so it looks like its impossible to run alerta on port 80 with snmptrap integration, server must be on 8080
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4ec53d1dadc42a11470fb6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b60ba4fd73408ce4fa30336 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>darkl0rd</div>
+      <div class='chat-item__username js-chat-item-from'>@darkl0rd</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4ec53d1dadc42a11470fb6' title="">Aug 10 2019 13:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> That&#39;s whaTI thought at first - however I cleared everything out. It seems related to a restart of Alerta - possibly the plugin not loaded yet when the alert is received the first time?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4ec9d19507182477b415b3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d4eb268d73408ce4fc82541 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/47253526?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/47253526?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>p4k8</div>
+      <div class='chat-item__username js-chat-item-from'>@p4k8</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4ec9d19507182477b415b3' title="">Aug 10 2019 13:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Oh, so do I need API key to run snmptrap integration?<br>There&#39;s nothing about it in the docs
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4ecf6f53490e334dc99aa8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4ecf6f53490e334dc99aa8' title="">Aug 10 2019 14:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="p4k8" class="mention">@p4k8</span> only if auth is enabled
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4ecf877d56bc60802c41da burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="darkl0rd" class="mention">@darkl0rd</span> wouldn&#39;t have thought that was possible
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4ee378c87a0963e74866d7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b60ba4fd73408ce4fa30336 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/14044538?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>darkl0rd</div>
+      <div class='chat-item__username js-chat-item-from'>@darkl0rd</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/08/10?at=5d4ee378c87a0963e74866d7' title="">Aug 10 2019 15:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;m reading about the LDAP support, specifically group support. What isn&#39;t clear to me is how I can limit access to Alerta based on specific group membership? The example shows something like &#39;(&amp;(memberUid=%s)(objectClass=groupOfUniqueNames))&#39;; but where to specify which group name(s) are valid?
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$mb0SZic4t+yAMMb3JHUQD22o3wl3HYrUhpt28OCnQ1w=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-08-10T00:00:00.000Z","nextDate":"2019-08-11T23:59:59.999Z","previousDate":"2019-08-09T00:00:00.000Z","messages":[{"id":"5d4e5ea490bba62a124d2a23","text":"Not sure I understand. Heartbeats don't have an environment","html":"Not sure I understand. Heartbeats don&#39;t have an environment","sent":"2019-08-10T06:05:24.938Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4e7635029a51607f6a780f","text":"https://github.com/alerta/prometheus-config\nThis example by the way, does exactly what I was trying to achieve yesterday. In the global section of prometheus it defines a bunch of external_labels, such as \"dc\" and \"region\". I'm assuming you had the same idea I did when you did that, that is visualising those as \"custom columns\" in Alerta?","html":"<a href=\"https://github.com/alerta/prometheus-config\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/prometheus-config<\/a><br>This example by the way, does exactly what I was trying to achieve yesterday. In the global section of prometheus it defines a bunch of external_labels, such as &quot;dc&quot; and &quot;region&quot;. I&#39;m assuming you had the same idea I did when you did that, that is visualising those as &quot;custom columns&quot; in Alerta?","sent":"2019-08-10T07:45:57.806Z","fromUser":{"id":"5b60ba4fd73408ce4fa30336","username":"darkl0rd","displayName":"darkl0rd","url":"/darkl0rd","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/darkl0rd","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=128","v":6,"gv":"4"},"readBy":13,"urls":[{"url":"https://github.com/alerta/prometheus-config"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4e765c1db76d0ffea816fd","text":"I've been dicking around for a while, and I haven't found a way to populate those custom columns at all","html":"I&#39;ve been dicking around for a while, and I haven&#39;t found a way to populate those custom columns at all","sent":"2019-08-10T07:46:36.806Z","fromUser":{"id":"5b60ba4fd73408ce4fa30336","username":"darkl0rd","displayName":"darkl0rd","url":"/darkl0rd","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/darkl0rd","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=128","v":6,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4e7bd77d56bc60802a14a7","text":"I did find out that those external_labels end up in Alerta's \"tags\" field.","html":"I did find out that those external_labels end up in Alerta&#39;s &quot;tags&quot; field.","sent":"2019-08-10T08:09:59.710Z","fromUser":{"id":"5b60ba4fd73408ce4fa30336","username":"darkl0rd","displayName":"darkl0rd","url":"/darkl0rd","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/darkl0rd","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=128","v":6,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4e86f0beba830fff68fe4a","text":"They need to be attributes to appear as a display column. You can parse the alert in a pre-receive hook and convert any wanted tags into attributes.","html":"They need to be attributes to appear as a display column. You can parse the alert in a pre-receive hook and convert any wanted tags into attributes.","sent":"2019-08-10T08:57:20.704Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4e87141db76d0ffea88b7b","text":"Or the webhook could be enhanced to convert commonLabels into attributes automatically","html":"Or the webhook could be enhanced to convert commonLabels into attributes automatically","sent":"2019-08-10T08:57:56.845Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4e962bbb5364334c072d05","text":"It would be great that when a key exists in commonLabels it would be automatically mapped onto the corresponding (custom) Column.\n\nI personally have a mix of mostly Zabbix & Prometheus - being able to add and visualise the Datacenter, Region in a common way would be really beneficial - and very much inline I think with what Alerta is trying to accomplish, a single, pretty, effective & unified dashboard.","html":"<p>It would be great that when a key exists in commonLabels it would be automatically mapped onto the corresponding (custom) Column.<\/p><p>I personally have a mix of mostly Zabbix &amp; Prometheus - being able to add and visualise the Datacenter, Region in a common way would be really beneficial - and very much inline I think with what Alerta is trying to accomplish, a single, pretty, effective &amp; unified dashboard.<\/p>","sent":"2019-08-10T10:02:19.863Z","fromUser":{"id":"5b60ba4fd73408ce4fa30336","username":"darkl0rd","displayName":"darkl0rd","url":"/darkl0rd","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/darkl0rd","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=128","v":6,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4eaa1890bba62a124f17f1","text":"And Nick, to get back to yesterday -- Heartbeats might not have an 'Environment' itself, but the incoming alert (AlertManager) from which it's generated does.\n\nThis means, that when you change the filter to show everything (open, closed etc.), the original HeartBeat alerts also show up - with an environment of \"Production\".","html":"<p>And Nick, to get back to yesterday -- Heartbeats might not have an &#39;Environment&#39; itself, but the incoming alert (AlertManager) from which it&#39;s generated does.<\/p><p>This means, that when you change the filter to show everything (open, closed etc.), the original HeartBeat alerts also show up - with an environment of &quot;Production&quot;.<\/p>","sent":"2019-08-10T11:27:20.935Z","fromUser":{"id":"5b60ba4fd73408ce4fa30336","username":"darkl0rd","displayName":"darkl0rd","url":"/darkl0rd","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/darkl0rd","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=128","v":6,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4eb2c85178a7247662082a","text":"Good day everyone\nAnyone got working config of alerta with snmptrap integration? Somehow just can't make it work with default setup.","html":"Good day everyone<br>Anyone got working config of alerta with snmptrap integration? Somehow just can&#39;t make it work with default setup.","sent":"2019-08-10T12:04:24.863Z","fromUser":{"id":"5d4eb268d73408ce4fc82541","username":"p4k8","displayName":"p4k8","url":"/p4k8","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/p4k8","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/47253526?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/47253526?v=4&s=128","v":1,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4eb3efbeba830fff6a4280","text":"it looks like handler is connecting to 8080 and I can't seem to find a way to change it","html":"it looks like handler is connecting to 8080 and I can&#39;t seem to find a way to change it","sent":"2019-08-10T12:09:19.184Z","fromUser":{"id":"5d4eb268d73408ce4fc82541","username":"p4k8","displayName":"p4k8","url":"/p4k8","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/p4k8","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/47253526?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/47253526?v=4&s=128","v":1,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4eb7191dadc42a1146b214","text":"@darkl0rd that shouldn't happen. I suspect you have old alerts that weren't converted into heartbeats still in the database","html":"<span data-link-type=\"mention\" data-screen-name=\"darkl0rd\" class=\"mention\">@darkl0rd<\/span> that shouldn&#39;t happen. I suspect you have old alerts that weren&#39;t converted into heartbeats still in the database","sent":"2019-08-10T12:22:49.168Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"darkl0rd","userId":"5b60ba4fd73408ce4fa30336","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4eb840c87a0963e7474aac","text":"Oh, so it looks like its impossible to run alerta on port 80 with snmptrap integration, server must be on 8080","html":"Oh, so it looks like its impossible to run alerta on port 80 with snmptrap integration, server must be on 8080","sent":"2019-08-10T12:27:44.585Z","fromUser":{"id":"5d4eb268d73408ce4fc82541","username":"p4k8","displayName":"p4k8","url":"/p4k8","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/p4k8","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/47253526?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/47253526?v=4&s=128","v":1,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4ec53d1dadc42a11470fb6","text":"@satterly That's whaTI thought at first - however I cleared everything out. It seems related to a restart of Alerta - possibly the plugin not loaded yet when the alert is received the first time?","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> That&#39;s whaTI thought at first - however I cleared everything out. It seems related to a restart of Alerta - possibly the plugin not loaded yet when the alert is received the first time?","sent":"2019-08-10T13:23:09.835Z","fromUser":{"id":"5b60ba4fd73408ce4fa30336","username":"darkl0rd","displayName":"darkl0rd","url":"/darkl0rd","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/darkl0rd","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=128","v":6,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4ec9d19507182477b415b3","text":"Oh, so do I need API key to run snmptrap integration? \nThere's nothing about it in the docs","html":"Oh, so do I need API key to run snmptrap integration?<br>There&#39;s nothing about it in the docs","sent":"2019-08-10T13:42:41.899Z","fromUser":{"id":"5d4eb268d73408ce4fc82541","username":"p4k8","displayName":"p4k8","url":"/p4k8","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/p4k8","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/47253526?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/47253526?v=4&s=128","v":1,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4ecf6f53490e334dc99aa8","text":"@p4k8 only if auth is enabled","html":"<span data-link-type=\"mention\" data-screen-name=\"p4k8\" class=\"mention\">@p4k8<\/span> only if auth is enabled","sent":"2019-08-10T14:06:39.707Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"p4k8","userId":"5d4eb268d73408ce4fc82541","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4ecf877d56bc60802c41da","text":"@darkl0rd wouldn't have thought that was possible","html":"<span data-link-type=\"mention\" data-screen-name=\"darkl0rd\" class=\"mention\">@darkl0rd<\/span> wouldn&#39;t have thought that was possible","sent":"2019-08-10T14:07:03.433Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":17,"urls":[],"mentions":[{"screenName":"darkl0rd","userId":"5b60ba4fd73408ce4fa30336","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d4ee378c87a0963e74866d7","text":"I'm reading about the LDAP support, specifically group support. What isn't clear to me is how I can limit access to Alerta based on specific group membership? The example shows something like '(&(memberUid=%s)(objectClass=groupOfUniqueNames))'; but where to specify which group name(s) are valid?","html":"I&#39;m reading about the LDAP support, specifically group support. What isn&#39;t clear to me is how I can limit access to Alerta based on specific group membership? The example shows something like &#39;(&amp;(memberUid=%s)(objectClass=groupOfUniqueNames))&#39;; but where to specify which group name(s) are valid?","sent":"2019-08-10T15:32:08.904Z","fromUser":{"id":"5b60ba4fd73408ce4fa30336","username":"darkl0rd","displayName":"darkl0rd","url":"/darkl0rd","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/darkl0rd","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/14044538?v=4&s=128","v":6,"gv":"4"},"readBy":17,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

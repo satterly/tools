@@ -1,0 +1,1038 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0158f6119/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0158f6119/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0158f6119/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0158f6119/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0158f6119/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0158f6119/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/06/10"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/06/08"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">9<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jun 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5edf0d69778fad0b13569d9f burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks Satterly, even after sending the duplicate events to alerta, i&#39;m not able to see any metric as alerta duplicate count
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf0d69778fad0b13569d9f"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf0d707da67d06fafed9a5 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Total alerts                 gauge   alerts.total               1<br>Tagging alerts               timer   alerts.tagged              1         833<br>Deleted alerts               timer   alerts.deleted             6          41.1667<br>Count alerts                 timer   alerts.counts              2065893   450.117<br>Alert queries                timer   alerts.queries             5726022   301.735<br>Received alerts              timer   alerts.received            282807    200.457<br>Alerta console auto-refresh  text    switch.auto-refresh-allow  ON<br>API alert submission         text    switch.sender-api-allow    ON
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf0d707da67d06fafed9a5"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf0da14c9b0f060d52ab29 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      should I run any command or query to alerta for it add duplicate count as metrics
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf0da14c9b0f060d52ab29"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf1ab8daf4cf366eee6433 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      if you’ve never had a duplicate the metric will not be present.
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf1ab8daf4cf366eee6433"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf3c1b7da67d06faff47fb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5edf3b1ad73408ce4fe65c90 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/44316886?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/44316886?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>profiterole38</div>
+      <div class='chat-item__username js-chat-item-from'>@profiterole38</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf3c1b7da67d06faff47fb' title="">Jun 09 07:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi gyes. I was broker my brain already.<br>I installed alerta-sentry from <a href="https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md</a> by <code>pip install git+https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry</code>.<br>And the method showed at <code>/api</code><br>But when i send POST request with custom json or from Sentry by webhook, i got error <code>nginx: 405 Method not allowed</code><br>What i missed?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf3c734c9b0f060d531d6a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I deployed alerta by helm-chart
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf3da9a3a1b13679d7bd20 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5edf3b1ad73408ce4fe65c90 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/44316886?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/44316886?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>profiterole38</div>
+      <div class='chat-item__username js-chat-item-from'>@profiterole38</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf3da9a3a1b13679d7bd20' title="">Jun 09 07:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      *broken :D
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf4fb15dcbb760b6daa987 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf4fb15dcbb760b6daa987' title="">Jun 09 09:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what&#39;s the exact command you ran to do the POST?
+    </div>
+      <div class='chat-item__thread-message-indicator parent-message-indicator js-parent-message-indicator'>
+        <img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-down-right.svg" /> 25 replies
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf4fe530401c1f24455819 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      curl -i -d <a href="mailto:&#39;@request.json" rel="nofollow">&#39;@request.json</a>&#39; -H &quot;Content-Type: application/json&quot; -X POST <a href="https://URL.ru/webhooks/sentry" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://URL.ru/webhooks/sentry</a>
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf4fe530401c1f24455819"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf501b7c64f31f114c576b burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      request.json - Example from <a href="https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md</a>
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf501b7c64f31f114c576b"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf50cd7c64f31f114c594c burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      are you using docker?
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf50cd7c64f31f114c594c"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf50d11e099b0388b56c19 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf50d11e099b0388b56c19"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf50dea85de3039400e8d0 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      did you run pip install inside the docker container?
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf50dea85de3039400e8d0"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf50f85782a31278ea1a0a burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf50f85782a31278ea1a0a"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf50f9013105125a2334f7 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      RUN pip install pip virtualenv &amp;&amp; \<br>    python3 -m venv /venv &amp;&amp; \<br>    /venv/bin/pip install git+<a href="https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry</a><br>```
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf50f9013105125a2334f7"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf510a035dfa12610c1ff5 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      don&#39;t install webhooks like that.
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf510a035dfa12610c1ff5"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf51147b6da9126a8301fc burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      follow this tutorial to see how ... <a href="https://docs.alerta.io/en/latest/gettingstarted/tutorial-10-docker.html#step-4-install-additional-plugins-or-webhooks" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://docs.alerta.io/en/latest/gettingstarted/tutorial-10-docker.html#step-4-install-additional-plugins-or-webhooks</a>
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf51147b6da9126a8301fc"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf51947c64f31f114c5b36 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      ok) i will try right now
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf51947c64f31f114c5b36"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf51bb30401c1f24455d23 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      :+1:
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf51bb30401c1f24455d23"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf66827a7f8d2d6323cdc6 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      hi Nick, thanks for replying
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf66827a7f8d2d6323cdc6"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf66cf7a7f8d2d6323ced8 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      what do you call &quot;cases&quot;? They are from different alerts but with the same environment=&quot;production&quot;
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf66cf7a7f8d2d6323ced8"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf676a5782a31278ea5414 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Shouldn&#39;t they be grouped together  under the same Production env?
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf676a5782a31278ea5414"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf67fb5782a31278ea55b2 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <code>reject</code> plugin is indeed disabled but what difference should it make? I&#39;m not going to reject alerts from &quot;production&quot; env
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf67fb5782a31278ea55b2"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf682cee693d6eb3b27dfc burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf682cee693d6eb3b27dfc"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf708230401c1f2445ab3e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea01233d73408ce4fe14db4 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>viberan</div>
+      <div class='chat-item__username js-chat-item-from'>@viberan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf708230401c1f2445ab3e' title="">Jun 09 11:20 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      is it possible to use both Google OAuth2 and Basic Auth at the same time?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf914c1e099b0388b6244d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf914c1e099b0388b6244d' title="">Jun 09 13:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      It&#39;s possible but not currently supported.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf938d49260560aa4d3a1d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea01233d73408ce4fe14db4 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>viberan</div>
+      <div class='chat-item__username js-chat-item-from'>@viberan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf938d49260560aa4d3a1d' title="">Jun 09 13:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      the use case for this, if the google auth is required then some gmail user has to create an api key to be used by alertmanager (in my example) to send alerts to alerta which is not desirable. Would be nice to have an api key not related to any personal google account, it&#39;s a machine to machine communication. Is this achievable in some other way?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf951d013105125a23f91f burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      That&#39;s exactly what you should do. Having some alerts with environment of &quot;Production&quot; and others with &quot;production&quot; will lead to the situation you fond yourself in right now. 
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf951d013105125a23f91f"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf95e324a3382d5d56f2d2 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      ok, I see. I think there was alert without an environment set in the first case which led to the default value of &quot;Production&quot;
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf95e324a3382d5d56f2d2"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf95f42cf2f36eae4b2074 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      thanks for help
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf95f42cf2f36eae4b2074"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf96f949260560aa4d43a8 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      btw it would be nice to have the default environment configurable rather than hard-coded 
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf96f949260560aa4d43a8"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edf9f6c7b6da9126a83e2c0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea01233d73408ce4fe14db4 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>viberan</div>
+      <div class='chat-item__username js-chat-item-from'>@viberan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edf9f6c7b6da9126a83e2c0' title="">Jun 09 14:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;m using Google OAuth2, thus every API key belongs to a corresponding google user. Am I  missing or misunderstand something?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfa2acee693d6eb3b32e1a burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://docs.alerta.io/en/latest/faq.html?highlight=reject#why-do-i-need-to-set-an-environment-and-service-when-they-are-not-mandatory" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://docs.alerta.io/en/latest/faq.html?highlight=reject#why-do-i-need-to-set-an-environment-and-service-when-they-are-not-mandatory</a>
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfa2acee693d6eb3b32e1a"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfa2b630401c1f244639eb burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://docs.alerta.io/en/latest/configuration.html#plugin-settings" rel="nofollow noopener noreferrer" target="_blank" class="link ">https://docs.alerta.io/en/latest/configuration.html#plugin-settings</a>
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfa2b630401c1f244639eb"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfa3f4013105125a242700 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea01233d73408ce4fe14db4 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>viberan</div>
+      <div class='chat-item__username js-chat-item-from'>@viberan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfa3f4013105125a242700' title="">Jun 09 15:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Later on the name of that user is shown in the alert&#39;s Status attribute as if that particular user has opened or closed the alert.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfa410013105125a242751 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfa410013105125a242751' title="">Jun 09 15:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      if you tell the web UI to use “basic” as the auth provider it will let you create an “admin&quot; user and login. then you can create an API key.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfa4387a7f8d2d63247d53 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      there are a few ways to do that. one is to change the server setting and bounce Alerta API.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfa44c29d8bc28f9e6525d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      alternatively, create a local <code>config.json</code> file that overrides the auth provider.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfa4ab30401c1f244640ac burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      what you can’t do is create a basic auth user with the same email address as a google auth user and switch between auth providers and expect it to work.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfa52a1e099b0388b66009 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      let me know if any of that was unclear.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfafef013105125a244c66 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5ea01233d73408ce4fe14db4 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/45915382?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>viberan</div>
+      <div class='chat-item__username js-chat-item-from'>@viberan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfafef013105125a244c66' title="">Jun 09 15:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>does it mean that creating <code>config.json</code> with the following content :</p><pre><code>{
+    "<span class="attribute">auth_required</span>": <span class="value"><span class="literal">false</span></span>,
+    "<span class="attribute">provider</span>": <span class="value"><span class="string">"basic"</span></span>,
+    "<span class="attribute">endpoint</span>": <span class="value"><span class="string">"/api"</span>
+</span>}</code></pre><p>and sending SIGHUP should temporarily switch the authentication to basic? It doesn&#39;t seem to work</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfb22524a3382d5d5745c8 burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      we had a duplicate and correlate event still not seeing any metric for duplicate or correlate, any other configuration needs to done or what could be the cause? 
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfb22524a3382d5d5745c8"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfc82f7a7f8d2d6324fa2d burstContinued read  threaded-conversation-chat-item" role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      sorry i’ve just looked at the git history and that was removed 5 years ago.
+    </div>
+      <div class='chat-item__thread-message-indicator'>
+        <a href="https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfc82f7a7f8d2d6324fa2d"><img class="chat-item__pmi-icon" src="//cdn01.gitter.im/_s/0158f6119/images/svg/corner-up-left.svg" /> go to thread</a>
+      </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfc98730401c1f2446d622 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfc98730401c1f2446d622' title="">Jun 09 17:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      you don’t need to restart the API. the web UI should read it and override any settings it get’s from the server.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfc9caef5c1c28f0119256 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      the alternative is to change the AUTH_PROVIDER setting for the server and restart it.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfdb52013105125a25029f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5edbe6bdd73408ce4fe62118 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/2743083?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/2743083?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Martin Bálint</div>
+      <div class='chat-item__username js-chat-item-from'>@martinbalint</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfdb52013105125a25029f' title="">Jun 09 18:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I didn&#39;t mean Azure but on-premise ADFS on Windows Server. But I was able to make it work by removing userinfo call and mapping identity claims to id_token.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5edfdb885782a31278ebe024 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/06/09?at=5edfdb885782a31278ebe024' title="">Jun 09 18:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok. good work.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0158f6","assetTag":"0158f6119","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$fAjMfBAtGgO6j1pzAxWxvAVjpmU6zGHkXQI2U8iFIcE=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":391,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-06-09T00:00:00.000Z","nextDate":"2020-06-10T23:59:59.999Z","previousDate":"2020-06-08T00:00:00.000Z","messages":[{"id":"5edf0d69778fad0b13569d9f","text":"Thanks Satterly, even after sending the duplicate events to alerta, i'm not able to see any metric as alerta duplicate count","html":"Thanks Satterly, even after sending the duplicate events to alerta, i&#39;m not able to see any metric as alerta duplicate count","sent":"2020-06-09T04:17:45.887Z","fromUser":{"id":"5df3849fd73408ce4fd3f9e2","username":"teruguparthasaradhi","displayName":"Parthasaradhi Terugu","url":"/teruguparthasaradhi","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/teruguparthasaradhi","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/25366034?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/25366034?v=4&s=128","v":9,"gv":"4"},"parentId":"5ede4dcb225dc25f54d392fb","readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf0d707da67d06fafed9a5","text":"Total alerts                 gauge   alerts.total               1\nTagging alerts               timer   alerts.tagged              1         833\nDeleted alerts               timer   alerts.deleted             6          41.1667\nCount alerts                 timer   alerts.counts              2065893   450.117\nAlert queries                timer   alerts.queries             5726022   301.735\nReceived alerts              timer   alerts.received            282807    200.457\nAlerta console auto-refresh  text    switch.auto-refresh-allow  ON\nAPI alert submission         text    switch.sender-api-allow    ON\n","html":"Total alerts                 gauge   alerts.total               1<br>Tagging alerts               timer   alerts.tagged              1         833<br>Deleted alerts               timer   alerts.deleted             6          41.1667<br>Count alerts                 timer   alerts.counts              2065893   450.117<br>Alert queries                timer   alerts.queries             5726022   301.735<br>Received alerts              timer   alerts.received            282807    200.457<br>Alerta console auto-refresh  text    switch.auto-refresh-allow  ON<br>API alert submission         text    switch.sender-api-allow    ON","sent":"2020-06-09T04:17:52.356Z","fromUser":{"id":"5df3849fd73408ce4fd3f9e2","username":"teruguparthasaradhi","displayName":"Parthasaradhi Terugu","url":"/teruguparthasaradhi","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/teruguparthasaradhi","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/25366034?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/25366034?v=4&s=128","v":9,"gv":"4"},"parentId":"5ede4dcb225dc25f54d392fb","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf0da14c9b0f060d52ab29","text":"should I run any command or query to alerta for it add duplicate count as metrics","html":"should I run any command or query to alerta for it add duplicate count as metrics","sent":"2020-06-09T04:18:41.215Z","fromUser":{"id":"5df3849fd73408ce4fd3f9e2","username":"teruguparthasaradhi","displayName":"Parthasaradhi Terugu","url":"/teruguparthasaradhi","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/teruguparthasaradhi","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/25366034?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/25366034?v=4&s=128","v":9,"gv":"4"},"parentId":"5ede4dcb225dc25f54d392fb","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf1ab8daf4cf366eee6433","text":"if you’ve never had a duplicate the metric will not be present.","html":"if you’ve never had a duplicate the metric will not be present.","sent":"2020-06-09T05:14:32.893Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5ede4dcb225dc25f54d392fb","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf3c1b7da67d06faff47fb","text":"Hi gyes. I was broker my brain already. \nI installed alerta-sentry from https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md by `pip install git+https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry`. \nAnd the method showed at `/api`\nBut when i send POST request with custom json or from Sentry by webhook, i got error `nginx: 405 Method not allowed`\nWhat i missed?","html":"Hi gyes. I was broker my brain already.<br>I installed alerta-sentry from <a href=\"https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md<\/a> by <code>pip install git+https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry<\/code>.<br>And the method showed at <code>/api<\/code><br>But when i send POST request with custom json or from Sentry by webhook, i got error <code>nginx: 405 Method not allowed<\/code><br>What i missed?","sent":"2020-06-09T07:36:59.214Z","editedAt":"2020-06-09T07:39:46.131Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[{"url":"https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md"}],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5edf3c734c9b0f060d531d6a","text":"I deployed alerta by helm-chart","html":"I deployed alerta by helm-chart","sent":"2020-06-09T07:38:27.767Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5edf3da9a3a1b13679d7bd20","text":"*broken :D","html":"*broken :D","sent":"2020-06-09T07:43:37.530Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edf4fb15dcbb760b6daa987","text":"what's the exact command you ran to do the POST?","html":"what&#39;s the exact command you ran to do the POST?","sent":"2020-06-09T09:00:33.292Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"threadMessageCount":25,"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":26,"burstStart":true},{"id":"5edf4fe530401c1f24455819","text":"curl -i -d '@request.json' -H \"Content-Type: application/json\" -X POST https://URL.ru/webhooks/sentry","html":"curl -i -d <a href=\"mailto:&#39;@request.json\" rel=\"nofollow\">&#39;@request.json<\/a>&#39; -H &quot;Content-Type: application/json&quot; -X POST <a href=\"https://URL.ru/webhooks/sentry\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://URL.ru/webhooks/sentry<\/a>","sent":"2020-06-09T09:01:25.144Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":8,"urls":[{"url":"mailto:&#39;@request.json"},{"url":"https://URL.ru/webhooks/sentry"}],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf501b7c64f31f114c576b","text":"request.json - Example from https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md","html":"request.json - Example from <a href=\"https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md<\/a>","sent":"2020-06-09T09:02:19.338Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":8,"urls":[{"url":"https://github.com/alerta/alerta-contrib/blob/master/webhooks/sentry/README.md"}],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf50cd7c64f31f114c594c","text":"are you using docker?","html":"are you using docker?","sent":"2020-06-09T09:05:17.123Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf50d11e099b0388b56c19","text":"Yes","html":"Yes","sent":"2020-06-09T09:05:21.019Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf50dea85de3039400e8d0","text":"did you run pip install inside the docker container?","html":"did you run pip install inside the docker container?","sent":"2020-06-09T09:05:34.437Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf50f85782a31278ea1a0a","text":"Yes","html":"Yes","sent":"2020-06-09T09:06:00.040Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf50f9013105125a2334f7","text":"RUN pip install pip virtualenv && \\\n    python3 -m venv /venv && \\\n    /venv/bin/pip install git+https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry\n```","html":"RUN pip install pip virtualenv &amp;&amp; \\<br>    python3 -m venv /venv &amp;&amp; \\<br>    /venv/bin/pip install git+<a href=\"https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry<\/a><br>```","sent":"2020-06-09T09:06:01.295Z","editedAt":"2020-06-09T09:06:12.704Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":7,"urls":[{"url":"https://github.com/alerta/alerta-contrib.git#subdirectory=webhooks/sentry"}],"mentions":[],"issues":[],"meta":[],"v":4},{"id":"5edf510a035dfa12610c1ff5","text":"don't install webhooks like that.","html":"don&#39;t install webhooks like that.","sent":"2020-06-09T09:06:18.689Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf51147b6da9126a8301fc","text":"follow this tutorial to see how ... https://docs.alerta.io/en/latest/gettingstarted/tutorial-10-docker.html#step-4-install-additional-plugins-or-webhooks","html":"follow this tutorial to see how ... <a href=\"https://docs.alerta.io/en/latest/gettingstarted/tutorial-10-docker.html#step-4-install-additional-plugins-or-webhooks\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://docs.alerta.io/en/latest/gettingstarted/tutorial-10-docker.html#step-4-install-additional-plugins-or-webhooks<\/a>","sent":"2020-06-09T09:06:28.430Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":7,"urls":[{"url":"https://docs.alerta.io/en/latest/gettingstarted/tutorial-10-docker.html#step-4-install-additional-plugins-or-webhooks"}],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf51947c64f31f114c5b36","text":"ok) i will try right now","html":"ok) i will try right now","sent":"2020-06-09T09:08:36.348Z","editedAt":"2020-06-09T09:08:42.609Z","fromUser":{"id":"5edf3b1ad73408ce4fe65c90","username":"profiterole38","displayName":"profiterole38","url":"/profiterole38","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/profiterole38","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/44316886?v=4&s=128","v":1,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2},{"id":"5edf51bb30401c1f24455d23","text":":+1:","html":":+1:","sent":"2020-06-09T09:09:15.972Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5edf4fb15dcbb760b6daa987","readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf66827a7f8d2d6323cdc6","text":"hi Nick, thanks for replying","html":"hi Nick, thanks for replying","sent":"2020-06-09T10:37:54.507Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf66cf7a7f8d2d6323ced8","text":"what do you call \"cases\"? They are from different alerts but with the same environment=\"production\"","html":"what do you call &quot;cases&quot;? They are from different alerts but with the same environment=&quot;production&quot;","sent":"2020-06-09T10:39:11.406Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf676a5782a31278ea5414","text":"Shouldn't they be grouped together  under the same Production env?","html":"Shouldn&#39;t they be grouped together  under the same Production env?","sent":"2020-06-09T10:41:46.407Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf67fb5782a31278ea55b2","text":"`reject` plugin is indeed disabled but what difference should it make? I'm not going to reject alerts from \"production\" env","html":"<code>reject<\/code> plugin is indeed disabled but what difference should it make? I&#39;m not going to reject alerts from &quot;production&quot; env","sent":"2020-06-09T10:44:11.463Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf682cee693d6eb3b27dfc","text":"@satterly","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>","sent":"2020-06-09T10:45:00.717Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1},{"id":"5edf708230401c1f2445ab3e","text":"is it possible to use both Google OAuth2 and Basic Auth at the same time?","html":"is it possible to use both Google OAuth2 and Basic Auth at the same time?","sent":"2020-06-09T11:20:34.163Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edf914c1e099b0388b6244d","text":"It's possible but not currently supported.","html":"It&#39;s possible but not currently supported.","sent":"2020-06-09T13:40:28.921Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edf938d49260560aa4d3a1d","text":"the use case for this, if the google auth is required then some gmail user has to create an api key to be used by alertmanager (in my example) to send alerts to alerta which is not desirable. Would be nice to have an api key not related to any personal google account, it's a machine to machine communication. Is this achievable in some other way?","html":"the use case for this, if the google auth is required then some gmail user has to create an api key to be used by alertmanager (in my example) to send alerts to alerta which is not desirable. Would be nice to have an api key not related to any personal google account, it&#39;s a machine to machine communication. Is this achievable in some other way?","sent":"2020-06-09T13:50:05.673Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edf951d013105125a23f91f","text":"That's exactly what you should do. Having some alerts with environment of \"Production\" and others with \"production\" will lead to the situation you fond yourself in right now. ","html":"That&#39;s exactly what you should do. Having some alerts with environment of &quot;Production&quot; and others with &quot;production&quot; will lead to the situation you fond yourself in right now. ","sent":"2020-06-09T13:56:45.112Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf95e324a3382d5d56f2d2","text":"ok, I see. I think there was alert without an environment set in the first case which led to the default value of \"Production\"","html":"ok, I see. I think there was alert without an environment set in the first case which led to the default value of &quot;Production&quot;","sent":"2020-06-09T14:00:03.807Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf95f42cf2f36eae4b2074","text":"thanks for help","html":"thanks for help","sent":"2020-06-09T14:00:20.737Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf96f949260560aa4d43a8","text":"btw it would be nice to have the default environment configurable rather than hard-coded ","html":"btw it would be nice to have the default environment configurable rather than hard-coded ","sent":"2020-06-09T14:04:41.693Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edf9f6c7b6da9126a83e2c0","text":"I'm using Google OAuth2, thus every API key belongs to a corresponding google user. Am I  missing or misunderstand something?","html":"I&#39;m using Google OAuth2, thus every API key belongs to a corresponding google user. Am I  missing or misunderstand something?","sent":"2020-06-09T14:40:44.323Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edfa2acee693d6eb3b32e1a","text":"https://docs.alerta.io/en/latest/faq.html?highlight=reject#why-do-i-need-to-set-an-environment-and-service-when-they-are-not-mandatory","html":"<a href=\"https://docs.alerta.io/en/latest/faq.html?highlight=reject#why-do-i-need-to-set-an-environment-and-service-when-they-are-not-mandatory\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://docs.alerta.io/en/latest/faq.html?highlight=reject#why-do-i-need-to-set-an-environment-and-service-when-they-are-not-mandatory<\/a>","sent":"2020-06-09T14:54:36.821Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[{"url":"https://docs.alerta.io/en/latest/faq.html?highlight=reject#why-do-i-need-to-set-an-environment-and-service-when-they-are-not-mandatory"}],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edfa2b630401c1f244639eb","text":"https://docs.alerta.io/en/latest/configuration.html#plugin-settings","html":"<a href=\"https://docs.alerta.io/en/latest/configuration.html#plugin-settings\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://docs.alerta.io/en/latest/configuration.html#plugin-settings<\/a>","sent":"2020-06-09T14:54:46.985Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5ede4c3a9da05a060a5c3201","readBy":8,"urls":[{"url":"https://docs.alerta.io/en/latest/configuration.html#plugin-settings"}],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edfa3f4013105125a242700","text":"Later on the name of that user is shown in the alert's Status attribute as if that particular user has opened or closed the alert.","html":"Later on the name of that user is shown in the alert&#39;s Status attribute as if that particular user has opened or closed the alert.","sent":"2020-06-09T15:00:04.016Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edfa410013105125a242751","text":"if you tell the web UI to use “basic” as the auth provider it will let you create an “admin\" user and login. then you can create an API key.","html":"if you tell the web UI to use “basic” as the auth provider it will let you create an “admin&quot; user and login. then you can create an API key.","sent":"2020-06-09T15:00:32.985Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edfa4387a7f8d2d63247d53","text":"there are a few ways to do that. one is to change the server setting and bounce Alerta API.","html":"there are a few ways to do that. one is to change the server setting and bounce Alerta API.","sent":"2020-06-09T15:01:12.828Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5edfa44c29d8bc28f9e6525d","text":"alternatively, create a local `config.json` file that overrides the auth provider.","html":"alternatively, create a local <code>config.json<\/code> file that overrides the auth provider.","sent":"2020-06-09T15:01:32.773Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5edfa4ab30401c1f244640ac","text":"what you can’t do is create a basic auth user with the same email address as a google auth user and switch between auth providers and expect it to work.","html":"what you can’t do is create a basic auth user with the same email address as a google auth user and switch between auth providers and expect it to work.","sent":"2020-06-09T15:03:07.901Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5edfa52a1e099b0388b66009","text":"let me know if any of that was unclear.","html":"let me know if any of that was unclear.","sent":"2020-06-09T15:05:14.218Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5edfafef013105125a244c66","text":"does it mean that creating `config.json` with the following content :\n```\n{\n\t\"auth_required\": false,\n\t\"provider\": \"basic\",\n\t\"endpoint\": \"/api\"\n}\n```\nand sending SIGHUP should temporarily switch the authentication to basic? It doesn't seem to work","html":"<p>does it mean that creating <code>config.json<\/code> with the following content :<\/p><pre><code>{\n    \"<span class=\"attribute\">auth_required<\/span>\": <span class=\"value\"><span class=\"literal\">false<\/span><\/span>,\n    \"<span class=\"attribute\">provider<\/span>\": <span class=\"value\"><span class=\"string\">\"basic\"<\/span><\/span>,\n    \"<span class=\"attribute\">endpoint<\/span>\": <span class=\"value\"><span class=\"string\">\"/api\"<\/span>\n<\/span>}<\/code><\/pre><p>and sending SIGHUP should temporarily switch the authentication to basic? It doesn&#39;t seem to work<\/p>","sent":"2020-06-09T15:51:11.062Z","editedAt":"2020-06-09T15:51:30.026Z","fromUser":{"id":"5ea01233d73408ce4fe14db4","username":"viberan","displayName":"viberan","url":"/viberan","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/viberan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/45915382?v=4&s=128","v":7,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5edfb22524a3382d5d5745c8","text":"we had a duplicate and correlate event still not seeing any metric for duplicate or correlate, any other configuration needs to done or what could be the cause? ","html":"we had a duplicate and correlate event still not seeing any metric for duplicate or correlate, any other configuration needs to done or what could be the cause? ","sent":"2020-06-09T16:00:37.190Z","fromUser":{"id":"5df3849fd73408ce4fd3f9e2","username":"teruguparthasaradhi","displayName":"Parthasaradhi Terugu","url":"/teruguparthasaradhi","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/teruguparthasaradhi","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/25366034?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/25366034?v=4&s=128","v":9,"gv":"4"},"parentId":"5ede4dcb225dc25f54d392fb","readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edfc82f7a7f8d2d6324fa2d","text":"sorry i’ve just looked at the git history and that was removed 5 years ago.","html":"sorry i’ve just looked at the git history and that was removed 5 years ago.","sent":"2020-06-09T17:34:39.359Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"parentId":"5ede4dcb225dc25f54d392fb","readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1},{"id":"5edfc98730401c1f2446d622","text":"you don’t need to restart the API. the web UI should read it and override any settings it get’s from the server.","html":"you don’t need to restart the API. the web UI should read it and override any settings it get’s from the server.","sent":"2020-06-09T17:40:23.215Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edfc9caef5c1c28f0119256","text":"the alternative is to change the AUTH_PROVIDER setting for the server and restart it.","html":"the alternative is to change the AUTH_PROVIDER setting for the server and restart it.","sent":"2020-06-09T17:41:30.303Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":15,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5edfdb52013105125a25029f","text":"@satterly I didn't mean Azure but on-premise ADFS on Windows Server. But I was able to make it work by removing userinfo call and mapping identity claims to id_token.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I didn&#39;t mean Azure but on-premise ADFS on Windows Server. But I was able to make it work by removing userinfo call and mapping identity claims to id_token.","sent":"2020-06-09T18:56:18.222Z","fromUser":{"id":"5edbe6bdd73408ce4fe62118","username":"martinbalint","displayName":"Martin Bálint","url":"/martinbalint","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/martinbalint","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/2743083?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/2743083?v=4&s=128","v":1,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5edfdb885782a31278ebe024","text":"ok. good work.","html":"ok. good work.","sent":"2020-06-09T18:57:12.862Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":33,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0158f6119/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0158f6119/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0158f6119/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0158f6119/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0158f6119/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

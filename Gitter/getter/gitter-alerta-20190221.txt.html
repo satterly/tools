@@ -1,0 +1,893 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/02/22"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/02/20"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">21<sup>st</sup></span><br>
+      <span class="gtrArchiveMonth">Feb 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5c6e9176ab952d308569173b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b8d07d5d73408ce4fa6b806 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/29057943?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/29057943?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Wim Fabri</div>
+      <div class='chat-item__username js-chat-item-from'>@wimfabri</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6e9176ab952d308569173b' title="">Feb 21 2019 11:54 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> Is it possible to configure the severity used to create a heartbeat alert ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6e92c2ab952d3085692613 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6e92c2ab952d3085692613' title="">Feb 21 2019 12:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes.<pre><code>$ alerta heartbeats --help
+Usage: alerta heartbeats [OPTIONS]
+
+  List heartbeats.
+
+Options:
+  -<span class="ruby">-alert                  <span class="constant">Alert</span> on stale <span class="keyword">or</span> slow heartbeats
+</span>  -<span class="ruby">s, --severity <span class="constant">SEVERITY</span>  <span class="constant">Severity</span> <span class="keyword">for</span> stale heartbeat alerts
+</span>  -<span class="ruby">-purge                  <span class="constant">Delete</span> all stale heartbeats
+</span>  -<span class="ruby">h, --help               <span class="constant">Show</span> this message <span class="keyword">and</span> exit.</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6ea5f3ab952d308569a2c4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b8d07d5d73408ce4fa6b806 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/29057943?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/29057943?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Wim Fabri</div>
+      <div class='chat-item__username js-chat-item-from'>@wimfabri</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6ea5f3ab952d308569a2c4' title="">Feb 21 2019 13:21 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what about the automatic triggering of heartbeat alerts in the docker container ? Haven&#39;t figured out yet from where it is triggered ...
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6ea7e0e5eeec0d9ba1293c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6ea7e0e5eeec0d9ba1293c' title="">Feb 21 2019 13:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      they are triggered via <code>supervisord</code> see <a href="https://github.com/alerta/docker-alerta/blob/master/slash/app/supervisord.conf#L22" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/docker-alerta/blob/master/slash/app/supervisord.conf#L22</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6ea7fea7d733509da17d77 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i’d have to think about how this could be configured to allow custom severity. any thoughts?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6eb1199155d45d904effb0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b8d07d5d73408ce4fa6b806 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/29057943?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/29057943?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Wim Fabri</div>
+      <div class='chat-item__username js-chat-item-from'>@wimfabri</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6eb1199155d45d904effb0' title="">Feb 21 2019 14:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      via an environment variable, I am currently testing and will create a pull request
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6ec62ea378ef11f6183b93 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6ec62ea378ef11f6183b93' title="">Feb 21 2019 15:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks i’ll take a look.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6ef949c4da4a11f5929559 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c6ef80bd73408ce4fb88454 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>alexb145</div>
+      <div class='chat-item__username js-chat-item-from'>@alexb145</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6ef949c4da4a11f5929559' title="">Feb 21 2019 19:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi, does the docker container for alerta-beta allow regular logins or just oauth? we followed the deployment section but that just brings up a login button that does nothing, any tips? 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efa2fc4da4a11f5929c18 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6efa2fc4da4a11f5929c18' title="">Feb 21 2019 19:21 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      should allow all types of logins. i have tasted every auth provider except LDAP and pingfederate so far.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efa5285b7eb45690c3080 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      if you are having problems i would really like to help you get it sorted.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efbc21f14630421fac077 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c6ef80bd73408ce4fb88454 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>alexb145</div>
+      <div class='chat-item__username js-chat-item-from'>@alexb145</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6efbc21f14630421fac077' title="">Feb 21 2019 19:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      we already have a regular version of alerta running with docker-compose and want to test the beta at the same time, from my understanding that should be possible. the regular version uses normal logins. I pulled the beta container off dockerhub and I start it with this: &quot;docker run -e VUE_APP_ALERTA_ENDPOINT=<a href="http://ouralertadomain.com/api/" rel="nofollow noopener noreferrer" target="_blank" class="link">http://ouralertadomain.com/api/</a> -it -p 8182:80 --rm --name alerta-beta alerta/alerta-beta&quot;. Thanks! 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efd919155d45d905131cf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6efd919155d45d905131cf' title="">Feb 21 2019 19:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="alexb145" class="mention">@alexb145</span> Just a quick stab in the dark, but what do you get if you drop the slash off the end of the endpoint? ie. <code>VUE_APP_ALERTA_ENDPOINT=http://ouralertadomain.com/api</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efdb39155d45d90513360 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c6ef80bd73408ce4fb88454 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>alexb145</div>
+      <div class='chat-item__username js-chat-item-from'>@alexb145</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6efdb39155d45d90513360' title="">Feb 21 2019 19:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      already tried that, doesn&#39;t change anything
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efde7c776985d8f2ed62d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6efde7c776985d8f2ed62d' title="">Feb 21 2019 19:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok. thanks. will try to reproduce the issue in my dev environment.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efeae00aa630d9aece879 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c6ef80bd73408ce4fb88454 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>alexb145</div>
+      <div class='chat-item__username js-chat-item-from'>@alexb145</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6efeae00aa630d9aece879' title="">Feb 21 2019 19:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      also, manually going to the /login page the button redirects to throws a nginx 404 that looks something like this from the alerta side &quot;2019/02/21 19:33:52 [error] 7<a target="_blank" data-link-type="issue" data-issue="7" class="issue">#7</a>: *1 open() &quot;/usr/share/nginx/html/login&quot; failed (2: No such file or directory)&quot;
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efeb7a378ef11f619c75f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      maybe this helps
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6efed71f14630421fad457 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6efed71f14630421fad457' title="">Feb 21 2019 19:41 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yep. Thanks. that could be useful.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f01d300aa630d9aecfe25 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6f01d300aa630d9aecfe25' title="">Feb 21 2019 19:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      do you get this error in your browser javascript console ? 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f01e3ab952d30856c395f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/xS2Z/Screenshot-2019-02-21-at-20.53.20.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/xS2Z/thumb/Screenshot-2019-02-21-at-20.53.20.png" alt="Screenshot 2019-02-21 at 20.53.20.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f026cddaa310c89cb70b8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it’s a CORS error. meaning you need to add the URL that the beta console is running on to the list of <code>CORS_ORIGINS</code> in your Alerta API server config.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f03401f14630421faf4ce burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c6ef80bd73408ce4fb88454 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>alexb145</div>
+      <div class='chat-item__username js-chat-item-from'>@alexb145</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6f03401f14630421faf4ce' title="">Feb 21 2019 20:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yep just checked 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f03641f14630421faf5c3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      thank you! will try that in a sec
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f038600aa630d9aed08f6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6f038600aa630d9aed08f6' title="">Feb 21 2019 20:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      :+1: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f0e1c7667931e2fdc1d0a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c6ef80bd73408ce4fb88454 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>alexb145</div>
+      <div class='chat-item__username js-chat-item-from'>@alexb145</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6f0e1c7667931e2fdc1d0a' title="">Feb 21 2019 20:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i added the URL to CORS_ORIGINS but the error is still there, what I find weird is that it points to  &quot;<a href="https://alerta-api.herokuapp.com/config" rel="nofollow noopener noreferrer" target="_blank" class="link">https://alerta-api.herokuapp.com/config</a>&quot; rather than our endpoint
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f0e3600aa630d9aed5657 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6f0e3600aa630d9aed5657' title="">Feb 21 2019 20:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hmm.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5c6f0e58ab952d30856c906c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c6ef80bd73408ce4fb88454 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16032022?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>alexb145</div>
+      <div class='chat-item__username js-chat-item-from'>@alexb145</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/02/21?at=5c6f0e58ab952d30856c906c' title="">Feb 21 2019 20:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      &quot;Access to XMLHttpRequest at &#39;<a href="https://alerta-api.herokuapp.com/config" rel="nofollow noopener noreferrer" target="_blank" class="link">https://alerta-api.herokuapp.com/config</a>&#39; from origin &#39;<a href="http://ip:8182" rel="nofollow noopener noreferrer" target="_blank" class="link">http://ip:8182</a>&#39; has been blocked by CORS policy: No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource.&quot;
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$w/0Xm0m9j+0orefsB7lwHX2wQ0Bf7MMz8DHlta9OZt0=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-02-21T00:00:00.000Z","nextDate":"2019-02-22T23:59:59.999Z","previousDate":"2019-02-20T00:00:00.000Z","messages":[{"id":"5c6e9176ab952d308569173b","text":"@satterly Is it possible to configure the severity used to create a heartbeat alert ?","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> Is it possible to configure the severity used to create a heartbeat alert ?","sent":"2019-02-21T11:54:30.456Z","fromUser":{"id":"5b8d07d5d73408ce4fa6b806","username":"wimfabri","displayName":"Wim Fabri","url":"/wimfabri","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/wimfabri","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/29057943?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/29057943?v=4&s=128","v":7,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6e92c2ab952d3085692613","text":"yes.\n```\n$ alerta heartbeats --help\nUsage: alerta heartbeats [OPTIONS]\n\n  List heartbeats.\n\nOptions:\n  --alert                  Alert on stale or slow heartbeats\n  -s, --severity SEVERITY  Severity for stale heartbeat alerts\n  --purge                  Delete all stale heartbeats\n  -h, --help               Show this message and exit.\n```","html":"yes.<pre><code>$ alerta heartbeats --help\nUsage: alerta heartbeats [OPTIONS]\n\n  List heartbeats.\n\nOptions:\n  -<span class=\"ruby\">-alert                  <span class=\"constant\">Alert<\/span> on stale <span class=\"keyword\">or<\/span> slow heartbeats\n<\/span>  -<span class=\"ruby\">s, --severity <span class=\"constant\">SEVERITY<\/span>  <span class=\"constant\">Severity<\/span> <span class=\"keyword\">for<\/span> stale heartbeat alerts\n<\/span>  -<span class=\"ruby\">-purge                  <span class=\"constant\">Delete<\/span> all stale heartbeats\n<\/span>  -<span class=\"ruby\">h, --help               <span class=\"constant\">Show<\/span> this message <span class=\"keyword\">and<\/span> exit.<\/span><\/code><\/pre>","sent":"2019-02-21T12:00:02.766Z","editedAt":"2019-02-21T12:00:35.053Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":3,"burstStart":true},{"id":"5c6ea5f3ab952d308569a2c4","text":"what about the automatic triggering of heartbeat alerts in the docker container ? Haven't figured out yet from where it is triggered ...","html":"what about the automatic triggering of heartbeat alerts in the docker container ? Haven&#39;t figured out yet from where it is triggered ...","sent":"2019-02-21T13:21:55.688Z","fromUser":{"id":"5b8d07d5d73408ce4fa6b806","username":"wimfabri","displayName":"Wim Fabri","url":"/wimfabri","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/wimfabri","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/29057943?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/29057943?v=4&s=128","v":7,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6ea7e0e5eeec0d9ba1293c","text":"they are triggered via `supervisord` see https://github.com/alerta/docker-alerta/blob/master/slash/app/supervisord.conf#L22","html":"they are triggered via <code>supervisord<\/code> see <a href=\"https://github.com/alerta/docker-alerta/blob/master/slash/app/supervisord.conf#L22\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/docker-alerta/blob/master/slash/app/supervisord.conf#L22<\/a>","sent":"2019-02-21T13:30:08.714Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://github.com/alerta/docker-alerta/blob/master/slash/app/supervisord.conf#L22"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6ea7fea7d733509da17d77","text":"i’d have to think about how this could be configured to allow custom severity. any thoughts?","html":"i’d have to think about how this could be configured to allow custom severity. any thoughts?","sent":"2019-02-21T13:30:38.436Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c6eb1199155d45d904effb0","text":"via an environment variable, I am currently testing and will create a pull request","html":"via an environment variable, I am currently testing and will create a pull request","sent":"2019-02-21T14:09:29.074Z","fromUser":{"id":"5b8d07d5d73408ce4fa6b806","username":"wimfabri","displayName":"Wim Fabri","url":"/wimfabri","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/wimfabri","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/29057943?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/29057943?v=4&s=128","v":7,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6ec62ea378ef11f6183b93","text":"Thanks i’ll take a look.","html":"Thanks i’ll take a look.","sent":"2019-02-21T15:39:26.184Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6ef949c4da4a11f5929559","text":"hi, does the docker container for alerta-beta allow regular logins or just oauth? we followed the deployment section but that just brings up a login button that does nothing, any tips? ","html":"hi, does the docker container for alerta-beta allow regular logins or just oauth? we followed the deployment section but that just brings up a login button that does nothing, any tips? ","sent":"2019-02-21T19:17:29.768Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6efa2fc4da4a11f5929c18","text":"should allow all types of logins. i have tasted every auth provider except LDAP and pingfederate so far.","html":"should allow all types of logins. i have tasted every auth provider except LDAP and pingfederate so far.","sent":"2019-02-21T19:21:19.493Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6efa5285b7eb45690c3080","text":"if you are having problems i would really like to help you get it sorted.","html":"if you are having problems i would really like to help you get it sorted.","sent":"2019-02-21T19:21:54.770Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c6efbc21f14630421fac077","text":"we already have a regular version of alerta running with docker-compose and want to test the beta at the same time, from my understanding that should be possible. the regular version uses normal logins. I pulled the beta container off dockerhub and I start it with this: \"docker run -e VUE_APP_ALERTA_ENDPOINT=http://ouralertadomain.com/api/ -it -p 8182:80 --rm --name alerta-beta alerta/alerta-beta\". Thanks! ","html":"we already have a regular version of alerta running with docker-compose and want to test the beta at the same time, from my understanding that should be possible. the regular version uses normal logins. I pulled the beta container off dockerhub and I start it with this: &quot;docker run -e VUE_APP_ALERTA_ENDPOINT=<a href=\"http://ouralertadomain.com/api/\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://ouralertadomain.com/api/<\/a> -it -p 8182:80 --rm --name alerta-beta alerta/alerta-beta&quot;. Thanks! ","sent":"2019-02-21T19:28:02.624Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":10,"urls":[{"url":"http://ouralertadomain.com/api/"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6efd919155d45d905131cf","text":"@alexb145 Just a quick stab in the dark, but what do you get if you drop the slash off the end of the endpoint? ie. `VUE_APP_ALERTA_ENDPOINT=http://ouralertadomain.com/api`","html":"<span data-link-type=\"mention\" data-screen-name=\"alexb145\" class=\"mention\">@alexb145<\/span> Just a quick stab in the dark, but what do you get if you drop the slash off the end of the endpoint? ie. <code>VUE_APP_ALERTA_ENDPOINT=http://ouralertadomain.com/api<\/code>","sent":"2019-02-21T19:35:45.915Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"alexb145","userId":"5c6ef80bd73408ce4fb88454","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6efdb39155d45d90513360","text":"already tried that, doesn't change anything","html":"already tried that, doesn&#39;t change anything","sent":"2019-02-21T19:36:19.805Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6efde7c776985d8f2ed62d","text":"Ok. thanks. will try to reproduce the issue in my dev environment.","html":"Ok. thanks. will try to reproduce the issue in my dev environment.","sent":"2019-02-21T19:37:11.818Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6efeae00aa630d9aece879","text":"also, manually going to the /login page the button redirects to throws a nginx 404 that looks something like this from the alerta side \"2019/02/21 19:33:52 [error] 7#7: *1 open() \"/usr/share/nginx/html/login\" failed (2: No such file or directory)\"","html":"also, manually going to the /login page the button redirects to throws a nginx 404 that looks something like this from the alerta side &quot;2019/02/21 19:33:52 [error] 7<a target=\"_blank\" data-link-type=\"issue\" data-issue=\"7\" class=\"issue\">#7<\/a>: *1 open() &quot;/usr/share/nginx/html/login&quot; failed (2: No such file or directory)&quot;","sent":"2019-02-21T19:40:30.977Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[{"number":"7"}],"meta":[],"v":1,"burstStart":true},{"id":"5c6efeb7a378ef11f619c75f","text":"maybe this helps","html":"maybe this helps","sent":"2019-02-21T19:40:39.117Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c6efed71f14630421fad457","text":"yep. Thanks. that could be useful.","html":"yep. Thanks. that could be useful.","sent":"2019-02-21T19:41:11.249Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6f01d300aa630d9aecfe25","text":"do you get this error in your browser javascript console ? ","html":"do you get this error in your browser javascript console ? ","sent":"2019-02-21T19:53:55.809Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6f01e3ab952d30856c395f","text":"[![Screenshot 2019-02-21 at 20.53.20.png](https://files.gitter.im/alerta/chat/xS2Z/thumb/Screenshot-2019-02-21-at-20.53.20.png)](https://files.gitter.im/alerta/chat/xS2Z/Screenshot-2019-02-21-at-20.53.20.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/xS2Z/Screenshot-2019-02-21-at-20.53.20.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/xS2Z/thumb/Screenshot-2019-02-21-at-20.53.20.png\" alt=\"Screenshot 2019-02-21 at 20.53.20.png\" rel=\"nofollow\"><\/a>","sent":"2019-02-21T19:54:11.578Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://files.gitter.im/alerta/chat/xS2Z/thumb/Screenshot-2019-02-21-at-20.53.20.png"},{"url":"https://files.gitter.im/alerta/chat/xS2Z/Screenshot-2019-02-21-at-20.53.20.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c6f026cddaa310c89cb70b8","text":"it’s a CORS error. meaning you need to add the URL that the beta console is running on to the list of `CORS_ORIGINS` in your Alerta API server config.","html":"it’s a CORS error. meaning you need to add the URL that the beta console is running on to the list of <code>CORS_ORIGINS<\/code> in your Alerta API server config.","sent":"2019-02-21T19:56:28.724Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c6f03401f14630421faf4ce","text":"yep just checked ","html":"yep just checked ","sent":"2019-02-21T20:00:00.878Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6f03641f14630421faf5c3","text":"thank you! will try that in a sec","html":"thank you! will try that in a sec","sent":"2019-02-21T20:00:36.933Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5c6f038600aa630d9aed08f6","text":":+1: ","html":":+1: ","sent":"2019-02-21T20:01:10.254Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6f0e1c7667931e2fdc1d0a","text":"i added the URL to CORS_ORIGINS but the error is still there, what I find weird is that it points to  \"https://alerta-api.herokuapp.com/config\" rather than our endpoint","html":"i added the URL to CORS_ORIGINS but the error is still there, what I find weird is that it points to  &quot;<a href=\"https://alerta-api.herokuapp.com/config\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://alerta-api.herokuapp.com/config<\/a>&quot; rather than our endpoint","sent":"2019-02-21T20:46:20.008Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":11,"urls":[{"url":"https://alerta-api.herokuapp.com/config"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6f0e3600aa630d9aed5657","text":"hmm.","html":"hmm.","sent":"2019-02-21T20:46:46.476Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5c6f0e58ab952d30856c906c","text":"\"Access to XMLHttpRequest at 'https://alerta-api.herokuapp.com/config' from origin 'http://ip:8182' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\"","html":"&quot;Access to XMLHttpRequest at &#39;<a href=\"https://alerta-api.herokuapp.com/config\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://alerta-api.herokuapp.com/config<\/a>&#39; from origin &#39;<a href=\"http://ip:8182\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://ip:8182<\/a>&#39; has been blocked by CORS policy: No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource.&quot;","sent":"2019-02-21T20:47:20.787Z","fromUser":{"id":"5c6ef80bd73408ce4fb88454","username":"alexb145","displayName":"alexb145","url":"/alexb145","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/alexb145","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16032022?v=4&s=128","v":11,"gv":"4"},"readBy":11,"urls":[{"url":"https://alerta-api.herokuapp.com/config"},{"url":"http://ip:8182"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

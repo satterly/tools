@@ -1,0 +1,724 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/04/11"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/04/09"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">10<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Apr 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5acc5cfd109bb04332a78d29 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc5cfd109bb04332a78d29' title="">Apr 10 2018 06:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> ping
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc5fd32b9dfdbc3a7426ed burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609b0b20fc9f982beb21fdb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/289504?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton</div>
+      <div class='chat-item__username js-chat-item-from'>@tester22</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc5fd32b9dfdbc3a7426ed' title="">Apr 10 2018 06:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> Not public right now but will clean it up and publish once done.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc61d8012ff2bf681e53f0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc61d8012ff2bf681e53f0' title="">Apr 10 2018 07:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi <span data-link-type="mention" data-screen-name="jurgenhaas" class="mention">@jurgenhaas</span> i’m struggling to understand the problem you are seeing with multiple customers. can you explain again exactly what is going wrong? 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc62336d7e07082bd9ecf9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc62336d7e07082bd9ecf9' title="">Apr 10 2018 07:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      OK, I&#39;m using GitLab as the authentication method and I have a user which is member of two groups there. When that user logs into Alerta (via GitLab) and then goes to their profile in Alerta, they see two customers both being derived from the group-&gt;customer mapping. So it is working correctly up to this point.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc62555f188ccc154b95f0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      When that user goes to the alert list, it doesn&#39;t show any alerts. Although the admin who sees everything can see active alerts.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc626901a2b40f382ea06f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc626901a2b40f382ea06f' title="">Apr 10 2018 07:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      do those alerts have customers associated with them?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc626a1130fe3d36bec29c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc626a1130fe3d36bec29c' title="">Apr 10 2018 07:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      When that user goes to closed alerts, he doesn&#39;t see anything either, and that list is certainly big.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc627692f5d62057b0d49b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes, all alerts do have customers associated with them
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc628e270d7d3708af2dc3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I could do a screen sharing session to show the effect, if that helps
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc62ed012ff2bf681e53f9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc62ed012ff2bf681e53f9' title="">Apr 10 2018 07:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      can you see what happens if that user uses the alerta CLI to create a new alert? does it work or return an error? do they see the alert in the web UI? with the correct customer name?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc632e7685a046389d76be burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      the user will need to create an API key and add the key to the <code>alerta.conf</code> client config file (not the <code>alerted.conf</code> server config file)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc635401a2b40f382ea073 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      explained here … <a href="http://docs.alerta.io/en/latest/cli.html" rel="nofollow noopener noreferrer" target="_blank" class="link">http://docs.alerta.io/en/latest/cli.html</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc639001a2b40f382ea07d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      try to create some test alerts and if we still can’t work it out a screen share will probably be useful.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc6394080a38505316990c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc6394080a38505316990c' title="">Apr 10 2018 07:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes, I&#39;ve done that and that user can create an alert with no error message in the CLI. The admin can see the alert in the UI and the user can not.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc63c37685a046389d76c3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc63c37685a046389d76c3' title="">Apr 10 2018 07:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok. let’s try a screen share.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc63d27c3a01610dc78df6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-550c28af15522ed4b3dd8da8 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1475675?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jürgen Haas</div>
+      <div class='chat-item__username js-chat-item-from'>@jurgenhaas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc63d27c3a01610dc78df6' title="">Apr 10 2018 07:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      If that user does <code>alerta customer</code> with the CLI, he doesn&#39;t get any customers shown in tzhe list either.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc63d9109bb04332a7ac52 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      OK, I&#39;ll send you a link as PM
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5acc63ee26a769820b2b8f8f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5acc63ee26a769820b2b8f8f' title="">Apr 10 2018 07:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5accaa1c6d7e07082bdb58a2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-590234ccd73408ce4f5b77c3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/3237800?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/3237800?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>thehilll</div>
+      <div class='chat-item__username js-chat-item-from'>@thehilll</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/10?at=5accaa1c6d7e07082bdb58a2' title="">Apr 10 2018 12:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I was looking into why we have sent so many alerts after you mentioned it yesterday.  The vast majority of these are <code>HeartbeatOK</code> events that come from our cron job to monitor heartbeats:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5accaa202b9dfdbc3a75b381 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <code>* * * * * /usr/local/bin/alerta --endpoint-url http://127.0.0.1:8080 heartbeats --alert &gt; /dev/null 2&gt;&amp;1</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5accaa8e6d7e07082bdb5abc burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      We have two api servers w/a single postgres backend, so that is effectively 2/minute * ~ 100 hosts sending heartbeats.  That explains the large number (in that each of these creates a repeat of the HeartbeatOK event), but I wouldn&#39;t have thought our number would have been so unusual to overflow this integer field.  Do we have some configuration wrong to have these heartbeats trigger that counter?
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$eQXdYnMjq3UdeKlFeaFinzzYWP1Sy+El1aB0eMr+ztw=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-04-10T00:00:00.000Z","nextDate":"2018-04-11T23:59:59.999Z","previousDate":"2018-04-09T00:00:00.000Z","messages":[{"id":"5acc5cfd109bb04332a78d29","text":"@satterly ping","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> ping","sent":"2018-04-10T06:43:09.748Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc5fd32b9dfdbc3a7426ed","text":"@satterly Not public right now but will clean it up and publish once done.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> Not public right now but will clean it up and publish once done.","sent":"2018-04-10T06:55:15.957Z","fromUser":{"id":"5609b0b20fc9f982beb21fdb","username":"tester22","displayName":"Anton","url":"/tester22","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/tester22","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/289504?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/289504?v=4&s=128","v":21,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc61d8012ff2bf681e53f0","text":"hi @jurgenhaas i’m struggling to understand the problem you are seeing with multiple customers. can you explain again exactly what is going wrong? ","html":"hi <span data-link-type=\"mention\" data-screen-name=\"jurgenhaas\" class=\"mention\">@jurgenhaas<\/span> i’m struggling to understand the problem you are seeing with multiple customers. can you explain again exactly what is going wrong? ","sent":"2018-04-10T07:03:52.865Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"jurgenhaas","userId":"550c28af15522ed4b3dd8da8","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc62336d7e07082bd9ecf9","text":"OK, I'm using GitLab as the authentication method and I have a user which is member of two groups there. When that user logs into Alerta (via GitLab) and then goes to their profile in Alerta, they see two customers both being derived from the group->customer mapping. So it is working correctly up to this point.","html":"OK, I&#39;m using GitLab as the authentication method and I have a user which is member of two groups there. When that user logs into Alerta (via GitLab) and then goes to their profile in Alerta, they see two customers both being derived from the group-&gt;customer mapping. So it is working correctly up to this point.","sent":"2018-04-10T07:05:23.019Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc62555f188ccc154b95f0","text":"When that user goes to the alert list, it doesn't show any alerts. Although the admin who sees everything can see active alerts.","html":"When that user goes to the alert list, it doesn&#39;t show any alerts. Although the admin who sees everything can see active alerts.","sent":"2018-04-10T07:05:57.008Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5acc626901a2b40f382ea06f","text":"do those alerts have customers associated with them?","html":"do those alerts have customers associated with them?","sent":"2018-04-10T07:06:17.158Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc626a1130fe3d36bec29c","text":"When that user goes to closed alerts, he doesn't see anything either, and that list is certainly big.","html":"When that user goes to closed alerts, he doesn&#39;t see anything either, and that list is certainly big.","sent":"2018-04-10T07:06:18.599Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc627692f5d62057b0d49b","text":"Yes, all alerts do have customers associated with them","html":"Yes, all alerts do have customers associated with them","sent":"2018-04-10T07:06:30.641Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5acc628e270d7d3708af2dc3","text":"I could do a screen sharing session to show the effect, if that helps","html":"I could do a screen sharing session to show the effect, if that helps","sent":"2018-04-10T07:06:54.191Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5acc62ed012ff2bf681e53f9","text":"can you see what happens if that user uses the alerta CLI to create a new alert? does it work or return an error? do they see the alert in the web UI? with the correct customer name?","html":"can you see what happens if that user uses the alerta CLI to create a new alert? does it work or return an error? do they see the alert in the web UI? with the correct customer name?","sent":"2018-04-10T07:08:29.983Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc632e7685a046389d76be","text":"the user will need to create an API key and add the key to the `alerta.conf` client config file (not the `alerted.conf` server config file)","html":"the user will need to create an API key and add the key to the <code>alerta.conf<\/code> client config file (not the <code>alerted.conf<\/code> server config file)","sent":"2018-04-10T07:09:34.566Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5acc635401a2b40f382ea073","text":"explained here … http://docs.alerta.io/en/latest/cli.html","html":"explained here … <a href=\"http://docs.alerta.io/en/latest/cli.html\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://docs.alerta.io/en/latest/cli.html<\/a>","sent":"2018-04-10T07:10:12.496Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"http://docs.alerta.io/en/latest/cli.html"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5acc639001a2b40f382ea07d","text":"try to create some test alerts and if we still can’t work it out a screen share will probably be useful.","html":"try to create some test alerts and if we still can’t work it out a screen share will probably be useful.","sent":"2018-04-10T07:11:12.952Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5acc6394080a38505316990c","text":"Yes, I've done that and that user can create an alert with no error message in the CLI. The admin can see the alert in the UI and the user can not.","html":"Yes, I&#39;ve done that and that user can create an alert with no error message in the CLI. The admin can see the alert in the UI and the user can not.","sent":"2018-04-10T07:11:16.595Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc63c37685a046389d76c3","text":"Ok. let’s try a screen share.","html":"Ok. let’s try a screen share.","sent":"2018-04-10T07:12:03.965Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc63d27c3a01610dc78df6","text":"If that user does `alerta customer` with the CLI, he doesn't get any customers shown in tzhe list either.","html":"If that user does <code>alerta customer<\/code> with the CLI, he doesn&#39;t get any customers shown in tzhe list either.","sent":"2018-04-10T07:12:18.159Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5acc63d9109bb04332a7ac52","text":"OK, I'll send you a link as PM","html":"OK, I&#39;ll send you a link as PM","sent":"2018-04-10T07:12:25.534Z","fromUser":{"id":"550c28af15522ed4b3dd8da8","username":"jurgenhaas","displayName":"Jürgen Haas","url":"/jurgenhaas","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jurgenhaas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1475675?v=4&s=128","v":434,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5acc63ee26a769820b2b8f8f","text":"ok","html":"ok","sent":"2018-04-10T07:12:46.556Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5accaa1c6d7e07082bdb58a2","text":"I was looking into why we have sent so many alerts after you mentioned it yesterday.  The vast majority of these are `HeartbeatOK` events that come from our cron job to monitor heartbeats:","html":"I was looking into why we have sent so many alerts after you mentioned it yesterday.  The vast majority of these are <code>HeartbeatOK<\/code> events that come from our cron job to monitor heartbeats:","sent":"2018-04-10T12:12:12.056Z","fromUser":{"id":"590234ccd73408ce4f5b77c3","username":"thehilll","displayName":"thehilll","url":"/thehilll","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/thehilll","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3237800?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3237800?v=4&s=128","v":3,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5accaa202b9dfdbc3a75b381","text":"```* * * * * /usr/local/bin/alerta --endpoint-url http://127.0.0.1:8080 heartbeats --alert > /dev/null 2>&1```","html":"<code>* * * * * /usr/local/bin/alerta --endpoint-url http://127.0.0.1:8080 heartbeats --alert &gt; /dev/null 2&gt;&amp;1<\/code>","sent":"2018-04-10T12:12:16.418Z","fromUser":{"id":"590234ccd73408ce4f5b77c3","username":"thehilll","displayName":"thehilll","url":"/thehilll","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/thehilll","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3237800?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3237800?v=4&s=128","v":3,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5accaa8e6d7e07082bdb5abc","text":"We have two api servers w/a single postgres backend, so that is effectively 2/minute * ~ 100 hosts sending heartbeats.  That explains the large number (in that each of these creates a repeat of the HeartbeatOK event), but I wouldn't have thought our number would have been so unusual to overflow this integer field.  Do we have some configuration wrong to have these heartbeats trigger that counter?","html":"We have two api servers w/a single postgres backend, so that is effectively 2/minute * ~ 100 hosts sending heartbeats.  That explains the large number (in that each of these creates a repeat of the HeartbeatOK event), but I wouldn&#39;t have thought our number would have been so unusual to overflow this integer field.  Do we have some configuration wrong to have these heartbeats trigger that counter?","sent":"2018-04-10T12:14:06.884Z","fromUser":{"id":"590234ccd73408ce4f5b77c3","username":"thehilll","displayName":"thehilll","url":"/thehilll","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/thehilll","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3237800?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3237800?v=4&s=128","v":3,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

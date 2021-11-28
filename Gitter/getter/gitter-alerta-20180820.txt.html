@@ -1,0 +1,962 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/08/21"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/08/19"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">20<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5b7a93db9fc431606e921ac2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7a93db9fc431606e921ac2' title="">Aug 20 2018 10:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="davidglvn" class="mention">@davidglvn</span> is it telegraf that is adding the tags and grafrana are just passing them through to Alerta or is grafana adding the tags?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7a93fd26bac95353c9d8da burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I’m trying to reproduce this so i can understand how best to deal with it — without any luck so far.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aa501796f7b601d69daac burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b75736cd73408ce4fa4cbbe avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>David Golovan</div>
+      <div class='chat-item__username js-chat-item-from'>@davidglvn</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7aa501796f7b601d69daac' title="">Aug 20 2018 11:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> telegraf is adding tags to the requests and the way it&#39;s &quot;output&quot; for elasticsearch works it&#39;s looks like &quot;tags.tag_name&quot;. grafana is just reading it from elasticsearch and sending to alerta. Actually the way elasticsearch can store data, it&#39;s not related to telegraf, anything can be there in &quot;k.ey: value&quot; format (nosql documents with no limitations).  Let me know if I can help somehow and thanks :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aa5fa146618721cac8343 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7aa5fa146618721cac8343' title="">Aug 20 2018 11:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ah. so it’s telegraph -&gt; elaticsearch -&gt; grafana -&gt; alerta
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aa63c0825690ea2f6a8eb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b75736cd73408ce4fa4cbbe avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>David Golovan</div>
+      <div class='chat-item__username js-chat-item-from'>@davidglvn</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7aa63c0825690ea2f6a8eb' title="">Aug 20 2018 11:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aa6569fc431606e921af3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7aa6569fc431606e921af3' title="">Aug 20 2018 11:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      we could just modify the grafana webhook to strip out the string “tags.” if prepended to any tag key.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aa702cda86f5fb27eeea1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b75736cd73408ce4fa4cbbe avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>David Golovan</div>
+      <div class='chat-item__username js-chat-item-from'>@davidglvn</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7aa702cda86f5fb27eeea1' title="">Aug 20 2018 11:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I was thinking replacing &quot;.&quot; to &quot;_&quot;, so it will not be that strict to telegraf+es usage, no? (actually telegraf doc in elasticsearch contains 2 dictionaries one is tags and seconds is &quot;fields&quot; that also has dot inside)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aace38d59fb7567e173cb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7aace38d59fb7567e173cb' title="">Aug 20 2018 11:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I can see in the elasticsearch document the “tags” key …<pre><code>    <span class="string">"hits"</span>: {
+        <span class="string">"hits"</span>: [
+            {
+                <span class="string">"_id"</span>: <span class="string">"E9spV2UBjzsHr6RzKtGI"</span>,
+                <span class="string">"_index"</span>: <span class="string">"telegraf-2018.08.20"</span>,
+                <span class="string">"_score"</span>: <span class="number">1.0</span>,
+                <span class="string">"_source"</span>: {
+                    <span class="string">"<span class="variable">@timestamp</span>"</span>: <span class="string">"2018-08-20T11:47:20Z"</span>,
+                    <span class="string">"measurement_name"</span>: <span class="string">"swap"</span>,
+                    <span class="string">"swap"</span>: {
+                        <span class="string">"in"</span>: <span class="number">0</span>,
+                        <span class="string">"out"</span>: <span class="number">0</span>
+                    },
+                    <span class="string">"tag"</span>: {
+                        <span class="string">"dc"</span>: <span class="string">"us-east-1"</span>,
+                        <span class="string">"domain"</span>: <span class="string">"example.com"</span>,
+                        <span class="string">"host"</span>: <span class="string">"ubuntu-xenial"</span>,
+                        <span class="string">"rack"</span>: <span class="string">"1a"</span>,
+                        <span class="string">"user"</span>: <span class="string">"telegraf"</span>
+                    }
+                },
+                <span class="string">"_type"</span>: <span class="string">"metrics"</span>
+            },</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aacff26bac95353c9d942 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      however, i can’t work out how grafana picks up those tags in a metric that it alerts on.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aad3d3815912505664083 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Can you share (via screenshot or however) how grafana is configured? In particular, the “metrics” tab for a graph and the “alert” tab.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ab3e2157b9d34efb205a4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7ab3e2157b9d34efb205a4' title="">Aug 20 2018 12:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  I was trying for SNMP integration with OEM using SNMP and i got know that OEM team is sending SNMP traps through snmpv1 channel but by the documentation and settings of snmp.conf, only snmpv2 channel is open. Can you please help me in this.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ab8968d59fb7567e17403 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7ab8968d59fb7567e17403' title="">Aug 20 2018 12:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      is OEM “Oracle Enterprise Manager”?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ab9aa88520a0c6ee5e461 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      The configuration shown here will allow snmptrapd to receive SNMP v1 and 2c traps … <a href="https://github.com/alerta/alerta-contrib/tree/master/integrations/snmptrap#configuration" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-contrib/tree/master/integrations/snmptrap#configuration</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ab9c4e580cd3c2aa2c6ac burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7ab9c4e580cd3c2aa2c6ac' title="">Aug 20 2018 12:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      see also <a href="http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd#Configuring_snmptrapd_to_accept_SNMPv1_or_SNMPv2c_notifications" rel="nofollow noopener noreferrer" target="_blank" class="link">http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd#Configuring_snmptrapd_to_accept_SNMPv1_or_SNMPv2c_notifications</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aba4259212141249360f1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a0147bad73408ce4f7d7908 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/23374493?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Manvenddra Singh Rawat</div>
+      <div class='chat-item__username js-chat-item-from'>@manavrawat10</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7aba4259212141249360f1' title="">Aug 20 2018 12:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks for the quick reply 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aba5d070fa234ee8b9d9f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I will check both the documents and in case of some prob will contact you again 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aba5fe2e48a20b4854417 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7abb6a070fa234ee8ba376 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b75736cd73408ce4fa4cbbe avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>David Golovan</div>
+      <div class='chat-item__username js-chat-item-from'>@davidglvn</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7abb6a070fa234ee8ba376' title="">Aug 20 2018 13:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/faho/image.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/faho/thumb/image.png" alt="image.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7abb6fdd0b74601e33023e burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> hmm in es it looks as yours (no double of tags.tag) (sorry, I&#39;ve not checked it there before), so maybe it&#39;s how grafana generate the message... because the json i sent in the beginning is what alerta log prints. unfortunately I can&#39;t do much debugging at this moment, but I can try later to test again that tags. are added on grafana alert. here are the screenshots
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7abbb8796f7b601d6a67c9 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/e6Up/image.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/e6Up/thumb/image.png" alt="image.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7abbcea158fd0ea38400a5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/YDKf/image.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/YDKf/thumb/image.png" alt="image.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ac22ae40fdf5fb1652569 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7ac22ae40fdf5fb1652569' title="">Aug 20 2018 13:29 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks a lot. That&#39;s very helpful. Let me know what you find out. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ac995cda86f5fb27fc5cb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7ac995cda86f5fb27fc5cb' title="">Aug 20 2018 14:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p><span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> for one of alerts from grafana i&#39;m getting this error:</p><pre><code>ApiError: Error <span class="keyword">while</span> <span class="property">running</span> post-receive plug-<span class="keyword">in</span> 'alerta_notifyoiv': need more than <span class="number">1</span> value <span class="keyword">to</span> unpack</code></pre><p>some values are coming null in the payload since grafana is sending like that</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ac9a9070fa234ee8bffc3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      in my plugin do I need to check for each attribute?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7ace8ddd0b74601e3386e6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b75736cd73408ce4fa4cbbe avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>David Golovan</div>
+      <div class='chat-item__username js-chat-item-from'>@davidglvn</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7ace8ddd0b74601e3386e6' title="">Aug 20 2018 14:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I&#39;ve couple of min to run api test and the &quot;test.&quot; is added by grafana on alert. This is the body I receive from grafana:<pre><code>{<span class="string">u'evalMatches'</span>: [{<span class="string">u'metric'</span>: <span class="string">u'i-0d0721c7f97545d43 usage'</span>, <span class="string">u'value'</span>: <span class="number">2.456903054979112</span>, <span class="string">u'tags'</span>: {<span class="string">u'tags.host_id'</span>: <span class="string">u'i-0d0721c7f97545d43'</span>}}, {<span class="string">u'metric'</span>: <span class="string">u'i-0661cca200d42625e usage'</span>, <span class="string">u'value'</span>: <span class="number">2.203453403049045</span>, <span class="string">u'tags'</span>: {<span class="string">u'tags.host_id'</span>: <span class="string">u'i-0661cca200d42625e'</span>}}, {<span class="string">u'metric'</span>: <span class="string">u'i-04c728983405786dc usage'</span>, <span class="string">u'value'</span>: <span class="number">2.023474926418728</span>, <span class="string">u'tags'</span>: {<span class="string">u'tags.host_id'</span>: <span class="string">u'i-04c728983405786dc'</span>}}], <span class="string">u'title'</span>: <span class="string">u'[Alerting] - [Main Org.] cpu alert'</span>, <span class="string">u'ruleId'</span>: <span class="number">9</span>, <span class="string">u'state'</span>: <span class="string">u'alerting'</span>, <span class="string">u'ruleUrl'</span>: <span class="string">u'http://localhost/d/yrvCpDzmz/system-overview-production-copy?fullscreen=true&amp;edit=true&amp;tab=alert&amp;panelId=23&amp;orgId=1'</span>, <span class="string">u'ruleName'</span>: <span class="string">u'cpu alert'</span>}</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7acf9d070fa234ee8c2ae1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If i understand correctly tags dictionary has nothing to do with telegraf data, it&#39;s generated by grafana from the metric and the content is taken from grafana data and because we have telegraf dictionary &quot;tags&quot; and to use it we need to specify tags.tag_name it make the error...
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7aec09dd0b74601e344904 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5b75736cd73408ce4fa4cbbe avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/510418?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>David Golovan</div>
+      <div class='chat-item__username js-chat-item-from'>@davidglvn</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7aec09dd0b74601e344904' title="">Aug 20 2018 16:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      this is what happens when &quot;telegraf&quot; sends it&#39;s tags inside <code>info</code> dictionary<pre><code>{<span class="string">u'evalMatches'</span>: [{<span class="string">u'metric'</span>: <span class="string">u'5347517809441971054 usage'</span>, <span class="string">u'value'</span>: <span class="number">7.472755432128906</span>, <span class="string">u'tags'</span>: {<span class="string">u'info.host_id'</span>: <span class="string">u'5347517809441971054'</span>}}], <span class="string">u'title'</span>: <span class="string">u'[Alerting] - [Main Org.] cpu alert'</span>, <span class="string">u'ruleId'</span>: <span class="number">9</span>, <span class="string">u'state'</span>: <span class="string">u'alerting'</span>, <span class="string">u'ruleUrl'</span>: <span class="string">u'http://localhost/d/yrvCpDzmz/system-overview-production-copy?fullscreen=true&amp;edit=true&amp;tab=alert&amp;panelId=23&amp;orgId=1'</span>, <span class="string">u'ruleName'</span>: <span class="string">u'cpu alert'</span>}</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7b289d9fc431606e921d19 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7b289d9fc431606e921d19' title="">Aug 20 2018 20:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="davidglvn" class="mention">@davidglvn</span> let me know if this fix is acceptable … <a target="_blank" data-link-type="pr" data-issue="605" href="https://github.com/alerta/alerta/pull/605" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#605</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7b28b5844de2337cdc7638 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it simply replaces any dots with underscores in tag keys coming from Grafana.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7b2b229fc431606e921d1c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7b2b229fc431606e921d1c' title="">Aug 20 2018 20:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="sushovan23" class="mention">@sushovan23</span> not sure without having an example grafana payload to look at but normally if i’m unsure if an attribute is in some data i’ll set a default. eg. <code>foo_value = myFooDict.get(‘foo’, ‘default-if-foo-not-there’)</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7b2b6c3815912505664239 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      see <a href="https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html#use-dict-get-key-default-to-assign-default-values" rel="nofollow noopener noreferrer" target="_blank" class="link">https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html#use-dict-get-key-default-to-assign-default-values</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7b2dcaff4451561614aa37 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a948131d73408ce4f8ef365 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/14843483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>sushovan23</div>
+      <div class='chat-item__username js-chat-item-from'>@sushovan23</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7b2dcaff4451561614aa37' title="">Aug 20 2018 21:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  I debugged issue myself and found that there were some tags injected with format key:value. in my custom plugin I was doing  a split on <code>&quot;</code> so that caused the error. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b7b4677c53ee54c187c7187 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-55512b0615522ed4b3e03e5b avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/5672749?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/5672749?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Stephane</div>
+      <div class='chat-item__username js-chat-item-from'>@steevivo</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/20?at=5b7b4677c53ee54c187c7187' title="">Aug 20 2018 22:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi, could you tell me if possible to assign a group of alarm to a specific group , admin network ,  admin database , application lead dev, etc. thx
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$cAnQC6rz1Kd5sk6gvloDjL3ffph0Mgl4BfmmKNQ9GgY=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-08-20T00:00:00.000Z","nextDate":"2018-08-21T23:59:59.999Z","previousDate":"2018-08-19T00:00:00.000Z","messages":[{"id":"5b7a93db9fc431606e921ac2","text":"@davidglvn is it telegraf that is adding the tags and grafrana are just passing them through to Alerta or is grafana adding the tags?","html":"<span data-link-type=\"mention\" data-screen-name=\"davidglvn\" class=\"mention\">@davidglvn<\/span> is it telegraf that is adding the tags and grafrana are just passing them through to Alerta or is grafana adding the tags?","sent":"2018-08-20T10:11:39.177Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"davidglvn","userId":"5b75736cd73408ce4fa4cbbe","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7a93fd26bac95353c9d8da","text":"I’m trying to reproduce this so i can understand how best to deal with it — without any luck so far.","html":"I’m trying to reproduce this so i can understand how best to deal with it — without any luck so far.","sent":"2018-08-20T10:12:13.465Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7aa501796f7b601d69daac","text":"@satterly telegraf is adding tags to the requests and the way it's \"output\" for elasticsearch works it's looks like \"tags.tag_name\". grafana is just reading it from elasticsearch and sending to alerta. Actually the way elasticsearch can store data, it's not related to telegraf, anything can be there in \"k.ey: value\" format (nosql documents with no limitations).  Let me know if I can help somehow and thanks :)","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> telegraf is adding tags to the requests and the way it&#39;s &quot;output&quot; for elasticsearch works it&#39;s looks like &quot;tags.tag_name&quot;. grafana is just reading it from elasticsearch and sending to alerta. Actually the way elasticsearch can store data, it&#39;s not related to telegraf, anything can be there in &quot;k.ey: value&quot; format (nosql documents with no limitations).  Let me know if I can help somehow and thanks :)","sent":"2018-08-20T11:24:49.670Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7aa5fa146618721cac8343","text":"ah. so it’s telegraph -> elaticsearch -> grafana -> alerta","html":"ah. so it’s telegraph -&gt; elaticsearch -&gt; grafana -&gt; alerta","sent":"2018-08-20T11:28:58.301Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7aa63c0825690ea2f6a8eb","text":"yes :)","html":"yes :)","sent":"2018-08-20T11:30:04.090Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7aa6569fc431606e921af3","text":"we could just modify the grafana webhook to strip out the string “tags.” if prepended to any tag key.","html":"we could just modify the grafana webhook to strip out the string “tags.” if prepended to any tag key.","sent":"2018-08-20T11:30:30.659Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7aa702cda86f5fb27eeea1","text":"I was thinking replacing \".\" to \"_\", so it will not be that strict to telegraf+es usage, no? (actually telegraf doc in elasticsearch contains 2 dictionaries one is tags and seconds is \"fields\" that also has dot inside)","html":"I was thinking replacing &quot;.&quot; to &quot;_&quot;, so it will not be that strict to telegraf+es usage, no? (actually telegraf doc in elasticsearch contains 2 dictionaries one is tags and seconds is &quot;fields&quot; that also has dot inside)","sent":"2018-08-20T11:33:22.730Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7aace38d59fb7567e173cb","text":"I can see in the elasticsearch document the “tags” key …\n```\n    \"hits\": {\n        \"hits\": [\n            {\n                \"_id\": \"E9spV2UBjzsHr6RzKtGI\",\n                \"_index\": \"telegraf-2018.08.20\",\n                \"_score\": 1.0,\n                \"_source\": {\n                    \"@timestamp\": \"2018-08-20T11:47:20Z\",\n                    \"measurement_name\": \"swap\",\n                    \"swap\": {\n                        \"in\": 0,\n                        \"out\": 0\n                    },\n                    \"tag\": {\n                        \"dc\": \"us-east-1\",\n                        \"domain\": \"example.com\",\n                        \"host\": \"ubuntu-xenial\",\n                        \"rack\": \"1a\",\n                        \"user\": \"telegraf\"\n                    }\n                },\n                \"_type\": \"metrics\"\n            },\n```\n","html":"I can see in the elasticsearch document the “tags” key …<pre><code>    <span class=\"string\">\"hits\"<\/span>: {\n        <span class=\"string\">\"hits\"<\/span>: [\n            {\n                <span class=\"string\">\"_id\"<\/span>: <span class=\"string\">\"E9spV2UBjzsHr6RzKtGI\"<\/span>,\n                <span class=\"string\">\"_index\"<\/span>: <span class=\"string\">\"telegraf-2018.08.20\"<\/span>,\n                <span class=\"string\">\"_score\"<\/span>: <span class=\"number\">1.0<\/span>,\n                <span class=\"string\">\"_source\"<\/span>: {\n                    <span class=\"string\">\"<span class=\"variable\">@timestamp<\/span>\"<\/span>: <span class=\"string\">\"2018-08-20T11:47:20Z\"<\/span>,\n                    <span class=\"string\">\"measurement_name\"<\/span>: <span class=\"string\">\"swap\"<\/span>,\n                    <span class=\"string\">\"swap\"<\/span>: {\n                        <span class=\"string\">\"in\"<\/span>: <span class=\"number\">0<\/span>,\n                        <span class=\"string\">\"out\"<\/span>: <span class=\"number\">0<\/span>\n                    },\n                    <span class=\"string\">\"tag\"<\/span>: {\n                        <span class=\"string\">\"dc\"<\/span>: <span class=\"string\">\"us-east-1\"<\/span>,\n                        <span class=\"string\">\"domain\"<\/span>: <span class=\"string\">\"example.com\"<\/span>,\n                        <span class=\"string\">\"host\"<\/span>: <span class=\"string\">\"ubuntu-xenial\"<\/span>,\n                        <span class=\"string\">\"rack\"<\/span>: <span class=\"string\">\"1a\"<\/span>,\n                        <span class=\"string\">\"user\"<\/span>: <span class=\"string\">\"telegraf\"<\/span>\n                    }\n                },\n                <span class=\"string\">\"_type\"<\/span>: <span class=\"string\">\"metrics\"<\/span>\n            },<\/code><\/pre>","sent":"2018-08-20T11:58:27.865Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7aacff26bac95353c9d942","text":"however, i can’t work out how grafana picks up those tags in a metric that it alerts on.","html":"however, i can’t work out how grafana picks up those tags in a metric that it alerts on.","sent":"2018-08-20T11:58:55.264Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7aad3d3815912505664083","text":"Can you share (via screenshot or however) how grafana is configured? In particular, the “metrics” tab for a graph and the “alert” tab.","html":"Can you share (via screenshot or however) how grafana is configured? In particular, the “metrics” tab for a graph and the “alert” tab.","sent":"2018-08-20T11:59:57.715Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7ab3e2157b9d34efb205a4","text":"Hi @satterly  I was trying for SNMP integration with OEM using SNMP and i got know that OEM team is sending SNMP traps through snmpv1 channel but by the documentation and settings of snmp.conf, only snmpv2 channel is open. Can you please help me in this.","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  I was trying for SNMP integration with OEM using SNMP and i got know that OEM team is sending SNMP traps through snmpv1 channel but by the documentation and settings of snmp.conf, only snmpv2 channel is open. Can you please help me in this.","sent":"2018-08-20T12:28:18.506Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7ab8968d59fb7567e17403","text":"is OEM “Oracle Enterprise Manager”?","html":"is OEM “Oracle Enterprise Manager”?","sent":"2018-08-20T12:48:22.647Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7ab9aa88520a0c6ee5e461","text":"The configuration shown here will allow snmptrapd to receive SNMP v1 and 2c traps … https://github.com/alerta/alerta-contrib/tree/master/integrations/snmptrap#configuration","html":"The configuration shown here will allow snmptrapd to receive SNMP v1 and 2c traps … <a href=\"https://github.com/alerta/alerta-contrib/tree/master/integrations/snmptrap#configuration\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-contrib/tree/master/integrations/snmptrap#configuration<\/a>","sent":"2018-08-20T12:52:58.041Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[{"url":"https://github.com/alerta/alerta-contrib/tree/master/integrations/snmptrap#configuration"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7ab9c4e580cd3c2aa2c6ac","text":"see also http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd#Configuring_snmptrapd_to_accept_SNMPv1_or_SNMPv2c_notifications","html":"see also <a href=\"http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd#Configuring_snmptrapd_to_accept_SNMPv1_or_SNMPv2c_notifications\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd#Configuring_snmptrapd_to_accept_SNMPv1_or_SNMPv2c_notifications<\/a>","sent":"2018-08-20T12:53:24.351Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[{"url":"http://net-snmp.sourceforge.net/wiki/index.php/TUT:Configuring_snmptrapd#Configuring_snmptrapd_to_accept_SNMPv1_or_SNMPv2c_notifications"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7aba4259212141249360f1","text":"Thanks for the quick reply ","html":"Thanks for the quick reply ","sent":"2018-08-20T12:55:30.032Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7aba5d070fa234ee8b9d9f","text":"I will check both the documents and in case of some prob will contact you again ","html":"I will check both the documents and in case of some prob will contact you again ","sent":"2018-08-20T12:55:57.177Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7aba5fe2e48a20b4854417","text":"Thanks","html":"Thanks","sent":"2018-08-20T12:55:59.582Z","fromUser":{"id":"5a0147bad73408ce4f7d7908","username":"manavrawat10","displayName":"Manvenddra Singh Rawat","url":"/manavrawat10","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/manavrawat10","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/23374493?v=4&s=128","v":33,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7abb6a070fa234ee8ba376","text":"[![image.png](https://files.gitter.im/alerta/chat/faho/thumb/image.png)](https://files.gitter.im/alerta/chat/faho/image.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/faho/image.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/faho/thumb/image.png\" alt=\"image.png\" rel=\"nofollow\"><\/a>","sent":"2018-08-20T13:00:26.173Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":10,"urls":[{"url":"https://files.gitter.im/alerta/chat/faho/thumb/image.png"},{"url":"https://files.gitter.im/alerta/chat/faho/image.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7abb6fdd0b74601e33023e","text":"@satterly hmm in es it looks as yours (no double of tags.tag) (sorry, I've not checked it there before), so maybe it's how grafana generate the message... because the json i sent in the beginning is what alerta log prints. unfortunately I can't do much debugging at this moment, but I can try later to test again that tags. are added on grafana alert. here are the screenshots","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> hmm in es it looks as yours (no double of tags.tag) (sorry, I&#39;ve not checked it there before), so maybe it&#39;s how grafana generate the message... because the json i sent in the beginning is what alerta log prints. unfortunately I can&#39;t do much debugging at this moment, but I can try later to test again that tags. are added on grafana alert. here are the screenshots","sent":"2018-08-20T13:00:31.030Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7abbb8796f7b601d6a67c9","text":"[![image.png](https://files.gitter.im/alerta/chat/e6Up/thumb/image.png)](https://files.gitter.im/alerta/chat/e6Up/image.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/e6Up/image.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/e6Up/thumb/image.png\" alt=\"image.png\" rel=\"nofollow\"><\/a>","sent":"2018-08-20T13:01:44.718Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":10,"urls":[{"url":"https://files.gitter.im/alerta/chat/e6Up/thumb/image.png"},{"url":"https://files.gitter.im/alerta/chat/e6Up/image.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7abbcea158fd0ea38400a5","text":"[![image.png](https://files.gitter.im/alerta/chat/YDKf/thumb/image.png)](https://files.gitter.im/alerta/chat/YDKf/image.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/YDKf/image.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/YDKf/thumb/image.png\" alt=\"image.png\" rel=\"nofollow\"><\/a>","sent":"2018-08-20T13:02:06.880Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":10,"urls":[{"url":"https://files.gitter.im/alerta/chat/YDKf/thumb/image.png"},{"url":"https://files.gitter.im/alerta/chat/YDKf/image.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7ac22ae40fdf5fb1652569","text":"Thanks a lot. That's very helpful. Let me know what you find out. ","html":"Thanks a lot. That&#39;s very helpful. Let me know what you find out. ","sent":"2018-08-20T13:29:14.819Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7ac995cda86f5fb27fc5cb","text":"@satterly for one of alerts from grafana i'm getting this error:\n```\nApiError: Error while running post-receive plug-in 'alerta_notifyoiv': need more than 1 value to unpack\n\n```\nsome values are coming null in the payload since grafana is sending like that","html":"<p><span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> for one of alerts from grafana i&#39;m getting this error:<\/p><pre><code>ApiError: Error <span class=\"keyword\">while<\/span> <span class=\"property\">running<\/span> post-receive plug-<span class=\"keyword\">in<\/span> 'alerta_notifyoiv': need more than <span class=\"number\">1<\/span> value <span class=\"keyword\">to<\/span> unpack<\/code><\/pre><p>some values are coming null in the payload since grafana is sending like that<\/p>","sent":"2018-08-20T14:00:53.764Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7ac9a9070fa234ee8bffc3","text":"in my plugin do I need to check for each attribute?","html":"in my plugin do I need to check for each attribute?","sent":"2018-08-20T14:01:13.220Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7ace8ddd0b74601e3386e6","text":"@satterly I've couple of min to run api test and the \"test.\" is added by grafana on alert. This is the body I receive from grafana:\n```\n{u'evalMatches': [{u'metric': u'i-0d0721c7f97545d43 usage', u'value': 2.456903054979112, u'tags': {u'tags.host_id': u'i-0d0721c7f97545d43'}}, {u'metric': u'i-0661cca200d42625e usage', u'value': 2.203453403049045, u'tags': {u'tags.host_id': u'i-0661cca200d42625e'}}, {u'metric': u'i-04c728983405786dc usage', u'value': 2.023474926418728, u'tags': {u'tags.host_id': u'i-04c728983405786dc'}}], u'title': u'[Alerting] - [Main Org.] cpu alert', u'ruleId': 9, u'state': u'alerting', u'ruleUrl': u'http://localhost/d/yrvCpDzmz/system-overview-production-copy?fullscreen=true&edit=true&tab=alert&panelId=23&orgId=1', u'ruleName': u'cpu alert'}\n```","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I&#39;ve couple of min to run api test and the &quot;test.&quot; is added by grafana on alert. This is the body I receive from grafana:<pre><code>{<span class=\"string\">u'evalMatches'<\/span>: [{<span class=\"string\">u'metric'<\/span>: <span class=\"string\">u'i-0d0721c7f97545d43 usage'<\/span>, <span class=\"string\">u'value'<\/span>: <span class=\"number\">2.456903054979112<\/span>, <span class=\"string\">u'tags'<\/span>: {<span class=\"string\">u'tags.host_id'<\/span>: <span class=\"string\">u'i-0d0721c7f97545d43'<\/span>}}, {<span class=\"string\">u'metric'<\/span>: <span class=\"string\">u'i-0661cca200d42625e usage'<\/span>, <span class=\"string\">u'value'<\/span>: <span class=\"number\">2.203453403049045<\/span>, <span class=\"string\">u'tags'<\/span>: {<span class=\"string\">u'tags.host_id'<\/span>: <span class=\"string\">u'i-0661cca200d42625e'<\/span>}}, {<span class=\"string\">u'metric'<\/span>: <span class=\"string\">u'i-04c728983405786dc usage'<\/span>, <span class=\"string\">u'value'<\/span>: <span class=\"number\">2.023474926418728<\/span>, <span class=\"string\">u'tags'<\/span>: {<span class=\"string\">u'tags.host_id'<\/span>: <span class=\"string\">u'i-04c728983405786dc'<\/span>}}], <span class=\"string\">u'title'<\/span>: <span class=\"string\">u'[Alerting] - [Main Org.] cpu alert'<\/span>, <span class=\"string\">u'ruleId'<\/span>: <span class=\"number\">9<\/span>, <span class=\"string\">u'state'<\/span>: <span class=\"string\">u'alerting'<\/span>, <span class=\"string\">u'ruleUrl'<\/span>: <span class=\"string\">u'http://localhost/d/yrvCpDzmz/system-overview-production-copy?fullscreen=true&amp;edit=true&amp;tab=alert&amp;panelId=23&amp;orgId=1'<\/span>, <span class=\"string\">u'ruleName'<\/span>: <span class=\"string\">u'cpu alert'<\/span>}<\/code><\/pre>","sent":"2018-08-20T14:22:05.174Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7acf9d070fa234ee8c2ae1","text":"If i understand correctly tags dictionary has nothing to do with telegraf data, it's generated by grafana from the metric and the content is taken from grafana data and because we have telegraf dictionary \"tags\" and to use it we need to specify tags.tag_name it make the error...","html":"If i understand correctly tags dictionary has nothing to do with telegraf data, it&#39;s generated by grafana from the metric and the content is taken from grafana data and because we have telegraf dictionary &quot;tags&quot; and to use it we need to specify tags.tag_name it make the error...","sent":"2018-08-20T14:26:37.025Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7aec09dd0b74601e344904","text":"this is what happens when \"telegraf\" sends it's tags inside `info` dictionary\n```\n{u'evalMatches': [{u'metric': u'5347517809441971054 usage', u'value': 7.472755432128906, u'tags': {u'info.host_id': u'5347517809441971054'}}], u'title': u'[Alerting] - [Main Org.] cpu alert', u'ruleId': 9, u'state': u'alerting', u'ruleUrl': u'http://localhost/d/yrvCpDzmz/system-overview-production-copy?fullscreen=true&edit=true&tab=alert&panelId=23&orgId=1', u'ruleName': u'cpu alert'}\n```","html":"this is what happens when &quot;telegraf&quot; sends it&#39;s tags inside <code>info<\/code> dictionary<pre><code>{<span class=\"string\">u'evalMatches'<\/span>: [{<span class=\"string\">u'metric'<\/span>: <span class=\"string\">u'5347517809441971054 usage'<\/span>, <span class=\"string\">u'value'<\/span>: <span class=\"number\">7.472755432128906<\/span>, <span class=\"string\">u'tags'<\/span>: {<span class=\"string\">u'info.host_id'<\/span>: <span class=\"string\">u'5347517809441971054'<\/span>}}], <span class=\"string\">u'title'<\/span>: <span class=\"string\">u'[Alerting] - [Main Org.] cpu alert'<\/span>, <span class=\"string\">u'ruleId'<\/span>: <span class=\"number\">9<\/span>, <span class=\"string\">u'state'<\/span>: <span class=\"string\">u'alerting'<\/span>, <span class=\"string\">u'ruleUrl'<\/span>: <span class=\"string\">u'http://localhost/d/yrvCpDzmz/system-overview-production-copy?fullscreen=true&amp;edit=true&amp;tab=alert&amp;panelId=23&amp;orgId=1'<\/span>, <span class=\"string\">u'ruleName'<\/span>: <span class=\"string\">u'cpu alert'<\/span>}<\/code><\/pre>","sent":"2018-08-20T16:27:53.779Z","fromUser":{"id":"5b75736cd73408ce4fa4cbbe","username":"davidglvn","displayName":"David Golovan","url":"/davidglvn","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/davidglvn","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/510418?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/510418?v=4&s=128","v":3,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7b289d9fc431606e921d19","text":"@davidglvn let me know if this fix is acceptable … https://github.com/alerta/alerta/pull/605","html":"<span data-link-type=\"mention\" data-screen-name=\"davidglvn\" class=\"mention\">@davidglvn<\/span> let me know if this fix is acceptable … <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"605\" href=\"https://github.com/alerta/alerta/pull/605\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#605<\/a>","sent":"2018-08-20T20:46:21.108Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"davidglvn","userId":"5b75736cd73408ce4fa4cbbe","userIds":[]}],"issues":[{"repo":"alerta/alerta","number":"605"}],"meta":[],"v":1,"burstStart":true},{"id":"5b7b28b5844de2337cdc7638","text":"it simply replaces any dots with underscores in tag keys coming from Grafana.","html":"it simply replaces any dots with underscores in tag keys coming from Grafana.","sent":"2018-08-20T20:46:45.226Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7b2b229fc431606e921d1c","text":"@sushovan23 not sure without having an example grafana payload to look at but normally if i’m unsure if an attribute is in some data i’ll set a default. eg. `foo_value = myFooDict.get(‘foo’, ‘default-if-foo-not-there’)`","html":"<span data-link-type=\"mention\" data-screen-name=\"sushovan23\" class=\"mention\">@sushovan23<\/span> not sure without having an example grafana payload to look at but normally if i’m unsure if an attribute is in some data i’ll set a default. eg. <code>foo_value = myFooDict.get(‘foo’, ‘default-if-foo-not-there’)<\/code>","sent":"2018-08-20T20:57:06.336Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"sushovan23","userId":"5a948131d73408ce4f8ef365","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7b2b6c3815912505664239","text":"see https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html#use-dict-get-key-default-to-assign-default-values","html":"see <a href=\"https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html#use-dict-get-key-default-to-assign-default-values\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html#use-dict-get-key-default-to-assign-default-values<\/a>","sent":"2018-08-20T20:58:20.343Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[{"url":"https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html#use-dict-get-key-default-to-assign-default-values"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b7b2dcaff4451561614aa37","text":"Hi @satterly  I debugged issue myself and found that there were some tags injected with format key:value. in my custom plugin I was doing  a split on `\"` so that caused the error. ","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  I debugged issue myself and found that there were some tags injected with format key:value. in my custom plugin I was doing  a split on <code>&quot;<\/code> so that caused the error. ","sent":"2018-08-20T21:08:26.439Z","fromUser":{"id":"5a948131d73408ce4f8ef365","username":"sushovan23","displayName":"sushovan23","url":"/sushovan23","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/sushovan23","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/14843483?v=4&s=128","v":20,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b7b4677c53ee54c187c7187","text":"Hi, could you tell me if possible to assign a group of alarm to a specific group , admin network ,  admin database , application lead dev, etc. thx","html":"Hi, could you tell me if possible to assign a group of alarm to a specific group , admin network ,  admin database , application lead dev, etc. thx","sent":"2018-08-20T22:53:43.301Z","fromUser":{"id":"55512b0615522ed4b3e03e5b","username":"steevivo","displayName":"Stephane","url":"/steevivo","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/steevivo","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/5672749?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/5672749?v=4&s=128","v":52,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

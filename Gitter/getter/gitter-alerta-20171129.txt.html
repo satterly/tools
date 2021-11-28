@@ -1,0 +1,619 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2017/11/30"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2017/11/28"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">29<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Nov 2017</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5a1e8118ba39a53f1afa6381 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/11/29?at=5a1e8118ba39a53f1afa6381' title="">Nov 29 2017 09:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1e814f232e79134de6e828 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <h2>`In [7]: Alert.get(&#39;6039b723-fa6f-4191-9195-702f4cd1acb2&#39;)</h2>
+<p>RuntimeError                              Traceback (most recent call last)</p><p>&lt;ipython-input-7-a6c50039c5a4&gt; in &lt;module&gt;()<br>----&gt; 1 Alert.get(&#39;6039b723-fa6f-4191-9195-702f4cd1acb2&#39;)</p><p>/usr/local/lib/python2.7/site-packages/alerta/models/alert.pyc in get(id, customer)<br>    327     <span data-link-type="mention" data-screen-name="staticmethod" class="mention">@staticmethod</span><br>    328     def get(id, customer=None):<br>--&gt; 329         return Alert.from_db(db.get_alert(id, customer))<br>    330<br>    331     def is_blackout(self):</p><p>/usr/local/lib/python2.7/site-packages/alerta/database/backends/mongodb/base.pyc in get_alert(self, id, customer)<br>    294             query[&#39;customer&#39;] = customer<br>    295<br>--&gt; 296         return g.db.alerts.find_one(query)<br>    297<br>    298     #### STATUS, TAGS, ATTRIBUTES</p><p>/usr/local/lib/python2.7/site-packages/werkzeug/local.pyc in <strong>getattr</strong>(self, name)<br>    345         if name == &#39;<strong>members</strong>&#39;:<br>    346             return dir(self._get_current_object())<br>--&gt; 347         return getattr(self._get_current_object(), name)<br>    348<br>    349     def <strong>setitem</strong>(self, key, value):</p><p>/usr/local/lib/python2.7/site-packages/werkzeug/local.pyc in _get_current_object(self)<br>    304         &quot;&quot;&quot;<br>    305         if not hasattr(self.<strong>local, &#39;</strong>release_local<strong>&#39;):<br>--&gt; 306             return self.</strong>local()<br>    307         try:<br>    308             return getattr(self.<strong>local, self.</strong>name__)</p><p>/usr/local/lib/python2.7/site-packages/flask/globals.pyc in _lookup_app_object(name)<br>     42     top = _app_ctx_stack.top<br>     43     if top is None:<br>---&gt; 44         raise RuntimeError(_app_ctx_err_msg)<br>     45     return getattr(top, name)<br>     46 </p><p>RuntimeError: Working outside of application context.</p><p>This typically means that you attempted to use functionality that needed<br>to interface with the current application object in a way.  To solve<br>this set up an application context with app.app_context().  See the<br>documentation for more information.`</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1e81688b3a9e2c0c2f25a6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      how to make this work?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1e8b66232e79134de721e2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/11/29?at=5a1e8b66232e79134de721e2' title="">Nov 29 2017 10:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  when I am trying to run alert.is_flapping(count=FLAPPING_COUNT, window=FLAPPING_WINDOW) from a plugin, I am getting this error:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1e8b7f87680e6230abec1c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      2017-11-29 10:25:12,252 - alerta.plugins.flapping[9]: ERROR - A pipeline stage specification object must contain exactly one field. [in build/bdist.linux-x86_64/egg/alerta_flapping.py:26]<br>Traceback (most recent call last):<br>  File &quot;build/bdist.linux-x86_64/egg/alerta_flapping.py&quot;, line 14, in pre_receive<br>    result = alert.is_flapping(count=FLAPPING_COUNT, window=FLAPPING_WINDOW)<br>  File &quot;/usr/local/lib/python2.7/site-packages/alerta/models/alert.py&quot;, line 221, in is_flapping<br>    return db.is_flapping(self, count, window)<br>  File &quot;/usr/local/lib/python2.7/site-packages/alerta/database/backends/mongodb/base.py&quot;, line 144, in is_flapping<br>    responses = g.db.alerts.aggregate(pipeline)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/collection.py&quot;, line 1918, in aggregate<br>    collation=collation)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/collection.py&quot;, line 232, in _command<br>    collation=collation)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/pool.py&quot;, line 477, in command<br>    collation=collation)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/network.py&quot;, line 116, in command<br>    parse_write_concern_error=parse_write_concern_error)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/helpers.py&quot;, line 210, in _check_command_response<br>    raise OperationFailure(msg % errmsg, code, response)<br>OperationFailure: A pipeline stage specification object must contain exactly one field.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1ec707ffa3e37919d4d590 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a007600d73408ce4f7d5f56 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/8448749?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/8448749?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Peter White</div>
+      <div class='chat-item__username js-chat-item-from'>@plwhite</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/11/29?at=5a1ec707ffa3e37919d4d590' title="">Nov 29 2017 14:41 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Quick question about API keys. I want Prometheus to send info to alerta, and I also want to mandate authentication. I think there is no way of getting an API key allowing Prometheus to export to alerta without either using the GUI or already having one (for the command line tool). Is that correct?<br>Ideal would be if I could just set an env variable or something for the default starting API key and use it.<br>In a production environment we&#39;d have to do better anyway with credentials, but would be nice for a quick and dirty test environment to have proper auth.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1ecf298b3a9e2c0c30e350 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a007600d73408ce4f7d5f56 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/8448749?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/8448749?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Peter White</div>
+      <div class='chat-item__username js-chat-item-from'>@plwhite</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/11/29?at=5a1ecf298b3a9e2c0c30e350' title="">Nov 29 2017 15:15 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Oops. I just found ADMIN_KEY. I think that might be just what I need, and I cannot understand how I missed it before.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1edc230cef4fed2ebdd079 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/11/29?at=5a1edc230cef4fed2ebdd079' title="">Nov 29 2017 16:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="arindamchoudhury" class="mention">@arindamchoudhury</span> The <code>is_flapping()</code> problem sounds like a bug. Can you share the exact code you are using in your plugin?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1edcf90cef4fed2ebdd086 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="plwhite" class="mention">@plwhite</span> yes, <code>ADMIN_KEY</code> is what you want if you are using a Docker container. :+1: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1eddbb0cef4fed2ebdd09b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/11/29?at=5a1eddbb0cef4fed2ebdd09b' title="">Nov 29 2017 16:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="vliger" class="mention">@vliger</span> I’ve just realised the document is old / wrong … <a href="http://alerta.readthedocs.io/en/latest/api/reference.html#create-a-user" rel="nofollow noopener noreferrer" target="_blank" class="link">http://alerta.readthedocs.io/en/latest/api/reference.html#create-a-user</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1edde281cd9a5d7ea134dc burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      That endpoint has been removed and in it’s place you should use <code>/auth/signup</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1edf1097cedeb0482c881d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/11/29?at=5a1edf1097cedeb0482c881d' title="">Nov 29 2017 16:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>This command should work … </p><pre><code>curl -<span class="type">XPOST</span> http:<span class="comment">//localhost:8080/auth/signup \</span>
+-<span class="type">H</span> <span class="symbol">'Authorization</span>: <span class="type">Key</span> demo-key' \
+-<span class="type">H</span> <span class="symbol">'Content</span>-<span class="class"><span class="keyword">type</span>:</span> application/json' \
+-d '{
+      <span class="string">"name"</span>: <span class="string">"Joe Bloggs"</span>,
+      <span class="string">"email"</span>: <span class="string">"joe.bloggs@example.com"</span>,
+      <span class="string">"password"</span>: <span class="string">"secret"</span>,
+      <span class="string">"text"</span>: <span class="string">"demo user"</span>
+    }’</code></pre><p>And give return a valid token as a response …</p><pre><code>{
+  "<span class="attribute">token</span>": <span class="value"><span class="string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4Y2IwYjYyNC0zY2Q3LTQ1YjktOThhNS01ZGZhYzVmMDE2NmMiLCJyb2xlcyI6WyJ1c2VyIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC8iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb2UuYmxvZ2dzQGV4YW1wbGUuY29tIiwibmFtZSI6IkpvZSBCbG9nZ3MiLCJlbWFpbCI6ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20iLCJzY29wZSI6InJlYWQgd3JpdGUiLCJqdGkiOiI2ODlhMmY3Yy0zNTJlLTQ5M2ItYWZjYi1iOWUwOTE3ODAyMDgiLCJleHAiOjE1MTMxODIxNDcsInByb3ZpZGVyIjoiYmFzaWMiLCJpYXQiOjE1MTE5NzI1NDcsIm5iZiI6MTUxMTk3MjU0NywiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyJ9.c5jpr8YksoJmoZ6KUwsYP5fgwZr-jdA4W3JUCbv1vXU"</span>
+</span>}</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1edf8b81cd9a5d7ea13523 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I’ve created an issue to ensure this gets updated … <span data-link-type="issue" data-issue="61" data-issue-repo="alerta/alerta-docs" class="issue">alerta/alerta-docs#61</span>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5a1eef1b232e79134de9b3f4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54da27e515522ed4b3dbd8bd avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1412069?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Arindam Choudhury</div>
+      <div class='chat-item__username js-chat-item-from'>@arindamchoudhury</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/11/29?at=5a1eef1b232e79134de9b3f4' title="">Nov 29 2017 17:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Here is the code of the plugin <a href="https://gist.github.com/anonymous/bef7b4d1dc470d06f65e08b2f50829c6" rel="nofollow noopener noreferrer" target="_blank" class="link">https://gist.github.com/anonymous/bef7b4d1dc470d06f65e08b2f50829c6</a>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$9G7nnMEoVpBXe8clAxEfWwESBFtS7l7vUNz34qAnRpE=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2017-11-29T00:00:00.000Z","nextDate":"2017-11-30T23:59:59.999Z","previousDate":"2017-11-28T00:00:00.000Z","messages":[{"id":"5a1e8118ba39a53f1afa6381","text":"Hi","html":"Hi","sent":"2017-11-29T09:42:48.982Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a1e814f232e79134de6e828","text":"`In [7]: Alert.get('6039b723-fa6f-4191-9195-702f4cd1acb2')\n---------------------------------------------------------------------------\nRuntimeError                              Traceback (most recent call last)\n<ipython-input-7-a6c50039c5a4> in <module>()\n----> 1 Alert.get('6039b723-fa6f-4191-9195-702f4cd1acb2')\n\n/usr/local/lib/python2.7/site-packages/alerta/models/alert.pyc in get(id, customer)\n    327     @staticmethod\n    328     def get(id, customer=None):\n--> 329         return Alert.from_db(db.get_alert(id, customer))\n    330 \n    331     def is_blackout(self):\n\n/usr/local/lib/python2.7/site-packages/alerta/database/backends/mongodb/base.pyc in get_alert(self, id, customer)\n    294             query['customer'] = customer\n    295 \n--> 296         return g.db.alerts.find_one(query)\n    297 \n    298     #### STATUS, TAGS, ATTRIBUTES\n\n/usr/local/lib/python2.7/site-packages/werkzeug/local.pyc in __getattr__(self, name)\n    345         if name == '__members__':\n    346             return dir(self._get_current_object())\n--> 347         return getattr(self._get_current_object(), name)\n    348 \n    349     def __setitem__(self, key, value):\n\n/usr/local/lib/python2.7/site-packages/werkzeug/local.pyc in _get_current_object(self)\n    304         \"\"\"\n    305         if not hasattr(self.__local, '__release_local__'):\n--> 306             return self.__local()\n    307         try:\n    308             return getattr(self.__local, self.__name__)\n\n/usr/local/lib/python2.7/site-packages/flask/globals.pyc in _lookup_app_object(name)\n     42     top = _app_ctx_stack.top\n     43     if top is None:\n---> 44         raise RuntimeError(_app_ctx_err_msg)\n     45     return getattr(top, name)\n     46 \n\nRuntimeError: Working outside of application context.\n\nThis typically means that you attempted to use functionality that needed\nto interface with the current application object in a way.  To solve\nthis set up an application context with app.app_context().  See the\ndocumentation for more information.`\n","html":"<h2>`In [7]: Alert.get(&#39;6039b723-fa6f-4191-9195-702f4cd1acb2&#39;)<\/h2>\n<p>RuntimeError                              Traceback (most recent call last)<\/p><p>&lt;ipython-input-7-a6c50039c5a4&gt; in &lt;module&gt;()<br>----&gt; 1 Alert.get(&#39;6039b723-fa6f-4191-9195-702f4cd1acb2&#39;)<\/p><p>/usr/local/lib/python2.7/site-packages/alerta/models/alert.pyc in get(id, customer)<br>    327     <span data-link-type=\"mention\" data-screen-name=\"staticmethod\" class=\"mention\">@staticmethod<\/span><br>    328     def get(id, customer=None):<br>--&gt; 329         return Alert.from_db(db.get_alert(id, customer))<br>    330<br>    331     def is_blackout(self):<\/p><p>/usr/local/lib/python2.7/site-packages/alerta/database/backends/mongodb/base.pyc in get_alert(self, id, customer)<br>    294             query[&#39;customer&#39;] = customer<br>    295<br>--&gt; 296         return g.db.alerts.find_one(query)<br>    297<br>    298     #### STATUS, TAGS, ATTRIBUTES<\/p><p>/usr/local/lib/python2.7/site-packages/werkzeug/local.pyc in <strong>getattr<\/strong>(self, name)<br>    345         if name == &#39;<strong>members<\/strong>&#39;:<br>    346             return dir(self._get_current_object())<br>--&gt; 347         return getattr(self._get_current_object(), name)<br>    348<br>    349     def <strong>setitem<\/strong>(self, key, value):<\/p><p>/usr/local/lib/python2.7/site-packages/werkzeug/local.pyc in _get_current_object(self)<br>    304         &quot;&quot;&quot;<br>    305         if not hasattr(self.<strong>local, &#39;<\/strong>release_local<strong>&#39;):<br>--&gt; 306             return self.<\/strong>local()<br>    307         try:<br>    308             return getattr(self.<strong>local, self.<\/strong>name__)<\/p><p>/usr/local/lib/python2.7/site-packages/flask/globals.pyc in _lookup_app_object(name)<br>     42     top = _app_ctx_stack.top<br>     43     if top is None:<br>---&gt; 44         raise RuntimeError(_app_ctx_err_msg)<br>     45     return getattr(top, name)<br>     46 <\/p><p>RuntimeError: Working outside of application context.<\/p><p>This typically means that you attempted to use functionality that needed<br>to interface with the current application object in a way.  To solve<br>this set up an application context with app.app_context().  See the<br>documentation for more information.`<\/p>","sent":"2017-11-29T09:43:43.424Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"staticmethod","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5a1e81688b3a9e2c0c2f25a6","text":"how to make this work?","html":"how to make this work?","sent":"2017-11-29T09:44:08.805Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5a1e8b66232e79134de721e2","text":"@satterly  when I am trying to run alert.is_flapping(count=FLAPPING_COUNT, window=FLAPPING_WINDOW) from a plugin, I am getting this error:","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  when I am trying to run alert.is_flapping(count=FLAPPING_COUNT, window=FLAPPING_WINDOW) from a plugin, I am getting this error:","sent":"2017-11-29T10:26:46.515Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a1e8b7f87680e6230abec1c","text":"2017-11-29 10:25:12,252 - alerta.plugins.flapping[9]: ERROR - A pipeline stage specification object must contain exactly one field. [in build/bdist.linux-x86_64/egg/alerta_flapping.py:26]\nTraceback (most recent call last):\n  File \"build/bdist.linux-x86_64/egg/alerta_flapping.py\", line 14, in pre_receive\n    result = alert.is_flapping(count=FLAPPING_COUNT, window=FLAPPING_WINDOW)\n  File \"/usr/local/lib/python2.7/site-packages/alerta/models/alert.py\", line 221, in is_flapping\n    return db.is_flapping(self, count, window)\n  File \"/usr/local/lib/python2.7/site-packages/alerta/database/backends/mongodb/base.py\", line 144, in is_flapping\n    responses = g.db.alerts.aggregate(pipeline)\n  File \"/usr/local/lib/python2.7/site-packages/pymongo/collection.py\", line 1918, in aggregate\n    collation=collation)\n  File \"/usr/local/lib/python2.7/site-packages/pymongo/collection.py\", line 232, in _command\n    collation=collation)\n  File \"/usr/local/lib/python2.7/site-packages/pymongo/pool.py\", line 477, in command\n    collation=collation)\n  File \"/usr/local/lib/python2.7/site-packages/pymongo/network.py\", line 116, in command\n    parse_write_concern_error=parse_write_concern_error)\n  File \"/usr/local/lib/python2.7/site-packages/pymongo/helpers.py\", line 210, in _check_command_response\n    raise OperationFailure(msg % errmsg, code, response)\nOperationFailure: A pipeline stage specification object must contain exactly one field.\n","html":"2017-11-29 10:25:12,252 - alerta.plugins.flapping[9]: ERROR - A pipeline stage specification object must contain exactly one field. [in build/bdist.linux-x86_64/egg/alerta_flapping.py:26]<br>Traceback (most recent call last):<br>  File &quot;build/bdist.linux-x86_64/egg/alerta_flapping.py&quot;, line 14, in pre_receive<br>    result = alert.is_flapping(count=FLAPPING_COUNT, window=FLAPPING_WINDOW)<br>  File &quot;/usr/local/lib/python2.7/site-packages/alerta/models/alert.py&quot;, line 221, in is_flapping<br>    return db.is_flapping(self, count, window)<br>  File &quot;/usr/local/lib/python2.7/site-packages/alerta/database/backends/mongodb/base.py&quot;, line 144, in is_flapping<br>    responses = g.db.alerts.aggregate(pipeline)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/collection.py&quot;, line 1918, in aggregate<br>    collation=collation)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/collection.py&quot;, line 232, in _command<br>    collation=collation)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/pool.py&quot;, line 477, in command<br>    collation=collation)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/network.py&quot;, line 116, in command<br>    parse_write_concern_error=parse_write_concern_error)<br>  File &quot;/usr/local/lib/python2.7/site-packages/pymongo/helpers.py&quot;, line 210, in _check_command_response<br>    raise OperationFailure(msg % errmsg, code, response)<br>OperationFailure: A pipeline stage specification object must contain exactly one field.","sent":"2017-11-29T10:27:11.645Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5a1ec707ffa3e37919d4d590","text":"Quick question about API keys. I want Prometheus to send info to alerta, and I also want to mandate authentication. I think there is no way of getting an API key allowing Prometheus to export to alerta without either using the GUI or already having one (for the command line tool). Is that correct?\nIdeal would be if I could just set an env variable or something for the default starting API key and use it.\nIn a production environment we'd have to do better anyway with credentials, but would be nice for a quick and dirty test environment to have proper auth.","html":"Quick question about API keys. I want Prometheus to send info to alerta, and I also want to mandate authentication. I think there is no way of getting an API key allowing Prometheus to export to alerta without either using the GUI or already having one (for the command line tool). Is that correct?<br>Ideal would be if I could just set an env variable or something for the default starting API key and use it.<br>In a production environment we&#39;d have to do better anyway with credentials, but would be nice for a quick and dirty test environment to have proper auth.","sent":"2017-11-29T14:41:11.696Z","fromUser":{"id":"5a007600d73408ce4f7d5f56","username":"plwhite","displayName":"Peter White","url":"/plwhite","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/plwhite","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/8448749?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/8448749?v=4&s=128","v":1,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a1ecf298b3a9e2c0c30e350","text":"Oops. I just found ADMIN_KEY. I think that might be just what I need, and I cannot understand how I missed it before.","html":"Oops. I just found ADMIN_KEY. I think that might be just what I need, and I cannot understand how I missed it before.","sent":"2017-11-29T15:15:53.223Z","fromUser":{"id":"5a007600d73408ce4f7d5f56","username":"plwhite","displayName":"Peter White","url":"/plwhite","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/plwhite","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/8448749?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/8448749?v=4&s=128","v":1,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a1edc230cef4fed2ebdd079","text":"@arindamchoudhury The `is_flapping()` problem sounds like a bug. Can you share the exact code you are using in your plugin?","html":"<span data-link-type=\"mention\" data-screen-name=\"arindamchoudhury\" class=\"mention\">@arindamchoudhury<\/span> The <code>is_flapping()<\/code> problem sounds like a bug. Can you share the exact code you are using in your plugin?","sent":"2017-11-29T16:11:15.279Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"arindamchoudhury","userId":"54da27e515522ed4b3dbd8bd","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a1edcf90cef4fed2ebdd086","text":"@plwhite yes, `ADMIN_KEY` is what you want if you are using a Docker container. :+1: ","html":"<span data-link-type=\"mention\" data-screen-name=\"plwhite\" class=\"mention\">@plwhite<\/span> yes, <code>ADMIN_KEY<\/code> is what you want if you are using a Docker container. :+1: ","sent":"2017-11-29T16:14:49.546Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[{"screenName":"plwhite","userId":"5a007600d73408ce4f7d5f56","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5a1eddbb0cef4fed2ebdd09b","text":"@vliger I’ve just realised the document is old / wrong … http://alerta.readthedocs.io/en/latest/api/reference.html#create-a-user","html":"<span data-link-type=\"mention\" data-screen-name=\"vliger\" class=\"mention\">@vliger<\/span> I’ve just realised the document is old / wrong … <a href=\"http://alerta.readthedocs.io/en/latest/api/reference.html#create-a-user\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://alerta.readthedocs.io/en/latest/api/reference.html#create-a-user<\/a>","sent":"2017-11-29T16:18:03.487Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[{"url":"http://alerta.readthedocs.io/en/latest/api/reference.html#create-a-user"}],"mentions":[{"screenName":"vliger","userId":"5a1d346ed73408ce4f809fe3","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a1edde281cd9a5d7ea134dc","text":"That endpoint has been removed and in it’s place you should use `/auth/signup`","html":"That endpoint has been removed and in it’s place you should use <code>/auth/signup<\/code>","sent":"2017-11-29T16:18:42.337Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5a1edf1097cedeb0482c881d","text":"This command should work … \n```\ncurl -XPOST http://localhost:8080/auth/signup \\\n-H 'Authorization: Key demo-key' \\\n-H 'Content-type: application/json' \\\n-d '{\n      \"name\": \"Joe Bloggs\",\n      \"email\": \"joe.bloggs@example.com\",\n      \"password\": \"secret\",\n      \"text\": \"demo user\"\n    }’\n```\nAnd give return a valid token as a response …\n```\n{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4Y2IwYjYyNC0zY2Q3LTQ1YjktOThhNS01ZGZhYzVmMDE2NmMiLCJyb2xlcyI6WyJ1c2VyIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC8iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb2UuYmxvZ2dzQGV4YW1wbGUuY29tIiwibmFtZSI6IkpvZSBCbG9nZ3MiLCJlbWFpbCI6ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20iLCJzY29wZSI6InJlYWQgd3JpdGUiLCJqdGkiOiI2ODlhMmY3Yy0zNTJlLTQ5M2ItYWZjYi1iOWUwOTE3ODAyMDgiLCJleHAiOjE1MTMxODIxNDcsInByb3ZpZGVyIjoiYmFzaWMiLCJpYXQiOjE1MTE5NzI1NDcsIm5iZiI6MTUxMTk3MjU0NywiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyJ9.c5jpr8YksoJmoZ6KUwsYP5fgwZr-jdA4W3JUCbv1vXU\"\n}\n```\n","html":"<p>This command should work … <\/p><pre><code>curl -<span class=\"type\">XPOST<\/span> http:<span class=\"comment\">//localhost:8080/auth/signup \\<\/span>\n-<span class=\"type\">H<\/span> <span class=\"symbol\">'Authorization<\/span>: <span class=\"type\">Key<\/span> demo-key' \\\n-<span class=\"type\">H<\/span> <span class=\"symbol\">'Content<\/span>-<span class=\"class\"><span class=\"keyword\">type<\/span>:<\/span> application/json' \\\n-d '{\n      <span class=\"string\">\"name\"<\/span>: <span class=\"string\">\"Joe Bloggs\"<\/span>,\n      <span class=\"string\">\"email\"<\/span>: <span class=\"string\">\"joe.bloggs@example.com\"<\/span>,\n      <span class=\"string\">\"password\"<\/span>: <span class=\"string\">\"secret\"<\/span>,\n      <span class=\"string\">\"text\"<\/span>: <span class=\"string\">\"demo user\"<\/span>\n    }’<\/code><\/pre><p>And give return a valid token as a response …<\/p><pre><code>{\n  \"<span class=\"attribute\">token<\/span>\": <span class=\"value\"><span class=\"string\">\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4Y2IwYjYyNC0zY2Q3LTQ1YjktOThhNS01ZGZhYzVmMDE2NmMiLCJyb2xlcyI6WyJ1c2VyIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC8iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJqb2UuYmxvZ2dzQGV4YW1wbGUuY29tIiwibmFtZSI6IkpvZSBCbG9nZ3MiLCJlbWFpbCI6ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20iLCJzY29wZSI6InJlYWQgd3JpdGUiLCJqdGkiOiI2ODlhMmY3Yy0zNTJlLTQ5M2ItYWZjYi1iOWUwOTE3ODAyMDgiLCJleHAiOjE1MTMxODIxNDcsInByb3ZpZGVyIjoiYmFzaWMiLCJpYXQiOjE1MTE5NzI1NDcsIm5iZiI6MTUxMTk3MjU0NywiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyJ9.c5jpr8YksoJmoZ6KUwsYP5fgwZr-jdA4W3JUCbv1vXU\"<\/span>\n<\/span>}<\/code><\/pre>","sent":"2017-11-29T16:23:44.356Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5a1edf8b81cd9a5d7ea13523","text":"I’ve created an issue to ensure this gets updated … https://github.com/alerta/alerta-docs/issues/61","html":"I’ve created an issue to ensure this gets updated … <span data-link-type=\"issue\" data-issue=\"61\" data-issue-repo=\"alerta/alerta-docs\" class=\"issue\">alerta/alerta-docs#61<\/span>","sent":"2017-11-29T16:25:47.961Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta-docs","number":"61"}],"meta":[],"v":1,"burstStart":false},{"id":"5a1eef1b232e79134de9b3f4","text":"Here is the code of the plugin https://gist.github.com/anonymous/bef7b4d1dc470d06f65e08b2f50829c6","html":"Here is the code of the plugin <a href=\"https://gist.github.com/anonymous/bef7b4d1dc470d06f65e08b2f50829c6\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://gist.github.com/anonymous/bef7b4d1dc470d06f65e08b2f50829c6<\/a>","sent":"2017-11-29T17:32:11.757Z","fromUser":{"id":"54da27e515522ed4b3dbd8bd","username":"arindamchoudhury","displayName":"Arindam Choudhury","url":"/arindamchoudhury","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/arindamchoudhury","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1412069?v=4&s=128","v":17,"gv":"4"},"readBy":9,"urls":[{"url":"https://gist.github.com/anonymous/bef7b4d1dc470d06f65e08b2f50829c6"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

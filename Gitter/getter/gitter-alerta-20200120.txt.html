@@ -1,0 +1,1428 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/01/21"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/01/19"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">20<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jan 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5e2562b38e073f465f21e6ec burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e2562b38e073f465f21e6ec' title="">Jan 20 08:20 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hey there guys! I&#39;m trying something and couldn&#39;t figure it out yet. I&#39;d like to use alerta with keycloak using OIDC. I can assign roles and see them in alerta but how can I assign permissions from keycloak? Is there any best practice that you&#39;d like to share? I saw that alerta app passes the &quot;scopes&quot; variable and calls them in api. Any help is much appreciated :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25699b7148837898a7be55 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25699b7148837898a7be55' title="">Jan 20 08:49 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I also know that Alerta uses RBAC(Role Based Access Control) but being able to send roles with set permissions from keycloak is my goal. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e257434dd1429262d583d2c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e257434dd1429262d583d2c' title="">Jan 20 09:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      If using OIDC you make use of a &quot;roles&quot; claim in the JWT. ie. you assign users to roles defined in Keycloak and then in Alerta you map Alerta permissions (ie. scopes like &quot;read:alerts&quot;) to those roles.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25747e7148837898a80c22 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Note: you can whitelist a list of roles that are allowed to login to Alerta using <code>ALLOWED_OIDC_ROLES</code> server setting
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e258cd2dd1429262d58ebcb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e258cd2dd1429262d58ebcb' title="">Jan 20 11:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> ! I&#39;m actually trying this solution right now. Also I&#39;d like to ask one more thing if it&#39;s possible.  I can assign any role from keycloak except &quot;admin&quot;. Is this a feature because &#39;admin&#39; is actually a system role or is it a bug that I have to work around?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25900dea55e3623e878bef burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25900dea55e3623e878bef' title="">Jan 20 11:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Also I found a workaround that I created a role with admin scope in alerta and assigned that role on keycloak to user. Then deleted ADMIN_USERS env. variable from alertad.conf
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e259dd45cd796466081e034 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e259dd45cd796466081e034' title="">Jan 20 12:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="burakksglu" class="mention">@burakksglu</span> the admin role has the admin scope. Assigning the role admin to a user in keycloak should make them an admin. Doesn&#39;t that work?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25a0768e073f465f23b3f3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25a0768e073f465f23b3f3' title="">Jan 20 12:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Unfortunately it didn&#39;t work. It shows admin role on the top right corner with default user scopes which are &#39;read&#39;,&#39;write&#39;. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25a0b6c7647778a5f689d7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      This is my role settings also 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25b1c7c7647778a5f715df burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25b1c7c7647778a5f715df' title="">Jan 20 13:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/zsan/image.png" rel="nofollow noopener noreferrer" target="_blank" class="link "><img src="https://files.gitter.im/alerta/chat/zsan/thumb/image.png" alt="image.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25ba20a259cb0f0605af00 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25ba20a259cb0f0605af00' title="">Jan 20 14:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Alerta app returns &#39;write&#39;, &#39;read&#39; from the method named &quot;def lookup(cls, login: str, roles: List[str])&quot; in permission.py with role &#39;admin&#39;. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25cd08a259cb0f06063e5c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25cd08a259cb0f06063e5c' title="">Jan 20 15:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok. I&#39;ll have to check that. It doesn&#39;t seem right.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e2603d9c319b638aa575a2f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e2603d9c319b638aa575a2f' title="">Jan 20 19:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks! <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I&#39;ll see if I can do more debugging tomorrow.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e2603e6f4d5545210d0f4c0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e2603e6f4d5545210d0f4c0' title="">Jan 20 19:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="burakksglu" class="mention">@burakksglu</span> See <a target="_blank" data-link-type="pr" data-issue="1126" href="https://github.com/alerta/alerta/pull/1126" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#1126</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e2636681e4b0e69d08512b2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cd8c7bcd73408ce4fc0143a avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/32130581?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/32130581?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Derek Lee</div>
+      <div class='chat-item__username js-chat-item-from'>@guohaolee</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e2636681e4b0e69d08512b2' title="">Jan 20 23:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  thanks for this PR :) <a target="_blank" data-link-type="pr" data-issue="264" href="https://github.com/alerta/alerta-webui/pull/264" data-provider="github" data-issue-repo="alerta/alerta-webui" class="pr">alerta/alerta-webui#264</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e26395d3fd0cc7cfe09474c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cd8c7bcd73408ce4fc0143a avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/32130581?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/32130581?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Derek Lee</div>
+      <div class='chat-item__username js-chat-item-from'>@guohaolee</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e26395d3fd0cc7cfe09474c' title="">Jan 20 23:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  for the <a target="_blank" data-link-type="issue" data-issue="264" data-issue-repo="alerta/alerta-webui" class="issue">alerta/alerta-webui#264</a> , do I just add the <code>DEFAULT_FILTER = {&#39;status&#39;: [&#39;open&#39;, &#39;ack&#39;]}</code> to alertad.conf file?
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$6CnUhbP/eFL7fRs+70Ez2Sl5IXxB22edApwz6j47l78=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-01-20T00:00:00.000Z","nextDate":"2020-01-21T23:59:59.999Z","previousDate":"2020-01-19T00:00:00.000Z","messages":[{"id":"5e2562b38e073f465f21e6ec","text":"Hey there guys! I'm trying something and couldn't figure it out yet. I'd like to use alerta with keycloak using OIDC. I can assign roles and see them in alerta but how can I assign permissions from keycloak? Is there any best practice that you'd like to share? I saw that alerta app passes the \"scopes\" variable and calls them in api. Any help is much appreciated :)","html":"Hey there guys! I&#39;m trying something and couldn&#39;t figure it out yet. I&#39;d like to use alerta with keycloak using OIDC. I can assign roles and see them in alerta but how can I assign permissions from keycloak? Is there any best practice that you&#39;d like to share? I saw that alerta app passes the &quot;scopes&quot; variable and calls them in api. Any help is much appreciated :)","sent":"2020-01-20T08:20:03.194Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25699b7148837898a7be55","text":"I also know that Alerta uses RBAC(Role Based Access Control) but being able to send roles with set permissions from keycloak is my goal. ","html":"I also know that Alerta uses RBAC(Role Based Access Control) but being able to send roles with set permissions from keycloak is my goal. ","sent":"2020-01-20T08:49:31.738Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e257434dd1429262d583d2c","text":"If using OIDC you make use of a \"roles\" claim in the JWT. ie. you assign users to roles defined in Keycloak and then in Alerta you map Alerta permissions (ie. scopes like \"read:alerts\") to those roles.","html":"If using OIDC you make use of a &quot;roles&quot; claim in the JWT. ie. you assign users to roles defined in Keycloak and then in Alerta you map Alerta permissions (ie. scopes like &quot;read:alerts&quot;) to those roles.","sent":"2020-01-20T09:34:44.091Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25747e7148837898a80c22","text":"Note: you can whitelist a list of roles that are allowed to login to Alerta using `ALLOWED_OIDC_ROLES` server setting","html":"Note: you can whitelist a list of roles that are allowed to login to Alerta using <code>ALLOWED_OIDC_ROLES<\/code> server setting","sent":"2020-01-20T09:35:58.881Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e258cd2dd1429262d58ebcb","text":"Thanks @satterly ! I'm actually trying this solution right now. Also I'd like to ask one more thing if it's possible.  I can assign any role from keycloak except \"admin\". Is this a feature because 'admin' is actually a system role or is it a bug that I have to work around?","html":"Thanks <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> ! I&#39;m actually trying this solution right now. Also I&#39;d like to ask one more thing if it&#39;s possible.  I can assign any role from keycloak except &quot;admin&quot;. Is this a feature because &#39;admin&#39; is actually a system role or is it a bug that I have to work around?","sent":"2020-01-20T11:19:46.841Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25900dea55e3623e878bef","text":"Also I found a workaround that I created a role with admin scope in alerta and assigned that role on keycloak to user. Then deleted ADMIN_USERS env. variable from alertad.conf","html":"Also I found a workaround that I created a role with admin scope in alerta and assigned that role on keycloak to user. Then deleted ADMIN_USERS env. variable from alertad.conf","sent":"2020-01-20T11:33:33.521Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e259dd45cd796466081e034","text":"@burakksglu the admin role has the admin scope. Assigning the role admin to a user in keycloak should make them an admin. Doesn't that work?","html":"<span data-link-type=\"mention\" data-screen-name=\"burakksglu\" class=\"mention\">@burakksglu<\/span> the admin role has the admin scope. Assigning the role admin to a user in keycloak should make them an admin. Doesn&#39;t that work?","sent":"2020-01-20T12:32:20.078Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"burakksglu","userId":"5e1c6fd7d73408ce4fd68751","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25a0768e073f465f23b3f3","text":"Unfortunately it didn't work. It shows admin role on the top right corner with default user scopes which are 'read','write'. ","html":"Unfortunately it didn&#39;t work. It shows admin role on the top right corner with default user scopes which are &#39;read&#39;,&#39;write&#39;. ","sent":"2020-01-20T12:43:34.375Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25a0b6c7647778a5f689d7","text":"This is my role settings also ","html":"This is my role settings also ","sent":"2020-01-20T12:44:38.591Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e25b1c7c7647778a5f715df","text":"[![image.png](https://files.gitter.im/alerta/chat/zsan/thumb/image.png)](https://files.gitter.im/alerta/chat/zsan/image.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/zsan/image.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \"><img src=\"https://files.gitter.im/alerta/chat/zsan/thumb/image.png\" alt=\"image.png\" rel=\"nofollow\"><\/a>","sent":"2020-01-20T13:57:27.406Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[{"url":"https://files.gitter.im/alerta/chat/zsan/thumb/image.png"},{"url":"https://files.gitter.im/alerta/chat/zsan/image.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25ba20a259cb0f0605af00","text":"Alerta app returns 'write', 'read' from the method named \"def lookup(cls, login: str, roles: List[str])\" in permission.py with role 'admin'. ","html":"Alerta app returns &#39;write&#39;, &#39;read&#39; from the method named &quot;def lookup(cls, login: str, roles: List[str])&quot; in permission.py with role &#39;admin&#39;. ","sent":"2020-01-20T14:33:04.639Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25cd08a259cb0f06063e5c","text":"Ok. I'll have to check that. It doesn't seem right.","html":"Ok. I&#39;ll have to check that. It doesn&#39;t seem right.","sent":"2020-01-20T15:53:44.103Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e2603d9c319b638aa575a2f","text":"Thanks! @satterly I'll see if I can do more debugging tomorrow.","html":"Thanks! <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I&#39;ll see if I can do more debugging tomorrow.","sent":"2020-01-20T19:47:37.965Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e2603e6f4d5545210d0f4c0","text":"@burakksglu See https://github.com/alerta/alerta/pull/1126","html":"<span data-link-type=\"mention\" data-screen-name=\"burakksglu\" class=\"mention\">@burakksglu<\/span> See <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"1126\" href=\"https://github.com/alerta/alerta/pull/1126\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#1126<\/a>","sent":"2020-01-20T19:47:50.652Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"burakksglu","userId":"5e1c6fd7d73408ce4fd68751","userIds":[]}],"issues":[{"repo":"alerta/alerta","number":"1126"}],"meta":[],"v":1,"burstStart":true},{"id":"5e2636681e4b0e69d08512b2","text":"@satterly  thanks for this PR :) https://github.com/alerta/alerta-webui/pull/264","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  thanks for this PR :) <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"264\" href=\"https://github.com/alerta/alerta-webui/pull/264\" data-provider=\"github\" data-issue-repo=\"alerta/alerta-webui\" class=\"pr\">alerta/alerta-webui#264<\/a>","sent":"2020-01-20T23:23:20.556Z","fromUser":{"id":"5cd8c7bcd73408ce4fc0143a","username":"guohaolee","displayName":"Derek Lee","url":"/guohaolee","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/guohaolee","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/32130581?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/32130581?v=4&s=128","v":11,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"repo":"alerta/alerta-webui","number":"264"}],"meta":[],"v":1,"burstStart":true},{"id":"5e26395d3fd0cc7cfe09474c","text":"@satterly  for the alerta/alerta-webui#264 , do I just add the `DEFAULT_FILTER = {'status': ['open', 'ack']}` to alertad.conf file?\n","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  for the <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"264\" data-issue-repo=\"alerta/alerta-webui\" class=\"issue\">alerta/alerta-webui#264<\/a> , do I just add the <code>DEFAULT_FILTER = {&#39;status&#39;: [&#39;open&#39;, &#39;ack&#39;]}<\/code> to alertad.conf file?","sent":"2020-01-20T23:35:57.259Z","fromUser":{"id":"5cd8c7bcd73408ce4fc0143a","username":"guohaolee","displayName":"Derek Lee","url":"/guohaolee","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/guohaolee","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/32130581?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/32130581?v=4&s=128","v":11,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"repo":"alerta/alerta-webui","number":"264"}],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/01/21"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/01/19"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">20<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jan 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5e2562b38e073f465f21e6ec burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e2562b38e073f465f21e6ec' title="">Jan 20 08:20 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hey there guys! I&#39;m trying something and couldn&#39;t figure it out yet. I&#39;d like to use alerta with keycloak using OIDC. I can assign roles and see them in alerta but how can I assign permissions from keycloak? Is there any best practice that you&#39;d like to share? I saw that alerta app passes the &quot;scopes&quot; variable and calls them in api. Any help is much appreciated :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25699b7148837898a7be55 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25699b7148837898a7be55' title="">Jan 20 08:49 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I also know that Alerta uses RBAC(Role Based Access Control) but being able to send roles with set permissions from keycloak is my goal. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e257434dd1429262d583d2c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e257434dd1429262d583d2c' title="">Jan 20 09:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      If using OIDC you make use of a &quot;roles&quot; claim in the JWT. ie. you assign users to roles defined in Keycloak and then in Alerta you map Alerta permissions (ie. scopes like &quot;read:alerts&quot;) to those roles.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25747e7148837898a80c22 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Note: you can whitelist a list of roles that are allowed to login to Alerta using <code>ALLOWED_OIDC_ROLES</code> server setting
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e258cd2dd1429262d58ebcb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e258cd2dd1429262d58ebcb' title="">Jan 20 11:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> ! I&#39;m actually trying this solution right now. Also I&#39;d like to ask one more thing if it&#39;s possible.  I can assign any role from keycloak except &quot;admin&quot;. Is this a feature because &#39;admin&#39; is actually a system role or is it a bug that I have to work around?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25900dea55e3623e878bef burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25900dea55e3623e878bef' title="">Jan 20 11:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Also I found a workaround that I created a role with admin scope in alerta and assigned that role on keycloak to user. Then deleted ADMIN_USERS env. variable from alertad.conf
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e259dd45cd796466081e034 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e259dd45cd796466081e034' title="">Jan 20 12:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="burakksglu" class="mention">@burakksglu</span> the admin role has the admin scope. Assigning the role admin to a user in keycloak should make them an admin. Doesn&#39;t that work?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25a0768e073f465f23b3f3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25a0768e073f465f23b3f3' title="">Jan 20 12:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Unfortunately it didn&#39;t work. It shows admin role on the top right corner with default user scopes which are &#39;read&#39;,&#39;write&#39;. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25a0b6c7647778a5f689d7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      This is my role settings also 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25b1c7c7647778a5f715df burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25b1c7c7647778a5f715df' title="">Jan 20 13:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/zsan/image.png" rel="nofollow noopener noreferrer" target="_blank" class="link "><img src="https://files.gitter.im/alerta/chat/zsan/thumb/image.png" alt="image.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25ba20a259cb0f0605af00 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25ba20a259cb0f0605af00' title="">Jan 20 14:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Alerta app returns &#39;write&#39;, &#39;read&#39; from the method named &quot;def lookup(cls, login: str, roles: List[str])&quot; in permission.py with role &#39;admin&#39;. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e25cd08a259cb0f06063e5c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e25cd08a259cb0f06063e5c' title="">Jan 20 15:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok. I&#39;ll have to check that. It doesn&#39;t seem right.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e2603d9c319b638aa575a2f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e1c6fd7d73408ce4fd68751 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/49399656?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Burak Köseoğlu</div>
+      <div class='chat-item__username js-chat-item-from'>@burakksglu</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e2603d9c319b638aa575a2f' title="">Jan 20 19:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks! <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I&#39;ll see if I can do more debugging tomorrow.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e2603e6f4d5545210d0f4c0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e2603e6f4d5545210d0f4c0' title="">Jan 20 19:47 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="burakksglu" class="mention">@burakksglu</span> See <a target="_blank" data-link-type="pr" data-issue="1126" href="https://github.com/alerta/alerta/pull/1126" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#1126</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e2636681e4b0e69d08512b2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cd8c7bcd73408ce4fc0143a avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/32130581?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/32130581?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Derek Lee</div>
+      <div class='chat-item__username js-chat-item-from'>@guohaolee</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e2636681e4b0e69d08512b2' title="">Jan 20 23:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  thanks for this PR :) <a target="_blank" data-link-type="pr" data-issue="264" href="https://github.com/alerta/alerta-webui/pull/264" data-provider="github" data-issue-repo="alerta/alerta-webui" class="pr">alerta/alerta-webui#264</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e26395d3fd0cc7cfe09474c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cd8c7bcd73408ce4fc0143a avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/32130581?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/32130581?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Derek Lee</div>
+      <div class='chat-item__username js-chat-item-from'>@guohaolee</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/20?at=5e26395d3fd0cc7cfe09474c' title="">Jan 20 23:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  for the <a target="_blank" data-link-type="issue" data-issue="264" data-issue-repo="alerta/alerta-webui" class="issue">alerta/alerta-webui#264</a> , do I just add the <code>DEFAULT_FILTER = {&#39;status&#39;: [&#39;open&#39;, &#39;ack&#39;]}</code> to alertad.conf file?
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$773u46qPIv9PGKxFWXlLbVGeszHeaU6Vsu/6fDGEzB4=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-01-20T00:00:00.000Z","nextDate":"2020-01-21T23:59:59.999Z","previousDate":"2020-01-19T00:00:00.000Z","messages":[{"id":"5e2562b38e073f465f21e6ec","text":"Hey there guys! I'm trying something and couldn't figure it out yet. I'd like to use alerta with keycloak using OIDC. I can assign roles and see them in alerta but how can I assign permissions from keycloak? Is there any best practice that you'd like to share? I saw that alerta app passes the \"scopes\" variable and calls them in api. Any help is much appreciated :)","html":"Hey there guys! I&#39;m trying something and couldn&#39;t figure it out yet. I&#39;d like to use alerta with keycloak using OIDC. I can assign roles and see them in alerta but how can I assign permissions from keycloak? Is there any best practice that you&#39;d like to share? I saw that alerta app passes the &quot;scopes&quot; variable and calls them in api. Any help is much appreciated :)","sent":"2020-01-20T08:20:03.194Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25699b7148837898a7be55","text":"I also know that Alerta uses RBAC(Role Based Access Control) but being able to send roles with set permissions from keycloak is my goal. ","html":"I also know that Alerta uses RBAC(Role Based Access Control) but being able to send roles with set permissions from keycloak is my goal. ","sent":"2020-01-20T08:49:31.738Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e257434dd1429262d583d2c","text":"If using OIDC you make use of a \"roles\" claim in the JWT. ie. you assign users to roles defined in Keycloak and then in Alerta you map Alerta permissions (ie. scopes like \"read:alerts\") to those roles.","html":"If using OIDC you make use of a &quot;roles&quot; claim in the JWT. ie. you assign users to roles defined in Keycloak and then in Alerta you map Alerta permissions (ie. scopes like &quot;read:alerts&quot;) to those roles.","sent":"2020-01-20T09:34:44.091Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25747e7148837898a80c22","text":"Note: you can whitelist a list of roles that are allowed to login to Alerta using `ALLOWED_OIDC_ROLES` server setting","html":"Note: you can whitelist a list of roles that are allowed to login to Alerta using <code>ALLOWED_OIDC_ROLES<\/code> server setting","sent":"2020-01-20T09:35:58.881Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e258cd2dd1429262d58ebcb","text":"Thanks @satterly ! I'm actually trying this solution right now. Also I'd like to ask one more thing if it's possible.  I can assign any role from keycloak except \"admin\". Is this a feature because 'admin' is actually a system role or is it a bug that I have to work around?","html":"Thanks <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> ! I&#39;m actually trying this solution right now. Also I&#39;d like to ask one more thing if it&#39;s possible.  I can assign any role from keycloak except &quot;admin&quot;. Is this a feature because &#39;admin&#39; is actually a system role or is it a bug that I have to work around?","sent":"2020-01-20T11:19:46.841Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25900dea55e3623e878bef","text":"Also I found a workaround that I created a role with admin scope in alerta and assigned that role on keycloak to user. Then deleted ADMIN_USERS env. variable from alertad.conf","html":"Also I found a workaround that I created a role with admin scope in alerta and assigned that role on keycloak to user. Then deleted ADMIN_USERS env. variable from alertad.conf","sent":"2020-01-20T11:33:33.521Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e259dd45cd796466081e034","text":"@burakksglu the admin role has the admin scope. Assigning the role admin to a user in keycloak should make them an admin. Doesn't that work?","html":"<span data-link-type=\"mention\" data-screen-name=\"burakksglu\" class=\"mention\">@burakksglu<\/span> the admin role has the admin scope. Assigning the role admin to a user in keycloak should make them an admin. Doesn&#39;t that work?","sent":"2020-01-20T12:32:20.078Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"burakksglu","userId":"5e1c6fd7d73408ce4fd68751","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25a0768e073f465f23b3f3","text":"Unfortunately it didn't work. It shows admin role on the top right corner with default user scopes which are 'read','write'. ","html":"Unfortunately it didn&#39;t work. It shows admin role on the top right corner with default user scopes which are &#39;read&#39;,&#39;write&#39;. ","sent":"2020-01-20T12:43:34.375Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25a0b6c7647778a5f689d7","text":"This is my role settings also ","html":"This is my role settings also ","sent":"2020-01-20T12:44:38.591Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5e25b1c7c7647778a5f715df","text":"[![image.png](https://files.gitter.im/alerta/chat/zsan/thumb/image.png)](https://files.gitter.im/alerta/chat/zsan/image.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/zsan/image.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \"><img src=\"https://files.gitter.im/alerta/chat/zsan/thumb/image.png\" alt=\"image.png\" rel=\"nofollow\"><\/a>","sent":"2020-01-20T13:57:27.406Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[{"url":"https://files.gitter.im/alerta/chat/zsan/thumb/image.png"},{"url":"https://files.gitter.im/alerta/chat/zsan/image.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25ba20a259cb0f0605af00","text":"Alerta app returns 'write', 'read' from the method named \"def lookup(cls, login: str, roles: List[str])\" in permission.py with role 'admin'. ","html":"Alerta app returns &#39;write&#39;, &#39;read&#39; from the method named &quot;def lookup(cls, login: str, roles: List[str])&quot; in permission.py with role &#39;admin&#39;. ","sent":"2020-01-20T14:33:04.639Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e25cd08a259cb0f06063e5c","text":"Ok. I'll have to check that. It doesn't seem right.","html":"Ok. I&#39;ll have to check that. It doesn&#39;t seem right.","sent":"2020-01-20T15:53:44.103Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e2603d9c319b638aa575a2f","text":"Thanks! @satterly I'll see if I can do more debugging tomorrow.","html":"Thanks! <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I&#39;ll see if I can do more debugging tomorrow.","sent":"2020-01-20T19:47:37.965Z","fromUser":{"id":"5e1c6fd7d73408ce4fd68751","username":"burakksglu","displayName":"Burak Köseoğlu","url":"/burakksglu","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/burakksglu","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/49399656?v=4&s=128","v":15,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e2603e6f4d5545210d0f4c0","text":"@burakksglu See https://github.com/alerta/alerta/pull/1126","html":"<span data-link-type=\"mention\" data-screen-name=\"burakksglu\" class=\"mention\">@burakksglu<\/span> See <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"1126\" href=\"https://github.com/alerta/alerta/pull/1126\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#1126<\/a>","sent":"2020-01-20T19:47:50.652Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"burakksglu","userId":"5e1c6fd7d73408ce4fd68751","userIds":[]}],"issues":[{"repo":"alerta/alerta","number":"1126"}],"meta":[],"v":1,"burstStart":true},{"id":"5e2636681e4b0e69d08512b2","text":"@satterly  thanks for this PR :) https://github.com/alerta/alerta-webui/pull/264","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  thanks for this PR :) <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"264\" href=\"https://github.com/alerta/alerta-webui/pull/264\" data-provider=\"github\" data-issue-repo=\"alerta/alerta-webui\" class=\"pr\">alerta/alerta-webui#264<\/a>","sent":"2020-01-20T23:23:20.556Z","fromUser":{"id":"5cd8c7bcd73408ce4fc0143a","username":"guohaolee","displayName":"Derek Lee","url":"/guohaolee","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/guohaolee","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/32130581?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/32130581?v=4&s=128","v":11,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"repo":"alerta/alerta-webui","number":"264"}],"meta":[],"v":1,"burstStart":true},{"id":"5e26395d3fd0cc7cfe09474c","text":"@satterly  for the alerta/alerta-webui#264 , do I just add the `DEFAULT_FILTER = {'status': ['open', 'ack']}` to alertad.conf file?\n","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  for the <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"264\" data-issue-repo=\"alerta/alerta-webui\" class=\"issue\">alerta/alerta-webui#264<\/a> , do I just add the <code>DEFAULT_FILTER = {&#39;status&#39;: [&#39;open&#39;, &#39;ack&#39;]}<\/code> to alertad.conf file?","sent":"2020-01-20T23:35:57.259Z","fromUser":{"id":"5cd8c7bcd73408ce4fc0143a","username":"guohaolee","displayName":"Derek Lee","url":"/guohaolee","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/guohaolee","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/32130581?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/32130581?v=4&s=128","v":11,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[{"repo":"alerta/alerta-webui","number":"264"}],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

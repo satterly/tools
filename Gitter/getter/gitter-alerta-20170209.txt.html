@@ -1,0 +1,1408 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2017/02/10"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2017/02/08"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">9<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Feb 2017</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-589c330af045df0a2225af03 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c330af045df0a2225af03' title="">Feb 09 2017 09:14 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> Nick, are you here?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c3edcfef1d2de52a99337 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c3edcfef1d2de52a99337' title="">Feb 09 2017 10:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c3f0e4150746b15132739 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="yosefy" class="mention">@yosefy</span> ^
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c3f31de50490822a6baa1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c3f31de50490822a6baa1' title="">Feb 09 2017 10:06 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      say ,whay about app for mobile :). somebldy from comunity talked about it?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c3f6d567b0fc8138cdb70 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c3f6d567b0fc8138cdb70' title="">Feb 09 2017 10:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      it’s on my wish list too :smile: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c3fc0de50490822a6bcb5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c3fc0de50490822a6bcb5' title="">Feb 09 2017 10:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok and another question, sometimes metrics with same name and different labels apears as one alert with label=“a”, label=“b&quot;
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c3fcd872fc8ce6211d51c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      instead of two different alerts
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c3fdd9eb1bd81481c2668 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c3fdd9eb1bd81481c2668' title="">Feb 09 2017 10:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok. you’re talking about prometheus alerts, right?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c3ff8de50490822a6bdc1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c3ff8de50490822a6bdc1' title="">Feb 09 2017 10:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      the one and only
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c404c4150746b15132774 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c404c4150746b15132774' title="">Feb 09 2017 10:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      which part is the same in Alerta? the event or the resource?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c40abf045df0a2225f73f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c40abf045df0a2225f73f' title="">Feb 09 2017 10:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      tags
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c40b800c00c3d4f1662a5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it adds multiple tags with same key
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c40cc1465c46a5640664c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      from two different alerts
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c411e4150746b15132788 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c411e4150746b15132788' title="">Feb 09 2017 10:14 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      two alerts in prometheus become one alert in Alerta ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c41941465c46a56406c96 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c41941465c46a56406c96' title="">Feb 09 2017 10:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c41a6de50490822a6c53a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      which contailns labels from both
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c41af4150746b1513279a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c41af4150746b1513279a' title="">Feb 09 2017 10:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yep. understand. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c41c2de50490822a6c5b4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c41c2de50490822a6c5b4' title="">Feb 09 2017 10:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ans another one is killing me :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c41dc6b2d8dd5521f4d5b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      rule in prometheus:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c41dfde50490822a6c66b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code><span class="xml">    ANNOTATIONS {
+            description = "</span><span class="expression">{{ $<span class="variable">labels.Type</span> }}</span><span class="xml"> (</span><span class="expression">{{ $<span class="variable">labels.instance</span> }}</span><span class="xml">) in region </span><span class="expression">{{ $<span class="variable">labels.region</span> }}</span><span class="xml"> reported has less than 10% free memory in the past 2 minutes: </span><span class="expression">{{ $<span class="variable">value</span> }}</span><span class="xml">%. Monitored by job: </span><span class="expression">{{ $<span class="variable">labels.job</span> }}</span><span class="xml">. Public IP: </span><span class="expression">{{$<span class="variable">labels.public</span>_<span class="variable">ip</span>}}</span><span class="xml"> "</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c41e9f045df0a2225fc66 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it takes all the labels but region
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c41fa00c00c3d4f166941 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      not region and not Region
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c422a4150746b151327ac burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c422a4150746b151327ac' title="">Feb 09 2017 10:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      can you paste the full prometheus alert config here?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c423e21d548df2ce710a1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c423e21d548df2ce710a1' title="">Feb 09 2017 10:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ALERT MemoryUsageCritical<br>        IF (floor(((node_memory_MemFree + node_memory_Buffers + node_memory_Cached)/node_memory_MemTotal )<em>100)) &lt; 10<br>                or<br>                floor((wmi_os_physical_memory_free_bytes </em>100 /  wmi_os_visible_memory_bytes)) &lt; 10<br>        FOR 2m<br>        LABELS { severity = &quot;critical&quot;, value = &quot;{{ $value }}%&quot;,service = &quot;{{ $labels.Type }}&quot; }<br>        ANNOTATIONS {<br>                description = &quot;{{ $labels.Type }} ({{ $labels.instance }}) in region {{ $labels.region }} reported has less than 10% free memory in the past 2 minutes: {{ $value }}%. Monitored by job: {{ $labels.job }}. Public IP: {{$labels.public_ip}} &quot;<br>        }
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42a6567b0fc8138cdbc5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c42a6567b0fc8138cdbc5' title="">Feb 09 2017 10:21 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what’s the <code>alertmanager.yml</code> file look like?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42bdfef1d2de52a993cb burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i think the <code>group_by</code> setting is important.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42bdde50490822a6cb01 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c42bdde50490822a6cb01' title="">Feb 09 2017 10:21 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+        routes:<ul>
+<li>receiver: &#39;alerta&#39;<br>repeat_interval: 10s<br>continue: true</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42ccfef1d2de52a993cd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c42ccfef1d2de52a993cd' title="">Feb 09 2017 10:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      there’s no group_by ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42d2de50490822a6cb34 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c42d2de50490822a6cb34' title="">Feb 09 2017 10:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      no
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42def045df0a22260111 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i want to see all the alerts in alerta
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42e81465c46a5640735d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      group by i use for mails and such
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42edfef1d2de52a993d1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c42edfef1d2de52a993d1' title="">Feb 09 2017 10:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i think you still need a group by.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42f8872fc8ce6211e9b7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c42f8872fc8ce6211e9b7' title="">Feb 09 2017 10:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      which one?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c42fc4150746b151327ce burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c42fc4150746b151327ce' title="">Feb 09 2017 10:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      my understanding is you need to group by something
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c430d4150746b151327d1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code><span class="attribute">global</span>:
+  # The smarthost and SMTP sender used for mail notifications.
+  <span class="attribute">smtp_smarthost</span>: <span class="string">'localhost:25'</span>
+  <span class="attribute">smtp_from</span>: <span class="string">'alertmanager@example.org'</span>
+
+<span class="attribute">route</span>:
+  <span class="attribute">receiver</span>: <span class="string">"alerta"</span>
+  <span class="attribute">group_by</span>: [<span class="string">'alertname'</span>]
+  <span class="attribute">group_wait</span>:      <span class="number">30s</span>
+  <span class="attribute">group_interval</span>:  <span class="number">5</span>m
+  <span class="attribute">repeat_interval</span>: <span class="number">2</span>h
+
+<span class="attribute">receivers</span>:
+- <span class="attribute">name</span>: <span class="string">"alerta"</span>
+  <span class="attribute">webhook_configs</span>:
+  - <span class="attribute">url</span>: <span class="string">'http://localhost:8080/webhooks/prometheus'</span>
+    <span class="attribute">send_resolved</span>: true</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c432d567b0fc8138cdbe4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      “alertname” becomes the Alerta “event&quot;
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c4341872fc8ce6211ead8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c4341872fc8ce6211ead8' title="">Feb 09 2017 10:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      then it will send multiple alerts in one webhook i think
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c43439eb1bd81481c26d3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c43439eb1bd81481c26d3' title="">Feb 09 2017 10:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I’m not a promtheus expert and this part of it does confuse me.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c4348aa800ee52c710c4e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c4348aa800ee52c710c4e' title="">Feb 09 2017 10:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      eith same alertname
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c4350fef1d2de52a993e4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c4350fef1d2de52a993e4' title="">Feb 09 2017 10:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      you might be right
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c435a4150746b151327dd burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i think it’s worth a try to see what happens though
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c43641465c46a564075a4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c43641465c46a564075a4' title="">Feb 09 2017 10:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c43686b2d8dd5521f5aa5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      will try and update
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c4371567b0fc8138cdbe9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c4371567b0fc8138cdbe9' title="">Feb 09 2017 10:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      might be worth asking on the prometheus forum for advice.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c4386fef1d2de52a993e8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      report back here if you find out anything
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c4391de50490822a6ceac burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c4391de50490822a6ceac' title="">Feb 09 2017 10:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      they ignore my questions lately for some reason :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c43a4fef1d2de52a993ec burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c43a4fef1d2de52a993ec' title="">Feb 09 2017 10:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok, well i’ll do some testing of my own but it might take me a while to get round to it
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c43ad00c00c3d4f167646 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c43ad00c00c3d4f167646' title="">Feb 09 2017 10:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      btw gitlab itegrated prometheus now.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c43b721d548df2ce71765 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      don’t bother i’ll do and update
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c43d5aa800ee52c710f64 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but whats with the “region thing&quot;
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c43e200c00c3d4f167739 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      may be has some hardcoded meaning?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c4618fef1d2de52a99422 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c4618fef1d2de52a99422' title="">Feb 09 2017 10:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Is it something to do with the fact “region” is an external label?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c46311465c46a56408972 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c46311465c46a56408972' title="">Feb 09 2017 10:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      nope, i have tried both
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c463e00c00c3d4f16885d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      trying now to call it pegion
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c46ac9eb1bd81481c2766 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c46ac9eb1bd81481c2766' title="">Feb 09 2017 10:38 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      found this <a href="https://about.gitlab.com/2017/01/05/prometheus-and-gitlab/" rel="nofollow" target="_blank" class="link">https://about.gitlab.com/2017/01/05/prometheus-and-gitlab/</a>  looks interesting
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c470c21d548df2ce72d5c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586cd05ed73408ce4f4120a2 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/12940013?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yosefy</div>
+      <div class='chat-item__username js-chat-item-from'>@yosefy</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c470c21d548df2ce72d5c' title="">Feb 09 2017 10:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok it works when i replace <span data-link-type="mention" data-screen-name="lables" class="mention">@lables</span>.region to <span data-link-type="mention" data-screen-name="labels" class="mention">@labels</span>.pegion
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c4754aa800ee52c71236f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but its some prometheus thing as opsgenie behaves the same
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c476400c00c3d4f168e3f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      thanks for helping :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-589c48434150746b1513286d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/09?at=589c48434150746b1513286d' title="">Feb 09 2017 10:45 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      no problem. 
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$vsNMv31HTyJjoG758Q1VIv4Yrh+irzrO4FaJHf/bfWc=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2017-02-09T00:00:00.000Z","nextDate":"2017-02-10T23:59:59.999Z","previousDate":"2017-02-08T00:00:00.000Z","messages":[{"id":"589c330af045df0a2225af03","text":"@satterly Nick, are you here?","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> Nick, are you here?","sent":"2017-02-09T09:14:50.670Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c3edcfef1d2de52a99337","text":"hi","html":"hi","sent":"2017-02-09T10:05:16.195Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c3f0e4150746b15132739","text":"@yosefy ^","html":"<span data-link-type=\"mention\" data-screen-name=\"yosefy\" class=\"mention\">@yosefy<\/span> ^","sent":"2017-02-09T10:06:06.379Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[{"screenName":"yosefy","userId":"586cd05ed73408ce4f4120a2","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c3f31de50490822a6baa1","text":"say ,whay about app for mobile :). somebldy from comunity talked about it?","html":"say ,whay about app for mobile :). somebldy from comunity talked about it?","sent":"2017-02-09T10:06:41.383Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c3f6d567b0fc8138cdb70","text":"it’s on my wish list too :smile: ","html":"it’s on my wish list too :smile: ","sent":"2017-02-09T10:07:41.225Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c3fc0de50490822a6bcb5","text":"ok and another question, sometimes metrics with same name and different labels apears as one alert with label=“a”, label=“b\"","html":"ok and another question, sometimes metrics with same name and different labels apears as one alert with label=“a”, label=“b&quot;","sent":"2017-02-09T10:09:04.634Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c3fcd872fc8ce6211d51c","text":"instead of two different alerts","html":"instead of two different alerts","sent":"2017-02-09T10:09:17.783Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c3fdd9eb1bd81481c2668","text":"ok. you’re talking about prometheus alerts, right?","html":"ok. you’re talking about prometheus alerts, right?","sent":"2017-02-09T10:09:33.150Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c3ff8de50490822a6bdc1","text":"the one and only","html":"the one and only","sent":"2017-02-09T10:10:00.186Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c404c4150746b15132774","text":"which part is the same in Alerta? the event or the resource?","html":"which part is the same in Alerta? the event or the resource?","sent":"2017-02-09T10:11:24.090Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c40abf045df0a2225f73f","text":"tags","html":"tags","sent":"2017-02-09T10:12:59.903Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c40b800c00c3d4f1662a5","text":"it adds multiple tags with same key","html":"it adds multiple tags with same key","sent":"2017-02-09T10:13:12.875Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c40cc1465c46a5640664c","text":"from two different alerts","html":"from two different alerts","sent":"2017-02-09T10:13:32.629Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c411e4150746b15132788","text":"two alerts in prometheus become one alert in Alerta ?","html":"two alerts in prometheus become one alert in Alerta ?","sent":"2017-02-09T10:14:54.507Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c41941465c46a56406c96","text":"yes","html":"yes","sent":"2017-02-09T10:16:52.989Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c41a6de50490822a6c53a","text":"which contailns labels from both","html":"which contailns labels from both","sent":"2017-02-09T10:17:10.766Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c41af4150746b1513279a","text":"yep. understand. ","html":"yep. understand. ","sent":"2017-02-09T10:17:19.913Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c41c2de50490822a6c5b4","text":"ans another one is killing me :)","html":"ans another one is killing me :)","sent":"2017-02-09T10:17:38.097Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c41dc6b2d8dd5521f4d5b","text":"rule in prometheus:","html":"rule in prometheus:","sent":"2017-02-09T10:18:04.789Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c41dfde50490822a6c66b","text":"        ANNOTATIONS {\n                description = \"{{ $labels.Type }} ({{ $labels.instance }}) in region {{ $labels.region }} reported has less than 10% free memory in the past 2 minutes: {{ $value }}%. Monitored by job: {{ $labels.job }}. Public IP: {{$labels.public_ip}} \"","html":"<pre><code><span class=\"xml\">    ANNOTATIONS {\n            description = \"<\/span><span class=\"expression\">{{ $<span class=\"variable\">labels.Type<\/span> }}<\/span><span class=\"xml\"> (<\/span><span class=\"expression\">{{ $<span class=\"variable\">labels.instance<\/span> }}<\/span><span class=\"xml\">) in region <\/span><span class=\"expression\">{{ $<span class=\"variable\">labels.region<\/span> }}<\/span><span class=\"xml\"> reported has less than 10% free memory in the past 2 minutes: <\/span><span class=\"expression\">{{ $<span class=\"variable\">value<\/span> }}<\/span><span class=\"xml\">%. Monitored by job: <\/span><span class=\"expression\">{{ $<span class=\"variable\">labels.job<\/span> }}<\/span><span class=\"xml\">. Public IP: <\/span><span class=\"expression\">{{$<span class=\"variable\">labels.public<\/span>_<span class=\"variable\">ip<\/span>}}<\/span><span class=\"xml\"> \"<\/span><\/code><\/pre>","sent":"2017-02-09T10:18:07.491Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c41e9f045df0a2225fc66","text":"it takes all the labels but region","html":"it takes all the labels but region","sent":"2017-02-09T10:18:17.531Z","editedAt":"2017-02-09T10:18:25.777Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"589c41fa00c00c3d4f166941","text":"not region and not Region","html":"not region and not Region","sent":"2017-02-09T10:18:34.165Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c422a4150746b151327ac","text":"can you paste the full prometheus alert config here?","html":"can you paste the full prometheus alert config here?","sent":"2017-02-09T10:19:22.103Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c423e21d548df2ce710a1","text":"ALERT MemoryUsageCritical\n        IF (floor(((node_memory_MemFree + node_memory_Buffers + node_memory_Cached)/node_memory_MemTotal )*100)) < 10\n                or\n                floor((wmi_os_physical_memory_free_bytes *100 /  wmi_os_visible_memory_bytes)) < 10\n        FOR 2m\n        LABELS { severity = \"critical\", value = \"{{ $value }}%\",service = \"{{ $labels.Type }}\" }\n        ANNOTATIONS {\n                description = \"{{ $labels.Type }} ({{ $labels.instance }}) in region {{ $labels.region }} reported has less than 10% free memory in the past 2 minutes: {{ $value }}%. Monitored by job: {{ $labels.job }}. Public IP: {{$labels.public_ip}} \"\n        }","html":"ALERT MemoryUsageCritical<br>        IF (floor(((node_memory_MemFree + node_memory_Buffers + node_memory_Cached)/node_memory_MemTotal )<em>100)) &lt; 10<br>                or<br>                floor((wmi_os_physical_memory_free_bytes <\/em>100 /  wmi_os_visible_memory_bytes)) &lt; 10<br>        FOR 2m<br>        LABELS { severity = &quot;critical&quot;, value = &quot;{{ $value }}%&quot;,service = &quot;{{ $labels.Type }}&quot; }<br>        ANNOTATIONS {<br>                description = &quot;{{ $labels.Type }} ({{ $labels.instance }}) in region {{ $labels.region }} reported has less than 10% free memory in the past 2 minutes: {{ $value }}%. Monitored by job: {{ $labels.job }}. Public IP: {{$labels.public_ip}} &quot;<br>        }","sent":"2017-02-09T10:19:42.837Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c42a6567b0fc8138cdbc5","text":"what’s the `alertmanager.yml` file look like?","html":"what’s the <code>alertmanager.yml<\/code> file look like?","sent":"2017-02-09T10:21:26.489Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c42bdfef1d2de52a993cb","text":"i think the `group_by` setting is important.","html":"i think the <code>group_by<\/code> setting is important.","sent":"2017-02-09T10:21:49.197Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c42bdde50490822a6cb01","text":"  routes:\n  - receiver: 'alerta'\n    repeat_interval: 10s\n    continue: true","html":"  routes:<ul>\n<li>receiver: &#39;alerta&#39;<br>repeat_interval: 10s<br>continue: true<\/li>\n<\/ul>\n","sent":"2017-02-09T10:21:49.511Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c42ccfef1d2de52a993cd","text":"there’s no group_by ?","html":"there’s no group_by ?","sent":"2017-02-09T10:22:04.470Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c42d2de50490822a6cb34","text":"no","html":"no","sent":"2017-02-09T10:22:10.345Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c42def045df0a22260111","text":"i want to see all the alerts in alerta","html":"i want to see all the alerts in alerta","sent":"2017-02-09T10:22:22.101Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c42e81465c46a5640735d","text":"group by i use for mails and such","html":"group by i use for mails and such","sent":"2017-02-09T10:22:32.548Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c42edfef1d2de52a993d1","text":"i think you still need a group by.","html":"i think you still need a group by.","sent":"2017-02-09T10:22:37.851Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c42f8872fc8ce6211e9b7","text":"which one?","html":"which one?","sent":"2017-02-09T10:22:48.997Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c42fc4150746b151327ce","text":"my understanding is you need to group by something","html":"my understanding is you need to group by something","sent":"2017-02-09T10:22:52.076Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c430d4150746b151327d1","text":"```\nglobal:\n  # The smarthost and SMTP sender used for mail notifications.\n  smtp_smarthost: 'localhost:25'\n  smtp_from: 'alertmanager@example.org'\n\nroute:\n  receiver: \"alerta\"\n  group_by: ['alertname']\n  group_wait:      30s\n  group_interval:  5m\n  repeat_interval: 2h\n\nreceivers:\n- name: \"alerta\"\n  webhook_configs:\n  - url: 'http://localhost:8080/webhooks/prometheus'\n    send_resolved: true\n```","html":"<pre><code><span class=\"attribute\">global<\/span>:\n  # The smarthost and SMTP sender used for mail notifications.\n  <span class=\"attribute\">smtp_smarthost<\/span>: <span class=\"string\">'localhost:25'<\/span>\n  <span class=\"attribute\">smtp_from<\/span>: <span class=\"string\">'alertmanager@example.org'<\/span>\n\n<span class=\"attribute\">route<\/span>:\n  <span class=\"attribute\">receiver<\/span>: <span class=\"string\">\"alerta\"<\/span>\n  <span class=\"attribute\">group_by<\/span>: [<span class=\"string\">'alertname'<\/span>]\n  <span class=\"attribute\">group_wait<\/span>:      <span class=\"number\">30s<\/span>\n  <span class=\"attribute\">group_interval<\/span>:  <span class=\"number\">5<\/span>m\n  <span class=\"attribute\">repeat_interval<\/span>: <span class=\"number\">2<\/span>h\n\n<span class=\"attribute\">receivers<\/span>:\n- <span class=\"attribute\">name<\/span>: <span class=\"string\">\"alerta\"<\/span>\n  <span class=\"attribute\">webhook_configs<\/span>:\n  - <span class=\"attribute\">url<\/span>: <span class=\"string\">'http://localhost:8080/webhooks/prometheus'<\/span>\n    <span class=\"attribute\">send_resolved<\/span>: true<\/code><\/pre>","sent":"2017-02-09T10:23:09.756Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c432d567b0fc8138cdbe4","text":"“alertname” becomes the Alerta “event\"","html":"“alertname” becomes the Alerta “event&quot;","sent":"2017-02-09T10:23:41.085Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c4341872fc8ce6211ead8","text":"then it will send multiple alerts in one webhook i think","html":"then it will send multiple alerts in one webhook i think","sent":"2017-02-09T10:24:01.510Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c43439eb1bd81481c26d3","text":"I’m not a promtheus expert and this part of it does confuse me.","html":"I’m not a promtheus expert and this part of it does confuse me.","sent":"2017-02-09T10:24:03.579Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c4348aa800ee52c710c4e","text":"eith same alertname","html":"eith same alertname","sent":"2017-02-09T10:24:08.211Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c4350fef1d2de52a993e4","text":"you might be right","html":"you might be right","sent":"2017-02-09T10:24:16.871Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c435a4150746b151327dd","text":"i think it’s worth a try to see what happens though","html":"i think it’s worth a try to see what happens though","sent":"2017-02-09T10:24:26.019Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c43641465c46a564075a4","text":"i","html":"i","sent":"2017-02-09T10:24:36.134Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c43686b2d8dd5521f5aa5","text":"will try and update","html":"will try and update","sent":"2017-02-09T10:24:40.932Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c4371567b0fc8138cdbe9","text":"might be worth asking on the prometheus forum for advice.","html":"might be worth asking on the prometheus forum for advice.","sent":"2017-02-09T10:24:49.708Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c4386fef1d2de52a993e8","text":"report back here if you find out anything","html":"report back here if you find out anything","sent":"2017-02-09T10:25:10.358Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c4391de50490822a6ceac","text":"they ignore my questions lately for some reason :)","html":"they ignore my questions lately for some reason :)","sent":"2017-02-09T10:25:21.566Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c43a4fef1d2de52a993ec","text":"ok, well i’ll do some testing of my own but it might take me a while to get round to it","html":"ok, well i’ll do some testing of my own but it might take me a while to get round to it","sent":"2017-02-09T10:25:40.116Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c43ad00c00c3d4f167646","text":"btw gitlab itegrated prometheus now.","html":"btw gitlab itegrated prometheus now.","sent":"2017-02-09T10:25:49.266Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c43b721d548df2ce71765","text":"don’t bother i’ll do and update","html":"don’t bother i’ll do and update","sent":"2017-02-09T10:25:59.059Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c43d5aa800ee52c710f64","text":"but whats with the “region thing\"","html":"but whats with the “region thing&quot;","sent":"2017-02-09T10:26:29.748Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c43e200c00c3d4f167739","text":"may be has some hardcoded meaning?","html":"may be has some hardcoded meaning?","sent":"2017-02-09T10:26:42.742Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c4618fef1d2de52a99422","text":"Is it something to do with the fact “region” is an external label?","html":"Is it something to do with the fact “region” is an external label?","sent":"2017-02-09T10:36:08.044Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c46311465c46a56408972","text":"nope, i have tried both","html":"nope, i have tried both","sent":"2017-02-09T10:36:33.900Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c463e00c00c3d4f16885d","text":"trying now to call it pegion","html":"trying now to call it pegion","sent":"2017-02-09T10:36:46.824Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c46ac9eb1bd81481c2766","text":"found this https://about.gitlab.com/2017/01/05/prometheus-and-gitlab/  looks interesting","html":"found this <a href=\"https://about.gitlab.com/2017/01/05/prometheus-and-gitlab/\" rel=\"nofollow\" target=\"_blank\" class=\"link\">https://about.gitlab.com/2017/01/05/prometheus-and-gitlab/<\/a>  looks interesting","sent":"2017-02-09T10:38:36.246Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[{"url":"https://about.gitlab.com/2017/01/05/prometheus-and-gitlab/"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c470c21d548df2ce72d5c","text":"ok it works when i replace @lables.region to @labels.pegion","html":"ok it works when i replace <span data-link-type=\"mention\" data-screen-name=\"lables\" class=\"mention\">@lables<\/span>.region to <span data-link-type=\"mention\" data-screen-name=\"labels\" class=\"mention\">@labels<\/span>.pegion","sent":"2017-02-09T10:40:12.910Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[{"screenName":"lables","userIds":[]},{"screenName":"labels","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"589c4754aa800ee52c71236f","text":"but its some prometheus thing as opsgenie behaves the same","html":"but its some prometheus thing as opsgenie behaves the same","sent":"2017-02-09T10:41:24.107Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c476400c00c3d4f168e3f","text":"thanks for helping :)","html":"thanks for helping :)","sent":"2017-02-09T10:41:40.012Z","fromUser":{"id":"586cd05ed73408ce4f4120a2","username":"yosefy","displayName":"yosefy","url":"/yosefy","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/yosefy","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/12940013?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"589c48434150746b1513286d","text":"no problem. ","html":"no problem. ","sent":"2017-02-09T10:45:23.227Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

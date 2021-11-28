@@ -1,0 +1,941 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2015/11/03"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2015/11/01"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">2<sup>nd</sup></span><br>
+      <span class="gtrArchiveMonth">Nov 2015</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5637d4720800da954de680a1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637d4720800da954de680a1' title="">Nov 02 2015 21:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I was thinking of writing a simple email plugin, since we don&#39;t use pagerduty.  Anyone forsee any problems with following the same logic as the pagerduty/hipchat alerta-contrib plugins?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637ec54a530033014e3a90d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637ec54a530033014e3a90d' title="">Nov 02 2015 23:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="blysik" class="mention">@blysik</span> that would work, however you want to be sure it doesn’t block if the mail server is unavailable. you should timeout agressively otherwise alerta migth hang.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637ecf23003682f1408db70 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      just so that you know, there is a mailer daemon that was written a while ago that listens for alerts pushed to an AMQP message bus. the key difference with a simple plugin is that it will hold on to an alert for a short period of time (30 seconds) and if a clear/normal alert is received within that window it will not send an email. we used this for a long time before we switched to pager duty and it worked well for us.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637ecfb3003682f1408db72 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      check out the smtp mailer here <a href="https://github.com/alerta/alerta-contrib/blob/master/integrations/amqp/mailer.py" rel="nofollow" target="_blank" class="link">https://github.com/alerta/alerta-contrib/blob/master/integrations/amqp/mailer.py</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637ed2964376ec44425d195 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637ed2964376ec44425d195' title="">Nov 02 2015 23:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;m trying to avoid setting up amqp. :)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637ed37c74a90c744790a79 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but i&#39;ll take that advice on timing out
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637ed983bf31666111225a4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      another question: I see that most of these have a if alert.repeat block, to not send alerts repeatedly.  Is there any data in an alert so that I could define an interval like: only repeat an alert if X minutes have passed?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637edfe0d4ff3974d48d108 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637edfe0d4ff3974d48d108' title="">Nov 02 2015 23:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes, you could calculate the time difference between the createTime and the lastReceiveTime attributes.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637ee30aefcbd6411ee1de4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      all attributes for an alert are listed here <a href="http://docs.alerta.io/en/latest/api/alert.html#attributes" rel="nofollow" target="_blank" class="link">http://docs.alerta.io/en/latest/api/alert.html#attributes</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637ee83c74a90c744790a90 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637ee83c74a90c744790a90' title="">Nov 02 2015 23:15 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      aha, thanks!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637eecc3003682f1408dbe1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637eecc3003682f1408dbe1' title="">Nov 02 2015 23:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      by the way, you don’t need to go to the trouble of installing RabbitMQ or whatever just to get an AMQP message queue running. The Kombu python package that alerta uses to connect to AMQP supports <em>lots</em> of different transports. For example, you can use MongoDB as the AMQP transport and it is actually used by default in alerta if you enable the “amqp” plugin. see <a href="https://github.com/guardian/alerta/blob/master/alerta/settings.py#L54" rel="nofollow" target="_blank" class="link">https://github.com/guardian/alerta/blob/master/alerta/settings.py#L54</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f1b6a530033014e3aa91 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f1b6a530033014e3aa91' title="">Nov 02 2015 23:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hmm.  i&#39;ll look into that!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f1e7a530033014e3aa99 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      oh, and i have redis available.  maybe i&#39;ll just scrap this and use your mailer daemon
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f37564376ec44425d20d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f37564376ec44425d20d' title="">Nov 02 2015 23:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      so i have REDIS_URL env variable available,  what is the correct way to set AMQP_URL  equal to my REDIS_URL ?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f3d764376ec44425d217 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      add a line to read it from the env in settings.py, and then set it there?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f51baefcbd6411ee1e82 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f51baefcbd6411ee1e82' title="">Nov 02 2015 23:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      and of course, i can&#39;t see where you actually tell alerta to use the mailer.py integration
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f5513003682f1408dd83 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f5513003682f1408dd83' title="">Nov 02 2015 23:44 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      set AMQP_URL to your REDIS_URL (eg &#39;redis://localhost:6379/&#39;) in your alertad.conf file. Do not edit the settings.py in the alerta package directory.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f59a0800da954de68404 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      you MUST enable the amqp plugin and then all alerts will automatically be pushed to the AMQP message bus. if the mailer is running it will listen for all alerts on the message bus.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f61fa530033014e3ab95 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      actually, now that i’m looking at it closely i can see that it hasn’t been updated to work with version 4 of alerta.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f63f3003682f1408ddb3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      the way config settings are made was very different back then.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f66d3003682f1408ddc5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it might be best to get your simple plugin working first and i’ll have a look at updating the mailer daemon code in the next few days.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f68ba530033014e3abab burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f68ba530033014e3abab' title="">Nov 02 2015 23:49 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      okay, cool
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f6a5a530033014e3abb3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i can&#39;t just set AMQP_URL to my REDIS_URL, because the REDIS_URL is machine generated and stored in an env variable.  I never really know it.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f6daa530033014e3abc2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f6daa530033014e3abc2' title="">Nov 02 2015 23:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      oh i see.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f74764376ec44425d266 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f74764376ec44425d266' title="">Nov 02 2015 23:52 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      it&#39;s basically like DATABASE_URL in Heroku
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f74c3003682f1408ddf1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f74c3003682f1408ddf1' title="">Nov 02 2015 23:52 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i could make a change to settings.py to look for a REDIS_URL env var and if it exists, then set AMQP_URL to that value otherwise just use the default MongoDb 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f76e3003682f1408ddf8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      what is the exact format of the REDIS_URL? is it “redis://host:port/“?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f7760800da954de6842b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f7760800da954de6842b' title="">Nov 02 2015 23:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      let me find an example
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f77a3003682f1408ddf9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f77a3003682f1408ddf9' title="">Nov 02 2015 23:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      k
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f85ea530033014e3ac1c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f85ea530033014e3ac1c' title="">Nov 02 2015 23:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok, here&#39;s a real example: REDIS_URL=redis://redisdb:<a href="mailto:_mEA-E_g09Jo8KhDAjZhJLW24LwayvvwF76PKZJOmak@randomhostname" rel="nofollow">_mEA-E_g09Jo8KhDAjZhJLW24LwayvvwF76PKZJOmak@randomhostname</a>:13985/0
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f86d3003682f1408de35 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      user:<a href="mailto:pass@hostname" rel="nofollow">pass@hostname</a>:port/channel
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f86e3003682f1408de36 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i guess
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f8743003682f1408de37 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      whoops, silly emoji
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f8aa3003682f1408de46 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f8aa3003682f1408de46' title="">Nov 02 2015 23:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok. that looks like something Kombu would support … <a href="http://docs.celeryproject.org/projects/kombu/en/latest/userguide/connections.html#urls" rel="nofollow" target="_blank" class="link">http://docs.celeryproject.org/projects/kombu/en/latest/userguide/connections.html#urls</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5637f8caa530033014e3ac40 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5637d43d16b6c7089cb939a8 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/58610?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>blysik</div>
+      <div class='chat-item__username js-chat-item-from'>@blysik</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2015/11/02?at=5637f8caa530033014e3ac40' title="">Nov 02 2015 23:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      looks right
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$LVmlA7/hmLupPVHgi0KbDGyW01LcPsOhBTmoF4DhMUI=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":377,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2015-11-02T00:00:00.000Z","nextDate":"2015-11-03T23:59:59.999Z","previousDate":"2015-11-01T00:00:00.000Z","messages":[{"id":"5637d4720800da954de680a1","text":"I was thinking of writing a simple email plugin, since we don't use pagerduty.  Anyone forsee any problems with following the same logic as the pagerduty/hipchat alerta-contrib plugins?","html":"I was thinking of writing a simple email plugin, since we don&#39;t use pagerduty.  Anyone forsee any problems with following the same logic as the pagerduty/hipchat alerta-contrib plugins?","sent":"2015-11-02T21:24:02.904Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637ec54a530033014e3a90d","text":"@blysik that would work, however you want to be sure it doesn’t block if the mail server is unavailable. you should timeout agressively otherwise alerta migth hang.","html":"<span data-link-type=\"mention\" data-screen-name=\"blysik\" class=\"mention\">@blysik<\/span> that would work, however you want to be sure it doesn’t block if the mail server is unavailable. you should timeout agressively otherwise alerta migth hang.","sent":"2015-11-02T23:05:56.353Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[{"screenName":"blysik","userId":"5637d43d16b6c7089cb939a8","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637ecf23003682f1408db70","text":"just so that you know, there is a mailer daemon that was written a while ago that listens for alerts pushed to an AMQP message bus. the key difference with a simple plugin is that it will hold on to an alert for a short period of time (30 seconds) and if a clear/normal alert is received within that window it will not send an email. we used this for a long time before we switched to pager duty and it worked well for us.","html":"just so that you know, there is a mailer daemon that was written a while ago that listens for alerts pushed to an AMQP message bus. the key difference with a simple plugin is that it will hold on to an alert for a short period of time (30 seconds) and if a clear/normal alert is received within that window it will not send an email. we used this for a long time before we switched to pager duty and it worked well for us.","sent":"2015-11-02T23:08:34.107Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637ecfb3003682f1408db72","text":"check out the smtp mailer here https://github.com/alerta/alerta-contrib/blob/master/integrations/amqp/mailer.py","html":"check out the smtp mailer here <a href=\"https://github.com/alerta/alerta-contrib/blob/master/integrations/amqp/mailer.py\" rel=\"nofollow\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-contrib/blob/master/integrations/amqp/mailer.py<\/a>","sent":"2015-11-02T23:08:43.692Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[{"url":"https://github.com/alerta/alerta-contrib/blob/master/integrations/amqp/mailer.py"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637ed2964376ec44425d195","text":"I'm trying to avoid setting up amqp. :)","html":"I&#39;m trying to avoid setting up amqp. :)","sent":"2015-11-02T23:09:29.791Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637ed37c74a90c744790a79","text":"but i'll take that advice on timing out","html":"but i&#39;ll take that advice on timing out","sent":"2015-11-02T23:09:43.888Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637ed983bf31666111225a4","text":"another question: I see that most of these have a if alert.repeat block, to not send alerts repeatedly.  Is there any data in an alert so that I could define an interval like: only repeat an alert if X minutes have passed?","html":"another question: I see that most of these have a if alert.repeat block, to not send alerts repeatedly.  Is there any data in an alert so that I could define an interval like: only repeat an alert if X minutes have passed?","sent":"2015-11-02T23:11:20.378Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637edfe0d4ff3974d48d108","text":"yes, you could calculate the time difference between the createTime and the lastReceiveTime attributes.","html":"yes, you could calculate the time difference between the createTime and the lastReceiveTime attributes.","sent":"2015-11-02T23:13:02.015Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637ee30aefcbd6411ee1de4","text":"all attributes for an alert are listed here http://docs.alerta.io/en/latest/api/alert.html#attributes","html":"all attributes for an alert are listed here <a href=\"http://docs.alerta.io/en/latest/api/alert.html#attributes\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://docs.alerta.io/en/latest/api/alert.html#attributes<\/a>","sent":"2015-11-02T23:13:52.924Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[{"url":"http://docs.alerta.io/en/latest/api/alert.html#attributes"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637ee83c74a90c744790a90","text":"aha, thanks!","html":"aha, thanks!","sent":"2015-11-02T23:15:15.042Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637eecc3003682f1408dbe1","text":"by the way, you don’t need to go to the trouble of installing RabbitMQ or whatever just to get an AMQP message queue running. The Kombu python package that alerta uses to connect to AMQP supports *lots* of different transports. For example, you can use MongoDB as the AMQP transport and it is actually used by default in alerta if you enable the “amqp” plugin. see https://github.com/guardian/alerta/blob/master/alerta/settings.py#L54","html":"by the way, you don’t need to go to the trouble of installing RabbitMQ or whatever just to get an AMQP message queue running. The Kombu python package that alerta uses to connect to AMQP supports <em>lots<\/em> of different transports. For example, you can use MongoDB as the AMQP transport and it is actually used by default in alerta if you enable the “amqp” plugin. see <a href=\"https://github.com/guardian/alerta/blob/master/alerta/settings.py#L54\" rel=\"nofollow\" target=\"_blank\" class=\"link\">https://github.com/guardian/alerta/blob/master/alerta/settings.py#L54<\/a>","sent":"2015-11-02T23:16:28.768Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[{"url":"https://github.com/guardian/alerta/blob/master/alerta/settings.py#L54"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f1b6a530033014e3aa91","text":"hmm.  i'll look into that!","html":"hmm.  i&#39;ll look into that!","sent":"2015-11-02T23:28:54.061Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f1e7a530033014e3aa99","text":"oh, and i have redis available.  maybe i'll just scrap this and use your mailer daemon","html":"oh, and i have redis available.  maybe i&#39;ll just scrap this and use your mailer daemon","sent":"2015-11-02T23:29:43.448Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f37564376ec44425d20d","text":"so i have REDIS_URL env variable available,  what is the correct way to set AMQP_URL  equal to my REDIS_URL ?","html":"so i have REDIS_URL env variable available,  what is the correct way to set AMQP_URL  equal to my REDIS_URL ?","sent":"2015-11-02T23:36:21.844Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f3d764376ec44425d217","text":"add a line to read it from the env in settings.py, and then set it there?","html":"add a line to read it from the env in settings.py, and then set it there?","sent":"2015-11-02T23:37:59.963Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f51baefcbd6411ee1e82","text":"and of course, i can't see where you actually tell alerta to use the mailer.py integration","html":"and of course, i can&#39;t see where you actually tell alerta to use the mailer.py integration","sent":"2015-11-02T23:43:23.767Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f5513003682f1408dd83","text":"set AMQP_URL to your REDIS_URL (eg 'redis://localhost:6379/') in your alertad.conf file. Do not edit the settings.py in the alerta package directory.","html":"set AMQP_URL to your REDIS_URL (eg &#39;redis://localhost:6379/&#39;) in your alertad.conf file. Do not edit the settings.py in the alerta package directory.","sent":"2015-11-02T23:44:17.685Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f59a0800da954de68404","text":"you MUST enable the amqp plugin and then all alerts will automatically be pushed to the AMQP message bus. if the mailer is running it will listen for all alerts on the message bus.","html":"you MUST enable the amqp plugin and then all alerts will automatically be pushed to the AMQP message bus. if the mailer is running it will listen for all alerts on the message bus.","sent":"2015-11-02T23:45:30.375Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f61fa530033014e3ab95","text":"actually, now that i’m looking at it closely i can see that it hasn’t been updated to work with version 4 of alerta.","html":"actually, now that i’m looking at it closely i can see that it hasn’t been updated to work with version 4 of alerta.","sent":"2015-11-02T23:47:43.160Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f63f3003682f1408ddb3","text":"the way config settings are made was very different back then.","html":"the way config settings are made was very different back then.","sent":"2015-11-02T23:48:15.259Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f66d3003682f1408ddc5","text":"it might be best to get your simple plugin working first and i’ll have a look at updating the mailer daemon code in the next few days.","html":"it might be best to get your simple plugin working first and i’ll have a look at updating the mailer daemon code in the next few days.","sent":"2015-11-02T23:49:01.069Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f68ba530033014e3abab","text":"okay, cool","html":"okay, cool","sent":"2015-11-02T23:49:31.000Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f6a5a530033014e3abb3","text":"i can't just set AMQP_URL to my REDIS_URL, because the REDIS_URL is machine generated and stored in an env variable.  I never really know it.","html":"i can&#39;t just set AMQP_URL to my REDIS_URL, because the REDIS_URL is machine generated and stored in an env variable.  I never really know it.","sent":"2015-11-02T23:49:57.726Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f6daa530033014e3abc2","text":"oh i see.","html":"oh i see.","sent":"2015-11-02T23:50:50.232Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f74764376ec44425d266","text":"it's basically like DATABASE_URL in Heroku","html":"it&#39;s basically like DATABASE_URL in Heroku","sent":"2015-11-02T23:52:39.668Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f74c3003682f1408ddf1","text":"i could make a change to settings.py to look for a REDIS_URL env var and if it exists, then set AMQP_URL to that value otherwise just use the default MongoDb ","html":"i could make a change to settings.py to look for a REDIS_URL env var and if it exists, then set AMQP_URL to that value otherwise just use the default MongoDb ","sent":"2015-11-02T23:52:44.195Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f76e3003682f1408ddf8","text":"what is the exact format of the REDIS_URL? is it “redis://host:port/“?","html":"what is the exact format of the REDIS_URL? is it “redis://host:port/“?","sent":"2015-11-02T23:53:18.728Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f7760800da954de6842b","text":"let me find an example","html":"let me find an example","sent":"2015-11-02T23:53:26.663Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f77a3003682f1408ddf9","text":"k","html":"k","sent":"2015-11-02T23:53:30.107Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f85ea530033014e3ac1c","text":"ok, here's a real example: REDIS_URL=redis://redisdb:_mEA-E_g09Jo8KhDAjZhJLW24LwayvvwF76PKZJOmak@randomhostname:13985/0","html":"ok, here&#39;s a real example: REDIS_URL=redis://redisdb:<a href=\"mailto:_mEA-E_g09Jo8KhDAjZhJLW24LwayvvwF76PKZJOmak@randomhostname\" rel=\"nofollow\">_mEA-E_g09Jo8KhDAjZhJLW24LwayvvwF76PKZJOmak@randomhostname<\/a>:13985/0","sent":"2015-11-02T23:57:18.789Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[{"url":"mailto:_mEA-E_g09Jo8KhDAjZhJLW24LwayvvwF76PKZJOmak@randomhostname"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f86d3003682f1408de35","text":"user:pass@hostname:port/channel","html":"user:<a href=\"mailto:pass@hostname\" rel=\"nofollow\">pass@hostname<\/a>:port/channel","sent":"2015-11-02T23:57:33.780Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[{"url":"mailto:pass@hostname"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f86e3003682f1408de36","text":"i guess","html":"i guess","sent":"2015-11-02T23:57:34.824Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f8743003682f1408de37","text":"whoops, silly emoji","html":"whoops, silly emoji","sent":"2015-11-02T23:57:40.753Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5637f8aa3003682f1408de46","text":"ok. that looks like something Kombu would support … http://docs.celeryproject.org/projects/kombu/en/latest/userguide/connections.html#urls","html":"ok. that looks like something Kombu would support … <a href=\"http://docs.celeryproject.org/projects/kombu/en/latest/userguide/connections.html#urls\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://docs.celeryproject.org/projects/kombu/en/latest/userguide/connections.html#urls<\/a>","sent":"2015-11-02T23:58:34.903Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[{"url":"http://docs.celeryproject.org/projects/kombu/en/latest/userguide/connections.html#urls"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5637f8caa530033014e3ac40","text":"looks right","html":"looks right","sent":"2015-11-02T23:59:06.069Z","fromUser":{"id":"5637d43d16b6c7089cb939a8","username":"blysik","displayName":"blysik","url":"/blysik","avatarUrl":"https://avatars-02.gitter.im/gh/uv/3/blysik","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/58610?v=3&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/58610?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

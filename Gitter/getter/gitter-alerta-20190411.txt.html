@@ -1,0 +1,781 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/04/12"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/04/10"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">11<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Apr 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5caf674f20fbe911ee9b0ad8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5caf674f20fbe911ee9b0ad8' title="">Apr 11 2019 16:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ve been running into some intermittent timeout issues from a script that does API POSTs to insert events.  I don&#39;t see anything useful in the alerta log, nor does script return anything useful since it just ends when timeout limit  (currently at 10sec).   Any other ideas on how to troubleshoot this?  v6.6.1
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf79efc55bd14d35ca6af6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5caf79efc55bd14d35ca6af6' title="">Apr 11 2019 17:31 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I assume you are using the <code>alerta</code> command-line tool? if so, you can change the default timeout.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf7a281f6e900d5e1836ba burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://docs.alerta.io/en/latest/cli.html?highlight=timeout" rel="nofollow noopener noreferrer" target="_blank" class="link">https://docs.alerta.io/en/latest/cli.html?highlight=timeout</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf7a65a0790b29c99dacb3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      set it to something large and see if you get a different error. ie. you might get a database timeout error or http timeout.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf7f46a0790b29c99dd1e2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c9a4842d73408ce4fbbe146 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/26679999?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/26679999?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>mandarhs8</div>
+      <div class='chat-item__username js-chat-item-from'>@mandarhs8</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5caf7f46a0790b29c99dd1e2' title="">Apr 11 2019 17:54 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      could i use the alerta client to send my openstack rally test results to the alerta server to be displayed?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf89220aad635019691c55 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5caf89220aad635019691c55' title="">Apr 11 2019 18:36 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="mandarhs8" class="mention">@mandarhs8</span> sure. i would put the test results in the “raw data” attribute.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf8a363ebbdc55b39f35e1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      He’s an example with disk space output...
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf8a41c55bd14d35cae78a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/PeBK/Screenshot-2019-04-11-at-20.40.32.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/PeBK/thumb/Screenshot-2019-04-11-at-20.40.32.png" alt="Screenshot 2019-04-11 at 20.40.32.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf906e25686a7dc314decb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5caf906e25686a7dc314decb' title="">Apr 11 2019 19:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  I am not using command line.  I have a lambda which does some transforms before doing a POST into alerta.  that lambda is timing out occasionally and I am having difficultly tracking it down. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf90fb0aad63501969585d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5caf90fb0aad63501969585d' title="">Apr 11 2019 19:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      are you using javascript, or something else?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf911020fbe911ee9c368e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5caf911020fbe911ee9c368e' title="">Apr 11 2019 19:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      lambda with python
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5caf913a93fb4a7dc2122d64 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5caf913a93fb4a7dc2122d64' title="">Apr 11 2019 19:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      so you’re using the Alerta python SDK?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa18c93fb4a7dc2129f3d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5cafa18c93fb4a7dc2129f3d' title="">Apr 11 2019 20:20 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No.  Doing direct HTTP POST to api using urllib2
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa198759abc043ca6884a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      didn&#39;t realize there was python SDK....sigh
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa1cc93fb4a7dc2129ffb burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5cafa1cc93fb4a7dc2129ffb' title="">Apr 11 2019 20:21 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      at the very least i’d use python requests package, not urllib2.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa1e3a0790b29c99ebb17 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="http://docs.python-requests.org/en/master/" rel="nofollow noopener noreferrer" target="_blank" class="link">http://docs.python-requests.org/en/master/</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa1fb93fb4a7dc212a0b6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://docs.alerta.io/en/latest/development.html#python-sdk" rel="nofollow noopener noreferrer" target="_blank" class="link">https://docs.alerta.io/en/latest/development.html#python-sdk</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa2170aad63501969d622 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5cafa2170aad63501969d622' title="">Apr 11 2019 20:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I will look at these.   thx.  I know it was a vague question to start with.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa25ea84e0c501a163b85 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5cafa25ea84e0c501a163b85' title="">Apr 11 2019 20:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+       you can increase the timeout of the lambda and you might get a different, more meaningful, error.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa46325686a7dc3156b36 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5cafa46325686a7dc3156b36' title="">Apr 11 2019 20:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>    response = urllib2.<span class="function"><span class="title">urlopen</span><span class="params">(req, json.dumps(payload)</span></span>, timeout=<span class="number">10</span>)
+  except urllib2<span class="class">.HTTPError</span> as e:
+    print e.<span class="function"><span class="title">read</span><span class="params">()</span></span>
+  <span class="keyword">else</span>:
+    print response.<span class="function"><span class="title">read</span><span class="params">()</span></span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafa4db20fbe911ee9cb923 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5cafa4db20fbe911ee9cb923' title="">Apr 11 2019 20:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i would remove the timeout=10 and see what happens.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cafabd520fbe911ee9ce496 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c0e99a2d73408ce4fb17ff4 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1097774?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ryan Ash</div>
+      <div class='chat-item__username js-chat-item-from'>@ryanash999</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/04/11?at=5cafabd520fbe911ee9ce496' title="">Apr 11 2019 21:04 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      initially it didn&#39;t have it,  it would run, in some situations until the lambda timeout value.  
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$/bJivsSKqdRh/AUbkTpHRFGQcraVHOBy/0a5jRuW5JE=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-04-11T00:00:00.000Z","nextDate":"2019-04-12T23:59:59.999Z","previousDate":"2019-04-10T00:00:00.000Z","messages":[{"id":"5caf674f20fbe911ee9b0ad8","text":"I've been running into some intermittent timeout issues from a script that does API POSTs to insert events.  I don't see anything useful in the alerta log, nor does script return anything useful since it just ends when timeout limit  (currently at 10sec).   Any other ideas on how to troubleshoot this?  v6.6.1","html":"I&#39;ve been running into some intermittent timeout issues from a script that does API POSTs to insert events.  I don&#39;t see anything useful in the alerta log, nor does script return anything useful since it just ends when timeout limit  (currently at 10sec).   Any other ideas on how to troubleshoot this?  v6.6.1","sent":"2019-04-11T16:11:59.119Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5caf79efc55bd14d35ca6af6","text":"I assume you are using the `alerta` command-line tool? if so, you can change the default timeout.","html":"I assume you are using the <code>alerta<\/code> command-line tool? if so, you can change the default timeout.","sent":"2019-04-11T17:31:27.009Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5caf7a281f6e900d5e1836ba","text":"https://docs.alerta.io/en/latest/cli.html?highlight=timeout","html":"<a href=\"https://docs.alerta.io/en/latest/cli.html?highlight=timeout\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://docs.alerta.io/en/latest/cli.html?highlight=timeout<\/a>","sent":"2019-04-11T17:32:24.051Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[{"url":"https://docs.alerta.io/en/latest/cli.html?highlight=timeout"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5caf7a65a0790b29c99dacb3","text":"set it to something large and see if you get a different error. ie. you might get a database timeout error or http timeout.","html":"set it to something large and see if you get a different error. ie. you might get a database timeout error or http timeout.","sent":"2019-04-11T17:33:25.981Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5caf7f46a0790b29c99dd1e2","text":"could i use the alerta client to send my openstack rally test results to the alerta server to be displayed?","html":"could i use the alerta client to send my openstack rally test results to the alerta server to be displayed?","sent":"2019-04-11T17:54:14.716Z","fromUser":{"id":"5c9a4842d73408ce4fbbe146","username":"mandarhs8","displayName":"mandarhs8","url":"/mandarhs8","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/mandarhs8","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/26679999?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/26679999?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5caf89220aad635019691c55","text":"@mandarhs8 sure. i would put the test results in the “raw data” attribute.","html":"<span data-link-type=\"mention\" data-screen-name=\"mandarhs8\" class=\"mention\">@mandarhs8<\/span> sure. i would put the test results in the “raw data” attribute.","sent":"2019-04-11T18:36:18.718Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[{"screenName":"mandarhs8","userId":"5c9a4842d73408ce4fbbe146","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5caf8a363ebbdc55b39f35e1","text":"He’s an example with disk space output...","html":"He’s an example with disk space output...","sent":"2019-04-11T18:40:54.690Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5caf8a41c55bd14d35cae78a","text":"[![Screenshot 2019-04-11 at 20.40.32.png](https://files.gitter.im/alerta/chat/PeBK/thumb/Screenshot-2019-04-11-at-20.40.32.png)](https://files.gitter.im/alerta/chat/PeBK/Screenshot-2019-04-11-at-20.40.32.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/PeBK/Screenshot-2019-04-11-at-20.40.32.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/PeBK/thumb/Screenshot-2019-04-11-at-20.40.32.png\" alt=\"Screenshot 2019-04-11 at 20.40.32.png\" rel=\"nofollow\"><\/a>","sent":"2019-04-11T18:41:05.315Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[{"url":"https://files.gitter.im/alerta/chat/PeBK/thumb/Screenshot-2019-04-11-at-20.40.32.png"},{"url":"https://files.gitter.im/alerta/chat/PeBK/Screenshot-2019-04-11-at-20.40.32.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5caf906e25686a7dc314decb","text":"@satterly  I am not using command line.  I have a lambda which does some transforms before doing a POST into alerta.  that lambda is timing out occasionally and I am having difficultly tracking it down. ","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  I am not using command line.  I have a lambda which does some transforms before doing a POST into alerta.  that lambda is timing out occasionally and I am having difficultly tracking it down. ","sent":"2019-04-11T19:07:26.613Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":12,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5caf90fb0aad63501969585d","text":"are you using javascript, or something else?","html":"are you using javascript, or something else?","sent":"2019-04-11T19:09:47.642Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5caf911020fbe911ee9c368e","text":"lambda with python","html":"lambda with python","sent":"2019-04-11T19:10:08.584Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5caf913a93fb4a7dc2122d64","text":"so you’re using the Alerta python SDK?","html":"so you’re using the Alerta python SDK?","sent":"2019-04-11T19:10:50.345Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cafa18c93fb4a7dc2129f3d","text":"No.  Doing direct HTTP POST to api using urllib2","html":"No.  Doing direct HTTP POST to api using urllib2","sent":"2019-04-11T20:20:28.151Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cafa198759abc043ca6884a","text":"didn't realize there was python SDK....sigh","html":"didn&#39;t realize there was python SDK....sigh","sent":"2019-04-11T20:20:40.938Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cafa1cc93fb4a7dc2129ffb","text":"at the very least i’d use python requests package, not urllib2.","html":"at the very least i’d use python requests package, not urllib2.","sent":"2019-04-11T20:21:32.547Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cafa1e3a0790b29c99ebb17","text":"http://docs.python-requests.org/en/master/","html":"<a href=\"http://docs.python-requests.org/en/master/\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://docs.python-requests.org/en/master/<\/a>","sent":"2019-04-11T20:21:55.211Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[{"url":"http://docs.python-requests.org/en/master/"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cafa1fb93fb4a7dc212a0b6","text":"https://docs.alerta.io/en/latest/development.html#python-sdk","html":"<a href=\"https://docs.alerta.io/en/latest/development.html#python-sdk\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://docs.alerta.io/en/latest/development.html#python-sdk<\/a>","sent":"2019-04-11T20:22:19.992Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[{"url":"https://docs.alerta.io/en/latest/development.html#python-sdk"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cafa2170aad63501969d622","text":"I will look at these.   thx.  I know it was a vague question to start with.","html":"I will look at these.   thx.  I know it was a vague question to start with.","sent":"2019-04-11T20:22:47.938Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cafa25ea84e0c501a163b85","text":" you can increase the timeout of the lambda and you might get a different, more meaningful, error.","html":" you can increase the timeout of the lambda and you might get a different, more meaningful, error.","sent":"2019-04-11T20:23:58.872Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cafa46325686a7dc3156b36","text":"\n```try:\n    response = urllib2.urlopen(req, json.dumps(payload), timeout=10)\n  except urllib2.HTTPError as e:\n    print e.read()\n  else:\n    print response.read()```","html":"<pre><code>    response = urllib2.<span class=\"function\"><span class=\"title\">urlopen<\/span><span class=\"params\">(req, json.dumps(payload)<\/span><\/span>, timeout=<span class=\"number\">10<\/span>)\n  except urllib2<span class=\"class\">.HTTPError<\/span> as e:\n    print e.<span class=\"function\"><span class=\"title\">read<\/span><span class=\"params\">()<\/span><\/span>\n  <span class=\"keyword\">else<\/span>:\n    print response.<span class=\"function\"><span class=\"title\">read<\/span><span class=\"params\">()<\/span><\/span><\/code><\/pre>","sent":"2019-04-11T20:32:35.842Z","editedAt":"2019-04-11T20:32:46.891Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5cafa4db20fbe911ee9cb923","text":"i would remove the timeout=10 and see what happens.","html":"i would remove the timeout=10 and see what happens.","sent":"2019-04-11T20:34:35.207Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cafabd520fbe911ee9ce496","text":"initially it didn't have it,  it would run, in some situations until the lambda timeout value.  ","html":"initially it didn&#39;t have it,  it would run, in some situations until the lambda timeout value.  ","sent":"2019-04-11T21:04:21.184Z","fromUser":{"id":"5c0e99a2d73408ce4fb17ff4","username":"ryanash999","displayName":"Ryan Ash","url":"/ryanash999","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ryanash999","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1097774?v=4&s=128","v":7,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

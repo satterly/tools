@@ -1,0 +1,940 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/01/11"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/01/09"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">10<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jan 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5e17dcdaa74ac8537782197b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e152851d73408ce4fd6028e avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/59629881?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/59629881?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>maxf5412</div>
+      <div class='chat-item__username js-chat-item-from'>@maxf5412</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/10?at=5e17dcdaa74ac8537782197b' title="">Jan 10 02:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      thanks <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  ,, it turns out that the Text attribute in alert is a mandatory field for actions&quot; , Test event for which i was trying to create an issue in Gitlab was having a NULL value of Text attribute and thats why it was not creating any issue in Gitlab  - 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e1873c55597551890530165 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e187348d73408ce4fd649cd avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/55086718?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/55086718?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yorliuk</div>
+      <div class='chat-item__username js-chat-item-from'>@yorliuk</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/10?at=5e1873c55597551890530165' title="">Jan 10 12:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hello all. How can I render image in the alertDetails tab. I send image URL by API in &quot;Text&quot; tab for alert. How can I render image from this url instead url text?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e1891a6559755189053ea7f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d36abbbd73408ce4fc6b75f avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/41840237?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/41840237?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Vladislav Krylatykh</div>
+      <div class='chat-item__username js-chat-item-from'>@Krylva</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/10?at=5e1891a6559755189053ea7f' title="">Jan 10 15:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>. Can you prompt any way to debug alerta-mailer?<br>I&#39;ve set ~/.alerta.conf like</p><pre><code><span class="title">[DEFAULT]</span>
+<span class="setting">endpoint = <span class="value">http://localhost:<span class="number">8088</span>/api</span></span>
+<span class="setting">key = <span class="value">some_key</span></span>
+<span class="title">
+[alerta-mailer]</span>
+<span class="setting">mail_from = <span class="value">user@hostname-fqdn</span></span>
+<span class="setting">amqp_url = <span class="value">redis://<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>/</span></span>
+<span class="setting">endpoint = <span class="value">http://localhost:<span class="number">8088</span>/api</span></span>
+<span class="setting">smtp_use_ssl = <span class="value"><span class="keyword">False</span></span></span>
+<span class="setting">debug = <span class="value"><span class="keyword">True</span></span></span>
+<span class="setting">skip_mta = <span class="value"><span class="keyword">True</span></span></span>
+<span class="setting">email_type = <span class="value">text</span></span></code></pre><p>also I&#39;ve configured ~/alerta.rules.d like</p><pre><code>[
+    {
+        "<span class="attribute">name</span>": <span class="value"><span class="string">"test"</span></span>,
+        "<span class="attribute">fields</span>": <span class="value">[
+            {"<span class="attribute">field</span>": <span class="value"><span class="string">"event"</span></span>, "<span class="attribute">regex</span>": <span class="value"><span class="string">"check_.+"</span></span>}
+        ]</span>,
+        "<span class="attribute">contacts</span>": <span class="value">[<span class="string">"my_email"</span>]
+    </span>}
+]</code></pre><p>I run alerta-mailer as a systemd service. In service&#39;s log I see </p><pre><code>alerta-mailer[<span class="number">2261</span>]: <span class="string">DEBUG:</span><span class="string">mailer:</span>Looking <span class="keyword">for</span> rules files <span class="keyword">in</span> ~/alerta.rules.d
+alerta-mailer[<span class="number">2261</span>]: <span class="string">INFO:</span>kombu.<span class="string">mixins:</span>Connected to <span class="string">redis:</span><span class="comment">//127.0.0.1:6379//</span>
+alerta-mailer[<span class="number">2261</span>]: Connected to <span class="string">redis:</span><span class="comment">//127.0.0.1:6379//</span>
+alerta-mailer[<span class="number">2261</span>]: <span class="string">DEBUG:</span>urllib3.<span class="string">connectionpool:</span>Starting <span class="keyword">new</span> HTTP connection (<span class="number">1</span>): <span class="string">localhost:</span><span class="number">8088</span>
+alerta-mailer[<span class="number">2261</span>]: Starting <span class="keyword">new</span> HTTP connection (<span class="number">1</span>): <span class="string">localhost:</span><span class="number">8088</span>
+alerta-mailer[<span class="number">2261</span>]: <span class="string">DEBUG:</span>urllib3.<span class="string">connectionpool:</span><span class="string">http:</span><span class="comment">//localhost:8088 "POST /api/heartbeat HTTP/1.1" 201 276</span>
+alerta-mailer[<span class="number">2261</span>]: <span class="string">http:</span><span class="comment">//localhost:8088 "POST /api/heartbeat HTTP/1.1" 201 276</span></code></pre><p>Alerts are receiving and accessible from web ui.<br>messagess with <code>&quot;name&quot;: &quot;alerta.plugins.amqp&quot;, &quot;levelno&quot;:</code> are exist in alerta log file<br>What I didn&#39;t do right? Maybe I need some additional configuration? Unfortunately I didn&#39;t manage to understand what&#39;s wrong looking at source code.</p>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$MDC3rsW4sc2ep1wlAaG1l75OM/S49lzRalq6itm9vI0=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-01-10T00:00:00.000Z","nextDate":"2020-01-11T23:59:59.999Z","previousDate":"2020-01-09T00:00:00.000Z","messages":[{"id":"5e17dcdaa74ac8537782197b","text":"thanks @satterly  ,, it turns out that the Text attribute in alert is a mandatory field for actions\" , Test event for which i was trying to create an issue in Gitlab was having a NULL value of Text attribute and thats why it was not creating any issue in Gitlab  - ","html":"thanks <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  ,, it turns out that the Text attribute in alert is a mandatory field for actions&quot; , Test event for which i was trying to create an issue in Gitlab was having a NULL value of Text attribute and thats why it was not creating any issue in Gitlab  - ","sent":"2020-01-10T02:09:30.933Z","editedAt":"2020-01-10T02:10:09.172Z","fromUser":{"id":"5e152851d73408ce4fd6028e","username":"maxf5412","displayName":"maxf5412","url":"/maxf5412","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/maxf5412","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/59629881?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/59629881?v=4&s=128","v":5,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5e1873c55597551890530165","text":"Hello all. How can I render image in the alertDetails tab. I send image URL by API in \"Text\" tab for alert. How can I render image from this url instead url text?","html":"Hello all. How can I render image in the alertDetails tab. I send image URL by API in &quot;Text&quot; tab for alert. How can I render image from this url instead url text?","sent":"2020-01-10T12:53:25.685Z","fromUser":{"id":"5e187348d73408ce4fd649cd","username":"yorliuk","displayName":"yorliuk","url":"/yorliuk","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/yorliuk","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/55086718?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/55086718?v=4&s=128","v":1,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e1891a6559755189053ea7f","text":"Hi @satterly. Can you prompt any way to debug alerta-mailer?\nI've set ~/.alerta.conf like\n```\n[DEFAULT]\nendpoint = http://localhost:8088/api\nkey = some_key\n\n[alerta-mailer]\nmail_from = user@hostname-fqdn\namqp_url = redis://127.0.0.1:6379/\nendpoint = http://localhost:8088/api\nsmtp_use_ssl = False\ndebug = True\nskip_mta = True\nemail_type = text\n```\nalso I've configured ~/alerta.rules.d like\n```\n[\n    {\n        \"name\": \"test\",\n        \"fields\": [\n            {\"field\": \"event\", \"regex\": \"check_.+\"}\n        ],\n        \"contacts\": [\"my_email\"]\n    }\n]\n```\nI run alerta-mailer as a systemd service. In service's log I see \n```\nalerta-mailer[2261]: DEBUG:mailer:Looking for rules files in ~/alerta.rules.d\nalerta-mailer[2261]: INFO:kombu.mixins:Connected to redis://127.0.0.1:6379//\nalerta-mailer[2261]: Connected to redis://127.0.0.1:6379//\nalerta-mailer[2261]: DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8088\nalerta-mailer[2261]: Starting new HTTP connection (1): localhost:8088\nalerta-mailer[2261]: DEBUG:urllib3.connectionpool:http://localhost:8088 \"POST /api/heartbeat HTTP/1.1\" 201 276\nalerta-mailer[2261]: http://localhost:8088 \"POST /api/heartbeat HTTP/1.1\" 201 276\n```\nAlerts are receiving and accessible from web ui.\nmessagess with `\"name\": \"alerta.plugins.amqp\", \"levelno\":` are exist in alerta log file\nWhat I didn't do right? Maybe I need some additional configuration? Unfortunately I didn't manage to understand what's wrong looking at source code.","html":"<p>Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>. Can you prompt any way to debug alerta-mailer?<br>I&#39;ve set ~/.alerta.conf like<\/p><pre><code><span class=\"title\">[DEFAULT]<\/span>\n<span class=\"setting\">endpoint = <span class=\"value\">http://localhost:<span class=\"number\">8088<\/span>/api<\/span><\/span>\n<span class=\"setting\">key = <span class=\"value\">some_key<\/span><\/span>\n<span class=\"title\">\n[alerta-mailer]<\/span>\n<span class=\"setting\">mail_from = <span class=\"value\">user@hostname-fqdn<\/span><\/span>\n<span class=\"setting\">amqp_url = <span class=\"value\">redis://<span class=\"number\">127.0<\/span>.<span class=\"number\">0.1<\/span>:<span class=\"number\">6379<\/span>/<\/span><\/span>\n<span class=\"setting\">endpoint = <span class=\"value\">http://localhost:<span class=\"number\">8088<\/span>/api<\/span><\/span>\n<span class=\"setting\">smtp_use_ssl = <span class=\"value\"><span class=\"keyword\">False<\/span><\/span><\/span>\n<span class=\"setting\">debug = <span class=\"value\"><span class=\"keyword\">True<\/span><\/span><\/span>\n<span class=\"setting\">skip_mta = <span class=\"value\"><span class=\"keyword\">True<\/span><\/span><\/span>\n<span class=\"setting\">email_type = <span class=\"value\">text<\/span><\/span><\/code><\/pre><p>also I&#39;ve configured ~/alerta.rules.d like<\/p><pre><code>[\n    {\n        \"<span class=\"attribute\">name<\/span>\": <span class=\"value\"><span class=\"string\">\"test\"<\/span><\/span>,\n        \"<span class=\"attribute\">fields<\/span>\": <span class=\"value\">[\n            {\"<span class=\"attribute\">field<\/span>\": <span class=\"value\"><span class=\"string\">\"event\"<\/span><\/span>, \"<span class=\"attribute\">regex<\/span>\": <span class=\"value\"><span class=\"string\">\"check_.+\"<\/span><\/span>}\n        ]<\/span>,\n        \"<span class=\"attribute\">contacts<\/span>\": <span class=\"value\">[<span class=\"string\">\"my_email\"<\/span>]\n    <\/span>}\n]<\/code><\/pre><p>I run alerta-mailer as a systemd service. In service&#39;s log I see <\/p><pre><code>alerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">DEBUG:<\/span><span class=\"string\">mailer:<\/span>Looking <span class=\"keyword\">for<\/span> rules files <span class=\"keyword\">in<\/span> ~/alerta.rules.d\nalerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">INFO:<\/span>kombu.<span class=\"string\">mixins:<\/span>Connected to <span class=\"string\">redis:<\/span><span class=\"comment\">//127.0.0.1:6379//<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: Connected to <span class=\"string\">redis:<\/span><span class=\"comment\">//127.0.0.1:6379//<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">DEBUG:<\/span>urllib3.<span class=\"string\">connectionpool:<\/span>Starting <span class=\"keyword\">new<\/span> HTTP connection (<span class=\"number\">1<\/span>): <span class=\"string\">localhost:<\/span><span class=\"number\">8088<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: Starting <span class=\"keyword\">new<\/span> HTTP connection (<span class=\"number\">1<\/span>): <span class=\"string\">localhost:<\/span><span class=\"number\">8088<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">DEBUG:<\/span>urllib3.<span class=\"string\">connectionpool:<\/span><span class=\"string\">http:<\/span><span class=\"comment\">//localhost:8088 \"POST /api/heartbeat HTTP/1.1\" 201 276<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">http:<\/span><span class=\"comment\">//localhost:8088 \"POST /api/heartbeat HTTP/1.1\" 201 276<\/span><\/code><\/pre><p>Alerts are receiving and accessible from web ui.<br>messagess with <code>&quot;name&quot;: &quot;alerta.plugins.amqp&quot;, &quot;levelno&quot;:<\/code> are exist in alerta log file<br>What I didn&#39;t do right? Maybe I need some additional configuration? Unfortunately I didn&#39;t manage to understand what&#39;s wrong looking at source code.<\/p>","sent":"2020-01-10T15:00:54.788Z","editedAt":"2020-01-10T15:08:47.842Z","fromUser":{"id":"5d36abbbd73408ce4fc6b75f","username":"Krylva","displayName":"Vladislav Krylatykh","url":"/Krylva","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/Krylva","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/41840237?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/41840237?v=4&s=128","v":5,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":5,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2020/01/11"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2020/01/09"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">10<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jan 2020</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5e17dcdaa74ac8537782197b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e152851d73408ce4fd6028e avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/59629881?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/59629881?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>maxf5412</div>
+      <div class='chat-item__username js-chat-item-from'>@maxf5412</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/10?at=5e17dcdaa74ac8537782197b' title="">Jan 10 02:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      thanks <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  ,, it turns out that the Text attribute in alert is a mandatory field for actions&quot; , Test event for which i was trying to create an issue in Gitlab was having a NULL value of Text attribute and thats why it was not creating any issue in Gitlab  - 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e1873c55597551890530165 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5e187348d73408ce4fd649cd avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/55086718?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/55086718?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>yorliuk</div>
+      <div class='chat-item__username js-chat-item-from'>@yorliuk</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/10?at=5e1873c55597551890530165' title="">Jan 10 12:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hello all. How can I render image in the alertDetails tab. I send image URL by API in &quot;Text&quot; tab for alert. How can I render image from this url instead url text?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5e1891a6559755189053ea7f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d36abbbd73408ce4fc6b75f avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/41840237?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/41840237?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Vladislav Krylatykh</div>
+      <div class='chat-item__username js-chat-item-from'>@Krylva</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2020/01/10?at=5e1891a6559755189053ea7f' title="">Jan 10 15:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>. Can you prompt any way to debug alerta-mailer?<br>I&#39;ve set ~/.alerta.conf like</p><pre><code><span class="title">[DEFAULT]</span>
+<span class="setting">endpoint = <span class="value">http://localhost:<span class="number">8088</span>/api</span></span>
+<span class="setting">key = <span class="value">some_key</span></span>
+<span class="title">
+[alerta-mailer]</span>
+<span class="setting">mail_from = <span class="value">user@hostname-fqdn</span></span>
+<span class="setting">amqp_url = <span class="value">redis://<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>/</span></span>
+<span class="setting">endpoint = <span class="value">http://localhost:<span class="number">8088</span>/api</span></span>
+<span class="setting">smtp_use_ssl = <span class="value"><span class="keyword">False</span></span></span>
+<span class="setting">debug = <span class="value"><span class="keyword">True</span></span></span>
+<span class="setting">skip_mta = <span class="value"><span class="keyword">True</span></span></span>
+<span class="setting">email_type = <span class="value">text</span></span></code></pre><p>also I&#39;ve configured ~/alerta.rules.d like</p><pre><code>[
+    {
+        "<span class="attribute">name</span>": <span class="value"><span class="string">"test"</span></span>,
+        "<span class="attribute">fields</span>": <span class="value">[
+            {"<span class="attribute">field</span>": <span class="value"><span class="string">"event"</span></span>, "<span class="attribute">regex</span>": <span class="value"><span class="string">"check_.+"</span></span>}
+        ]</span>,
+        "<span class="attribute">contacts</span>": <span class="value">[<span class="string">"my_email"</span>]
+    </span>}
+]</code></pre><p>I run alerta-mailer as a systemd service. In service&#39;s log I see </p><pre><code>alerta-mailer[<span class="number">2261</span>]: <span class="string">DEBUG:</span><span class="string">mailer:</span>Looking <span class="keyword">for</span> rules files <span class="keyword">in</span> ~/alerta.rules.d
+alerta-mailer[<span class="number">2261</span>]: <span class="string">INFO:</span>kombu.<span class="string">mixins:</span>Connected to <span class="string">redis:</span><span class="comment">//127.0.0.1:6379//</span>
+alerta-mailer[<span class="number">2261</span>]: Connected to <span class="string">redis:</span><span class="comment">//127.0.0.1:6379//</span>
+alerta-mailer[<span class="number">2261</span>]: <span class="string">DEBUG:</span>urllib3.<span class="string">connectionpool:</span>Starting <span class="keyword">new</span> HTTP connection (<span class="number">1</span>): <span class="string">localhost:</span><span class="number">8088</span>
+alerta-mailer[<span class="number">2261</span>]: Starting <span class="keyword">new</span> HTTP connection (<span class="number">1</span>): <span class="string">localhost:</span><span class="number">8088</span>
+alerta-mailer[<span class="number">2261</span>]: <span class="string">DEBUG:</span>urllib3.<span class="string">connectionpool:</span><span class="string">http:</span><span class="comment">//localhost:8088 "POST /api/heartbeat HTTP/1.1" 201 276</span>
+alerta-mailer[<span class="number">2261</span>]: <span class="string">http:</span><span class="comment">//localhost:8088 "POST /api/heartbeat HTTP/1.1" 201 276</span></code></pre><p>Alerts are receiving and accessible from web ui.<br>messagess with <code>&quot;name&quot;: &quot;alerta.plugins.amqp&quot;, &quot;levelno&quot;:</code> are exist in alerta log file<br>What I didn&#39;t do right? Maybe I need some additional configuration? Unfortunately I didn&#39;t manage to understand what&#39;s wrong looking at source code.</p>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$AwJK9+nJkQq4vtf+zpeIj4uCQKODEsrMC0yJoxAciDk=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2020-01-10T00:00:00.000Z","nextDate":"2020-01-11T23:59:59.999Z","previousDate":"2020-01-09T00:00:00.000Z","messages":[{"id":"5e17dcdaa74ac8537782197b","text":"thanks @satterly  ,, it turns out that the Text attribute in alert is a mandatory field for actions\" , Test event for which i was trying to create an issue in Gitlab was having a NULL value of Text attribute and thats why it was not creating any issue in Gitlab  - ","html":"thanks <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  ,, it turns out that the Text attribute in alert is a mandatory field for actions&quot; , Test event for which i was trying to create an issue in Gitlab was having a NULL value of Text attribute and thats why it was not creating any issue in Gitlab  - ","sent":"2020-01-10T02:09:30.933Z","editedAt":"2020-01-10T02:10:09.172Z","fromUser":{"id":"5e152851d73408ce4fd6028e","username":"maxf5412","displayName":"maxf5412","url":"/maxf5412","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/maxf5412","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/59629881?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/59629881?v=4&s=128","v":5,"gv":"4"},"readBy":14,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5e1873c55597551890530165","text":"Hello all. How can I render image in the alertDetails tab. I send image URL by API in \"Text\" tab for alert. How can I render image from this url instead url text?","html":"Hello all. How can I render image in the alertDetails tab. I send image URL by API in &quot;Text&quot; tab for alert. How can I render image from this url instead url text?","sent":"2020-01-10T12:53:25.685Z","fromUser":{"id":"5e187348d73408ce4fd649cd","username":"yorliuk","displayName":"yorliuk","url":"/yorliuk","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/yorliuk","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/55086718?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/55086718?v=4&s=128","v":1,"gv":"4"},"readBy":16,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5e1891a6559755189053ea7f","text":"Hi @satterly. Can you prompt any way to debug alerta-mailer?\nI've set ~/.alerta.conf like\n```\n[DEFAULT]\nendpoint = http://localhost:8088/api\nkey = some_key\n\n[alerta-mailer]\nmail_from = user@hostname-fqdn\namqp_url = redis://127.0.0.1:6379/\nendpoint = http://localhost:8088/api\nsmtp_use_ssl = False\ndebug = True\nskip_mta = True\nemail_type = text\n```\nalso I've configured ~/alerta.rules.d like\n```\n[\n    {\n        \"name\": \"test\",\n        \"fields\": [\n            {\"field\": \"event\", \"regex\": \"check_.+\"}\n        ],\n        \"contacts\": [\"my_email\"]\n    }\n]\n```\nI run alerta-mailer as a systemd service. In service's log I see \n```\nalerta-mailer[2261]: DEBUG:mailer:Looking for rules files in ~/alerta.rules.d\nalerta-mailer[2261]: INFO:kombu.mixins:Connected to redis://127.0.0.1:6379//\nalerta-mailer[2261]: Connected to redis://127.0.0.1:6379//\nalerta-mailer[2261]: DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8088\nalerta-mailer[2261]: Starting new HTTP connection (1): localhost:8088\nalerta-mailer[2261]: DEBUG:urllib3.connectionpool:http://localhost:8088 \"POST /api/heartbeat HTTP/1.1\" 201 276\nalerta-mailer[2261]: http://localhost:8088 \"POST /api/heartbeat HTTP/1.1\" 201 276\n```\nAlerts are receiving and accessible from web ui.\nmessagess with `\"name\": \"alerta.plugins.amqp\", \"levelno\":` are exist in alerta log file\nWhat I didn't do right? Maybe I need some additional configuration? Unfortunately I didn't manage to understand what's wrong looking at source code.","html":"<p>Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>. Can you prompt any way to debug alerta-mailer?<br>I&#39;ve set ~/.alerta.conf like<\/p><pre><code><span class=\"title\">[DEFAULT]<\/span>\n<span class=\"setting\">endpoint = <span class=\"value\">http://localhost:<span class=\"number\">8088<\/span>/api<\/span><\/span>\n<span class=\"setting\">key = <span class=\"value\">some_key<\/span><\/span>\n<span class=\"title\">\n[alerta-mailer]<\/span>\n<span class=\"setting\">mail_from = <span class=\"value\">user@hostname-fqdn<\/span><\/span>\n<span class=\"setting\">amqp_url = <span class=\"value\">redis://<span class=\"number\">127.0<\/span>.<span class=\"number\">0.1<\/span>:<span class=\"number\">6379<\/span>/<\/span><\/span>\n<span class=\"setting\">endpoint = <span class=\"value\">http://localhost:<span class=\"number\">8088<\/span>/api<\/span><\/span>\n<span class=\"setting\">smtp_use_ssl = <span class=\"value\"><span class=\"keyword\">False<\/span><\/span><\/span>\n<span class=\"setting\">debug = <span class=\"value\"><span class=\"keyword\">True<\/span><\/span><\/span>\n<span class=\"setting\">skip_mta = <span class=\"value\"><span class=\"keyword\">True<\/span><\/span><\/span>\n<span class=\"setting\">email_type = <span class=\"value\">text<\/span><\/span><\/code><\/pre><p>also I&#39;ve configured ~/alerta.rules.d like<\/p><pre><code>[\n    {\n        \"<span class=\"attribute\">name<\/span>\": <span class=\"value\"><span class=\"string\">\"test\"<\/span><\/span>,\n        \"<span class=\"attribute\">fields<\/span>\": <span class=\"value\">[\n            {\"<span class=\"attribute\">field<\/span>\": <span class=\"value\"><span class=\"string\">\"event\"<\/span><\/span>, \"<span class=\"attribute\">regex<\/span>\": <span class=\"value\"><span class=\"string\">\"check_.+\"<\/span><\/span>}\n        ]<\/span>,\n        \"<span class=\"attribute\">contacts<\/span>\": <span class=\"value\">[<span class=\"string\">\"my_email\"<\/span>]\n    <\/span>}\n]<\/code><\/pre><p>I run alerta-mailer as a systemd service. In service&#39;s log I see <\/p><pre><code>alerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">DEBUG:<\/span><span class=\"string\">mailer:<\/span>Looking <span class=\"keyword\">for<\/span> rules files <span class=\"keyword\">in<\/span> ~/alerta.rules.d\nalerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">INFO:<\/span>kombu.<span class=\"string\">mixins:<\/span>Connected to <span class=\"string\">redis:<\/span><span class=\"comment\">//127.0.0.1:6379//<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: Connected to <span class=\"string\">redis:<\/span><span class=\"comment\">//127.0.0.1:6379//<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">DEBUG:<\/span>urllib3.<span class=\"string\">connectionpool:<\/span>Starting <span class=\"keyword\">new<\/span> HTTP connection (<span class=\"number\">1<\/span>): <span class=\"string\">localhost:<\/span><span class=\"number\">8088<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: Starting <span class=\"keyword\">new<\/span> HTTP connection (<span class=\"number\">1<\/span>): <span class=\"string\">localhost:<\/span><span class=\"number\">8088<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">DEBUG:<\/span>urllib3.<span class=\"string\">connectionpool:<\/span><span class=\"string\">http:<\/span><span class=\"comment\">//localhost:8088 \"POST /api/heartbeat HTTP/1.1\" 201 276<\/span>\nalerta-mailer[<span class=\"number\">2261<\/span>]: <span class=\"string\">http:<\/span><span class=\"comment\">//localhost:8088 \"POST /api/heartbeat HTTP/1.1\" 201 276<\/span><\/code><\/pre><p>Alerts are receiving and accessible from web ui.<br>messagess with <code>&quot;name&quot;: &quot;alerta.plugins.amqp&quot;, &quot;levelno&quot;:<\/code> are exist in alerta log file<br>What I didn&#39;t do right? Maybe I need some additional configuration? Unfortunately I didn&#39;t manage to understand what&#39;s wrong looking at source code.<\/p>","sent":"2020-01-10T15:00:54.788Z","editedAt":"2020-01-10T15:08:47.842Z","fromUser":{"id":"5d36abbbd73408ce4fc6b75f","username":"Krylva","displayName":"Vladislav Krylatykh","url":"/Krylva","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/Krylva","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/41840237?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/41840237?v=4&s=128","v":5,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":5,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

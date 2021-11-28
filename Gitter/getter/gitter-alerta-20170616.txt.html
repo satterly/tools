@@ -1,0 +1,716 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2017/06/17"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2017/06/15"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">16<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jun 2017</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5943a5c17809edef0f781214 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943a5c17809edef0f781214' title="">Jun 16 2017 09:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="JacksonHill" class="mention">@JacksonHill</span> very interesting. thanks. I’m curious about this &quot;There is also a custom script which pulls messages from RabbitMQ queue and POST them to Alerta API, and another one for POST&#39;ing expired alerts to Elasticsearch for archiving purposes.” These are scripts you have written yourself? How do you trigger writing expired alerts to Elasticsearch?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943a7386549436c7d525bdd burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-591b131bd73408ce4f5ff4ed avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/25433955?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/25433955?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>strateguotojas</div>
+      <div class='chat-item__username js-chat-item-from'>@strateguotojas</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943a7386549436c7d525bdd' title="">Jun 16 2017 09:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hey <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> have one more question. I want to pass some more variables with URL. So alerts that are coming from pingdom go to specified tab. Do you know how to do this and what are possible parameters I can pass to alerta? For now I have tried this, but it does not seem to work : <a href="https://zenwatch.zenedge.com/api/webhooks/pingdom?&amp;api-key=xyz_B5tpkUogcU4_KomsgAqZZr2I39Pz39lPbKTq&amp;environment=SOC" rel="nofollow noopener noreferrer" target="_blank" class="link">https://zenwatch.zenedge.com/api/webhooks/pingdom?&amp;api-key=xyz_B5tpkUogcU4_KomsgAqZZr2I39Pz39lPbKTq&amp;environment=SOC</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943a9dba968382806c7ef72 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943a9dba968382806c7ef72' title="">Jun 16 2017 09:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      The pingdom integration works but you want more information in the alert is that right?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943aa7aa968382806c7ef7d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      you can use “tags” but i think you pay extra for them. <a href="https://www.pingdom.com/resources/webhooks" rel="nofollow noopener noreferrer" target="_blank" class="link">https://www.pingdom.com/resources/webhooks</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943aa9a7809edef0f78126d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      and then an alerta plugin could set the environment / service based on a pingdom tag.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943b871d83c50560c13a52e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943b871d83c50560c13a52e' title="">Jun 16 2017 10:52 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> yep, I wrote them all. RMQ -&gt; Alerta consumer is a systemd service written in python with Pika as a Rabbit client. I plan to migrate it to Kombu.<br>About Elasticsearch - It is similar conception to your housekeeping script - I have a cron job(js mongo script) run every minute, which sets alert status to &quot;expired&quot; when alert status is closed, or has serverity == normal for more than 2 minutes. Second script - python this time -  is called just after &quot;expirator.js&quot;. It connects to mongo, query for alerts with expired status,  publishes them on rabbit exchange, and deletes from database after successful publish. There&#39;s another systemd service which pulls messages from &#39;archive&#39; queue, and POST them to elasticsearch API. That solution is highly decoupled, and guarantees, that every alert is archived, and nothing is lost on the way.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943b8dd6462d8493c1a9a57 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      We&#39;ve got some celery workers spinned, so probably js script will be converted to python, and everything will be enclosed in 2 systemd services
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943b8f546f1ab77040638b2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943b8f546f1ab77040638b2' title="">Jun 16 2017 10:54 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Sounds really good. nice one.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943b90931f589c64fb2028c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943b90931f589c64fb2028c' title="">Jun 16 2017 10:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ah, one thing - in elastic search I create an index per alert origin field
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943b922a968382806c7f046 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943b922a968382806c7f046' title="">Jun 16 2017 10:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      shard by origin. interesting.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943b9426462d8493c1a9dca burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943b9426462d8493c1a9dca' title="">Jun 16 2017 10:56 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      So when I add another alert source - new zabbix for example - it has a new index automagically
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943b95f02c480e6724d4b92 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      But it is better to check the default mapping  that ES is creating
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943b9da6549436c7d52a9e9 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I am thinking about sharing this code, but it needs a big dependency which is RabbitMQ
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943ba4d02c480e6724d4f7b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Or i can drop this dependency and post alert to ES directly without RMQ, and delete it if succeded
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943bc35a968382806c7f05f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943bc35a968382806c7f05f' title="">Jun 16 2017 11:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      mongodb can be used as the AMQP transport if you use kombu python library. see <a href="http://docs.celeryproject.org/projects/kombu/en/latest/reference/kombu.transport.mongodb.html" rel="nofollow noopener noreferrer" target="_blank" class="link">http://docs.celeryproject.org/projects/kombu/en/latest/reference/kombu.transport.mongodb.html</a> then you don’t need the extra RabbitMQ dependency.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943bc46d83c50560c13b54e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5553151815522ed4b3e05049 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/12426252?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jacek Grzechnik</div>
+      <div class='chat-item__username js-chat-item-from'>@JacksonHill</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943bc46d83c50560c13b54e' title="">Jun 16 2017 11:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      We&#39;ve got single index/shard previously, but it is hard to maintain, and slow to search one big index (~50GB).  Solution came very fast when we realized that we have ~10 origins.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943bc52f31c8ced0c402461 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Thanks, I&#39;ll check it
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943c0ae6462d8493c1abe22 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-57ad75f840f3a6eec05f179f avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/18115984?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/18115984?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>arulvelu21</div>
+      <div class='chat-item__username js-chat-item-from'>@arulvelu21</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943c0ae6462d8493c1abe22' title="">Jun 16 2017 11:27 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943c115142826e972bf11c1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      what is the authentication procedure for alerta. I tried sigining up.. but it throws me error
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5943fccf46f1ab7704063bf5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/06/16?at=5943fccf46f1ab7704063bf5' title="">Jun 16 2017 15:44 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi <span data-link-type="mention" data-screen-name="arulvelu21" class="mention">@arulvelu21</span> you have the option of no auth, basic auth, google OAuth2, GitHub/GitLab Oauth or keycloak OpenID/SAML . see <a href="http://docs.alerta.io/en/latest/authentication.html" rel="nofollow noopener noreferrer" target="_blank" class="link">http://docs.alerta.io/en/latest/authentication.html</a>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$6gEi74W+1G7rB3nOZlt66nVbcaaePDK/+OhnMANQqyQ=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2017-06-16T00:00:00.000Z","nextDate":"2017-06-17T23:59:59.999Z","previousDate":"2017-06-15T00:00:00.000Z","messages":[{"id":"5943a5c17809edef0f781214","text":"@JacksonHill very interesting. thanks. I’m curious about this \"There is also a custom script which pulls messages from RabbitMQ queue and POST them to Alerta API, and another one for POST'ing expired alerts to Elasticsearch for archiving purposes.” These are scripts you have written yourself? How do you trigger writing expired alerts to Elasticsearch?","html":"<span data-link-type=\"mention\" data-screen-name=\"JacksonHill\" class=\"mention\">@JacksonHill<\/span> very interesting. thanks. I’m curious about this &quot;There is also a custom script which pulls messages from RabbitMQ queue and POST them to Alerta API, and another one for POST&#39;ing expired alerts to Elasticsearch for archiving purposes.” These are scripts you have written yourself? How do you trigger writing expired alerts to Elasticsearch?","sent":"2017-06-16T09:32:49.106Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[{"screenName":"JacksonHill","userId":"5553151815522ed4b3e05049","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943a7386549436c7d525bdd","text":"hey @satterly have one more question. I want to pass some more variables with URL. So alerts that are coming from pingdom go to specified tab. Do you know how to do this and what are possible parameters I can pass to alerta? For now I have tried this, but it does not seem to work : https://zenwatch.zenedge.com/api/webhooks/pingdom?&api-key=xyz_B5tpkUogcU4_KomsgAqZZr2I39Pz39lPbKTq&environment=SOC","html":"hey <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> have one more question. I want to pass some more variables with URL. So alerts that are coming from pingdom go to specified tab. Do you know how to do this and what are possible parameters I can pass to alerta? For now I have tried this, but it does not seem to work : <a href=\"https://zenwatch.zenedge.com/api/webhooks/pingdom?&amp;api-key=xyz_B5tpkUogcU4_KomsgAqZZr2I39Pz39lPbKTq&amp;environment=SOC\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://zenwatch.zenedge.com/api/webhooks/pingdom?&amp;api-key=xyz_B5tpkUogcU4_KomsgAqZZr2I39Pz39lPbKTq&amp;environment=SOC<\/a>","sent":"2017-06-16T09:39:04.190Z","fromUser":{"id":"591b131bd73408ce4f5ff4ed","username":"strateguotojas","displayName":"strateguotojas","url":"/strateguotojas","avatarUrl":"https://avatars-05.gitter.im/gh/uv/3/strateguotojas","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/25433955?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/25433955?v=3&s=128","v":1,"gv":"3"},"readBy":5,"urls":[{"url":"https://zenwatch.zenedge.com/api/webhooks/pingdom?&amp;api-key=xyz_B5tpkUogcU4_KomsgAqZZr2I39Pz39lPbKTq&amp;environment=SOC"}],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943a9dba968382806c7ef72","text":"The pingdom integration works but you want more information in the alert is that right?","html":"The pingdom integration works but you want more information in the alert is that right?","sent":"2017-06-16T09:50:19.786Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943aa7aa968382806c7ef7d","text":"you can use “tags” but i think you pay extra for them. https://www.pingdom.com/resources/webhooks","html":"you can use “tags” but i think you pay extra for them. <a href=\"https://www.pingdom.com/resources/webhooks\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://www.pingdom.com/resources/webhooks<\/a>","sent":"2017-06-16T09:52:58.969Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[{"url":"https://www.pingdom.com/resources/webhooks"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5943aa9a7809edef0f78126d","text":"and then an alerta plugin could set the environment / service based on a pingdom tag.","html":"and then an alerta plugin could set the environment / service based on a pingdom tag.","sent":"2017-06-16T09:53:30.192Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5943b871d83c50560c13a52e","text":"@satterly yep, I wrote them all. RMQ -> Alerta consumer is a systemd service written in python with Pika as a Rabbit client. I plan to migrate it to Kombu.  \nAbout Elasticsearch - It is similar conception to your housekeeping script - I have a cron job(js mongo script) run every minute, which sets alert status to \"expired\" when alert status is closed, or has serverity == normal for more than 2 minutes. Second script - python this time -  is called just after \"expirator.js\". It connects to mongo, query for alerts with expired status,  publishes them on rabbit exchange, and deletes from database after successful publish. There's another systemd service which pulls messages from 'archive' queue, and POST them to elasticsearch API. That solution is highly decoupled, and guarantees, that every alert is archived, and nothing is lost on the way.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> yep, I wrote them all. RMQ -&gt; Alerta consumer is a systemd service written in python with Pika as a Rabbit client. I plan to migrate it to Kombu.<br>About Elasticsearch - It is similar conception to your housekeeping script - I have a cron job(js mongo script) run every minute, which sets alert status to &quot;expired&quot; when alert status is closed, or has serverity == normal for more than 2 minutes. Second script - python this time -  is called just after &quot;expirator.js&quot;. It connects to mongo, query for alerts with expired status,  publishes them on rabbit exchange, and deletes from database after successful publish. There&#39;s another systemd service which pulls messages from &#39;archive&#39; queue, and POST them to elasticsearch API. That solution is highly decoupled, and guarantees, that every alert is archived, and nothing is lost on the way.","sent":"2017-06-16T10:52:33.594Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":5,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943b8dd6462d8493c1a9a57","text":"We've got some celery workers spinned, so probably js script will be converted to python, and everything will be enclosed in 2 systemd services","html":"We&#39;ve got some celery workers spinned, so probably js script will be converted to python, and everything will be enclosed in 2 systemd services","sent":"2017-06-16T10:54:21.548Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5943b8f546f1ab77040638b2","text":"Sounds really good. nice one.","html":"Sounds really good. nice one.","sent":"2017-06-16T10:54:45.642Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943b90931f589c64fb2028c","text":"Ah, one thing - in elastic search I create an index per alert origin field","html":"Ah, one thing - in elastic search I create an index per alert origin field","sent":"2017-06-16T10:55:05.152Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943b922a968382806c7f046","text":"shard by origin. interesting.","html":"shard by origin. interesting.","sent":"2017-06-16T10:55:30.738Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943b9426462d8493c1a9dca","text":"So when I add another alert source - new zabbix for example - it has a new index automagically","html":"So when I add another alert source - new zabbix for example - it has a new index automagically","sent":"2017-06-16T10:56:02.168Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943b95f02c480e6724d4b92","text":"But it is better to check the default mapping  that ES is creating","html":"But it is better to check the default mapping  that ES is creating","sent":"2017-06-16T10:56:31.056Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5943b9da6549436c7d52a9e9","text":"I am thinking about sharing this code, but it needs a big dependency which is RabbitMQ","html":"I am thinking about sharing this code, but it needs a big dependency which is RabbitMQ","sent":"2017-06-16T10:58:34.022Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5943ba4d02c480e6724d4f7b","text":"Or i can drop this dependency and post alert to ES directly without RMQ, and delete it if succeded","html":"Or i can drop this dependency and post alert to ES directly without RMQ, and delete it if succeded","sent":"2017-06-16T11:00:29.676Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5943bc35a968382806c7f05f","text":"mongodb can be used as the AMQP transport if you use kombu python library. see http://docs.celeryproject.org/projects/kombu/en/latest/reference/kombu.transport.mongodb.html then you don’t need the extra RabbitMQ dependency.","html":"mongodb can be used as the AMQP transport if you use kombu python library. see <a href=\"http://docs.celeryproject.org/projects/kombu/en/latest/reference/kombu.transport.mongodb.html\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://docs.celeryproject.org/projects/kombu/en/latest/reference/kombu.transport.mongodb.html<\/a> then you don’t need the extra RabbitMQ dependency.","sent":"2017-06-16T11:08:37.129Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":6,"urls":[{"url":"http://docs.celeryproject.org/projects/kombu/en/latest/reference/kombu.transport.mongodb.html"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943bc46d83c50560c13b54e","text":"We've got single index/shard previously, but it is hard to maintain, and slow to search one big index (~50GB).  Solution came very fast when we realized that we have ~10 origins.","html":"We&#39;ve got single index/shard previously, but it is hard to maintain, and slow to search one big index (~50GB).  Solution came very fast when we realized that we have ~10 origins.","sent":"2017-06-16T11:08:54.651Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943bc52f31c8ced0c402461","text":"Thanks, I'll check it","html":"Thanks, I&#39;ll check it","sent":"2017-06-16T11:09:06.263Z","fromUser":{"id":"5553151815522ed4b3e05049","username":"JacksonHill","displayName":"Jacek Grzechnik","url":"/JacksonHill","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/JacksonHill","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/12426252?v=4&s=128","v":8,"gv":"4"},"readBy":6,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5943c0ae6462d8493c1abe22","text":"hi","html":"hi","sent":"2017-06-16T11:27:42.640Z","fromUser":{"id":"57ad75f840f3a6eec05f179f","username":"arulvelu21","displayName":"arulvelu21","url":"/arulvelu21","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/arulvelu21","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/18115984?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/18115984?v=4&s=128","v":2,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5943c115142826e972bf11c1","text":"what is the authentication procedure for alerta. I tried sigining up.. but it throws me error","html":"what is the authentication procedure for alerta. I tried sigining up.. but it throws me error","sent":"2017-06-16T11:29:25.818Z","fromUser":{"id":"57ad75f840f3a6eec05f179f","username":"arulvelu21","displayName":"arulvelu21","url":"/arulvelu21","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/arulvelu21","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/18115984?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/18115984?v=4&s=128","v":2,"gv":"4"},"readBy":7,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5943fccf46f1ab7704063bf5","text":"hi @arulvelu21 you have the option of no auth, basic auth, google OAuth2, GitHub/GitLab Oauth or keycloak OpenID/SAML . see http://docs.alerta.io/en/latest/authentication.html","html":"hi <span data-link-type=\"mention\" data-screen-name=\"arulvelu21\" class=\"mention\">@arulvelu21<\/span> you have the option of no auth, basic auth, google OAuth2, GitHub/GitLab Oauth or keycloak OpenID/SAML . see <a href=\"http://docs.alerta.io/en/latest/authentication.html\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://docs.alerta.io/en/latest/authentication.html<\/a>","sent":"2017-06-16T15:44:15.887Z","editedAt":"2017-06-16T15:45:16.451Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[{"url":"http://docs.alerta.io/en/latest/authentication.html"}],"mentions":[{"screenName":"arulvelu21","userId":"57ad75f840f3a6eec05f179f","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

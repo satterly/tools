@@ -1,0 +1,1792 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/08/01"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/07/30"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">31<sup>st</sup></span><br>
+      <span class="gtrArchiveMonth">Jul 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5d41076a7bcc41678f01aaea burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59239ba2d73408ce4f6184a7 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Madan</div>
+      <div class='chat-item__username js-chat-item-from'>@madan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41076a7bcc41678f01aaea' title="">Jul 31 2019 03:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p><span data-link-type="mention" data-screen-name="madankumarj" class="mention">@madankumarj</span> I used pixelmator to create the favicon (I just used a trial version of the app and it has expired now). And to create the many different versions of the icon for each platform I used <a href="http://www.favicomatic.com/" rel="nofollow noopener noreferrer" target="_blank" class="link">http://www.favicomatic.com/</a></p></blockquote>
+<p>Thank you.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4131c6b0bf183ea371ce37 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575aa1d3c2f0db084a1d28aa avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1083576?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1083576?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton Markelov</div>
+      <div class='chat-item__username js-chat-item-from'>@strangeman</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d4131c6b0bf183ea371ce37' title="">Jul 31 2019 06:14 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi guys! Nick, thank you for the awesome tool.</p><p>I have a question. Is there a way to create custom deduplication parameters? We have a set of Prometheus alerts for the Kafka consumer lags (from Linkedin&#39;s burrow) and they have the same <code>instance</code> and <code>alert name</code>, but different labels like <code>topic</code> and <code>consumer_group</code>. I want to deduplicate these alerts. It&#39;s possible to do via the plugin, for example?</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41346c02abe16c6488c286 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41346c02abe16c6488c286' title="">Jul 31 2019 06:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="strangeman" class="mention">@strangeman</span> yes, but the labels need to be added to either the resource or event for deduplication to work. eg. <code>resource=instance:topic</code> and/or <code>event=alertname:consumer_group</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41373f9a02440b032defbe burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41373f9a02440b032defbe' title="">Jul 31 2019 06:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="rdxsuper" class="mention">@rdxsuper</span> You can set <code>LOG_METHODS</code> to only log the HTTP methods you are interested in … <a href="https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings" rel="nofollow noopener noreferrer" target="_blank" class="link">https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4137cb4ba6af0b02608cc8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575aa1d3c2f0db084a1d28aa avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1083576?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1083576?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton Markelov</div>
+      <div class='chat-item__username js-chat-item-from'>@strangeman</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d4137cb4ba6af0b02608cc8' title="">Jul 31 2019 06:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> got it, thank you!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414c2d7bcc41678f0383ec burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d414c2d7bcc41678f0383ec' title="">Jul 31 2019 08:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="rdxsuper" class="mention">@rdxsuper</span> I can’t reproduce your output unless I replace <code>LOG_FORMAT=‘verbose’</code> with <code>LOG_FORMAT=‘json’</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414c9a5367476cc983a11b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Are you sure that the server config file you are changing is actually being used? Is it possible there is another config file or environment variables that are being used instead?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414cf2e2802b6790a02ce3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If you can’t figure it out please raise a GitHub issue and include all your config files and describe your deployment environment in detail so I can reproduce your exact setup.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414d0202abe16c648974dd burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Unless I can reproduce it I can’t suggest a fix.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414da15367476cc983a856 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-570d2653187bb6f0eadf1a57 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/2997171?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/2997171?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>ishmaelen</div>
+      <div class='chat-item__username js-chat-item-from'>@ishmaelen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d414da15367476cc983a856' title="">Jul 31 2019 08:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> - Is this possible? if I do alerta send -t &quot;somedescriptionhere&quot;, can I then do alerta close -f description:&quot;somedescriptionhere&quot; or how does that filter/query thing work?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414e85b0bf183ea3729fee burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I have some external alerting system calling a bash script that executes alerta send.. I place the external ticketID in -t (description) .. so I was wondering if I could use that to close them to avoid event matching (this external alerting system has ~ 5000 diff. devices it monitors so Id want it more dynamic than having to place all correlation to &quot;event&quot; as in examples)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414ef41dc3324670d9344f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-570d2653187bb6f0eadf1a57 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/2997171?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/2997171?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>ishmaelen</div>
+      <div class='chat-item__username js-chat-item-from'>@ishmaelen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d414ef41dc3324670d9344f' title="">Jul 31 2019 08:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      NM - I see I can use &quot;text&quot; in query/filter.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41588ee2802b6790a08573 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41588ee2802b6790a08573' title="">Jul 31 2019 08:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;d put the ticket is in a custom attribute and then filter on that.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a1b120f75e7ba55c5331 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d419ffdd73408ce4fc767eb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>anttof</div>
+      <div class='chat-item__username js-chat-item-from'>@anttof</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a1b120f75e7ba55c5331' title="">Jul 31 2019 14:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi all, quick question. Does anyone know if you can use all possible labels/annotations that alertmanager sends for an alert and use these as columns? I&#39;m currently having some trouble getting this to work and I&#39;m not sure if I understand the &quot;COLUMNS&quot; in settings file correctly
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a1df395d5d4671fcce7b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      For example: I have the following annotations that I can verify in the &quot;data&quot; tab that alertmanager has sent for an alert:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a1e645775115b3733218 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+        &quot;annotations&quot;: {<br>    &quot;description&quot;: xxxxxx high % CPU Memory&quot;,<br>    &quot;summary&quot;: &quot;CPU Memory Usage: 82%&quot; 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a2015a72fc7ba4ce447d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      But I only see &quot;description&quot; as a column, even though I have added &quot;summary&quot; to the COLUMNS list in settings file
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a22a771bca3ea4e0296f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      same goes for other labels (not annotations) that I want to be listed as columns
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a320b0bf183ea3755b00 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a320b0bf183ea3755b00' title="">Jul 31 2019 14:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      description is an alert attribute that Alertmanager and Alerta just happen to share, and which the webhook just copies straight over for you. Alertmanager labels/tags are mapped as best they can. See <a href="https://github.com/alerta/prometheus-config#configuration---rules" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/prometheus-config#configuration---rules</a> for list of mappings
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a4b81dc3324670dbcf1b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a4b81dc3324670dbcf1b' title="">Jul 31 2019 14:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Any Alertmanager labels that don’t map to Alerta attributes get copied over as Alerta “tags” and any Alertmanager annotations that don’t map to Alerta attributes get copied over as Alerta &quot;custom attributes”.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a5044ba6af0b0263cd66 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d419ffdd73408ce4fc767eb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>anttof</div>
+      <div class='chat-item__username js-chat-item-from'>@anttof</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a5044ba6af0b0263cd66' title="">Jul 31 2019 14:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ah I see, is it possible to use these &quot;tags&quot; or &quot;custom attributes&quot; as columns?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a529395d5d4671fced29 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a529395d5d4671fced29' title="">Jul 31 2019 14:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes, so if you have labels that you want to see in the alerta console add “tags” to the list of columns.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a55c395d5d4671fceeb8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And if you have annotations you want to see you should just have to add that annotation name to the list of columns eg. “region” or “zone”.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a56cc4aca715b28e04de burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Let me know if that works for you.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a5a41dc3324670dbd7e2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d419ffdd73408ce4fc767eb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>anttof</div>
+      <div class='chat-item__username js-chat-item-from'>@anttof</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a5a41dc3324670dbd7e2' title="">Jul 31 2019 14:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok cool, thanks! I&#39;ll try that out 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a5d89a02440b033137bb burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      One thought though; Is it possible to add a single specific tags only? For some alerts for example I have 10+ tags, out which maybe only 2 are actually of interest
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a5e65367476cc9864f91 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I could filter that in Alertmanager rules otherwise I suppose
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a6161241645b16f03827 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a6161241645b16f03827' title="">Jul 31 2019 14:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      you could convert them into attributes in a plugin <code>pre_receive()</code> hook.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a62f395d5d4671fcf358 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      or filter out the unwanted tags in a plugin as well.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a72c3e05746cc89baa6e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d419ffdd73408ce4fc767eb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>anttof</div>
+      <div class='chat-item__username js-chat-item-from'>@anttof</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a72c3e05746cc89baa6e' title="">Jul 31 2019 14:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ah thanks again, I found an example of a pre_receive() plugin online, seemed quite straight forward, I&#39;ll give that a try. Now my tags are showing at least
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41b6ec5a72fc7ba4ceec6d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41b6ec5a72fc7ba4ceec6d' title="">Jul 31 2019 15:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      :+1:
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$3e36BzGrYF92dcdNeRajrz/6fNW0gLBge0ux6MiHNn4=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-07-31T00:00:00.000Z","nextDate":"2019-08-01T23:59:59.999Z","previousDate":"2019-07-30T00:00:00.000Z","messages":[{"id":"5d41076a7bcc41678f01aaea","text":"> @madankumarj I used pixelmator to create the favicon (I just used a trial version of the app and it has expired now). And to create the many different versions of the icon for each platform I used http://www.favicomatic.com/\n\nThank you.","html":"<blockquote>\n<p><span data-link-type=\"mention\" data-screen-name=\"madankumarj\" class=\"mention\">@madankumarj<\/span> I used pixelmator to create the favicon (I just used a trial version of the app and it has expired now). And to create the many different versions of the icon for each platform I used <a href=\"http://www.favicomatic.com/\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://www.favicomatic.com/<\/a><\/p><\/blockquote>\n<p>Thank you.<\/p>","sent":"2019-07-31T03:13:46.919Z","fromUser":{"id":"59239ba2d73408ce4f6184a7","username":"madan","displayName":"Madan","url":"/madan","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/madan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=128","v":33,"gv":"4"},"readBy":9,"urls":[{"url":"http://www.favicomatic.com/"}],"mentions":[{"screenName":"madankumarj","userId":"59239ba2d73408ce4f6184a7","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4131c6b0bf183ea371ce37","text":"Hi guys! Nick, thank you for the awesome tool.\n\nI have a question. Is there a way to create custom deduplication parameters? We have a set of Prometheus alerts for the Kafka consumer lags (from Linkedin's burrow) and they have the same `instance` and `alert name`, but different labels like `topic` and `consumer_group`. I want to deduplicate these alerts. It's possible to do via the plugin, for example?","html":"<p>Hi guys! Nick, thank you for the awesome tool.<\/p><p>I have a question. Is there a way to create custom deduplication parameters? We have a set of Prometheus alerts for the Kafka consumer lags (from Linkedin&#39;s burrow) and they have the same <code>instance<\/code> and <code>alert name<\/code>, but different labels like <code>topic<\/code> and <code>consumer_group<\/code>. I want to deduplicate these alerts. It&#39;s possible to do via the plugin, for example?<\/p>","sent":"2019-07-31T06:14:30.043Z","fromUser":{"id":"575aa1d3c2f0db084a1d28aa","username":"strangeman","displayName":"Anton Markelov","url":"/strangeman","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/strangeman","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1083576?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1083576?v=4&s=128","v":5,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41346c02abe16c6488c286","text":"@strangeman yes, but the labels need to be added to either the resource or event for deduplication to work. eg. `resource=instance:topic` and/or `event=alertname:consumer_group`","html":"<span data-link-type=\"mention\" data-screen-name=\"strangeman\" class=\"mention\">@strangeman<\/span> yes, but the labels need to be added to either the resource or event for deduplication to work. eg. <code>resource=instance:topic<\/code> and/or <code>event=alertname:consumer_group<\/code>","sent":"2019-07-31T06:25:48.510Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"strangeman","userId":"575aa1d3c2f0db084a1d28aa","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41373f9a02440b032defbe","text":"@rdxsuper You can set `LOG_METHODS` to only log the HTTP methods you are interested in … https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings","html":"<span data-link-type=\"mention\" data-screen-name=\"rdxsuper\" class=\"mention\">@rdxsuper<\/span> You can set <code>LOG_METHODS<\/code> to only log the HTTP methods you are interested in … <a href=\"https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings<\/a>","sent":"2019-07-31T06:37:51.919Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[{"url":"https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings"}],"mentions":[{"screenName":"rdxsuper","userId":"5d125752d73408ce4fc47bce","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4137cb4ba6af0b02608cc8","text":"@satterly got it, thank you!","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> got it, thank you!","sent":"2019-07-31T06:40:11.004Z","editedAt":"2019-07-31T06:40:16.959Z","fromUser":{"id":"575aa1d3c2f0db084a1d28aa","username":"strangeman","displayName":"Anton Markelov","url":"/strangeman","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/strangeman","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1083576?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1083576?v=4&s=128","v":5,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5d414c2d7bcc41678f0383ec","text":"@rdxsuper I can’t reproduce your output unless I replace `LOG_FORMAT=‘verbose’` with `LOG_FORMAT=‘json’`","html":"<span data-link-type=\"mention\" data-screen-name=\"rdxsuper\" class=\"mention\">@rdxsuper<\/span> I can’t reproduce your output unless I replace <code>LOG_FORMAT=‘verbose’<\/code> with <code>LOG_FORMAT=‘json’<\/code>","sent":"2019-07-31T08:07:09.669Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"rdxsuper","userId":"5d125752d73408ce4fc47bce","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d414c9a5367476cc983a11b","text":"Are you sure that the server config file you are changing is actually being used? Is it possible there is another config file or environment variables that are being used instead?","html":"Are you sure that the server config file you are changing is actually being used? Is it possible there is another config file or environment variables that are being used instead?","sent":"2019-07-31T08:08:58.635Z","editedAt":"2019-07-31T08:09:13.243Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5d414cf2e2802b6790a02ce3","text":"If you can’t figure it out please raise a GitHub issue and include all your config files and describe your deployment environment in detail so I can reproduce your exact setup.","html":"If you can’t figure it out please raise a GitHub issue and include all your config files and describe your deployment environment in detail so I can reproduce your exact setup.","sent":"2019-07-31T08:10:26.300Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d414d0202abe16c648974dd","text":"Unless I can reproduce it I can’t suggest a fix.","html":"Unless I can reproduce it I can’t suggest a fix.","sent":"2019-07-31T08:10:42.936Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d414da15367476cc983a856","text":"@satterly - Is this possible? if I do alerta send -t \"somedescriptionhere\", can I then do alerta close -f description:\"somedescriptionhere\" or how does that filter/query thing work?","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> - Is this possible? if I do alerta send -t &quot;somedescriptionhere&quot;, can I then do alerta close -f description:&quot;somedescriptionhere&quot; or how does that filter/query thing work?","sent":"2019-07-31T08:13:21.092Z","fromUser":{"id":"570d2653187bb6f0eadf1a57","username":"ishmaelen","displayName":"ishmaelen","url":"/ishmaelen","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ishmaelen","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=128","v":4,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d414e85b0bf183ea3729fee","text":"I have some external alerting system calling a bash script that executes alerta send.. I place the external ticketID in -t (description) .. so I was wondering if I could use that to close them to avoid event matching (this external alerting system has ~ 5000 diff. devices it monitors so Id want it more dynamic than having to place all correlation to \"event\" as in examples)","html":"I have some external alerting system calling a bash script that executes alerta send.. I place the external ticketID in -t (description) .. so I was wondering if I could use that to close them to avoid event matching (this external alerting system has ~ 5000 diff. devices it monitors so Id want it more dynamic than having to place all correlation to &quot;event&quot; as in examples)","sent":"2019-07-31T08:17:09.009Z","fromUser":{"id":"570d2653187bb6f0eadf1a57","username":"ishmaelen","displayName":"ishmaelen","url":"/ishmaelen","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ishmaelen","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=128","v":4,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d414ef41dc3324670d9344f","text":"NM - I see I can use \"text\" in query/filter.","html":"NM - I see I can use &quot;text&quot; in query/filter.","sent":"2019-07-31T08:19:00.157Z","fromUser":{"id":"570d2653187bb6f0eadf1a57","username":"ishmaelen","displayName":"ishmaelen","url":"/ishmaelen","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ishmaelen","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=128","v":4,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41588ee2802b6790a08573","text":"I'd put the ticket is in a custom attribute and then filter on that.","html":"I&#39;d put the ticket is in a custom attribute and then filter on that.","sent":"2019-07-31T08:59:58.146Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a1b120f75e7ba55c5331","text":"Hi all, quick question. Does anyone know if you can use all possible labels/annotations that alertmanager sends for an alert and use these as columns? I'm currently having some trouble getting this to work and I'm not sure if I understand the \"COLUMNS\" in settings file correctly","html":"Hi all, quick question. Does anyone know if you can use all possible labels/annotations that alertmanager sends for an alert and use these as columns? I&#39;m currently having some trouble getting this to work and I&#39;m not sure if I understand the &quot;COLUMNS&quot; in settings file correctly","sent":"2019-07-31T14:12:01.129Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a1df395d5d4671fcce7b","text":"For example: I have the following annotations that I can verify in the \"data\" tab that alertmanager has sent for an alert:","html":"For example: I have the following annotations that I can verify in the &quot;data&quot; tab that alertmanager has sent for an alert:","sent":"2019-07-31T14:12:47.411Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a1e645775115b3733218","text":"  \"annotations\": {\n    \"description\": xxxxxx high % CPU Memory\",\n    \"summary\": \"CPU Memory Usage: 82%\" ","html":"  &quot;annotations&quot;: {<br>    &quot;description&quot;: xxxxxx high % CPU Memory&quot;,<br>    &quot;summary&quot;: &quot;CPU Memory Usage: 82%&quot; ","sent":"2019-07-31T14:12:54.489Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a2015a72fc7ba4ce447d","text":"But I only see \"description\" as a column, even though I have added \"summary\" to the COLUMNS list in settings file","html":"But I only see &quot;description&quot; as a column, even though I have added &quot;summary&quot; to the COLUMNS list in settings file","sent":"2019-07-31T14:13:21.436Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a22a771bca3ea4e0296f","text":"same goes for other labels (not annotations) that I want to be listed as columns","html":"same goes for other labels (not annotations) that I want to be listed as columns","sent":"2019-07-31T14:14:02.461Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a320b0bf183ea3755b00","text":"description is an alert attribute that Alertmanager and Alerta just happen to share, and which the webhook just copies straight over for you. Alertmanager labels/tags are mapped as best they can. See https://github.com/alerta/prometheus-config#configuration---rules for list of mappings","html":"description is an alert attribute that Alertmanager and Alerta just happen to share, and which the webhook just copies straight over for you. Alertmanager labels/tags are mapped as best they can. See <a href=\"https://github.com/alerta/prometheus-config#configuration---rules\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/prometheus-config#configuration---rules<\/a> for list of mappings","sent":"2019-07-31T14:18:08.849Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://github.com/alerta/prometheus-config#configuration---rules"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a4b81dc3324670dbcf1b","text":"Any Alertmanager labels that don’t map to Alerta attributes get copied over as Alerta “tags” and any Alertmanager annotations that don’t map to Alerta attributes get copied over as Alerta \"custom attributes”.","html":"Any Alertmanager labels that don’t map to Alerta attributes get copied over as Alerta “tags” and any Alertmanager annotations that don’t map to Alerta attributes get copied over as Alerta &quot;custom attributes”.","sent":"2019-07-31T14:24:56.060Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a5044ba6af0b0263cd66","text":"ah I see, is it possible to use these \"tags\" or \"custom attributes\" as columns?","html":"ah I see, is it possible to use these &quot;tags&quot; or &quot;custom attributes&quot; as columns?","sent":"2019-07-31T14:26:12.262Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a529395d5d4671fced29","text":"Yes, so if you have labels that you want to see in the alerta console add “tags” to the list of columns.","html":"Yes, so if you have labels that you want to see in the alerta console add “tags” to the list of columns.","sent":"2019-07-31T14:26:49.034Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a55c395d5d4671fceeb8","text":"And if you have annotations you want to see you should just have to add that annotation name to the list of columns eg. “region” or “zone”.","html":"And if you have annotations you want to see you should just have to add that annotation name to the list of columns eg. “region” or “zone”.","sent":"2019-07-31T14:27:40.899Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a56cc4aca715b28e04de","text":"Let me know if that works for you.","html":"Let me know if that works for you.","sent":"2019-07-31T14:27:56.927Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a5a41dc3324670dbd7e2","text":"Ok cool, thanks! I'll try that out ","html":"Ok cool, thanks! I&#39;ll try that out ","sent":"2019-07-31T14:28:52.784Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a5d89a02440b033137bb","text":"One thought though; Is it possible to add a single specific tags only? For some alerts for example I have 10+ tags, out which maybe only 2 are actually of interest","html":"One thought though; Is it possible to add a single specific tags only? For some alerts for example I have 10+ tags, out which maybe only 2 are actually of interest","sent":"2019-07-31T14:29:44.467Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a5e65367476cc9864f91","text":"I could filter that in Alertmanager rules otherwise I suppose","html":"I could filter that in Alertmanager rules otherwise I suppose","sent":"2019-07-31T14:29:58.539Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a6161241645b16f03827","text":"you could convert them into attributes in a plugin `pre_receive()` hook.","html":"you could convert them into attributes in a plugin <code>pre_receive()<\/code> hook.","sent":"2019-07-31T14:30:46.194Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a62f395d5d4671fcf358","text":"or filter out the unwanted tags in a plugin as well.","html":"or filter out the unwanted tags in a plugin as well.","sent":"2019-07-31T14:31:11.568Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a72c3e05746cc89baa6e","text":"ah thanks again, I found an example of a pre_receive() plugin online, seemed quite straight forward, I'll give that a try. Now my tags are showing at least","html":"ah thanks again, I found an example of a pre_receive() plugin online, seemed quite straight forward, I&#39;ll give that a try. Now my tags are showing at least","sent":"2019-07-31T14:35:24.040Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41b6ec5a72fc7ba4ceec6d","text":":+1:","html":":+1:","sent":"2019-07-31T15:42:36.599Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/08/01"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/07/30"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">31<sup>st</sup></span><br>
+      <span class="gtrArchiveMonth">Jul 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5d41076a7bcc41678f01aaea burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-59239ba2d73408ce4f6184a7 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/2398794?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Madan</div>
+      <div class='chat-item__username js-chat-item-from'>@madan</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41076a7bcc41678f01aaea' title="">Jul 31 2019 03:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <blockquote>
+<p><span data-link-type="mention" data-screen-name="madankumarj" class="mention">@madankumarj</span> I used pixelmator to create the favicon (I just used a trial version of the app and it has expired now). And to create the many different versions of the icon for each platform I used <a href="http://www.favicomatic.com/" rel="nofollow noopener noreferrer" target="_blank" class="link">http://www.favicomatic.com/</a></p></blockquote>
+<p>Thank you.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4131c6b0bf183ea371ce37 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575aa1d3c2f0db084a1d28aa avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1083576?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1083576?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton Markelov</div>
+      <div class='chat-item__username js-chat-item-from'>@strangeman</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d4131c6b0bf183ea371ce37' title="">Jul 31 2019 06:14 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi guys! Nick, thank you for the awesome tool.</p><p>I have a question. Is there a way to create custom deduplication parameters? We have a set of Prometheus alerts for the Kafka consumer lags (from Linkedin&#39;s burrow) and they have the same <code>instance</code> and <code>alert name</code>, but different labels like <code>topic</code> and <code>consumer_group</code>. I want to deduplicate these alerts. It&#39;s possible to do via the plugin, for example?</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41346c02abe16c6488c286 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41346c02abe16c6488c286' title="">Jul 31 2019 06:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="strangeman" class="mention">@strangeman</span> yes, but the labels need to be added to either the resource or event for deduplication to work. eg. <code>resource=instance:topic</code> and/or <code>event=alertname:consumer_group</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41373f9a02440b032defbe burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41373f9a02440b032defbe' title="">Jul 31 2019 06:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="rdxsuper" class="mention">@rdxsuper</span> You can set <code>LOG_METHODS</code> to only log the HTTP methods you are interested in … <a href="https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings" rel="nofollow noopener noreferrer" target="_blank" class="link">https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d4137cb4ba6af0b02608cc8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575aa1d3c2f0db084a1d28aa avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/1083576?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/1083576?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Anton Markelov</div>
+      <div class='chat-item__username js-chat-item-from'>@strangeman</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d4137cb4ba6af0b02608cc8' title="">Jul 31 2019 06:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> got it, thank you!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414c2d7bcc41678f0383ec burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d414c2d7bcc41678f0383ec' title="">Jul 31 2019 08:07 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="rdxsuper" class="mention">@rdxsuper</span> I can’t reproduce your output unless I replace <code>LOG_FORMAT=‘verbose’</code> with <code>LOG_FORMAT=‘json’</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414c9a5367476cc983a11b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Are you sure that the server config file you are changing is actually being used? Is it possible there is another config file or environment variables that are being used instead?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414cf2e2802b6790a02ce3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If you can’t figure it out please raise a GitHub issue and include all your config files and describe your deployment environment in detail so I can reproduce your exact setup.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414d0202abe16c648974dd burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Unless I can reproduce it I can’t suggest a fix.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414da15367476cc983a856 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-570d2653187bb6f0eadf1a57 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/2997171?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/2997171?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>ishmaelen</div>
+      <div class='chat-item__username js-chat-item-from'>@ishmaelen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d414da15367476cc983a856' title="">Jul 31 2019 08:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> - Is this possible? if I do alerta send -t &quot;somedescriptionhere&quot;, can I then do alerta close -f description:&quot;somedescriptionhere&quot; or how does that filter/query thing work?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414e85b0bf183ea3729fee burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I have some external alerting system calling a bash script that executes alerta send.. I place the external ticketID in -t (description) .. so I was wondering if I could use that to close them to avoid event matching (this external alerting system has ~ 5000 diff. devices it monitors so Id want it more dynamic than having to place all correlation to &quot;event&quot; as in examples)
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d414ef41dc3324670d9344f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-570d2653187bb6f0eadf1a57 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/2997171?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/2997171?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>ishmaelen</div>
+      <div class='chat-item__username js-chat-item-from'>@ishmaelen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d414ef41dc3324670d9344f' title="">Jul 31 2019 08:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      NM - I see I can use &quot;text&quot; in query/filter.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41588ee2802b6790a08573 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41588ee2802b6790a08573' title="">Jul 31 2019 08:59 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;d put the ticket is in a custom attribute and then filter on that.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a1b120f75e7ba55c5331 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d419ffdd73408ce4fc767eb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>anttof</div>
+      <div class='chat-item__username js-chat-item-from'>@anttof</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a1b120f75e7ba55c5331' title="">Jul 31 2019 14:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi all, quick question. Does anyone know if you can use all possible labels/annotations that alertmanager sends for an alert and use these as columns? I&#39;m currently having some trouble getting this to work and I&#39;m not sure if I understand the &quot;COLUMNS&quot; in settings file correctly
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a1df395d5d4671fcce7b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      For example: I have the following annotations that I can verify in the &quot;data&quot; tab that alertmanager has sent for an alert:
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a1e645775115b3733218 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+        &quot;annotations&quot;: {<br>    &quot;description&quot;: xxxxxx high % CPU Memory&quot;,<br>    &quot;summary&quot;: &quot;CPU Memory Usage: 82%&quot; 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a2015a72fc7ba4ce447d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      But I only see &quot;description&quot; as a column, even though I have added &quot;summary&quot; to the COLUMNS list in settings file
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a22a771bca3ea4e0296f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      same goes for other labels (not annotations) that I want to be listed as columns
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a320b0bf183ea3755b00 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a320b0bf183ea3755b00' title="">Jul 31 2019 14:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      description is an alert attribute that Alertmanager and Alerta just happen to share, and which the webhook just copies straight over for you. Alertmanager labels/tags are mapped as best they can. See <a href="https://github.com/alerta/prometheus-config#configuration---rules" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/prometheus-config#configuration---rules</a> for list of mappings
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a4b81dc3324670dbcf1b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a4b81dc3324670dbcf1b' title="">Jul 31 2019 14:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Any Alertmanager labels that don’t map to Alerta attributes get copied over as Alerta “tags” and any Alertmanager annotations that don’t map to Alerta attributes get copied over as Alerta &quot;custom attributes”.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a5044ba6af0b0263cd66 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d419ffdd73408ce4fc767eb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>anttof</div>
+      <div class='chat-item__username js-chat-item-from'>@anttof</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a5044ba6af0b0263cd66' title="">Jul 31 2019 14:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ah I see, is it possible to use these &quot;tags&quot; or &quot;custom attributes&quot; as columns?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a529395d5d4671fced29 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a529395d5d4671fced29' title="">Jul 31 2019 14:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Yes, so if you have labels that you want to see in the alerta console add “tags” to the list of columns.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a55c395d5d4671fceeb8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And if you have annotations you want to see you should just have to add that annotation name to the list of columns eg. “region” or “zone”.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a56cc4aca715b28e04de burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Let me know if that works for you.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a5a41dc3324670dbd7e2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d419ffdd73408ce4fc767eb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>anttof</div>
+      <div class='chat-item__username js-chat-item-from'>@anttof</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a5a41dc3324670dbd7e2' title="">Jul 31 2019 14:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Ok cool, thanks! I&#39;ll try that out 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a5d89a02440b033137bb burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      One thought though; Is it possible to add a single specific tags only? For some alerts for example I have 10+ tags, out which maybe only 2 are actually of interest
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a5e65367476cc9864f91 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I could filter that in Alertmanager rules otherwise I suppose
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a6161241645b16f03827 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a6161241645b16f03827' title="">Jul 31 2019 14:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      you could convert them into attributes in a plugin <code>pre_receive()</code> hook.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a62f395d5d4671fcf358 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      or filter out the unwanted tags in a plugin as well.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41a72c3e05746cc89baa6e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d419ffdd73408ce4fc767eb avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/49523975?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>anttof</div>
+      <div class='chat-item__username js-chat-item-from'>@anttof</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41a72c3e05746cc89baa6e' title="">Jul 31 2019 14:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ah thanks again, I found an example of a pre_receive() plugin online, seemed quite straight forward, I&#39;ll give that a try. Now my tags are showing at least
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d41b6ec5a72fc7ba4ceec6d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/07/31?at=5d41b6ec5a72fc7ba4ceec6d' title="">Jul 31 2019 15:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      :+1:
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$fF2+k7N2gzWWsucUCPQl5XLwGPSvDl3TzqmGUew22ho=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-07-31T00:00:00.000Z","nextDate":"2019-08-01T23:59:59.999Z","previousDate":"2019-07-30T00:00:00.000Z","messages":[{"id":"5d41076a7bcc41678f01aaea","text":"> @madankumarj I used pixelmator to create the favicon (I just used a trial version of the app and it has expired now). And to create the many different versions of the icon for each platform I used http://www.favicomatic.com/\n\nThank you.","html":"<blockquote>\n<p><span data-link-type=\"mention\" data-screen-name=\"madankumarj\" class=\"mention\">@madankumarj<\/span> I used pixelmator to create the favicon (I just used a trial version of the app and it has expired now). And to create the many different versions of the icon for each platform I used <a href=\"http://www.favicomatic.com/\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://www.favicomatic.com/<\/a><\/p><\/blockquote>\n<p>Thank you.<\/p>","sent":"2019-07-31T03:13:46.919Z","fromUser":{"id":"59239ba2d73408ce4f6184a7","username":"madan","displayName":"Madan","url":"/madan","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/madan","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/2398794?v=4&s=128","v":33,"gv":"4"},"readBy":9,"urls":[{"url":"http://www.favicomatic.com/"}],"mentions":[{"screenName":"madankumarj","userId":"59239ba2d73408ce4f6184a7","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4131c6b0bf183ea371ce37","text":"Hi guys! Nick, thank you for the awesome tool.\n\nI have a question. Is there a way to create custom deduplication parameters? We have a set of Prometheus alerts for the Kafka consumer lags (from Linkedin's burrow) and they have the same `instance` and `alert name`, but different labels like `topic` and `consumer_group`. I want to deduplicate these alerts. It's possible to do via the plugin, for example?","html":"<p>Hi guys! Nick, thank you for the awesome tool.<\/p><p>I have a question. Is there a way to create custom deduplication parameters? We have a set of Prometheus alerts for the Kafka consumer lags (from Linkedin&#39;s burrow) and they have the same <code>instance<\/code> and <code>alert name<\/code>, but different labels like <code>topic<\/code> and <code>consumer_group<\/code>. I want to deduplicate these alerts. It&#39;s possible to do via the plugin, for example?<\/p>","sent":"2019-07-31T06:14:30.043Z","fromUser":{"id":"575aa1d3c2f0db084a1d28aa","username":"strangeman","displayName":"Anton Markelov","url":"/strangeman","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/strangeman","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1083576?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1083576?v=4&s=128","v":5,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41346c02abe16c6488c286","text":"@strangeman yes, but the labels need to be added to either the resource or event for deduplication to work. eg. `resource=instance:topic` and/or `event=alertname:consumer_group`","html":"<span data-link-type=\"mention\" data-screen-name=\"strangeman\" class=\"mention\">@strangeman<\/span> yes, but the labels need to be added to either the resource or event for deduplication to work. eg. <code>resource=instance:topic<\/code> and/or <code>event=alertname:consumer_group<\/code>","sent":"2019-07-31T06:25:48.510Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"strangeman","userId":"575aa1d3c2f0db084a1d28aa","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41373f9a02440b032defbe","text":"@rdxsuper You can set `LOG_METHODS` to only log the HTTP methods you are interested in … https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings","html":"<span data-link-type=\"mention\" data-screen-name=\"rdxsuper\" class=\"mention\">@rdxsuper<\/span> You can set <code>LOG_METHODS<\/code> to only log the HTTP methods you are interested in … <a href=\"https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings<\/a>","sent":"2019-07-31T06:37:51.919Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[{"url":"https://docs.alerta.io/en/latest/configuration.html?highlight=LOG_METHODS#config-file-settings"}],"mentions":[{"screenName":"rdxsuper","userId":"5d125752d73408ce4fc47bce","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d4137cb4ba6af0b02608cc8","text":"@satterly got it, thank you!","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> got it, thank you!","sent":"2019-07-31T06:40:11.004Z","editedAt":"2019-07-31T06:40:16.959Z","fromUser":{"id":"575aa1d3c2f0db084a1d28aa","username":"strangeman","displayName":"Anton Markelov","url":"/strangeman","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/strangeman","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/1083576?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/1083576?v=4&s=128","v":5,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5d414c2d7bcc41678f0383ec","text":"@rdxsuper I can’t reproduce your output unless I replace `LOG_FORMAT=‘verbose’` with `LOG_FORMAT=‘json’`","html":"<span data-link-type=\"mention\" data-screen-name=\"rdxsuper\" class=\"mention\">@rdxsuper<\/span> I can’t reproduce your output unless I replace <code>LOG_FORMAT=‘verbose’<\/code> with <code>LOG_FORMAT=‘json’<\/code>","sent":"2019-07-31T08:07:09.669Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"rdxsuper","userId":"5d125752d73408ce4fc47bce","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d414c9a5367476cc983a11b","text":"Are you sure that the server config file you are changing is actually being used? Is it possible there is another config file or environment variables that are being used instead?","html":"Are you sure that the server config file you are changing is actually being used? Is it possible there is another config file or environment variables that are being used instead?","sent":"2019-07-31T08:08:58.635Z","editedAt":"2019-07-31T08:09:13.243Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5d414cf2e2802b6790a02ce3","text":"If you can’t figure it out please raise a GitHub issue and include all your config files and describe your deployment environment in detail so I can reproduce your exact setup.","html":"If you can’t figure it out please raise a GitHub issue and include all your config files and describe your deployment environment in detail so I can reproduce your exact setup.","sent":"2019-07-31T08:10:26.300Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d414d0202abe16c648974dd","text":"Unless I can reproduce it I can’t suggest a fix.","html":"Unless I can reproduce it I can’t suggest a fix.","sent":"2019-07-31T08:10:42.936Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d414da15367476cc983a856","text":"@satterly - Is this possible? if I do alerta send -t \"somedescriptionhere\", can I then do alerta close -f description:\"somedescriptionhere\" or how does that filter/query thing work?","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> - Is this possible? if I do alerta send -t &quot;somedescriptionhere&quot;, can I then do alerta close -f description:&quot;somedescriptionhere&quot; or how does that filter/query thing work?","sent":"2019-07-31T08:13:21.092Z","fromUser":{"id":"570d2653187bb6f0eadf1a57","username":"ishmaelen","displayName":"ishmaelen","url":"/ishmaelen","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ishmaelen","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=128","v":4,"gv":"4"},"readBy":9,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d414e85b0bf183ea3729fee","text":"I have some external alerting system calling a bash script that executes alerta send.. I place the external ticketID in -t (description) .. so I was wondering if I could use that to close them to avoid event matching (this external alerting system has ~ 5000 diff. devices it monitors so Id want it more dynamic than having to place all correlation to \"event\" as in examples)","html":"I have some external alerting system calling a bash script that executes alerta send.. I place the external ticketID in -t (description) .. so I was wondering if I could use that to close them to avoid event matching (this external alerting system has ~ 5000 diff. devices it monitors so Id want it more dynamic than having to place all correlation to &quot;event&quot; as in examples)","sent":"2019-07-31T08:17:09.009Z","fromUser":{"id":"570d2653187bb6f0eadf1a57","username":"ishmaelen","displayName":"ishmaelen","url":"/ishmaelen","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ishmaelen","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=128","v":4,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d414ef41dc3324670d9344f","text":"NM - I see I can use \"text\" in query/filter.","html":"NM - I see I can use &quot;text&quot; in query/filter.","sent":"2019-07-31T08:19:00.157Z","fromUser":{"id":"570d2653187bb6f0eadf1a57","username":"ishmaelen","displayName":"ishmaelen","url":"/ishmaelen","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/ishmaelen","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/2997171?v=4&s=128","v":4,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41588ee2802b6790a08573","text":"I'd put the ticket is in a custom attribute and then filter on that.","html":"I&#39;d put the ticket is in a custom attribute and then filter on that.","sent":"2019-07-31T08:59:58.146Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":9,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a1b120f75e7ba55c5331","text":"Hi all, quick question. Does anyone know if you can use all possible labels/annotations that alertmanager sends for an alert and use these as columns? I'm currently having some trouble getting this to work and I'm not sure if I understand the \"COLUMNS\" in settings file correctly","html":"Hi all, quick question. Does anyone know if you can use all possible labels/annotations that alertmanager sends for an alert and use these as columns? I&#39;m currently having some trouble getting this to work and I&#39;m not sure if I understand the &quot;COLUMNS&quot; in settings file correctly","sent":"2019-07-31T14:12:01.129Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a1df395d5d4671fcce7b","text":"For example: I have the following annotations that I can verify in the \"data\" tab that alertmanager has sent for an alert:","html":"For example: I have the following annotations that I can verify in the &quot;data&quot; tab that alertmanager has sent for an alert:","sent":"2019-07-31T14:12:47.411Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a1e645775115b3733218","text":"  \"annotations\": {\n    \"description\": xxxxxx high % CPU Memory\",\n    \"summary\": \"CPU Memory Usage: 82%\" ","html":"  &quot;annotations&quot;: {<br>    &quot;description&quot;: xxxxxx high % CPU Memory&quot;,<br>    &quot;summary&quot;: &quot;CPU Memory Usage: 82%&quot; ","sent":"2019-07-31T14:12:54.489Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":8,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a2015a72fc7ba4ce447d","text":"But I only see \"description\" as a column, even though I have added \"summary\" to the COLUMNS list in settings file","html":"But I only see &quot;description&quot; as a column, even though I have added &quot;summary&quot; to the COLUMNS list in settings file","sent":"2019-07-31T14:13:21.436Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a22a771bca3ea4e0296f","text":"same goes for other labels (not annotations) that I want to be listed as columns","html":"same goes for other labels (not annotations) that I want to be listed as columns","sent":"2019-07-31T14:14:02.461Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a320b0bf183ea3755b00","text":"description is an alert attribute that Alertmanager and Alerta just happen to share, and which the webhook just copies straight over for you. Alertmanager labels/tags are mapped as best they can. See https://github.com/alerta/prometheus-config#configuration---rules for list of mappings","html":"description is an alert attribute that Alertmanager and Alerta just happen to share, and which the webhook just copies straight over for you. Alertmanager labels/tags are mapped as best they can. See <a href=\"https://github.com/alerta/prometheus-config#configuration---rules\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/prometheus-config#configuration---rules<\/a> for list of mappings","sent":"2019-07-31T14:18:08.849Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://github.com/alerta/prometheus-config#configuration---rules"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a4b81dc3324670dbcf1b","text":"Any Alertmanager labels that don’t map to Alerta attributes get copied over as Alerta “tags” and any Alertmanager annotations that don’t map to Alerta attributes get copied over as Alerta \"custom attributes”.","html":"Any Alertmanager labels that don’t map to Alerta attributes get copied over as Alerta “tags” and any Alertmanager annotations that don’t map to Alerta attributes get copied over as Alerta &quot;custom attributes”.","sent":"2019-07-31T14:24:56.060Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a5044ba6af0b0263cd66","text":"ah I see, is it possible to use these \"tags\" or \"custom attributes\" as columns?","html":"ah I see, is it possible to use these &quot;tags&quot; or &quot;custom attributes&quot; as columns?","sent":"2019-07-31T14:26:12.262Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a529395d5d4671fced29","text":"Yes, so if you have labels that you want to see in the alerta console add “tags” to the list of columns.","html":"Yes, so if you have labels that you want to see in the alerta console add “tags” to the list of columns.","sent":"2019-07-31T14:26:49.034Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a55c395d5d4671fceeb8","text":"And if you have annotations you want to see you should just have to add that annotation name to the list of columns eg. “region” or “zone”.","html":"And if you have annotations you want to see you should just have to add that annotation name to the list of columns eg. “region” or “zone”.","sent":"2019-07-31T14:27:40.899Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a56cc4aca715b28e04de","text":"Let me know if that works for you.","html":"Let me know if that works for you.","sent":"2019-07-31T14:27:56.927Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a5a41dc3324670dbd7e2","text":"Ok cool, thanks! I'll try that out ","html":"Ok cool, thanks! I&#39;ll try that out ","sent":"2019-07-31T14:28:52.784Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a5d89a02440b033137bb","text":"One thought though; Is it possible to add a single specific tags only? For some alerts for example I have 10+ tags, out which maybe only 2 are actually of interest","html":"One thought though; Is it possible to add a single specific tags only? For some alerts for example I have 10+ tags, out which maybe only 2 are actually of interest","sent":"2019-07-31T14:29:44.467Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a5e65367476cc9864f91","text":"I could filter that in Alertmanager rules otherwise I suppose","html":"I could filter that in Alertmanager rules otherwise I suppose","sent":"2019-07-31T14:29:58.539Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a6161241645b16f03827","text":"you could convert them into attributes in a plugin `pre_receive()` hook.","html":"you could convert them into attributes in a plugin <code>pre_receive()<\/code> hook.","sent":"2019-07-31T14:30:46.194Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41a62f395d5d4671fcf358","text":"or filter out the unwanted tags in a plugin as well.","html":"or filter out the unwanted tags in a plugin as well.","sent":"2019-07-31T14:31:11.568Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d41a72c3e05746cc89baa6e","text":"ah thanks again, I found an example of a pre_receive() plugin online, seemed quite straight forward, I'll give that a try. Now my tags are showing at least","html":"ah thanks again, I found an example of a pre_receive() plugin online, seemed quite straight forward, I&#39;ll give that a try. Now my tags are showing at least","sent":"2019-07-31T14:35:24.040Z","fromUser":{"id":"5d419ffdd73408ce4fc767eb","username":"anttof","displayName":"anttof","url":"/anttof","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/anttof","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/49523975?v=4&s=128","v":1,"gv":"4"},"readBy":14,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d41b6ec5a72fc7ba4ceec6d","text":":+1:","html":":+1:","sent":"2019-07-31T15:42:36.599Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

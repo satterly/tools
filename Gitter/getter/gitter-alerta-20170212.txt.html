@@ -1,0 +1,818 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2017/02/13"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2017/02/11"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">12<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Feb 2017</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-58a02fa700c00c3d4f2a0220 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58a02f4cd73408ce4f49c0a8 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>nozen</div>
+      <div class='chat-item__username js-chat-item-from'>@nozen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a02fa700c00c3d4f2a0220' title="">Feb 12 2017 09:49 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>hi all, i&#39;m trying to deploy alerta using the docs <a href="http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1" rel="nofollow" target="_blank" class="link">http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1</a> </p><p>but i&#39;ve run into a problem with wsgi, when i run the service it states &quot;no module named alerta.app&quot;</p><p>i&#39;m using ubuntu 16.04 Xenial</p><p>any help would be appreciated.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a034274150746b15137bfa burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a034274150746b15137bfa' title="">Feb 12 2017 10:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      try restarting uwsgi and nginx
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a034ef238b1dae57fb889f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58a02f4cd73408ce4f49c0a8 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>nozen</div>
+      <div class='chat-item__username js-chat-item-from'>@nozen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a034ef238b1dae57fb889f' title="">Feb 12 2017 10:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hey, thanks nick. i&#39;ve tried restarting wsgi and nginx. i&#39;ll restart the box.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a0359ff045df0a2238b581 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      same, error.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a035a9f045df0a2238b59d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i can access the alerta web console
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a035c94150746b15137c03 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a035c94150746b15137c03' title="">Feb 12 2017 10:15 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what’s in this file /var/www/wsgi.py
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a035e1238b1dae57fb8be5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58a02f4cd73408ce4f49c0a8 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>nozen</div>
+      <div class='chat-item__username js-chat-item-from'>@nozen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a035e1238b1dae57fb8be5' title="">Feb 12 2017 10:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      but when i try the test alert towards the bottom of the documentation i receive<br>&quot;No json could be decoded&quot; 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a035f0de50490822b9b145 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      from alerta.app import app
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a036069eb1bd81481c7b01 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a036069eb1bd81481c7b01' title="">Feb 12 2017 10:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      and this file? /etc/uwsgi.ini
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a0361500c00c3d4f2a1dd1 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58a02f4cd73408ce4f49c0a8 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>nozen</div>
+      <div class='chat-item__username js-chat-item-from'>@nozen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a0361500c00c3d4f2a1dd1' title="">Feb 12 2017 10:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>[uwsgi]<br>chdir = /var/www<br>mount = /api=wsgi.py<br>callable = app<br>manage-script-name = true</p><p>master = true<br>processes = 5<br>logger = syslog:alertad</p><p>socket = /tmp/uwsgi.sock<br>chmod-socket = 664<br>uid = www-data<br>gid = www-data<br>vacuum = true</p><p>die-on-term = true</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a0363ffef1d2de52a9eb3a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a0363ffef1d2de52a9eb3a' title="">Feb 12 2017 10:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      what’s the output from this? $ sudo systemctl status uwsgi
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03656872fc8ce62256668 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58a02f4cd73408ce4f49c0a8 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>nozen</div>
+      <div class='chat-item__username js-chat-item-from'>@nozen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a03656872fc8ce62256668' title="">Feb 12 2017 10:17 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>uwsgi.service - uWSGI service<br>   Loaded: loaded (/etc/systemd/system/uwsgi.service; disabled; vendor preset: enabled)<br>   Active: failed (Result: exit-code) since Sun 2017-02-12 20:14:00 AEST; 3min 46s ago<br>  Process: 4464 ExecStart=/usr/local/bin/uwsgi --ini /etc/uwsgi.ini (code=exited, status=22)<br> Main PID: 4464 (code=exited, status=22)</p><p>Feb 12 20:13:59 alerta systemd<a href="http://github.com/Mashape/kong-vagrant" rel="nofollow" target="_blank" class="link">1</a>: Started uWSGI service.<br>Feb 12 20:13:59 alerta uwsgi[4464]: [uWSGI] getting INI configuration from /etc/uwsgi.ini<br>Feb 12 20:14:00 alerta alertad[4464]: <strong><em> Starting uWSGI 2.0.14 (64bit) on [Sun Feb 12 20:13:59 2017] </em></strong><br>Feb 12 20:14:00 alerta systemd<a href="http://github.com/Mashape/kong-vagrant" rel="nofollow" target="_blank" class="link">1</a>: uwsgi.service: Main process exited, code=exited, status=22/n/a<br>Feb 12 20:14:00 alerta systemd<a href="http://github.com/Mashape/kong-vagrant" rel="nofollow" target="_blank" class="link">1</a>: uwsgi.service: Unit entered failed state.<br>Feb 12 20:14:00 alerta systemd<a href="http://github.com/Mashape/kong-vagrant" rel="nofollow" target="_blank" class="link">1</a>: uwsgi.service: Failed with result &#39;exit-code&#39;.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a0366f238b1dae57fb8e45 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      this is syslog:<br>Feb 12 20:14:00 alerta alertad: from alerta.app import app<br>Feb 12 20:14:00 alerta alertad: ImportError<br>Feb 12 20:14:00 alerta alertad: :<br>Feb 12 20:14:00 alerta alertad: No module named alerta.app<br>Feb 12 20:14:00 alerta alertad:<br>Feb 12 20:14:00 alerta alertad: VACUUM: unix socket /tmp/uwsgi.sock removed.<br>Feb 12 20:14:00 alerta systemd<a href="https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a" rel="nofollow" target="_blank" class="link">1</a>: uwsgi.service: Main process exited, code=exited, status=22/n/a<br>Feb 12 20:14:00 alerta systemd<a href="https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a" rel="nofollow" target="_blank" class="link">1</a>: uwsgi.service: Unit entered failed state.<br>Feb 12 20:14:00 alerta systemd<a href="https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a" rel="nofollow" target="_blank" class="link">1</a>: uwsgi.service: Failed with result &#39;exit-code&#39;.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a037ae567b0fc8138d30bf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a037ae567b0fc8138d30bf' title="">Feb 12 2017 10:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      $ sudo pip list | grep alerta
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a037e021d548df2cfacb20 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58a02f4cd73408ce4f49c0a8 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>nozen</div>
+      <div class='chat-item__username js-chat-item-from'>@nozen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a037e021d548df2cfacb20' title="">Feb 12 2017 10:24 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      alerta (4.8.7)<br>alerta-server (4.8.26)<br>The directory &#39;/home/user/.cache/pip/http&#39; or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo&#39;s -H flag.<br>You are using pip version 8.1.1, however version 9.0.1 is available.<br>You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a0384d4150746b15137c22 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a0384d4150746b15137c22' title="">Feb 12 2017 10:26 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code><span class="variable">$ </span>python
+<span class="prompt">&gt;&gt;</span>&gt; import alerta</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03878fef1d2de52a9eb44 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      You should get nothing back.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a038909eb1bd81481c7b0f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      you should not see this … <pre><code>Traceback (most recent <span class="operator"><span class="keyword">call</span> <span class="keyword">last</span>):
+  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;<span class="keyword">module</span>&gt;
+ImportError: <span class="keyword">No</span> <span class="keyword">module</span> named alerta</span></code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03902f045df0a2238c332 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58a02f4cd73408ce4f49c0a8 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>nozen</div>
+      <div class='chat-item__username js-chat-item-from'>@nozen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a03902f045df0a2238c332' title="">Feb 12 2017 10:29 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p><a href="mailto:user@alerta" rel="nofollow">user@alerta</a>:~$ python<br>Python 2.7.12 (default, Nov 19 2016, 06:48:10)<br>[GCC 5.4.0 20160609] on linux2<br>Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</p><blockquote>
+<blockquote>
+<blockquote>
+<p>import alerta</p></blockquote>
+</blockquote>
+</blockquote>
+
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a0391c238b1dae57fb9917 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      yep, that works ok. no output.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03adbfef1d2de52a9eb5a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a03adbfef1d2de52a9eb5a' title="">Feb 12 2017 10:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      a working example of this setup is available in the docker repo <a href="https://github.com/alerta/docker-alerta" rel="nofollow" target="_blank" class="link">https://github.com/alerta/docker-alerta</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03aeb567b0fc8138d30da burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      can you compare what you have done to that?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03b274150746b15137c39 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i’ll try stepping through the tutorial again later today (don’t have time now) and will try to reproduce your error. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03b2d9eb1bd81481c7b20 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      let me know how you get on.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03b5921d548df2cfad9f9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58a02f4cd73408ce4f49c0a8 avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/627318?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>nozen</div>
+      <div class='chat-item__username js-chat-item-from'>@nozen</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2017/02/12?at=58a03b5921d548df2cfad9f9' title="">Feb 12 2017 10:39 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i&#39;m not too familiar with docker, but i&#39;ll go through the docker example and see what happens.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-58a03b5e1465c46a56541e74 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      thanks for the help
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$a0HyzPNndmn1MC0t70of4pgh8cNc1JOmT6z4nfNoYJY=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2017-02-12T00:00:00.000Z","nextDate":"2017-02-13T23:59:59.999Z","previousDate":"2017-02-11T00:00:00.000Z","messages":[{"id":"58a02fa700c00c3d4f2a0220","text":"hi all, i'm trying to deploy alerta using the docs http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1 \n\nbut i've run into a problem with wsgi, when i run the service it states \"no module named alerta.app\"\n\ni'm using ubuntu 16.04 Xenial\n\nany help would be appreciated.","html":"<p>hi all, i&#39;m trying to deploy alerta using the docs <a href=\"http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1<\/a> <\/p><p>but i&#39;ve run into a problem with wsgi, when i run the service it states &quot;no module named alerta.app&quot;<\/p><p>i&#39;m using ubuntu 16.04 Xenial<\/p><p>any help would be appreciated.<\/p>","sent":"2017-02-12T09:49:27.200Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[{"url":"http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a034274150746b15137bfa","text":"try restarting uwsgi and nginx","html":"try restarting uwsgi and nginx","sent":"2017-02-12T10:08:39.093Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a034ef238b1dae57fb889f","text":"hey, thanks nick. i've tried restarting wsgi and nginx. i'll restart the box.","html":"hey, thanks nick. i&#39;ve tried restarting wsgi and nginx. i&#39;ll restart the box.","sent":"2017-02-12T10:11:59.893Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a0359ff045df0a2238b581","text":"same, error.","html":"same, error.","sent":"2017-02-12T10:14:55.537Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a035a9f045df0a2238b59d","text":"i can access the alerta web console","html":"i can access the alerta web console","sent":"2017-02-12T10:15:05.289Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a035c94150746b15137c03","text":"what’s in this file /var/www/wsgi.py","html":"what’s in this file /var/www/wsgi.py","sent":"2017-02-12T10:15:37.364Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a035e1238b1dae57fb8be5","text":"but when i try the test alert towards the bottom of the documentation i receive \n\"No json could be decoded\" ","html":"but when i try the test alert towards the bottom of the documentation i receive<br>&quot;No json could be decoded&quot; ","sent":"2017-02-12T10:16:01.839Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a035f0de50490822b9b145","text":"from alerta.app import app","html":"from alerta.app import app","sent":"2017-02-12T10:16:16.715Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a036069eb1bd81481c7b01","text":"and this file? /etc/uwsgi.ini","html":"and this file? /etc/uwsgi.ini","sent":"2017-02-12T10:16:38.781Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a0361500c00c3d4f2a1dd1","text":"[uwsgi]\nchdir = /var/www\nmount = /api=wsgi.py\ncallable = app\nmanage-script-name = true\n\nmaster = true\nprocesses = 5\nlogger = syslog:alertad\n\nsocket = /tmp/uwsgi.sock\nchmod-socket = 664\nuid = www-data\ngid = www-data\nvacuum = true\n\ndie-on-term = true","html":"<p>[uwsgi]<br>chdir = /var/www<br>mount = /api=wsgi.py<br>callable = app<br>manage-script-name = true<\/p><p>master = true<br>processes = 5<br>logger = syslog:alertad<\/p><p>socket = /tmp/uwsgi.sock<br>chmod-socket = 664<br>uid = www-data<br>gid = www-data<br>vacuum = true<\/p><p>die-on-term = true<\/p>","sent":"2017-02-12T10:16:53.593Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a0363ffef1d2de52a9eb3a","text":"what’s the output from this? $ sudo systemctl status uwsgi","html":"what’s the output from this? $ sudo systemctl status uwsgi","sent":"2017-02-12T10:17:35.986Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a03656872fc8ce62256668","text":"uwsgi.service - uWSGI service\n   Loaded: loaded (/etc/systemd/system/uwsgi.service; disabled; vendor preset: enabled)\n   Active: failed (Result: exit-code) since Sun 2017-02-12 20:14:00 AEST; 3min 46s ago\n  Process: 4464 ExecStart=/usr/local/bin/uwsgi --ini /etc/uwsgi.ini (code=exited, status=22)\n Main PID: 4464 (code=exited, status=22)\n\nFeb 12 20:13:59 alerta systemd[1]: Started uWSGI service.\nFeb 12 20:13:59 alerta uwsgi[4464]: [uWSGI] getting INI configuration from /etc/uwsgi.ini\nFeb 12 20:14:00 alerta alertad[4464]: *** Starting uWSGI 2.0.14 (64bit) on [Sun Feb 12 20:13:59 2017] ***\nFeb 12 20:14:00 alerta systemd[1]: uwsgi.service: Main process exited, code=exited, status=22/n/a\nFeb 12 20:14:00 alerta systemd[1]: uwsgi.service: Unit entered failed state.\nFeb 12 20:14:00 alerta systemd[1]: uwsgi.service: Failed with result 'exit-code'.","html":"<p>uwsgi.service - uWSGI service<br>   Loaded: loaded (/etc/systemd/system/uwsgi.service; disabled; vendor preset: enabled)<br>   Active: failed (Result: exit-code) since Sun 2017-02-12 20:14:00 AEST; 3min 46s ago<br>  Process: 4464 ExecStart=/usr/local/bin/uwsgi --ini /etc/uwsgi.ini (code=exited, status=22)<br> Main PID: 4464 (code=exited, status=22)<\/p><p>Feb 12 20:13:59 alerta systemd<a href=\"http://github.com/Mashape/kong-vagrant\" rel=\"nofollow\" target=\"_blank\" class=\"link\">1<\/a>: Started uWSGI service.<br>Feb 12 20:13:59 alerta uwsgi[4464]: [uWSGI] getting INI configuration from /etc/uwsgi.ini<br>Feb 12 20:14:00 alerta alertad[4464]: <strong><em> Starting uWSGI 2.0.14 (64bit) on [Sun Feb 12 20:13:59 2017] <\/em><\/strong><br>Feb 12 20:14:00 alerta systemd<a href=\"http://github.com/Mashape/kong-vagrant\" rel=\"nofollow\" target=\"_blank\" class=\"link\">1<\/a>: uwsgi.service: Main process exited, code=exited, status=22/n/a<br>Feb 12 20:14:00 alerta systemd<a href=\"http://github.com/Mashape/kong-vagrant\" rel=\"nofollow\" target=\"_blank\" class=\"link\">1<\/a>: uwsgi.service: Unit entered failed state.<br>Feb 12 20:14:00 alerta systemd<a href=\"http://github.com/Mashape/kong-vagrant\" rel=\"nofollow\" target=\"_blank\" class=\"link\">1<\/a>: uwsgi.service: Failed with result &#39;exit-code&#39;.<\/p>","sent":"2017-02-12T10:17:58.752Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[{"url":"http://github.com/Mashape/kong-vagrant"},{"url":"http://github.com/Mashape/kong-vagrant"},{"url":"http://github.com/Mashape/kong-vagrant"},{"url":"http://github.com/Mashape/kong-vagrant"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a0366f238b1dae57fb8e45","text":"this is syslog:\nFeb 12 20:14:00 alerta alertad: from alerta.app import app\nFeb 12 20:14:00 alerta alertad: ImportError\nFeb 12 20:14:00 alerta alertad: :\nFeb 12 20:14:00 alerta alertad: No module named alerta.app\nFeb 12 20:14:00 alerta alertad: \nFeb 12 20:14:00 alerta alertad: VACUUM: unix socket /tmp/uwsgi.sock removed.\nFeb 12 20:14:00 alerta systemd[1]: uwsgi.service: Main process exited, code=exited, status=22/n/a\nFeb 12 20:14:00 alerta systemd[1]: uwsgi.service: Unit entered failed state.\nFeb 12 20:14:00 alerta systemd[1]: uwsgi.service: Failed with result 'exit-code'.","html":"this is syslog:<br>Feb 12 20:14:00 alerta alertad: from alerta.app import app<br>Feb 12 20:14:00 alerta alertad: ImportError<br>Feb 12 20:14:00 alerta alertad: :<br>Feb 12 20:14:00 alerta alertad: No module named alerta.app<br>Feb 12 20:14:00 alerta alertad:<br>Feb 12 20:14:00 alerta alertad: VACUUM: unix socket /tmp/uwsgi.sock removed.<br>Feb 12 20:14:00 alerta systemd<a href=\"https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a\" rel=\"nofollow\" target=\"_blank\" class=\"link\">1<\/a>: uwsgi.service: Main process exited, code=exited, status=22/n/a<br>Feb 12 20:14:00 alerta systemd<a href=\"https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a\" rel=\"nofollow\" target=\"_blank\" class=\"link\">1<\/a>: uwsgi.service: Unit entered failed state.<br>Feb 12 20:14:00 alerta systemd<a href=\"https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a\" rel=\"nofollow\" target=\"_blank\" class=\"link\">1<\/a>: uwsgi.service: Failed with result &#39;exit-code&#39;.","sent":"2017-02-12T10:18:23.995Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[{"url":"https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a"},{"url":"https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a"},{"url":"https://gitter.im/trailblazer/chat?at=589b5ffbf045df0a2221b58a"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a037ae567b0fc8138d30bf","text":"$ sudo pip list | grep alerta","html":"$ sudo pip list | grep alerta","sent":"2017-02-12T10:23:42.441Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a037e021d548df2cfacb20","text":"alerta (4.8.7)\nalerta-server (4.8.26)\nThe directory '/home/user/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.\nYou are using pip version 8.1.1, however version 9.0.1 is available.\nYou should consider upgrading via the 'pip install --upgrade pip' command.","html":"alerta (4.8.7)<br>alerta-server (4.8.26)<br>The directory &#39;/home/user/.cache/pip/http&#39; or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo&#39;s -H flag.<br>You are using pip version 8.1.1, however version 9.0.1 is available.<br>You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.","sent":"2017-02-12T10:24:32.795Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a0384d4150746b15137c22","text":"```\n$ python\n>>> import alerta\n```","html":"<pre><code><span class=\"variable\">$ <\/span>python\n<span class=\"prompt\">&gt;&gt;<\/span>&gt; import alerta<\/code><\/pre>","sent":"2017-02-12T10:26:21.425Z","editedAt":"2017-02-12T10:26:51.153Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"58a03878fef1d2de52a9eb44","text":"You should get nothing back.","html":"You should get nothing back.","sent":"2017-02-12T10:27:04.777Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a038909eb1bd81481c7b0f","text":"you should not see this … \n```\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nImportError: No module named alerta\n```","html":"you should not see this … <pre><code>Traceback (most recent <span class=\"operator\"><span class=\"keyword\">call<\/span> <span class=\"keyword\">last<\/span>):\n  File <span class=\"string\">\"&lt;stdin&gt;\"<\/span>, line <span class=\"number\">1<\/span>, <span class=\"keyword\">in<\/span> &lt;<span class=\"keyword\">module<\/span>&gt;\nImportError: <span class=\"keyword\">No<\/span> <span class=\"keyword\">module<\/span> named alerta<\/span><\/code><\/pre>","sent":"2017-02-12T10:27:28.569Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a03902f045df0a2238c332","text":"user@alerta:~$ python\nPython 2.7.12 (default, Nov 19 2016, 06:48:10) \n[GCC 5.4.0 20160609] on linux2\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>> import alerta\n>>> ","html":"<p><a href=\"mailto:user@alerta\" rel=\"nofollow\">user@alerta<\/a>:~$ python<br>Python 2.7.12 (default, Nov 19 2016, 06:48:10)<br>[GCC 5.4.0 20160609] on linux2<br>Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.<\/p><blockquote>\n<blockquote>\n<blockquote>\n<p>import alerta<\/p><\/blockquote>\n<\/blockquote>\n<\/blockquote>\n","sent":"2017-02-12T10:29:22.317Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[{"url":"mailto:user@alerta"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a0391c238b1dae57fb9917","text":"yep, that works ok. no output.","html":"yep, that works ok. no output.","sent":"2017-02-12T10:29:48.957Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a03adbfef1d2de52a9eb5a","text":"a working example of this setup is available in the docker repo https://github.com/alerta/docker-alerta","html":"a working example of this setup is available in the docker repo <a href=\"https://github.com/alerta/docker-alerta\" rel=\"nofollow\" target=\"_blank\" class=\"link\">https://github.com/alerta/docker-alerta<\/a>","sent":"2017-02-12T10:37:15.373Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[{"url":"https://github.com/alerta/docker-alerta"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a03aeb567b0fc8138d30da","text":"can you compare what you have done to that?","html":"can you compare what you have done to that?","sent":"2017-02-12T10:37:31.666Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a03b274150746b15137c39","text":"i’ll try stepping through the tutorial again later today (don’t have time now) and will try to reproduce your error. ","html":"i’ll try stepping through the tutorial again later today (don’t have time now) and will try to reproduce your error. ","sent":"2017-02-12T10:38:31.009Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a03b2d9eb1bd81481c7b20","text":"let me know how you get on.","html":"let me know how you get on.","sent":"2017-02-12T10:38:37.296Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"58a03b5921d548df2cfad9f9","text":"i'm not too familiar with docker, but i'll go through the docker example and see what happens.","html":"i&#39;m not too familiar with docker, but i&#39;ll go through the docker example and see what happens.","sent":"2017-02-12T10:39:21.972Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"58a03b5e1465c46a56541e74","text":"thanks for the help","html":"thanks for the help","sent":"2017-02-12T10:39:26.343Z","fromUser":{"id":"58a02f4cd73408ce4f49c0a8","username":"nozen","displayName":"nozen","url":"/nozen","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/nozen","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/627318?v=3&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/627318?v=3&s=128","gv":"3"},"readBy":5,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

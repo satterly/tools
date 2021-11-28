@@ -1,0 +1,662 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/04/20"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/04/18"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">19<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Apr 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5ad85b50102fac7b7b2a8739 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586f8fdfd73408ce4f41a7ea avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jason Yates</div>
+      <div class='chat-item__username js-chat-item-from'>@jasonyates</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad85b50102fac7b7b2a8739' title="">Apr 19 2018 09:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi. I&#39;m sure i&#39;m doing something wrong here but I can&#39;t seem to get the Grafana webhook working. It appears I have to pass an API key / Bearer token but I don&#39;t see an option to set it in the Grafana webhook settings. The logs from Grafana show i&#39;m getting a 401 back from Alerta.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad869312dfcfffd2b2c8eb5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad869312dfcfffd2b2c8eb5' title="">Apr 19 2018 10:02 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="jasonyates" class="mention">@jasonyates</span> yes, if <code>AUTH_REQUIRED</code> is True in Alerta server settings then you need to use an API key. If it is not possible to set an header in the Grafana webhook POST configuration then just append an API key to the URL using <code>api-key</code> parameter <code>http://… ?api-key=API_KEY_GOES_HERE</code>.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad8697d01a2b40f382ee8a7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      See <a href="http://alerta.readthedocs.io/en/latest/authentication.html?highlight=api-key#api-keys" rel="nofollow noopener noreferrer" target="_blank" class="link">http://alerta.readthedocs.io/en/latest/authentication.html?highlight=api-key#api-keys</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad86af115c9b03114120917 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586f8fdfd73408ce4f41a7ea avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jason Yates</div>
+      <div class='chat-item__username js-chat-item-from'>@jasonyates</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad86af115c9b03114120917' title="">Apr 19 2018 10:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Aha! Thanks. I figured it was something easy.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad86b0a26a769820b2bdab5 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad86b0a26a769820b2bdab5' title="">Apr 19 2018 10:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      no problem
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad86d4d102fac7b7b2adcf3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586f8fdfd73408ce4f41a7ea avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jason Yates</div>
+      <div class='chat-item__username js-chat-item-from'>@jasonyates</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad86d4d102fac7b7b2adcf3' title="">Apr 19 2018 10:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      One other question, is there any way to do LDAP auth?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad86df3012ff2bf681e9d80 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad86df3012ff2bf681e9d80' title="">Apr 19 2018 10:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      No. However, you can use keycloak for OAuth2 Alerta authentication and keycloak also provides LDAP so you can probably have a single user database.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad86e107685a046389dc173 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Though I’ve never used keycloak so can’t say for certain. maybe someone else knows better...
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad8819915c9b0311412791b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586f8fdfd73408ce4f41a7ea avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jason Yates</div>
+      <div class='chat-item__username js-chat-item-from'>@jasonyates</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad8819915c9b0311412791b' title="">Apr 19 2018 11:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      One other thing i&#39;m also struggling with, is how to create an admin user. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad8821926a769820b2bdb76 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad8821926a769820b2bdb76' title="">Apr 19 2018 11:48 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      See <a href="http://alerta.readthedocs.io/en/latest/authorization.html?highlight=ADMIN_USER#configuration" rel="nofollow noopener noreferrer" target="_blank" class="link">http://alerta.readthedocs.io/en/latest/authorization.html?highlight=ADMIN_USER#configuration</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad8823001a2b40f382ee978 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      basically, just add the list of admin usernames / email addresses to <code>ADMIN_USERS</code> server configuration.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad8826d01a2b40f382ee97a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <pre><code>$ grep ADMIN_USERS ~/<span class="class">.alertad</span><span class="class">.conf</span>
+ADMIN_USERS=[<span class="string">'admin@alerta.io'</span>, <span class="string">'nfsatterly@gmail.com'</span>]</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad884556bbe1d2739021a8d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-586f8fdfd73408ce4f41a7ea avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/242483?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jason Yates</div>
+      <div class='chat-item__username js-chat-item-from'>@jasonyates</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad884556bbe1d2739021a8d' title="">Apr 19 2018 11:58 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Perfect thanks!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad8b1d7270d7d3708e3fefc burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a724981d73408ce4f8b1d67 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/7918433?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/7918433?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Howie</div>
+      <div class='chat-item__username js-chat-item-from'>@3IWOH</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad8b1d7270d7d3708e3fefc' title="">Apr 19 2018 15:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , I have a question around how alerts are handled when they are manually closed vs. closed via a severity change of &quot;cleared&quot;. I am noticing that when an alert is closed via the severity change that the next same alert that opens will be considered a &quot;new&quot; alert. However if an alert is manually closed then the next alert that opens is just considered a duplicate.  The issue for me is that I am tracking and displaying the alert duration. On logfile alerts for example, if we manually close the alert and then it fires again the duration goes all the way back to the very first time this alert fired, instead of the duration since the last close.</p><p>What are your thoughts on having closed (or expired) alerts act the same regardless of how they entered the closed state? Maybe I need to look into a plugin that would lower the severity when an alert is manually closed? I have not tried that yet. This seems to be happening because the severity on manually closed alerts stays the same as when they were open.</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5ad8bfe1102fac7b7b2ca71c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5a724981d73408ce4f8b1d67 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/7918433?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/7918433?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Howie</div>
+      <div class='chat-item__username js-chat-item-from'>@3IWOH</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/04/19?at=5ad8bfe1102fac7b7b2ca71c' title="">Apr 19 2018 16:12 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      As a test I tried changing  the severity to &quot;cleared&quot; via status_change in a plugin when an alert was manually closed. Interestingly, that cleared severity was logged in my influx plugin but the actual alert severity in the UI still says &quot;critical&quot;...still looking into this.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$cWYBpnylKaVLd315SGLBEvxJuyzg70c2BtElGJGa/vg=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-04-19T00:00:00.000Z","nextDate":"2018-04-20T23:59:59.999Z","previousDate":"2018-04-18T00:00:00.000Z","messages":[{"id":"5ad85b50102fac7b7b2a8739","text":"Hi. I'm sure i'm doing something wrong here but I can't seem to get the Grafana webhook working. It appears I have to pass an API key / Bearer token but I don't see an option to set it in the Grafana webhook settings. The logs from Grafana show i'm getting a 401 back from Alerta.","html":"Hi. I&#39;m sure i&#39;m doing something wrong here but I can&#39;t seem to get the Grafana webhook working. It appears I have to pass an API key / Bearer token but I don&#39;t see an option to set it in the Grafana webhook settings. The logs from Grafana show i&#39;m getting a 401 back from Alerta.","sent":"2018-04-19T09:03:12.110Z","fromUser":{"id":"586f8fdfd73408ce4f41a7ea","username":"jasonyates","displayName":"Jason Yates","url":"/jasonyates","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/jasonyates","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/242483?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/242483?v=4&s=128","v":1,"gv":"4"},"readBy":10,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad869312dfcfffd2b2c8eb5","text":"@jasonyates yes, if `AUTH_REQUIRED` is True in Alerta server settings then you need to use an API key. If it is not possible to set an header in the Grafana webhook POST configuration then just append an API key to the URL using `api-key` parameter `http://… ?api-key=API_KEY_GOES_HERE`.","html":"<span data-link-type=\"mention\" data-screen-name=\"jasonyates\" class=\"mention\">@jasonyates<\/span> yes, if <code>AUTH_REQUIRED<\/code> is True in Alerta server settings then you need to use an API key. If it is not possible to set an header in the Grafana webhook POST configuration then just append an API key to the URL using <code>api-key<\/code> parameter <code>http://… ?api-key=API_KEY_GOES_HERE<\/code>.","sent":"2018-04-19T10:02:25.556Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":10,"urls":[],"mentions":[{"screenName":"jasonyates","userId":"586f8fdfd73408ce4f41a7ea","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad8697d01a2b40f382ee8a7","text":"See http://alerta.readthedocs.io/en/latest/authentication.html?highlight=api-key#api-keys","html":"See <a href=\"http://alerta.readthedocs.io/en/latest/authentication.html?highlight=api-key#api-keys\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://alerta.readthedocs.io/en/latest/authentication.html?highlight=api-key#api-keys<\/a>","sent":"2018-04-19T10:03:41.228Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"http://alerta.readthedocs.io/en/latest/authentication.html?highlight=api-key#api-keys"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5ad86af115c9b03114120917","text":"Aha! Thanks. I figured it was something easy.","html":"Aha! Thanks. I figured it was something easy.","sent":"2018-04-19T10:09:53.440Z","fromUser":{"id":"586f8fdfd73408ce4f41a7ea","username":"jasonyates","displayName":"Jason Yates","url":"/jasonyates","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/jasonyates","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/242483?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/242483?v=4&s=128","v":1,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad86b0a26a769820b2bdab5","text":"no problem","html":"no problem","sent":"2018-04-19T10:10:18.842Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad86d4d102fac7b7b2adcf3","text":"One other question, is there any way to do LDAP auth?","html":"One other question, is there any way to do LDAP auth?","sent":"2018-04-19T10:19:57.377Z","fromUser":{"id":"586f8fdfd73408ce4f41a7ea","username":"jasonyates","displayName":"Jason Yates","url":"/jasonyates","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/jasonyates","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/242483?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/242483?v=4&s=128","v":1,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad86df3012ff2bf681e9d80","text":"No. However, you can use keycloak for OAuth2 Alerta authentication and keycloak also provides LDAP so you can probably have a single user database.","html":"No. However, you can use keycloak for OAuth2 Alerta authentication and keycloak also provides LDAP so you can probably have a single user database.","sent":"2018-04-19T10:22:43.873Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad86e107685a046389dc173","text":"Though I’ve never used keycloak so can’t say for certain. maybe someone else knows better...","html":"Though I’ve never used keycloak so can’t say for certain. maybe someone else knows better...","sent":"2018-04-19T10:23:12.677Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5ad8819915c9b0311412791b","text":"One other thing i'm also struggling with, is how to create an admin user. ","html":"One other thing i&#39;m also struggling with, is how to create an admin user. ","sent":"2018-04-19T11:46:33.058Z","fromUser":{"id":"586f8fdfd73408ce4f41a7ea","username":"jasonyates","displayName":"Jason Yates","url":"/jasonyates","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/jasonyates","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/242483?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/242483?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad8821926a769820b2bdb76","text":"See http://alerta.readthedocs.io/en/latest/authorization.html?highlight=ADMIN_USER#configuration","html":"See <a href=\"http://alerta.readthedocs.io/en/latest/authorization.html?highlight=ADMIN_USER#configuration\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://alerta.readthedocs.io/en/latest/authorization.html?highlight=ADMIN_USER#configuration<\/a>","sent":"2018-04-19T11:48:41.130Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[{"url":"http://alerta.readthedocs.io/en/latest/authorization.html?highlight=ADMIN_USER#configuration"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad8823001a2b40f382ee978","text":"basically, just add the list of admin usernames / email addresses to `ADMIN_USERS` server configuration.","html":"basically, just add the list of admin usernames / email addresses to <code>ADMIN_USERS<\/code> server configuration.","sent":"2018-04-19T11:49:04.948Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5ad8826d01a2b40f382ee97a","text":"```\n$ grep ADMIN_USERS ~/.alertad.conf\nADMIN_USERS=['admin@alerta.io', 'nfsatterly@gmail.com']\n```","html":"<pre><code>$ grep ADMIN_USERS ~/<span class=\"class\">.alertad<\/span><span class=\"class\">.conf<\/span>\nADMIN_USERS=[<span class=\"string\">'admin@alerta.io'<\/span>, <span class=\"string\">'nfsatterly@gmail.com'<\/span>]<\/code><\/pre>","sent":"2018-04-19T11:50:05.828Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5ad884556bbe1d2739021a8d","text":"Perfect thanks!","html":"Perfect thanks!","sent":"2018-04-19T11:58:13.287Z","fromUser":{"id":"586f8fdfd73408ce4f41a7ea","username":"jasonyates","displayName":"Jason Yates","url":"/jasonyates","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/jasonyates","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/242483?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/242483?v=4&s=128","v":1,"gv":"4"},"readBy":12,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5ad8b1d7270d7d3708e3fefc","text":"Hi @satterly , I have a question around how alerts are handled when they are manually closed vs. closed via a severity change of \"cleared\". I am noticing that when an alert is closed via the severity change that the next same alert that opens will be considered a \"new\" alert. However if an alert is manually closed then the next alert that opens is just considered a duplicate.  The issue for me is that I am tracking and displaying the alert duration. On logfile alerts for example, if we manually close the alert and then it fires again the duration goes all the way back to the very first time this alert fired, instead of the duration since the last close.\n\nWhat are your thoughts on having closed (or expired) alerts act the same regardless of how they entered the closed state? Maybe I need to look into a plugin that would lower the severity when an alert is manually closed? I have not tried that yet. This seems to be happening because the severity on manually closed alerts stays the same as when they were open.","html":"<p>Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , I have a question around how alerts are handled when they are manually closed vs. closed via a severity change of &quot;cleared&quot;. I am noticing that when an alert is closed via the severity change that the next same alert that opens will be considered a &quot;new&quot; alert. However if an alert is manually closed then the next alert that opens is just considered a duplicate.  The issue for me is that I am tracking and displaying the alert duration. On logfile alerts for example, if we manually close the alert and then it fires again the duration goes all the way back to the very first time this alert fired, instead of the duration since the last close.<\/p><p>What are your thoughts on having closed (or expired) alerts act the same regardless of how they entered the closed state? Maybe I need to look into a plugin that would lower the severity when an alert is manually closed? I have not tried that yet. This seems to be happening because the severity on manually closed alerts stays the same as when they were open.<\/p>","sent":"2018-04-19T15:12:23.178Z","editedAt":"2018-04-19T15:13:39.098Z","fromUser":{"id":"5a724981d73408ce4f8b1d67","username":"3IWOH","displayName":"Howie","url":"/3IWOH","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/3IWOH","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/7918433?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/7918433?v=4&s=128","v":10,"gv":"4"},"readBy":13,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5ad8bfe1102fac7b7b2ca71c","text":"As a test I tried changing  the severity to \"cleared\" via status_change in a plugin when an alert was manually closed. Interestingly, that cleared severity was logged in my influx plugin but the actual alert severity in the UI still says \"critical\"...still looking into this.","html":"As a test I tried changing  the severity to &quot;cleared&quot; via status_change in a plugin when an alert was manually closed. Interestingly, that cleared severity was logged in my influx plugin but the actual alert severity in the UI still says &quot;critical&quot;...still looking into this.","sent":"2018-04-19T16:12:17.203Z","fromUser":{"id":"5a724981d73408ce4f8b1d67","username":"3IWOH","displayName":"Howie","url":"/3IWOH","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/3IWOH","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/7918433?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/7918433?v=4&s=128","v":10,"gv":"4"},"readBy":13,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

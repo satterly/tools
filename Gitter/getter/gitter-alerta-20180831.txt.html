@@ -1,0 +1,786 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2018/09/01"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2018/08/30"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">31<sup>st</sup></span><br>
+      <span class="gtrArchiveMonth">Aug 2018</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5b8905c6cff55e5617874f93 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b8905c6cff55e5617874f93' title="">Aug 31 2018 09:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;m looking at Prometheus Alertmanager Plugin in alerta-contib. So far we&#39;ve used alertmanager only for webhooks and notification has been sent by custom plugins by alerta, but we are looking at options leaving alerta only as web UI. I have two immediate concerns.<br>1) Our alertmanager sits behind a https proxy with authentication, but it should be easy to add probably<br>2) The plugin handles only &quot;ack&quot; and &quot;open&quot; states. What about delete and close? I&#39;m concerned about situations when a user deletes an alert from alerta, but a silence remanis active in alertmanager
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890657844de2337cdc98db burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890657844de2337cdc98db' title="">Aug 31 2018 09:11 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      1) alerta 5.2.7 added support for BasicAuth to webhooks. this fixed an integration issue with Alertmanager.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8906fb26bac95353c9fd3a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      2) if alert is “closed” or “deleted” would you want Alerta to delete any related silences in Alertmanager?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890830d457a1406c8a23a0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890830d457a1406c8a23a0' title="">Aug 31 2018 09:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      1) To silence alerts in alertmanager? In <a href="https://github.com/alerta/alerta-contrib/blob/master/plugins/prometheus/alerta_prometheus.py" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-contrib/blob/master/plugins/prometheus/alerta_prometheus.py</a> ? Or is there another way?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b89087dd457a1406c8a2569 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      2) Yes, I think that&#39;s a logical thing to do. Then if the situation appears again, it&#39;s not silenced for ALERTMANAGER_SILENCE_DAYS
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890913146618721caca85d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890913146618721caca85d' title="">Aug 31 2018 09:23 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      1) sorry, wrong end. And just noticed that <code>ALERTMANAGER_API_KEY</code> isn’t actually used anywhere in the code. So, yes, authentication with Alertmanager will need to be fixed.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890978844de2337cdc98e6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      2) If alert is “closed” then that would be do-able. if alert is “deleted” there is no “status change” so i’m not sure how that would work. i would suggest that deleting alerts is not allowed by end users. they should only be able to close alerts and then house keeping can delete closed alerts.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890ab988520a0c6ee60939 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890ab988520a0c6ee60939' title="">Aug 31 2018 09:30 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      looks like prometheus are about to change the Alertmanager API as well … <a target="_blank" data-link-type="pr" data-issue="1352" href="https://github.com/prometheus/alertmanager/pull/1352" data-provider="github" data-issue-repo="prometheus/alertmanager" class="pr">prometheus/alertmanager#1352</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890b321d3a5711b6c34b91 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890b321d3a5711b6c34b91' title="">Aug 31 2018 09:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;ll think about 2). Btw, I closed a randon open alarm in a test environment, a notification from alertmanager reopened it again. The reopening is OK, but there is no log entry about this reopening – the last line in the log remains my close &quot;status change via console by hasso&quot;.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890c65146618721caca866 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890c65146618721caca866' title="">Aug 31 2018 09:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/guDx/Screen-Shot-2018-08-31-at-11.36.51.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/guDx/thumb/Screen-Shot-2018-08-31-at-11.36.51.png" alt="Screen Shot 2018-08-31 at 11.36.51.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890c81844de2337cdc98f4 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      it should say “correlated alert status change” in the history log. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890cba844de2337cdc98f6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      does your log include anything after “status change via console”?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890d4ef012380179b13683 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890d4ef012380179b13683' title="">Aug 31 2018 09:41 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      no, nothing. I&#39;ll do more testing. btw, how do I disable delete for users? is there a documentation about roles/scopes/permissions?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890e92cff55e561787840d burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890e92cff55e561787840d' title="">Aug 31 2018 09:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok, status change appears for me as well actually, but update time is alert creation time actually for some reason.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890ef9ac25fd11b5bd851f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/1mR3/Screen-Shot-2018-08-31-at-12.45.10.png" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/1mR3/thumb/Screen-Shot-2018-08-31-at-12.45.10.png" alt="Screen Shot 2018-08-31 at 12.45.10.png" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890fa39fc431606e9240a8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b890fa39fc431606e9240a8' title="">Aug 31 2018 09:51 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I wonder if it’s related to this … <a target="_blank" data-link-type="issue" data-issue="597" href="https://github.com/alerta/alerta/issues/597" data-provider="github" data-issue-repo="alerta/alerta" class="issue">alerta/alerta#597</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890fbf844de2337cdc9900 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      which prompted this change … <a target="_blank" data-link-type="pr" data-issue="602" href="https://github.com/alerta/alerta/pull/602" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#602</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b890fe1146618721caca881 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      what version are you running?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b89100c146618721caca883 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      and it seems alertmanager itself doesn’t support authentication. <a href="https://prometheus.io/docs/operating/security/#alertmanager" rel="nofollow noopener noreferrer" target="_blank" class="link">https://prometheus.io/docs/operating/security/#alertmanager</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b891027e580cd3c2aa2ecf6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      which is one of the reasons why you put it behind a proxy, i assume.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8914d4d8d36815e5b6159e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b8914d4d8d36815e5b6159e' title="">Aug 31 2018 10:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes, it&#39;s a nginx proxy with basic auth
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b8915384be56c5918bf9b20 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      alerta is 5.2.9 at the moment
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b89168dcff55e561787b7b7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-56790dc316b6c7089cbfd8d3 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/1933532?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Hasso Tepper</div>
+      <div class='chat-item__username js-chat-item-from'>@hasso</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b89168dcff55e561787b7b7' title="">Aug 31 2018 10:21 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I don&#39;t think that I understand reasons behind <a target="_blank" data-link-type="pr" data-issue="602" href="https://github.com/alerta/alerta/pull/602" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#602</a> 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b89a84c60f9ee7aa4bc29a4 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58900a17d73408ce4f471759 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/20193366?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/20193366?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jaret Clifton</div>
+      <div class='chat-item__username js-chat-item-from'>@jaretclifton</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b89a84c60f9ee7aa4bc29a4' title="">Aug 31 2018 20:42 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Brand new alerta user here so apologies if this has been brought up before. Following the guide here: <a href="https://github.com/alerta/riemann-alerta" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/riemann-alerta</a> to link Riemann to Alerta, but Riemann starts and then dies if the Alerta config is added. Even just adding  (include &quot;alerta.clj&quot;) and nothing else causes it to crash. Looks like the last commit was 4 years ago... have there been some changes made to Riemann that prevent the script from working as it is currently?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5b89b4259c71d363c15925c8 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-58900a17d73408ce4f471759 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/20193366?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/20193366?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Jaret Clifton</div>
+      <div class='chat-item__username js-chat-item-from'>@jaretclifton</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2018/08/31?at=5b89b4259c71d363c15925c8' title="">Aug 31 2018 21:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Snippet from the riemann log that might shed some light on things: ERROR [2018-08-31 14:30:52,085] main - riemann.bin - Couldn&#39;t start<br>clojure.lang.Compiler$CompilerException: java.lang.RuntimeException: No such namespace: json, compiling:(/etc/riemann/alerta.clj:14:15)
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$or6y8sDs++ZLfge+wSDWcAx3M97Fbcl8xrSIFpnPnJw=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2018-08-31T00:00:00.000Z","nextDate":"2018-09-01T23:59:59.999Z","previousDate":"2018-08-30T00:00:00.000Z","messages":[{"id":"5b8905c6cff55e5617874f93","text":"I'm looking at Prometheus Alertmanager Plugin in alerta-contib. So far we've used alertmanager only for webhooks and notification has been sent by custom plugins by alerta, but we are looking at options leaving alerta only as web UI. I have two immediate concerns.\n1) Our alertmanager sits behind a https proxy with authentication, but it should be easy to add probably\n2) The plugin handles only \"ack\" and \"open\" states. What about delete and close? I'm concerned about situations when a user deletes an alert from alerta, but a silence remanis active in alertmanager","html":"I&#39;m looking at Prometheus Alertmanager Plugin in alerta-contib. So far we&#39;ve used alertmanager only for webhooks and notification has been sent by custom plugins by alerta, but we are looking at options leaving alerta only as web UI. I have two immediate concerns.<br>1) Our alertmanager sits behind a https proxy with authentication, but it should be easy to add probably<br>2) The plugin handles only &quot;ack&quot; and &quot;open&quot; states. What about delete and close? I&#39;m concerned about situations when a user deletes an alert from alerta, but a silence remanis active in alertmanager","sent":"2018-08-31T09:09:26.461Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b890657844de2337cdc98db","text":"1) alerta 5.2.7 added support for BasicAuth to webhooks. this fixed an integration issue with Alertmanager.","html":"1) alerta 5.2.7 added support for BasicAuth to webhooks. this fixed an integration issue with Alertmanager.","sent":"2018-08-31T09:11:51.969Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8906fb26bac95353c9fd3a","text":"2) if alert is “closed” or “deleted” would you want Alerta to delete any related silences in Alertmanager?","html":"2) if alert is “closed” or “deleted” would you want Alerta to delete any related silences in Alertmanager?","sent":"2018-08-31T09:14:35.278Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b890830d457a1406c8a23a0","text":"1) To silence alerts in alertmanager? In https://github.com/alerta/alerta-contrib/blob/master/plugins/prometheus/alerta_prometheus.py ? Or is there another way?","html":"1) To silence alerts in alertmanager? In <a href=\"https://github.com/alerta/alerta-contrib/blob/master/plugins/prometheus/alerta_prometheus.py\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-contrib/blob/master/plugins/prometheus/alerta_prometheus.py<\/a> ? Or is there another way?","sent":"2018-08-31T09:19:44.054Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[{"url":"https://github.com/alerta/alerta-contrib/blob/master/plugins/prometheus/alerta_prometheus.py"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b89087dd457a1406c8a2569","text":"2) Yes, I think that's a logical thing to do. Then if the situation appears again, it's not silenced for ALERTMANAGER_SILENCE_DAYS","html":"2) Yes, I think that&#39;s a logical thing to do. Then if the situation appears again, it&#39;s not silenced for ALERTMANAGER_SILENCE_DAYS","sent":"2018-08-31T09:21:01.227Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b890913146618721caca85d","text":"1) sorry, wrong end. And just noticed that `ALERTMANAGER_API_KEY` isn’t actually used anywhere in the code. So, yes, authentication with Alertmanager will need to be fixed.","html":"1) sorry, wrong end. And just noticed that <code>ALERTMANAGER_API_KEY<\/code> isn’t actually used anywhere in the code. So, yes, authentication with Alertmanager will need to be fixed.","sent":"2018-08-31T09:23:31.211Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b890978844de2337cdc98e6","text":"2) If alert is “closed” then that would be do-able. if alert is “deleted” there is no “status change” so i’m not sure how that would work. i would suggest that deleting alerts is not allowed by end users. they should only be able to close alerts and then house keeping can delete closed alerts.","html":"2) If alert is “closed” then that would be do-able. if alert is “deleted” there is no “status change” so i’m not sure how that would work. i would suggest that deleting alerts is not allowed by end users. they should only be able to close alerts and then house keeping can delete closed alerts.","sent":"2018-08-31T09:25:12.243Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b890ab988520a0c6ee60939","text":"looks like prometheus are about to change the Alertmanager API as well … https://github.com/prometheus/alertmanager/pull/1352","html":"looks like prometheus are about to change the Alertmanager API as well … <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"1352\" href=\"https://github.com/prometheus/alertmanager/pull/1352\" data-provider=\"github\" data-issue-repo=\"prometheus/alertmanager\" class=\"pr\">prometheus/alertmanager#1352<\/a>","sent":"2018-08-31T09:30:33.542Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[{"repo":"prometheus/alertmanager","number":"1352"}],"meta":[],"v":1,"burstStart":true},{"id":"5b890b321d3a5711b6c34b91","text":"I'll think about 2). Btw, I closed a randon open alarm in a test environment, a notification from alertmanager reopened it again. The reopening is OK, but there is no log entry about this reopening – the last line in the log remains my close \"status change via console by hasso\".","html":"I&#39;ll think about 2). Btw, I closed a randon open alarm in a test environment, a notification from alertmanager reopened it again. The reopening is OK, but there is no log entry about this reopening – the last line in the log remains my close &quot;status change via console by hasso&quot;.","sent":"2018-08-31T09:32:34.345Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b890c65146618721caca866","text":"[![Screen Shot 2018-08-31 at 11.36.51.png](https://files.gitter.im/alerta/chat/guDx/thumb/Screen-Shot-2018-08-31-at-11.36.51.png)](https://files.gitter.im/alerta/chat/guDx/Screen-Shot-2018-08-31-at-11.36.51.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/guDx/Screen-Shot-2018-08-31-at-11.36.51.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/guDx/thumb/Screen-Shot-2018-08-31-at-11.36.51.png\" alt=\"Screen Shot 2018-08-31 at 11.36.51.png\" rel=\"nofollow\"><\/a>","sent":"2018-08-31T09:37:41.113Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://files.gitter.im/alerta/chat/guDx/thumb/Screen-Shot-2018-08-31-at-11.36.51.png"},{"url":"https://files.gitter.im/alerta/chat/guDx/Screen-Shot-2018-08-31-at-11.36.51.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b890c81844de2337cdc98f4","text":"it should say “correlated alert status change” in the history log. ","html":"it should say “correlated alert status change” in the history log. ","sent":"2018-08-31T09:38:09.663Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b890cba844de2337cdc98f6","text":"does your log include anything after “status change via console”?","html":"does your log include anything after “status change via console”?","sent":"2018-08-31T09:39:06.104Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b890d4ef012380179b13683","text":"no, nothing. I'll do more testing. btw, how do I disable delete for users? is there a documentation about roles/scopes/permissions?","html":"no, nothing. I&#39;ll do more testing. btw, how do I disable delete for users? is there a documentation about roles/scopes/permissions?","sent":"2018-08-31T09:41:34.452Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b890e92cff55e561787840d","text":"ok, status change appears for me as well actually, but update time is alert creation time actually for some reason.","html":"ok, status change appears for me as well actually, but update time is alert creation time actually for some reason.","sent":"2018-08-31T09:46:58.776Z","editedAt":"2018-08-31T09:47:52.736Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":true},{"id":"5b890ef9ac25fd11b5bd851f","text":"[![Screen Shot 2018-08-31 at 12.45.10.png](https://files.gitter.im/alerta/chat/1mR3/thumb/Screen-Shot-2018-08-31-at-12.45.10.png)](https://files.gitter.im/alerta/chat/1mR3/Screen-Shot-2018-08-31-at-12.45.10.png)","html":"<a href=\"https://files.gitter.im/alerta/chat/1mR3/Screen-Shot-2018-08-31-at-12.45.10.png\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/1mR3/thumb/Screen-Shot-2018-08-31-at-12.45.10.png\" alt=\"Screen Shot 2018-08-31 at 12.45.10.png\" rel=\"nofollow\"><\/a>","sent":"2018-08-31T09:48:41.055Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[{"url":"https://files.gitter.im/alerta/chat/1mR3/thumb/Screen-Shot-2018-08-31-at-12.45.10.png"},{"url":"https://files.gitter.im/alerta/chat/1mR3/Screen-Shot-2018-08-31-at-12.45.10.png"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b890fa39fc431606e9240a8","text":"I wonder if it’s related to this … https://github.com/alerta/alerta/issues/597","html":"I wonder if it’s related to this … <a target=\"_blank\" data-link-type=\"issue\" data-issue=\"597\" href=\"https://github.com/alerta/alerta/issues/597\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"issue\">alerta/alerta#597<\/a>","sent":"2018-08-31T09:51:31.054Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta","number":"597"}],"meta":[],"v":1,"burstStart":true},{"id":"5b890fbf844de2337cdc9900","text":"which prompted this change … https://github.com/alerta/alerta/pull/602","html":"which prompted this change … <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"602\" href=\"https://github.com/alerta/alerta/pull/602\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#602<\/a>","sent":"2018-08-31T09:51:59.133Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta","number":"602"}],"meta":[],"v":1,"burstStart":false},{"id":"5b890fe1146618721caca881","text":"what version are you running?","html":"what version are you running?","sent":"2018-08-31T09:52:33.350Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b89100c146618721caca883","text":"and it seems alertmanager itself doesn’t support authentication. https://prometheus.io/docs/operating/security/#alertmanager","html":"and it seems alertmanager itself doesn’t support authentication. <a href=\"https://prometheus.io/docs/operating/security/#alertmanager\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://prometheus.io/docs/operating/security/#alertmanager<\/a>","sent":"2018-08-31T09:53:16.425Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[{"url":"https://prometheus.io/docs/operating/security/#alertmanager"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b891027e580cd3c2aa2ecf6","text":"which is one of the reasons why you put it behind a proxy, i assume.","html":"which is one of the reasons why you put it behind a proxy, i assume.","sent":"2018-08-31T09:53:43.214Z","editedAt":"2018-08-31T09:54:15.230Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":2,"burstStart":false},{"id":"5b8914d4d8d36815e5b6159e","text":"yes, it's a nginx proxy with basic auth","html":"yes, it&#39;s a nginx proxy with basic auth","sent":"2018-08-31T10:13:40.041Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b8915384be56c5918bf9b20","text":"alerta is 5.2.9 at the moment","html":"alerta is 5.2.9 at the moment","sent":"2018-08-31T10:15:20.177Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5b89168dcff55e561787b7b7","text":"I don't think that I understand reasons behind https://github.com/alerta/alerta/pull/602 ","html":"I don&#39;t think that I understand reasons behind <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"602\" href=\"https://github.com/alerta/alerta/pull/602\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#602<\/a> ","sent":"2018-08-31T10:21:01.776Z","fromUser":{"id":"56790dc316b6c7089cbfd8d3","username":"hasso","displayName":"Hasso Tepper","url":"/hasso","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/hasso","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/1933532?v=4&s=128","v":14,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[{"repo":"alerta/alerta","number":"602"}],"meta":[],"v":1,"burstStart":true},{"id":"5b89a84c60f9ee7aa4bc29a4","text":"Brand new alerta user here so apologies if this has been brought up before. Following the guide here: https://github.com/alerta/riemann-alerta to link Riemann to Alerta, but Riemann starts and then dies if the Alerta config is added. Even just adding  (include \"alerta.clj\") and nothing else causes it to crash. Looks like the last commit was 4 years ago... have there been some changes made to Riemann that prevent the script from working as it is currently?","html":"Brand new alerta user here so apologies if this has been brought up before. Following the guide here: <a href=\"https://github.com/alerta/riemann-alerta\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/riemann-alerta<\/a> to link Riemann to Alerta, but Riemann starts and then dies if the Alerta config is added. Even just adding  (include &quot;alerta.clj&quot;) and nothing else causes it to crash. Looks like the last commit was 4 years ago... have there been some changes made to Riemann that prevent the script from working as it is currently?","sent":"2018-08-31T20:42:52.641Z","fromUser":{"id":"58900a17d73408ce4f471759","username":"jaretclifton","displayName":"Jaret Clifton","url":"/jaretclifton","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/jaretclifton","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/20193366?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/20193366?v=4&s=128","v":5,"gv":"4"},"readBy":11,"urls":[{"url":"https://github.com/alerta/riemann-alerta"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5b89b4259c71d363c15925c8","text":"Snippet from the riemann log that might shed some light on things: ERROR [2018-08-31 14:30:52,085] main - riemann.bin - Couldn't start\nclojure.lang.Compiler$CompilerException: java.lang.RuntimeException: No such namespace: json, compiling:(/etc/riemann/alerta.clj:14:15)","html":"Snippet from the riemann log that might shed some light on things: ERROR [2018-08-31 14:30:52,085] main - riemann.bin - Couldn&#39;t start<br>clojure.lang.Compiler$CompilerException: java.lang.RuntimeException: No such namespace: json, compiling:(/etc/riemann/alerta.clj:14:15)","sent":"2018-08-31T21:33:25.208Z","fromUser":{"id":"58900a17d73408ce4f471759","username":"jaretclifton","displayName":"Jaret Clifton","url":"/jaretclifton","avatarUrl":"https://avatars-04.gitter.im/gh/uv/4/jaretclifton","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/20193366?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/20193366?v=4&s=128","v":5,"gv":"4"},"readBy":11,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

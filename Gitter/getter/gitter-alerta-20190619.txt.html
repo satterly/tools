@@ -1,0 +1,641 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/06/20"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/06/18"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">19<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jun 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5d0a581e2313502d387d492f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54f8ae4615522ed4b3dcdc8f avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/11338165?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/11338165?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>jl45621</div>
+      <div class='chat-item__username js-chat-item-from'>@jl45621</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/19?at=5d0a581e2313502d387d492f' title="">Jun 19 2019 15:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      oh gosh darn it, i deleted the wrong chat
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a5838bc56c731f8f773d2 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      ok i am trying to get alerta up and running but am experiencing a white screen and clicking login does nothing. here is the logs from the docker container
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a583ee527d95add0f58a0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <p><span data-link-type="mention" data-screen-name="jl45621" class="mention">@jl45621</span> 2019-06-19 15:42:02,580 DEBG fd 8 closed, stopped monitoring &lt;POutputDispatcher at 140143369729736 for &lt;Subprocess at 140143370122592 with name housekeeping in state RUNNING&gt; (stdout)&gt;<br>2019-06-19 15:42:02,580 INFO exited: housekeeping (exit status 1; not expected)<br>2019-06-19 15:42:02,580 DEBG received SIGCLD indicating a child quit<br>2019-06-19 15:42:03,583 INFO spawned: &#39;housekeeping&#39; with pid 109<br>2019-06-19 15:42:03,584 DEBG &#39;uwsgi&#39; stdout output:<br>[pid: 56|app: 0|req: 2/19] 127.0.0.1 () {38 vars in 421 bytes} [Wed Jun 19 15:42:03 2019] GET /api/config =&gt; generated 782 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 232 bytes (1 switches on core 0)</p><p>2019-06-19 15:42:03,584 DEBG &#39;nginx&#39; stdout output:<br>ip=- [\19/Jun/2019:15:42:03 +0000] &quot;\GET /api/config HTTP/1.1&quot; \200 \782 &quot;-&quot; &quot;\python-requests/2.21.0&quot;<br>/web | /api/config | &gt; GET /api/config HTTP/1.1</p><p>2019-06-19 15:42:03,584 DEBG &#39;nginx&#39; stdout output:<br>2019/06/19 15:42:03 [info] 46<a target="_blank" data-link-type="issue" data-issue="46" class="issue">#46</a>: *45 client 127.0.0.1 closed keepalive connection</p><p>2019-06-19 15:42:03,594 DEBG &#39;uwsgi&#39; stdout output:<br>[pid: 59|app: 0|req: 10/20] 127.0.0.1 () {44 vars in 575 bytes} [Wed Jun 19 15:42:03 2019] GET /api/heartbeats =&gt; generated 149 bytes in 8 msecs (HTTP/1.1 401) 5 headers in 195 bytes (1 switches on core 0)</p><p>2019-06-19 15:42:03,595 DEBG &#39;nginx&#39; stdout output:<br>ip=- [\19/Jun/2019:15:42:03 +0000] &quot;\GET /api/heartbeats HTTP/1.1&quot; \401 \149 &quot;-&quot; &quot;\python-requests/2.21.0&quot;<br>/web | /api/heartbeats | &gt; GET /api/heartbeats HTTP/1.1</p><p>2019-06-19 15:42:03,595 DEBG &#39;heartbeats&#39; stdout output:<br>Error: API key parameter &#39;2019-06-19&#39; is invalid</p><p>2019-06-19 15:42:03,599 DEBG &#39;nginx&#39; stdout output:<br>2019/06/19 15:42:03 [info] 46<a target="_blank" data-link-type="issue" data-issue="46" class="issue">#46</a>: *47 client 127.0.0.1 closed keepalive connection</p><p>2019-06-19 15:42:03,610 DEBG fd 6 closed, stopped monitoring &lt;POutputDispatcher at 140143372447184 for &lt;Subprocess at 140143370122376 with name heartbeats in state RUNNING&gt; (stdout)&gt;<br>2019-06-19 15:42:03,610 INFO exited: heartbeats (exit status 1; not expected)<br>2019-06-19 15:42:03,610 DEBG received SIGCLD indicating a child quit<br>2019-06-19 15:42:04,613 INFO spawned: &#39;heartbeats&#39; with pid 113<br>2019-06-19 15:42:04,613 INFO success: housekeeping entered RUNNING state, process has stayed up for &gt; than 1 seconds (startsecs)<br>2019-06-19 15:42:05,615 INFO success: heartbeats entered RUNNING state, process has stayed up for &gt; than 1 seconds (startsecs)</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a585afaf70031f94fd34a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      can somebody please assist? where is this API key parameter &#39;2019-06-19&#39; coming from?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a5ccebb789747fb40b4e6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5d0a5962d73408ce4fc3f7c9 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/45641273?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/45641273?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>enginexjs</div>
+      <div class='chat-item__username js-chat-item-from'>@enginexjs</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/19?at=5d0a5ccebb789747fb40b4e6' title="">Jun 19 2019 16:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Very new to Alerta. Followed the instruction exactly on the quickstart page. can use alerta to send and query alerts but have issues on webui. When I type machineIP:8000, it keeps to pop up invalid config.json file error but I do have config.json in /dist (see screenshot below). 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a5cd3a8d9871b32c592b7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/RTYQ/config-error.jpg" rel="nofollow noopener noreferrer" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/RTYQ/thumb/config-error.jpg" alt="config-error.jpg" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a60dbbb789747fb40d44e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54f8ae4615522ed4b3dcdc8f avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/11338165?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/11338165?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>jl45621</div>
+      <div class='chat-item__username js-chat-item-from'>@jl45621</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/19?at=5d0a60dbbb789747fb40d44e' title="">Jun 19 2019 16:20 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      i just got it working myself, i think instructions are wrong
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a60e7a8d9871b32c5b7b8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      you want the contents of dist/ to be in /var/www/html/
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a60f926477710bbea15f8 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      and make sure to set config.json to: {&quot;endpoint&quot;: &quot;/api&quot;}
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a690ae527d95add0fef4f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/19?at=5d0a690ae527d95add0fef4f' title="">Jun 19 2019 16:55 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="jl45621" class="mention">@jl45621</span> if you’re using the docker container you shouldn’t need to copy files into /dist or set the config.json file. that is taken care of by the <code>entrypoint</code> script.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6921ecc6a91b3122588a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      What instructions are you talking about that are wrong?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6a634e8f972d37594c9b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/19?at=5d0a6a634e8f972d37594c9b' title="">Jun 19 2019 17:01 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="enginexjs" class="mention">@enginexjs</span> You probably need to set <code>CORS_ORIGINS</code> to whatever IP address your system is running on. See <a href="https://docs.alerta.io/en/latest/faq.html#why-can-t-i-see-any-alerts-in-the-web-browser" rel="nofollow noopener noreferrer" target="_blank" class="link">https://docs.alerta.io/en/latest/faq.html#why-can-t-i-see-any-alerts-in-the-web-browser</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6ad7fbcc305cc4ab6ccf burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-54f8ae4615522ed4b3dcdc8f avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/11338165?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/11338165?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>jl45621</div>
+      <div class='chat-item__username js-chat-item-from'>@jl45621</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/19?at=5d0a6ad7fbcc305cc4ab6ccf' title="">Jun 19 2019 17:03 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <p>To install the web console run:</p><p>$ wget <a href="https://github.com/alerta/alerta-webui/releases/latest/download/alerta-webui.tar.gz" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-webui/releases/latest/download/alerta-webui.tar.gz</a><br>$ tar zxvf alerta-webui.tar.gz<br>$ cp dist /var/www/html</p>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6ae64e8f972d375952d0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      pretty sure that should be something like cp -Rv dist/* /var/www/html/
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6aedbb789747fb412d64 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      from <a href="http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1" rel="nofollow noopener noreferrer" target="_blank" class="link">http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6af7bc56c731f8f81ab6 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      i was unable to get it working via docker, had to do it on the host itself
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6b2cbb789747fb412feb burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      and also later on down the line: ExecStart=/opt/alerta/bin/uwsgi ... that should come from wherever the system installed uwsgi. in my case im using anaconda so i had to update it there
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6b4aecc6a91b31226aff burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      otherwise it looks pretty slick once its working, good stuff here
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a6b7c950f1062a9aa64e3 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      would be nice if there was a tutorial that did docker + letsencrypt for https + simple local authentication. that would cover a ton of the use cases i think
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5d0a7a80e527d95add1090f2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/06/19?at=5d0a7a80e527d95add1090f2' title="">Jun 19 2019 18:10 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Oh. You&#39;re referring to Tutorial 1. <span data-link-type="mention" data-screen-name="enginexjs" class="mention">@enginexjs</span> was referring to the quickstart guide.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$PW7OEICkyXPxkiloKitQmJ4PJREGLUpqupm85o5mt40=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-06-19T00:00:00.000Z","nextDate":"2019-06-20T23:59:59.999Z","previousDate":"2019-06-18T00:00:00.000Z","messages":[{"id":"5d0a581e2313502d387d492f","text":"oh gosh darn it, i deleted the wrong chat","html":"oh gosh darn it, i deleted the wrong chat","sent":"2019-06-19T15:43:26.931Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d0a5838bc56c731f8f773d2","text":"ok i am trying to get alerta up and running but am experiencing a white screen and clicking login does nothing. here is the logs from the docker container","html":"ok i am trying to get alerta up and running but am experiencing a white screen and clicking login does nothing. here is the logs from the docker container","sent":"2019-06-19T15:43:52.360Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a583ee527d95add0f58a0","text":"@jl45621 2019-06-19 15:42:02,580 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 140143369729736 for <Subprocess at 140143370122592 with name housekeeping in state RUNNING> (stdout)>\n2019-06-19 15:42:02,580 INFO exited: housekeeping (exit status 1; not expected)\n2019-06-19 15:42:02,580 DEBG received SIGCLD indicating a child quit\n2019-06-19 15:42:03,583 INFO spawned: 'housekeeping' with pid 109\n2019-06-19 15:42:03,584 DEBG 'uwsgi' stdout output:\n[pid: 56|app: 0|req: 2/19] 127.0.0.1 () {38 vars in 421 bytes} [Wed Jun 19 15:42:03 2019] GET /api/config => generated 782 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 232 bytes (1 switches on core 0)\n\n2019-06-19 15:42:03,584 DEBG 'nginx' stdout output:\nip=\\- [\\19/Jun/2019:15:42:03 +0000] \"\\GET /api/config HTTP/1.1\" \\200 \\782 \"\\-\" \"\\python-requests/2.21.0\"\n/web | /api/config | > GET /api/config HTTP/1.1\n\n2019-06-19 15:42:03,584 DEBG 'nginx' stdout output:\n2019/06/19 15:42:03 [info] 46#46: *45 client 127.0.0.1 closed keepalive connection\n\n2019-06-19 15:42:03,594 DEBG 'uwsgi' stdout output:\n[pid: 59|app: 0|req: 10/20] 127.0.0.1 () {44 vars in 575 bytes} [Wed Jun 19 15:42:03 2019] GET /api/heartbeats => generated 149 bytes in 8 msecs (HTTP/1.1 401) 5 headers in 195 bytes (1 switches on core 0)\n\n2019-06-19 15:42:03,595 DEBG 'nginx' stdout output:\nip=\\- [\\19/Jun/2019:15:42:03 +0000] \"\\GET /api/heartbeats HTTP/1.1\" \\401 \\149 \"\\-\" \"\\python-requests/2.21.0\"\n/web | /api/heartbeats | > GET /api/heartbeats HTTP/1.1\n\n2019-06-19 15:42:03,595 DEBG 'heartbeats' stdout output:\nError: API key parameter '2019-06-19' is invalid\n\n2019-06-19 15:42:03,599 DEBG 'nginx' stdout output:\n2019/06/19 15:42:03 [info] 46#46: *47 client 127.0.0.1 closed keepalive connection\n\n2019-06-19 15:42:03,610 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 140143372447184 for <Subprocess at 140143370122376 with name heartbeats in state RUNNING> (stdout)>\n2019-06-19 15:42:03,610 INFO exited: heartbeats (exit status 1; not expected)\n2019-06-19 15:42:03,610 DEBG received SIGCLD indicating a child quit\n2019-06-19 15:42:04,613 INFO spawned: 'heartbeats' with pid 113\n2019-06-19 15:42:04,613 INFO success: housekeeping entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)\n2019-06-19 15:42:05,615 INFO success: heartbeats entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)\n","html":"<p><span data-link-type=\"mention\" data-screen-name=\"jl45621\" class=\"mention\">@jl45621<\/span> 2019-06-19 15:42:02,580 DEBG fd 8 closed, stopped monitoring &lt;POutputDispatcher at 140143369729736 for &lt;Subprocess at 140143370122592 with name housekeeping in state RUNNING&gt; (stdout)&gt;<br>2019-06-19 15:42:02,580 INFO exited: housekeeping (exit status 1; not expected)<br>2019-06-19 15:42:02,580 DEBG received SIGCLD indicating a child quit<br>2019-06-19 15:42:03,583 INFO spawned: &#39;housekeeping&#39; with pid 109<br>2019-06-19 15:42:03,584 DEBG &#39;uwsgi&#39; stdout output:<br>[pid: 56|app: 0|req: 2/19] 127.0.0.1 () {38 vars in 421 bytes} [Wed Jun 19 15:42:03 2019] GET /api/config =&gt; generated 782 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 232 bytes (1 switches on core 0)<\/p><p>2019-06-19 15:42:03,584 DEBG &#39;nginx&#39; stdout output:<br>ip=- [\\19/Jun/2019:15:42:03 +0000] &quot;\\GET /api/config HTTP/1.1&quot; \\200 \\782 &quot;-&quot; &quot;\\python-requests/2.21.0&quot;<br>/web | /api/config | &gt; GET /api/config HTTP/1.1<\/p><p>2019-06-19 15:42:03,584 DEBG &#39;nginx&#39; stdout output:<br>2019/06/19 15:42:03 [info] 46<a target=\"_blank\" data-link-type=\"issue\" data-issue=\"46\" class=\"issue\">#46<\/a>: *45 client 127.0.0.1 closed keepalive connection<\/p><p>2019-06-19 15:42:03,594 DEBG &#39;uwsgi&#39; stdout output:<br>[pid: 59|app: 0|req: 10/20] 127.0.0.1 () {44 vars in 575 bytes} [Wed Jun 19 15:42:03 2019] GET /api/heartbeats =&gt; generated 149 bytes in 8 msecs (HTTP/1.1 401) 5 headers in 195 bytes (1 switches on core 0)<\/p><p>2019-06-19 15:42:03,595 DEBG &#39;nginx&#39; stdout output:<br>ip=- [\\19/Jun/2019:15:42:03 +0000] &quot;\\GET /api/heartbeats HTTP/1.1&quot; \\401 \\149 &quot;-&quot; &quot;\\python-requests/2.21.0&quot;<br>/web | /api/heartbeats | &gt; GET /api/heartbeats HTTP/1.1<\/p><p>2019-06-19 15:42:03,595 DEBG &#39;heartbeats&#39; stdout output:<br>Error: API key parameter &#39;2019-06-19&#39; is invalid<\/p><p>2019-06-19 15:42:03,599 DEBG &#39;nginx&#39; stdout output:<br>2019/06/19 15:42:03 [info] 46<a target=\"_blank\" data-link-type=\"issue\" data-issue=\"46\" class=\"issue\">#46<\/a>: *47 client 127.0.0.1 closed keepalive connection<\/p><p>2019-06-19 15:42:03,610 DEBG fd 6 closed, stopped monitoring &lt;POutputDispatcher at 140143372447184 for &lt;Subprocess at 140143370122376 with name heartbeats in state RUNNING&gt; (stdout)&gt;<br>2019-06-19 15:42:03,610 INFO exited: heartbeats (exit status 1; not expected)<br>2019-06-19 15:42:03,610 DEBG received SIGCLD indicating a child quit<br>2019-06-19 15:42:04,613 INFO spawned: &#39;heartbeats&#39; with pid 113<br>2019-06-19 15:42:04,613 INFO success: housekeeping entered RUNNING state, process has stayed up for &gt; than 1 seconds (startsecs)<br>2019-06-19 15:42:05,615 INFO success: heartbeats entered RUNNING state, process has stayed up for &gt; than 1 seconds (startsecs)<\/p>","sent":"2019-06-19T15:43:58.466Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":18,"urls":[],"mentions":[{"screenName":"jl45621","userId":"54f8ae4615522ed4b3dcdc8f","userIds":[]}],"issues":[{"number":"46"},{"number":"46"}],"meta":[],"v":1,"burstStart":false},{"id":"5d0a585afaf70031f94fd34a","text":"can somebody please assist? where is this API key parameter '2019-06-19' coming from?","html":"can somebody please assist? where is this API key parameter &#39;2019-06-19&#39; coming from?","sent":"2019-06-19T15:44:26.511Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a5ccebb789747fb40b4e6","text":"Very new to Alerta. Followed the instruction exactly on the quickstart page. can use alerta to send and query alerts but have issues on webui. When I type machineIP:8000, it keeps to pop up invalid config.json file error but I do have config.json in /dist (see screenshot below). ","html":"Very new to Alerta. Followed the instruction exactly on the quickstart page. can use alerta to send and query alerts but have issues on webui. When I type machineIP:8000, it keeps to pop up invalid config.json file error but I do have config.json in /dist (see screenshot below). ","sent":"2019-06-19T16:03:26.484Z","fromUser":{"id":"5d0a5962d73408ce4fc3f7c9","username":"enginexjs","displayName":"enginexjs","url":"/enginexjs","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/enginexjs","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/45641273?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/45641273?v=4&s=128","v":1,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d0a5cd3a8d9871b32c592b7","text":"[![config-error.jpg](https://files.gitter.im/alerta/chat/RTYQ/thumb/config-error.jpg)](https://files.gitter.im/alerta/chat/RTYQ/config-error.jpg)","html":"<a href=\"https://files.gitter.im/alerta/chat/RTYQ/config-error.jpg\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/RTYQ/thumb/config-error.jpg\" alt=\"config-error.jpg\" rel=\"nofollow\"><\/a>","sent":"2019-06-19T16:03:31.800Z","fromUser":{"id":"5d0a5962d73408ce4fc3f7c9","username":"enginexjs","displayName":"enginexjs","url":"/enginexjs","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/enginexjs","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/45641273?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/45641273?v=4&s=128","v":1,"gv":"4"},"readBy":20,"urls":[{"url":"https://files.gitter.im/alerta/chat/RTYQ/thumb/config-error.jpg"},{"url":"https://files.gitter.im/alerta/chat/RTYQ/config-error.jpg"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a60dbbb789747fb40d44e","text":"i just got it working myself, i think instructions are wrong","html":"i just got it working myself, i think instructions are wrong","sent":"2019-06-19T16:20:43.947Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d0a60e7a8d9871b32c5b7b8","text":"you want the contents of dist/ to be in /var/www/html/","html":"you want the contents of dist/ to be in /var/www/html/","sent":"2019-06-19T16:20:55.262Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a60f926477710bbea15f8","text":"and make sure to set config.json to: {\"endpoint\": \"/api\"}\n","html":"and make sure to set config.json to: {&quot;endpoint&quot;: &quot;/api&quot;}","sent":"2019-06-19T16:21:13.733Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a690ae527d95add0fef4f","text":"@jl45621 if you’re using the docker container you shouldn’t need to copy files into /dist or set the config.json file. that is taken care of by the `entrypoint` script.","html":"<span data-link-type=\"mention\" data-screen-name=\"jl45621\" class=\"mention\">@jl45621<\/span> if you’re using the docker container you shouldn’t need to copy files into /dist or set the config.json file. that is taken care of by the <code>entrypoint<\/code> script.","sent":"2019-06-19T16:55:38.246Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":20,"urls":[],"mentions":[{"screenName":"jl45621","userId":"54f8ae4615522ed4b3dcdc8f","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d0a6921ecc6a91b3122588a","text":"What instructions are you talking about that are wrong?","html":"What instructions are you talking about that are wrong?","sent":"2019-06-19T16:56:01.384Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a6a634e8f972d37594c9b","text":"@enginexjs You probably need to set `CORS_ORIGINS` to whatever IP address your system is running on. See https://docs.alerta.io/en/latest/faq.html#why-can-t-i-see-any-alerts-in-the-web-browser","html":"<span data-link-type=\"mention\" data-screen-name=\"enginexjs\" class=\"mention\">@enginexjs<\/span> You probably need to set <code>CORS_ORIGINS<\/code> to whatever IP address your system is running on. See <a href=\"https://docs.alerta.io/en/latest/faq.html#why-can-t-i-see-any-alerts-in-the-web-browser\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://docs.alerta.io/en/latest/faq.html#why-can-t-i-see-any-alerts-in-the-web-browser<\/a>","sent":"2019-06-19T17:01:23.523Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":20,"urls":[{"url":"https://docs.alerta.io/en/latest/faq.html#why-can-t-i-see-any-alerts-in-the-web-browser"}],"mentions":[{"screenName":"enginexjs","userId":"5d0a5962d73408ce4fc3f7c9","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d0a6ad7fbcc305cc4ab6ccf","text":"To install the web console run:\n\n$ wget https://github.com/alerta/alerta-webui/releases/latest/download/alerta-webui.tar.gz\n$ tar zxvf alerta-webui.tar.gz\n$ cp dist /var/www/html","html":"<p>To install the web console run:<\/p><p>$ wget <a href=\"https://github.com/alerta/alerta-webui/releases/latest/download/alerta-webui.tar.gz\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-webui/releases/latest/download/alerta-webui.tar.gz<\/a><br>$ tar zxvf alerta-webui.tar.gz<br>$ cp dist /var/www/html<\/p>","sent":"2019-06-19T17:03:19.528Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":20,"urls":[{"url":"https://github.com/alerta/alerta-webui/releases/latest/download/alerta-webui.tar.gz"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5d0a6ae64e8f972d375952d0","text":"pretty sure that should be something like cp -Rv dist/* /var/www/html/","html":"pretty sure that should be something like cp -Rv dist/* /var/www/html/","sent":"2019-06-19T17:03:34.673Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a6aedbb789747fb412d64","text":"from http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1","html":"from <a href=\"http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1<\/a>","sent":"2019-06-19T17:03:41.430Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":20,"urls":[{"url":"http://docs.alerta.io/en/latest/gettingstarted/tutorial-1-deploy-alerta.html#tutorial-1"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a6af7bc56c731f8f81ab6","text":"i was unable to get it working via docker, had to do it on the host itself","html":"i was unable to get it working via docker, had to do it on the host itself","sent":"2019-06-19T17:03:51.315Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a6b2cbb789747fb412feb","text":"and also later on down the line: ExecStart=/opt/alerta/bin/uwsgi ... that should come from wherever the system installed uwsgi. in my case im using anaconda so i had to update it there","html":"and also later on down the line: ExecStart=/opt/alerta/bin/uwsgi ... that should come from wherever the system installed uwsgi. in my case im using anaconda so i had to update it there","sent":"2019-06-19T17:04:44.723Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":20,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a6b4aecc6a91b31226aff","text":"otherwise it looks pretty slick once its working, good stuff here","html":"otherwise it looks pretty slick once its working, good stuff here","sent":"2019-06-19T17:05:14.425Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":21,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a6b7c950f1062a9aa64e3","text":"would be nice if there was a tutorial that did docker + letsencrypt for https + simple local authentication. that would cover a ton of the use cases i think","html":"would be nice if there was a tutorial that did docker + letsencrypt for https + simple local authentication. that would cover a ton of the use cases i think","sent":"2019-06-19T17:06:04.516Z","fromUser":{"id":"54f8ae4615522ed4b3dcdc8f","username":"jl45621","displayName":"jl45621","url":"/jl45621","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/jl45621","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/11338165?v=4&s=128","v":4,"gv":"4"},"readBy":21,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5d0a7a80e527d95add1090f2","text":"Oh. You're referring to Tutorial 1. @enginexjs was referring to the quickstart guide.","html":"Oh. You&#39;re referring to Tutorial 1. <span data-link-type=\"mention\" data-screen-name=\"enginexjs\" class=\"mention\">@enginexjs<\/span> was referring to the quickstart guide.","sent":"2019-06-19T18:10:08.685Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":20,"urls":[],"mentions":[{"screenName":"enginexjs","userId":"5d0a5962d73408ce4fc3f7c9","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

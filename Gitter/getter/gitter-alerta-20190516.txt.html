@@ -1,0 +1,785 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2019/05/17"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2019/05/15"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">16<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">May 2019</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-5cdd0252879f4478c7889660 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd0252879f4478c7889660' title="">May 16 2019 06:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , Ok thx. So if I understand correctly, we can not add LDAP groups to alerta. Can we only add LDAP users? And after we create a customer view and roles for them manually?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd32625b63ea22b3b4b8a2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd32625b63ea22b3b4b8a2' title="">May 16 2019 09:50 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="Remy-Andreetti" class="mention">@Remy-Andreetti</span> You don’t add LDAP users yourself. Users are added automatically when they first login. If you add them manually you’ll get database conflict errors when they try to log in first time.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd32700ac9852a95e76f7c burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Once they have logged in you can assign roles to them.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd3292d22ba766a2a664c5 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      You can use LDAP groups to automatically assign customers to LDAP users using  “customer lookups”.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd32ef7c363c75a7eb8183 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If you want to use LDAP groups to automatically assign roles to users using “Permission lookups” (similar to customer lookups) I can add that. But you can’t do it right now.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd368c9404bf2aed55a752 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd368c9404bf2aed55a752' title="">May 16 2019 10:08 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="sushovan23" class="mention">@sushovan23</span> I can’t reproduce the scenario where a signup button is shown when a SSO auth provider is used. Can you confirm this is the case with the latest web UI 7 and take screenshots ? Thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd38f80ec37966a17a652e burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd38f80ec37966a17a652e' title="">May 16 2019 10:18 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="Remy-Andreetti" class="mention">@Remy-Andreetti</span> LDAP groups can now be used to auto-assign roles See <a target="_blank" data-link-type="pr" data-issue="973" href="https://github.com/alerta/alerta/pull/973" data-provider="github" data-issue-repo="alerta/alerta" class="pr">alerta/alerta#973</a> Available as Alerta API v7.2.5
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd47fb9404bf2aed562bfc burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cdd37cad73408ce4fc070ca avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Chandants</div>
+      <div class='chat-item__username js-chat-item-from'>@Chandants</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd47fb9404bf2aed562bfc' title="">May 16 2019 11:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , We are using Alerta Release 6.6 . Currently we are trying to disable the web UI part and to go with only Alerta CLI. Need your help in excluding the files which are used for web UI part and to make necessary configuration changes. Kindly assist.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd49a85b63ea22b3b56ec7 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cdaf8d8d73408ce4fc04429 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47344607?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47344607?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Komalgupta22722</div>
+      <div class='chat-item__username js-chat-item-from'>@Komalgupta22722</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd49a85b63ea22b3b56ec7' title="">May 16 2019 11:29 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> - I have used alerta-mailer plugins and it doesn&#39;t sends mails in html format.... First it demands for both mail_template as well as mail-template_html but it displays the results in the format which is defined in mail_template.. I have changed email-type as html also in my alerta-config file and settings.py
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd4a68ef853135c8cca002 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      DEFAULT_OPTIONS = {<br>    &#39;config_file&#39;:   &#39;/mailer.conf&#39;,<br>    &#39;profile&#39;:       None,<br>    &#39;endpoint&#39;:      &#39;<a href="http://10.0.140.146:8080" rel="nofollow noopener noreferrer" target="_blank" class="link">http://10.0.140.146:8080</a>&#39;,<br>    &#39;key&#39;:           &#39;&#39;,<br>    &#39;amqp_url&#39;:      &#39;redis://localhost:6379/&#39;,<br>    &#39;amqp_topic&#39;:    &#39;notify&#39;,<br>    &#39;amqp_queue_name&#39;:    &#39;&#39;, # Name of the AMQP queue. Default is no name (default queue destination).<br>    &#39;amqp_queue_exclusive&#39;: True, # Exclusive queues may only be consumed by the current connection.<br>    &#39;smtp_host&#39;:     &#39;smtp.gmail.com&#39;,<br>    &#39;smtp_port&#39;:     587,<br>    &#39;smtp_username&#39;: &#39;&#39;, # application-specific username if it differs from the specified &#39;mail_from&#39; user<br>    &#39;smtp_password&#39;: &#39;&#39;,  # application-specific password if gmail used<br>    &#39;smtp_starttls&#39;: True,  # use the STARTTLS SMTP extension<br>    &#39;smtp_use_ssl&#39;: False,  # whether or not SSL is being used for the SMTP connection<br>    &#39;ssl_key_file&#39;: None, # a PEM formatted private key file for the SSL connection<br>    &#39;ssl_cert_file&#39;: None, # a certificate chain file for the SSL connection<br>    &#39;mail_from&#39;:     &#39;&#39;,  # <a href="mailto:alerta@example.com" rel="nofollow">alerta@example.com</a><br>    &#39;mail_to&#39;:       [],  # <a href="mailto:devops@example.com" rel="nofollow">devops@example.com</a>, <a href="mailto:support@example.com" rel="nofollow">support@example.com</a><br>    &#39;mail_localhost&#39;: None,  # fqdn to use in the HELO/EHLO command<br>    &#39;mail_template_html&#39;: &#39;/templates/email2.html.tmpl&#39;,<br>    &#39;mail_template&#39;:  &#39;/templates/email.tmpl&#39;,<br>    &#39;mail_subject&#39;:  (&#39;[{{ alert.status|capitalize }}] {{ alert.environment }}: &#39;<br>                      &#39;{{ alert.severity|capitalize }} {{ alert.event }} on &#39;<br>                      &#39;{{ alert.service|join(\&#39;,\&#39;) }} {{ alert.resource }}&#39;),<br>    &#39;dashboard_url&#39;: &#39;<a href="http://10.0.140.146:3000" rel="nofollow noopener noreferrer" target="_blank" class="link">http://10.0.140.146:3000</a>&#39;,<br>    &#39;debug&#39;:         False,<br>    &#39;skip_mta&#39;:      False,<br>    &#39;email_type&#39;:    &#39;html&#39;  # options are: text, html<br>}
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd4b5f509b1035c7598969 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c543d9fd73408ce4fb69b16 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/47245858?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Rémy Andreetti</div>
+      <div class='chat-item__username js-chat-item-from'>@Remy-Andreetti</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd4b5f509b1035c7598969' title="">May 16 2019 11:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> , Thank you very much. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd4b6cd22ba766a2a726b7 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      I will try now
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd5b0263dea422b490d092 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd5b0263dea422b490d092' title="">May 16 2019 12:43 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="Chandants" class="mention">@Chandants</span> you don’t say how you have currently deployed alerta. and why can’t you just ignore/not install the web UI? sounds simple to me.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd5bc163dea422b490d737 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="Komalgupta22722" class="mention">@Komalgupta22722</span> please open a github issue here <a href="https://github.com/alerta/alerta-contrib/issues/new?assignees=&amp;labels=&amp;template=bug_report.md&amp;title=" rel="nofollow noopener noreferrer" target="_blank" class="link">https://github.com/alerta/alerta-contrib/issues/new?assignees=&amp;labels=&amp;template=bug_report.md&amp;title=</a> and make sure you fill it in with as much information as possible so that your issue can be reproduced. If you don’t fill in the issue template the issue will be closed. thanks.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd66e275d9a575a6ef8b42 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cdd37cad73408ce4fc070ca avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/50700572?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Chandants</div>
+      <div class='chat-item__username js-chat-item-from'>@Chandants</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd66e275d9a575a6ef8b42' title="">May 16 2019 13:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> We have deployed it as a container. We tried building the container by excluding the web UI tar files. But we were unable to send test curls to it. We get either a connection refused error or the Nginx error.  Kindly help us in sorting out the dependent files.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cdd82949404bf2aed580a6b burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cdd82949404bf2aed580a6b' title="">May 16 2019 15:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Please share a link to your Dockerfile on GitHub or elsewhere.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cddb1a9ad024978c6d914ff burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c70226ad73408ce4fb8a55f avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/33735706?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/33735706?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>te4336</div>
+      <div class='chat-item__username js-chat-item-from'>@te4336</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cddb1a9ad024978c6d914ff' title="">May 16 2019 18:53 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Trying to run housekeeping via cron however when it runs it shows &quot;Error: Failed to get config from <a href="http://localhost:8080/config" rel="nofollow noopener noreferrer" target="_blank" class="link">http://localhost:8080/config</a>. Reason: 404 Client Error: Not Found for url: <a href="http://localhost:8080/config" rel="nofollow noopener noreferrer" target="_blank" class="link">http://localhost:8080/config</a>&quot;. I&#39;m using the following command in my cronjob.. &quot;<em> </em> <em> </em> * root /opt/alerta/bin/alerta housekeeping --expired 2 --info 12&quot; Any insight? Not sure where the localhost needs to be changed as everything else is working correctly.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cddb70e879f4478c78e1748 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cddb70e879f4478c78e1748' title="">May 16 2019 19:16 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      How is your alerta deployed? Docker?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cddb81483ae782aee7c4717 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      And where are you running your cron job from?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cddbad4879f4478c78e33f0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5cdc3bd0d73408ce4fc05fca avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/50672901?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/50672901?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>pk34032</div>
+      <div class='chat-item__username js-chat-item-from'>@pk34032</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cddbad4879f4478c78e33f0' title="">May 16 2019 19:32 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>  Hi, Nick.  I was able to resolve the issue with the webui not responding.  It was a configuration error between the endpoint setting and CORS.  I&#39;m now able to login and interact with the UI, but I don&#39;t see any alerts or heartbeats coming in from elastalert even though I can see them firing.  I was able to successfully send a test alert through the CLI and it showed up in the webui.<br>I am no longer receiving any errors in the browser&#39;s console.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cddbb3683ae782aee7c5d47 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c70226ad73408ce4fb8a55f avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/33735706?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/33735706?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>te4336</div>
+      <div class='chat-item__username js-chat-item-from'>@te4336</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cddbb3683ae782aee7c5d47' title="">May 16 2019 19:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Running the cronjob from a cronjob file in /etc/cron.d/ . The install isn&#39;t via Docker it&#39;s running on Nginx and uwsgi natively.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cddbbc3d522695bba54f02b burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      If I run &quot;/opt/alerta/bin/alerta housekeeping --expired 2 --info 4&quot; from the command line it gives the same error as well so it&#39;s not limited to just Cron.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-5cddd2c15b63ea22b3b9b7de burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5c70226ad73408ce4fb8a55f avatar-s offline  ">
+  <img src="https://avatars1.githubusercontent.com/u/33735706?v=4&amp;s=30" srcset="https://avatars1.githubusercontent.com/u/33735706?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>te4336</div>
+      <div class='chat-item__username js-chat-item-from'>@te4336</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2019/05/16?at=5cddd2c15b63ea22b3b9b7de' title="">May 16 2019 21:14 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Think I might have fixed it...the .alerta.conf file was missing. Put that in and it appears to be making progress now.
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$4+LppFLMUre7lI00C4Kr//1oOXxg7FHoYRFoHyxj3No=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":378,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2019-05-16T00:00:00.000Z","nextDate":"2019-05-17T23:59:59.999Z","previousDate":"2019-05-15T00:00:00.000Z","messages":[{"id":"5cdd0252879f4478c7889660","text":"\nHi @satterly , Ok thx. So if I understand correctly, we can not add LDAP groups to alerta. Can we only add LDAP users? And after we create a customer view and roles for them manually?","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , Ok thx. So if I understand correctly, we can not add LDAP groups to alerta. Can we only add LDAP users? And after we create a customer view and roles for them manually?","sent":"2019-05-16T06:25:22.725Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":17,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cdd32625b63ea22b3b4b8a2","text":"@Remy-Andreetti You don’t add LDAP users yourself. Users are added automatically when they first login. If you add them manually you’ll get database conflict errors when they try to log in first time.","html":"<span data-link-type=\"mention\" data-screen-name=\"Remy-Andreetti\" class=\"mention\">@Remy-Andreetti<\/span> You don’t add LDAP users yourself. Users are added automatically when they first login. If you add them manually you’ll get database conflict errors when they try to log in first time.","sent":"2019-05-16T09:50:26.164Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":16,"urls":[],"mentions":[{"screenName":"Remy-Andreetti","userId":"5c543d9fd73408ce4fb69b16","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cdd32700ac9852a95e76f7c","text":"Once they have logged in you can assign roles to them.","html":"Once they have logged in you can assign roles to them.","sent":"2019-05-16T09:50:40.960Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":17,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cdd3292d22ba766a2a664c5","text":"You can use LDAP groups to automatically assign customers to LDAP users using  “customer lookups”.","html":"You can use LDAP groups to automatically assign customers to LDAP users using  “customer lookups”.","sent":"2019-05-16T09:51:14.424Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":17,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cdd32ef7c363c75a7eb8183","text":"If you want to use LDAP groups to automatically assign roles to users using “Permission lookups” (similar to customer lookups) I can add that. But you can’t do it right now.","html":"If you want to use LDAP groups to automatically assign roles to users using “Permission lookups” (similar to customer lookups) I can add that. But you can’t do it right now.","sent":"2019-05-16T09:52:47.262Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":17,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cdd368c9404bf2aed55a752","text":"@sushovan23 I can’t reproduce the scenario where a signup button is shown when a SSO auth provider is used. Can you confirm this is the case with the latest web UI 7 and take screenshots ? Thanks.","html":"<span data-link-type=\"mention\" data-screen-name=\"sushovan23\" class=\"mention\">@sushovan23<\/span> I can’t reproduce the scenario where a signup button is shown when a SSO auth provider is used. Can you confirm this is the case with the latest web UI 7 and take screenshots ? Thanks.","sent":"2019-05-16T10:08:12.688Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":17,"urls":[],"mentions":[{"screenName":"sushovan23","userId":"5a948131d73408ce4f8ef365","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cdd38f80ec37966a17a652e","text":"@Remy-Andreetti LDAP groups can now be used to auto-assign roles See https://github.com/alerta/alerta/pull/973 Available as Alerta API v7.2.5","html":"<span data-link-type=\"mention\" data-screen-name=\"Remy-Andreetti\" class=\"mention\">@Remy-Andreetti<\/span> LDAP groups can now be used to auto-assign roles See <a target=\"_blank\" data-link-type=\"pr\" data-issue=\"973\" href=\"https://github.com/alerta/alerta/pull/973\" data-provider=\"github\" data-issue-repo=\"alerta/alerta\" class=\"pr\">alerta/alerta#973<\/a> Available as Alerta API v7.2.5","sent":"2019-05-16T10:18:32.806Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":17,"urls":[],"mentions":[{"screenName":"Remy-Andreetti","userId":"5c543d9fd73408ce4fb69b16","userIds":[]}],"issues":[{"repo":"alerta/alerta","number":"973"}],"meta":[],"v":1,"burstStart":true},{"id":"5cdd47fb9404bf2aed562bfc","text":"Hi @satterly , We are using Alerta Release 6.6 . Currently we are trying to disable the web UI part and to go with only Alerta CLI. Need your help in excluding the files which are used for web UI part and to make necessary configuration changes. Kindly assist.","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , We are using Alerta Release 6.6 . Currently we are trying to disable the web UI part and to go with only Alerta CLI. Need your help in excluding the files which are used for web UI part and to make necessary configuration changes. Kindly assist.","sent":"2019-05-16T11:22:35.340Z","editedAt":"2019-05-16T11:24:26.575Z","fromUser":{"id":"5cdd37cad73408ce4fc070ca","username":"Chandants","displayName":"Chandants","url":"/Chandants","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Chandants","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=128","v":13,"gv":"4"},"readBy":18,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":3,"burstStart":true},{"id":"5cdd49a85b63ea22b3b56ec7","text":"Hi @satterly - I have used alerta-mailer plugins and it doesn't sends mails in html format.... First it demands for both mail_template as well as mail-template_html but it displays the results in the format which is defined in mail_template.. I have changed email-type as html also in my alerta-config file and settings.py","html":"Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> - I have used alerta-mailer plugins and it doesn&#39;t sends mails in html format.... First it demands for both mail_template as well as mail-template_html but it displays the results in the format which is defined in mail_template.. I have changed email-type as html also in my alerta-config file and settings.py","sent":"2019-05-16T11:29:44.625Z","fromUser":{"id":"5cdaf8d8d73408ce4fc04429","username":"Komalgupta22722","displayName":"Komalgupta22722","url":"/Komalgupta22722","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/Komalgupta22722","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47344607?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47344607?v=4&s=128","v":1,"gv":"4"},"readBy":18,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cdd4a68ef853135c8cca002","text":"DEFAULT_OPTIONS = {\n    'config_file':   '/mailer.conf',\n    'profile':       None,\n    'endpoint':      'http://10.0.140.146:8080',\n    'key':           '',\n    'amqp_url':      'redis://localhost:6379/',\n    'amqp_topic':    'notify',\n    'amqp_queue_name':    '', # Name of the AMQP queue. Default is no name (default queue destination).\n    'amqp_queue_exclusive': True, # Exclusive queues may only be consumed by the current connection.\n    'smtp_host':     'smtp.gmail.com',\n    'smtp_port':     587,\n    'smtp_username': '', # application-specific username if it differs from the specified 'mail_from' user\n    'smtp_password': '',  # application-specific password if gmail used\n    'smtp_starttls': True,  # use the STARTTLS SMTP extension\n    'smtp_use_ssl': False,  # whether or not SSL is being used for the SMTP connection\n    'ssl_key_file': None, # a PEM formatted private key file for the SSL connection\n    'ssl_cert_file': None, # a certificate chain file for the SSL connection\n    'mail_from':     '',  # alerta@example.com\n    'mail_to':       [],  # devops@example.com, support@example.com\n    'mail_localhost': None,  # fqdn to use in the HELO/EHLO command\n    'mail_template_html': '/templates/email2.html.tmpl',\n    'mail_template':  '/templates/email.tmpl',\n    'mail_subject':  ('[{{ alert.status|capitalize }}] {{ alert.environment }}: '\n                      '{{ alert.severity|capitalize }} {{ alert.event }} on '\n                      '{{ alert.service|join(\\',\\') }} {{ alert.resource }}'),\n    'dashboard_url': 'http://10.0.140.146:3000',\n    'debug':         False,\n    'skip_mta':      False,\n    'email_type':    'html'  # options are: text, html\n}\n\n","html":"DEFAULT_OPTIONS = {<br>    &#39;config_file&#39;:   &#39;/mailer.conf&#39;,<br>    &#39;profile&#39;:       None,<br>    &#39;endpoint&#39;:      &#39;<a href=\"http://10.0.140.146:8080\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://10.0.140.146:8080<\/a>&#39;,<br>    &#39;key&#39;:           &#39;&#39;,<br>    &#39;amqp_url&#39;:      &#39;redis://localhost:6379/&#39;,<br>    &#39;amqp_topic&#39;:    &#39;notify&#39;,<br>    &#39;amqp_queue_name&#39;:    &#39;&#39;, # Name of the AMQP queue. Default is no name (default queue destination).<br>    &#39;amqp_queue_exclusive&#39;: True, # Exclusive queues may only be consumed by the current connection.<br>    &#39;smtp_host&#39;:     &#39;smtp.gmail.com&#39;,<br>    &#39;smtp_port&#39;:     587,<br>    &#39;smtp_username&#39;: &#39;&#39;, # application-specific username if it differs from the specified &#39;mail_from&#39; user<br>    &#39;smtp_password&#39;: &#39;&#39;,  # application-specific password if gmail used<br>    &#39;smtp_starttls&#39;: True,  # use the STARTTLS SMTP extension<br>    &#39;smtp_use_ssl&#39;: False,  # whether or not SSL is being used for the SMTP connection<br>    &#39;ssl_key_file&#39;: None, # a PEM formatted private key file for the SSL connection<br>    &#39;ssl_cert_file&#39;: None, # a certificate chain file for the SSL connection<br>    &#39;mail_from&#39;:     &#39;&#39;,  # <a href=\"mailto:alerta@example.com\" rel=\"nofollow\">alerta@example.com<\/a><br>    &#39;mail_to&#39;:       [],  # <a href=\"mailto:devops@example.com\" rel=\"nofollow\">devops@example.com<\/a>, <a href=\"mailto:support@example.com\" rel=\"nofollow\">support@example.com<\/a><br>    &#39;mail_localhost&#39;: None,  # fqdn to use in the HELO/EHLO command<br>    &#39;mail_template_html&#39;: &#39;/templates/email2.html.tmpl&#39;,<br>    &#39;mail_template&#39;:  &#39;/templates/email.tmpl&#39;,<br>    &#39;mail_subject&#39;:  (&#39;[{{ alert.status|capitalize }}] {{ alert.environment }}: &#39;<br>                      &#39;{{ alert.severity|capitalize }} {{ alert.event }} on &#39;<br>                      &#39;{{ alert.service|join(\\&#39;,\\&#39;) }} {{ alert.resource }}&#39;),<br>    &#39;dashboard_url&#39;: &#39;<a href=\"http://10.0.140.146:3000\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://10.0.140.146:3000<\/a>&#39;,<br>    &#39;debug&#39;:         False,<br>    &#39;skip_mta&#39;:      False,<br>    &#39;email_type&#39;:    &#39;html&#39;  # options are: text, html<br>}","sent":"2019-05-16T11:32:56.775Z","fromUser":{"id":"5cdaf8d8d73408ce4fc04429","username":"Komalgupta22722","displayName":"Komalgupta22722","url":"/Komalgupta22722","avatarUrl":"https://avatars-02.gitter.im/gh/uv/4/Komalgupta22722","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47344607?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47344607?v=4&s=128","v":1,"gv":"4"},"readBy":18,"urls":[{"url":"http://10.0.140.146:8080"},{"url":"mailto:alerta@example.com"},{"url":"mailto:devops@example.com"},{"url":"mailto:support@example.com"},{"url":"http://10.0.140.146:3000"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cdd4b5f509b1035c7598969","text":"@satterly , Thank you very much. ","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> , Thank you very much. ","sent":"2019-05-16T11:37:03.515Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":19,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cdd4b6cd22ba766a2a726b7","text":"I will try now","html":"I will try now","sent":"2019-05-16T11:37:16.955Z","fromUser":{"id":"5c543d9fd73408ce4fb69b16","username":"Remy-Andreetti","displayName":"Rémy Andreetti","url":"/Remy-Andreetti","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Remy-Andreetti","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/47245858?v=4&s=128","v":31,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cdd5b0263dea422b490d092","text":"@Chandants you don’t say how you have currently deployed alerta. and why can’t you just ignore/not install the web UI? sounds simple to me.","html":"<span data-link-type=\"mention\" data-screen-name=\"Chandants\" class=\"mention\">@Chandants<\/span> you don’t say how you have currently deployed alerta. and why can’t you just ignore/not install the web UI? sounds simple to me.","sent":"2019-05-16T12:43:46.805Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":19,"urls":[],"mentions":[{"screenName":"Chandants","userId":"5cdd37cad73408ce4fc070ca","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cdd5bc163dea422b490d737","text":"@Komalgupta22722 please open a github issue here https://github.com/alerta/alerta-contrib/issues/new?assignees=&labels=&template=bug_report.md&title= and make sure you fill it in with as much information as possible so that your issue can be reproduced. If you don’t fill in the issue template the issue will be closed. thanks.","html":"<span data-link-type=\"mention\" data-screen-name=\"Komalgupta22722\" class=\"mention\">@Komalgupta22722<\/span> please open a github issue here <a href=\"https://github.com/alerta/alerta-contrib/issues/new?assignees=&amp;labels=&amp;template=bug_report.md&amp;title=\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">https://github.com/alerta/alerta-contrib/issues/new?assignees=&amp;labels=&amp;template=bug_report.md&amp;title=<\/a> and make sure you fill it in with as much information as possible so that your issue can be reproduced. If you don’t fill in the issue template the issue will be closed. thanks.","sent":"2019-05-16T12:46:57.392Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":19,"urls":[{"url":"https://github.com/alerta/alerta-contrib/issues/new?assignees=&amp;labels=&amp;template=bug_report.md&amp;title="}],"mentions":[{"screenName":"Komalgupta22722","userId":"5cdaf8d8d73408ce4fc04429","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cdd66e275d9a575a6ef8b42","text":"@satterly We have deployed it as a container. We tried building the container by excluding the web UI tar files. But we were unable to send test curls to it. We get either a connection refused error or the Nginx error.  Kindly help us in sorting out the dependent files.","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> We have deployed it as a container. We tried building the container by excluding the web UI tar files. But we were unable to send test curls to it. We get either a connection refused error or the Nginx error.  Kindly help us in sorting out the dependent files.","sent":"2019-05-16T13:34:26.585Z","fromUser":{"id":"5cdd37cad73408ce4fc070ca","username":"Chandants","displayName":"Chandants","url":"/Chandants","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/Chandants","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/50700572?v=4&s=128","v":13,"gv":"4"},"readBy":18,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cdd82949404bf2aed580a6b","text":"Please share a link to your Dockerfile on GitHub or elsewhere.","html":"Please share a link to your Dockerfile on GitHub or elsewhere.","sent":"2019-05-16T15:32:36.685Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cddb1a9ad024978c6d914ff","text":"Trying to run housekeeping via cron however when it runs it shows \"Error: Failed to get config from http://localhost:8080/config. Reason: 404 Client Error: Not Found for url: http://localhost:8080/config\". I'm using the following command in my cronjob.. \"* * * * * root /opt/alerta/bin/alerta housekeeping --expired 2 --info 12\" Any insight? Not sure where the localhost needs to be changed as everything else is working correctly.","html":"Trying to run housekeeping via cron however when it runs it shows &quot;Error: Failed to get config from <a href=\"http://localhost:8080/config\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://localhost:8080/config<\/a>. Reason: 404 Client Error: Not Found for url: <a href=\"http://localhost:8080/config\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link\">http://localhost:8080/config<\/a>&quot;. I&#39;m using the following command in my cronjob.. &quot;<em> <\/em> <em> <\/em> * root /opt/alerta/bin/alerta housekeeping --expired 2 --info 12&quot; Any insight? Not sure where the localhost needs to be changed as everything else is working correctly.","sent":"2019-05-16T18:53:29.406Z","fromUser":{"id":"5c70226ad73408ce4fb8a55f","username":"te4336","displayName":"te4336","url":"/te4336","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/te4336","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=128","v":13,"gv":"4"},"readBy":18,"urls":[{"url":"http://localhost:8080/config"},{"url":"http://localhost:8080/config"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cddb70e879f4478c78e1748","text":"How is your alerta deployed? Docker?","html":"How is your alerta deployed? Docker?","sent":"2019-05-16T19:16:30.631Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cddb81483ae782aee7c4717","text":"And where are you running your cron job from?","html":"And where are you running your cron job from?","sent":"2019-05-16T19:20:52.033Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cddbad4879f4478c78e33f0","text":"@satterly  Hi, Nick.  I was able to resolve the issue with the webui not responding.  It was a configuration error between the endpoint setting and CORS.  I'm now able to login and interact with the UI, but I don't see any alerts or heartbeats coming in from elastalert even though I can see them firing.  I was able to successfully send a test alert through the CLI and it showed up in the webui.  \nI am no longer receiving any errors in the browser's console.\n","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>  Hi, Nick.  I was able to resolve the issue with the webui not responding.  It was a configuration error between the endpoint setting and CORS.  I&#39;m now able to login and interact with the UI, but I don&#39;t see any alerts or heartbeats coming in from elastalert even though I can see them firing.  I was able to successfully send a test alert through the CLI and it showed up in the webui.<br>I am no longer receiving any errors in the browser&#39;s console.","sent":"2019-05-16T19:32:36.301Z","fromUser":{"id":"5cdc3bd0d73408ce4fc05fca","username":"pk34032","displayName":"pk34032","url":"/pk34032","avatarUrl":"https://avatars-05.gitter.im/gh/uv/4/pk34032","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/50672901?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/50672901?v=4&s=128","v":5,"gv":"4"},"readBy":19,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cddbb3683ae782aee7c5d47","text":"Running the cronjob from a cronjob file in /etc/cron.d/ . The install isn't via Docker it's running on Nginx and uwsgi natively.","html":"Running the cronjob from a cronjob file in /etc/cron.d/ . The install isn&#39;t via Docker it&#39;s running on Nginx and uwsgi natively.","sent":"2019-05-16T19:34:14.397Z","fromUser":{"id":"5c70226ad73408ce4fb8a55f","username":"te4336","displayName":"te4336","url":"/te4336","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/te4336","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=128","v":13,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"5cddbbc3d522695bba54f02b","text":"If I run \"/opt/alerta/bin/alerta housekeeping --expired 2 --info 4\" from the command line it gives the same error as well so it's not limited to just Cron.","html":"If I run &quot;/opt/alerta/bin/alerta housekeeping --expired 2 --info 4&quot; from the command line it gives the same error as well so it&#39;s not limited to just Cron.","sent":"2019-05-16T19:36:35.177Z","fromUser":{"id":"5c70226ad73408ce4fb8a55f","username":"te4336","displayName":"te4336","url":"/te4336","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/te4336","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=128","v":13,"gv":"4"},"readBy":19,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"5cddd2c15b63ea22b3b9b7de","text":"Think I might have fixed it...the .alerta.conf file was missing. Put that in and it appears to be making progress now.","html":"Think I might have fixed it...the .alerta.conf file was missing. Put that in and it appears to be making progress now.","sent":"2019-05-16T21:14:41.024Z","fromUser":{"id":"5c70226ad73408ce4fb8a55f","username":"te4336","displayName":"te4336","url":"/te4336","avatarUrl":"https://avatars-01.gitter.im/gh/uv/4/te4336","avatarUrlSmall":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=60","avatarUrlMedium":"https://avatars1.githubusercontent.com/u/33735706?v=4&s=128","v":13,"gv":"4"},"readBy":18,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>

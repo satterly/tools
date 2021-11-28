@@ -1,0 +1,932 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=IE9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta charset="utf-8">
+
+    <style>
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: bold;
+      src: local("SourceSansPro-Bold");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: bold;
+      src: local("SourceSansPro-BoldIt");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 200;
+      src: local("SourceSansPro-ExtraLight");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: italic;
+      font-weight: normal;
+      src: local("SourceSansPro-It");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 300;
+      src: local("SourceSansPro-Light");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: normal;
+      src: local("SourceSansPro-Regular");
+    }
+    @font-face {
+      font-family: 'SourceSansLocal';
+      font-style: normal;
+      font-weight: 600;
+      src: local("SourceSansPro-Semibold");
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Regular.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-It.otf.woff") format('woff');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Bold.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Semibold.otf.woff") format('woff');
+      font-weight: 600;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-BoldIt.otf.woff") format('woff');
+      font-weight: bold;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-Light.otf.woff") format('woff');
+      font-weight: 300;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "source-sans-pro";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/fonts/sourcesans/SourceSansPro-ExtraLight.otf.woff") format('woff');
+      font-weight: 200;
+      font-style: normal
+    }
+    @font-face {
+      font-family: "KaTeX_AMS";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_AMS-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Caligraphic";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Caligraphic-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Fraktur";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Fraktur-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Main";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Main-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-BoldItalic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Math";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Math-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff") format('woff');
+        src: url("//cdn01.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Bold.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Italic.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_SansSerif";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_SansSerif-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Script";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Script-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size1";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size1-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size2";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size2-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size3";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size3-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Size4";
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff") format('woff');
+        src: url("//cdn03.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Size4-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+    @font-face {
+      font-family: "KaTeX_Typewriter";
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff") format('woff');
+        src: url("//cdn02.gitter.im/_s/0d31b2aef/repo/katex/fonts-0.10.0/KaTeX_Typewriter-Regular.woff2") format('woff2');
+      font-weight: normal;
+      font-style: italic
+    }
+  </style>
+
+  <title>alerta/chat - Gitter</title>
+
+  <style>
+
+  @-webkit-keyframes pulsey {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+  }
+
+  html.loading .trpContentPanel { background: url("//cdn01.gitter.im/_s/0d31b2aef/images/logo-mark-grey-64.png") center no-repeat; height: 90%; -webkit-animation: pulsey 2s ease-out; -webkit-animation-iteration-count: infinite;  }
+  html.loading .trpContentPanel > * { visibility: hidden; }
+  </style>
+  <base target="_parent">
+  <link rel="stylesheet" href='//cdn01.gitter.im/_s/0d31b2aef/sprites/services.css'>
+  <link rel="stylesheet" href='//cdn02.gitter.im/_s/0d31b2aef/styles/router-archive-chat.css'>
+  <link id="favicon" rel="shortcut icon" href="//cdn02.gitter.im/_s/0d31b2aef/images/favicon.ico">
+</head>
+<body class="logged-out">
+  <div class="chat-and-toolbar-wrapper archive">
+    <div class="right-toolbar-region">
+      <div class="right-toolbar" style="overflow: auto">
+        <div class="gtrArchiveToolbarWrapper">
+            <div class="gtrArchiveInfoContainer">
+                <div class="gtrArchiveLogo">
+                  <div class="logo-container"></div>
+                </div>
+                <div class="gtrArchiveInfo">
+                  <p>These are chat archives for <strong>alerta/chat</strong></p>
+                </div>
+            </div>
+
+          <div id="archive-navigation" class="gtrArchiveNavigationWrapper"><div class="gtrArchiveNavigationInner">
+  <div class="gtrArchiveDate">
+    <a href="/alerta/chat/archives/2016/07/07"><i class="gtrArchiveNext octicon octicon-chevron-right"></i></a>
+    <a href="/alerta/chat/archives/2016/07/05"><i class="gtrArchivePrev octicon octicon-chevron-left"></i></a>
+    <div class="gtrArchiveToday">
+      <span class="gtrArchiveDay">6<sup>th</sup></span><br>
+      <span class="gtrArchiveMonth">Jul 2016</span>
+    </div>
+  </div>
+
+  <div class="archive-toggle-navigation-action-holder">
+    <button class="button-jaffa--small js-toggle-archive-navigation">Toggle Heatmap</button>
+  </div>
+  <div id="archive-navigation" class="gtrArchiveCalendar js-archive-navigation-wrapper">
+  </div>
+</div>
+</div>
+            <div class="archive-right-toolbar-button-wrapper">
+              <a href="/login?action=login&amp;button=archive-login" class="archive-right-toolbar-button button-caribbean">Sign in to start talking</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-app">
+      <div class="chat-header" id="header-wrapper">
+        <div id="header" class="chat-header-inner">
+          <div class="chat-header__main-grouping chat-header__left-menu-toggle-grouping">
+  <button class="chat-header__left-menu-toggle js-header-view-left-menu-toggle">
+    <svg class="chat-header__action-icon" viewBox="0 0 26 22">
+      <path d="M0,2 l26,0" />
+      <path d="M0,11 l26,0" />
+      <path d="M0,20 l26,0" />
+    </svg>
+  </button>
+</div>
+
+<div class="chat-header__main-grouping chat-header__avatar-grouping">
+  <form
+    class="chat-header__avatar  js-chat-header-group-avatar-upload-form"
+    action=""
+    enctype="multipart/form-data"
+    method="POST">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-signature" name="signature" value="">
+    <input type="hidden" class="js-chat-header-group-avatar-upload-params" name="params" value="">
+    <input
+      id="chat-header-group-avatar-upload-input"
+      class="chat-header__group-avatar-upload-input js-chat-header-group-avatar-upload-input"
+      name="file"
+      type="file"
+      accept="image/*"
+      disabled />
+    <label
+      class="chat-header__group-avatar-upload-label js-chat-header-group-avatar-upload-label"
+      for="chat-header-group-avatar-upload-input"
+      >
+      <img class="js-chat-header-avatar-image"  height='48' width='48' src='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=48' srcset='https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b?s=96 2x' >
+      <div class="chat-header__group-avatar-upload-progress hidden js-chat-header-group-avatar-upload-progress"></div>
+    </label>
+  </form>
+</div>
+
+<div class="chat-header__main-grouping chat-header__info-grouping">
+  <div class="chat-header__heading-sub-group">
+    <h1 class="js-chat-name chat-header__heading">
+      <a href="/alerta/chat" class="chat-header__title">alerta/chat</a>
+    </h1>
+  </div>
+  <div class="chat-header__topic-sub-group js-room-topic-edit-activator" tabindex="0">
+    <div class="chat-header__topic-wrapper js-room-topic-wrapper  "><p class="js-room-topic chat-header__topic  ">Alerta web next gen https://beta.alerta.io</p></div>
+  </div>
+</div>
+
+
+<div class="chat-header__main-grouping chat-header__action-grouping">
+    <a href="/orgs/alerta/rooms" class="chat-header__org-page org-page-link js-chat-header-org-page-action" title="More alerta rooms">
+      <i class="chat-header__action-icon icon-globe"></i>
+    </a>
+
+</div>
+
+        </div>
+      </div>
+      <div class="trpContentPanel archive" id="content-wrapper">
+  <div class="trpChatPanel">
+    <div class="trpChatContainer  primary-scroll  chat-container" id="content-frame">
+
+      <div id="chat-container" role="list">
+        <div>
+            <div class="chat-item model-id-577ca4f8c6b33f904a9243d6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575a9d5fc2f0db084a1d27f5 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ferran Altimiras</div>
+      <div class='chat-item__username js-chat-item-from'>@faltimiras</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca4f8c6b33f904a9243d6' title="">Jul 06 2016 06:28 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Sorry  <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span>. I completly sure it isn&#39;t a alarm-mailer bug, it is a pymongo bug but I think it should be fixed. I added a traceback
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca4fae22c1b816ae614b1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      2016-07-05 15:17:02,966 - alerta.app[32188]: ERROR - Failed to connect to AMQP transport mongodb://127.0.0.1:27017/kombu: No servers found yet<br>[Tue Jul 05 15:17:02 2016] [error] Traceback (most recent call last):<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/alerta/plugins/amqp.py&quot;, line 21, in <strong>init</strong><br>[Tue Jul 05 15:17:02 2016] [error]     self.connection.connect()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/connection.py&quot;, line 237, in connect<br>[Tue Jul 05 15:17:02 2016] [error]     return self.connection<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/connection.py&quot;, line 742, in connection<br>[Tue Jul 05 15:17:02 2016] [error]     self._connection = self._establish_connection()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/connection.py&quot;, line 697, in _establish_connection<br>[Tue Jul 05 15:17:02 2016] [error]     conn = self.transport.establish_connection()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/virtual/<strong>init</strong>.py&quot;, line 809, in establish_connection<br>[Tue Jul 05 15:17:02 2016] [error]     self._avail_channels.append(self.create_channel(self))<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/virtual/<strong>init</strong>.py&quot;, line 791, in create_channel<br>[Tue Jul 05 15:17:02 2016] [error]     channel = self.Channel(connection)<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py&quot;, line 97, in <strong>init</strong><br>[Tue Jul 05 15:17:02 2016] [error]     self._create_client()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py&quot;, line 274, in _create_client<br>[Tue Jul 05 15:17:02 2016] [error]     self._open()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py&quot;, line 203, in _open<br>[Tue Jul 05 15:17:02 2016] [error]     version = mongoconn.server_info()[&#39;version&#39;]<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py&quot;, line 1021, in server_info<br>[Tue Jul 05 15:17:02 2016] [error]     read_preference=ReadPreference.PRIMARY)<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/database.py&quot;, line 478, in command<br>[Tue Jul 05 15:17:02 2016] [error]     with client._socket_for_reads(read_preference) as (sock_info, slave_ok):<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/lib64/python2.7/contextlib.py&quot;, line 17, in <strong>enter</strong><br>[Tue Jul 05 15:17:02 2016] [error]     return self.gen.next()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py&quot;, line 752, in _socket_for_reads<br>[Tue Jul 05 15:17:02 2016] [error]     with self._get_socket(read_preference) as sock_info:<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/lib64/python2.7/contextlib.py&quot;, line 17, in <strong>enter</strong><br>[Tue Jul 05 15:17:02 2016] [error]     return self.gen.next()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py&quot;, line 716, in _get_socket<br>[Tue Jul 05 15:17:02 2016] [error]     server = self._get_topology().select_server(selector)<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/topology.py&quot;, line 142, in select_server<br>[Tue Jul 05 15:17:02 2016] [error]     address))<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/topology.py&quot;, line 118, in select_servers<br>[Tue Jul 05 15:17:02 2016] [error]     self._error_message(selector))<br>[Tue Jul 05 15:17:02 2016] [error] ServerSelectionTimeoutError: No servers found yet<br>[Tue Jul 05 15:17:02 2016] [error] [2016-07-05 15:17:02,967] ERROR in <strong>init</strong>: Server plug-in &#39;amqp&#39; could not be loaded: 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca62ec6b33f904a92579c burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca62ec6b33f904a92579c' title="">Jul 06 2016 06:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Mongodb is definitely running , right?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca65a64f940856a1c229f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      Listening on standard port and no firewalls?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca6639d3eadd72374c2ab burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575a9d5fc2f0db084a1d27f5 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ferran Altimiras</div>
+      <div class='chat-item__username js-chat-item-from'>@faltimiras</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca6639d3eadd72374c2ab' title="">Jul 06 2016 06:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      yes, i&#39;m in. Also wsgi on apache looks he can connect
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca691ddcdcee623fb920e burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      yes, amqp_url=mongodb://localhost:27017/kombu
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca6a651724d8078c2ce34 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca6a651724d8078c2ce34' title="">Jul 06 2016 06:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      What is the output of ’pip freeze -l&#39;?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca6c5e22c1b816ae6237a burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575a9d5fc2f0db084a1d27f5 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ferran Altimiras</div>
+      <div class='chat-item__username js-chat-item-from'>@faltimiras</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca6c5e22c1b816ae6237a' title="">Jul 06 2016 06:35 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+       ~]$ pip freeze -l<br>alerta==4.7.17<br>alerta-mailer==3.4.0<br>alerta-server==4.7.25<br>amqp==1.4.9<br>anyjson==0.3.3<br>aws-cfn-bootstrap==1.4<br>awscli==1.10.33<br>Babel==0.9.4<br>backports.ssl-match-hostname==3.4.0.2<br>bcrypt==2.0.0<br>boto==2.40.0<br>botocore==1.4.23<br>ceres==0.10.0<br>cffi==1.6.0<br>chardet==2.0.1<br>click==6.6<br>cloud-init==0.7.6<br>colorama==0.2.5<br>configobj==4.7.2<br>Django==1.9.6<br>django-tagging==0.4.3<br>docutils==0.11<br>ecdsa==0.11<br>Flask==0.11.1<br>Flask-Cors==2.1.2<br>fpconst==0.7.3<br>iniparse==0.3.1<br>itsdangerous==0.24<br>Jinja2==2.8<br>jmespath==0.9.0<br>jsonpatch==1.2<br>jsonpointer==1.0<br>kitchen==1.1.1<br>kombu==3.0.35<br>lockfile==0.8<br>M2Crypto==0.21.1<br>MarkupSafe==0.23<br>paramiko==1.15.1<br>PIL==1.1.6<br>ply==3.4<br>pyasn1==0.1.7<br>pycparser==2.14<br>pycrypto==2.6.1<br>pycurl==7.19.0<br>pygpgme==0.3<br>PyJWT==1.4.0<br>pyliblzma==0.5.3<br>pymongo==3.2.2<br>pyOpenSSL==0.10<br>pystache==0.5.3<br>python-daemon==1.5.2<br>python-dateutil==2.5.3<br>pytz==2016.4<br>pyxattr==0.5.0<br>PyYAML==3.10<br>redis==2.10.5<br>requests==2.10.0<br>rsa==3.4.1<br>simplejson==3.6.5<br>six==1.10.0<br>SOAPpy==0.11.6<br>Twisted==16.1.1<br>Twisted-Core==8.2.0<br>Twisted-Web==8.2.0<br>txAMQP==0.6.2<br>urlgrabber==3.9.1<br>urllib3==1.8.2<br>vine==1.1.1<br>virtualenv==12.0.7<br>Werkzeug==0.11.10<br>whisper==0.9.15<br>yum-metadata-parser==1.1.4<br>zope.interface==4.1.3
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca7444e50bf894a25b286 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca7444e50bf894a25b286' title="">Jul 06 2016 06:37 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Looks OK. I could try to reproduce the error but it will take a while. 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca7ce64f940856a1c38d3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575a9d5fc2f0db084a1d27f5 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ferran Altimiras</div>
+      <div class='chat-item__username js-chat-item-from'>@faltimiras</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca7ce64f940856a1c38d3' title="">Jul 06 2016 06:40 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="http://stackoverflow.com/questions/31030307/why-is-pymongo-3-giving-serverselectiontimeouterror" rel="nofollow" target="_blank" class="link">http://stackoverflow.com/questions/31030307/why-is-pymongo-3-giving-serverselectiontimeouterror</a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca8210c16867678cce19f burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      has to be related with this bug for sure
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca922e22c1b816ae638ee burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-575a9d5fc2f0db084a1d27f5 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/3178696?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Ferran Altimiras</div>
+      <div class='chat-item__username js-chat-item-from'>@faltimiras</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca922e22c1b816ae638ee' title="">Jul 06 2016 06:45 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      but if you downgrade pymongo, then alerta-mailer and alerta don&#39;t work
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ca9549d3eadd72374d81f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ca9549d3eadd72374d81f' title="">Jul 06 2016 06:46 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      OK. That&#39;s useful. Thanks 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577cc26b51724d8078c42bf2 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5770c0fbc2f0db084a2017cd avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16462160?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16462160?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>liathartal</div>
+      <div class='chat-item__username js-chat-item-from'>@liathartal</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577cc26b51724d8078c42bf2' title="">Jul 06 2016 08:33 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+        Hi <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> I want to update the we success to integrate zabbix and alerts. It looks like the problems were: 1. the script parameters (as you wrote) 2. the scripts folder is /etc/zabbix/alertscripts/ 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577cc2a4e22c1b816ae77861 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577cc2a4e22c1b816ae77861' title="">Jul 06 2016 08:34 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      arrrg. they’ve changed the location of the alertscripts directory!?!
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577cc2b6ddcdcee623fd0787 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      thanks for letting me know. hopefully this will help <span data-link-type="mention" data-screen-name="danielmantova" class="mention">@danielmantova</span> 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577cc3010c16867678ce3005 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="liathartal" class="mention">@liathartal</span> what OS version are you using?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce40f27a50de726331efe burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5762ae4fc2f0db084a1e35e0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>danielmantova</div>
+      <div class='chat-item__username js-chat-item-from'>@danielmantova</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ce40f27a50de726331efe' title="">Jul 06 2016 10:57 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      Good Morning, Centos 7
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce4b2a18212dd2698972f burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ce4b2a18212dd2698972f' title="">Jul 06 2016 11:00 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      hi
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce6118a1597510bdbb073 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5770c0fbc2f0db084a2017cd avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/16462160?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/16462160?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>liathartal</div>
+      <div class='chat-item__username js-chat-item-from'>@liathartal</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ce6118a1597510bdbb073' title="">Jul 06 2016 11:05 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      I&#39;m using Ubuntu 14.04.4 LTS
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce6f0b40345d144bedff9 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5762ae4fc2f0db084a1e35e0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>danielmantova</div>
+      <div class='chat-item__username js-chat-item-from'>@danielmantova</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ce6f0b40345d144bedff9' title="">Jul 06 2016 11:09 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      in my structure of hundreds , the way I am in  /usr/lib/zabbix/alertscripts
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce71d60b585bb78364fca burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      It has come so after installation.
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce7beb40345d144beefb3 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ce7beb40345d144beefb3' title="">Jul 06 2016 11:13 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="danielmantova" class="mention">@danielmantova</span> what is the setting for <code>AlertScriptsPath</code> in zabbix server configuration file?
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce935f13ce42b259081b0 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5762ae4fc2f0db084a1e35e0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>danielmantova</div>
+      <div class='chat-item__username js-chat-item-from'>@danielmantova</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ce935f13ce42b259081b0' title="">Jul 06 2016 11:19 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/NCje/blob" rel="nofollow" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/NCje/thumb/blob.png" alt="blob" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce9c3f13ce42b2590959d burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <span data-link-type="mention" data-screen-name="satterly" class="mention">@satterly</span> this is what is set in the file
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ce9dff13ce42b25909aa6 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5609cf680fc9f982beb22262 avatar-s offline  ">
+  <img src="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=30" srcset="https://avatars0.githubusercontent.com/u/615057?v=4&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>Nick Satterly</div>
+      <div class='chat-item__username js-chat-item-from'>@satterly</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ce9dff13ce42b25909aa6' title="">Jul 06 2016 11:22 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok. so i suggest you turn on server debug logging to get more info eg. <code>DebugLevel=5</code>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ceaa4b40345d144bf9991 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5762ae4fc2f0db084a1e35e0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>danielmantova</div>
+      <div class='chat-item__username js-chat-item-from'>@danielmantova</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ceaa4b40345d144bf9991' title="">Jul 06 2016 11:25 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      ok
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577ceda79bedd84d0b2b6069 burstStart read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__aside'>
+    <div class="chat-item__avatar">
+      <div
+  class="trpDisplayPicture avatar-5762ae4fc2f0db084a1e35e0 avatar-s offline  ">
+  <img src="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=30" srcset="https://avatars2.githubusercontent.com/u/19193476?v=3&amp;s=60 2x" height="30" width="30" class="avatar__image" alt="">
+  
+</div>
+
+    </div>
+  </div>
+  <div class='chat-item__content'>
+    <div class='chat-item__details'>
+      <div class='chat-item__from js-chat-item-from'>danielmantova</div>
+      <div class='chat-item__username js-chat-item-from'>@danielmantova</div>
+      <a class='chat-item__time js-chat-time'  href='https://gitter.im/alerta/chat/archives/2016/07/06?at=577ceda79bedd84d0b2b6069' title="">Jul 06 2016 11:38 UTC</a>
+    </div>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/rub4/blob" rel="nofollow" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/rub4/thumb/blob.png" alt="blob" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577cee39190978c0783068d1 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/5sbu/blob" rel="nofollow" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/5sbu/thumb/blob.png" alt="blob" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577cee609bedd84d0b2b6e5a burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      this is log in the zabbix web 
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577cee7950bacd302559fda9 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      <a href="https://files.gitter.im/alerta/chat/err0/blob" rel="nofollow" target="_blank" class="link"><img src="https://files.gitter.im/alerta/chat/err0/thumb/blob.png" alt="blob" rel="nofollow"></a>
+    </div>
+  </div>
+</div>
+</div>
+            <div class="chat-item model-id-577cee7d190978c0783069d0 burstContinued read  " role="listitem"><div class='chat-item__container'>
+  <div class='chat-item__content'>
+    <div class='chat-item__text js-chat-item-text'>
+      but not sent to the alerta.io
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+
+      <div id='initial' style="height:0;width:0;overflow:hidden"><a name="initial"/>_</a></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">window.gitterClientEnv = {"lang":"en","domain":"gitter.im","baseServer":"gitter.im","basePath":"https://gitter.im","apiBasePath":"https://gitter.im/api","homeUrl":"/","badgeBaseUrl":"https://badges.gitter.im","googleTrackingId":"UA-45918290-1","googleTrackingDomain":"gitter.im","env":"prod","cdns":["cdn01.gitter.im","cdn02.gitter.im","cdn03.gitter.im"],"version":"0d31b2","assetTag":"0d31b2aef","logging":false,"ravenUrl":"https://a1bf037f1d5f46f28b8e3b3e82024654@sentry.gitlab.net/42","websockets":{"fayeUrl":"https://ws.gitter.im/bayeux","options":{"timeout":120,"retry":2}},"avatarsUrl":"https://avatars.gitter.im","avatarCdns":["https://avatars-01.gitter.im","https://avatars-02.gitter.im","https://avatars-03.gitter.im","https://avatars-04.gitter.im","https://avatars-05.gitter.im"],"vapidAppServerKey":"BMhrlZd_I5OFJSJQTbg2mZ5PTHarzenwsKfsRd8C0-HRBygpDj9O3M4VTJIQfB9VPDjAoO_w2eg7Sj_cMXzuLwI","headlineNumbers":{"gitterUsers":"800K+","gitterRooms":"300K+","gitterGroups":"90K+","gitterCountries":"100+"},"inviteEmailAbuseThresholdPerDay":10};window.troupeContext = {"accessToken":"$QaU2k/nhISHlj1dtInHyVwZ1Uu0JR4EleUJQQT5RN1c=","isNativeDesktopApp":false,"locale":{"%d unread message":{"one":"%d unread message","other":"%d unread messages"},"Unread messages in %%s, %%s and one other":{"one":"Unread messages in %%s, %%s and one other","other":"Unread messages in %%s, %%s and %d others"},"Unread messages in %s":"Unread messages in %s","Unread messages in %s and %s":"Unread messages in %s and %s","Unread messages from %s":"Unread messages from %s","Unread messages from %s and %s":"Unread messages from %s and %s","Unread messages from %%s, %%s and one other":{"one":"Unread messages from %%s, %%s and one other","other":"Unread messages from %%s, %%s and %d others"},"Gitter is available in all modern browsers as well as apps for desktops.":"Gitter is available in all modern browsers as well as apps for desktops.","Mac":"Mac","Windows":"Windows","Linux 32":"Linux 32","Linux 64":"Linux 64","The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.":"The above Mac installer is a signed version of 1.177 (backed by Safari). For an unsigned 4.1.0 installer (backed by <a %s>NW.js<\/a>), <a %s>click here to download<\/a>.","Mac users on 10.9 or lower, <a %s>download here<\/a>.":"Mac users on 10.9 or lower, <a %s>download here<\/a>.","We also have a sweet little <a %s>IRC bridge<\/a>.":"We also have a sweet little <a %s>IRC bridge<\/a>.","The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.":"The dedicated Android/iOS apps are no longer recommended and may be officially <a href='%s'>deprecated in the future<\/a>. For mobile, we recommend using the mobile web version in your browser.","Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.":"Our efforts are focused on the <a %s>webapp<\/a> which is the backbone of the mobile/desktop apps but mainly focused on the web experience. There are a number of bugs in these desktop/mobile clients and they spread the Gitter team too thin for us to give them proper attention. The apps are open-source if you want to tackle something particularly annoying to you.","desktop":"desktop","iOS":"iOS","Android":"Android","Support":"Support","API":"API","Blog":"Blog","Twitter":"Twitter"},"roomMember":false,"user":null,"troupe":{"id":"5609cf450fc9f982beb2225c","name":"alerta/chat","topic":"Alerta web next gen https://beta.alerta.io","avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b","uri":"alerta/chat","userCount":377,"url":"/alerta/chat","githubType":"ORG_CHANNEL","associatedRepo":false,"security":"PUBLIC","providers":["github"],"groupId":"57542c98c43b8c6019774b6b","group":{"id":"57542c98c43b8c6019774b6b","name":"alerta","uri":"alerta","homeUri":"alerta/home","backedBy":{"type":"GH_ORG","linkPath":"alerta"},"avatarUrl":"https://avatars-02.gitter.im/group/iv/4/57542c98c43b8c6019774b6b"},"backend":{"type":"GH_ORG","linkPath":"alerta"},"public":true,"v":3},"roomHasWelcomeMessage":false,"archive":{"archiveDate":"2016-07-06T00:00:00.000Z","nextDate":"2016-07-07T23:59:59.999Z","previousDate":"2016-07-05T00:00:00.000Z","messages":[{"id":"577ca4f8c6b33f904a9243d6","text":"Sorry  @satterly. I completly sure it isn't a alarm-mailer bug, it is a pymongo bug but I think it should be fixed. I added a traceback","html":"Sorry  <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span>. I completly sure it isn&#39;t a alarm-mailer bug, it is a pymongo bug but I think it should be fixed. I added a traceback","sent":"2016-07-06T06:28:08.862Z","fromUser":{"id":"575a9d5fc2f0db084a1d27f5","username":"faltimiras","displayName":"Ferran Altimiras","url":"/faltimiras","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/faltimiras","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=128","v":4,"gv":"3"},"readBy":4,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ca4fae22c1b816ae614b1","text":"2016-07-05 15:17:02,966 - alerta.app[32188]: ERROR - Failed to connect to AMQP transport mongodb://127.0.0.1:27017/kombu: No servers found yet\n[Tue Jul 05 15:17:02 2016] [error] Traceback (most recent call last):\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/alerta/plugins/amqp.py\", line 21, in __init__\n[Tue Jul 05 15:17:02 2016] [error]     self.connection.connect()\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/kombu/connection.py\", line 237, in connect\n[Tue Jul 05 15:17:02 2016] [error]     return self.connection\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/kombu/connection.py\", line 742, in connection\n[Tue Jul 05 15:17:02 2016] [error]     self._connection = self._establish_connection()\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/kombu/connection.py\", line 697, in _establish_connection\n[Tue Jul 05 15:17:02 2016] [error]     conn = self.transport.establish_connection()\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/kombu/transport/virtual/__init__.py\", line 809, in establish_connection\n[Tue Jul 05 15:17:02 2016] [error]     self._avail_channels.append(self.create_channel(self))\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/kombu/transport/virtual/__init__.py\", line 791, in create_channel\n[Tue Jul 05 15:17:02 2016] [error]     channel = self.Channel(connection)\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py\", line 97, in __init__\n[Tue Jul 05 15:17:02 2016] [error]     self._create_client()\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py\", line 274, in _create_client\n[Tue Jul 05 15:17:02 2016] [error]     self._open()\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py\", line 203, in _open\n[Tue Jul 05 15:17:02 2016] [error]     version = mongoconn.server_info()['version']\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py\", line 1021, in server_info\n[Tue Jul 05 15:17:02 2016] [error]     read_preference=ReadPreference.PRIMARY)\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib64/python2.7/site-packages/pymongo/database.py\", line 478, in command\n[Tue Jul 05 15:17:02 2016] [error]     with client._socket_for_reads(read_preference) as (sock_info, slave_ok):\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/lib64/python2.7/contextlib.py\", line 17, in __enter__\n[Tue Jul 05 15:17:02 2016] [error]     return self.gen.next()\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py\", line 752, in _socket_for_reads\n[Tue Jul 05 15:17:02 2016] [error]     with self._get_socket(read_preference) as sock_info:\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/lib64/python2.7/contextlib.py\", line 17, in __enter__\n[Tue Jul 05 15:17:02 2016] [error]     return self.gen.next()\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py\", line 716, in _get_socket\n[Tue Jul 05 15:17:02 2016] [error]     server = self._get_topology().select_server(selector)\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib64/python2.7/site-packages/pymongo/topology.py\", line 142, in select_server\n[Tue Jul 05 15:17:02 2016] [error]     address))\n[Tue Jul 05 15:17:02 2016] [error]   File \"/usr/local/lib64/python2.7/site-packages/pymongo/topology.py\", line 118, in select_servers\n[Tue Jul 05 15:17:02 2016] [error]     self._error_message(selector))\n[Tue Jul 05 15:17:02 2016] [error] ServerSelectionTimeoutError: No servers found yet\n[Tue Jul 05 15:17:02 2016] [error] [2016-07-05 15:17:02,967] ERROR in __init__: Server plug-in 'amqp' could not be loaded: \n","html":"2016-07-05 15:17:02,966 - alerta.app[32188]: ERROR - Failed to connect to AMQP transport mongodb://127.0.0.1:27017/kombu: No servers found yet<br>[Tue Jul 05 15:17:02 2016] [error] Traceback (most recent call last):<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/alerta/plugins/amqp.py&quot;, line 21, in <strong>init<\/strong><br>[Tue Jul 05 15:17:02 2016] [error]     self.connection.connect()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/connection.py&quot;, line 237, in connect<br>[Tue Jul 05 15:17:02 2016] [error]     return self.connection<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/connection.py&quot;, line 742, in connection<br>[Tue Jul 05 15:17:02 2016] [error]     self._connection = self._establish_connection()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/connection.py&quot;, line 697, in _establish_connection<br>[Tue Jul 05 15:17:02 2016] [error]     conn = self.transport.establish_connection()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/virtual/<strong>init<\/strong>.py&quot;, line 809, in establish_connection<br>[Tue Jul 05 15:17:02 2016] [error]     self._avail_channels.append(self.create_channel(self))<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/virtual/<strong>init<\/strong>.py&quot;, line 791, in create_channel<br>[Tue Jul 05 15:17:02 2016] [error]     channel = self.Channel(connection)<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py&quot;, line 97, in <strong>init<\/strong><br>[Tue Jul 05 15:17:02 2016] [error]     self._create_client()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py&quot;, line 274, in _create_client<br>[Tue Jul 05 15:17:02 2016] [error]     self._open()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib/python2.7/site-packages/kombu/transport/mongodb.py&quot;, line 203, in _open<br>[Tue Jul 05 15:17:02 2016] [error]     version = mongoconn.server_info()[&#39;version&#39;]<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py&quot;, line 1021, in server_info<br>[Tue Jul 05 15:17:02 2016] [error]     read_preference=ReadPreference.PRIMARY)<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/database.py&quot;, line 478, in command<br>[Tue Jul 05 15:17:02 2016] [error]     with client._socket_for_reads(read_preference) as (sock_info, slave_ok):<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/lib64/python2.7/contextlib.py&quot;, line 17, in <strong>enter<\/strong><br>[Tue Jul 05 15:17:02 2016] [error]     return self.gen.next()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py&quot;, line 752, in _socket_for_reads<br>[Tue Jul 05 15:17:02 2016] [error]     with self._get_socket(read_preference) as sock_info:<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/lib64/python2.7/contextlib.py&quot;, line 17, in <strong>enter<\/strong><br>[Tue Jul 05 15:17:02 2016] [error]     return self.gen.next()<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/mongo_client.py&quot;, line 716, in _get_socket<br>[Tue Jul 05 15:17:02 2016] [error]     server = self._get_topology().select_server(selector)<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/topology.py&quot;, line 142, in select_server<br>[Tue Jul 05 15:17:02 2016] [error]     address))<br>[Tue Jul 05 15:17:02 2016] [error]   File &quot;/usr/local/lib64/python2.7/site-packages/pymongo/topology.py&quot;, line 118, in select_servers<br>[Tue Jul 05 15:17:02 2016] [error]     self._error_message(selector))<br>[Tue Jul 05 15:17:02 2016] [error] ServerSelectionTimeoutError: No servers found yet<br>[Tue Jul 05 15:17:02 2016] [error] [2016-07-05 15:17:02,967] ERROR in <strong>init<\/strong>: Server plug-in &#39;amqp&#39; could not be loaded: ","sent":"2016-07-06T06:28:10.585Z","fromUser":{"id":"575a9d5fc2f0db084a1d27f5","username":"faltimiras","displayName":"Ferran Altimiras","url":"/faltimiras","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/faltimiras","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=128","v":4,"gv":"3"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577ca62ec6b33f904a92579c","text":"Mongodb is definitely running , right?","html":"Mongodb is definitely running , right?","sent":"2016-07-06T06:33:18.945Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ca65a64f940856a1c229f","text":"Listening on standard port and no firewalls?","html":"Listening on standard port and no firewalls?","sent":"2016-07-06T06:34:02.058Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577ca6639d3eadd72374c2ab","text":"yes, i'm in. Also wsgi on apache looks he can connect","html":"yes, i&#39;m in. Also wsgi on apache looks he can connect","sent":"2016-07-06T06:34:11.530Z","fromUser":{"id":"575a9d5fc2f0db084a1d27f5","username":"faltimiras","displayName":"Ferran Altimiras","url":"/faltimiras","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/faltimiras","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=128","v":4,"gv":"3"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ca691ddcdcee623fb920e","text":"yes, amqp_url=mongodb://localhost:27017/kombu\n ","html":"yes, amqp_url=mongodb://localhost:27017/kombu","sent":"2016-07-06T06:34:57.940Z","fromUser":{"id":"575a9d5fc2f0db084a1d27f5","username":"faltimiras","displayName":"Ferran Altimiras","url":"/faltimiras","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/faltimiras","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=128","v":4,"gv":"3"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577ca6a651724d8078c2ce34","text":"What is the output of ’pip freeze -l'?","html":"What is the output of ’pip freeze -l&#39;?","sent":"2016-07-06T06:35:18.468Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ca6c5e22c1b816ae6237a","text":" ~]$ pip freeze -l\nalerta==4.7.17\nalerta-mailer==3.4.0\nalerta-server==4.7.25\namqp==1.4.9\nanyjson==0.3.3\naws-cfn-bootstrap==1.4\nawscli==1.10.33\nBabel==0.9.4\nbackports.ssl-match-hostname==3.4.0.2\nbcrypt==2.0.0\nboto==2.40.0\nbotocore==1.4.23\nceres==0.10.0\ncffi==1.6.0\nchardet==2.0.1\nclick==6.6\ncloud-init==0.7.6\ncolorama==0.2.5\nconfigobj==4.7.2\nDjango==1.9.6\ndjango-tagging==0.4.3\ndocutils==0.11\necdsa==0.11\nFlask==0.11.1\nFlask-Cors==2.1.2\nfpconst==0.7.3\niniparse==0.3.1\nitsdangerous==0.24\nJinja2==2.8\njmespath==0.9.0\njsonpatch==1.2\njsonpointer==1.0\nkitchen==1.1.1\nkombu==3.0.35\nlockfile==0.8\nM2Crypto==0.21.1\nMarkupSafe==0.23\nparamiko==1.15.1\nPIL==1.1.6\nply==3.4\npyasn1==0.1.7\npycparser==2.14\npycrypto==2.6.1\npycurl==7.19.0\npygpgme==0.3\nPyJWT==1.4.0\npyliblzma==0.5.3\npymongo==3.2.2\npyOpenSSL==0.10\npystache==0.5.3\npython-daemon==1.5.2\npython-dateutil==2.5.3\npytz==2016.4\npyxattr==0.5.0\nPyYAML==3.10\nredis==2.10.5\nrequests==2.10.0\nrsa==3.4.1\nsimplejson==3.6.5\nsix==1.10.0\nSOAPpy==0.11.6\nTwisted==16.1.1\nTwisted-Core==8.2.0\nTwisted-Web==8.2.0\ntxAMQP==0.6.2\nurlgrabber==3.9.1\nurllib3==1.8.2\nvine==1.1.1\nvirtualenv==12.0.7\nWerkzeug==0.11.10\nwhisper==0.9.15\nyum-metadata-parser==1.1.4\nzope.interface==4.1.3\n","html":" ~]$ pip freeze -l<br>alerta==4.7.17<br>alerta-mailer==3.4.0<br>alerta-server==4.7.25<br>amqp==1.4.9<br>anyjson==0.3.3<br>aws-cfn-bootstrap==1.4<br>awscli==1.10.33<br>Babel==0.9.4<br>backports.ssl-match-hostname==3.4.0.2<br>bcrypt==2.0.0<br>boto==2.40.0<br>botocore==1.4.23<br>ceres==0.10.0<br>cffi==1.6.0<br>chardet==2.0.1<br>click==6.6<br>cloud-init==0.7.6<br>colorama==0.2.5<br>configobj==4.7.2<br>Django==1.9.6<br>django-tagging==0.4.3<br>docutils==0.11<br>ecdsa==0.11<br>Flask==0.11.1<br>Flask-Cors==2.1.2<br>fpconst==0.7.3<br>iniparse==0.3.1<br>itsdangerous==0.24<br>Jinja2==2.8<br>jmespath==0.9.0<br>jsonpatch==1.2<br>jsonpointer==1.0<br>kitchen==1.1.1<br>kombu==3.0.35<br>lockfile==0.8<br>M2Crypto==0.21.1<br>MarkupSafe==0.23<br>paramiko==1.15.1<br>PIL==1.1.6<br>ply==3.4<br>pyasn1==0.1.7<br>pycparser==2.14<br>pycrypto==2.6.1<br>pycurl==7.19.0<br>pygpgme==0.3<br>PyJWT==1.4.0<br>pyliblzma==0.5.3<br>pymongo==3.2.2<br>pyOpenSSL==0.10<br>pystache==0.5.3<br>python-daemon==1.5.2<br>python-dateutil==2.5.3<br>pytz==2016.4<br>pyxattr==0.5.0<br>PyYAML==3.10<br>redis==2.10.5<br>requests==2.10.0<br>rsa==3.4.1<br>simplejson==3.6.5<br>six==1.10.0<br>SOAPpy==0.11.6<br>Twisted==16.1.1<br>Twisted-Core==8.2.0<br>Twisted-Web==8.2.0<br>txAMQP==0.6.2<br>urlgrabber==3.9.1<br>urllib3==1.8.2<br>vine==1.1.1<br>virtualenv==12.0.7<br>Werkzeug==0.11.10<br>whisper==0.9.15<br>yum-metadata-parser==1.1.4<br>zope.interface==4.1.3","sent":"2016-07-06T06:35:49.704Z","fromUser":{"id":"575a9d5fc2f0db084a1d27f5","username":"faltimiras","displayName":"Ferran Altimiras","url":"/faltimiras","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/faltimiras","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=128","v":4,"gv":"3"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ca7444e50bf894a25b286","text":"Looks OK. I could try to reproduce the error but it will take a while. ","html":"Looks OK. I could try to reproduce the error but it will take a while. ","sent":"2016-07-06T06:37:56.327Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ca7ce64f940856a1c38d3","text":"http://stackoverflow.com/questions/31030307/why-is-pymongo-3-giving-serverselectiontimeouterror","html":"<a href=\"http://stackoverflow.com/questions/31030307/why-is-pymongo-3-giving-serverselectiontimeouterror\" rel=\"nofollow\" target=\"_blank\" class=\"link\">http://stackoverflow.com/questions/31030307/why-is-pymongo-3-giving-serverselectiontimeouterror<\/a>","sent":"2016-07-06T06:40:14.120Z","fromUser":{"id":"575a9d5fc2f0db084a1d27f5","username":"faltimiras","displayName":"Ferran Altimiras","url":"/faltimiras","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/faltimiras","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=128","v":4,"gv":"3"},"readBy":4,"urls":[{"url":"http://stackoverflow.com/questions/31030307/why-is-pymongo-3-giving-serverselectiontimeouterror"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ca8210c16867678cce19f","text":"has to be related with this bug for sure","html":"has to be related with this bug for sure","sent":"2016-07-06T06:41:37.520Z","fromUser":{"id":"575a9d5fc2f0db084a1d27f5","username":"faltimiras","displayName":"Ferran Altimiras","url":"/faltimiras","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/faltimiras","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=128","v":4,"gv":"3"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577ca922e22c1b816ae638ee","text":"but if you downgrade pymongo, then alerta-mailer and alerta don't work","html":"but if you downgrade pymongo, then alerta-mailer and alerta don&#39;t work","sent":"2016-07-06T06:45:54.735Z","fromUser":{"id":"575a9d5fc2f0db084a1d27f5","username":"faltimiras","displayName":"Ferran Altimiras","url":"/faltimiras","avatarUrl":"https://avatars-03.gitter.im/gh/uv/3/faltimiras","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/3178696?v=3&s=128","v":4,"gv":"3"},"readBy":4,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ca9549d3eadd72374d81f","text":"OK. That's useful. Thanks ","html":"OK. That&#39;s useful. Thanks ","sent":"2016-07-06T06:46:44.736Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577cc26b51724d8078c42bf2","text":"  Hi @satterly I want to update the we success to integrate zabbix and alerts. It looks like the problems were: 1. the script parameters (as you wrote) 2. the scripts folder is /etc/zabbix/alertscripts/ ","html":"  Hi <span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> I want to update the we success to integrate zabbix and alerts. It looks like the problems were: 1. the script parameters (as you wrote) 2. the scripts folder is /etc/zabbix/alertscripts/ ","sent":"2016-07-06T08:33:47.313Z","fromUser":{"id":"5770c0fbc2f0db084a2017cd","username":"liathartal","displayName":"liathartal","url":"/liathartal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/3/liathartal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16462160?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16462160?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577cc2a4e22c1b816ae77861","text":"arrrg. they’ve changed the location of the alertscripts directory!?!","html":"arrrg. they’ve changed the location of the alertscripts directory!?!","sent":"2016-07-06T08:34:44.231Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577cc2b6ddcdcee623fd0787","text":"thanks for letting me know. hopefully this will help @danielmantova ","html":"thanks for letting me know. hopefully this will help <span data-link-type=\"mention\" data-screen-name=\"danielmantova\" class=\"mention\">@danielmantova<\/span> ","sent":"2016-07-06T08:35:02.043Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[{"screenName":"danielmantova","userId":"5762ae4fc2f0db084a1e35e0","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577cc3010c16867678ce3005","text":"@liathartal what OS version are you using?","html":"<span data-link-type=\"mention\" data-screen-name=\"liathartal\" class=\"mention\">@liathartal<\/span> what OS version are you using?","sent":"2016-07-06T08:36:17.259Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[{"screenName":"liathartal","userId":"5770c0fbc2f0db084a2017cd","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577ce40f27a50de726331efe","text":"Good Morning, Centos 7","html":"Good Morning, Centos 7","sent":"2016-07-06T10:57:19.274Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ce4b2a18212dd2698972f","text":"hi","html":"hi","sent":"2016-07-06T11:00:02.245Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ce6118a1597510bdbb073","text":"I'm using Ubuntu 14.04.4 LTS","html":"I&#39;m using Ubuntu 14.04.4 LTS","sent":"2016-07-06T11:05:53.725Z","fromUser":{"id":"5770c0fbc2f0db084a2017cd","username":"liathartal","displayName":"liathartal","url":"/liathartal","avatarUrl":"https://avatars-04.gitter.im/gh/uv/3/liathartal","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/16462160?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/16462160?v=3&s=128","gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ce6f0b40345d144bedff9","text":"in my structure of hundreds , the way I am in  /usr/lib/zabbix/alertscripts","html":"in my structure of hundreds , the way I am in  /usr/lib/zabbix/alertscripts","sent":"2016-07-06T11:09:36.215Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ce71d60b585bb78364fca","text":"It has come so after installation.","html":"It has come so after installation.","sent":"2016-07-06T11:10:21.513Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577ce7beb40345d144beefb3","text":"@danielmantova what is the setting for `AlertScriptsPath` in zabbix server configuration file?","html":"<span data-link-type=\"mention\" data-screen-name=\"danielmantova\" class=\"mention\">@danielmantova<\/span> what is the setting for <code>AlertScriptsPath<\/code> in zabbix server configuration file?","sent":"2016-07-06T11:13:02.929Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[{"screenName":"danielmantova","userId":"5762ae4fc2f0db084a1e35e0","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ce935f13ce42b259081b0","text":"[![blob](https://files.gitter.im/alerta/chat/NCje/thumb/blob.png)](https://files.gitter.im/alerta/chat/NCje/blob)","html":"<a href=\"https://files.gitter.im/alerta/chat/NCje/blob\" rel=\"nofollow\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/NCje/thumb/blob.png\" alt=\"blob\" rel=\"nofollow\"><\/a>","sent":"2016-07-06T11:19:17.444Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[{"url":"https://files.gitter.im/alerta/chat/NCje/thumb/blob.png"},{"url":"https://files.gitter.im/alerta/chat/NCje/blob"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ce9c3f13ce42b2590959d","text":"@satterly this is what is set in the file","html":"<span data-link-type=\"mention\" data-screen-name=\"satterly\" class=\"mention\">@satterly<\/span> this is what is set in the file","sent":"2016-07-06T11:21:39.199Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[],"mentions":[{"screenName":"satterly","userId":"5609cf680fc9f982beb22262","userIds":[]}],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577ce9dff13ce42b25909aa6","text":"ok. so i suggest you turn on server debug logging to get more info eg. `DebugLevel=5`","html":"ok. so i suggest you turn on server debug logging to get more info eg. <code>DebugLevel=5<\/code>","sent":"2016-07-06T11:22:07.182Z","fromUser":{"id":"5609cf680fc9f982beb22262","username":"satterly","displayName":"Nick Satterly","url":"/satterly","avatarUrl":"https://avatars-03.gitter.im/gh/uv/4/satterly","avatarUrlSmall":"https://avatars0.githubusercontent.com/u/615057?v=4&s=60","avatarUrlMedium":"https://avatars0.githubusercontent.com/u/615057?v=4&s=128","v":29,"gv":"4"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ceaa4b40345d144bf9991","text":"ok","html":"ok","sent":"2016-07-06T11:25:24.027Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577ceda79bedd84d0b2b6069","text":"[![blob](https://files.gitter.im/alerta/chat/rub4/thumb/blob.png)](https://files.gitter.im/alerta/chat/rub4/blob)","html":"<a href=\"https://files.gitter.im/alerta/chat/rub4/blob\" rel=\"nofollow\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/rub4/thumb/blob.png\" alt=\"blob\" rel=\"nofollow\"><\/a>","sent":"2016-07-06T11:38:15.111Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[{"url":"https://files.gitter.im/alerta/chat/rub4/thumb/blob.png"},{"url":"https://files.gitter.im/alerta/chat/rub4/blob"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":true},{"id":"577cee39190978c0783068d1","text":"[![blob](https://files.gitter.im/alerta/chat/5sbu/thumb/blob.png)](https://files.gitter.im/alerta/chat/5sbu/blob)","html":"<a href=\"https://files.gitter.im/alerta/chat/5sbu/blob\" rel=\"nofollow\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/5sbu/thumb/blob.png\" alt=\"blob\" rel=\"nofollow\"><\/a>","sent":"2016-07-06T11:40:41.768Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[{"url":"https://files.gitter.im/alerta/chat/5sbu/thumb/blob.png"},{"url":"https://files.gitter.im/alerta/chat/5sbu/blob"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577cee609bedd84d0b2b6e5a","text":"this is log in the zabbix web ","html":"this is log in the zabbix web ","sent":"2016-07-06T11:41:20.445Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577cee7950bacd302559fda9","text":"[![blob](https://files.gitter.im/alerta/chat/err0/thumb/blob.png)](https://files.gitter.im/alerta/chat/err0/blob)","html":"<a href=\"https://files.gitter.im/alerta/chat/err0/blob\" rel=\"nofollow\" target=\"_blank\" class=\"link\"><img src=\"https://files.gitter.im/alerta/chat/err0/thumb/blob.png\" alt=\"blob\" rel=\"nofollow\"><\/a>","sent":"2016-07-06T11:41:45.033Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[{"url":"https://files.gitter.im/alerta/chat/err0/thumb/blob.png"},{"url":"https://files.gitter.im/alerta/chat/err0/blob"}],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false},{"id":"577cee7d190978c0783069d0","text":"but not sent to the alerta.io","html":"but not sent to the alerta.io","sent":"2016-07-06T11:41:49.594Z","fromUser":{"id":"5762ae4fc2f0db084a1e35e0","username":"danielmantova","displayName":"danielmantova","url":"/danielmantova","avatarUrl":"https://avatars-01.gitter.im/gh/uv/3/danielmantova","avatarUrlSmall":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=60","avatarUrlMedium":"https://avatars2.githubusercontent.com/u/19193476?v=3&s=128","v":3,"gv":"3"},"readBy":3,"urls":[],"mentions":[],"issues":[],"meta":[],"v":1,"burstStart":false}]}};</script>
+
+    
+    <script type="text/javascript">window.webpackPublicPath = '//cdn02.gitter.im/_s/0d31b2aef/js/';</script>
+    <script type="text/javascript" src="//cdn01.gitter.im/_s/0d31b2aef/js/runtime.bundle.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/vendor.chunk.js"></script>
+<script type="text/javascript" src="//cdn02.gitter.im/_s/0d31b2aef/js/default.chunk.js"></script>
+<script type="text/javascript" src="//cdn03.gitter.im/_s/0d31b2aef/js/router-archive-chat.chunk.js"></script>
+  
+</body>
+</html>
