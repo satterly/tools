@@ -76,6 +76,6 @@ for channel, keep_days in CHANNELS:
         r = delete_message(channel, message)
         if r['ok']:
             deleted += 1
-        time.sleep(1)
+        # time.sleep(1)
 
 print('Deleted {} messages'.format(deleted))
